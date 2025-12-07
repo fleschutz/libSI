@@ -24,6 +24,7 @@ namespace si
 	SI_LITERAL(kn,   knots);		// 60_kn
 	SI_LITERAL(m,    meter);		// 1_m
 	SI_LITERAL(min,  minute);		// 60_min
+	SI_LITERAL(MHz,  megahertz);		// 128_MHz
 	SI_LITERAL(mm,   millimeter);		// 10_mm
 	SI_LITERAL(mph,  miles_per_hour);	// 50_mph
 	SI_LITERAL(mps,  meters_per_second);	// 10_mps

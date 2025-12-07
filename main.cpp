@@ -16,5 +16,10 @@ int main()
 	energy E = m * c*c;
 	std::cout << "Energy of 1kg mass is: " << joule(E) << " Joule" << std::endl;
 
+	// Example 3:
+	auto H2_frequency = 1420.4057517682_MHz;
+	auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
+	std::cout << "H2 wavelength in vacuum is: " << centimeter(H2_wavelength) << " cm" << std::endl;
+
 	return 0;
 }
