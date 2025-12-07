@@ -4,15 +4,15 @@ using namespace si;
 int main()
 {
 	// Example 1: 
-	auto Marathon = 42.195_km;
+	auto Marathon_distance = 42.195_km;
 	auto Kiptums_time = 2_h;
-	auto average_speed = Marathon / Kiptums_time;
+	auto average_speed = Marathon_distance / Kiptums_time;
 	print(average_speed, "was Kiptum's average speed");
 
 	// Example 2:
 	mass m = 1_kg;
 	speed c = constant::speed_of_light;
-	energy E = m * c*c;
+	energy E = m * (c*c);
 	print(E, "is the potential energy of 1kg mass");
 
 	// Example 3:
