@@ -8,7 +8,7 @@
 
 namespace si
 {
-	//   Symbol:  Unit:			Example:    (sorted alphabetically)
+	//   Symbol:  Unit:                     Example:    (sorted alphabetically)
 	LITERAL(cm,   centimeter);		// 9_cm
 	LITERAL(deg,  degree);			// 90_deg
 	LITERAL(degC, celsius);			// 0_degC

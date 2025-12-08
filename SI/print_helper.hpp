@@ -28,4 +28,9 @@ namespace si
 	{
 		std::cout << joule(E) << "Joule " << description << std::endl;
 	}
+
+	void print(si::temperature T, const char* description)
+	{
+		std::cout << celsius(T) << "°C " << description << std::endl;
+	}
 }

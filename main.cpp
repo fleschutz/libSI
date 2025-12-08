@@ -42,5 +42,9 @@ int main()
 	auto speed = MachSpeed * constant::speed_of_sound;
 	print(speed, "is M5.5 speed");
 
+	// Example 8:
+	auto average_temp = (7_degC + 30_degF + 200_K) / 3;
+	print(average_temp, "average temperature");
+
 	return 0;
 }
