@@ -1,11 +1,11 @@
+// SI heights of highest mountains on Earth
 #pragma once
 
 #include "types.hpp"
 
 namespace si
 {
-	// highest mountains on Earth: (source: https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth)
-	// (heights above MSL, sorted by height)
+	// source: https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth (heights above MSL, sorted by height)
 	const auto Mount_Everest_height = meter(8849);
 	const auto K2_height            = meter(8611);
 	const auto Kangchenjunga_height = meter(8586);

@@ -5,6 +5,6 @@
 #include "formulas.hpp"
 #include "literals.hpp"
 #include "distances.hpp"
-#include "heights.hpp"
+#include "building_heights.hpp"
 #include "mountain_heights.hpp"
 #include "print_helper.hpp"
