@@ -4,11 +4,7 @@
 
 namespace si
 {
-	namespace heights
-	{
-		const height Burj_Khalifa_Tower = 829.8_m;
-		const height Eiffel_Tower = 330_m;
-		const height Mount_Everest = 8848_m; // above MSL
-		const height Zugspitze = 2962_m; // above MSL
-	}
+	// typical heights: (sorted alphabetically)
+	const auto Burj_Khalifa_height = meter(829.8);
+	const auto Eiffel_Tower_height = meter(330);
 }
