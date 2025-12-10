@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cmath>
 #include "types.hpp"
 
 namespace si
@@ -33,7 +34,7 @@ namespace si
 
 		si::angle glide_path(si::length horizontalDistance, si::height verticalChange)
 		{
-			return si::radian(SinCosToMathArcs(si::meter(verticalChange), si::meter(horizontalDistance)));
+			return atan2(horizontalDistance, verticalChange);
 		}
 
 		si::height vertical_height(si::angle glidePath, si::length horizontalDistance)
