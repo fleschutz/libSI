@@ -807,7 +807,6 @@ namespace si
 	// Here, we have to use the correct factor of 1852 m / 3600 s = 0.5144444 m/s (which is what ExEngine MS2KTS uses)
 	// inline constexpr auto knots = nautical_mile / hour;
 	inline constexpr auto knots = unit<speed, 1852, 3600>();
-	inline constexpr auto Mach = unit<speed, 330, 1>();
 
 	inline constexpr auto feet_per_minute = feet / minute;
 	inline constexpr auto millimeters_per_hour = millimeter / hour;

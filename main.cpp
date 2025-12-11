@@ -22,7 +22,7 @@ int main()
 	print(KE, "is the kinetic energy of a normal car at 30MPH");
 
 	// Example 4:
-	auto avg_length = (8_m + 3_ft + 7_NM) / 3;
+	auto avg_length = (1_m + 10_dm + 100_cm + 1000_mm + 0.001_km + 3.28084_ft) / 6;
 	print(avg_length, "average length");
 
 	// Example 5:

@@ -9,7 +9,7 @@ namespace si
 		if (d >= si::kilometer(1))
 			std::cout << "-> " << kilometer(d) << " km " << description << std::endl;
 		else if (d >= si::meter(1))
-			std::cout << "-> " << meter(d) << " meters " << description << std::endl;
+			std::cout << "-> " << meter(d) << "m " << description << std::endl;
 		else
 			std::cout << "-> " << centimeter(d) << " cm " << description << std::endl;
 	}
