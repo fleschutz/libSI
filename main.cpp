@@ -26,7 +26,7 @@ int main()
 	print(avg_length, "average length");
 
 	// Example 5:
-	auto avg_speed = (10_kmh + 3_kn + 7_mph + 5.5_Mach) / 4;
+	auto avg_speed = (330_mps + 1000_kmh + 300_kn + 300_kt + 7_mph + 1_Mach) / 6;
 	print(avg_speed, "average speed");
 
 	// Example 6:

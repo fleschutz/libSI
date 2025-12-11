@@ -9,12 +9,12 @@
 
 namespace si
 {
-	// Symbol: #: Base Unit:            Example: (sorted alphabetically)
-	//MAP( A,  1, ampere);              // 5_A
+	// Symbol: #:  Base Unit:           Example: (sorted alphabetically)
 	MAP( cm,   .01, meter);             // 9_cm 
 	MAP( deg,  1, degree);              // 90_deg
 	MAP( degC, 1, celsius);             // 0_degC
 	MAP( degF, 1, fahrenheit);          // 32_degF
+	MAP( degR, 5/9, kelvin);            // 60_degR
 	MAP( dm,   .1, meter);              // 7_dm
 	MAP( ft,   1, feet);                // 10_ft
 	MAP( GHz,  1, gigahertz);           // 18_GHz
@@ -23,9 +23,10 @@ namespace si
 	MAP( K,    1, kelvin);              // 100_K
 	MAP( kg,   1, kilogram);            // 10_kg
 	MAP( kHz,  1000, hertz);            // 700_kHz
-	MAP( km,   1000, meter);	     // 1.2_km
+	MAP( km,   1000, meter);	    // 1.2_km
 	MAP( kmh,  1, kilometers_per_hour); // 100_kmh
-	MAP( kn,   1, knots);               // 60_kn
+	MAP( kn,   0.51445, meters_per_second); // 60_kn
+	MAP( kt,   0.51445, meters_per_second); // 60_kt
 	MAP( m,    1, meter);               // 1_m
 	MAP( Mach, 330, meters_per_second); // 6_Mach
 	MAP( min,  60, second);             // 5_min
