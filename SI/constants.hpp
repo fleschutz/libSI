@@ -21,9 +21,6 @@ namespace si
 		const auto proton_mass = kilogram(1.67262192595 * 10E-27);
 		const auto neutron_mass = kilogram(1.67492750056 * 10E-27);
 
-		const auto gravity_of_Mars = meters_per_second2(3.728);
-		const auto gravity_of_Mercury = meters_per_second2(3.7); // surface gravity
-										
 		const auto Marathon_length = kilometer(42.195);
 
 		// Mathematical constants: (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
