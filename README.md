@@ -9,7 +9,7 @@ Code Example
 ------------
 ```
 auto m = 1_kg;
-auto c = constant::light_speed;
+auto c = constant::light_speed_in_vacuum;
 auto E = m * c * c;
 ```
 
