@@ -17,5 +17,6 @@ Features
 --------
 * Supports type checking: Can't add a mass to a length
 * Supports convenient literals, e.g. 10_km
+* Supports hundreds of constants
 * No runtime overhead: Compiles to nothing but simple doubles
-* 
+  
