@@ -99,6 +99,9 @@ namespace si
 		const auto half_pi = degree(90);
 		const auto tau = degree(360);
 
+		// Astronomical constants:
+		const auto AU = kilometer(149.5978707e6);
+
 #if defined(__clang__) || defined(_MSC_VER)
     static constexpr auto ε_0  = 8.8541878e-12 * units::F / units::m; // electric constant (vacuum permittivity)
     static constexpr auto μ_0  = 1.25663706e-6 * units::N / units::A2 ; // magnetic constant (vacuum permeability)
