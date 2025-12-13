@@ -19,6 +19,7 @@ Features
 * Supports convenient literals, e.g. 10_km
 * Supports hundreds of constants
 * Supports SI units, digital units, and Imperial units
+* Supports unit tests to check everything
 * No runtime overhead: Compiles to nothing but simple doubles
   
 Directory Tree
