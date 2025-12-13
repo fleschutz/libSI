@@ -79,4 +79,9 @@ namespace si
 	{
 		std::cout << "-> " << celsius(T) << "°C " << description << std::endl;
 	}
+
+	void printResult(si::byte number, const char* description)
+	{
+		std::cout << "-> " << number << " bytes " << description << std::endl;
+	}
 }

@@ -66,5 +66,10 @@ int main()
 	auto year = formula::Kepler(sunMass + earthMass, a);
 	printResult(year, "is a Earth year");
 #endif
+
+	// Let's calculate bytes:
+	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
+	printResult(sum, "is the total number of bytes");
+
 	return 0;
 }
