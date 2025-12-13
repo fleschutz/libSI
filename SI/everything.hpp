@@ -1,7 +1,6 @@
 #pragma once
-#define WITH_IMPERIAL_UNITS
-
 #include "types.hpp"
+#include "prefixes.hpp"
 #include "constants.hpp"
 #include "formulas.hpp"
 #include "literals.hpp"

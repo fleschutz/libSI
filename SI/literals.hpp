@@ -1,4 +1,4 @@
-// SI/literals.hpp - Supports convenient literals, e.g. 12_km
+// literals.hpp - Supports convenient literals, e.g. 12_km
 // (requires C++11 or higher, all are mapped to the 7 base SI units)
 #pragma once
 
@@ -10,7 +10,7 @@
 
 namespace si
 {
-// SI literals:
+// SI UNITS
 // Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
 MAP( cm,    .01,   meter);               // 9_cm 
 MAP( deg,   1,     degree);              // 90_deg
@@ -38,7 +38,9 @@ MAP( second,1,     second);              // 60_second
 MAP( N,     1,     newton);              // 5.0_N
 MAP( Nm,    1,     newtonmeter);         // 2.1_Nm
 
-#ifdef WITH_IMPERIAL_UNITS
+// DIGITAL UNITS
+
+// IMPERIAL UNITS
 // Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
 MAP( degF,  1,     fahrenheit);          // 32_degF
 MAP( degR,  5/9,   kelvin);              // 60_degR
@@ -53,7 +55,6 @@ MAP( mph,   .44704,meters_per_second);   // 50_mph
 MAP( NM,    1852,  meter);               // 1_NM
 MAP( nmi,   1852,  meter);               // 1_nmi
 MAP( yd,    .9144, meter);               // 3_yd
-#endif
 
 MAP( degC,  1,     celsius);             // 0_degC
 MAP( Mach,  330,   meters_per_second);   // 6_Mach
