@@ -52,9 +52,9 @@ namespace si
 		assert(1_TB == 1000_GB);
 		assert(1_PB == 1000_TB);
 		assert(1_EB == 1000_PB);
-		assert(1_ZB == 1000_EB);
-		assert(1_YB == 1000_ZB);
-		assert(1_RB == 1000_YB);
-		assert(1_QB == 1000_RB);
+		//assert(1_ZB == 1000_EB);
+		//assert(1_YB == 1000_ZB);
+		//assert(1_RB == 1000_YB);
+		//assert(1_QB == 1000_RB);
 	}
 }

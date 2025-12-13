@@ -40,7 +40,7 @@ namespace si
 		const auto tau_mass = kilogram(3.16754e-27);
 		const auto proton_mass = kilogram(1.67262192595e-27);
     		const auto m_p = kilogram(1.67262192e-27); // proton mass
-		const auto neutron_mass = kilogram(1.67492750056 * 10E-27);
+		const auto neutron_mass = kilogram(1.67492750056e-27);
     		const auto a_0 = meter(5.29177210e-11); // Bohr radius
     		const auto r_e = meter(2.8179403e-15); // classical electron radius
     		const double g_e = -2.00231930436256; // electron g-factor
@@ -68,12 +68,12 @@ namespace si
     static constexpr auto N_Ah  = 3.990312712e-10 * units::J / units::Hz / units::mol; // molar Planck constant
     static constexpr auto M_u  = 0.99999999e-3 * units::kg / units::mol; // molar mass constant
     static constexpr auto V_m  = 22.71095464e-3 * units::m3 / units::mol; // molar volume of an ideal gas
-    static constexpr auto S_0_by_R  = -1.15170753706; // Sackur–Tetrode constant
     static constexpr auto c_2  = 1.438776877e-2 * units::m * units::K; // second radiation constant
     static constexpr auto sigma  = 5.670374419e-8 * units::W / units::m2 / units::K2; // Stefan–Boltzmann constant
     static constexpr auto b  = 2.897771955e-3 * units::m * units::K; // Wien wavelength displacement law constant
     static constexpr auto b_prime = 5.878925757e10 * units::Hz / units::K; // Wien frequency displacement law constant
 #endif
+    		const auto S_0_by_R = -1.15170753706; // Sackur–Tetrode constant
 
 	        // Adopted values
 #if 0
@@ -109,12 +109,12 @@ namespace si
     static constexpr auto μ_B  = 9.2740100e-24 * units::J / units::T; // Bohr magneton
     static constexpr auto Φ_0  = 2.067833848e-15 * units::Wb; // magnetic flux quantum
     static constexpr auto μ_N  = 5.0507837e-27 * units::J / units::T; // nuclear magneton
-    static constexpr auto α  = 7.2973525e-3; // fine-structure constant
-    static constexpr auto α_inv  = 137.035999084; // inverse fine-structure constant
     static constexpr auto σ_e  = 6.6524587e-29 * units::m2; // Thomson cross section
-    static constexpr auto sin2θ_W  = 0.22290; // weak mixing angle
     static constexpr auto σ  = 5.670374419e-8 * units::W / units::m2 / units::K2; // Stefan–Boltzmann constant
-    static constexpr auto Δν_Cs  = 9192631770 * units::Hz; // Caesium standard (defines the SI second)
 #endif
+    		const auto α  = 7.2973525e-3; // fine-structure constant
+    		const auto α_inv  = 137.035999084; // inverse fine-structure constant
+    		const auto sin2θ_W  = 0.22290; // weak mixing angle
+    		const auto Δν_Cs  = hertz(9192631770); // Caesium standard (defines the SI second)
 	}
 }	

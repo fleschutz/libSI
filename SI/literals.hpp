@@ -1,5 +1,4 @@
-// literals.hpp - Supports convenient literals, e.g. 12_km
-// (requires C++11 or higher, all are mapped to the 7 base SI units)
+// literals.hpp - Supports convenient literals, e.g. 12_km (requires C++11 or higher)
 #pragma once
 
 #include "types.hpp"
@@ -38,20 +37,6 @@ MAP( second,1,     second);              // 60_second
 MAP( N,     1,     newton);              // 5.0_N
 MAP( Nm,    1,     newtonmeter);         // 2.1_Nm
 
-// DIGITAL UNITS
-// Symbol: Factor: Base Unit:            Example:
-MAP(byte,   1,     byte);                // 1_byte
-MAP( kB,    1e3,   byte);                // 1_kB (kilobyte)
-MAP( MB,    1e6,   byte);                // 2_MB (megabyte)
-MAP( GB,    1e9,   byte);                // 3_GB (gigabyte)
-MAP( TB,    1e12,  byte);                // 4_TB (terabyte)
-MAP( PB,    1e15,  byte);                // 5_PB (terabyte)
-MAP( EB,    1e18,  byte);                // 6_EB (exabyte)
-MAP( ZB,    1e21,  byte);                // 7_ZB (zettabyte)
-MAP( YB,    1e24,  byte);                // 8_YB (yottabyte)
-MAP( RB,    1e27,  byte);                // 9_RB (ronnabyte)
-MAP( QB,    1e30,  byte);                // 10_QB (ronnabyte)
-
 // IMPERIAL UNITS
 // Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
 MAP( degF,  1,     fahrenheit);          // 32_degF
@@ -70,7 +55,24 @@ MAP( yd,    .9144, meter);               // 3_yd
 
 MAP( degC,  1,     celsius);             // 0_degC
 MAP( Mach,  330,   meters_per_second);   // 6_Mach
+					 //
+					 //
+#define BYTE(_symbol, _factor, _baseUnit) \
+ constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<byte>(_factor) * static_cast<byte>(x)); }
 
+// DIGITAL UNITS
+// Symbol: Factor: Base Unit:            Example:
+BYTE( byte,   1,   byte);                // 1_byte
+BYTE( kB,   1e3,   byte);                // 1_kB (kilobyte)
+BYTE( MB,   1e6,   byte);                // 2_MB (megabyte)
+BYTE( GB,   1e9,   byte);                // 3_GB (gigabyte)
+BYTE( TB,  1e12,   byte);                // 4_TB (terabyte)
+BYTE( PB,  1e15,   byte);                // 5_PB (terabyte)
+BYTE( EB,  1e18,   byte);                // 6_EB (exabyte)
+BYTE( ZB,  1e21,   byte);                // 7_ZB (zettabyte)
+BYTE( YB,  1e24,   byte);                // 8_YB (yottabyte)
+BYTE( RB,  1e27,   byte);                // 9_RB (ronnabyte)
+BYTE( QB,  1e30,   byte);                // 10_QB (ronnabyte)
 }
-
+#undef BYTE
 #undef MAP

@@ -30,7 +30,7 @@ namespace si
 	P(#_cmds); \
 	_cmds
 
-	void printResult(si::time t, const char* description)
+	void print(si::time t, const char* description)
 	{
 		if (t >= si::hour(1))
 			std::cout << "-> " << hour(t) << "h " << description << std::endl;
@@ -40,7 +40,7 @@ namespace si
 			std::cout << "-> " << second(t) << " sec " << description << std::endl;
 	}
 
-	void printResult(si::length d, const char* description)
+	void print(si::length d, const char* description)
 	{
 		if (d >= si::kilometer(1))
 			std::cout << "-> " << kilometer(d) << " km " << description << std::endl;
@@ -50,20 +50,20 @@ namespace si
 			std::cout << "-> " << centimeter(d) << " cm " << description << std::endl;
 	}
 
-	void printResult(si::speed v, const char* description)
+	void print(si::speed v, const char* description)
 	{
 		std::cout << "-> " << kilometers_per_hour(v) << " km/h " << description << std::endl;
 	}
 
-	void printResult(si::acceleration a, const char* description)
+	void print(si::acceleration a, const char* description)
 	{
 	}
 
-	void printResult(si::mass m, const char* description)
+	void print(si::mass m, const char* description)
 	{
 	}
 
-	void printResult(si::energy E, const char* description)
+	void print(si::energy E, const char* description)
 	{
 		if (E >= si::gigajoule(1))
 			std::cout << "-> " << megajoule(E) << " GJ " << description << std::endl;
@@ -75,13 +75,21 @@ namespace si
 			std::cout << "-> " << joule(E) << " Joule " << description << std::endl;
 	}
 
-	void printResult(si::temperature T, const char* description)
+	void print(si::temperature T, const char* description)
 	{
 		std::cout << "-> " << celsius(T) << "°C " << description << std::endl;
 	}
 
-	void printResult(si::byte number, const char* description)
+	void print(si::byte number, const char* description)
 	{
-		std::cout << "-> " << number << " bytes " << description << std::endl;
+		std::cout << "-> ";
+		while (number > 0)
+		{
+			auto rest = number % 10;
+			auto one_digit = (int)rest;
+			std::cout << one_digit;
+			number /= 10;
+		}
+		std::cout << " bytes " << description << std::endl;
 	}
 }

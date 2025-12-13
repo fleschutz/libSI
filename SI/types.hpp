@@ -871,7 +871,9 @@ namespace si
 	}
 
 	// DIGITAL UNITS:
-	typedef unsigned long long byte;
+	typedef __uint128_t byte;
+
+	typedef long double quantity; // big enough
 
 	void unit_tests(); // Unit tests in SI/unit_tests.cpp
 }
