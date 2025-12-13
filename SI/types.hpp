@@ -870,8 +870,9 @@ namespace si
 		return ret;
 	}
 
+	typedef long double ampere;
 	// DIGITAL UNITS:
-	typedef __uint128_t byte;
+	typedef long double byte;
 
 	typedef long double quantity; // big enough
 

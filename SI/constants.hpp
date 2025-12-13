@@ -101,6 +101,8 @@ namespace si
 
 		// Astronomical constants:
 		const auto AU = kilometer(149.5978707e6);
+		const auto lightyear = kilometer(9460730472580.8); 
+		const auto parsec = 3.2 * lightyear; // symbol: pc
 
 #if defined(__clang__) || defined(_MSC_VER)
     static constexpr auto ε_0  = 8.8541878e-12 * units::F / units::m; // electric constant (vacuum permittivity)

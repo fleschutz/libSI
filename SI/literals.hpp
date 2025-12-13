@@ -11,7 +11,9 @@ namespace si
 {
 // SI UNITS
 // Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
+MAP( A,     1,     ampere);              // 5_A 
 MAP( cm,    .01,   meter);               // 9_cm 
+MAP( day,   24*3600,second);             // 1_day
 MAP( deg,   1,     degree);              // 90_deg
 MAP( dm,    .1,    meter);               // 7_dm
 MAP( GHz,   1000000000, hertz);          // 1.3 GHz
@@ -19,11 +21,13 @@ MAP( h,     3600,  second);              // 24_h
 MAP( Hz,    1,     hertz);               // 4_Hz
 MAP( J,     1,     joule);               // 1_J
 MAP( K,     1,     kelvin);              // 100_K
+MAP( kA,    1000,  ampere);              // 1_kA
 MAP( kg,    1,     kilogram);            // 10_kg
 MAP( kHz,   1000,  hertz);               // 700_kHz
 MAP( km,    1000,  meter);	         // 1.2_km
 MAP( kmh,   3.6,   meters_per_second);   // 30_kmh
 MAP( m,     1,     meter);               // 1_m
+MAP( mA,    .001,  ampere);              // 5_mA 
 MAP( meter, 1,     meter);               // 1_meter
 MAP( min,   60,    second);              // 5_min
 MAP( MHz,   1000000, hertz);             // 128_MHz
@@ -36,6 +40,7 @@ MAP( sec,   1,     second);              // 60_sec
 MAP( second,1,     second);              // 60_second
 MAP( N,     1,     newton);              // 5.0_N
 MAP( Nm,    1,     newtonmeter);         // 2.1_Nm
+MAP( week,  7*24*3600,second);           // 1_week
 
 // IMPERIAL UNITS
 // Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
@@ -58,7 +63,7 @@ MAP( Mach,  330,   meters_per_second);   // 6_Mach
 					 //
 					 //
 #define BYTE(_symbol, _factor, _baseUnit) \
- constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<byte>(_factor) * static_cast<byte>(x)); }
+ constexpr _baseUnit operator "" _ ## _symbol(unsigned long long quantity) { return static_cast<_baseUnit>(_factor) * static_cast<_baseUnit>(quantity); }
 
 // DIGITAL UNITS
 // Symbol: Factor: Base Unit:            Example:

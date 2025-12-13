@@ -82,14 +82,6 @@ namespace si
 
 	void print(si::byte number, const char* description)
 	{
-		std::cout << "-> ";
-		while (number > 0)
-		{
-			auto rest = number % 10;
-			auto one_digit = (int)rest;
-			std::cout << one_digit;
-			number /= 10;
-		}
-		std::cout << " bytes " << description << std::endl;
+		std::cout << "-> " << number << " bytes " << description << std::endl;
 	}
 }
