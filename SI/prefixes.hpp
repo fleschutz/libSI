@@ -5,8 +5,9 @@
 
 namespace si
 {
-	namespace prefix // source: https://en.wikipedia.org/wiki/Metric_prefix
+	namespace prefix
 	{
+	       	// 24 SI prefixes as of 2022 (source: https://en.wikipedia.org/wiki/Metric_prefix)
 		                                // Symbol
 		const quantity quetta = 1e30;   // Q
 		const quantity ronna  = 1e27;   // R

@@ -18,7 +18,7 @@ Features
 * Supports type checking: Can't add a mass to a length
 * Supports convenient literals, e.g. 10_km
 * Supports hundreds of constants
-* Supports SI units, derived units, digital units, and Imperial units
+* Supports SI base and derived units, digital units, and Imperial units
 * Supports hundreds of usage examples
 * Supports unit tests to check everything
 * No runtime overhead: Compiles to nothing but simple doubles
