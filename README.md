@@ -64,4 +64,6 @@ What's the travel time of sun light to Earth? It's... 8.31675 min
 What's the sum of 1 byte + 1kB + 1GB...(and so on)? It's... 1.001e+30
 What's the population density on Earth (people per km² of land area)? It's... 55.0557
 How much land area would be available for each person on Earth? It's... 18163.4 m²
+What's the surface area of a soccer ball (FIFA size 5)? It's... 776.521 cm²
+What's the volume of a soccer ball (FIFA size 5)? It's... 5755.04 cm³
 ```

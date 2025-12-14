@@ -32,15 +32,20 @@ namespace si
 
 	void print(si::area a)
 	{
-		if (a >= si::kilometer2(1))
+		if (a >= si::kilometer2(1.0))
 			std::cout << kilometer2(a) << " km²" << std::endl;
-		else
+		else if (a >= si::meter2(1.0))
 			std::cout << meter2(a) << " m²" << std::endl;
+		else
+			std::cout << centimeter2(a) << " cm²" << std::endl;
 	}
 
 	void print(si::volume v)
 	{
-		std::cout << meter3(v) << " m³" << std::endl;
+		if (v >= si::meter3(1.0))
+			std::cout << meter3(v) << " m³" << std::endl;
+		else
+			std::cout << centimeter3(v) << " cm³" << std::endl;
 	}
 
 	void print(si::speed v)

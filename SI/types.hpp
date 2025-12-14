@@ -748,6 +748,7 @@ namespace si
 	inline constexpr auto hecto = unit<detail::null_dimension, 100>();
 	inline constexpr auto kilo  = unit<detail::null_dimension, 1000>();
 	inline constexpr auto one   = unit<detail::null_dimension>();
+	inline constexpr auto centi = unit<detail::null_dimension, 1, 100>();
 	inline constexpr auto milli = unit<detail::null_dimension, 1, 1000>();
 	inline constexpr auto micro = unit<detail::null_dimension, 1, 1000000>();
 
@@ -791,9 +792,11 @@ namespace si
 	inline constexpr auto degree = detail::unit<detail::angle_dimension, detail::ratio_degree>();
 
 	inline constexpr auto meter2 = unit<area>();
+	inline constexpr auto centimeter2 = centi * centi * meter2;
 	inline constexpr auto kilometer2 = kilo * kilo * meter2;
 
 	inline constexpr auto meter3 = unit<volume>();
+	inline constexpr auto centimeter3 = centi * centi * centi * meter3;
 	inline constexpr auto kilometer3 = kilo * kilo * kilo * meter3;
 
 	inline constexpr auto hertz = unit<frequency>();
