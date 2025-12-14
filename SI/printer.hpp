@@ -12,8 +12,10 @@ namespace si
 
 	void print(si::time t)
 	{
-		if (t >= si::hour(1))
-			std::cout << hour(t) << "h" << std::endl;
+		if (t >= si::day(1))
+			std::cout << day(t) << " day(s)" << std::endl;
+		else if (t >= si::hour(1))
+			std::cout << hour(t) << " h" << std::endl;
 		else if (t >= si::minute(1))
 			std::cout << minute(t) << " min" << std::endl;
 		else

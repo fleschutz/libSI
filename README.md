@@ -59,7 +59,7 @@ What's the wavelength of H2 in vacuum? It's... 21.1061 cm
 What's the free fall time from Eiffel Tower in Paris? It's... 8.20374 sec
 What's Markus BMI? OMG, it's... 24.9307
 What's a radar's geometrical horizon (the distance it can see)? It's... 10.7941 km
-What's the time needed to fly non-stop around the Earth at Mach 1? It's... 33.7332h
+What's the time needed to fly non-stop around the Earth at Mach 1? It's... 33.7332 h
 What's the travel time of sun light to Earth? It's... 8.31675 min
 What's the sum of 1 byte + 1kB + 1GB...(and so on)? It's... 1.001e+30
 What's the population density on Earth (people per km² of land area)? It's... 55.0557
