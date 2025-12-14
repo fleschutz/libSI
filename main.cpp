@@ -88,6 +88,18 @@ int main()
 	auto radius = formula::radius_of_circumference(circumference);
 	auto volume = formula::volume_of_ball(radius);
 	print(volume);
+} {
+	print("What's the surface area of a 30cm pizza? It's... ");
+	auto diameter = 30_cm;
+	auto area = formula::area_in_circle(diameter / 2);
+	print(area);
+} {
+	print("What's the volume of a 30x1cm pizza? It's... ");
+	auto diameter = 30_cm; 
+	auto height = 1_cm;
+	auto volume = formula::area_in_circle(diameter / 2) * height;
+	print(volume);
+} {
 #if 0
 	// Let's calculate the Earth year:
 	auto sunMass = Sun::mass;

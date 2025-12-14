@@ -8,8 +8,9 @@ namespace si
 	namespace constant
 	{
 		// Universal constants
-    		const auto c_0 = meters_per_second(299792458); // speed of light in vacuum
-		const auto speed_of_light_in_vacuum = meters_per_second(299792458); // speed of light in vacuum (c)
+		const auto speed_of_light_in_vacuum = meters_per_second(299'792'458);
+    		const auto c = speed_of_light_in_vacuum;
+    		const auto Δν_Cs  = hertz(9'192'631'770); // Caesium standard (defines the SI second)
 #if 0
     static constexpr auto Z_0  = 376.730313667 * units::Ohm; // characteristic impedance of vacuum
     static constexpr auto epsilon_0  = 8.854'187'817'620'39e-12 * units::F / units::m; // electric constant (vacuum permittivity)
@@ -81,8 +82,6 @@ namespace si
     static constexpr auto g_0  = 9.80665 * units::m / units::s2; // standard acceleration of gravity
     static constexpr auto atm  = 101325 * units::Pa; // standard atmosphere
 #endif
-    		const auto Deltanu_Cs  = hertz(9192631770); // Caesium standard (defines the SI second)
-
 		// Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
 
 		const auto speed_of_sound = meters_per_second(343); // speed of sound in air at 20 °C (68 °F)
@@ -118,6 +117,5 @@ namespace si
     		const auto α  = 7.2973525e-3; // fine-structure constant
     		const auto α_inv  = 137.035999084; // inverse fine-structure constant
     		const auto sin2θ_W  = 0.22290; // weak mixing angle
-    		const auto Δν_Cs  = hertz(9192631770); // Caesium standard (defines the SI second)
 	}
 }	
