@@ -77,13 +77,13 @@ int main()
 	auto per_person = Earth::land_area / Earth::human_population;
 	print(per_person);
 } {
-	print("What's the surface area of a soccer ball (FIFA size 5)? It's... ");
+	print("What's the surface area of a soccer ball (in FIFA size 5)? It's... ");
 	auto circumference = 70_cm; // (69-71 cm)
 	auto radius = formula::radius_of_circumference(circumference);
 	auto area = formula::area_of_ball(radius);
 	print(area);
 } {
-	print("What's the volume of a soccer ball (FIFA size 5)? It's... ");
+	print("What's the volume of a soccer ball (in FIFA size 5)? It's... ");
 	auto circumference = 70_cm; // (69-71 cm)
 	auto radius = formula::radius_of_circumference(circumference);
 	auto volume = formula::volume_of_ball(radius);
