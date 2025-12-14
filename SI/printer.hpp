@@ -57,16 +57,21 @@ namespace si
 
 	void print(si::acceleration a)
 	{
+		std::cout << meters_per_second2(a) << " m/s²" << std::endl;
 	}
 
 	void print(si::mass m)
 	{
+		if (m >= si::kilogram(1))
+			std::cout << kilogram(m) << " kg" << std::endl;
+		else
+			std::cout << gram(m) << " g" << std::endl;
 	}
 
 	void print(si::energy E)
 	{
 		if (E >= si::gigajoule(1))
-			std::cout << megajoule(E) << " GJ " << std::endl;
+			std::cout << gigajoule(E) << " GJ " << std::endl;
 		else if (E >= si::megajoule(1))
 			std::cout << megajoule(E) << " MJ " << std::endl;
 		else if (E >= si::kilojoule(1))

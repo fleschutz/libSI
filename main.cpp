@@ -94,7 +94,7 @@ int main()
 	auto area = formula::area_in_circle(diameter / 2);
 	print(area);
 } {
-	print("What's the volume of a 30x1cm pizza? It's... ");
+	print("What's the volume of a 30cm x 1cm pizza? It's... ");
 	auto diameter = 30_cm; 
 	auto height = 1_cm;
 	auto volume = formula::area_in_circle(diameter / 2) * height;

@@ -752,28 +752,29 @@ namespace si
 	inline constexpr auto milli = unit<detail::null_dimension, 1, 1000>();
 	inline constexpr auto micro = unit<detail::null_dimension, 1, 1000000>();
 
-	inline constexpr auto meter = unit<length>();
+	inline constexpr auto kilometer  = unit<length, 1000>();
+	inline constexpr auto meter      = unit<length>();
 	inline constexpr auto centimeter = unit<length, 1, 100>();
 	inline constexpr auto millimeter = unit<length, 1, 1000>();
-	inline constexpr auto kilometer = unit<length, 1000>();
 	inline constexpr auto feet = unit<length, 3048, 10000>();
 	inline constexpr auto nautical_mile = unit<length, 185318, 100>(); // !!! this is NOT the correct factor, but for sake of compatibility this value from TowMacros.h is used !!!
 	//inline constexpr auto nautical_mile = unit<length, 1852>(); // !!! this is NOT the value used by TowMacros.h but the correct factor !!!
 	inline constexpr auto inch = unit<length, 254, 10000>();
 	inline constexpr auto statute_mile = unit<length, 1609344, 1000>(); // that's the "international mile", the U.S. survey mile is about 1609.347218694 metres (sigh)
 
-	inline constexpr auto kilogram = unit<mass>();
-	inline constexpr auto gram = unit<mass, 1, 1000>();
+	inline constexpr auto ton       = unit<mass, 1000>();
+	inline constexpr auto kilogram  = unit<mass>();
+	inline constexpr auto gram      = unit<mass, 1, 1000>();
 	inline constexpr auto milligram = unit<mass, 1, 1000000>();
-	inline constexpr auto ton = unit<mass, 1000>();
+	inline constexpr auto microgram = unit<mass, 1, 1000000000>();
 	inline constexpr auto pound = unit<mass, 45359237, 100000000>();
 
-	inline constexpr auto second = unit<time>();
-	inline constexpr auto minute = unit<time, 60>();
-	inline constexpr auto hour = unit<time, 3600>();
-	inline constexpr auto day = unit<time, 24 * 3600>();
-	inline constexpr auto millisecond = milli * second;
-	inline constexpr auto microsecond = micro * second;
+	inline constexpr auto day         = unit<time, 24 * 3600>();
+	inline constexpr auto hour        = unit<time, 3600>();
+	inline constexpr auto minute      = unit<time, 60>();
+	inline constexpr auto second      = unit<time>();
+	inline constexpr auto millisecond = unit<time, 1, 1000>();
+	inline constexpr auto microsecond = unit<time, 1, 1000000>();
 
 	//@{
 	/**
