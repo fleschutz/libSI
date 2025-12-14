@@ -736,6 +736,7 @@ namespace si
 	SI_QUANTITY(torque, 2, 1, -2, 0, 0);
 	SI_QUANTITY(power, 2, 1, -3, 0, 0);
 	SI_QUANTITY(area, 2, 0, 0, 0, 0);
+	SI_QUANTITY(volume, 3, 0, 0, 0, 0);
 	SI_QUANTITY(density, -3, 1, 0, 0, 0);
 
 	using position2d = length2;
@@ -791,6 +792,9 @@ namespace si
 
 	inline constexpr auto meter2 = unit<area>();
 	inline constexpr auto kilometer2 = kilo * kilo * meter2;
+
+	inline constexpr auto meter3 = unit<volume>();
+	inline constexpr auto kilometer3 = kilo * kilo * kilo * meter3;
 
 	inline constexpr auto hertz = unit<frequency>();
 	inline constexpr auto kilohertz = kilo * hertz;

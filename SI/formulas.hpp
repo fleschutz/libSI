@@ -8,13 +8,39 @@ namespace si
 {
 	namespace formula
 	{
-		// Calculates the hypotenuse in a right triangle, based on Pythagorean equation a² + b² = c² 
+
+		si::length circumference(si::length radius)
+		{
+			return 2.0 * M_PI * radius;
+		}
+
+		si::length radius_of_circumference(si::length circumference)
+		{
+			return circumference / (2.0 * M_PI);
+		}
+
+		si::area area_in_circle(si::length radius)
+		{
+			return M_PI * radius * radius;
+		}
+
+		si::area area_of_ball(si::length radius)
+		{
+			return 2.0 * M_PI * radius * radius;
+		}
+
+		si::volume volume_of_ball(si::length radius)
+		{
+			return (4.0 / 3.0) * M_PI * radius * radius * radius;
+		}
+
+		// Returns the hypotenuse in a right triangle, based on Pythagorean equation a² + b² = c² 
 		si::length hypotenuse_in_triangle(si::length a, si::length b)
 		{
 			return sqrt(a*a + b*b);
 		}
 
-		// Calculates the kinetic energy of a non-rotating object of mass m traveling at speed v.
+		// Returns the kinetic energy of a non-rotating object of mass m traveling at speed v.
 		si::energy kinetic_energy(si::mass m, si::speed v)
 		{
 			return 0.5 * m * v * v;

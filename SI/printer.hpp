@@ -38,6 +38,11 @@ namespace si
 			std::cout << meter2(a) << " m²" << std::endl;
 	}
 
+	void print(si::volume v)
+	{
+		std::cout << meter3(v) << " m³" << std::endl;
+	}
+
 	void print(si::speed v)
 	{
 		std::cout << kilometers_per_hour(v) << " km/h" << std::endl;
