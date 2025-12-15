@@ -13,7 +13,7 @@ int main()
 } {
 	print("What's the potential energy of 1kg mass? It's... ");
 	auto m = 1_kg;
-	auto c = constant::speed_of_light_in_vacuum;
+	auto c = constant::speed_of_light;
 	auto E = m * c * c;
 	print(E);
 } {
@@ -33,7 +33,7 @@ int main()
 } {
 	print("What's the wavelength of H2 in vacuum? It's... ");
 	auto H2_frequency = 1420.4057517682_MHz;
-	auto H2_wavelength = formula::wavelength(constant::speed_of_light_in_vacuum, H2_frequency);
+	auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
 	print(H2_wavelength);
 } {
 	print("What's the free fall time from Eiffel Tower in Paris? It's... ");
@@ -61,7 +61,7 @@ int main()
 } {
 	print("What's the travel time of sun light to Earth? It's... ");
 	auto distance = constant::AU;
-	auto speed = constant::speed_of_light_in_vacuum;
+	auto speed = constant::speed_of_light;
 	auto time = distance / speed;
 	print(time);
 } {

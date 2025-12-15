@@ -834,7 +834,7 @@ namespace si
 	inline constexpr auto megajoule = meganewton * meter;
 	inline constexpr auto gigajoule = giganewton * meter;
 
-	inline constexpr auto joule_per_kelvin = joule / kelvin;
+	inline constexpr auto joules_per_kelvin = joule / kelvin;
 	inline constexpr auto meters_per_second2 = meter / (second * second);
 
 	inline constexpr auto pascal_ = newton / (meter * meter);
@@ -887,7 +887,7 @@ namespace si
 	typedef long double ampere;
 	typedef long double byte;
 	typedef long double quantity;
-	typedef long double lumen_per_watt;
+	typedef long double lumens_per_watt;
 
 	void unit_tests(); // unit tests in SI/unit_tests.cpp
 }
