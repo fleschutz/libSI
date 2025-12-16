@@ -14,7 +14,8 @@ namespace si
 LITERAL( s,        1, second);              // 60_s
 LITERAL( sec,      1, second);              // 60_sec
 LITERAL( second,   1, second);              // 60_second
-LITERAL( ms,       .001, second);           // 1_ms
+LITERAL( ms,    1e-3, second);              // 1_ms (millisecond)
+LITERAL( μs,    1e-6, second);              // 2_μs (microsecond)
 LITERAL( min,     60, second);              // 5_min
 LITERAL( h,     3600, second);              // 24_h
 LITERAL( day,24*3600,second);               // 1_day on Earth!
@@ -22,21 +23,25 @@ LITERAL( week,  7*24*3600,second);          // 1_week on Earth!
 LITERAL( year,  365.25*24*3600,second);     // 1_year on Earth!
 
 LITERAL( m,        1, meter);               // 1_m
-LITERAL( meter,    1, meter);               // 1_meter
-LITERAL( dm,       .1, meter);              // 7_dm
-LITERAL( cm,       .01, meter);             // 9_cm 
-LITERAL( mm,       .001, meter);            // 4_mm
-LITERAL( km,    1000,  meter);	            // 1.2_km
+LITERAL( meter,    1, meter);               // 2_meter
+LITERAL( dm,    1e-1, meter);               // 3_dm (decimeter)
+LITERAL( cm,    1e-2, meter);               // 4_cm (centimeter)
+LITERAL( mm,    1e-3, meter);               // 5_mm (millimeter)
+LITERAL( μm,    1e-6, meter);               // 6_μm (micrometer)
+LITERAL( km,     1e3, meter);               // 7_km (kilometer)
 
-LITERAL( kg,    1,     kilogram);            // 10_kg
-LITERAL( g,     .001,  kilogram);            // 3_g
-LITERAL( t,     1000,  kilogram);            // 7_t
+LITERAL( kg,       1, kilogram);            // 10_kg
+LITERAL( g,     1e-3, kilogram);            // 3_g (gram)
+LITERAL( mg,    1e-6, kilogram);            // 3_mg (milligram)
+LITERAL( μg,    1e-9, kilogram);            // 3_μg (microgram)
+LITERAL( t,      1e3, kilogram);            // 7_t (metric ton)
 
-LITERAL( K,     1,     kelvin);              // 100_K
+LITERAL( K,        1, kelvin);              // 100_K
 
-LITERAL( A,     1,     ampere);              // 5_A 
-LITERAL( mA,    .001,  ampere);              // 4_mA 
-LITERAL( kA, 1000,  ampere);                 // 1_kA
+LITERAL( A,        1, ampere);              // 1_A 
+LITERAL( mA,    1e-3, ampere);              // 2_mA 
+LITERAL( μA,    1e-6, ampere);              // 3_μA 
+LITERAL( kA,     1e3, ampere);              // 4_kA
 
 // SI DERIVED BASE UNITS
 //     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
