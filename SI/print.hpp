@@ -1,4 +1,4 @@
-// SI/printer.hpp - simple print interface
+// SI/print.hpp - simple print to console interface
 #pragma once
 
 #include <iostream>

@@ -1,4 +1,4 @@
-// SI/everything.hpp - contains all-in-one for convenience
+// SI/everything.hpp - includes any .hpp header file
 #pragma once
 #include "types.hpp"
 #include "prefixes.hpp"
@@ -12,5 +12,5 @@
 #include "Earth.hpp"
 #include "Jupiter.hpp"
 
-#include "printer.hpp"
+#include "print.hpp"
 #include "tests.hpp"
