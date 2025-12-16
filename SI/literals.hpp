@@ -56,7 +56,6 @@ LITERAL( kmh,   1,     kilometers_per_hour); // 30_kmh
 LITERAL( MHz,   1000000, hertz);             // 128_MHz
 LITERAL( mps,   1,     meters_per_second);   // 10_mps
 LITERAL( mps2,  1,     meters_per_second2);  // 9.807_mps2
-LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc
 LITERAL( N,     1,     newton);              // 5.0_N
 LITERAL( Nm,    1,     newtonmeter);         // 2.1_Nm
 LITERAL( ha,    10000, meter2);              // 3_ha
@@ -91,8 +90,9 @@ LITERAL( ZB,   1e21,   byte);                // 7_ZB (zettabyte)
 LITERAL( YB,   1e24,   byte);                // 8_YB (yottabyte)
 LITERAL( RB,   1e27,   byte);                // 9_RB (ronnabyte)
 LITERAL( QB,   1e30,   byte);                // 10_QB (ronnabyte)
-LITERAL( degC,    1,   celsius);             // 0_degC
+LITERAL( degC,    1,   celsius);             // 0_degC (degree celsius)
 LITERAL( Mach,  330,   meters_per_second);   // 6_Mach
+LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc (parsec)
 
 #undef LITERAL
 }

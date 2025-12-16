@@ -73,17 +73,18 @@ const auto m_u = kilogram(1.66053906e-27); // Atomic mass constant
 CONST( S_0_by_R,    -1.15170753706,  quantity); // Sackur–Tetrode constant
 
 // Adopted values
-//CONST( g_0,   9.80665 * units::m / units::s2; // standard acceleration of gravity
 //CONST( atm,    101325 * units::Pa; // standard atmosphere
    
 // Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
 CONST( speed_of_sound, 343,  meters_per_second); // speed of sound in air at 20 °C (68 °F)
 CONST( standard_gravity, 9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
+CONST( g_0,              9.80665, meters_per_second2); // standard acceleration of gravity
 //CONST( Gravitational_constant, 6.6743015e−11, * si::m3 / si::kilogram / si::s2);
 
 // Mathematical constants:  (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
 CONST( half_pi,             90, degree);
 CONST( pi,                 180, degree);
+CONST( π,                  180, degree);
 CONST( tau,                360, degree);
 
 #if defined(__clang__) || defined(_MSC_VER)
@@ -95,10 +96,10 @@ CONST( Φ_0,    2.067833848e-15, units::Wb); // magnetic flux quantum
 CONST( μ_N,      5.0507837e-27, units::J / units::T); // nuclear magneton
 CONST( σ_e,      6.6524587e-29, units::m2); // Thomson cross section
 CONST( σ,       5.670374419e-8, units::W / units::m2 / units::K2); // Stefan–Boltzmann constant
+#endif
 CONST( α,         7.2973525e-3, quantity); // fine-structure constant
 CONST( α_inv,    137.035999084, quantity); // inverse fine-structure constant
 CONST( sin2θ_W,        0.22290, quantity); // weak mixing angle
-#endif
 
 // Astronomical constants:
 CONST( AU,         149.5978707e6,   kilometer);
