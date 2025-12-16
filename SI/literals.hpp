@@ -9,47 +9,53 @@ namespace si
   constexpr auto operator "" _ ## _symbol(long double x) { return _baseUnit(static_cast<double>(x) * _factor); } \
   constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<double>(x) * _factor); }
 
-// SI BASE UNITS
-//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
+// THE 7 SI BASE UNITS:
+// Symbol:   Factor:  Base Unit:            Example:
+LITERAL( s,        1, second);              // 60_s
+LITERAL( sec,      1, second);              // 60_sec
+LITERAL( second,   1, second);              // 60_second
+LITERAL( ms,       .001, second);           // 1_ms
+LITERAL( min,     60, second);              // 5_min
+LITERAL( h,     3600, second);              // 24_h
+LITERAL( day,24*3600,second);               // 1_day on Earth!
+LITERAL( week,  7*24*3600,second);          // 1_week on Earth!
+LITERAL( year,  365.25*24*3600,second);     // 1_year on Earth!
+
+LITERAL( m,        1, meter);               // 1_m
+LITERAL( meter,    1, meter);               // 1_meter
+LITERAL( dm,       .1, meter);              // 7_dm
+LITERAL( cm,       .01, meter);             // 9_cm 
+LITERAL( mm,       .001, meter);            // 4_mm
+LITERAL( km,    1000,  meter);	            // 1.2_km
+
+LITERAL( kg,    1,     kilogram);            // 10_kg
+LITERAL( g,     .001,  kilogram);            // 3_g
+LITERAL( t,     1000,  kilogram);            // 7_t
+
+LITERAL( K,     1,     kelvin);              // 100_K
+
 LITERAL( A,     1,     ampere);              // 5_A 
+LITERAL( mA,    .001,  ampere);              // 4_mA 
+LITERAL( kA, 1000,  ampere);                 // 1_kA
+
+// SI DERIVED BASE UNITS
+//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
 LITERAL( Bq,    1,     hertz);               // 100_Bq (Bequerel)
-LITERAL( cm,    .01,   meter);               // 9_cm 
-LITERAL( day,   24*3600,second);             // 1_day
 LITERAL( deg,   1,     degree);              // 90_deg
-LITERAL( dm,    .1,    meter);               // 7_dm
 LITERAL( GHz,   1000000000, hertz);          // 1.3 GHz
-LITERAL( h,     3600,  second);              // 24_h
 LITERAL( Hz,    1,     hertz);               // 4_Hz
 LITERAL( J,     1,     joule);               // 1_J
-LITERAL( K,     1,     kelvin);              // 100_K
 LITERAL( kBq,   1000,  hertz);               // 2_kBq
-LITERAL( kg,    1,     kilogram);            // 10_kg
 LITERAL( kHz,   1000,  hertz);               // 700_kHz
-LITERAL( km,    1000,  meter);	             // 1.2_km
 LITERAL( kmh,   3.6,   meters_per_second);   // 30_kmh
-LITERAL( m,     1,     meter);               // 1_m
-LITERAL( meter, 1,     meter);               // 1_meter
-LITERAL( min,   60,    second);              // 5_min
 LITERAL( MHz,   1000000, hertz);             // 128_MHz
-LITERAL( mm,    .001,  meter);               // 4_mm
 LITERAL( mps,   1,     meters_per_second);   // 10_mps
 LITERAL( mps2,  1,     meters_per_second2);  // 9.807_mps2
-LITERAL( ms,    .001,  second);              // 1_ms
 LITERAL( pc,3.2*9460730472580.8, kilometer); // 8_pc
-LITERAL( s,     1,     second);              // 60_s
-LITERAL( sec,   1,     second);              // 60_sec
-LITERAL( second,1,     second);              // 60_second
 LITERAL( N,     1,     newton);              // 5.0_N
 LITERAL( Nm,    1,     newtonmeter);         // 2.1_Nm
-LITERAL( week,  7*24*3600,second);           // 1_week
-LITERAL( year,  365.25*24*3600,second);      // 1_year
-
-// SI DERIVED UNITS
-//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
 LITERAL( ha,    10000, meter2);              // 3_ha
-LITERAL( kA,    1000,  ampere);              // 1_kA
 LITERAL( km2,   1,     kilometer2);	     // 7_km2
-LITERAL( mA,    .001,  ampere);              // 5_mA 
 
 // IMPERIAL UNITS
 //     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
