@@ -5,9 +5,8 @@
 
 namespace si
 {
-	namespace Earth
+	namespace Earth // source: https://en.wikipedia.org/wiki/Earth
 	{
-// General:  (source: https://en.wikipedia.org/wiki/Earth)
 CONST( gravity,                     9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined 1901 in the third General Conference on Weights and Measures.
 CONST( equatorial_radius,          6378.137, kilometer);      // denoted 'a'
 CONST( equatorial_diameter, equatorial_radius * 2, meter);
@@ -24,6 +23,7 @@ CONST( volume,                   1.08321e12, kilometer3);
 CONST( mass,                      5.9723e24, kilogram);
 CONST( equatorial_rotation_velocity, 1674.4, kilometers_per_hour);
 CONST( age,                          4.5e12, year);
+CONST( satellites,                        1, quantity); // the Moon
 CONST( human_population,              8.2e9, quantity); // as of 2024
 
 // Mountains:  (source: https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth, heights above MSL, sorted by height)
