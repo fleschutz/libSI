@@ -6,11 +6,11 @@ This repo provides type-safe computations on arbitrary units and easy conversion
 Features
 --------
 * Supports type checking: Can't add a mass to a length
-* Supports convenient literals, e.g. 10_km
-* Supports hundreds of constants, even symbols like π
+* Supports convenient [literals](SI/literals.hpp), e.g. 10_km
+* Supports hundreds of [constants](SI/constants.hpp), even symbols like π
 * Supports SI base and derived units, Imperial units, and various more
-* With hundreds of usage examples
-* With unit tests to check everything
+* With hundreds of usage [examples](main.cpp)
+* With [unit tests)(SI/tests.hpp) to check everything
 * No runtime overhead: Compiles to nothing but simple doubles
 * Header only, own namespace
 
