@@ -9,6 +9,7 @@ Features
 * With type-safe [literals](SI/literals.hpp), e.g. 5_km or 24_h
 * With type-safe [constants](SI/constants.hpp), e.g. constant::sigma
 * With type-safe [formulas](SI/formulas.hpp), e.g. formula::circumference()
+* With all 24 [SI prefixes](SI/prefixes.hpp)
 * With hundreds of usage [examples](main.cpp)
 * With [unit tests](SI/tests.hpp) to check everything
 * Supports SI base and derived units, Imperial units, and various more
