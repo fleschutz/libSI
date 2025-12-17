@@ -893,44 +893,6 @@ namespace si
 	typedef long double lumens_per_watt;
 }
 
-#if 0
-namespace core
-{
-	namespace detail
-	{
-		template <class Dimension, class T>
-		struct value_tree_translator<si::detail::quantity<Dimension, T>>
-		{
-			static std::string to_string(const si::detail::quantity<Dimension, T>& value)
-			{
-				char buffer[128] = "";
-				auto result = si::to_chars(std::begin(buffer), std::end(buffer), value);
-				return buffer;
-			}
-
-			static value_tree_value<si::detail::quantity<Dimension, T>> from_string(std::string_view text)
-			{
-				if (!text.empty())
-				{
-					si::detail::quantity<Dimension, T> value = {};
-					auto last = text.data() + text.size();
-					auto result = si::from_chars(text.data(), last, value);
-
-					// make sure we consumed all characters
-					if (result.ptr == last && result.ec == std::errc())
-						return value;
-				}
-
-				std::string err("invalid value '");
-				err.append(text);
-				err.append("'");
-				return value_tree_error(std::move(err), "");
-			}
-		};
-	}
-}
-#endif
-
 #undef SI_RETURN_QUANTITY
 #undef SI_QUANTITY
 #undef SI_INLINE_CONSTEXPR

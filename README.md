@@ -54,9 +54,9 @@ Folder Structure
 ----------------
 ```
   ├📂SI
-  │  ├📄constants.hpp - with constants in SI units
+  │  ├📄all.hpp - includes any .hpp header file (for convenience)
+  │  ├📄constants.hpp - provides universal constants 
   │  ├📄Earth.hpp - with characteristics of planet Earth
-  │  ├📄everything.hpp - contains everything for convenience
   │  ├📄formulas.hpp - with common formulas
   │  ├📄Jupiter.hpp - with physical characteristics of planet Jupiter
   │  ├📄literals.hpp - with SI literals for convenience
@@ -66,8 +66,8 @@ Folder Structure
   │  ├📄prefixes.hpp - with the SI prefixes
   │  ├📄print.hpp - with a simple print to console interface 
   │  ├📄Sun.hpp - with physical characteristics of the Sun
-  │  ├📄types.hpp - with basic SI types
-  │  ├📄unit_tests.cpp - with unit tests for basic tests
+  │  ├📄tests.hpp - with unit tests for basic tests
+  │  ├📄types.hpp - the basic SI types
   ├📄CMakeLists.txt - the Makefile for cmake
   ├📄LICENSE - the CC0 license
   ├📄README.md - this README

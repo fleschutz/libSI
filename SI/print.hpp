@@ -100,7 +100,7 @@ namespace si
 		std::cout << number << std::endl;
 	}
 
-	void print(std::string text)
+	void print(const std::string& text)
 	{
 		std::cout << text;
 	}
