@@ -90,7 +90,7 @@ CONST( tau,                360, degree);
 #if defined(__clang__) || defined(_MSC_VER)
 CONST( ε_0,      8.8541878e-12, units::F / units::m); // electric constant (vacuum permittivity)
 CONST( μ_0,      1.25663706e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
-CONST( auto ℏ, 1.054571817e-34, units::J * units::s); // reduced Planck constant
+CONST( ℏ,      1.054571817e-34, units::J * units::s); // reduced Planck constant
 CONST( μ_B,      9.2740100e-24, units::J / units::T); // Bohr magneton
 CONST( Φ_0,    2.067833848e-15, units::Wb); // magnetic flux quantum
 CONST( μ_N,      5.0507837e-27, units::J / units::T); // nuclear magneton
