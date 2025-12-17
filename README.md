@@ -9,7 +9,7 @@ Features
 * Supports convenient literals, e.g. 10_km
 * Supports hundreds of constants, even symbols like π
 * Supports SI base and derived units, Imperial units, and various more
-* Supports hundreds of usage examples
+* With hundreds of usage examples
 * With unit tests to check everything
 * No runtime overhead: Compiles to nothing but simple doubles
 * Header only, own namespace
