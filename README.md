@@ -15,8 +15,8 @@ Features
 * Supports SI base and derived units, Imperial units, and various more
 * Header only, own namespace, no runtime overhead (compiles to nothing but simple doubles)
 
-Example
--------
+Code Example
+------------
 ```
 auto m = 1_kg;
 auto c = constant::speed_of_light;
