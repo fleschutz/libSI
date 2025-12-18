@@ -91,5 +91,11 @@ namespace si
 		{
 			return (target_speed * target_speed - current_speed * current_speed) / (2.0 * distance);
 		}
+
+		// Calculates the body-mass-index
+		auto BMI(mass weight, length height)
+		{
+			return weight / (height * height);
+		}
 	}
 }

@@ -7,7 +7,7 @@
 namespace si
 {
 	// SI BASE UNITS:
-	void print(si::time t)
+	void print(time t)
 	{
 		if (abs(t) >= year(1))
 			std::cout << year(t) << " year(s)" << std::endl;
@@ -23,7 +23,7 @@ namespace si
 			std::cout << second(t) << "sec" << std::endl;
 	}
 
-	void print(si::length d)
+	void print(length d)
 	{
 		if (abs(d) >= constant::lightyear * 1000000)
 			std::cout << (d / (constant::lightyear * 1000000)) << " megalight-year(s)" << std::endl;
@@ -39,7 +39,7 @@ namespace si
 			std::cout << centimeter(d) << "cm" << std::endl;
 	}
 
-	void print(si::mass m)
+	void print(mass m)
 	{
 		if (abs(m) >= kilogram(1))
 			std::cout << kilogram(m) << "kg" << std::endl;
@@ -47,7 +47,7 @@ namespace si
 			std::cout << gram(m) << "g" << std::endl;
 	}
 
-	void print(si::temperature T)
+	void print(temperature T)
 	{
 		if (T >= celsius(0))
 			std::cout << celsius(T) << "°C " << std::endl;
@@ -56,7 +56,7 @@ namespace si
 	}
 
 	// SI DERIVED UNITS:
-	void print(si::area a)
+	void print(area a)
 	{
 		if (abs(a) >= kilometer2(1))
 			std::cout << kilometer2(a) << "km²" << std::endl;
@@ -66,7 +66,7 @@ namespace si
 			std::cout << centimeter2(a) << "cm²" << std::endl;
 	}
 
-	void print(si::volume v)
+	void print(volume v)
 	{
 		if (abs(v) >= meter3(1.0))
 			std::cout << meter3(v) << "m³" << std::endl;
@@ -74,17 +74,17 @@ namespace si
 			std::cout << centimeter3(v) << "cm³" << std::endl;
 	}
 
-	void print(si::speed v)
+	void print(speed v)
 	{
 		std::cout << kilometers_per_hour(v) << "km/h" << std::endl;
 	}
 
-	void print(si::acceleration a)
+	void print(acceleration a)
 	{
 		std::cout << meters_per_second2(a) << "m/s²" << std::endl;
 	}
 
-	void print(si::energy E)
+	void print(energy E)
 	{
 		if (abs(E) >= gigajoule(1))
 			std::cout << gigajoule(E) << " GJ " << std::endl;
@@ -96,12 +96,19 @@ namespace si
 			std::cout << joule(E) << " Joule " << std::endl;
 	}
 
-	void print(si::angle d)
+	void print(angle a)
 	{
-		std::cout << degree(d) << "° " << std::endl;
+		std::cout << degree(a) << "° " << std::endl;
 	}
 
-	void print(si::quantity number)
+#if 0
+	void print(kilograms_per_meter2 v)
+	{
+		std::cout << kilograms_per_meter2(v) << "kg/m²" << std::endl;
+	}
+#endif
+
+	void print(quantity number)
 	{
 		std::cout << number << std::endl;
 	}

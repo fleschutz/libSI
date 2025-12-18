@@ -42,7 +42,7 @@ int main()
 	print("What's Markus BMI? OMG, it's... ");
 	auto Markus_weight = 90_kg;
 	auto Markus_height = 190_cm;
-	auto BMI = Markus_weight / (Markus_height * Markus_height);
+	auto BMI = formula::BMI(Markus_weight, Markus_height);
 	print(kilograms_per_meter2(BMI));
 } {
 	print("What's a radar's geometrical horizon (the distance it can see)? It's... ");
@@ -123,7 +123,7 @@ int main()
 	auto time = file_size / DSL_speed;
 	print(time);
 } {
-	print("What's an aircraft's glide path on final at 10NM distance in 3000ft height? It's... ");
+	print("What's the aircraft's glide path on final at 10NM distance in 3000ft height? It's... ");
 	auto distance_on_final = 10_NM;
 	auto height_on_final = 3000_ft;
 	auto glide_path = formula::glide_path(distance_on_final, height_on_final);

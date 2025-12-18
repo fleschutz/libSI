@@ -10,8 +10,8 @@ Features
 * With type-safe [constants](SI/constants.hpp), e.g. constant::sigma
 * With type-safe [formulas](SI/formulas.hpp), e.g. formula::circumference()
 * With all 24 [SI prefixes](SI/prefixes.hpp), e.g. prefix::tera
-* With hundreds of usage [examples](main.cpp)
-* With [unit tests](SI/tests.hpp) to check everything
+* With hundreds [usage examples](main.cpp)
+* With hundreds [unit tests](SI/tests.hpp) for safety
 * Supports SI base and derived units, Imperial units, and various more
 * Header only, own namespace, no runtime overhead (compiles to nothing but simple doubles)
 

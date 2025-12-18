@@ -9,7 +9,7 @@ namespace si
 {
 	void unit_tests()
 	{
-		// SI length:
+		// SI length checks:
 		static_assert(1_km == 1000_m);
 		static_assert(1_m == 10_dm);
 		static_assert(1_m == 100_cm);
@@ -21,7 +21,7 @@ namespace si
 		static_assert(1_NM == 1852_m);
 		// static_assert(1_m == 3.28084_ft);
 
-		// SI time:
+		// SI time checks:
 		static_assert(1_week == 7_day);
 		static_assert(1_day == 24_h);
 		static_assert(1_h == 60_min);
@@ -29,14 +29,14 @@ namespace si
 		static_assert(1_s == 1000_ms);
 		static_assert(1_ms == 0.001_s);
 
-		// SI area:
+		// SI area checks:
 		static_assert(Earth::land_area + Earth::water_area == Earth::surface_area);
 
-		// Let's check the speed:
+		// Speed checks:
 		//static_assert(1_kmh == 3.6_mps);
 		static_assert(1_Mach == 330_mps);
 
-		// Let's check the temperature:
+		// Temperature checks:
 		// assert(0_K == -273.15_degC);
 
 		// SI frequency checks:
@@ -50,7 +50,7 @@ namespace si
 		static_assert(1_Hz  == 0.000001_MHz);
 		static_assert(1_Hz  == 0.000000001_GHz);
 
-		// Let's check the digital units:
+		// Digital units checks:
 		static_assert(1_kB == 1000_byte);
 		static_assert(1_MB == 1000_kB);
 		static_assert(1_GB == 1000_MB);
@@ -62,10 +62,10 @@ namespace si
 		// static_assert(1_RB == 1000_YB); (too big yet)
 		// static_assert(1_QB == 1000_RB); (too big yet)
 
-		// SI Prefixes:
-		//static_assert(prefix::quetta == 1000 * prefix::yotta); (too big yet)
-		//static_assert(prefix::ronna == 1000 * prefix::yotta); (too big yet)
-		//static_assert(prefix::yotta == 1000 * prefix::zetta); (too big yet)
+		// SI Prefix checks:
+		static_assert(prefix::quetta > prefix::yotta); // (too big yet)
+		static_assert(prefix::ronna > prefix::yotta); // (too big yet)
+		static_assert(prefix::yotta > prefix::zetta); // (too big yet)
 		static_assert(prefix::zetta == 1000 * prefix::exa);
 		static_assert(prefix::exa == 1000 * prefix::peta);
 		static_assert(prefix::peta == 1000 * prefix::tera);
@@ -74,5 +74,17 @@ namespace si
 		static_assert(prefix::mega == 1000 * prefix::kilo);
 		static_assert(prefix::kilo == 10 * prefix::hecto);
 		static_assert(prefix::hecto == 10 * prefix::deca);
+		static_assert(prefix::deca > prefix::deci);
+		static_assert(prefix::deci > prefix::centi);
+		static_assert(prefix::centi > prefix::milli);
+		static_assert(prefix::milli > prefix::micro);
+		static_assert(prefix::micro > prefix::nano);
+		static_assert(prefix::nano > prefix::pico);
+		static_assert(prefix::pico > prefix::femto);
+		static_assert(prefix::femto > prefix::atto);
+		static_assert(prefix::atto > prefix::zepto);
+		static_assert(prefix::zepto > prefix::yocto);
+		static_assert(prefix::yocto > prefix::ronto);
+		static_assert(prefix::ronto > prefix::quecto);
 	}
 }
