@@ -92,6 +92,14 @@ namespace si
 			return (target_speed * target_speed - current_speed * current_speed) / (2.0 * distance);
 		}
 
+		// Returns the distance between both points.
+		length distance(length x1, length y1, length x2, length y2)
+		{
+			const length dx = x2 - x1;
+			const length dy = y2 - y1;
+			return sqrt((dx * dx) + (dy * dy));
+		}
+
 		// Calculates the body-mass-index
 		auto BMI(mass weight, length height)
 		{

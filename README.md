@@ -1,5 +1,5 @@
-Compiler-Aided Math in C++
-==========================
+Applied Math in C++
+===================
 
 This repo provides type-safe computations on arbitrary units and easy conversion to and from them.
 
