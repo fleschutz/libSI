@@ -49,16 +49,13 @@ namespace si
 		static_assert(1_Hz  == 0.000000001_GHz);
 
 		// Digital units checks:
-		static_assert(1_kB == 1000_byte);
-		static_assert(1_MB == 1000_kB);
-		static_assert(1_GB == 1000_MB);
-		static_assert(1_TB == 1000_GB);
-		static_assert(1_PB == 1000_TB);
-		static_assert(1_EB == 1000_PB);
 		static_assert(1_ZB == 1000_EB);
-		// static_assert(1_YB == 1000_ZB); (too big yet)
-		// static_assert(1_RB == 1000_YB); (too big yet)
-		// static_assert(1_QB == 1000_RB); (too big yet)
+		static_assert(1_EB == 1000_PB);
+		static_assert(1_PB == 1000_TB);
+		static_assert(1_TB == 1000_GB);
+		static_assert(1_GB == 1000_MB);
+		static_assert(1_MB == 1000_kB);
+		static_assert(1_kB == 1000_byte);
 
 		// SI Prefix checks:
 		static_assert(prefix::quetta > prefix::yotta); // (too big yet)
