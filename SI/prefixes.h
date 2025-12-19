@@ -7,7 +7,7 @@ namespace si
 {
 	namespace prefix // (source: https://en.wikipedia.org/wiki/Metric_prefix)
 	{
-#define PREFIX(_name, _symbol, _value)  constexpr quantity _name = _value, _symbol = _value
+#define PREFIX(_name, _symbol, _value)  constexpr si::quantity _name = _value, _symbol = _value
 		PREFIX( quetta, Q,  1e30);
 		PREFIX( ronna,  R,  1e27);
 		PREFIX( yotta,  Y,  1e24); 

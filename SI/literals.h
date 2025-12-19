@@ -6,7 +6,7 @@
 namespace si
 {
 #define LITERAL(_symbol, _factor, _baseUnit) \
-  constexpr auto operator "" _ ## _symbol(long double x) { return _baseUnit(static_cast<double>(x) * _factor); } \
+  constexpr auto operator "" _ ## _symbol(long double x) { return _baseUnit(static_cast<double>(x) * static_cast<double>(_factor)); } \
   constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<double>(x) * _factor); }
 
 // THE 7 SI BASE UNITS:
@@ -39,11 +39,14 @@ LITERAL( t,      1e3, kilogram);            // 7_t (metric ton)
 LITERAL( K,        1, kelvin);              // 100_K
 
 LITERAL( A,        1, ampere);              // 1_A 
-LITERAL( mA,    1e-3, ampere);              // 2_mA 
-LITERAL( μA,    1e-6, ampere);              // 3_μA 
-LITERAL( kA,     1e3, ampere);              // 4_kA
+LITERAL( kA,     1e3, ampere);              // 2_kA (kiloampere)
+LITERAL( MA,     1e6, ampere);              // 3_MA (megaampere)
+LITERAL( mA,    1e-3, ampere);              // 4_mA (milliampere)
+LITERAL( muA,   1e-6, ampere);              // 5_muA (microampere)
+LITERAL( nA,    1e-9, ampere);              // 6_nA (nanoampere)
+LITERAL( pA,   1e-12, ampere);              // 7_pA (picoampere)
 
-// SI DERIVED BASE UNITS
+// THE 22 SI DERIVED UNITS
 //     Symbol: Factor: Base Unit:           Example: (sorted alphabetically)
 LITERAL( Bq,       1, hertz);               // 100_Bq (Bequerel)
 LITERAL( deg,      1, degree);              // 90_deg
@@ -62,6 +65,26 @@ LITERAL( kHz,    1e3, hertz);               // 2_kHz
 LITERAL( MHz,    1e6, hertz);               // 3_MHz
 LITERAL( GHz,    1e9, hertz);               // 4_GHz
 LITERAL( THz,   1e12, hertz);               // 5_THz
+
+LITERAL( V,        1, volt);                // 1_V 
+LITERAL( kV,     1e3, volt);                // 2_kV (kilovolt)
+LITERAL( MV,     1e6, volt);                // 3_MV (megavolt)
+LITERAL( mV,    1e-3, volt);                // 4_mV (millivolt)
+LITERAL( muV,   1e-6, volt);                // 5_muV (microvolt)
+LITERAL( nV,    1e-9, volt);                // 6_nV (nanovolt)
+LITERAL( pV,   1e-12, volt);                // 7_pV (picovolt)
+
+LITERAL( Ohm,      1, ohm);                // 1_Ohm
+LITERAL( kOhm,   1e3, ohm);                // 1_kOhm (kiloohm)
+LITERAL( MOhm,   1e6, ohm);                // 1_MOhm (megaohm)
+LITERAL( mOhm,  1e-3, ohm);                // 1_mOhm (milliohm)
+
+LITERAL( W,        1, joules_per_second);  // 1_W (Watt)
+LITERAL( kW,     1e3, joules_per_second);  // 1_kW (kilowatt)
+LITERAL( MW,     1e6, joules_per_second);  // 1_MW (megawatt)
+LITERAL( GW,     1e9, joules_per_second);  // 1_GW (gigawatt)
+LITERAL( TW,    1e12, joules_per_second);  // 1_TW (terawatt)
+LITERAL( mW,    1e-3, joules_per_second);  // 1_mW (milliwatt)
 
 // DIGITAL UNITS
 //     Symbol: Factor: Base Unit:           Example: (sorted alphabetically)

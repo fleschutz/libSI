@@ -33,6 +33,14 @@ namespace si
 		// SI area checks:
 		static_assert(Earth::land_area + Earth::water_area == Earth::surface_area);
 
+		// SI ampere:
+		static_assert(1_MA == 1000_kA);
+		static_assert(1_kA == 1000_A);
+		static_assert(1_A == 1000_mA);
+		static_assert(1_mA == 1000_muA);
+		//static_assert(1_muA == 1000_nA);
+		static_assert(1_nA == 1000_pA);
+
 		// Speed checks:
 		//static_assert(1_kmh == 3.6_mps);
 		static_assert(1_Mach == 330_mps);
