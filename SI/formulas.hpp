@@ -1,8 +1,8 @@
-// SI/formulas.hpp - contains common formulas
+// SI/formulas.hpp - contains type-safe formulas
 #pragma once
 
 #include <cmath>
-#include "units.hpp"
+#include "constants.hpp"
 
 namespace si
 {
