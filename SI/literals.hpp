@@ -44,41 +44,43 @@ LITERAL( μA,    1e-6, ampere);              // 3_μA
 LITERAL( kA,     1e3, ampere);              // 4_kA
 
 // SI DERIVED BASE UNITS
-//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
-LITERAL( Bq,    1,     hertz);               // 100_Bq (Bequerel)
-LITERAL( deg,   1,     degree);              // 90_deg
-LITERAL( GHz,   1000000000, hertz);          // 1.3 GHz
-LITERAL( Hz,    1,     hertz);               // 4_Hz
-LITERAL( J,     1,     joule);               // 1_J
-LITERAL( kBq,   1000,  hertz);               // 2_kBq
-LITERAL( kHz,   1000,  hertz);               // 700_kHz
-LITERAL( kmh,   1,     kilometers_per_hour); // 30_kmh
-LITERAL( MHz,   1000000, hertz);             // 128_MHz
-LITERAL( mps,   1,     meters_per_second);   // 10_mps
-LITERAL( mps2,  1,     meters_per_second2);  // 9.807_mps2
-LITERAL( N,     1,     newton);              // 5.0_N
-LITERAL( Nm,    1,     newtonmeter);         // 2.1_Nm
-LITERAL( ha,    10000, meter2);              // 3_ha
-LITERAL( km2,   1,     kilometer2);	     // 7_km2
+//     Symbol: Factor: Base Unit:           Example: (sorted alphabetically)
+LITERAL( Bq,       1, hertz);               // 100_Bq (Bequerel)
+LITERAL( deg,      1, degree);              // 90_deg
+LITERAL( J,        1, joule);               // 1_J
+LITERAL( kBq,   1000, hertz);               // 2_kBq
+LITERAL( kmh,      1, kilometers_per_hour); // 30_kmh
+LITERAL( mps,      1, meters_per_second);   // 10_mps
+LITERAL( mps2,     1, meters_per_second2);  // 9.807_mps2
+LITERAL( N,        1, newton);              // 5.0_N
+LITERAL( Nm,       1, newtonmeter);         // 2.1_Nm
+LITERAL( ha,   10000, meter2);              // 3_ha
+LITERAL( km2,      1, kilometer2);	    // 7_km2
+
+LITERAL( Hz,       1, hertz);               // 1_Hz
+LITERAL( kHz,    1e3, hertz);               // 2_kHz
+LITERAL( MHz,    1e6, hertz);               // 3_MHz
+LITERAL( GHz,    1e9, hertz);               // 4_GHz
+LITERAL( THz,   1e12, hertz);               // 5_THz
 
 // DIGITAL UNITS
-//     Symbol: Factor: Base Unit:            Example: (sorted alphabetically)
-LITERAL( byte,    1,   byte);                // 1_byte
-LITERAL( kB,    1e3,   byte);                // 1_kB (kilobyte)
-LITERAL( MB,    1e6,   byte);                // 2_MB (megabyte)
-LITERAL( GB,    1e9,   byte);                // 3_GB (gigabyte)
-LITERAL( TB,   1e12,   byte);                // 4_TB (terabyte)
-LITERAL( PB,   1e15,   byte);                // 5_PB (terabyte)
-LITERAL( EB,   1e18,   byte);                // 6_EB (exabyte)
-LITERAL( ZB,   1e21,   byte);                // 7_ZB (zettabyte)
-LITERAL( YB,   1e24,   byte);                // 8_YB (yottabyte)
-LITERAL( RB,   1e27,   byte);                // 9_RB (ronnabyte)
-LITERAL( QB,   1e30,   byte);                // 10_QB (ronnabyte)
+//     Symbol: Factor: Base Unit:           Example: (sorted alphabetically)
+LITERAL( byte,     1, byte);                // 1_byte
+LITERAL( kB,     1e3, byte);                // 1_kB (kilobyte)
+LITERAL( MB,     1e6, byte);                // 2_MB (megabyte)
+LITERAL( GB,     1e9, byte);                // 3_GB (gigabyte)
+LITERAL( TB,    1e12, byte);                // 4_TB (terabyte)
+LITERAL( PB,    1e15, byte);                // 5_PB (terabyte)
+LITERAL( EB,    1e18, byte);                // 6_EB (exabyte)
+LITERAL( ZB,    1e21, byte);                // 7_ZB (zettabyte)
+LITERAL( YB,    1e24, byte);                // 8_YB (yottabyte)
+LITERAL( RB,    1e27, byte);                // 9_RB (ronnabyte)
+LITERAL( QB,    1e30, byte);                // 10_QB (ronnabyte)
 
-LITERAL( KBps,  1e3,   bytes_per_second);    // 1_KBps (kilobyte/sec)
-LITERAL( MBps,  1e6,   bytes_per_second);    // 1_MBps (megabyte/sec)
-LITERAL( GBps,  1e9,   bytes_per_second);    // 1_GBps (gigabyte/sec)
-LITERAL( TBps, 1e12,   bytes_per_second);    // 1_TBps (terabyte/sec)
+LITERAL( KBps,   1e3, bytes_per_second);    // 1_KBps (kilobyte/sec)
+LITERAL( MBps,   1e6, bytes_per_second);    // 1_MBps (megabyte/sec)
+LITERAL( GBps,   1e9, bytes_per_second);    // 1_GBps (gigabyte/sec)
+LITERAL( TBps,  1e12, bytes_per_second);    // 1_TBps (terabyte/sec)
 
 LITERAL( Kbps,  1e3/8, bytes_per_second);    // 1_Kbps (kilobit/sec)
 LITERAL( Mbps,  1e6/8, bytes_per_second);    // 1_Mbps (megabit/sec)

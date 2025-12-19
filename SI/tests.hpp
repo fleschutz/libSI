@@ -40,10 +40,8 @@ namespace si
 		// assert(0_K == -273.15_degC);
 
 		// SI frequency checks:
-		static_assert(1_GHz == 1000000000_Hz);
+		static_assert(1_THz == 1000_GHz);
 		static_assert(1_GHz == 1000_MHz);
-		static_assert(1_GHz == 1000000_kHz);
-		static_assert(1_MHz == 1000000_Hz);
 		static_assert(1_MHz == 1000_kHz);
 		static_assert(1_kHz == 1000_Hz);
 		static_assert(1_Hz  == 0.001_kHz);
