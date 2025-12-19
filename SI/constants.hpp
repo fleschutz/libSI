@@ -1,12 +1,14 @@
-// SI/constants.hpp - contains constants in SI units
+// SI/constants.hpp - contains type-safe constants in SI units
 #pragma once
+
 #include "units.hpp"
-#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
 
 namespace si
 {
 	namespace constant
 	{
+#define CONST(_name, _value, _unit)  static constexpr auto _name = _unit(_value)
+
 // The 7 defining constants of SI:
 CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vacuum
 CONST( c,              299'792'458, meters_per_second);
@@ -110,7 +112,6 @@ CONST( parsec,     3.2 * lightyear, meter); // symbol: pc
 CONST( Marathon_length, 42195, meter);
 CONST( min_temperature,     0, kelvin);
 
+#undef CONST
 	}
 }
-
-#undef CONST
