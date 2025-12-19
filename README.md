@@ -5,10 +5,10 @@ This repo provides type-safe computations on arbitrary units and easy conversion
 
 Features
 --------
-* With type-safe [units](SI/units.h): Can't add a mass to a length
-* With type-safe [literals](SI/literals.h), e.g. 5_km or 24_h
-* With type-safe [constants](SI/constants.h), e.g. constant::sigma
-* With type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
+* Type-safe [units](SI/units.h): Can't add a mass to a length
+* Type-safe [literals](SI/literals.h), e.g. 5_km or 24_h
+* Type-safe [constants](SI/constants.h), e.g. constant::sigma
+* Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
 * With all 24 [SI prefixes](SI/prefixes.h), e.g. prefix::tera
 * With hundreds of [examples](main.cpp)
 * With hundreds of [unit tests](SI/tests.h) for safety
