@@ -10,8 +10,7 @@ namespace si
 #define CONST(_name, _value, _unit)  constexpr auto _name = _unit(_value)
 
 // The 7 defining constants of SI:
-CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vacuum
-CONST( c,              299'792'458, meters_per_second);
+CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vacuum (symbol: c)
 CONST( h,              6.62607e-34, joulesecond); // Planck constant
 //CONST( e,           1.602176e-19, units::C); // elementary charge
 CONST( Δν_Cs,        9'192'631'770, hertz); // hyperfine transition frequency of cesium-133 (defines the SI second)
