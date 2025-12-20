@@ -123,10 +123,10 @@ int main()
 	auto glide_path = formula::glide_path(distance_on_final, height_on_final);
 	print(glide_path);
 } {
-	print("What's Markus body-mass index (BMI)? OMG, it's... ");
-	auto Markus_weight = 90_kg;
-	auto Markus_height = 190_cm;
-	auto BMI = formula::BMI(Markus_weight, Markus_height);
+	print("What's Donald Trump's body-mass index (BMI)? It's... ");
+	auto Donalds_weight = 102_kg;
+	auto Donalds_height = 190_cm;
+	auto BMI = formula::BMI(Donalds_weight, Donalds_height);
 	print(kilograms_per_meter2(BMI));
 }
 	return 0;

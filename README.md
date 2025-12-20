@@ -46,7 +46,7 @@ What's a car's braking distance on dry asphalt from 100km/h? It's... 48.2253m
 What's a car's braking distance on wet asphalt from 100km/h? It's... 64.3004m
 How long takes a 1TB download at 100MBit speed? It's... 22h 13min
 What's the aircraft's glide path on final at 10NM distance in 3000ft height? It's... 2.82661°
-What's Markus body-mass index (BMI)? OMG, it's... 24.9307
+What's Donald Trump's body-mass index (BMI)? It's... 28.2548
 ```
 
 
