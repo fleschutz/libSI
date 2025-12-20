@@ -10,8 +10,7 @@ Features
 * Type-safe [constants](SI/constants.h), e.g. constant::sigma
 * Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
 * Type-safe [values](SI/values/), e.g. for planet [Earth](SI/Earth.h) or the [Moon](SI/Moon.h).
-* Supports SI base units, SI derived, Imperial, and various more.
-* Supports all 24 [SI prefixes](SI/prefixes.h), e.g. prefix::tera
+* Supports SI base units, SI derived units, Imperial units, and many more.
 * Header only, own namespace, with [unit tests](SI/tests.h), no runtime overhead (compiles to nothing but simple doubles)
 
 Code Example
@@ -59,7 +58,6 @@ Folder Structure
   │  ├📄constants.h (7K)
   │  ├📄formulas.h (2K)
   │  ├📄literals.h (7K)
-  │  ├📄prefixes.h (1K)
   │  ├📄print.h (3K)
   │  ├📄tests.h (3K)
   │  ├📄units.h (32K)
@@ -75,7 +73,7 @@ Folder Structure
   ├📄LICENSE (7K)
   ├📄examples.cpp (5K)
   ├📄README.md (4K)
-     (25 files, 5 folders, 5MB in total)
+     (24 files, 5 folders, 5MB in total)
 
 ```
 
