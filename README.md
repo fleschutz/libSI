@@ -53,13 +53,19 @@ What's the aircraft's glide path on final at 10NM distance in 3000ft height? It'
 Folder Structure
 ----------------
 ```
+ 📂Math
+  ├📄CMakeLists.txt (301 bytes)
+  ├📄examples.cpp (5K)
+  ├📄LICENSE (7K)
+  ├📄README.md (4K)
   ├📂SI
-  │  ├📄all.h (388 bytes)
+  │  ├📄all.h (392 bytes)
   │  ├📄constants.h (7K)
   │  ├📄formulas.h (2K)
+  │  ├📄internal.h (18K)
   │  ├📄literals.h (7K)
   │  ├📄print.h (3K)
-  │  ├📄tests.h (3K)
+  │  ├📄tests.h (2K)
   │  ├📄units.h (32K)
   │  ├📂values
   │  │  ├📄Earth.h (3K)
@@ -69,12 +75,7 @@ Folder Structure
   │  │  ├📄Moon.h (1K)
   │  │  ├📄music.h (480 bytes)
   │  │  ├📄Sun.h (1K)
-  ├📄CMakeLists.txt (318 bytes)
-  ├📄LICENSE (7K)
-  ├📄examples.cpp (5K)
-  ├📄README.md (4K)
-     (24 files, 5 folders, 5MB in total)
-
+(19 files, 3 folders, 97K in total)
 ```
 
 🤝 Contributing
