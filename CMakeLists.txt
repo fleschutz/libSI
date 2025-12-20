@@ -1,16 +1,16 @@
 #
-# Platform-independent CMakefile to build SI lib
-# -----------------------------------------------
+# Platform-independent CMakefile
+# ------------------------------
 
 cmake_minimum_required(VERSION 3.10)
 
-project(main)
+project(examples)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(main main.cpp)
+add_executable(examples examples.cpp)
 
-install(TARGETS main DESTINATION . )
+install(TARGETS examples DESTINATION . )
 

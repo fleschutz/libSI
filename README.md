@@ -9,7 +9,7 @@ Features
 * Type-safe [literals](SI/literals.h), e.g. 5_km or 24_h
 * Type-safe [constants](SI/constants.h), e.g. constant::sigma
 * Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
-* Type-safe [values](SI/values/), e.g. for [Earth](SI/Earth.h), or [Moon](SI/Moon.h).
+* Type-safe [values](SI/values/), e.g. for planet [Earth](SI/Earth.h) or the [Moon](SI/Moon.h).
 * Supports SI base units, SI derived, Imperial, and various more.
 * Supports all 24 [SI prefixes](SI/prefixes.h), e.g. prefix::tera
 * Header only, own namespace, with [unit tests](SI/tests.h), no runtime overhead (compiles to nothing but simple doubles)
@@ -21,11 +21,8 @@ auto m = 1_kg;
 auto c = constant::speed_of_light;
 auto E = m * c * c;
 ```
-See many more examples and the full code at: [main.cpp](main.cpp)
+See many more examples and the full code at [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` produces the following output:
 
-
-Program Output
---------------
 ```
 What's the average speed of Kiptum's world record in Marathon? It's...21.0975 km/h
 What's the potential energy of 1kg mass? It's... 8.98755e+07 GJ
@@ -76,7 +73,7 @@ Folder Structure
   │  │  ├📄Sun.h (1K)
   ├📄CMakeLists.txt (318 bytes)
   ├📄LICENSE (7K)
-  ├📄main.cpp (5K)
+  ├📄examples.cpp (5K)
   ├📄README.md (4K)
      (25 files, 5 folders, 5MB in total)
 
