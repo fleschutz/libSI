@@ -6,7 +6,7 @@
 
 namespace si
 {
-	// SI BASE UNITS:
+	// The 7 SI base units:
 	void print(time t)
 	{
 		if (abs(t) >= year(1))
@@ -55,7 +55,7 @@ namespace si
 			std::cout << kelvin(T) << "°K " << std::endl;
 	}
 
-	// SI DERIVED UNITS:
+	// The 22 SI derived units:
 	void print(area a)
 	{
 		if (abs(a) >= kilometer2(1))
@@ -101,13 +101,7 @@ namespace si
 		std::cout << degree(a) << "° " << std::endl;
 	}
 
-#if 0
-	void print(kilograms_per_meter2 v)
-	{
-		std::cout << kilograms_per_meter2(v) << "kg/m²" << std::endl;
-	}
-#endif
-
+	// Various:
 	void print(quantity number)
 	{
 		std::cout << number << std::endl;
