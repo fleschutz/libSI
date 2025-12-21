@@ -7,13 +7,19 @@ namespace si
 {
 	namespace constant
 	{
-#define CONST(_name, _value, _unit)  constexpr auto _name = _unit(_value)
+#define CONST(_name, _value, _unit) constexpr auto _name = _unit(_value)
+#if defined(__clang__) || defined(_MSC_VER) // with Unicode support in names
+#define UNICODE(_name, _value, _unit) constexpr auto _name = _unit(_value)
+#else
+#define UNICODE(_name, _value, _unit) 
+#endif
 
 // The 7 defining constants of SI:
 CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vacuum (symbol: c)
 CONST( h,              6.62607e-34, joulesecond); // Planck constant
+UNICODE( ℏ,        1.054571817e-34, joulesecond); // reduced Planck constant
 //CONST( e,           1.602176e-19, units::C); // elementary charge
-CONST( Δν_Cs,        9'192'631'770, hertz); // hyperfine transition frequency of cesium-133 (defines the SI second)
+UNICODE( Δν_Cs,      9'192'631'770, hertz); // hyperfine transition frequency of cesium-133 (defines the SI second)
 CONST( k,            1.380'649e-23, joules_per_kelvin); // Boltzmann constant
 //CONST( N_A,          6.02214076e23, 1 / units::mol; // Avogadro constant
 CONST( K_cd,                   683, lumens_per_watt); // luminous efficacy of 540 THz monochromatic radiation
@@ -88,22 +94,19 @@ CONST( speed_of_sound_in_diamonds, 12'000, meters_per_second);
 // Mathematical constants:  (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
 CONST( half_pi,     M_PI / 2.0, quantity);
 CONST( pi,                M_PI, quantity);
-CONST( π,                 M_PI, quantity);
+UNICODE( π,               M_PI, quantity);
 CONST( tau,         2.0 * M_PI, quantity);
 
-#if defined(__clang__) || defined(_MSC_VER)
-CONST( ε_0,      8.8541878e-12, units::F / units::m); // electric constant (vacuum permittivity)
-CONST( μ_0,      1.25663706e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
-CONST( μ_B,      9.2740100e-24, units::J / units::T); // Bohr magneton
-CONST( Φ_0,    2.067833848e-15, units::Wb); // magnetic flux quantum
-CONST( μ_N,      5.0507837e-27, units::J / units::T); // nuclear magneton
-CONST( σ_e,      6.6524587e-29, units::m2); // Thomson cross section
-CONST( σ,       5.670374419e-8, units::W / units::m2 / units::K2); // Stefan–Boltzmann constant
-#endif
-CONST( ℏ,      1.054571817e-34, joulesecond); // reduced Planck constant
-CONST( α,         7.2973525e-3, quantity); // fine-structure constant
-CONST( α_inv,    137.035999084, quantity); // inverse fine-structure constant
-CONST( sin2θ_W,        0.22290, quantity); // weak mixing angle
+//CONST( ε_0,      8.8541878e-12, units::F / units::m); // electric constant (vacuum permittivity)
+//CONST( μ_0,      1.25663706e-6, units::N / units::A2); // magnetic constant (vacuum permeability)
+//CONST( μ_B,      9.2740100e-24, units::J / units::T); // Bohr magneton
+//CONST( Φ_0,    2.067833848e-15, units::Wb); // magnetic flux quantum
+//CONST( μ_N,      5.0507837e-27, units::J / units::T); // nuclear magneton
+//CONST( σ_e,      6.6524587e-29, units::m2); // Thomson cross section
+//CONST( σ,       5.670374419e-8, units::W / units::m2 / units::K2); // Stefan–Boltzmann constant
+UNICODE( α,       7.2973525e-3, quantity); // fine-structure constant
+UNICODE( α_inv,  137.035999084, quantity); // inverse fine-structure constant
+UNICODE( sin2θ_W,      0.22290, quantity); // weak mixing angle
 
 // Astronomical constants:
 CONST( AU,     149'597'870'700, meter); // astronomical unit
@@ -115,6 +118,7 @@ CONST( lightyear,  9'460'730'472'580'800, meter);
 CONST( Marathon_length, 42195, meter);
 CONST( min_temperature,     0, kelvin);
 
+#undef UNICODE
 #undef CONST
 	}
 }

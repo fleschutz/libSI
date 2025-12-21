@@ -27,8 +27,9 @@ What's the average speed of Kiptum's world record in Marathon? It's...21.0975km/
 What's the potential energy of 1kg mass? It's... 8.98755e+07 GJ
 What's the kinetic energy of a car at 50 km/h? It's... 125.386 kJ
 What's the average speed here? It's... 185765km/h
-What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 204.862°K
+What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 273.15K
 What's the wavelength of H2 in vacuum? It's... 21.1061cm
+What's the wavelength of the high 'c' music note? It's... 32.7759cm
 What's the free fall time from Burj Khalifa tower in Dubai? It's... 12.9948sec
 What's a radar's geometrical horizon (the distance it can see)? It's... 10.7941km
 What's the time needed to fly non-stop around the Earth at Mach 1? It's... 33h 43min
@@ -41,7 +42,7 @@ What's the surface area of a soccer ball? It's... 779.859cm²
 What's the volume of a soccer ball? It's... 5792.19cm³
 What's the surface area of a 30cm pizza? It's... 706.858cm²
 What's the volume of a 30cm x 1cm pizza? It's... 706.858cm³
-What's the distance the Earth has travelled so far? It's... 446.782 megalight-year(s)
+What's the distance the Earth has travelled so far? It's... 4.46782e+08 light-year(s)
 What's a car's braking distance on dry asphalt from 100km/h? It's... 48.2253m
 What's a car's braking distance on wet asphalt from 100km/h? It's... 64.3004m
 How long takes a 1TB download at 100MBit speed? It's... 22h 13min

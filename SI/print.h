@@ -2,7 +2,7 @@
 #pragma once
 
 #include <iostream>
-#include "units.h"
+#include "literals.h"
 
 namespace si
 {
@@ -27,38 +27,38 @@ namespace si
 	{
 		if (abs(d) >= constant::lightyear)
 			std::cout << (d / constant::lightyear) << " light-year(s)" << std::endl;
-		else if (abs(d) >= kilometer(1.0))
-			std::cout << kilometer(d) << "km" << std::endl;
-		else if (abs(d) >= meter(1.0))
-			std::cout << meter(d) << "m" << std::endl;
-		else if (abs(d) >= centimeter(1.0))
-			std::cout << centimeter(d) << "cm" << std::endl;
+		else if (abs(d) >= 1_km)
+			std::cout << (d / 1_km) << "km" << std::endl;
+		else if (abs(d) >= 1_m)
+			std::cout << (d / 1_m) << "m" << std::endl;
+		else if (abs(d) >= 1_cm)
+			std::cout << (d / 1_cm) << "cm" << std::endl;
 		else
-			std::cout << millimeter(d) << "mm" << std::endl;
+			std::cout << (d / 1_mm) << "mm" << std::endl;
 	}
 
 	void print(mass m)
 	{
-		if (abs(m) >= ton(1.0))
-			std::cout << ton(m) << "t" << std::endl;
-		else if (abs(m) >= kilogram(1.0))
-			std::cout << kilogram(m) << "kg" << std::endl;
-		else if (abs(m) >= gram(1.0))
-			std::cout << gram(m) << "g" << std::endl;
+		if (abs(m) >= 1_t)
+			std::cout << (m / 1_t) << "t" << std::endl;
+		else if (abs(m) >= 1_kg)
+			std::cout << (m / 1_kg) << "kg" << std::endl;
+		else if (abs(m) >= 1_g)
+			std::cout << (m / 1_g) << "g" << std::endl;
 		else
-			std::cout << milligram(m) << "mg" << std::endl;
+			std::cout << (m / 1_mg) << "mg" << std::endl;
 	}
 
 	void print(temperature T)
 	{
-		if (abs(T) >= gigakelvin(1.0))
-			std::cout << gigakelvin(T) << " GK" << std::endl;
-		else if (abs(T) >= megakelvin(1.0))
-			std::cout << megakelvin(T) << " MK" << std::endl;
+		if (abs(T) >= 1_GK)
+			std::cout << (T / 1_GK) << " GK" << std::endl;
+		else if (abs(T) >= 1_MK)
+			std::cout << (T / 1_MK) << " MK" << std::endl;
 		else if (abs(T) >= kelvin(1.0))
 			std::cout << kelvin(T) << "K" << std::endl;
 		else
-			std::cout << millikelvin(T) << "mK" << std::endl;
+			std::cout << (T / 1_mK) << "mK" << std::endl;
 	}
 
 	// The 22 SI derived units:
