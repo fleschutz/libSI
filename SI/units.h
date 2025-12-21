@@ -781,6 +781,9 @@ namespace si
 	inline constexpr auto microgram = nano * kilogram;
 
 	inline constexpr auto kelvin = unit<temperature>();
+	inline constexpr auto megakelvin = mega * kelvin;
+	inline constexpr auto gigakelvin = giga * kelvin;
+	inline constexpr auto millikelvin = milli * kelvin;
 
 	typedef long double volt;
 	typedef long double ampere;
@@ -792,8 +795,9 @@ namespace si
 	inline constexpr auto kilometer2 = kilo * kilo * meter2;
 
 	inline constexpr auto meter3 = unit<volume>();
-	inline constexpr auto centimeter3 = centi * centi * centi * meter3;
 	inline constexpr auto kilometer3 = kilo * kilo * kilo * meter3;
+	inline constexpr auto centimeter3 = centi * centi * centi * meter3;
+	inline constexpr auto millimeter3 = milli * milli * milli * meter3;
 
 	inline constexpr auto meters_per_second = meter / second;
 	inline constexpr auto kilometers_per_hour = kilometer / hour;

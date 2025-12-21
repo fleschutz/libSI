@@ -35,7 +35,7 @@ int main()
 	print(H2_wavelength);
 } {
 	print("What's the wavelength of the high 'c' music note? It's... ");
-	auto high_c_frequency = 1046.5_Hz
+	auto high_c_frequency = 1046.5_Hz;
 	auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
 	print(wavelength);
 } {

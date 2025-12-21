@@ -9,15 +9,15 @@ namespace si
 	// The 7 SI base units:
 	void print(time t)
 	{
-		if (abs(t) >= year(1))
+		if (abs(t) >= year(1.0))
 			std::cout << year(t) << " year(s)" << std::endl;
-		else if (abs(t) >= week(1))
+		else if (abs(t) >= week(1.0))
 			std::cout << week(t) << " week(s)" << std::endl;
-		else if (abs(t) >= day(2))
+		else if (abs(t) >= day(2.0))
 			std::cout << day(t) << " day(s)" << std::endl;
-		else if (abs(t) >= hour(1))
+		else if (abs(t) >= hour(1.0))
 			std::cout << (int)hour(t) << "h " << ((int)minute(t)) % 60 << "min" << std::endl;
-		else if (abs(t) >= minute(1))
+		else if (abs(t) >= minute(1.0))
 			std::cout << minute(t) << "min" << std::endl;
 		else
 			std::cout << second(t) << "sec" << std::endl;
@@ -25,40 +25,46 @@ namespace si
 
 	void print(length d)
 	{
-		if (abs(d) >= constant::lightyear * 1000000)
-			std::cout << (d / (constant::lightyear * 1000000)) << " megalight-year(s)" << std::endl;
-		else if (abs(d) >= constant::lightyear * 1000)
-			std::cout << (d / (constant::lightyear * 1000)) << " kilolight-year(s)" << std::endl;
-		else if (abs(d) >= constant::lightyear)
+		if (abs(d) >= constant::lightyear)
 			std::cout << (d / constant::lightyear) << " light-year(s)" << std::endl;
-		else if (abs(d) >= kilometer(1))
+		else if (abs(d) >= kilometer(1.0))
 			std::cout << kilometer(d) << "km" << std::endl;
-		else if (abs(d) >= meter(1))
+		else if (abs(d) >= meter(1.0))
 			std::cout << meter(d) << "m" << std::endl;
-		else
+		else if (abs(d) >= centimeter(1.0))
 			std::cout << centimeter(d) << "cm" << std::endl;
+		else
+			std::cout << millimeter(d) << "mm" << std::endl;
 	}
 
 	void print(mass m)
 	{
-		if (abs(m) >= kilogram(1))
+		if (abs(m) >= ton(1.0))
+			std::cout << ton(m) << "t" << std::endl;
+		else if (abs(m) >= kilogram(1.0))
 			std::cout << kilogram(m) << "kg" << std::endl;
-		else
+		else if (abs(m) >= gram(1.0))
 			std::cout << gram(m) << "g" << std::endl;
+		else
+			std::cout << milligram(m) << "mg" << std::endl;
 	}
 
 	void print(temperature T)
 	{
-		if (T >= celsius(0))
-			std::cout << celsius(T) << "°C " << std::endl;
+		if (abs(T) >= gigakelvin(1.0))
+			std::cout << gigakelvin(T) << " GK" << std::endl;
+		else if (abs(T) >= megakelvin(1.0))
+			std::cout << megakelvin(T) << " MK" << std::endl;
+		else if (abs(T) >= kelvin(1.0))
+			std::cout << kelvin(T) << "K" << std::endl;
 		else
-			std::cout << kelvin(T) << "°K " << std::endl;
+			std::cout << millikelvin(T) << "mK" << std::endl;
 	}
 
 	// The 22 SI derived units:
 	void print(area a)
 	{
-		if (abs(a) >= kilometer2(1))
+		if (abs(a) >= kilometer2(1.0))
 			std::cout << kilometer2(a) << "km²" << std::endl;
 		else if (abs(a) >= meter2(1.0))
 			std::cout << meter2(a) << "m²" << std::endl;
@@ -68,10 +74,14 @@ namespace si
 
 	void print(volume v)
 	{
-		if (abs(v) >= meter3(1.0))
+		if (abs(v) >= kilometer3(1.0))
+			std::cout << kilometer3(v) << "km³" << std::endl;
+		else if (abs(v) >= meter3(1.0))
 			std::cout << meter3(v) << "m³" << std::endl;
-		else
+		else if (abs(v) >= centimeter3(1.0))
 			std::cout << centimeter3(v) << "cm³" << std::endl;
+		else
+			std::cout << millimeter3(v) << "mm³" << std::endl;
 	}
 
 	void print(speed v)
