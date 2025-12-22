@@ -1,3 +1,5 @@
+[![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
+
 Type-safe Math in C++
 =====================
 
@@ -11,10 +13,8 @@ Features
 * Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
 * Type-safe [values](SI/values/), e.g. for planet [Earth](SI/Earth.h) or the [Moon](SI/Moon.h).
 * Supports SI base units, SI derived units, Imperial units, and many more.
-* Platform-independant, tested with VS2017, GCC15.2
+* Platform-independant, tested with VS2017, gcc 15.2, clang 20.1.8
 * Header only, own namespace, with [unit tests](SI/tests.h), no runtime overhead (compiles to nothing but simple doubles)
-
-[![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
 Code Example
 ------------
