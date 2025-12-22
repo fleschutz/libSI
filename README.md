@@ -11,6 +11,7 @@ Features
 * Type-safe [formulas](SI/formulas.h), e.g. formula::circumference()
 * Type-safe [values](SI/values/), e.g. for planet [Earth](SI/Earth.h) or the [Moon](SI/Moon.h).
 * Supports SI base units, SI derived units, Imperial units, and many more.
+* Works with VS 2017+, GCC 15.2+
 * Header only, own namespace, with [unit tests](SI/tests.h), no runtime overhead (compiles to nothing but simple doubles)
 
 Code Example
