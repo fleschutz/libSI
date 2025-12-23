@@ -1,4 +1,4 @@
-// SI/print.h - print strings and values to the console
+// SI/print.h - print text, quantities, and SI values to the console
 #pragma once
 
 #include <iostream>
@@ -22,6 +22,22 @@ namespace si
 	}
 
 	// The 7 SI base units:
+	void print(length d)
+	{
+		if (abs(d) >= constant::lightyear)
+			print(d / constant::lightyear, " light-year(s)");
+		else if (abs(d) >= 1_km)
+			print(d / 1_km, "km");
+		else if (abs(d) >= 1_m)
+			print(d / 1_m, "m ");
+		else if (abs(d) >= 1_cm)
+			print(d / 1_cm, "cm");
+		else if (abs(d) >= 1_mm)
+			print(d / 1_mm, "mm");
+		else
+			print(d / 1_μm, "μm");
+	}
+
 	void print(time t)
 	{
 		if (abs(t) >= year(1.0))
@@ -40,20 +56,6 @@ namespace si
 			print(t / 1_ms, "ms");
 		else
 			print(t / 1_mus, "mus");
-	}
-
-	void print(length d)
-	{
-		if (abs(d) >= constant::lightyear)
-			print(d / constant::lightyear, " light-year(s)");
-		else if (abs(d) >= 1_km)
-			print(d / 1_km, "km");
-		else if (abs(d) >= 1_m)
-			print(d / 1_m, "m ");
-		else if (abs(d) >= 1_cm)
-			print(d / 1_cm, "cm");
-		else
-			print(d / 1_mm, "mm");
 	}
 
 	void print(mass m)
@@ -80,8 +82,12 @@ namespace si
 			print(T / 1_MK, "MK");
 		else if (abs(T) >= 1_K)
 			print(T / 1_K, "K");
-		else
+		else if (abs(T) >= 1_mK)
 			print(T / 1_mK, "mK");
+		else if (abs(T) >= 1_μK)
+			print(T / 1_μK, "μK");
+		else 
+			print(T / 1_nK, "nK");
 	}
 
 	// The 22 SI derived units:

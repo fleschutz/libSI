@@ -45,7 +45,7 @@ LITERAL( MK,     1e6, kelvin);              // 1_MK (megakelvin)
 LITERAL( kK,     1e3, kelvin);              // 1_kK (kilokelvin)
 LITERAL( K,        1, kelvin);              // 1_K
 LITERAL( mK,    1e-3, kelvin);              // 1_mK (millikelvin)
-LITERAL( muK,   1e-6, kelvin);              // 1_muK (microkelvin)
+LITERAL( μK,    1e-6, kelvin);              // 1_μK (microkelvin)
 LITERAL( nK,    1e-9, kelvin);              // 1_nK (nanokelvin)
 
 LITERAL( MA,     1e6, ampere);              // 1_MA (megaampere)
