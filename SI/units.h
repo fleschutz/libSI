@@ -786,6 +786,7 @@ namespace si
 
 	inline constexpr auto kilograms_per_meter2 = kilogram / (meter * meter);
 	inline constexpr auto kilograms_per_meter3 = kilogram / (meter * meter * meter);
+	inline constexpr auto grams_per_centimeter3 = gram / (centimeter * centimeter * centimeter);
 
 	inline constexpr auto hertz       = unit<frequency>();
 	inline constexpr auto kilohertz   = kilo * hertz;
