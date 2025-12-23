@@ -113,9 +113,9 @@ UNICODE( α_inv,    137.035999084, quantity); // inverse fine-structure constant
 UNICODE( sin2θ_W,        0.22290, quantity); // weak mixing angle
 
 // Astronomical constants: (source: https://en.wikipedia.org/wiki/Astronomical_constant)
-CONST( AU,               149'597'870'700, meter); // astronomical unit
-CONST( parsec,       3.085'677'581'28e16, meter); // Parsec (symbol: pc)
-CONST( lightyear,  9'460'730'472'580'800, meter); 
+CONST( AU,       149'597'870'691, meter);    // astronomical unit
+CONST( parsec,30'856'775'814'913'700, meter);// Parsec (symbol: pc)
+CONST( lightyear,9'460'730'777'119'564, meter); 
 TODO( Hubble,                       70.1, /*km s−1 Mpc−1*/); // symbol: H0
 
 // Various constants:

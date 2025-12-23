@@ -142,13 +142,16 @@ LITERAL( NM,          1'852, meter);       // 1_NM (nautical mile)
 LITERAL( nmi,         1'852, meter);       // 1_nmi (nautical mile)
 LITERAL( yd,          .9144, meter);       // 1_yd (yard)
 
+// ASTRONOMICAL UNITS
+LITERAL( ly, 9'460'730'777'119'564, meter); // 1_ly (light-year)
+LITERAL( AU, 149'597'870'691, meter);       // 1_AU (astronomical unit)
+LITERAL( pc, 30'856'775'814'913'700, meter);// 1_pc (parsec)
+
 // VARIOUS UNITS
 //     Symbol: Factor: Base Unit:           Example:
 LITERAL( degC,    1,   celsius);            // 1_degC (°Celsius)
 LITERAL( degR, 5.0/9.0,kelvin);             // 1_degR (°Rankine)
 LITERAL( Mach,  330,   meters_per_second);  // 1_Mach
-LITERAL( AU, 149'597'870'700, meter);       // 1_AU (astronomical unit)
-LITERAL( pc,3.085'677'581'28e16, meter);    // 1_pc (parsec)
 
 CARDINAL( byte,    1, byte);                // 1_byte
 CARDINAL( kB,    1e3, byte);                // 1_kB (kilobyte)
