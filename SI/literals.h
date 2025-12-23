@@ -104,27 +104,27 @@ LITERAL( kN,     1e3, newton);             // 1_kN (kilonewton)
 LITERAL( N,        1, newton);             // 1_N
 
 LITERAL( TJ,    1e12, joule);              // 1_TJ (terajoule)
-LITERAL( GJ,     1e9, joule);              // 1_GW (gigajoule)
-LITERAL( MJ,     1e6, joule);              // 1_MW (megajoule)
-LITERAL( kJ,     1e3, joule);              // 1_kW (kilojoule)
+LITERAL( GJ,     1e9, joule);              // 1_GJ (gigajoule)
+LITERAL( MJ,     1e6, joule);              // 1_MJ (megajoule)
+LITERAL( kJ,     1e3, joule);              // 1_kJ (kilojoule)
 LITERAL( J,        1, joule);              // 1_J (joule)
 
-LITERAL( TWh, 3.6e15, joules_per_second);  // 1_TWh (terawatt-hour)
-LITERAL( GWh, 3.6e12, joules_per_second);  // 1_GWh (gigawatt-hour)
-LITERAL( MWh,  3.6e9, joules_per_second);  // 1_MWh (megawatt-hour)
-LITERAL( kWh,  3.6e6, joules_per_second);  // 1_kWh (kilowatt-hour)
-LITERAL( Wh,   3.6e3, joules_per_second);  // 1_Wh (watt-hour)
+LITERAL( TW,    1e12, watt);               // 1_TW (terawatt)
+LITERAL( GW,     1e9, watt);               // 1_GW (gigawatt)
+LITERAL( MW,     1e6, watt);               // 1_MW (megawatt)
+LITERAL( kW,     1e3, watt);               // 1_kW (kilowatt)
+LITERAL( W,        1, watt);               // 1_W (Watt)
+LITERAL( mW,    1e-3, watt);               // 1_mW (milliwatt)
+LITERAL( muW,   1e-6, watt);               // 1_muW (microwatt)
+
+LITERAL( TWh, 3.6e15, watt);               // 1_TWh (terawatt-hour)
+LITERAL( GWh, 3.6e12, watt);               // 1_GWh (gigawatt-hour)
+LITERAL( MWh,  3.6e9, watt);               // 1_MWh (megawatt-hour)
+LITERAL( kWh,  3.6e6, watt);               // 1_kWh (kilowatt-hour)
+LITERAL( Wh,   3.6e3, watt);               // 1_Wh (watt-hour)
 
 LITERAL( kWh_per_kg, 3.6e6, joules_per_second_per_kilogram);  // 1_kWh_per_kg (kilowatt-hour per kilogram)
 LITERAL( Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (watt-hour per kilogram)
-
-LITERAL( TW,    1e12, joules_per_second);  // 1_TW (terawatt)
-LITERAL( GW,     1e9, joules_per_second);  // 1_GW (gigawatt)
-LITERAL( MW,     1e6, joules_per_second);  // 1_MW (megawatt)
-LITERAL( kW,     1e3, joules_per_second);  // 1_kW (kilowatt)
-LITERAL( W,        1, joules_per_second);  // 1_W (Watt)
-LITERAL( mW,    1e-3, joules_per_second);  // 1_mW (milliwatt)
-LITERAL( muW,   1e-6, joules_per_second);  // 1_muW (microwatt)
 
 // IMPERIAL UNITS
 //     Symbol: Factor: Base Unit:          Example:

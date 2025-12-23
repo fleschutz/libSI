@@ -699,12 +699,13 @@ namespace si
 	SI_QUANTITY(time,        0, 0, 1, 0, 0);
 	SI_QUANTITY(temperature, 0, 0, 0, 1, 0);
 	SI_QUANTITY(angle,       0, 0, 0, 0, 1);
+	//...
 
 	// The 22 SI derived units:
-	SI_QUANTITY(frequency,   0, 0, -1, 0, 0);
-	SI_QUANTITY(speed,       1, 0, -1, 0, 0);
+	SI_QUANTITY(frequency,   0, 0, -1, 0, 0); // (per time)
+	SI_QUANTITY(speed,       1, 0, -1, 0, 0); // (length per time)
 	SI_QUANTITY(angular_speed,0,0, -1, 0, 1);
-	SI_QUANTITY(acceleration,1, 0, -2, 0, 0);
+	SI_QUANTITY(acceleration,1, 0, -2, 0, 0); // (length per time²)
 	SI_QUANTITY(jerk,        1, 0, -3, 0, 0);
 	SI_QUANTITY(force,       1, 1, -2, 0, 0);
 	SI_QUANTITY(impulse,     1, 1, -1, 0, 0);
@@ -712,9 +713,10 @@ namespace si
 	SI_QUANTITY(energy,      2, 1, -2, 0, 0);
 	SI_QUANTITY(torque,      2, 1, -2, 0, 0);
 	SI_QUANTITY(power,       2, 1,- 3, 0, 0);
-	SI_QUANTITY(area,        2, 0,  0, 0, 0);
-	SI_QUANTITY(volume,      3, 0,  0, 0, 0);
+	SI_QUANTITY(area,        2, 0,  0, 0, 0); // (length²)
+	SI_QUANTITY(volume,      3, 0,  0, 0, 0); // (length³)
 	SI_QUANTITY(density,    -3, 1,  0, 0, 0);
+	//...
 
 	using position2d = length2;
 	using position = length3;
@@ -784,9 +786,9 @@ namespace si
 
 	inline constexpr auto meters_per_second2 = meter / (second * second);
 
-	inline constexpr auto kilograms_per_meter2 = kilogram / (meter * meter);
-	inline constexpr auto kilograms_per_meter3 = kilogram / (meter * meter * meter);
-	inline constexpr auto grams_per_centimeter3 = gram / (centimeter * centimeter * centimeter);
+	inline constexpr auto kilograms_per_meter2 = kilogram / meter2;
+	inline constexpr auto kilograms_per_meter3 = kilogram / meter3;
+	inline constexpr auto grams_per_centimeter3 = gram / centimeter3;
 
 	inline constexpr auto hertz       = unit<frequency>();
 	inline constexpr auto kilohertz   = kilo * hertz;
@@ -806,8 +808,11 @@ namespace si
 
 	inline constexpr auto joulesecond = joule * second;
 	inline constexpr auto joules_per_kelvin = joule / kelvin;
-	inline constexpr auto joules_per_second = joule / second;
 	inline constexpr auto joules_per_second_per_kilogram = joule / second / kilogram;
+
+	inline constexpr auto joules_per_second = joule / second;
+	inline constexpr auto watt        = joule / second; // (energy per time span)
+	inline constexpr auto watt_per_meter2 = watt / meter2;
 
 	inline constexpr auto pascal_     = newton / (meter * meter);
 	inline constexpr auto hectopascal = hecto * pascal_;
