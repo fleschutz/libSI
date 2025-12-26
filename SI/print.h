@@ -83,9 +83,20 @@ namespace si
 			print(m / 1_μg, "μg");
 	}
 
+	static void _print(const std::string& text)
+	{
+		std::cout << text;
+	}
+
 	void print(temperature T)
 	{
-		if (abs(T) >= 1_GK)
+		if (T >= 250_K && T <= 470_K) // temperature range for humans
+		{
+			print(kelvin(T), "K"); _print("(");
+			print(celsius(T), "°C"); _print(", ");
+			print(fahrenheit(T), "°F"); _print(")");
+		}
+		else if (abs(T) >= 1_GK)
 			print(T / 1_GK, "GK");
 		else if (abs(T) >= 1_MK)
 			print(T / 1_MK, "MK");
