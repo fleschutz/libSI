@@ -9,6 +9,7 @@
 #include "tests.h"
 
 #include "values/ISO.h"
+#include "values/densities.h"
 #include "values/Sun.h"
 #include "values/Mercury.h"
 #include "values/Mars.h"
