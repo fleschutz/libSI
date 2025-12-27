@@ -8,10 +8,10 @@ namespace si
 	namespace constant
 	{
 #define CONST(_name, _value, _unit) const auto _name = _unit(_value)
-#define UNICODE(_name, _value, _unit) // contains a non-ASCII character (not supported yet)
+#define UNICODE(_name, _value, _unit) // contains non-ASCII characters (not supported yet)
 #define TODO(_name, _value, _unit)    // to be done
 
-// The 7 defining constants of SI:
+// The 7 defining constants of SI
 CONST( Planck,    6.626'070'15e-34, joulesecond); // Planck constant
 CONST( h,         6.626'070'15e-34, joulesecond); // (the symbol)
 CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vacuum
@@ -36,13 +36,13 @@ CONST( h_bar,    1.054'571'817e-34, joulesecond); // reduced Planck constant
 // Electromagnetic constants
 TODO( mu_B,          9.2740100e-24, units::J / units::T); // Bohr magneton
 TODO( G_0,          7.748091729e-5, units::S); // conductance quantum
-TODO( K_Jm90,              48359e9, units::Hz / units::V); // conventional value of Josephson constant[30]
-TODO( R_Km90,            25812.807, units::Ohm); // conventional value of von Klitzing constant[32]
-TODO( G_0_inv,         12906.40372, units::Ohm); // inverse conductance quantum
+TODO( K_Jm90,              48359e9, units::Hz / units::V); // conventional value of Josephson constant
+CONST( R_Km90,           25812.807, ohm); // conventional value of von Klitzing constant
+CONST( G_0_inv,        12906.40372, ohm); // inverse conductance quantum
 TODO( K_J,           483597.8484e9, units::Hz / units::V); // Josephson constant
 TODO( Phi_0,       2.067833848e-15, units::Wb); // magnetic flux quantum
 TODO( mu_N,          5.0507837e-27, units::J / units::T); // nuclear magneton
-TODO( R_K,             25812.80745, units::Ohm); // von Klitzing constant
+CONST( R_K,            25812.80745, ohm); // von Klitzing constant
 TODO( k_e,1.0 / (4*M_PI*epsilon_0), quantity);
 
 // Atomic and nuclear constants
@@ -53,12 +53,12 @@ CONST( tau_mass,           3.16754e-27, kilogram);
 CONST( proton_mass,  1.67262192595e-27, kilogram);
 CONST( m_p,          1.67262192595e-27, kilogram);
 CONST( neutron_mass, 1.67492750056e-27, kilogram);
-CONST( a_0,             5.29177210e-11, meter); // Bohr radius
-CONST( r_e,              2.8179403e-15, meter); // classical electron radius
+CONST( a_0,             5.29177210e-11, meter);    // Bohr radius
+CONST( r_e,              2.8179403e-15, meter);    // classical electron radius
 CONST( g_e,          -2.00231930436256, quantity); // electron g-factor
 CONST( alpha,             7.2973525e-3, quantity); // fine-structure constant
 CONST( alpha_inv,        137.035999084, quantity); // inverse fine-structure constant
-CONST( E_h,           4.3597447222e-18, joule); // Hartree energy
+CONST( E_h,           4.3597447222e-18, joule);    // Hartree energy
 CONST( sin2Theta_W,            0.22290, quantity); // weak mixing angle
 TODO( G0_F,                  1.1663e-5, / units::GeV  / units::GeV); // Fermi coupling constant
 TODO( h_2me,              3.6369475e-4, units::m2 / units::s); // quantum of circulation
@@ -84,7 +84,7 @@ CONST( S_0_by_R,  -1.15170753706,  quantity); // Sackur–Tetrode constant
 // Adopted values
 CONST( atm,               101325, pascal_); // standard atmosphere
    
-// Physical constants: (source: https://en.wikipedia.org/wiki/List_of_physical_constants)
+// Physical constants
 CONST( standard_gravity,   9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
 CONST( g_0,                9.80665, meters_per_second2); // standard acceleration of gravity
 TODO( Gravitational_constant,  /*6.6743015e−11*/, /*si::m3 / si::kilogram / si::s2*/);
@@ -93,13 +93,13 @@ CONST( speed_of_sound_in_fresh_water, 1481, meters_per_second); // at 20°C (68�
 CONST( speed_of_sound_in_iron, 5120, meters_per_second);
 CONST( speed_of_sound_in_diamonds, 12'000, meters_per_second);
 
-// Mathematical constants:  (source: https://en.wikipedia.org/wiki/List_of_mathematical_constants)
+// Mathematical constants
 CONST(   pi,          3.14159265358979323846, quantity);
-UNICODE( π,                               pi, quantity); // (the symbol)
-CONST(   half_pi,                   pi / 2.0, quantity);
-CONST(   quarter_pi,                pi / 4.0, quantity);
-CONST(   tau,         6.28318530717958647692, quantity);
-UNICODE( τ,                              tau, quantity); // (the symbol)
+UNICODE( π,                            180.0, degree); // (the symbol)
+CONST(   half_pi,                       90.0, degree);
+CONST(   quarter_pi,                    45.0, degree);
+CONST(   tau,                          360.0, degree);
+UNICODE( τ,                            360.0, degree);
 CONST(   Phi,         1.61803398874989484820, quantity);
 CONST( Eulers_number, 2.71828182845904523536, quantity);
 
@@ -114,18 +114,24 @@ UNICODE( α,         7.2973525e-3, quantity); // fine-structure constant
 UNICODE( α_inv,    137.035999084, quantity); // inverse fine-structure constant
 UNICODE( sin2θ_W,        0.22290, quantity); // weak mixing angle
 
-// Astronomical constants: (source: https://en.wikipedia.org/wiki/Astronomical_constant)
+// Astronomical constants
 CONST( AU,       149'597'870'691, meter);    // astronomical unit
 CONST( parsec,30'856'775'814'913'700, meter);// Parsec (symbol: pc)
 CONST( lightyear,9'460'730'777'119'564, meter); 
 TODO( Hubble,                       70.1, /*km s−1 Mpc−1*/); // symbol: H0
 
-// Various constants:
+// Various constants
 CONST( Marathon_length,           42'195, meter);
 CONST( quarter_mile,              402.34, meter);
-
+	}
+}
 #undef CONST
 #undef UNICODE
 #undef TODO
-	}
-}
+
+// Sources
+// -------
+// * https://en.wikipedia.org/wiki/International_System_of_Units
+// * https://en.wikipedia.org/wiki/List_of_physical_constants
+// * https://en.wikipedia.org/wiki/List_of_mathematical_constants
+// * https://en.wikipedia.org/wiki/Astronomical_constant

@@ -19,19 +19,19 @@ namespace si
 		// Returns the angle in a right triangle, based on opposite and hypotenuse.
 		angle angle1_in_triangle(length opposite, length hypotenuse)
 		{
-			return asin(opposite / hypotenuse) * 1_deg;
+			return radian(asin(opposite / hypotenuse));
 		}
 
 		// Returns the angle in a right triangle, based on adjacent and hypotenuse.
 		angle angle2_in_triangle(length adjacent, length hypotenuse)
 		{
-			return acos(adjacent / hypotenuse) * 1_deg;
+			return radian(acos(adjacent / hypotenuse));
 		}
 
 		// Returns the angle in a right triangle, based on adjacent and opposite.
 		angle angle3_in_triangle(length adjacent, length opposite)
 		{
-			return atan(opposite / adjacent) * 1_deg;
+			return radian(atan(opposite / adjacent));
 		}
 
 		area area_of_triangle(length b, length h)

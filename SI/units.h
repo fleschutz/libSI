@@ -11,7 +11,7 @@
 
 namespace si
 {
-	typedef long double quantity; // datatype for a value without(!) unit, e.g. 42
+	typedef double_t quantity; // datatype for a value without(!) unit, e.g. 42
 
 	namespace detail
 	{
@@ -473,7 +473,7 @@ namespace si
 		template <long Num, long Den>
 		struct ratio
 		{
-			static constexpr auto factor = static_cast<double>(Num) / Den;
+			static constexpr auto factor = static_cast<double_t>(Num) / Den;
 		};
 
 		struct ratio_degree
@@ -497,7 +497,7 @@ namespace si
 		};
 
 		template <class T>
-		using promoted_scalar_type = std::conditional_t<std::is_same_v<scalar_value_type_t<T>, float>, float, double>;
+		using promoted_scalar_type = std::conditional_t<std::is_same_v<scalar_value_type_t<T>, float_t>, float_t, double_t>;
 
 		template <class T>
 		struct is_arithmetic : std::is_arithmetic<T> {};
@@ -615,17 +615,17 @@ namespace si
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR double operator()(const quantity<Dimension, double>& q) const
+			SI_INLINE_CONSTEXPR double_t operator()(const quantity<Dimension, double_t>& q) const
 			{
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR vec2<double> operator()(const quantity<Dimension, vec2<double>>& q) const
+			SI_INLINE_CONSTEXPR vec2<double_t> operator()(const quantity<Dimension, vec2<double_t>>& q) const
 			{
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR vec3<double> operator()(const quantity<Dimension, vec3<double>>& q) const
+			SI_INLINE_CONSTEXPR vec3<double_t> operator()(const quantity<Dimension, vec3<double_t>>& q) const
 			{
 				return value(q);
 			}
@@ -656,7 +656,7 @@ namespace si
 			return unit<dimension_subtract<DimensionLhs, DimensionRhs>, ratio_quotient<RatioLhs, RatioRhs>>();
 		}
 
-		std::from_chars_result from_chars(const char* first, const char* last, const int* dimension, double& value);
+		std::from_chars_result from_chars(const char* first, const char* last, const int* dimension, double_t& value);
 	}
 
 	inline constexpr detail::zero_t zero;
@@ -684,45 +684,48 @@ namespace si
 #define SI_QUANTITY(name_, length_, mass_, time_, temperature_, angle_)						\
 	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, angle_>; }\
 	template <class T> using name_ ## _t = detail::quantity<detail:: name_ ## _dimension, T>;		\
-	using name_ = name_ ## _t<double>;									\
-	using name_ ## f = name_ ## _t<float>;									\
-	using name_ ## 2 = name_ ## _t<detail::vec2<double>>;							\
-	using name_ ## 2f = name_ ## _t<detail::vec2<float>>;							\
-	using name_ ## 3 = name_ ## _t<detail::vec3<double>>;							\
-	using name_ ## 3f = name_ ## _t<detail::vec3<float>>															
-	// The 7 SI base units:          l  m  t  T  ° 
-	SI_QUANTITY(length,              1, 0, 0, 0, 0);
-	SI_QUANTITY(mass,                0, 1, 0, 0, 0);
-	SI_QUANTITY(time,                0, 0, 1, 0, 0);
-	SI_QUANTITY(temperature,         0, 0, 0, 1, 0); // (thermodynamic temperature)
-	SI_QUANTITY(electric_current,    0, 0, 0, 0, 1); // TODO
-	SI_QUANTITY(amount_of_substance, 0, 0, 0, 0, 1); // TODO
-	SI_QUANTITY(luminous_intensity,  0, 0, 0, 0, 1); // TODO
-	SI_QUANTITY(angle,               0, 0, 0, 0, 1); // (extra)
+	using name_ = name_ ## _t<double_t>;									\
+	using name_ ## f = name_ ## _t<float_t>;								\
+	using name_ ## 2 = name_ ## _t<detail::vec2<double_t>>;							\
+	using name_ ## 2f = name_ ## _t<detail::vec2<float_t>>;							\
+	using name_ ## 3 = name_ ## _t<detail::vec3<double_t>>;							\
+	using name_ ## 3f = name_ ## _t<detail::vec3<float_t>>															
+	// The 7 SI Dimensions
+	// -------------------                 l  m  t  T  ° 
+	SI_QUANTITY(length,                    1, 0, 0, 0, 0);
+	SI_QUANTITY(mass,                      0, 1, 0, 0, 0);
+	SI_QUANTITY(time,                      0, 0, 1, 0, 0);
+	SI_QUANTITY(thermodynamic_temperature, 0, 0, 0, 1, 0);
+	SI_QUANTITY(electric_current,          0, 0, 0, 0, 1); // TODO
+	SI_QUANTITY(amount_of_substance,       0, 0, 0, 0, 1); // TODO
+	SI_QUANTITY(luminous_intensity,        0, 0, 0, 0, 1); // TODO
 	//...
 
-	// The 22 SI derived units:
-	SI_QUANTITY(frequency,   0, 0, -1, 0, 0); // (per time)
-	SI_QUANTITY(speed,       1, 0, -1, 0, 0); // (length per time)
-	SI_QUANTITY(angular_speed,0,0, -1, 0, 1); // (degree per time)
-	SI_QUANTITY(acceleration,1, 0, -2, 0, 0); // (length per time²)
-	SI_QUANTITY(jerk,        1, 0, -3, 0, 0);
-	SI_QUANTITY(force,       1, 1, -2, 0, 0);
-	SI_QUANTITY(impulse,     1, 1, -1, 0, 0);
-	SI_QUANTITY(pressure,   -1, 1, -2, 0, 0);
-	SI_QUANTITY(energy,      2, 1, -2, 0, 0);
-	SI_QUANTITY(torque,      2, 1, -2, 0, 0);
-	SI_QUANTITY(power,       2, 1, -3, 0, 0);
-	SI_QUANTITY(area,        2, 0,  0, 0, 0); // (length²)
-	SI_QUANTITY(volume,      3, 0,  0, 0, 0); // (length³)
-	SI_QUANTITY(density,    -3, 1,  0, 0, 0); // (mass per length³)
-	SI_QUANTITY(BMI,        -2, 1,  0, 0, 0); // (mass per length²)
+	// The 22 SI Derived Dimensions
+	// ----------------------------
+	SI_QUANTITY(area,          2, 0,  0, 0, 0); // (length²)
+	SI_QUANTITY(volume,        3, 0,  0, 0, 0); // (length³)
+	SI_QUANTITY(frequency,     0, 0, -1, 0, 0); // (per time)
+	SI_QUANTITY(speed,         1, 0, -1, 0, 0); // (length per time)
+	SI_QUANTITY(angular_speed, 0, 0, -1, 0, 1); // (degree per time)
+	SI_QUANTITY(acceleration,  1, 0, -2, 0, 0); // (length per time²)
+	SI_QUANTITY(jerk,          1, 0, -3, 0, 0);
+	SI_QUANTITY(force,         1, 1, -2, 0, 0);
+	SI_QUANTITY(impulse,       1, 1, -1, 0, 0);
+	SI_QUANTITY(pressure,     -1, 1, -2, 0, 0);
+	SI_QUANTITY(energy,        2, 1, -2, 0, 0);
+	SI_QUANTITY(torque,        2, 1, -2, 0, 0);
+	SI_QUANTITY(power,         2, 1, -3, 0, 0);
+	SI_QUANTITY(density,      -3, 1,  0, 0, 0); // (mass per length³)
+	SI_QUANTITY(BMI,          -2, 1,  0, 0, 0); // (mass per length²)
+	SI_QUANTITY(angle,         0, 0,  0, 0, 1);
 	//...
 
 	using position2d = length2;
 	using position = length3;
 
-	// SI PREFIXES
+	// The SI Prefixes
+	// ---------------
 	//inline constexpr auto exa   = unit<detail::null_dimension, 1000000000000000000>();
 	//inline constexpr auto peta  = unit<detail::null_dimension, 1000000000000000>();
 	//inline constexpr auto tera  = unit<detail::null_dimension, 1000000000000>();
@@ -730,7 +733,7 @@ namespace si
 	inline constexpr auto mega  = unit<detail::null_dimension, 1000000>();
 	inline constexpr auto kilo  = unit<detail::null_dimension, 1000>();
 	inline constexpr auto hecto = unit<detail::null_dimension, 100>();
-	inline constexpr auto one   = unit<detail::null_dimension>();
+
 	inline constexpr auto centi = unit<detail::null_dimension, 1, 100>();
 	inline constexpr auto milli = unit<detail::null_dimension, 1, 1000>();
 	inline constexpr auto micro = unit<detail::null_dimension, 1, 1000000>();
@@ -758,7 +761,7 @@ namespace si
 	inline constexpr auto gram        = milli * kilogram;
 	inline constexpr auto milligram   = micro * kilogram;
 	// thermodynamic temperature in...
-	inline constexpr auto kelvin      = unit<temperature>();
+	inline constexpr auto kelvin      = unit<thermodynamic_temperature>();
 	// electric current in...
 	inline constexpr auto ampere      = unit<electric_current>();
 	// amount of substance in...
@@ -828,28 +831,29 @@ namespace si
 	inline constexpr auto tesla       = kilogram / (ampere * second * second);
 
 	inline constexpr auto radian      = unit<angle>();
+	inline constexpr auto steradian   = unit<detail::null_dimension>();
 	inline constexpr auto degree      = detail::unit<detail::angle_dimension, detail::ratio_degree>();
 	inline constexpr auto radians_per_second = radian / second; 
 	inline constexpr auto degrees_per_second = degree / second;
-	inline constexpr auto steradian   = unit<detail::null_dimension>();
 
 	inline constexpr auto lumen       = candela * steradian; 
 	inline constexpr auto lumen_second = lumen * second;
 	inline constexpr auto lumens_per_watt = lumen / watt; 
 
 	// IMPERIAL UNITS
-	inline constexpr auto pound       = unit<mass, 45359237, 100000000>();
-	inline constexpr auto feet        = unit<length, 3048, 10000>();
+	inline constexpr auto pound        = unit<mass, 45359237, 100000000>();
+	inline constexpr auto feet         = unit<length, 3048, 10000>();
 	inline constexpr auto nautical_mile = unit<length, 1852, 100>();
-	inline constexpr auto inch        = unit<length, 254, 10000>();
-	inline constexpr auto statute_mile = unit<length, 1609344, 1000>(); // that's the "international mile", the U.S. survey mile is about 1609.347218694 metres (sigh)
-	inline constexpr auto fahrenheit  = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
+	inline constexpr auto inch         = unit<length, 254, 10000>();
+	inline constexpr auto statute_mile = unit<length, 1609344, 1000>();
+	inline constexpr auto fahrenheit   = detail::unit<detail::thermodynamic_temperature_dimension, detail::tag_fahrenheit>();
 	inline constexpr auto miles_per_hour = statute_mile / hour;
-	inline constexpr auto knots       = nautical_mile / hour;
+	inline constexpr auto knots        = nautical_mile / hour;
 	inline constexpr auto feet_per_minute = feet / minute;
 	inline constexpr auto inches_per_hour = inch / hour;
 
-	inline constexpr auto celsius     = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
+	// VARIOUS UNITS
+	inline constexpr auto celsius     = detail::unit<detail::thermodynamic_temperature_dimension, detail::tag_celsius>();
 
 	inline constexpr auto byte        = unit<detail::null_dimension>();
 	inline constexpr auto bytes_per_second = byte / second;

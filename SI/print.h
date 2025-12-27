@@ -95,7 +95,7 @@ namespace si
 		std::cout << text;
 	}
 
-	void print(temperature T)
+	void print(thermodynamic_temperature T)
 	{
 		if (T >= 250_K && T <= 470_K) // temperature range for humans
 		{

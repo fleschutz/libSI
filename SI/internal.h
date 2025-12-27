@@ -4,6 +4,13 @@
 #include <cmath>
 #include <type_traits>
 
+namespace si
+{
+	typedef float float_t;        // <-- internal datatype to hold float values
+	typedef double double_t;      // <-- internal datatype to hold double values
+	typedef long long cardinal_t; // <-- internal datatype to hold cardinal values
+}
+
 // Try to enforce inlining as much as possible, ideally we don't want any real function calls
 // (performance overhead + annoyance when stepping through code)
 #define INTERNAL_VEC_INLINE /*__forceinline*/
