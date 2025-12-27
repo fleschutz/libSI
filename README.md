@@ -23,7 +23,7 @@ auto m = 1_kg;
 auto c = constant::speed_of_light;
 auto E = m * c * c;
 ```
-See all examples in [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates the following output:
+More examples in [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates the following output:
 
 ```
 What's the average speed of Kiptum's world record in Marathon? It's...21.0975km/h
