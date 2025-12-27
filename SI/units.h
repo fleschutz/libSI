@@ -11,7 +11,7 @@
 
 namespace si
 {
-	typedef double_t quantity; // datatype for a value without(!) unit, e.g. 42
+	typedef double_t quantity; // datatype for a dimensionless value (without any unit), e.g. 42
 
 	namespace detail
 	{
@@ -46,7 +46,7 @@ namespace si
 		template <long Value>
 		using value_dimension = dimension<Value, Value, Value, Value, Value>;
 
-		using null_dimension = value_dimension<0>;
+		using dimensionless = value_dimension<0>; // zero dimensions
 
 		template <class, class>
 		struct quantity;
@@ -56,7 +56,7 @@ namespace si
 		template <class T>
 		struct dimension_of
 		{
-			using type = null_dimension;
+			using type = dimensionless;
 		};
 
 		template <long Length, long Mass, long Time, long Temperature, long Angle>
@@ -77,13 +77,13 @@ namespace si
 			using type = Dimension;
 		};
 
-		// Resolves to the dimension of anything that might have a dimension (types with no dimension end up with null_dimension)
+		// Resolves to the dimension of anything that might have a dimension (types with no dimension end up with dimensionless)
 		template <class T>
 		using dimension_of_t = typename dimension_of<std::decay_t<T>>::type;
 
-		// Checks whether the given type is/has null_dimension
+		// Checks whether the given type is/has dimensionless
 		template <class T>
-		inline constexpr bool is_null_dimension_v = std::is_same_v<null_dimension, dimension_of_t<T>>;
+		inline constexpr bool is_dimensionless_v = std::is_same_v<dimensionless, dimension_of_t<T>>;
 
 #define SI_DIMENSION_OP(op_) dimension<				\
 			Lhs::length op_ Rhs::length,		\
@@ -154,8 +154,8 @@ namespace si
 		template <class Dimension, class T>
 		struct quantity final : quantity_storage<Dimension, T>
 		{
-			// Make sure we are not creating quantities with null_dimension (null_dimensions should be plain arithmetic types)
-			static_assert(!is_null_dimension_v<Dimension>);
+			// Make sure we are not creating quantities with dimensionless (dimensionlesss should be plain arithmetic types)
+			static_assert(!is_dimensionless_v<Dimension>);
 
 			using value_type = T;
 			using dimension_type = Dimension;
@@ -271,7 +271,7 @@ namespace si
 		template <class T, class Dimension, class U>
 		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator*=(quantity<Dimension, T>& lhs, const U& rhs)
 		{
-			static_assert(is_null_dimension_v<U>, "incompatible SI dimensions");
+			static_assert(is_dimensionless_v<U>, "incompatible SI dimensions");
 			value(lhs) *= value(rhs);
 			return lhs;
 		}
@@ -279,7 +279,7 @@ namespace si
 		template <class T, class Dimension, class U>
 		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator/=(quantity<Dimension, T>& lhs, const U& rhs)
 		{
-			static_assert(is_null_dimension_v<U>, "incompatible SI dimensions");
+			static_assert(is_dimensionless_v<U>, "incompatible SI dimensions");
 			value(lhs) /= value(rhs);
 			return lhs;
 		}
@@ -328,7 +328,7 @@ namespace si
 
 		// helper macro returning a quantity for non-null dimensions and plain value otherwise
 #define SI_RETURN_QUANTITY(dimension_, ...)										\
-		if constexpr(is_null_dimension_v<dimension_>)	return (__VA_ARGS__);	\
+		if constexpr(is_dimensionless_v<dimension_>)	return (__VA_ARGS__);	\
 		else return quantity{dimension_(), (__VA_ARGS__)}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
@@ -632,10 +632,10 @@ namespace si
 		};
 
 		template <class Ratio>
-		struct unit<null_dimension, Ratio> {};
+		struct unit<dimensionless, Ratio> {};
 
 		template <long N>
-		struct unit<null_dimension, ratio<N, N>>
+		struct unit<dimensionless, ratio<N, N>>
 		{
 			template <class T, class = std::enable_if_t<is_arithmetic<T>::value>>
 			SI_INLINE_CONSTEXPR const T& operator()(const T& value) const
@@ -718,7 +718,6 @@ namespace si
 	SI_QUANTITY(power,         2, 1, -3, 0, 0);
 	SI_QUANTITY(density,      -3, 1,  0, 0, 0); // (mass per length³)
 	SI_QUANTITY(BMI,          -2, 1,  0, 0, 0); // (mass per length²)
-	SI_QUANTITY(angle,         0, 0,  0, 0, 1);
 	//...
 
 	using position2d = length2;
@@ -726,20 +725,20 @@ namespace si
 
 	// The SI Prefixes
 	// ---------------
-	//inline constexpr auto exa   = unit<detail::null_dimension, 1000000000000000000>();
-	//inline constexpr auto peta  = unit<detail::null_dimension, 1000000000000000>();
-	//inline constexpr auto tera  = unit<detail::null_dimension, 1000000000000>();
-	inline constexpr auto giga  = unit<detail::null_dimension, 1000000000>();
-	inline constexpr auto mega  = unit<detail::null_dimension, 1000000>();
-	inline constexpr auto kilo  = unit<detail::null_dimension, 1000>();
-	inline constexpr auto hecto = unit<detail::null_dimension, 100>();
+	//inline constexpr auto exa   = unit<detail::dimensionless, 1000000000000000000>();
+	//inline constexpr auto peta  = unit<detail::dimensionless, 1000000000000000>();
+	//inline constexpr auto tera  = unit<detail::dimensionless, 1000000000000>();
+	inline constexpr auto giga  = unit<detail::dimensionless, 1000000000>();
+	inline constexpr auto mega  = unit<detail::dimensionless, 1000000>();
+	inline constexpr auto kilo  = unit<detail::dimensionless, 1000>();
+	inline constexpr auto hecto = unit<detail::dimensionless, 100>();
 
-	inline constexpr auto centi = unit<detail::null_dimension, 1, 100>();
-	inline constexpr auto milli = unit<detail::null_dimension, 1, 1000>();
-	inline constexpr auto micro = unit<detail::null_dimension, 1, 1000000>();
-	inline constexpr auto nano  = unit<detail::null_dimension, 1, 1000000000>();
-	//inline constexpr auto pico  = unit<detail::null_dimension, 1, 1000000000000>();
-	//inline constexpr auto femto = unit<detail::null_dimension, 1, 1000000000000000>();
+	inline constexpr auto centi = unit<detail::dimensionless, 1, 100>();
+	inline constexpr auto milli = unit<detail::dimensionless, 1, 1000>();
+	inline constexpr auto micro = unit<detail::dimensionless, 1, 1000000>();
+	inline constexpr auto nano  = unit<detail::dimensionless, 1, 1000000000>();
+	//inline constexpr auto pico  = unit<detail::dimensionless, 1, 1000000000000>();
+	//inline constexpr auto femto = unit<detail::dimensionless, 1, 1000000000000000>();
 
 	// The 7 SI Base Units
 	// -------------------
@@ -830,9 +829,16 @@ namespace si
 	inline constexpr auto ohm         = volt / ampere;
 	inline constexpr auto tesla       = kilogram / (ampere * second * second);
 
+#if 1
+	SI_QUANTITY(angle,         0, 0,  0, 0, 1);
 	inline constexpr auto radian      = unit<angle>();
-	inline constexpr auto steradian   = unit<detail::null_dimension>();
 	inline constexpr auto degree      = detail::unit<detail::angle_dimension, detail::ratio_degree>();
+#else
+	SI_QUANTITY(angle,         0, 0,  0, 0, 0);
+	inline constexpr auto radian   = unit<detail::dimensionless>();
+	inline constexpr auto degree   = unit<detail::dimensionless, 1, 100>();
+#endif
+	inline constexpr auto steradian   = unit<detail::dimensionless>();
 	inline constexpr auto radians_per_second = radian / second; 
 	inline constexpr auto degrees_per_second = degree / second;
 
@@ -855,7 +861,7 @@ namespace si
 	// VARIOUS UNITS
 	inline constexpr auto celsius     = detail::unit<detail::thermodynamic_temperature_dimension, detail::tag_celsius>();
 
-	inline constexpr auto byte        = unit<detail::null_dimension>();
+	inline constexpr auto byte        = unit<detail::dimensionless>();
 	inline constexpr auto bytes_per_second = byte / second;
 }
 
