@@ -204,7 +204,7 @@ namespace SI
 
 	void print(angle a)
 	{
-		print(degree(a), "°");
+		print(a / 1_deg, "°");
 	}
 
 #if 0

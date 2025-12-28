@@ -94,12 +94,12 @@ CONST( speed_of_sound_in_iron, 5120, meters_per_second);
 CONST( speed_of_sound_in_diamonds, 12'000, meters_per_second);
 
 // Mathematical constants
-CONST(   pi,          3.14159265358979323846, quantity);
-UNICODE( π,                            180.0, degree); // (the symbol)
-CONST(   half_pi,                       90.0, degree);
-CONST(   quarter_pi,                    45.0, degree);
-CONST(   tau,                          360.0, degree);
-UNICODE( τ,                            360.0, degree);
+CONST(   pi,          3.14159265358979323846, radian);
+UNICODE( π,           3.14159265358979323846, radian); // (the symbol)
+CONST(   half_pi,     1.57079632679489661923, radian);
+CONST(   quarter_pi,  0.78539816339744830961, radian);
+CONST(   tau,         6.28318530717958647692, radian);
+UNICODE( τ,           6.28318530717958647692, radian);
 CONST(   Phi,         1.61803398874989484820, quantity);
 CONST( Eulers_number, 2.71828182845904523536, quantity);
 

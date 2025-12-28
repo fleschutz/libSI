@@ -428,32 +428,6 @@ namespace SI
 			SI_RETURN_QUANTITY(result_dimension, value(x));
 		}
 
-		template <class T>
-		SI_INLINE auto sin(const quantity<dimension<0, 0, 0, 0, 1>, T>& x)
-		{
-			return std::sin(value(x));
-		}
-
-		template <class T>
-		SI_INLINE auto cos(const quantity<dimension<0, 0, 0, 0, 1>, T>& x)
-		{
-			return std::cos(value(x));
-		}
-
-		template <class T>
-		SI_INLINE auto tan(const quantity<dimension<0, 0, 0, 0, 1>, T>& x)
-		{
-			return std::tan(value(x));
-		}
-
-		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE auto atan2(const Lhs& y, const Rhs& x)
-		{
-			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
-			auto rad = std::atan2(value2(y, x), value2(x, y));
-			return quantity{ dimension<0, 0, 0, 0, 1>(), rad };
-		}
-
 		template <class T> struct element_count : std::integral_constant<int, 1> {};
 		template <class Dimension, class T> struct element_count<quantity<Dimension, T>> : element_count<T> {};
 
@@ -474,11 +448,6 @@ namespace SI
 		struct ratio
 		{
 			static constexpr auto factor = static_cast<double_t>(Num) / Den;
-		};
-
-		struct ratio_degree
-		{
-			static constexpr auto factor = 0.01745329251994329576923690768489;
 		};
 
 		struct tag_celsius {};
@@ -655,8 +624,6 @@ namespace SI
 		{
 			return unit<dimension_subtract<DimensionLhs, DimensionRhs>, ratio_quotient<RatioLhs, RatioRhs>>();
 		}
-
-		std::from_chars_result from_chars(const char* first, const char* last, const int* dimension, double_t& value);
 	}
 
 	inline constexpr detail::zero_t zero;
@@ -671,10 +638,6 @@ namespace SI
 	using detail::pow;
 	using detail::root;
 	using detail::sqrt;
-	using detail::sin;
-	using detail::cos;
-	using detail::tan;
-	using detail::atan2;
 	using detail::dot;
 	using detail::clamp;
 	using detail::deangle;
@@ -829,18 +792,7 @@ namespace SI
 	inline constexpr auto ohm         = volt / ampere;
 	inline constexpr auto tesla       = kilogram / (ampere * second * second);
 
-#if 1
-	SI_QUANTITY(angle,         0, 0,  0, 0, 1);
-	inline constexpr auto radian      = unit<angle>();
-	inline constexpr auto degree      = detail::unit<detail::angle_dimension, detail::ratio_degree>();
-#else
-	SI_QUANTITY(angle,         0, 0,  0, 0, 0);
-	inline constexpr auto radian   = unit<detail::dimensionless>();
-	inline constexpr auto degree   = unit<detail::dimensionless, 1, 100>();
-#endif
 	inline constexpr auto steradian   = unit<detail::dimensionless>();
-	inline constexpr auto radians_per_second = radian / second; 
-	inline constexpr auto degrees_per_second = degree / second;
 
 	inline constexpr auto lumen       = candela * steradian; 
 	inline constexpr auto lumen_second = lumen * second;
@@ -863,6 +815,30 @@ namespace SI
 
 	inline constexpr auto byte        = unit<detail::dimensionless>();
 	inline constexpr auto bytes_per_second = byte / second;
+
+	// ANGLE (DIMENSIONLESS)
+	typedef long double angle;
+	typedef angle radian;
+
+	SI_INLINE angle sin(angle a)
+	{
+		return std::sin(radian(a));
+	}
+
+	SI_INLINE angle cos(angle a)
+	{
+		return std::cos(radian(a));
+	}
+
+	SI_INLINE angle tan(angle a)
+	{
+		return std::tan(radian(a));
+	}
+
+	SI_INLINE angle atan2(length y, length x)
+	{
+		return std::atan2(meter(y), meter(x));
+	}
 }
 
 #undef SI_RETURN_QUANTITY
