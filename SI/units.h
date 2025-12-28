@@ -9,7 +9,7 @@
 #include <charconv>
 #include "internal.h"
 
-namespace si
+namespace SI
 {
 	typedef double_t quantity; // datatype for a dimensionless value (without any unit), e.g. 42
 

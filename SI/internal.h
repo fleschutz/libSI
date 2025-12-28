@@ -4,7 +4,7 @@
 #include <cmath>
 #include <type_traits>
 
-namespace si
+namespace SI
 {
 	typedef float float_t;        // <-- internal datatype to hold float values
 	typedef double double_t;      // <-- internal datatype to hold double values

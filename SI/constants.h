@@ -3,7 +3,7 @@
 
 #include "units.h"
 
-namespace si
+namespace SI
 {
 	namespace constant
 	{

@@ -3,7 +3,7 @@
 
 #include "../../SI/literals.h"
 
-namespace si
+namespace SI
 {
 	namespace music // source: https://www.liutaiomottola.com/formulae/freqtab.htm
 	{

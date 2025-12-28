@@ -1,5 +1,5 @@
 #include "SI/all.h"
-using namespace si;
+using namespace SI;
 
 int main()
 { {	
@@ -71,7 +71,7 @@ int main()
 	print(sum);
 } {
 	print("What's the population density on Earth (people per km² of land area)? It's... ");
-	auto population_density = Earth::human_population / si::kilometer2(Earth::land_area);
+	auto population_density = Earth::human_population / kilometer2(Earth::land_area);
 	print(population_density);
 } {
 	print("How much land area would be available for each person on Earth? It's... ");
@@ -157,7 +157,7 @@ int main()
 } {
 	// Here's the basic principle:
 	quantity x = 42;        // <- x contains a number without any unit
-	si::time t = x * 1_sec; // <- t is now 42 seconds
+	SI::time t = x * 1_sec; // <- t is now 42 seconds
 	quantity y = t / 1_sec; // <- y again contains a number without any unit
 }
 	return 0;

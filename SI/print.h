@@ -5,7 +5,7 @@
 #include "literals.h"
 #include "values/Earth.h"
 
-namespace si
+namespace SI
 {
 	void print(const std::string& text)
 	{

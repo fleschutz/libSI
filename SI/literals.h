@@ -3,7 +3,7 @@
 
 #include "units.h"
 
-namespace si
+namespace SI
 {
 #define LITERAL(_symbol, _factor, _baseUnit) \
   constexpr auto operator "" _ ## _symbol(long double x) { return _baseUnit(static_cast<double_t>(x) * static_cast<double_t>(_factor)); } \

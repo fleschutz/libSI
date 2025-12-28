@@ -3,7 +3,7 @@
 
 #include "../../SI/units.h"
 
-namespace si
+namespace SI
 {
 	namespace Moon // source: https://en.wikipedia.org/wiki/Moon
 	{

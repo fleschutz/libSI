@@ -4,7 +4,7 @@
 #include <cmath>
 #include "constants.h"
 
-namespace si
+namespace SI
 {
 	namespace formula
 	{

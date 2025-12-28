@@ -5,9 +5,7 @@
 #include "literals.h"
 #include "values/Earth.h"
 
-using namespace si;
-
-namespace si
+namespace SI
 {
 	void tests()
 	{
