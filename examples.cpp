@@ -135,7 +135,7 @@ int main()
 	auto Donalds_BMI = formula::BMI(Donalds_weight, Donalds_height);
 	print(Donalds_BMI);
 } {
-	print("What are the details of a 10m x 1m oak tree log? It's... ");
+	print("What are the details of a 10m x 1m oak timber log? It's... ");
 	auto log_length = 10_m;
 	auto log_diameter = 1_m;
 	auto dry_oak_weight = 710_kg_per_m³; 
@@ -146,19 +146,18 @@ int main()
 	auto power = weight * dry_oak_power;
 	print(area, volume, weight, power);
 } {
-	print("What's the min thickness for a 25m copper cable for 12V / 2A? It's... ");
-	auto cable_length = 25_m;
-	auto electric_current = 2_A;
-	auto max_loss = 2_V;
-	auto cos = 0.018;
-	auto y = 5.8e7; // in S/m for copper
-	auto A = (2.0 * cable_length * electric_current * cos) / (y * max_loss);
-	// print(A);
+	print("What's the min cable wire size for 100m copper, 230V, 30A max? It's... ");
+	auto conductor_resistivity = 1.7241e-8_Ohm_m; // for copper
+	auto cable_length = 100_m;
+	auto max_current = 30_A;
+	auto allowable_voltage_drop = 10_V; 
+	auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
+	print(A);
 } {
 	// Here's the basic principle:
-	quantity x = 42;        // <- x contains a number without any unit
+	quantity x = 42;        // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_sec; // <- t is now 42 seconds
-	quantity y = t / 1_sec; // <- y again contains a number without any unit
+	quantity y = t / 1_sec; // <- y again contains a dimensionless number (no unit)
 }
 	return 0;
 }

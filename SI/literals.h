@@ -11,8 +11,8 @@ namespace SI
 
 // THE 7 SI BASE UNITS
 // -------------------
-// SYMBOL     FACTOR  BASE UNIT                EXAMPLE
-// length in...
+// SYMBOL     FACTOR  BASE UNIT                EXAMPLE      
+// length in...                                     (sorted from big to small)
 LITERAL( Mm,     1e6, meter);               // 1_Mm (megameter)
 LITERAL( km,     1e3, meter);               // 1_km (kilometer)
 LITERAL( m,        1, meter);               // 1_m
@@ -98,7 +98,7 @@ LITERAL( kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
 // mass per volume in...
 LITERAL( kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m³
 LITERAL( t_per_m³, 1e3, kilograms_per_meter3);// 1_t_per_m³
-// eletric potential in...
+// electric potential (U) in...
 LITERAL( GV,     1e9, volt);                // 1_GV (gigavolt)
 LITERAL( MV,     1e6, volt);                // 1_MV (megavolt)
 LITERAL( kV,     1e3, volt);                // 1_kV (kilovolt)
@@ -107,13 +107,24 @@ LITERAL( mV,    1e-3, volt);                // 1_mV (millivolt)
 LITERAL( μV,    1e-6, volt);                // 1_μV (microvolt)
 LITERAL( nV,    1e-9, volt);                // 1_nV (nanovolt)
 LITERAL( pV,   1e-12, volt);                // 1_pV (picovolt)
-// electric resistance in...
+// electric resistance (R) in...
 LITERAL( GOhm,   1e9, ohm);                 // 1_GOhm (gigaohm)
 LITERAL( MOhm,   1e6, ohm);                 // 1_MOhm (megaohm)
 LITERAL( kOhm,   1e3, ohm);                 // 1_kOhm (kiloohm)
 LITERAL( Ohm,      1, ohm);                 // 1_Ohm
 LITERAL( mOhm,  1e-3, ohm);                 // 1_mOhm (milliohm)
 LITERAL( μOhm,  1e-6, ohm);                 // 1_μOhm (microohm)
+// electric resistance meter in...
+LITERAL( Ohm_m,    1, ohm_meter);           // 1_Ohm_m (ohm meter)
+// electric conductance (G) in...
+LITERAL( kS,     1e3, siemens);             // 1_kS   (kilosiemens)
+LITERAL( S,        1, siemens);             // 1_S    (siemens)
+LITERAL( mS,    1e-3, siemens);             // 1_mS   (millisiemens)
+LITERAL( μS,    1e-6, siemens);             // 1_μS   (microsiemens)
+// electric conductivity (σ) in...
+LITERAL( MS_per_m,1e6, siemens_per_meter);  // 1_MS_per_m (MS/m, megasiemens per meter)
+LITERAL( kS_per_m,1e3, siemens_per_meter);  // 1_kS_per_m (kS/m, kilosiemens per meter)
+LITERAL( S_per_m,  1, siemens_per_meter);   // 1_S_per_m (S/m, siemens per meter)
 // energy in...
 LITERAL( TJ,    1e12, joule);               // 1_TJ  (terajoule)
 LITERAL( GJ,     1e9, joule);               // 1_GJ  (gigajoule)
@@ -137,14 +148,14 @@ LITERAL( kWh,  3.6e6, watt);                // 1_kWh (kilowatt-hour)
 LITERAL( Wh,   3.6e3, watt);                // 1_Wh  (watt-hour)
 LITERAL( hp, 745.69987158227022, watt);     // 1_hp  (horsepower)
 LITERAL( PS, 735.49875, watt);              // 1_PS  ('Pferdestärke', german horsepower)
+// active power per mass in...
+LITERAL( kWh_per_kg, 3.6e6, joules_per_second_per_kilogram);  // 1_kWh_per_kg (kilowatt-hour per kilogram)
+LITERAL( Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (watt-hour per kilogram)
 // ionizing radiation dose in...
 LITERAL( Sv,       1, sievert);             // 1_Sv  (sievert)
 LITERAL( mSv,   1e-3, sievert);             // 1_mSv (millisievert)
 LITERAL( μSv,   1e-6, sievert);             // 1_μSv (microsievert)
 LITERAL( Gy,       1, gray);                // 1_Gy (absorption of one joule of radiation energy per kilogram of matter)
-// active power per mass in...
-LITERAL( kWh_per_kg, 3.6e6, joules_per_second_per_kilogram);  // 1_kWh_per_kg (kilowatt-hour per kilogram)
-LITERAL( Wh_per_kg,  3.6e3, joules_per_second_per_kilogram);  // 1_Wh_per_kg (watt-hour per kilogram)
 // pressure in...
 LITERAL( MPa,    1e6, pascal_);             // 1_MPa  (megapascal) 
 LITERAL( kPa,    1e3, pascal_);             // 1_kPa  (kilopascal) 

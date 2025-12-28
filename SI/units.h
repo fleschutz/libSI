@@ -790,6 +790,9 @@ namespace SI
 	inline constexpr auto coloumb     = ampere * second;
 	inline constexpr auto volt        = joule / coloumb; 
 	inline constexpr auto ohm         = volt / ampere;
+	inline constexpr auto ohm_meter   = ohm * meter;
+	inline constexpr auto siemens     = ampere / volt;
+	inline constexpr auto siemens_per_meter = siemens / meter;
 	inline constexpr auto tesla       = kilogram / (ampere * second * second);
 
 	inline constexpr auto steradian   = unit<detail::dimensionless>();
