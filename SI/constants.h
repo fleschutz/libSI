@@ -18,8 +18,8 @@ CONST( speed_of_light, 299'792'458, meters_per_second); // speed of light in vac
 CONST( c,              299'792'458, meters_per_second); // (the symbol)
 CONST( caesium_frequency, 9'192'631'770, hertz); // hyperfine transition frequency of cesium-133 (defines the SI second)
 CONST( d_ν_Cs,       9'192'631'770, hertz); // (the symbol)
-CONST( elementary_charge, 1.602'176'634e-19, coloumb); // elementary charge
-CONST( e,         1.602'176'634e-19, coloumb); // (the symbol)
+CONST( elementary_charge, 1.602'176'634e-19, coulomb); // elementary charge
+CONST( e,         1.602'176'634e-19, coulomb); // (the symbol)
 CONST( Boltzmann,    1.380'649e-23, joules_per_kelvin); // Boltzmann constant
 CONST( k,            1.380'649e-23, joules_per_kelvin); // (the symbol)
 TODO( N_A,           6.02214076e23, 1 / units::mol); // Avogadro constant
