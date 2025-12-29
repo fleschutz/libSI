@@ -12,8 +12,13 @@ int main()
 	print("What's the average speed of Kiptum's world record in Marathon? It's...");
 	auto distance = 42.195_km;
 	auto Kiptums_time = 2_h;
-	auto average_speed = distance / Kiptums_time;
-	print(average_speed);
+	auto avg_speed = distance / Kiptums_time;
+	print(avg_speed);
+} {
+	print("What's the free fall time from Burj Khalifa tower in Dubai? It's... ");
+	auto tower_height = 828_m;
+	auto time = formula::time_of_free_fall(tower_height, Earth::surface_gravity);
+	print(time);
 } {
  	print("What's the kinetic energy of a car at 50 km/h? It's... ");
 	auto car_mass = 1300_kg;
@@ -21,12 +26,12 @@ int main()
 	auto KE = formula::kinetic_energy(car_mass, speed_limit);
 	print(KE);
 } {
-	print("What's the average speed here? It's... ");
-	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
-	print(average);
-} {
 	print("What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... ");
 	auto average = (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4;
+	print(average);
+} {
+	print("What's the average speed here? It's... ");
+	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
 	print(average);
 } {
 	print("What's the wavelength of H2 in vacuum? It's... ");
@@ -38,11 +43,6 @@ int main()
 	auto high_c_frequency = 1046.5_Hz;
 	auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
 	print(wavelength);
-} {
-	print("What's the free fall time from Burj Khalifa tower in Dubai? It's... ");
-	auto tower_height = 828_m;
-	auto time = formula::time_of_free_fall(tower_height, Earth::surface_gravity);
-	print(time);
 } {
 	print("What's a radar's geometrical horizon (the distance it can see)? It's... ");
 	auto Earth_radius = 6371.009_km;

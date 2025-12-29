@@ -27,12 +27,12 @@ More examples in [examples.cpp](examples.cpp). Executing: `cmake . && make && ./
 ```
 What's the potential energy of just 1g mass? It's... 89.8755TJ
 What's the average speed of Kiptum's world record in Marathon? It's...21.0975km/h
+What's the free fall time from Burj Khalifa tower in Dubai? It's... 12.9948sec
 What's the kinetic energy of a car at 50 km/h? It's... 125.386kJ
+What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 0°C / 32°F
 What's the average speed here? It's... 1002.02km/h
-What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 273.15K (0°C , 32°F )
 What's the wavelength of H2 in vacuum? It's... 21.1061cm
 What's the wavelength of the high 'c' music note? It's... 32.7759cm
-What's the free fall time from Burj Khalifa tower in Dubai? It's... 12.9948sec
 What's a radar's geometrical horizon (the distance it can see)? It's... 10.7941km
 What's the time needed to fly non-stop around the Earth at Mach 1? It's... 1.40555 day(s)
 What's the travel time of sun light to Earth? It's... 8min 19sec
@@ -41,7 +41,7 @@ What's the sum of 1m + 1NM + 1ft? It's... 1.8533km
 What's the population density on Earth (people per km² of land area)? It's... 55.0557
 How much land area would be available for each person on Earth? It's... 1.81634hm²
 What's the surface area of a soccer ball? It's... 1559.72cm²
-What's the volume of a soccer ball? It's... 5792.19cm³
+What's the volume of a soccer ball? It's... 5.79219l
 What's the surface area of a 30cm pizza? It's... 706.858cm²
 What's the volume of a 30cm x 1cm pizza? It's... 706.858cm³
 What's the distance the Earth has travelled so far? It's... 447.088Mly (megalight-years)
@@ -52,6 +52,7 @@ What's the aircraft's glide path on final at 10NM distance in 3000ft height? It'
 What's Donald Trump's body-mass index (BMI)? It's... 28.2548 BMI
 What are the details of a 10m x 1m oak timber log? It's... 32.9867m² 7.85398m³ 5.57633t 23.4206MWh
 What's the min cable wire size for 100m copper, 230V, 30A max? It's... 10.3446mm²
+What's the windchill temperature of 5°C air temperature with 55km/h wind? It's... -1.59662°C / 29.1261°F
 ```
 
 

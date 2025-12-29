@@ -174,12 +174,12 @@ namespace SI
 
 		length braking_distance(velocity from_speed, velocity to_speed, acceleration deceleration)
 		{
-			return (from_speed * from_speed - to_speed * to_speed) / (.0 * deceleration);
+			return (from_speed * from_speed - to_speed * to_speed) / (2.0 * deceleration);
 		}
 
 		acceleration acceleration_for_distance(velocity current_speed, velocity target_speed, length distance)
 		{
-			return (target_speed * target_speed - current_speed * current_speed) / (2. * distance);
+			return (target_speed * target_speed - current_speed * current_speed) / (2.0 * distance);
 		}
 
 		// Calculates the body-mass index (BMI).
