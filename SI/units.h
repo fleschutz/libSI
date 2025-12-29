@@ -25,7 +25,7 @@ namespace SI
 		/*
 			Every physical quantity has a dimension which is specified by it's dimensional exponents.
 			Examples:
-			- speed is length per time or length^1/time^1, so the exponents for speed are Length=1,
+			- velocity is length per time or length^1/time^1, so the exponents for velocity are Length=1,
 			  Mass=0, Time=-1, Temp=0, Angle=0
 			- force is mass times acceleration which is mass^1*length^1/time^2, so the exponents are
 			  Length=1, Mass=1, Time=-2, Temp=0, Angle=0
@@ -669,7 +669,7 @@ namespace SI
 	SI_QUANTITY(area,          2, 0,  0, 0, 0); // (length²)
 	SI_QUANTITY(volume,        3, 0,  0, 0, 0); // (length³)
 	SI_QUANTITY(frequency,     0, 0, -1, 0, 0); // (per time)
-	SI_QUANTITY(speed,         1, 0, -1, 0, 0); // (length per time)
+	SI_QUANTITY(velocity,      1, 0, -1, 0, 0); // (length per time)
 	SI_QUANTITY(angular_speed, 0, 0, -1, 0, 1); // (degree per time)
 	SI_QUANTITY(acceleration,  1, 0, -2, 0, 0); // (length per time²)
 	SI_QUANTITY(jerk,          1, 0, -3, 0, 0);

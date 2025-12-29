@@ -136,23 +136,23 @@ namespace SI
 
 		// VARIOUS FORMULAS:
 
-		// Returns the kinetic energy of a non-rotating object of mass m traveling at speed v.
-		energy kinetic_energy(mass m, speed v)
+		// Returns the kinetic energy of a non-rotating object of mass m traveling at velocity v.
+		energy kinetic_energy(mass m, velocity v)
 		{
 			return 0.5 * m * v * v;
 		}
 
-		length wavelength(speed v, frequency f)
+		length wavelength(velocity v, frequency f)
 		{
 			return v / f;
 		}
 
-		auto Newtons_motion(length s0, speed v0, acceleration a, time t)
+		auto Newtons_motion(length s0, velocity v0, acceleration a, time t)
 		{
 			return s0 + v0 * t + 0.5 * a * t * t;
 		}
 
-		auto Lorentz_force(double q, speed v, double B)
+		auto Lorentz_force(double q, velocity v, double B)
 		{
 			return q * v * B;
 		}
@@ -172,12 +172,12 @@ namespace SI
 			return horizontal_distance * tan(glide_path);
 		}
 
-		length braking_distance(speed from_speed, speed to_speed, acceleration deceleration)
+		length braking_distance(velocity from_speed, velocity to_speed, acceleration deceleration)
 		{
 			return (from_speed * from_speed - to_speed * to_speed) / (.0 * deceleration);
 		}
 
-		acceleration acceleration_for_distance(speed current_speed, speed target_speed, length distance)
+		acceleration acceleration_for_distance(velocity current_speed, velocity target_speed, length distance)
 		{
 			return (target_speed * target_speed - current_speed * current_speed) / (2. * distance);
 		}

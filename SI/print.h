@@ -116,19 +116,23 @@ namespace SI
 		else 
 			print(T / 1_nK, "nK");
 	}
-#if 0
-	void print(amount_of_substance A)
+
+	void print(electric_current I)
 	{
-		print(A / 1_mol, "mol");
+		if (abs(I) >= 1_A)
+			print(I / 1_A, "A");
+		else if (abs(I) >= 1_mA)
+			print(I / 1_mA, "mA");
+		else if (abs(I) >= 1_μA)
+			print(I / 1_μA, "μA");
+		else if (abs(I) >= 1_nA)
+			print(I / 1_nA, "nA");
+		else
+			print(I / 1_pA, "pA");
 	}
 
-	void print(luminous_intensity I)
-	{
-		print(I / 1_cd, "cd");
-	}
-#endif
-
-	// The 22 SI derived units:
+	// The 22 SI Derived Units
+	// -----------------------
 	void print(area a)
 	{
 		if (abs(a) >= 1_km²)
@@ -151,6 +155,8 @@ namespace SI
 			print(v / 1_km³, "km³");
 		else if (abs(v) >= 1_m³)
 			print(v / 1_m³, "m³");
+		else if (abs(v) >= 1_l)
+			print(v / 1_l, "l");
 		else if (abs(v) >= 1_cm³)
 			print(v / 1_cm³, "cm³");
 		else if (abs(v) >= 1_mm³)
@@ -159,7 +165,7 @@ namespace SI
 			print(v / 1_μm³, "μm³");
 	}
 
-	void print(speed v)
+	void print(velocity v)
 	{
 		if (abs(v) >= 1_km_per_h)
 			print(v / 1_km_per_h, "km/h");
@@ -172,6 +178,20 @@ namespace SI
 	void print(acceleration a)
 	{
 		print(a / 1_m_per_s², "m/s²");
+	}
+
+	void print(frequency f)
+	{
+		if (abs(f) >= 1_THz)
+			print(f / 1_THz, "THz");
+		else if (abs(f) >= 1_GHz)
+			print(f / 1_GHz, "GHz");
+		else if (abs(f) >= 1_MHz)
+			print(f / 1_MHz, "MHz");
+		else if (abs(f) >= 1_kHz)
+			print(f / 1_kHz, "kHz");
+		else
+			print(f / 1_Hz, "Hz");
 	}
 
 	void print(energy E)

@@ -9,9 +9,9 @@ namespace SI
 {
 	void tests()
 	{
-		// THE 7 SI BASE UNITS:
-
-		// SI meter:
+		// THE 7 SI BASE UNITS
+		// -------------------
+		// Length in...
 		static_assert(1_km == 1000_m);
 		static_assert(1_m == 10_dm);
 		static_assert(1_m == 100_cm);
@@ -20,26 +20,23 @@ namespace SI
 		static_assert(1_dm == 0.1_m);
 		static_assert(1_cm == 0.01_m);
 		static_assert(1_mm == 0.001_m);
-
-		// SI second:
+		// Time in...
 		static_assert(1_h == 60_min);
 		static_assert(1_min == 60_s);
 		static_assert(1_s == 1000_ms);
 		static_assert(1_ms == 0.001_s);
-
-		// SI kilogram:
+		// Mass in...
 		static_assert(1_t  == 1000_kg);
 		static_assert(1_kg == 1000_g);
 		static_assert(1_g  == 1000_mg);
-
-		// SI ampere:
+		// Electric current in...
 		static_assert(1_MA == 1000_kA);
 		static_assert(1_kA == 1000_A);
 		static_assert(1_A == 1000_mA);
-		static_assert(1_mA == 1000_muA);
+		static_assert(1_mA == 1000_μA);
 
-		// THE 22 SI DERIVED UNITS:
-
+		// THE 22 SI DERIVED UNITS
+		// -----------------------
 		// SI area checks:
 		// static_assert(Earth::land_area + Earth::water_area == Earth::surface_area);
 		// Speed checks:

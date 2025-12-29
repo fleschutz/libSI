@@ -50,7 +50,7 @@ LITERAL( MA,     1e6, ampere);              // 1_MA  (megaampere)
 LITERAL( kA,     1e3, ampere);              // 1_kA  (kiloampere)
 LITERAL( A,        1, ampere);              // 1_A 
 LITERAL( mA,    1e-3, ampere);              // 1_mA  (milliampere)
-LITERAL( muA,   1e-6, ampere);              // 1_muA (microampere)
+LITERAL( μA,    1e-6, ampere);              // 1_μA (microampere)
 LITERAL( nA,    1e-9, ampere);              // 1_nA  (nanoampere)
 LITERAL( pA,   1e-12, ampere);              // 1_pA  (picoampere)
 // Amount of substance (N_A) in...
@@ -85,14 +85,14 @@ LITERAL( mm_per_h, 1, millimeters_per_hour);// 1_mm_per_h (mm/h)
 // Acceleration (a) in...
 LITERAL( m_per_s², 1, meters_per_second2);  // 1_m_per_s² (m/s²)
 // Frequency (f) in...
-LITERAL( Hz,       1, hertz);               // 1_Hz
-LITERAL( kHz,    1e3, hertz);               // 1_kHz
-LITERAL( MHz,    1e6, hertz);               // 1_MHz
-LITERAL( GHz,    1e9, hertz);               // 1_GHz
-LITERAL( THz,   1e12, hertz);               // 1_THz
+LITERAL( THz,   1e12, hertz);               // 1_THz (terahertz)
+LITERAL( GHz,    1e9, hertz);               // 1_GHz (gigahertz)
+LITERAL( MHz,    1e6, hertz);               // 1_MHz (megahertz)
+LITERAL( kHz,    1e3, hertz);               // 1_kHz (kilohertz)
+LITERAL( Hz,       1, hertz);               // 1_Hz  (hertz)
 // Radioactivity (A) in...
+LITERAL( kBq,    1e3, hertz);               // 1_kBq
 LITERAL( Bq,       1, hertz);               // 1_Bq (Bequerel)
-LITERAL( kBq,   1000, hertz);               // 1_kBq
 // Mass per area in...
 LITERAL( t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
 LITERAL( kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
