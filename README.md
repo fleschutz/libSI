@@ -11,7 +11,7 @@ Apply math based on SI units correct, with high precision and as easy as possibl
 * Type-safe [formulas](SI/formulas.h), e.g. formula::wavelength()
 * Type-safe [values](SI/values/), e.g. [ISO standards](SI/values/ISO.h) or planet [Earth](SI/values/Earth.h)
 * Supports SI base units, derived units, Imperial units, and many more.
-* Platform-independent (requires C++11 or higher, tested with VS2017, gcc 15.2, clang 20.1.8).
+* Platform-independent (only requires C++11 or higher), tested on Linux and Windows with VS2017, gcc 15.2, and clang 20.1.8.
 * Header only, own namespace ("SI::"), with [unit tests](SI/tests.h), and no runtime overhead (compiles to nothing but simple doubles)
 
 Code Example
