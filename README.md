@@ -52,7 +52,11 @@ What's the aircraft's glide path on final at 10NM distance in 3000ft height? It'
 What's Donald Trump's body-mass index (BMI)? It's... 28.2548 BMI
 What are the details of a 10m x 1m oak timber log? It's... 32.9867m² 7.85398m³ 5.57633t 23.4206MWh
 What's the min cable wire size for 100m copper, 230V, 30A max? It's... 10.3446mm²
+<<<<<<< HEAD
 What's the windchill temperature of 5°C air temperature with 55km/h wind? It's... -1.59662°C / 29.1261°F
+=======
+What's the windchill temperature of 5°C air temperature with 55km/h wind? It's... 271.553K (-1.59662°C , 29.1261°F )
+>>>>>>> 19e68d696e82012be8359aea0cbbe85300320556
 ```
 
 
