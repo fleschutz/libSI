@@ -3,10 +3,8 @@
 Type-safe SI Math in C++
 ========================
 
-Apply mathematics based on SI units correct, with high precision and as easy as possible. This math lib provides type-safe computations on arbitrary units and easy conversion to and from them.
+Apply math based on SI units correct, with high precision and as easy as possible. This math lib provides the following features:
 
-Features
---------
 * Type-safe [units](SI/units.h): Can't add a mass to a length
 * Type-safe and prefix-safe [literals](SI/literals.h), e.g. 24_h or 3_GWh
 * Type-safe [constants](SI/constants.h), e.g. constant::sigma
