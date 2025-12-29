@@ -154,6 +154,12 @@ int main()
 	auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
 	print(A);
 } {
+	print("What's the windchill temperature of 5°C air temperature with 55km/h wind? It's... ");
+	auto air_temperature = 5_degC;
+	auto wind_speed = 55_km_per_h;
+	auto result = formula::windchill_temperature(air_temperature, wind_speed);
+	print(result);
+} {
 	// Here's the basic principle:
 	quantity x = 42;        // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_sec; // <- t is now 42 seconds

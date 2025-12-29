@@ -187,5 +187,13 @@ namespace SI
 		{
 			return weight / (height * height);
 		}
+
+		// Returns the windchill temperature (see: https://de.wikipedia.org/wiki/Windchill)
+		temperature windchill_temperature(temperature air_temp, velocity wind_speed)
+		{
+			auto air_celsius = celsius(air_temp);
+			return celsius(13.12 + 0.6215 * air_celsius
+			  + (0.3965 * air_celsius - 11.37) * std::pow(wind_speed / 1_km_per_h, 0.16));
+		}
 	}
 }

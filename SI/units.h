@@ -658,7 +658,7 @@ namespace SI
 	SI_QUANTITY(length,                    1, 0, 0, 0, 0);
 	SI_QUANTITY(mass,                      0, 1, 0, 0, 0);
 	SI_QUANTITY(time,                      0, 0, 1, 0, 0);
-	SI_QUANTITY(thermodynamic_temperature, 0, 0, 0, 1, 0);
+	SI_QUANTITY(temperature,               0, 0, 0, 1, 0); // (thermodynamic temperature)
 	SI_QUANTITY(electric_current,          0, 0, 0, 0, 1); // TODO
 	SI_QUANTITY(amount_of_substance,       0, 0, 0, 0, 1); // TODO
 	SI_QUANTITY(luminous_intensity,        0, 0, 0, 0, 1); // TODO
@@ -725,7 +725,7 @@ namespace SI
 	inline constexpr auto gram        = milli * kilogram;
 	inline constexpr auto milligram   = micro * kilogram;
 	// thermodynamic temperature in...
-	inline constexpr auto kelvin      = unit<thermodynamic_temperature>();
+	inline constexpr auto kelvin      = unit<temperature>();
 	// electric current in...
 	inline constexpr auto ampere      = unit<electric_current>();
 	// amount of substance in...
@@ -822,14 +822,14 @@ namespace SI
 	inline constexpr auto nautical_mile = unit<length, 1852, 100>();
 	inline constexpr auto inch         = unit<length, 254, 10000>();
 	inline constexpr auto statute_mile = unit<length, 1609344, 1000>();
-	inline constexpr auto fahrenheit   = detail::unit<detail::thermodynamic_temperature_dimension, detail::tag_fahrenheit>();
+	inline constexpr auto fahrenheit   = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
 	inline constexpr auto miles_per_hour = statute_mile / hour;
 	inline constexpr auto knots        = nautical_mile / hour;
 	inline constexpr auto feet_per_minute = feet / minute;
 	inline constexpr auto inches_per_hour = inch / hour;
 
 	// VARIOUS UNITS
-	inline constexpr auto celsius     = detail::unit<detail::thermodynamic_temperature_dimension, detail::tag_celsius>();
+	inline constexpr auto celsius     = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
 
 	inline constexpr auto byte        = unit<detail::dimensionless>();
 	inline constexpr auto bytes_per_second = byte / second;
