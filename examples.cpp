@@ -168,7 +168,8 @@ int main()
 	auto mass = volume * density;
 	auto energy = formula::kinetic_energy(mass, speed);
 	print(energy);
-	print_as_kg_TNT(energy);
+	print_as_TNT_equivalent(energy);
+	print_as_Hiroshima_equivalent(energy);
 } {
 	// Here's the basic principle:
 	quantity x = 42;        // <- x contains a dimensionless number (no unit)

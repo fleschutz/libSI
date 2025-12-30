@@ -212,12 +212,20 @@ namespace SI
 			print(E / 1_J, "J");
 	}
 
-	void print_as_kg_TNT(energy E)
+	void print_as_TNT_equivalent(energy E)
 	{
 		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol))
 		auto TNT_mass = kilogram(E / one_kg_TNT);
 		print(TNT_mass);
-		printNoNewline("TNT");
+		printNoNewline("TNT ");
+	}
+
+	void print_as_Hiroshima_equivalent(energy E)
+	{
+		const auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
+		quantity factor = E / Hiroshima_bomb;
+		print(factor);
+		printNoNewline("Hiroshima bombs ");
 	}
 
 	void print(power P)
