@@ -1,4 +1,4 @@
-// SI/formulas.h - type-safe formulas based on SI units
+// SI/formulas.h - type-safe formulas based on SI units (for 2D, 3D, moving object, vehicles, aircrafts, etc.)
 #pragma once
 
 #include <cmath>
@@ -8,8 +8,8 @@ namespace SI
 {
 	namespace formula
 	{
-		// 2D FORMULAS:
-
+		// 2D Formulas
+		// -----------
 		// Returns the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
 		length hypotenuse_of_triangle(length a, length b)
 		{
@@ -87,8 +87,8 @@ namespace SI
 			return sqrt((dx * dx) + (dy * dy));
 		}
 
-		// 3D FORMULAS:
-
+		// 3D Formulas
+		// -----------
 		area area_of_cube(length a)
 		{
 			return 6. * a * a;
@@ -106,7 +106,7 @@ namespace SI
 
 		volume volume_of_cylinder(length radius, length height)
 		{
-			return constant::pi * radius * radius * height;
+			return constant::pi * square(radius) * height;
 		}
 
 		area area_of_cone(length radius, length height)
@@ -116,12 +116,12 @@ namespace SI
 
 		volume volume_of_cone(length radius, length height)
 		{
-			return (1./3.) * constant::pi * radius * radius * height;
+			return (1./3.) * constant::pi * square(radius) * height;
 		}
 
 		area area_of_sphere(length radius)
 		{
-			return 4. * constant::pi * radius * radius;
+			return 4. * constant::pi * square(radius);
 		}
 
 		volume volume_of_sphere(length radius)
@@ -134,8 +134,53 @@ namespace SI
 			return base_area * height;
 		}
 
-		// VARIOUS FORMULAS:
+		// Formulas for Moving Object
+		// --------------------------
+		time time_of_free_fall(length height, acceleration gravity)
+		{
+			return sqrt((2. * height) / gravity);
+		}
 
+		// Returns the braking distance to brake from v0 to v1 with the given deceleration.
+		length braking_distance(velocity v0, velocity v1, acceleration deceleration)
+		{
+			return (square(v0) - square(v1)) / (2.0 * deceleration);
+		}
+
+		// Returns the acceleration necessary to accelerate from v0 to v1 within the given distance.
+		acceleration acceleration_for_distance(velocity v0, velocity v1, length distance)
+		{
+			return (square(v1) - square(v0)) / (2.0 * distance);
+		}
+
+		// Formulas for Vehicles
+		// ---------------------
+		// Returns the turning radius of wheeled vehicles, see: https://en.wikipedia.org/wiki/Turning_radius
+		length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length tire_width)
+		{
+			return wheelbase / sin(steering_angle) + tire_width / 2.0;
+		}
+
+		// Formulas for Aircrafts
+		// ----------------------
+		angle glide_path(length horizontal_distance, length vertical_change)
+		{
+			return atan2(vertical_change, horizontal_distance);
+		}
+
+		length vertical_height(angle glide_path, length horizontal_distance)
+		{
+			return horizontal_distance * tan(glide_path);
+		}
+
+		// Returns the lift force of an aircraft wing, see: https://en.wikipedia.org/wiki/Lift_(force)
+		auto lift_force_of_wing(quantity lift_coefficient, area wing_surface, density air_density, velocity true_air_speed)
+		{
+			return 0.5 * air_density * square(true_air_speed) * wing_surface * lift_coefficient;
+		}
+
+		// Various Formulas
+		// ----------------
 		// Returns the kinetic energy of a non-rotating object of mass m traveling at velocity v.
 		energy kinetic_energy(mass m, velocity v)
 		{
@@ -157,43 +202,18 @@ namespace SI
 			return q * v * B;
 		}
 
-		time time_of_free_fall(length height, acceleration gravity)
+		// Returns the windchill temperature, see: https://de.wikipedia.org/wiki/Windchill
+		temperature windchill_temperature(temperature air_temperature, velocity wind_speed)
 		{
-			return sqrt((2. * height) / gravity);
-		}
-
-		angle glide_path(length horizontal_distance, length vertical_change)
-		{
-			return atan2(vertical_change, horizontal_distance);
-		}
-
-		length vertical_height(angle glide_path, length horizontal_distance)
-		{
-			return horizontal_distance * tan(glide_path);
-		}
-
-		length braking_distance(velocity from_speed, velocity to_speed, acceleration deceleration)
-		{
-			return (from_speed * from_speed - to_speed * to_speed) / (2.0 * deceleration);
-		}
-
-		acceleration acceleration_for_distance(velocity current_speed, velocity target_speed, length distance)
-		{
-			return (target_speed * target_speed - current_speed * current_speed) / (2.0 * distance);
+			auto air_celsius = celsius(air_temperature);
+			return celsius(13.12 + 0.6215 * air_celsius
+			  + (0.3965 * air_celsius - 11.37) * std::pow(wind_speed / 1_km_per_h, 0.16));
 		}
 
 		// Calculates the body-mass index (BMI).
 		auto BMI(mass weight, length height)
 		{
 			return weight / (height * height);
-		}
-
-		// Returns the windchill temperature (see: https://de.wikipedia.org/wiki/Windchill)
-		temperature windchill_temperature(temperature air_temp, velocity wind_speed)
-		{
-			auto air_celsius = celsius(air_temp);
-			return celsius(13.12 + 0.6215 * air_celsius
-			  + (0.3965 * air_celsius - 11.37) * std::pow(wind_speed / 1_km_per_h, 0.16));
 		}
 	}
 }

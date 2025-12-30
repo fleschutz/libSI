@@ -857,6 +857,12 @@ namespace SI
 	{
 		return std::atan2(meter(y), meter(x));
 	}
+
+	// Returns the square of x (x² or x*x).
+	template <typename T>
+	SI_INLINE auto square(T x) {
+		return x * x;
+	}
 }
 
 #undef SI_RETURN_QUANTITY
