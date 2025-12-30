@@ -162,12 +162,15 @@ int main()
 } {
 	print("What's the impact energy of a 50m asteroid at 50,000km/h? It's... ");
 	auto diameter = 50_m;
-	auto density = 2500_kg_per_m³; // can often estimated only 
+	auto density = 2500_kg_per_m³; // mostly estimated only 
 	auto speed = 50'000_km_per_h; // range is usually 50,000..100.000km/h
 	auto volume = formula::volume_of_sphere(diameter / 2.0);
 	auto mass = volume * density;
 	auto energy = formula::kinetic_energy(mass, speed);
-	print(volume, mass, energy);
+	print(energy);
+	auto TNT = kilogram(energy / 1_kg_TNT);
+	print(TNT);
+	printNoNewline("TNT");
 } {
 	// Here's the basic principle:
 	quantity x = 42;        // <- x contains a dimensionless number (no unit)

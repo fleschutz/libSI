@@ -2,12 +2,9 @@
 #pragma once
 
 #include "../../SI/units.h"
-
-namespace SI
-{
-	namespace ISO 
-	{
 #define SET(_name, _value, _unit) const auto _name = _unit(_value)
+
+namespace SI { namespace ISO {
 
 // ISO 216 - Paper Sizes
 SET( paper_A0_with,              841, millimeter);
@@ -41,7 +38,6 @@ SET( container_1AA_ext_width,       2.438, meter);
 SET( container_1AA_max_gross_mass, 36'000, kilogram);
 //...
 
-#undef SET
-	}
-}
+} }
 
+#undef SET

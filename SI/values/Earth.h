@@ -2,14 +2,11 @@
 #pragma once
 
 #include "../../SI/units.h"
-
-namespace SI
-{
-	namespace Earth
-	{
 #define SET(_name, _value, _unit)  const auto _name = _unit(_value)
 
-// Basic values:  (source: https://en.wikipedia.org/wiki/Earth)
+namespace SI { namespace Earth {
+
+// Basic values:
 SET( surface_gravity,             9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined 1901 in the third General Conference on Weights and Measures.
 SET( equatorial_radius,          6378.137, kilometer);      // denoted 'a'
 SET( equatorial_diameter, equatorial_radius * 2, meter);
@@ -74,7 +71,10 @@ SET( Eiffel_Tower_height,             330, meter);
 SET( Great_Wall_in_China_length,     6430, kilometer); // (approximately)
 // ...
 
-#undef SET
-	}
-}
+} }
 
+// Sources
+// -------
+// https://en.wikipedia.org/wiki/Earth
+//
+#undef SET

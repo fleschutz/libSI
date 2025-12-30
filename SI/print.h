@@ -74,8 +74,8 @@ namespace SI
 
 	void print(mass m)
 	{
-		if (abs(m) >= 1_mt)
-			print(m / 1_mt, "mt (megatons)");
+		if (abs(m) >= 1_Mt)
+			print(m / 1_Mt, "Mt (megatons)");
 		else if (abs(m) >= 1_kt)
 			print(m / 1_kt, "kt (kilotons)");
 		else if (abs(m) >= 1_t)

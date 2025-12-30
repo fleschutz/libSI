@@ -28,7 +28,7 @@ namespace SI
 		static_assert(1_ms  == 0.001_s);
 		static_assert(1_μs  == 0.001_ms);
 		// Mass in...
-		static_assert(1_mt == 1000_kt);
+		static_assert(1_Mt == 1000_kt);
 		static_assert(1_kt == 1000_t);
 		static_assert(1_t  == 1000_kg);
 		static_assert(1_kg == 1000_g);
