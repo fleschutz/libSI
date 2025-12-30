@@ -11,6 +11,7 @@ namespace SI
 		// The 7 SI Base Units
 		// -------------------
 		// Length in...
+		static_assert(1_Gm == 1000_Mm);
 		static_assert(1_Mm == 1000_km);
 		static_assert(1_km == 1000_m);
 		static_assert(1_m  == 10_dm);
@@ -28,6 +29,7 @@ namespace SI
 		static_assert(1_ms  == 0.001_s);
 		static_assert(1_μs  == 0.001_ms);
 		// Mass in...
+		static_assert(1_Gt == 1000_Mt);
 		static_assert(1_Mt == 1000_kt);
 		static_assert(1_kt == 1000_t);
 		static_assert(1_t  == 1000_kg);

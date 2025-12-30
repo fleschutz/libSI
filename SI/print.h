@@ -74,7 +74,9 @@ namespace SI
 
 	void print(mass m)
 	{
-		if (abs(m) >= 1_Mt)
+		if (abs(m) >= 1_Gt)
+			print(m / 1_Gt, "Gt (gigatons)");
+		else if (abs(m) >= 1_Mt)
 			print(m / 1_Mt, "Mt (megatons)");
 		else if (abs(m) >= 1_kt)
 			print(m / 1_kt, "kt (kilotons)");
@@ -208,6 +210,14 @@ namespace SI
 			print(E / 1_kJ, "kJ");
 		else
 			print(E / 1_J, "J");
+	}
+
+	void print_as_kg_TNT(energy E)
+	{
+		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol))
+		auto TNT_mass = kilogram(E / one_kg_TNT);
+		print(TNT_mass);
+		printNoNewline("TNT");
 	}
 
 	void print(power P)

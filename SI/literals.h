@@ -13,6 +13,7 @@ namespace SI
 // -------------------
 // SYMBOL     FACTOR  BASE UNIT                EXAMPLE      
 // Length in...                                     (sorted from big to small)
+LITERAL( Gm,     1e9, meter);               // 1_Gm (gigameter)
 LITERAL( Mm,     1e6, meter);               // 1_Mm (megameter)
 LITERAL( km,     1e3, meter);               // 1_km (kilometer)
 LITERAL( m,        1, meter);               // 1_m
@@ -30,11 +31,12 @@ LITERAL( second,   1, second);              // 1_second
 LITERAL( ms,    1e-3, second);              // 1_ms  (millisecond)
 LITERAL( μs,    1e-6, second);              // 1_μs  (microsecond)
 // Mass in...
+LITERAL( Gt,    1e12, kilogram);            // 1_Gt (metric gigaton)
 LITERAL( Mt,     1e9, kilogram);            // 1_Mt (metric megaton)
 LITERAL( kt,     1e6, kilogram);            // 1_kt (metric kiloton)
-LITERAL( t,      1e3, kilogram);            // 1_t (metric tonne)
+LITERAL( t,      1e3, kilogram);            // 1_t  (metric ton)
 LITERAL( kg,       1, kilogram);            // 1_kg
-LITERAL( g,     1e-3, kilogram);            // 1_g (gram)
+LITERAL( g,     1e-3, kilogram);            // 1_g  (gram)
 LITERAL( mg,    1e-6, kilogram);            // 1_mg (milligram)
 LITERAL( μg,    1e-9, kilogram);            // 1_μg (microgram)
 // Thermodynamic temperature in...
@@ -46,11 +48,12 @@ LITERAL( mK,    1e-3, kelvin);              // 1_mK (millikelvin)
 LITERAL( μK,    1e-6, kelvin);              // 1_μK (microkelvin)
 LITERAL( nK,    1e-9, kelvin);              // 1_nK (nanokelvin)
 // Electric current (I) in...
+LITERAL( GA,     1e9, ampere);              // 1_GA  (gigaampere)
 LITERAL( MA,     1e6, ampere);              // 1_MA  (megaampere)
 LITERAL( kA,     1e3, ampere);              // 1_kA  (kiloampere)
 LITERAL( A,        1, ampere);              // 1_A 
 LITERAL( mA,    1e-3, ampere);              // 1_mA  (milliampere)
-LITERAL( μA,    1e-6, ampere);              // 1_μA (microampere)
+LITERAL( μA,    1e-6, ampere);              // 1_μA  (microampere)
 LITERAL( nA,    1e-9, ampere);              // 1_nA  (nanoampere)
 LITERAL( pA,   1e-12, ampere);              // 1_pA  (picoampere)
 // Amount of substance (N_A) in...
@@ -267,8 +270,6 @@ LITERAL( degR,                          5.0/9.0, kelvin); // 1_degR (°Rankine)
 LITERAL( Mach,                              330, meters_per_second); // 1_Mach
 LITERAL( Da,                1.6605390689252e-27, kilogram);//1_Da (dalton)
 LITERAL( eV,                    1.602176634e-19, joule);  // 1_eV (electronvolt)
-LITERAL( kg_TNT,                        4.184e6, joule);  // 1_kg_TNT (explosion energy of 1kg Trinitrotoluol))
-LITERAL( kg_Semtex,                    6.6944e6, joule);  // 1_kg_Semtex (explosion energy of 1kg Semtex)
 
 #undef LITERAL
 #undef CARDINAL

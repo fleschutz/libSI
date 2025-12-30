@@ -168,9 +168,7 @@ int main()
 	auto mass = volume * density;
 	auto energy = formula::kinetic_energy(mass, speed);
 	print(energy);
-	auto TNT = kilogram(energy / 1_kg_TNT);
-	print(TNT);
-	printNoNewline("TNT");
+	print_as_kg_TNT(energy);
 } {
 	// Here's the basic principle:
 	quantity x = 42;        // <- x contains a dimensionless number (no unit)
