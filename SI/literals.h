@@ -141,6 +141,9 @@ LITERAL( kS_per_m,1e3, siemens_per_meter);  // 1_kS_per_m (kS/m, kilosiemens per
 LITERAL( S_per_m,  1, siemens_per_meter);   // 1_S_per_m (S/m, siemens per meter)
 // Electric charge (Q) in...
 LITERAL( C,        1, coulomb);             // 1_C   (coulomb)
+LITERAL( GAh,    1e9, ampere_hours);        // 1_GAh (gigaampere-hours)
+LITERAL( MAh,    1e6, ampere_hours);        // 1_MAh (megaampere-hours)
+LITERAL( kAh,    1e3, ampere_hours);        // 1_kAh (kiloampere-hours)
 LITERAL( Ah,       1, ampere_hours);        // 1_Ah  (ampere-hours)
 LITERAL( mAh,   1e-3, ampere_hours);        // 1_mAh (milliampere-hours)
 // Electric capacitance (C) in...

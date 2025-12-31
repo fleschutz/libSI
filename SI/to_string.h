@@ -17,124 +17,148 @@ namespace SI
 	// -------------------
 	std::string to_string(length d)
 	{
-		if (abs(d) >= 1_Mly)
+		if (d <= -1_Mly || d >= 1_Mly)
 			return _join(d / 1_Mly, "Mly (megalight-years)");
-		else if (abs(d) >= 1_pc)
+		if (d <= -1_pc || d >= 1_pc)
 			return _join(d / 1_pc, "pc (parsec)");
-		else if (abs(d) >= 1_ly)
+		if (d <= -1_ly || d >= 1_ly)
 			return _join(d / 1_ly, "ly (light-years)");
-		else if (abs(d) >= 1_au)
+		if (d <= -1_au || d >= 1_au)
 			return _join(d / 1_au, "au (astronomical unit)");
-		else if (abs(d) >= 1_km)
+		if (d <= -1_km || d >= 1_km)
 			return _join(d / 1_km, "km");
-		else if (abs(d) >= 1_m)
+		if (d <= -1_m || d >= 1_m)
 			return _join(d / 1_m, "m ");
-		else if (abs(d) >= 1_cm)
+		if (d <= -1_cm || d >= 1_cm)
 			return _join(d / 1_cm, "cm");
-		else if (abs(d) >= 1_mm)
+		if (d <= -1_mm || d >= 1_mm)
 			return _join(d / 1_mm, "mm");
-		else
-			return _join(d / 1_μm, "μm");
+
+		return _join(d / 1_μm, "μm");
 	}
 
 	std::string to_string(time t)
 	{
 		if (abs(t) >= Earth::year)
 			return _join(t / Earth::year, " year(s)");
-		else if (abs(t) >= Earth::week)
+		if (abs(t) >= Earth::week)
 			return _join(t / Earth::week, " week(s)");
-		else if (abs(t) > Earth::day)
+		if (abs(t) > Earth::day)
 			return _join(t / Earth::day, " day(s)");
-		else if (abs(t) >= 1_h)
+		if (abs(t) >= 1_h)
 			return _join((int)(t / 1_h), "h ") + _join((int)(t / 1_min) % 60, "min");
-		else if (abs(t) >= 1_min)
+		if (abs(t) >= 1_min)
 			return _join((int)(t / 1_min), "min ") + _join((int)(t / 1_sec) % 60, "sec");
-		else if (abs(t) >= 1_sec)
+		if (abs(t) >= 1_sec)
 			return _join(t / 1_sec, "sec");
-		else if (abs(t) >= 1_ms)
+		if (abs(t) >= 1_ms)
 			return _join(t / 1_ms, "ms");
-		else if (abs(t) >= 1_μs)
+		if (abs(t) >= 1_μs)
 			return _join(t / 1_μs, "μs");
-		else
-			return _join(t / 1_ns, "ns");
+
+		return _join(t / 1_ns, "ns");
 	}
 
 	std::string to_string(mass m)
 	{
-		if (abs(m) >= 1_Gt)
+		if (m <= -1_Gt || m >= 1_Gt)
 			return _join(m / 1_Gt, "Gt (gigatons)");
-		else if (abs(m) >= 1_Mt)
+		if (m <= -1_Mt || m >= 1_Mt)
 			return _join(m / 1_Mt, "Mt (megatons)");
-		else if (abs(m) >= 1_kt)
+		if (m <= -1_kt || m >= 1_kt)
 			return _join(m / 1_kt, "kt (kilotons)");
-		else if (abs(m) >= 1_t)
+		if (m <= -1_t || m >= 1_t)
 			return _join(m / 1_t, "t");
-		else if (abs(m) >= 1_kg)
+		if (m <= -1_kg || m >= 1_kg)
 			return _join(m / 1_kg, "kg");
-		else if (abs(m) >= 1_g)
+		if (m <= -1_g || m >= 1_g)
 			return _join(m / 1_g, "g");
-		else if (abs(m) >= 1_mg)
+		if (m <= -1_mg || m >= 1_mg)
 			return _join(m / 1_mg, "mg");
-		else
-			return _join(m / 1_μg, "μg");
+
+		return _join(m / 1_μg, "μg");
+	}
+
+	std::string to_string(temperature T)
+	{
+		if (T >= 250_K && T <= 470_K) // temperature range for humans
+			return _join(celsius(T), "°C ") + _join(fahrenheit(T), "°F");
+		if (T <= -1_GK || T >= 1_GK)
+			return _join(T / 1_GK, "GK");
+		if (T <= -1_MK || T >= 1_MK)
+			return _join(T / 1_MK, "MK");
+		if (T <= -1_K || T >= 1_K)
+			return _join(T / 1_K, "K");
+		if (T <= -1_mK || T >= 1_mK)
+			return _join(T / 1_mK, "mK");
+		if (T <= -1_μK || T >= 1_μK)
+			return _join(T / 1_μK, "μK");
+
+		return _join(T / 1_nK, "nK");
 	}
 
 	std::string to_string(electric_current I)
 	{
-		if (abs(I) >= 1_A)
+		if (I <= -1_GA || I >= 1_GA)
+			return _join(I / 1_GA, "GA");
+		if (I <= -1_MA || I >= 1_MA)
+			return _join(I / 1_MA, "MA");
+		if (I <= -1_kA || I >= 1_kA)
+			return _join(I / 1_kA, "kA");
+		if (I <= -1_A || I >= 1_A)
 			return _join(I / 1_A, "A");
-		else if (abs(I) >= 1_mA)
+		if (I <= -1_mA || I >= 1_mA)
 			return _join(I / 1_mA, "mA");
-		else if (abs(I) >= 1_μA)
+		if (I <= -1_μA || I >= 1_μA)
 			return _join(I / 1_μA, "μA");
-		else if (abs(I) >= 1_nA)
+		if (I <= -1_nA || I >= 1_nA)
 			return _join(I / 1_nA, "nA");
-		else
-			return _join(I / 1_pA, "pA");
+
+		return _join(I / 1_pA, "pA");
 	}
 
 	// The 22 Derived SI Units
 	// -----------------------
 	std::string to_string(area a)
 	{
-		if (abs(a) >= 1_km²)
+		if (a <= -1_km² || a >= 1_km²)
 			return _join(a / 1_km², "km²");
-		else if (abs(a) >= 1_hm²)
+		if (a <= -1_hm² || a >= 1_hm²)
 			return _join(a / 1_hm², "hm²");
-		else if (abs(a) >= 1_m²)
+		if (a <= -1_m² || a >= 1_m²)
 			return _join(a / 1_m², "m²");
-		else if (abs(a) >= 1_cm²)
+		if (a <= -1_cm² || a >= 1_cm²)
 			return _join(a / 1_cm², "cm²");
-		else if (abs(a) >= 1_mm²)
+		if (a <= -1_mm² || a >= 1_mm²)
 			return _join(a / 1_mm², "mm²");
-		else
-			return _join(a / 1_μm², "μm²");
+
+		return _join(a / 1_μm², "μm²");
 	}
 
 	std::string to_string(volume v)
 	{
-		if (abs(v) >= 1_km³)
+		if (v <= -1_km³ || v >= 1_km³)
 			return _join(v / 1_km³, "km³");
-		else if (abs(v) >= 1_m³)
+		if (v <= -1_m³ || v >= 1_m³)
 			return _join(v / 1_m³, "m³");
-		else if (abs(v) >= 1_l)
+		if (v <= -1_l || v >= 1_l)
 			return _join(v / 1_l, "l");
-		else if (abs(v) >= 1_cm³)
+		if (v <= -1_cm³ || v >= 1_cm³)
 			return _join(v / 1_cm³, "cm³");
-		else if (abs(v) >= 1_mm³)
+		if (v <= -1_mm³ || v >= 1_mm³)
 			return _join(v / 1_mm³, "mm³");
-		else
-			return _join(v / 1_μm³, "μm³");
+
+		return _join(v / 1_μm³, "μm³");
 	}
 
 	std::string to_string(velocity v)
 	{
-		if (abs(v) >= 1_km_per_h)
+		if (v <= -1_km_per_h || v >= 1_km_per_h)
 			return _join(v / 1_km_per_h, "km/h");
-		else if (abs(v) >= 1_m_per_s)
+		if (v <= -1_m_per_s || v >= 1_m_per_s)
 			return _join(v / 1_m_per_s, "m/s");
-		else
-			return _join(v / 1_mm_per_h, "mm/h");
+
+		return _join(v / 1_mm_per_h, "mm/h");
 	}
 
 	std::string to_string(acceleration a)
@@ -144,32 +168,97 @@ namespace SI
 
 	std::string to_string(frequency f)
 	{
-		if (abs(f) >= 1_THz)
+		if (f <= -1_THz || f >= 1_THz)
 			return _join(f / 1_THz, "THz");
-		else if (abs(f) >= 1_GHz)
+		if (f <= -1_GHz || f >= 1_GHz)
 			return _join(f / 1_GHz, "GHz");
-		else if (abs(f) >= 1_MHz)
+		if (f <= -1_MHz || f >= 1_MHz)
 			return _join(f / 1_MHz, "MHz");
-		else if (abs(f) >= 1_kHz)
+		if (f <= -1_kHz || f >= 1_kHz)
 			return _join(f / 1_kHz, "kHz");
-		else
-			return _join(f / 1_Hz, "Hz");
+
+		return _join(f / 1_Hz, "Hz");
 	}
 
 	std::string to_string(force F)
 	{
-		if (abs(F) >= 1_GN)
+		if (F <= -1_GN || F >= 1_GN)
 			return _join(F / 1_GN, "GN");
-		else if (abs(F) >= 1_MN)
+		if (F <= -1_MN || F >= 1_MN)
 			return _join(F / 1_MN, "MN");
-		else if (abs(F) >= 1_kN)
+		if (F <= -1_kN || F >= 1_kN)
 			return _join(F / 1_kN, "kN");
-		else if (abs(F) >= 1_N)
+		if (F <= -1_N || F >= 1_N)
 			return _join(F / 1_N, "N");
-		else if (abs(F) >= 1_mN)
+		if (F <= -1_mN || F >= 1_mN)
 			return _join(F / 1_mN, "mN");
-		else
-			return _join(F / 1_μN, "μN");
+
+		return _join(F / 1_μN, "μN");
 	}
 
+	std::string to_string(energy E)
+	{
+		if (E <= -1_PJ || E >= 1_PJ)
+			return _join(E / 1_PJ, "PJ (petajoules)");
+		if (E <= -1_TJ || E >= 1_TJ)
+			return _join(E / 1_TJ, "TJ (terajoules)");
+		if (E <= -1_GJ || E >= 1_GJ)
+			return _join(E / 1_GJ, "GJ");
+		if (E <= -1_MJ || E >= 1_MJ)
+			return _join(E / 1_MJ, "MJ");
+		if (E <= -1_kJ || E >= 1_kJ)
+			return _join(E / 1_kJ, "kJ");
+
+		return _join(E / 1_J, "J");
+	}
+
+	std::string to_string(power P)
+	{
+		if (P <= -1_TWh || P >= 1_TWh)
+			return _join(P / 1_TWh, "TWh");
+		if (P <= -1_GWh || P >= 1_GWh)
+			return _join(P / 1_GWh, "GWh");
+		if (P <= -1_MWh || P >= 1_MWh)
+			return _join(P / 1_MWh, "MWh");
+		if (P <= -1_kWh || P >= 1_kWh)
+			return _join(P / 1_kWh, "kWh");
+
+		return _join(P / 1_Wh, "Wh");
+	}
+
+	std::string to_string(pressure p)
+	{
+		if (p <= -1_MPa || p >= 1_MPa)
+			return _join(p / 1_MPa, "MPa");
+		if (p <= -1_kPa || p >= 1_kPa)
+			return _join(p / 1_kPa, "kPa");
+		if (p <= -1_hPa || p >= 1_hPa)
+			return _join(p / 1_hPa, "hPa");
+
+		return _join(p / 1_Pa, "Pa");
+	}
+
+	std::string to_string(electric_charge Q)
+	{
+		if (Q <= -1_GAh || Q >= 1_GAh)
+			return _join(Q / 1_MAh, "MAh");
+		if (Q <= -1_MAh || Q >= 1_MAh)
+			return _join(Q / 1_MAh, "MAh");
+		if (Q <= -1_kAh || Q >= 1_kAh)
+			return _join(Q / 1_kAh, "kAh");
+		if (Q <= -1_Ah || Q >= 1_Ah)
+			return _join(Q / 1_Ah, "Ah");
+
+		return _join(Q / 1_mAh, "mAh");
+	}
+
+	std::string to_string(BMI v)
+	{
+		return _join(v / 1_kg_per_m², " BMI");
+	}
+
+	std::string to_string(angle a)
+	{
+		return _join(a / 1_deg, "°");
+	}
 }
