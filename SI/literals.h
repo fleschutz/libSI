@@ -196,9 +196,6 @@ LITERAL( MPa,    1e6, pascal_);             // 1_MPa  (megapascal)
 LITERAL( kPa,    1e3, pascal_);             // 1_kPa  (kilopascal) 
 LITERAL( hPa,    1e2, pascal_);             // 1_hPa  (hectopascal) 
 LITERAL( Pa,       1, pascal_);             // 1_Pa   (pascal) 
-LITERAL( at,98'066.5, pascal_);             // 1_at   (atmosphere)
-LITERAL( bar,    1e5, pascal_);             // 1_bar 
-LITERAL( mmHg,133.3224, pascal_);           // 1_mmHg (millimeter mercury)
 // Force (F) in...
 LITERAL( GN,     1e9, newton);              // 1_GN (giganewton)
 LITERAL( MN,     1e6, newton);              // 1_MN (meganewton)
@@ -262,16 +259,19 @@ LITERAL( Mbps,                          1e6 / 8, bytes_per_second); // 1_Mbps (m
 LITERAL( Gbps,                          1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
 LITERAL( Tbps,                         1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
 // various units in...
-LITERAL( rad,                                 1, radian); // 1_rad (radian)
-LITERAL( deg,0.01745329251994329576923690768489, radian); // 1_deg  (angle degree)
-LITERAL( sr,                                  1, steradian);// 1_sr  (steradian)
-LITERAL( degC,                                1, celsius);// 1_degC (°Celsius)
-LITERAL( degR,                          5.0/9.0, kelvin); // 1_degR (°Rankine)
+LITERAL( rad,                                 1, radian);   // 1_rad  (radian)
+LITERAL( deg,0.01745329251994329576923690768489, radian);   // 1_deg  (angle degree)
+LITERAL( sr,                                  1, steradian);// 1_sr   (steradian)
+LITERAL( degC,                                1, celsius);  // 1_degC (°Celsius)
+LITERAL( degR,                          5.0/9.0, kelvin);   // 1_degR (°Rankine)
 LITERAL( Mach,                              330, meters_per_second); // 1_Mach
-LITERAL( Da,                1.6605390689252e-27, kilogram);//1_Da (dalton)
-LITERAL( eV,                    1.602176634e-19, joule);  // 1_eV (electronvolt)
-LITERAL( hp,                 745.69987158227022, watt); // 1_hp  (horsepower)
-LITERAL( PS,                          735.49875, watt); // 1_PS  ('Pferdestärke', german horsepower)
+LITERAL( Da,                1.6605390689252e-27, kilogram); // 1_Da   (dalton)
+LITERAL( eV,                    1.602176634e-19, joule);    // 1_eV   (electronvolt)
+LITERAL( hp,                 745.69987158227022, watt);     // 1_hp   (horsepower)
+LITERAL( PS,                          735.49875, watt);     // 1_PS   ('Pferdestärke', german horsepower)
+LITERAL( at,                           98'066.5, pascal_);  // 1_at   (atmosphere)
+LITERAL( bar,                               1e5, pascal_);  // 1_bar 
+LITERAL( mmHg,                         133.3224, pascal_);  // 1_mmHg (millimeter mercury)
 }
 
 // Sources

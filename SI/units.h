@@ -643,8 +643,8 @@ namespace SI
 	using detail::is_si;
 	using detail::is_si_v;
 
-#define SI_QUANTITY(name_, length_, mass_, time_, temperature_, angle_)						\
-	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, angle_>; }\
+#define SI_DIM(name_, length_, mass_, time_, temperature_, current_, substance_, intensity_)		\
+	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, current_>; }\
 	template <class T> using name_ ## _t = detail::quantity<detail:: name_ ## _dimension, T>;		\
 	using name_ = name_ ## _t<double_t>;									\
 	using name_ ## f = name_ ## _t<float_t>;								\
@@ -652,37 +652,36 @@ namespace SI
 	using name_ ## 2f = name_ ## _t<detail::vec2<float_t>>;							\
 	using name_ ## 3 = name_ ## _t<detail::vec3<double_t>>;							\
 	using name_ ## 3f = name_ ## _t<detail::vec3<float_t>>															
-	// The 7 SI Dimensions
-	// -------------------                 l  m  t  T  ° 
-	SI_QUANTITY(length,                    1, 0, 0, 0, 0);
-	SI_QUANTITY(mass,                      0, 1, 0, 0, 0);
-	SI_QUANTITY(time,                      0, 0, 1, 0, 0);
-	SI_QUANTITY(temperature,               0, 0, 0, 1, 0); // (thermodynamic temperature)
-	SI_QUANTITY(electric_current,          0, 0, 0, 0, 1); // TODO
-	SI_QUANTITY(amount_of_substance,       0, 0, 0, 0, 1); // TODO
-	SI_QUANTITY(luminous_intensity,        0, 0, 0, 0, 1); // TODO
-	//...
+	// The 7 SI Base Dimensions
+	// ------------------------ l  m  t  T  A  s  i
+	SI_DIM(length,              1, 0, 0, 0, 0, 0, 0);
+	SI_DIM(mass,                0, 1, 0, 0, 0, 0, 0);
+	SI_DIM(time,                0, 0, 1, 0, 0, 0, 0);
+	SI_DIM(temperature,         0, 0, 0, 1, 0, 0, 0); // (thermodynamic temperature)
+	SI_DIM(electric_current,    0, 0, 0, 0, 1, 0, 0);
+	SI_DIM(amount_of_substance, 0, 0, 0, 0, 1, 1, 0);
+	SI_DIM(luminous_intensity,  0, 0, 0, 0, 1, 0, 1);
 
-	// The 22 SI Derived Dimensions
+	// The 22 Derived SI Dimensions
 	// ----------------------------
-	SI_QUANTITY(area,          2, 0,  0, 0, 0); // (length²)
-	SI_QUANTITY(volume,        3, 0,  0, 0, 0); // (length³)
-	SI_QUANTITY(frequency,     0, 0, -1, 0, 0); // (per time)
-	SI_QUANTITY(velocity,      1, 0, -1, 0, 0); // (length per time)
-	SI_QUANTITY(angular_speed, 0, 0, -1, 0, 1); // (degree per time)
-	SI_QUANTITY(acceleration,  1, 0, -2, 0, 0); // (length per time²)
-	SI_QUANTITY(jerk,          1, 0, -3, 0, 0);
-	SI_QUANTITY(force,         1, 1, -2, 0, 0);
-	SI_QUANTITY(impulse,       1, 1, -1, 0, 0);
-	SI_QUANTITY(pressure,     -1, 1, -2, 0, 0);
-	SI_QUANTITY(energy,        2, 1, -2, 0, 0);
-	SI_QUANTITY(torque,        2, 1, -2, 0, 0);
-	SI_QUANTITY(power,         2, 1, -3, 0, 0);
-	SI_QUANTITY(density,      -3, 1,  0, 0, 0); // (mass per length³)
-	SI_QUANTITY(BMI,          -2, 1,  0, 0, 0); // (mass per length²)
-	SI_QUANTITY(reciprocal_length,-1, 0,  0, 0, 0); // (per length)
-	SI_QUANTITY(reciprocal_amount_of_substance,0, 0,  0, 0,-1); // (per amount of substance)
-	//...
+	SI_DIM(area,                2, 0,  0, 0, 0, 0, 0); // (length²)
+	SI_DIM(volume,              3, 0,  0, 0, 0, 0, 0); // (length³)
+	SI_DIM(frequency,           0, 0, -1, 0, 0, 0, 0); // (per time)
+	SI_DIM(velocity,            1, 0, -1, 0, 0, 0, 0); // (length per time)
+	SI_DIM(angular_speed,       0, 0, -1, 0, 1, 0, 0); // (degree per time)
+	SI_DIM(acceleration,        1, 0, -2, 0, 0, 0, 0); // (length per time²)
+	SI_DIM(jerk,                1, 0, -3, 0, 0, 0, 0);
+	SI_DIM(force,               1, 1, -2, 0, 0, 0, 0);
+	SI_DIM(impulse,             1, 1, -1, 0, 0, 0, 0);
+	SI_DIM(pressure,           -1, 1, -2, 0, 0, 0, 0);
+	SI_DIM(energy,              2, 1, -2, 0, 0, 0, 0);
+	SI_DIM(torque,              2, 1, -2, 0, 0, 0, 0);
+	SI_DIM(power,               2, 1, -3, 0, 0, 0, 0);
+	SI_DIM(density,            -3, 1,  0, 0, 0, 0, 0); // (mass per length³)
+	SI_DIM(electric_charge,     0, 0,  1, 0, 1, 0, 0); // (electric current and time)
+	SI_DIM(BMI,                -2, 1,  0, 0, 0, 0, 0); // (mass per length²)
+	SI_DIM(reciprocal_length,  -1, 0,  0, 0, 0, 0, 0); // (per length)
+	SI_DIM(reciprocal_amount_of_substance,0, 0,  0, 0,-1, 0, 0); // (per amount of substance)
 
 	using position2d = length2;
 	using position = length3;
@@ -791,7 +790,7 @@ namespace SI
 
 	SI_INLINE_CONSTEXPR auto ampere_per_meter = ampere / meter;
 	SI_INLINE_CONSTEXPR auto ampere_per_meter2 = ampere / (meter * meter);
-	SI_INLINE_CONSTEXPR auto coulomb     = ampere * second;
+	SI_INLINE_CONSTEXPR auto coulomb     = unit<electric_charge>();
 	SI_INLINE_CONSTEXPR auto coulombs_per_mol = coulomb / mol;
 	SI_INLINE_CONSTEXPR auto ampere_hours= ampere * hour;
 	SI_INLINE_CONSTEXPR auto volt        = joule / coulomb; 
@@ -870,6 +869,6 @@ namespace SI
 }
 
 #undef SI_RETURN_QUANTITY
-#undef SI_QUANTITY
+#undef SI_DIM
 #undef SI_INLINE_CONSTEXPR
 #undef SI_INLINE

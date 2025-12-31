@@ -135,7 +135,7 @@ namespace SI
 			print(I / 1_pA, "pA");
 	}
 
-	// The 22 SI Derived Units
+	// The 22 Derived SI Units
 	// -----------------------
 	void print(area a)
 	{
@@ -258,6 +258,26 @@ namespace SI
 			print(P / 1_kWh, "kWh");
 		else
 			print(P / 1_Wh, "Wh");
+	}
+
+	void print(pressure p)
+	{
+		if (abs(p) >= 1_MPa)
+			print(p / 1_MPa, "MPa");
+		else if (abs(p) >= 1_kPa)
+			print(p / 1_kPa, "kPa");
+		else if (abs(p) >= 1_hPa)
+			print(p / 1_hPa, "hPa");
+		else
+			print(p / 1_Pa, "Pa");
+	}
+
+	void print(electric_charge Q)
+	{
+		if (abs(Q) >= 1_Ah)
+			print(Q / 1_Ah, "Ah");
+		else
+			print(Q / 1_mAh, "mAh");
 	}
 
 	void print(angle a)
