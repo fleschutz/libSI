@@ -228,6 +228,22 @@ namespace SI
 		printNoNewline("Hiroshima bombs ");
 	}
 
+	void print(force F)
+	{
+		if (abs(F) >= 1_GN)
+			print(F / 1_GN, "GN");
+		else if (abs(F) >= 1_MN)
+			print(F / 1_MN, "MN");
+		else if (abs(F) >= 1_kN)
+			print(F / 1_kN, "kN");
+		else if (abs(F) >= 1_N)
+			print(F / 1_N, "N");
+		else if (abs(F) >= 1_mN)
+			print(F / 1_mN, "mN");
+		else
+			print(F / 1_μN, "μN");
+	}
+
 	void print(power P)
 	{
 		if (abs(P) >= 1_TWh)

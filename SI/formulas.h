@@ -170,7 +170,7 @@ namespace SI
 		// Formulas for Aircrafts
 		// ----------------------
 		// Returns the lift force of an aircraft wing, see: https://en.wikipedia.org/wiki/Lift_(force)
-		auto lift_force_of_wing(quantity lift_coefficient, area wing_surface, density air_density, velocity true_air_speed)
+		force lift_force_of_wing(quantity lift_coefficient, area wing_surface, density air_density, velocity true_air_speed)
 		{
 			return 0.5 * air_density * square(true_air_speed) * wing_surface * lift_coefficient;
 		}
