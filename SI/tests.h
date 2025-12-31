@@ -1,4 +1,4 @@
-// SI/tests.h - unit tests for safety
+// SI/tests.h - unit tests to check everything
 #pragma once
 
 #include <cassert>

@@ -1,4 +1,4 @@
-// SI/units.h - contains type-safe SI units
+// SI/units.h - defines type-safe SI units
 #pragma once
 
 #include <type_traits>
@@ -8,10 +8,12 @@
 #include <algorithm>
 #include <charconv>
 #include "internal.h"
+#define SI_INLINE inline 
+#define SI_INLINE_CONSTEXPR constexpr SI_INLINE
 
 namespace SI
 {
-	typedef double_t quantity; // datatype for a dimensionless value (without any unit), e.g. 42
+	typedef double_t quantity; // datatype to hold a dimensionless value (without any unit), e.g. 42
 
 	namespace detail
 	{
@@ -83,7 +85,7 @@ namespace SI
 
 		// Checks whether the given type is/has dimensionless
 		template <class T>
-		inline constexpr bool is_dimensionless_v = std::is_same_v<dimensionless, dimension_of_t<T>>;
+		SI_INLINE_CONSTEXPR bool is_dimensionless_v = std::is_same_v<dimensionless, dimension_of_t<T>>;
 
 #define SI_DIMENSION_OP(op_) dimension<				\
 			Lhs::length op_ Rhs::length,		\
@@ -112,9 +114,6 @@ namespace SI
 
 		template <class T>
 		using scalar_value_type_t = typename scalar_value_type<T>::type;
-
-#define SI_INLINE inline 
-#define SI_INLINE_CONSTEXPR constexpr SI_INLINE
 
 		// Storage for plain arithmetic types (float, double, int, ...)
 		template <class Dimension, class T>
@@ -205,7 +204,7 @@ namespace SI
 
 		// Checks wheter the given type is a si type
 		template <class T>
-		inline constexpr bool is_si_v = is_si<T>::value;
+		SI_INLINE_CONSTEXPR bool is_si_v = is_si<T>::value;
 
 		// Fallback value for any plain type, simply returns the value as-is
 		template <class T, class = std::enable_if_t<!is_si_v<T>>>
@@ -236,7 +235,7 @@ namespace SI
 
 		// Checks wheter two types have compatible dimensions (zero is compatible with everything)
 		template <class Lhs, class Rhs>
-		inline constexpr bool has_common_dimension_v = 
+		SI_INLINE_CONSTEXPR bool has_common_dimension_v = 
 			std::is_same_v<dimension_of_t<Lhs>, dimension_of_t<Rhs>> || std::is_same_v<Lhs, zero_t> || std::is_same_v<Rhs, zero_t>;
 
 		template <class Lhs, class Rhs>
@@ -432,7 +431,7 @@ namespace SI
 		template <class Dimension, class T> struct element_count<quantity<Dimension, T>> : element_count<T> {};
 
 		template <class T>
-		inline constexpr long element_count_v = element_count<T>::value;
+		SI_INLINE_CONSTEXPR long element_count_v = element_count<T>::value;
 
 		template <class Value, class Min, class Max>
 		SI_INLINE_CONSTEXPR auto clamp(const Value& x, const Min& min, const Max& max)
@@ -626,7 +625,7 @@ namespace SI
 		}
 	}
 
-	inline constexpr detail::zero_t zero;
+	SI_INLINE_CONSTEXPR detail::zero_t zero;
 
 	template <class Dimension, long Numerator = 1, long Denumerator = 1>
 	using unit = detail::unit<detail::dimension_of_t<Dimension>, detail::ratio<Numerator, Denumerator>>;
@@ -690,150 +689,150 @@ namespace SI
 
 	// The SI Prefixes
 	// ---------------
-	//inline constexpr auto exa   = unit<detail::dimensionless, 1000000000000000000>();
-	//inline constexpr auto peta  = unit<detail::dimensionless, 1000000000000000>();
-	//inline constexpr auto tera  = unit<detail::dimensionless, 1000000000000>();
-	inline constexpr auto giga  = unit<detail::dimensionless, 1000000000>();
-	inline constexpr auto mega  = unit<detail::dimensionless, 1000000>();
-	inline constexpr auto kilo  = unit<detail::dimensionless, 1000>();
-	inline constexpr auto hecto = unit<detail::dimensionless, 100>();
+	//SI_INLINE_CONSTEXPR auto exa   = unit<detail::dimensionless, 1000000000000000000>();
+	//SI_INLINE_CONSTEXPR auto peta  = unit<detail::dimensionless, 1000000000000000>();
+	//SI_INLINE_CONSTEXPR auto tera  = unit<detail::dimensionless, 1000000000000>();
+	SI_INLINE_CONSTEXPR auto giga  = unit<detail::dimensionless, 1000000000>();
+	SI_INLINE_CONSTEXPR auto mega  = unit<detail::dimensionless, 1000000>();
+	SI_INLINE_CONSTEXPR auto kilo  = unit<detail::dimensionless, 1000>();
+	SI_INLINE_CONSTEXPR auto hecto = unit<detail::dimensionless, 100>();
 
-	inline constexpr auto centi = unit<detail::dimensionless, 1, 100>();
-	inline constexpr auto milli = unit<detail::dimensionless, 1, 1000>();
-	inline constexpr auto micro = unit<detail::dimensionless, 1, 1000000>();
-	inline constexpr auto nano  = unit<detail::dimensionless, 1, 1000000000>();
-	//inline constexpr auto pico  = unit<detail::dimensionless, 1, 1000000000000>();
-	//inline constexpr auto femto = unit<detail::dimensionless, 1, 1000000000000000>();
+	SI_INLINE_CONSTEXPR auto centi = unit<detail::dimensionless, 1, 100>();
+	SI_INLINE_CONSTEXPR auto milli = unit<detail::dimensionless, 1, 1000>();
+	SI_INLINE_CONSTEXPR auto micro = unit<detail::dimensionless, 1, 1000000>();
+	SI_INLINE_CONSTEXPR auto nano  = unit<detail::dimensionless, 1, 1000000000>();
+	//SI_INLINE_CONSTEXPR auto pico  = unit<detail::dimensionless, 1, 1000000000000>();
+	//SI_INLINE_CONSTEXPR auto femto = unit<detail::dimensionless, 1, 1000000000000000>();
 
 	// The 7 SI Base Units
 	// -------------------
 	// length in...
-	inline constexpr auto meter       = unit<length>();
-	inline constexpr auto kilometer   = kilo * meter; 
-	inline constexpr auto centimeter  = centi * meter;
-	inline constexpr auto millimeter  = milli * meter;
+	SI_INLINE_CONSTEXPR auto meter       = unit<length>();
+	SI_INLINE_CONSTEXPR auto kilometer   = kilo * meter; 
+	SI_INLINE_CONSTEXPR auto centimeter  = centi * meter;
+	SI_INLINE_CONSTEXPR auto millimeter  = milli * meter;
 	// time in...
-	inline constexpr auto second      = unit<time>();
-	inline constexpr auto minute      = unit<time, 60>();
-	inline constexpr auto hour        = unit<time, 3600>();
-	inline constexpr auto day         = unit<time, 24*3600>();
-	inline constexpr auto millisecond = milli * second;
-	inline constexpr auto microsecond = micro * second;
+	SI_INLINE_CONSTEXPR auto second      = unit<time>();
+	SI_INLINE_CONSTEXPR auto minute      = unit<time, 60>();
+	SI_INLINE_CONSTEXPR auto hour        = unit<time, 3600>();
+	SI_INLINE_CONSTEXPR auto day         = unit<time, 24*3600>();
+	SI_INLINE_CONSTEXPR auto millisecond = milli * second;
+	SI_INLINE_CONSTEXPR auto microsecond = micro * second;
 	// mass in...
-	inline constexpr auto kilogram    = unit<mass>();
-	inline constexpr auto ton         = kilo * kilogram;
-	inline constexpr auto gram        = milli * kilogram;
-	inline constexpr auto milligram   = micro * kilogram;
+	SI_INLINE_CONSTEXPR auto kilogram    = unit<mass>();
+	SI_INLINE_CONSTEXPR auto ton         = kilo * kilogram;
+	SI_INLINE_CONSTEXPR auto gram        = milli * kilogram;
+	SI_INLINE_CONSTEXPR auto milligram   = micro * kilogram;
 	// thermodynamic temperature in...
-	inline constexpr auto kelvin      = unit<temperature>();
+	SI_INLINE_CONSTEXPR auto kelvin      = unit<temperature>();
 	// electric current in...
-	inline constexpr auto ampere      = unit<electric_current>();
+	SI_INLINE_CONSTEXPR auto ampere      = unit<electric_current>();
 	// amount of substance in...
-	inline constexpr auto mol         = unit<amount_of_substance>(); 
+	SI_INLINE_CONSTEXPR auto mol         = unit<amount_of_substance>(); 
 	// luminous intensity in...
-	inline constexpr auto candela     = unit<luminous_intensity>();
+	SI_INLINE_CONSTEXPR auto candela     = unit<luminous_intensity>();
 
 	// The 22 SI Derived Units
 	// -----------------------
-	inline constexpr auto hertz       = unit<frequency>();
-	inline constexpr auto kilohertz   = kilo * hertz;
+	SI_INLINE_CONSTEXPR auto hertz       = unit<frequency>();
+	SI_INLINE_CONSTEXPR auto kilohertz   = kilo * hertz;
 
-	inline constexpr auto meter2      = unit<area>();
-	inline constexpr auto kilometer2  = kilo * kilo * meter2;
-	inline constexpr auto centimeter2 = centi * centi * meter2;
-	inline constexpr auto millimeter2 = milli * milli * meter2;
+	SI_INLINE_CONSTEXPR auto meter2      = unit<area>();
+	SI_INLINE_CONSTEXPR auto kilometer2  = kilo * kilo * meter2;
+	SI_INLINE_CONSTEXPR auto centimeter2 = centi * centi * meter2;
+	SI_INLINE_CONSTEXPR auto millimeter2 = milli * milli * meter2;
 
-	inline constexpr auto meter2_per_second = meter2 / second;
-	inline constexpr auto kilograms_per_meter2 = kilogram / meter2;
-	inline constexpr auto kilograms_per_mol = kilogram / mol;
+	SI_INLINE_CONSTEXPR auto meter2_per_second = meter2 / second;
+	SI_INLINE_CONSTEXPR auto kilograms_per_meter2 = kilogram / meter2;
+	SI_INLINE_CONSTEXPR auto kilograms_per_mol = kilogram / mol;
 
-	inline constexpr auto meter3      = unit<volume>();
-	inline constexpr auto kilometer3  = kilo * kilo * kilo * meter3;
-	inline constexpr auto centimeter3 = centi * centi * centi * meter3;
-	inline constexpr auto millimeter3 = milli * milli * milli * meter3;
+	SI_INLINE_CONSTEXPR auto meter3      = unit<volume>();
+	SI_INLINE_CONSTEXPR auto kilometer3  = kilo * kilo * kilo * meter3;
+	SI_INLINE_CONSTEXPR auto centimeter3 = centi * centi * centi * meter3;
+	SI_INLINE_CONSTEXPR auto millimeter3 = milli * milli * milli * meter3;
 
-	inline constexpr auto meter3_per_second = meter3 / second;
-	inline constexpr auto kilograms_per_meter3 = kilogram / meter3;
-	inline constexpr auto grams_per_centimeter3 = gram / centimeter3;
+	SI_INLINE_CONSTEXPR auto meter3_per_second = meter3 / second;
+	SI_INLINE_CONSTEXPR auto kilograms_per_meter3 = kilogram / meter3;
+	SI_INLINE_CONSTEXPR auto grams_per_centimeter3 = gram / centimeter3;
 
-	inline constexpr auto meters_per_second = meter / second;
-	inline constexpr auto kilometers_per_hour = kilometer / hour;
-	inline constexpr auto millimeters_per_hour = millimeter / hour;
+	SI_INLINE_CONSTEXPR auto meters_per_second = meter / second;
+	SI_INLINE_CONSTEXPR auto kilometers_per_hour = kilometer / hour;
+	SI_INLINE_CONSTEXPR auto millimeters_per_hour = millimeter / hour;
 
-	inline constexpr auto meters_per_second2 = meter / (second * second);
+	SI_INLINE_CONSTEXPR auto meters_per_second2 = meter / (second * second);
 
-	inline constexpr auto newton      = kilogram * meter / (second * second);
-	inline constexpr auto kilonewton  = kilo * newton;
-	inline constexpr auto meganewton  = mega * newton;
-	inline constexpr auto giganewton  = giga * newton;
+	SI_INLINE_CONSTEXPR auto newton      = kilogram * meter / (second * second);
+	SI_INLINE_CONSTEXPR auto kilonewton  = kilo * newton;
+	SI_INLINE_CONSTEXPR auto meganewton  = mega * newton;
+	SI_INLINE_CONSTEXPR auto giganewton  = giga * newton;
 
-	inline constexpr auto joule       = newton * meter;
-	inline constexpr auto kilojoule   = kilo * joule;
-	inline constexpr auto megajoule   = mega * joule;
-	inline constexpr auto gigajoule   = giga * joule;
+	SI_INLINE_CONSTEXPR auto joule       = newton * meter;
+	SI_INLINE_CONSTEXPR auto kilojoule   = kilo * joule;
+	SI_INLINE_CONSTEXPR auto megajoule   = mega * joule;
+	SI_INLINE_CONSTEXPR auto gigajoule   = giga * joule;
 
-	inline constexpr auto joulesecond = joule * second;
-	inline constexpr auto joules_per_kelvin = joule / kelvin;
-	inline constexpr auto joules_per_second_per_kilogram = joule / second / kilogram;
-	inline constexpr auto joules_per_kilogram_per_kelvin = joule / kilogram / kelvin;
-	inline constexpr auto gray = joule / kilogram;
-	inline constexpr auto sievert = joule / kilogram;
+	SI_INLINE_CONSTEXPR auto joulesecond = joule * second;
+	SI_INLINE_CONSTEXPR auto joules_per_kelvin = joule / kelvin;
+	SI_INLINE_CONSTEXPR auto joules_per_second_per_kilogram = joule / second / kilogram;
+	SI_INLINE_CONSTEXPR auto joules_per_kilogram_per_kelvin = joule / kilogram / kelvin;
+	SI_INLINE_CONSTEXPR auto gray = joule / kilogram;
+	SI_INLINE_CONSTEXPR auto sievert = joule / kilogram;
 
-	inline constexpr auto joules_per_second = joule / second;
-	inline constexpr auto watt        = joule / second; // (energy per time span)
-	inline constexpr auto watt_per_meter2 = watt / meter2;
+	SI_INLINE_CONSTEXPR auto joules_per_second = joule / second;
+	SI_INLINE_CONSTEXPR auto watt        = joule / second; // (energy per time span)
+	SI_INLINE_CONSTEXPR auto watt_per_meter2 = watt / meter2;
 
-	inline constexpr auto pascal_     = newton / (meter * meter);
-	inline constexpr auto hectopascal = hecto * pascal_;
-	inline constexpr auto millibar    = hecto * pascal_;
-	inline constexpr auto bar         = hecto * kilo * pascal_;
+	SI_INLINE_CONSTEXPR auto pascal_     = newton / (meter * meter);
+	SI_INLINE_CONSTEXPR auto hectopascal = hecto * pascal_;
+	SI_INLINE_CONSTEXPR auto millibar    = hecto * pascal_;
+	SI_INLINE_CONSTEXPR auto bar         = hecto * kilo * pascal_;
 
-	inline constexpr auto newtonmeter = newton * meter;
-	inline constexpr auto newtonsecond= newton * second;
+	SI_INLINE_CONSTEXPR auto newtonmeter = newton * meter;
+	SI_INLINE_CONSTEXPR auto newtonsecond= newton * second;
 
-	inline constexpr auto ampere_per_meter = ampere / meter;
-	inline constexpr auto ampere_per_meter2 = ampere / (meter * meter);
-	inline constexpr auto coulomb     = ampere * second;
-	inline constexpr auto coulombs_per_mol = coulomb / mol;
-	inline constexpr auto ampere_hours= ampere * hour;
-	inline constexpr auto volt        = joule / coulomb; 
-	inline constexpr auto farad       = coulomb / volt;
-	inline constexpr auto farads_per_meter = farad / meter;
-	inline constexpr auto ohm         = volt / ampere;
-	inline constexpr auto ohm_meter   = ohm * meter;
-	inline constexpr auto siemens     = ampere / volt;
-	inline constexpr auto siemens_per_meter = siemens / meter;
-	inline constexpr auto henry       = volt * second / ampere;
-	inline constexpr auto weber       = volt * second;
-	inline constexpr auto tesla       = kilogram / (ampere * second * second);
-	inline constexpr auto joules_per_tesla = joule / tesla;
+	SI_INLINE_CONSTEXPR auto ampere_per_meter = ampere / meter;
+	SI_INLINE_CONSTEXPR auto ampere_per_meter2 = ampere / (meter * meter);
+	SI_INLINE_CONSTEXPR auto coulomb     = ampere * second;
+	SI_INLINE_CONSTEXPR auto coulombs_per_mol = coulomb / mol;
+	SI_INLINE_CONSTEXPR auto ampere_hours= ampere * hour;
+	SI_INLINE_CONSTEXPR auto volt        = joule / coulomb; 
+	SI_INLINE_CONSTEXPR auto farad       = coulomb / volt;
+	SI_INLINE_CONSTEXPR auto farads_per_meter = farad / meter;
+	SI_INLINE_CONSTEXPR auto ohm         = volt / ampere;
+	SI_INLINE_CONSTEXPR auto ohm_meter   = ohm * meter;
+	SI_INLINE_CONSTEXPR auto siemens     = ampere / volt;
+	SI_INLINE_CONSTEXPR auto siemens_per_meter = siemens / meter;
+	SI_INLINE_CONSTEXPR auto henry       = volt * second / ampere;
+	SI_INLINE_CONSTEXPR auto weber       = volt * second;
+	SI_INLINE_CONSTEXPR auto tesla       = kilogram / (ampere * second * second);
+	SI_INLINE_CONSTEXPR auto joules_per_tesla = joule / tesla;
 
-	inline constexpr auto steradian   = unit<detail::dimensionless>();
+	SI_INLINE_CONSTEXPR auto steradian   = unit<detail::dimensionless>();
 
-	inline constexpr auto lumen       = candela * steradian; 
-	inline constexpr auto lumen_second = lumen * second;
-	inline constexpr auto lumens_per_watt = lumen / watt; 
+	SI_INLINE_CONSTEXPR auto lumen       = candela * steradian; 
+	SI_INLINE_CONSTEXPR auto lumen_second = lumen * second;
+	SI_INLINE_CONSTEXPR auto lumens_per_watt = lumen / watt; 
 
-	inline constexpr auto per_meter    = unit<reciprocal_length>(); 
-	inline constexpr auto per_mol      = unit<reciprocal_amount_of_substance>(); 
+	SI_INLINE_CONSTEXPR auto per_meter    = unit<reciprocal_length>(); 
+	SI_INLINE_CONSTEXPR auto per_mol      = unit<reciprocal_amount_of_substance>(); 
 
 	// IMPERIAL UNITS
-	inline constexpr auto pound        = unit<mass, 45359237, 100000000>();
-	inline constexpr auto feet         = unit<length, 3048, 10000>();
-	inline constexpr auto nautical_mile = unit<length, 1852, 100>();
-	inline constexpr auto inch         = unit<length, 254, 10000>();
-	inline constexpr auto statute_mile = unit<length, 1609344, 1000>();
-	inline constexpr auto fahrenheit   = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
-	inline constexpr auto miles_per_hour = statute_mile / hour;
-	inline constexpr auto knots        = nautical_mile / hour;
-	inline constexpr auto feet_per_minute = feet / minute;
-	inline constexpr auto inches_per_hour = inch / hour;
+	SI_INLINE_CONSTEXPR auto pound        = unit<mass, 45359237, 100000000>();
+	SI_INLINE_CONSTEXPR auto feet         = unit<length, 3048, 10000>();
+	SI_INLINE_CONSTEXPR auto nautical_mile = unit<length, 1852, 100>();
+	SI_INLINE_CONSTEXPR auto inch         = unit<length, 254, 10000>();
+	SI_INLINE_CONSTEXPR auto statute_mile = unit<length, 1609344, 1000>();
+	SI_INLINE_CONSTEXPR auto fahrenheit   = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
+	SI_INLINE_CONSTEXPR auto miles_per_hour = statute_mile / hour;
+	SI_INLINE_CONSTEXPR auto knots        = nautical_mile / hour;
+	SI_INLINE_CONSTEXPR auto feet_per_minute = feet / minute;
+	SI_INLINE_CONSTEXPR auto inches_per_hour = inch / hour;
 
 	// VARIOUS UNITS
-	inline constexpr auto celsius     = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
+	SI_INLINE_CONSTEXPR auto celsius     = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
 
-	inline constexpr auto byte        = unit<detail::dimensionless>();
-	inline constexpr auto bytes_per_second = byte / second;
+	SI_INLINE_CONSTEXPR auto byte        = unit<detail::dimensionless>();
+	SI_INLINE_CONSTEXPR auto bytes_per_second = byte / second;
 
 	// ANGLE (DIMENSIONLESS)
 	typedef long double angle;
