@@ -2,28 +2,27 @@
 #pragma once
 
 #include "units.h"
+#define CONST(_name, _value, _unit) const auto _name = _unit(_value)
+#define UNICODE(_name, _value, _unit) // contains non-ASCII characters (not supported yet)
+#define TODO(_name, _value, _unit)    // to be done
 
 namespace SI
 {
 	namespace constant
 	{
-#define CONST(_name, _value, _unit) const auto _name = _unit(_value)
-#define UNICODE(_name, _value, _unit) // contains non-ASCII characters (not supported yet)
-#define TODO(_name, _value, _unit)    // to be done
-
-// The 7 defining constants of SI
-CONST( Planck,             6.626'070'15e-34, joulesecond); // Planck constant
-CONST( h,                  6.626'070'15e-34, joulesecond); // (the symbol)
-CONST( speed_of_light,          299'792'458, meters_per_second); // speed of light in vacuum
+// The 7 defining constants of SI (as of 20 May 2019)
+CONST( caesium_frequency,     9'192'631'770, hertz); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
+CONST( delta_ν_Cs,            9'192'631'770, hertz); // (the symbol)
+CONST( speed_of_light,          299'792'458, meters_per_second); // the speed of light in vacuum
 CONST( c,                       299'792'458, meters_per_second); // (the symbol)
-CONST( caesium_frequency,     9'192'631'770, hertz); // hyperfine transition frequency of cesium-133
-CONST( d_ν_Cs,                9'192'631'770, hertz); // (the symbol)
-CONST( elementary_charge, 1.602'176'634e-19, coulomb); // elementary charge
+CONST( Planck,             6.626'070'15e-34, joulesecond); // the Planck constant
+CONST( h,                  6.626'070'15e-34, joulesecond); // (the symbol)
+CONST( elementary_charge, 1.602'176'634e-19, coulomb); // the elementary charge
 CONST( e,                 1.602'176'634e-19, coulomb); // (the symbol)
-CONST( Boltzmann,             1.380'649e-23, joules_per_kelvin); // Boltzmann constant
+CONST( Boltzmann,             1.380'649e-23, joules_per_kelvin); // the Boltzmann constant
 CONST( k,                     1.380'649e-23, joules_per_kelvin); // (the symbol)
-CONST( N_A,                   6.02214076e23, per_mol); // Avogadro constant
-CONST( K_cd,                            683, lumens_per_watt); // luminous efficacy of 540 THz monochromatic radiation
+CONST( N_A,                   6.02214076e23, per_mol); // the Avogadro constant
+CONST( K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
 
 // Universal constants
 CONST( min_temperature,          0, kelvin); // the lowest possible temperature (Absolute zero)
@@ -127,9 +126,6 @@ CONST( quarter_mile,              402.34, meter);
 
 	}
 }
-#undef CONST
-#undef UNICODE
-#undef TODO
 
 // Sources
 // -------
@@ -137,3 +133,7 @@ CONST( quarter_mile,              402.34, meter);
 // * https://en.wikipedia.org/wiki/List_of_physical_constants
 // * https://en.wikipedia.org/wiki/List_of_mathematical_constants
 // * https://en.wikipedia.org/wiki/Astronomical_constant
+
+#undef CONST
+#undef UNICODE
+#undef TODO
