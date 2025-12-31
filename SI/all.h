@@ -1,4 +1,4 @@
-// SI/all.h - includes all the other .h header files (for convenience)
+// SI/all.h - includes all header files (for convenience)
 #pragma once
 
 #include "units.h"
