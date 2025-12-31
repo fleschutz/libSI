@@ -2,24 +2,13 @@
 #pragma once
 
 #include <iostream>
-#include "literals.h"
-#include "values/Earth.h"
+#include "to_string.h"
 
 namespace SI
 {
-	std::string to_string(quantity value, const std::string& unit)
-	{
-		return std::to_string(value) + unit;
-	}
-
 	void print(const std::string& text)
 	{
 		std::cout << std::endl << text.c_str();
-	}
-
-	void printNoNewline(const std::string& text)
-	{
-		std::cout << text;
 	}
 
 	void print(quantity number)
@@ -32,28 +21,17 @@ namespace SI
 		std::cout << value << unit.c_str() << " ";
 	}
 
+	// Internal print function.
+	void _print(const std::string& text)
+	{
+		std::cout << text;
+	}
+
 	// The 7 SI Base Units
 	// -------------------
 	void print(length d)
 	{
-		if (abs(d) >= 1_Mly)
-			print(d / 1_Mly, "Mly (megalight-years)");
-		else if (abs(d) >= 1_pc)
-			print(d / 1_pc, "pc (parsec)");
-		else if (abs(d) >= 1_ly)
-			print(d / 1_ly, "ly (light-years)");
-		else if (abs(d) >= 1_au)
-			print(d / 1_au, "au (astronomical unit)");
-		else if (abs(d) >= 1_km)
-			print(d / 1_km, "km");
-		else if (abs(d) >= 1_m)
-			print(d / 1_m, "m ");
-		else if (abs(d) >= 1_cm)
-			print(d / 1_cm, "cm");
-		else if (abs(d) >= 1_mm)
-			print(d / 1_mm, "mm");
-		else
-			print(d / 1_μm, "μm");
+		_print(to_string(d));
 	}
 
 	void print(time t)
@@ -109,7 +87,7 @@ namespace SI
 		if (T >= 250_K && T <= 470_K) // temperature range for humans
 		{
 			print(celsius(T), "°C");
-			printNoNewline("/ ");
+			_print("/ ");
 			print(fahrenheit(T), "°F");
 		}
 		else if (abs(T) >= 1_GK)
@@ -174,28 +152,9 @@ namespace SI
 			print(v / 1_μm³, "μm³");
 	}
 
-	std::string to_string(velocity v)
-	{
-		if (abs(v) >= 1_km_per_h)
-			return to_string(v / 1_km_per_h, "km/h");
-		else if (abs(v) >= 1_m_per_s)
-			return to_string(v / 1_m_per_s, "m/s");
-		else
-			return(v / 1_mm_per_h, "mm/h");
-	}
-
 	void print(velocity v)
 	{
-#if 0
-		if (abs(v) >= 1_km_per_h)
-			print(v / 1_km_per_h, "km/h");
-		else if (abs(v) >= 1_m_per_s)
-			print(v / 1_m_per_s, "m/s");
-		else
-			print(v / 1_mm_per_h, "mm/h");
-#else
-		print(to_string(v));
-#endif
+		_print(to_string(v));
 	}
 
 	void print(acceleration a)
@@ -254,7 +213,7 @@ namespace SI
 		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol))
 		auto TNT_mass = kilogram(E / one_kg_TNT);
 		print(TNT_mass);
-		printNoNewline("TNT ");
+		_print("TNT ");
 	}
 
 	void print_as_Hiroshima_equivalent(energy E)
@@ -262,7 +221,7 @@ namespace SI
 		const auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
 		quantity factor = E / Hiroshima_bomb;
 		print(factor);
-		printNoNewline("Hiroshima bombs ");
+		_print("Hiroshima bombs ");
 	}
 
 	void print(power P)
