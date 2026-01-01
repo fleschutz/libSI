@@ -119,6 +119,11 @@ namespace SI
 		print(to_string(p));
 	}
 
+	void print(electric_potential U)
+	{
+		print(to_string(U));
+	}
+
 	void print(electric_charge Q)
 	{
 		print(to_string(Q));

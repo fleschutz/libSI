@@ -285,7 +285,7 @@ LITERAL( PS,                          735.49875, watt);     // 1_PS   ('Pferdest
 LITERAL( at,                           98'066.5, pascal_);  // 1_at   (atmosphere)
 LITERAL( bar,                               1e5, pascal_);  // 1_bar 
 LITERAL( mmHg,                         133.3224, pascal_);  // 1_mmHg (millimeter mercury)
-LITERAL( Å,                               1e-10, meter);    // 1_Å    (ångström)
+LITERAL( Ang,                             1e-10, meter);    // 1_Ang  (angstrom)
 }
 
 // Sources

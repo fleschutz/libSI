@@ -225,5 +225,10 @@ namespace SI
 		{
 			return weight / square(height);
 		}
+
+		auto consumed_electrical_power(electric_current I, electric_potential U)
+		{
+			return I * U;
+		}
 	}
 }

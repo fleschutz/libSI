@@ -680,6 +680,7 @@ namespace SI
 	SI_DIM(torque,              2, 1, -2, 0, 0, 0, 0);
 	SI_DIM(power,               2, 1, -3, 0, 0, 0, 0);
 	SI_DIM(density,            -3, 1,  0, 0, 0, 0, 0); // (mass per length³)
+	SI_DIM(electric_potential,  2, 1, -3, 0,-1, 0, 0); // (in volt)
 	SI_DIM(electric_charge,     0, 0,  1, 0, 1, 0, 0); // (electric current and time)
 	SI_DIM(mass_per_area,      -2, 1,  0, 0, 0, 0, 0); // (kg per m²)
 	SI_DIM(per_amount_of_substance,0, 0,  0, 0,-1, 0, 0);// (per mol, reciprocal)
@@ -780,7 +781,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto gray = joule / kilogram;
 	SI_INLINE_CONSTEXPR auto sievert = joule / kilogram;
 
-	SI_INLINE_CONSTEXPR auto watt        = joule / second; // (energy per time span)
+	SI_INLINE_CONSTEXPR auto watt        = joule / second; // (energy per time)
 	SI_INLINE_CONSTEXPR auto watt_per_meter2 = watt / meter2;
 
 	SI_INLINE_CONSTEXPR auto pascal_     = unit<pressure>();
@@ -796,7 +797,8 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto coulomb     = unit<electric_charge>();
 	SI_INLINE_CONSTEXPR auto coulombs_per_mol = coulomb / mol;
 	SI_INLINE_CONSTEXPR auto ampere_hours= ampere * hour;
-	SI_INLINE_CONSTEXPR auto volt        = joule / coulomb; 
+
+	SI_INLINE_CONSTEXPR auto volt        = unit<electric_potential>();
 	SI_INLINE_CONSTEXPR auto farad       = coulomb / volt;
 	SI_INLINE_CONSTEXPR auto farads_per_meter = farad / meter;
 	SI_INLINE_CONSTEXPR auto ohm         = volt / ampere;

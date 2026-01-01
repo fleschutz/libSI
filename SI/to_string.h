@@ -260,6 +260,25 @@ namespace SI
 		return _join(p / 1_Pa, "Pa");
 	}
 
+	std::string to_string(electric_potential U)
+	{
+		if (U <= -1_GV || U >= 1_GV)
+			return _join(U / 1_GV, "GV");
+		if (U <= -1_MV || U >= 1_MV)
+			return _join(U / 1_MV, "MV");
+		if (U <= -1_kV || U >= 1_kV)
+			return _join(U / 1_kV, "kV");
+		if (U <= -1_V || U >= 1_V)
+			return _join(U / 1_V, "V");
+		if (U <= -1_mV || U >= 1_mV)
+			return _join(U / 1_mV, "mV");
+		if (U <= -1_μV || U >= 1_μV)
+			return _join(U / 1_μV, "μV");
+		if (U <= -1_nV || U >= 1_nV)
+			return _join(U / 1_nV, "nV");
+		return _join(U / 1_pV, "pV");
+	}
+
 	std::string to_string(electric_charge Q)
 	{
 		if (Q <= -1_GAh || Q >= 1_GAh)
