@@ -664,7 +664,9 @@ namespace SI
 
 	// The 22 Derived SI Dimensions
 	// ----------------------------
+	SI_DIM(per_length,         -1, 0,  0, 0, 0, 0, 0); // (per m, reciprocal)
 	SI_DIM(area,                2, 0,  0, 0, 0, 0, 0); // (in m²)
+	SI_DIM(per_area,           -2, 0,  0, 0, 0, 0, 0); // (per m², reciprocal)
 	SI_DIM(volume,              3, 0,  0, 0, 0, 0, 0); // (in m³)
 	SI_DIM(frequency,           0, 0, -1, 0, 0, 0, 0); // (per time)
 	SI_DIM(velocity,            1, 0, -1, 0, 0, 0, 0); // (length per time)
@@ -679,9 +681,8 @@ namespace SI
 	SI_DIM(power,               2, 1, -3, 0, 0, 0, 0);
 	SI_DIM(density,            -3, 1,  0, 0, 0, 0, 0); // (mass per length³)
 	SI_DIM(electric_charge,     0, 0,  1, 0, 1, 0, 0); // (electric current and time)
-	SI_DIM(BMI,                -2, 1,  0, 0, 0, 0, 0); // (mass per length²)
-	SI_DIM(reciprocal_length,  -1, 0,  0, 0, 0, 0, 0); // (per length)
-	SI_DIM(reciprocal_amount_of_substance,0, 0,  0, 0,-1, 0, 0); // (per amount of substance)
+	SI_DIM(mass_per_area,      -2, 1,  0, 0, 0, 0, 0); // (kg per m²)
+	SI_DIM(per_amount_of_substance,0, 0,  0, 0,-1, 0, 0);// (per mol, reciprocal)
 
 	using position2d = length2;
 	using position = length3;
@@ -710,6 +711,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto kilometer   = kilo * meter; 
 	SI_INLINE_CONSTEXPR auto centimeter  = centi * meter;
 	SI_INLINE_CONSTEXPR auto millimeter  = milli * meter;
+	SI_INLINE_CONSTEXPR auto per_meter    = unit<per_length>(); 
 	// time in...
 	SI_INLINE_CONSTEXPR auto second      = unit<time>();
 	SI_INLINE_CONSTEXPR auto minute      = unit<time, 60>();
@@ -740,6 +742,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto kilometer2  = kilo * kilo * meter2;
 	SI_INLINE_CONSTEXPR auto centimeter2 = centi * centi * meter2;
 	SI_INLINE_CONSTEXPR auto millimeter2 = milli * milli * meter2;
+	SI_INLINE_CONSTEXPR auto per_meter2  = unit<per_area>();
 
 	SI_INLINE_CONSTEXPR auto meter2_per_second = meter2 / second;
 	SI_INLINE_CONSTEXPR auto kilograms_per_meter2 = kilogram / meter2;
@@ -815,9 +818,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto mols_per_meter3 = mol / meter3;
 	SI_INLINE_CONSTEXPR auto mols_per_kilogram = mol / kilogram;
 	SI_INLINE_CONSTEXPR auto mols_per_second = mol / second;
-	SI_INLINE_CONSTEXPR auto per_mol      = unit<reciprocal_amount_of_substance>(); 
-
-	SI_INLINE_CONSTEXPR auto per_meter    = unit<reciprocal_length>(); 
+	SI_INLINE_CONSTEXPR auto per_mol      = unit<per_amount_of_substance>(); 
 
 	// IMPERIAL UNITS
 	SI_INLINE_CONSTEXPR auto pound        = unit<mass, 45359237, 100000000>();

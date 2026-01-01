@@ -78,6 +78,13 @@ LITERAL( m²,       1, meter2);              // 1_m²  (square meter)
 LITERAL( cm²,   1e-4, meter2);              // 1_cm² (square centimeter)
 LITERAL( mm²,   1e-6, meter2);              // 1_mm² (square millimeter)
 LITERAL( μm²,   1e-9, meter2);              // 1_μm² (square micrometer)
+// Per area in...
+LITERAL( per_km²,1e-6, per_meter2);         // 1_per_km² (per square kilometer)
+LITERAL( per_hm²,1e-4, per_meter2);         // 1_per_hm² (per hectare)
+LITERAL( per_m²,    1, per_meter2);         // 1_per_m²  (per square meter)
+LITERAL( per_cm², 1e4, per_meter2);         // 1_per_cm² (per square centimeter)
+LITERAL( per_mm², 1e6, per_meter2);         // 1_per_mm² (per square millimeter)
+LITERAL( per_μm², 1e9, per_meter2);         // 1_per μm² (per square micrometer)
 // Volume in...
 LITERAL( km³,    1e9, meter3);              // 1_km³ (cubic kilometer)
 LITERAL( m³,       1, meter3);              // 1_m³  (cubic meter)

@@ -71,8 +71,8 @@ int main()
 	print(sum);
 } {
 	print("\nWhat's the population density on Earth (people per km² of land area)? It's... ");
-	auto population_density = Earth::human_population / kilometer2(Earth::land_area);
-	print(population_density);
+	auto density = Earth::human_population / Earth::land_area;
+	print(density);
 } {
 	print("\nHow much land area would be available for each person on Earth? It's... ");
 	auto per_person = Earth::land_area / Earth::human_population;
@@ -154,7 +154,7 @@ int main()
 	auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
 	print(A);
 } {
-	print("\nWhat's the windchill temperature of 5°C air temperature with 55km/h wind? It's... ");
+	print("\nWhat's the windchill temperature of 5°C air temperature at 55km/h wind? It's... ");
 	auto air_temperature = 5_degC;
 	auto wind_speed = 55_km_per_h;
 	auto result = formula::windchill_temperature(air_temperature, wind_speed);

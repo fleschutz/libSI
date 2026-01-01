@@ -16,6 +16,11 @@ namespace SI
 		std::cout << number << " ";
 	}
 
+	void print(quantity number, const std::string& unit)
+	{
+		std::cout << number << unit << " ";
+	}
+
 	// The 7 SI Base Units
 	// -------------------
 	void print(length d)
@@ -48,6 +53,16 @@ namespace SI
 	void print(area a)
 	{
 		print(to_string(a));
+	}
+
+	void print(per_area a)
+	{
+		print(to_string(a));
+	}
+
+	void print(mass_per_area m)
+	{
+		print(to_string(m));
 	}
 
 	void print(volume v)
@@ -115,11 +130,6 @@ namespace SI
 	void print(angle a)
 	{
 		print(to_string(a));
-	}
-
-	void print(BMI v)
-	{
-		print(to_string(v));
 	}
 
 	void print(area a, volume v, mass m)

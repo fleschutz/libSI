@@ -7,10 +7,12 @@
 
 namespace SI
 {
-	// Internal function to join both quantity and unit.
-	std::string _join(long double quantity, const std::string& unit)
+	// Internal function to join and convert both quantity and unit into a string.
+	std::string _join(double quantity, const std::string& unit)
 	{
-		return std::to_string(quantity) + unit;
+		char buf[100];
+		std::snprintf(buf, sizeof(buf), "%.1F%s", quantity, unit.c_str());
+		return buf;
 	}
 
 	// The 7 SI Base Units
@@ -135,6 +137,22 @@ namespace SI
 		return _join(a / 1_μm², "μm²");
 	}
 
+	std::string to_string(per_area a)
+	{
+		if (a <= -1_per_km² || a >= 1_per_km²)
+			return _join(a / 1_per_km², "/km²");
+		if (a <= -1_per_hm² || a >= 1_per_hm²)
+			return _join(a / 1_per_hm², "/hm²");
+		if (a <= -1_per_m² || a >= 1_per_m²)
+			return _join(a / 1_per_m², "/m²");
+		if (a <= -1_per_cm² || a >= 1_per_cm²)
+			return _join(a / 1_per_cm², "/cm²");
+		if (a <= -1_per_mm² || a >= 1_per_mm²)
+			return _join(a / 1_per_mm², "/mm²");
+
+		return _join(a / 1_per_μm², "/μm²");
+	}
+
 	std::string to_string(volume v)
 	{
 		if (v <= -1_km³ || v >= 1_km³)
@@ -252,9 +270,9 @@ namespace SI
 		return _join(Q / 1_mAh, "mAh");
 	}
 
-	std::string to_string(BMI v)
+	std::string to_string(mass_per_area v)
 	{
-		return _join(v / 1_kg_per_m², " BMI");
+		return _join(v / 1_kg_per_m², "kg/m²");
 	}
 
 	std::string to_string(angle a)
