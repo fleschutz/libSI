@@ -8,7 +8,7 @@
 
 namespace SI
 {
-// THE 7 SI BASE UNITS
+// The 7 SI Base Units
 // -------------------
 // SYMBOL     FACTOR  BASE UNIT                EXAMPLE      
 // Length in...                                     (sorted from big to small)
@@ -21,6 +21,8 @@ LITERAL( dm,    1e-1, meter);               // 1_dm (decimeter)
 LITERAL( cm,    1e-2, meter);               // 1_cm (centimeter)
 LITERAL( mm,    1e-3, meter);               // 1_mm (millimeter)
 LITERAL( μm,    1e-6, meter);               // 1_μm (micrometer)
+LITERAL( nm,    1e-9, meter);               // 1_nm (nanometer)
+LITERAL( pm,   1e-12, meter);               // 1_pm (picometer)
 // Time in...
 LITERAL( h,     3600, second);              // 1_h   (hour)
 LITERAL( min,     60, second);              // 1_min (minute)
@@ -68,7 +70,7 @@ LITERAL( fmol, 1e-15, mol);                 // 1_fmol (femtomole)
 LITERAL( kcd,    1e3, candela);             // 1_kcd (kilocandela)
 LITERAL( cd,       1, candela);             // 1_cd  (candela)
 
-// THE 22 DERIVED SI UNITS
+// The 22 Derived SI Units
 // -----------------------
 // SYMBOL     FACTOR  BASE UNIT                EXAMPLE
 // Area in...
@@ -221,17 +223,21 @@ LITERAL( lm_per_W, 1, lumens_per_watt);     // 1_lm_per_W (lumen per watt)
 LITERAL( m²_per_s, 1, meter2_per_second);   // 1_m²/s (square meter per second)
 // Volumetric flow (V) in...
 LITERAL( m³_per_s, 1, meter3_per_second);   // 1_m³/s (cubic meter per second)
-					   
+// Other...
 LITERAL( Nm,       1, newtonmeter);         // 1_Nm  (newtonmeter)
 LITERAL( W_per_m², 1, watt_per_meter2);     // 1_W/m² (watt per square metre)
+// SI supplementary units in...
+LITERAL( rad,      1, radian);              // 1_rad  (radian)
+LITERAL( deg,0.01745329251994329576923690768489, radian); // 1_deg  (angle degree)
+LITERAL( sr,       1, steradian);           // 1_sr   (steradian)
 
 #define CARDINAL(_symbol, _factor, _baseUnit) \
   constexpr auto operator "" _ ## _symbol(unsigned long long x) { return _baseUnit(static_cast<long long>(x) * _factor); }
 
-// NON-SI UNITS
+// Non-SI Units
 // ------------
 //       SYMBOL           FACTOR                  BASE UNIT   EXAMPLE
-// astronomical distances in...
+// Astronomical distances in...
 LITERAL( Mly,        9'460'730'472'580'800 * 1e6, meter);  // 1_Mly (megalight-year)
 LITERAL( ly,               9'460'730'472'580'800, meter);  // 1_ly (light-year)
 LITERAL( au,                     149'597'870'700, meter);  // 1_au (astronomical unit)
@@ -248,7 +254,7 @@ LITERAL( mph,                             .44704, meters_per_second); // 1_mph (
 LITERAL( NM,                               1'852, meter);  // 1_NM (nautical mile)
 LITERAL( nmi,                              1'852, meter);  // 1_nmi (nautical mile)
 LITERAL( yd,                               .9144, meter);  // 1_yd (yard)
-// digital units in...
+// Digital units in...
 CARDINAL( byte,                               1, byte);    // 1_byte
 CARDINAL( kB,                               1e3, byte);    // 1_kB (kilobyte)
 CARDINAL( MB,                               1e6, byte);    // 1_MB (megabyte)
@@ -268,10 +274,7 @@ LITERAL( Kbps,                          1e3 / 8, bytes_per_second); // 1_Kbps (k
 LITERAL( Mbps,                          1e6 / 8, bytes_per_second); // 1_Mbps (megabit/sec)
 LITERAL( Gbps,                          1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
 LITERAL( Tbps,                         1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
-// various units in...
-LITERAL( rad,                                 1, radian);   // 1_rad  (radian)
-LITERAL( deg,0.01745329251994329576923690768489, radian);   // 1_deg  (angle degree)
-LITERAL( sr,                                  1, steradian);// 1_sr   (steradian)
+// Various units in...
 LITERAL( degC,                                1, celsius);  // 1_degC (°Celsius)
 LITERAL( degR,                          5.0/9.0, kelvin);   // 1_degR (°Rankine)
 LITERAL( Mach,                              330, meters_per_second); // 1_Mach
@@ -282,6 +285,7 @@ LITERAL( PS,                          735.49875, watt);     // 1_PS   ('Pferdest
 LITERAL( at,                           98'066.5, pascal_);  // 1_at   (atmosphere)
 LITERAL( bar,                               1e5, pascal_);  // 1_bar 
 LITERAL( mmHg,                         133.3224, pascal_);  // 1_mmHg (millimeter mercury)
+LITERAL( Å,                               1e-10, meter);    // 1_Å    (ångström)
 }
 
 // Sources

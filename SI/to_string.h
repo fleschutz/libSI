@@ -35,8 +35,12 @@ namespace SI
 			return _join(d / 1_cm, "cm");
 		if (d <= -1_mm || d >= 1_mm)
 			return _join(d / 1_mm, "mm");
+		if (d <= -1_μm || d >= 1_μm)
+			return _join(d / 1_μm, "μm");
+		if (d <= -1_nm || d >= 1_nm)
+			return _join(d / 1_nm, "nm");
 
-		return _join(d / 1_μm, "μm");
+		return _join(d / 1_pm, "pm");
 	}
 
 	std::string to_string(time t)
