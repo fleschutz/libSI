@@ -163,7 +163,7 @@ LITERAL( mAh,   1e-3, ampere_hours);        // 1_mAh (milliampere-hours)
 // Electric capacitance (C) in...
 LITERAL( F,        1, farad);               // 1_F   (farad)
 LITERAL( mF,    1e-3, farad);               // 1_mF  (millifarad)
-LITERAL( μF,    1e-6, farad);               // 1_μF  (microfarad)
+LITERAL( uF,    1e-6, farad);               // 1_μF  (microfarad)
 LITERAL( nF,    1e-9, farad);               // 1_nF  (nanofarad)
 LITERAL( pF,   1e-12, farad);               // 1_pF  (picofarad)
 // Electric inductance (L) in...

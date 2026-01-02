@@ -185,6 +185,14 @@ int main()
 	print(intensity);
 	print_equivalent(intensity);
 } {
+	print("\nWhat's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? It's... ");
+	auto CC = 0.47_uF;
+	auto V0 = 5_V;
+	auto RR = 4.7_kOhm;
+	auto time = 10_ms;
+	auto V1 = V0 * exp(-time / (RR * CC));
+	print(V1);
+} {
 	// Here's the basic principle:
 	dimensionless x = 42;        // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_sec;      // <- t is now 42 seconds
