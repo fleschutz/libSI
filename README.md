@@ -5,13 +5,11 @@ Type-safe SI Math in C++
 
 Apply math based on SI units correct, with high precision and as easy as possible. This math lib provides the following features:
 
-* Type-safe [units](SI/units.h): Can't add a mass to a length
-* Type-safe [constants](SI/constants.h), e.g. constant::sigma
-* Type-safe [formulas](SI/formulas.h), e.g. formula::wavelength()
-* Convenient [literals](SI/literals.h), e.g. 24_h or 3_GWh
+* **Type-safe** [units](SI/units.h) (can't add a mass to a length), [constants](SI/constants.h) (e.g. constant::sigma), and [formulas](SI/formulas.h) (e.g. formula::wavelength())
+* **Convenient** [literals](SI/literals.h) (e.g. 24_h or 3_GWh) and based on [KISS principle](https://en.wikipedia.org/wiki/KISS_principle).
 * Type-safe [values](SI/values/), e.g. [ISO standards](SI/values/ISO.h) or planet [Earth](SI/values/Earth.h)
 * Supports SI base units, derived units, Imperial units, and many more.
-* Platform-independent (requires C++11 or higher), tested on Linux with gcc 15.2 & clang 20.1.8 and on Windows with VS2017 & VS2026.
+* **Platform-independent** (requires C++11 or higher), tested on Linux with gcc 15.2 & clang 20.1.8 and on Windows with VS2017 & VS2026.
 * Header only, own namespace ("SI::"), with [unit tests](SI/tests.h), and no runtime overhead (compiles to nothing but simple doubles)
 
 Code Example
