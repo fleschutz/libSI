@@ -1,9 +1,9 @@
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
-Type-safe SI Math in C++
-========================
+Type-safe SI Library in C++
+===========================
 
-Apply math based on SI units correct, with high precision and as easy as possible. This math lib provides the following features:
+Apply math based on SI units correct, with high precision and as easy as possible. This SI library for C++ provides the following features:
 
 * **Type-safe** [units](SI/units.h) (can't add a mass to a length), [constants](SI/constants.h) (e.g. constant::sigma), and [formulas](SI/formulas.h) (e.g. formula::wavelength())
 * **Convenient** [literals](SI/literals.h) (e.g. 24_h or 3_GWh) and based on [KISS principle](https://en.wikipedia.org/wiki/KISS_principle).
