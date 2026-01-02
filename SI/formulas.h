@@ -67,17 +67,38 @@ namespace SI
 
 		length circumference_of_circle(length radius)
 		{
-			return 2. * constant::pi * radius;
+			return 2.0 * constant::pi * radius;
 		}
 
 		length radius_of_circumference(length circumference)
 		{
-			return circumference / (2. * constant::pi);
+			return circumference / (2.0 * constant::pi);
 		}
 
 		area area_of_circle(length radius)
 		{
 			return constant::pi * radius * radius;
+		}
+
+		// Calculates approximately(!) the perimeter of an ellipse, a=length of semi-major axis, b=length of semi-minor axis
+		length perimeter_of_ellipse(length a, length b)
+		{
+			return constant::pi * sqrt(2.0 * (square(a) + square(b)));
+		}
+
+		area area_of_ellipse(length a, length b)
+		{
+			return constant::pi * a * b;
+		}
+
+		quantity eccentricity_of_ellipse(length a, length b)
+		{
+			return std::sqrt(1.0 - (square(b) / square(a)));
+		}
+
+		length latus_rectum_of_ellipse(length a, length b)
+		{
+			return 2.0 * square(b) / a;
 		}
 
 		// Calculates the shortest distance between two points in 2D.

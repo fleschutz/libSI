@@ -298,6 +298,7 @@ LITERAL( at,                           98'066.5, pascal_);  // 1_at   (atmospher
 LITERAL( bar,                               1e5, pascal_);  // 1_bar 
 LITERAL( mmHg,                         133.3224, pascal_);  // 1_mmHg (millimeter mercury)
 LITERAL( Ang,                             1e-10, meter);    // 1_Ang  (angstrom)
+LITERAL( smoot,                          1.7018, meter);    // 1_smoot (one Oliver R. Smoot height, fun unit)
 }
 
 // Sources
