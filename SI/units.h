@@ -774,6 +774,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto sievert = joule / kilogram;
 
 	SI_INLINE_CONSTEXPR auto watt        = unit<power>();
+	SI_INLINE_CONSTEXPR auto wattmeter2  = watt * meter2;
 	SI_INLINE_CONSTEXPR auto watts_per_meter2 = watt / meter2;
 
 	SI_INLINE_CONSTEXPR auto pascal_     = unit<pressure>();
