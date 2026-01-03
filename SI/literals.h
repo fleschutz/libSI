@@ -125,8 +125,9 @@ SET( Bq,       1, hertz);               // 1_Bq (Bequerel)
 SET( t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
 SET( kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
 // mass per volume in...
-SET( kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m³
 SET( t_per_m³, 1e3, kilograms_per_meter3);// 1_t_per_m³
+SET( kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m³
+SET( g_per_cm³,1e3, kilograms_per_meter3);// 1_g_per_cm³
 // electric potential (U) in...
 SET( GV,     1e9, volt);                // 1_GV (gigavolt)
 SET( MV,     1e6, volt);                // 1_MV (megavolt)

@@ -193,6 +193,14 @@ int main()
 	auto V1 = V0 * exp(-time / (RR * CC));
 	print(V1);
 } {
+	print("\nWhat's the filament length of a 750g PLA roll with 2.85mm diameter? It's... ");
+	auto net_filament_weight = 750_g;
+	auto filament_diameter = 2.85_mm;
+	auto filament_density = 1.24_g_per_cm³; // for PLA
+	volume V = net_filament_weight / filament_density;
+	length L = V / (constant::pi * square(filament_diameter / 2));
+	print(L);
+} {
 	// Here's the basic principle:
 	dimensionless x = 42;        // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_sec;      // <- t is now 42 seconds
