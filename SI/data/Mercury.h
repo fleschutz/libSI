@@ -1,4 +1,4 @@
-// SI/data/Mercury.h - type-safe data of planet Mercury as of 2025
+// SI/data/Mercury.h - data of planet Mercury as of 2025
 #pragma once
 
 #include "../../SI/units.h"
@@ -16,10 +16,10 @@ SET( equatorial_rotation_velocity, 3.026, meters_per_second);
 SET( day,               4222.6 * 60 * 60, second); 
 SET( satellites,                       0, dimensionless);
 SET( human_population,                 0, dimensionless);
+
 } }
 #undef SET
 
 // Sources
 // -------
 // 1. https://en.wikipedia.org/wiki/Mercury_(planet)
-//

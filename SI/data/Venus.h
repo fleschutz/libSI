@@ -1,4 +1,4 @@
-// SI/data/Venus.h - type-safe data of planet Venus as of 2025
+// SI/data/Venus.h - data of planet Venus as of 2025
 #pragma once
 
 #include "../../SI/units.h"
@@ -23,4 +23,3 @@ SET( human_population,               0, dimensionless);
 // Sources
 // -------
 // 1. https://en.wikipedia.org/wiki/Venus
-//

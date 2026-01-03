@@ -1,4 +1,4 @@
-// SI/data/Earth.h - type-safe data of planet Earth as of 2025
+// SI/data/Earth.h - data of planet Earth as of 2025
 #pragma once
 
 #include "../../SI/units.h"
@@ -30,7 +30,7 @@ SET( week,         7 * second(Earth::day), second);
 SET( year,    365.25 * second(Earth::day), second); // (on average)
 SET( age,    4.5e12 * second(Earth::year), second);
 
-// Mountains:  (source: https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth, heights above MSL, sorted by height)
+// Mountains:  (heights above MSL, sorted by height)
 SET( Mount_Everest_height,           8849, meter);
 SET( K2_height,                      8611, meter);
 SET( Kangchenjunga_height,           8586, meter);
@@ -51,7 +51,7 @@ SET( Annapurna_2_height,             7937, meter);
 SET( Zugspitze_height,               2962, meter);
 // ...
 
-// Buildings: (source: https://en.wikipedia.org/wiki/List_of_tallest_buildings, sorted by height)
+// Buildings: (sorted by height)
 SET( Burj_Khalifa_height,             828, meter);
 SET( Merdeka_height,                  678.9, meter);
 SET( Shangai_Tower_height,            632, meter);
@@ -76,4 +76,5 @@ SET( Great_Wall_in_China_length,     6430, kilometer); // (approximately)
 // Sources
 // -------
 // 1. https://en.wikipedia.org/wiki/Earth
-//
+// 2. https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth
+// 3. https://en.wikipedia.org/wiki/List_of_tallest_buildings

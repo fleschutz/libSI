@@ -1,8 +1,8 @@
-// SI/data/ISO.h - International ISO standards in SI units as of 2025
+// SI/data/ISO.h - data of International ISO standards as of 2025
 #pragma once
 
 #include "../../SI/units.h"
-#define SET(_name, _value, _unit) const auto _name = _unit(_value)
+#define SET(_name, _value, _unit)  const auto _name = _unit(_value)
 
 namespace SI { namespace ISO {
 
@@ -41,3 +41,5 @@ SET( container_1AA_max_gross_mass, 36'000, kilogram);
 } }
 #undef SET
 
+// Sources
+// -------

@@ -1,4 +1,4 @@
-// SI/data/Moon.h - type-safe data of the Moon as of 2025
+// SI/data/Moon.h - data of the Moon as of 2025
 #pragma once
 
 #include "../../SI/units.h"

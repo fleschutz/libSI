@@ -24,5 +24,4 @@ SET( human_population,                  0, dimensionless);
 
 // Sources
 // -------
-// https://en.wikipedia.org/wiki/Jupiter
-//
+// 1. https://en.wikipedia.org/wiki/Jupiter

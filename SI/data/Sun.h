@@ -1,4 +1,4 @@
-// SI/data/Sun.h - type-safe data of the Sun as of 2025
+// SI/data/Sun.h - data of the Sun as of 2025
 #pragma once
 
 #include "../../SI/units.h"
@@ -27,4 +27,3 @@ SET( human_population,                   0, dimensionless);
 // Sources
 // -------
 // 1. https://en.wikipedia.org/wiki/Sun
-
