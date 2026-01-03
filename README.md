@@ -7,7 +7,7 @@ Apply math based on SI units correct, with high precision and as easy as possibl
 
 * **Type-safe** [units](SI/units.h) (can't add a mass to a length), [constants](SI/constants.h) (e.g. constant::sigma), and [formulas](SI/formulas.h) (e.g. formula::wavelength())
 * **Convenient** and type-safe [literals](SI/literals.h) (e.g. 24_h or 3_GWh), everything based on the [KISS principle](https://en.wikipedia.org/wiki/KISS_principle).
-* **With real-world data** in [values/](SI/values/), e.g. [ISO standards](SI/values/ISO.h) or planet [Earth](SI/values/Earth.h)
+* **With [real-world data](SI/data/)** in SI units, e.g. [ISO standards](SI/data/ISO.h) or planet [Earth](SI/data/Earth.h)
 * **High precision** by using 'long double' internally, and **no runtime overhead** (compiles to nothing but simple doubles).
 * **Supports** SI base units, derived SI units, Imperial units, and many more.
 * **Platform-independent** (requires C++11 or higher), tested on Linux (gcc 15.2 & clang 20.1.8) and on Windows (VS2017 & VS2026).
@@ -74,7 +74,7 @@ File Structure
      ├📄print.h (5K)
      ├📄tests.h (2K)
      ├📄units.h (31K)
-     ├📂values
+     ├📂data
         ├📄densities.h (1K)
         ├📄Earth.h (4K)
         ├📄ISO.h (2K)

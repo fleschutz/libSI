@@ -1,4 +1,4 @@
-// SI/values/densities.h - densities of various materials
+// SI/data/densities.h - densities of various materials
 #pragma once
 
 #include "../../SI/literals.h"
@@ -35,4 +35,4 @@ namespace SI
 
 // Sources
 // -------
-// * https://amesweb.info/Materials/Density-Materials.aspx
+// 1. https://amesweb.info/Materials/Density-Materials.aspx

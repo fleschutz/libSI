@@ -1,10 +1,11 @@
-// SI/values/Venus.h - type-safe values of planet Venus as of 2025
+// SI/data/Mars.h - type-safe data of planet Mars as of 2025
 #pragma once
 
 #include "../../SI/units.h"
-#define SET(_name, _value, _unit)   const auto _name = _unit(_value)
+#define SET(_name, _value, _unit) const auto _name = _unit(_value)
 
-namespace SI { namespace Venus {
+namespace SI { namespace Mars {
+
 SET( equatorial_radius,        3'396.2, kilometer);
 SET( polar_radius,             3'376.2, kilometer);
 SET( surface_area,            1.4437e8, kilometer2);
@@ -13,12 +14,13 @@ SET( mass,                   6.4171e23, kilogram);
 SET( surface_gravity,          3.72075, meters_per_second2);
 SET( equatorial_rotation_velocity, 241, meters_per_second);
 SET( day,               24.7 * 60 * 60, second); 
-SET( satellites,                     0, dimensionless);
+SET( satellites,                     2, dimensionless); // Phobos and Deimos
 SET( human_population,               0, dimensionless); 
+
 } }
+#undef SET
 
 // Sources
 // -------
-// https://en.wikipedia.org/wiki/Venus
+// 1. https://en.wikipedia.org/wiki/Mars
 //
-#undef SET

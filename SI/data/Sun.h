@@ -1,13 +1,10 @@
-// SI/values/Sun.h - type-safe values of the Sun as of 2025
+// SI/data/Sun.h - type-safe data of the Sun as of 2025
 #pragma once
 
 #include "../../SI/units.h"
-
-namespace SI
-{
-	namespace Sun // (source: https://en.wikipedia.org/wiki/Sun)
-	{
 #define SET(_name, _value, _unit) const auto _name = _unit(_value)
+
+namespace SI { namespace Sun {
 
 SET( equatorial_radius,        695'700'000, meter);
 SET( equatorial_rotation_velocity,    1997, meters_per_second);
@@ -23,9 +20,11 @@ SET( center_temperature,        15'700'000, kelvin);
 SET( photosphere_temperature,        5'772, kelvin);
 SET( corona_temperature,         5'000'000, kelvin);
 SET( human_population,                   0, dimensionless); 
-//...
 
+}	}
 #undef SET
-	}
-}
+
+// Sources
+// -------
+// 1. https://en.wikipedia.org/wiki/Sun
 

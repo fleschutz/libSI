@@ -1,4 +1,5 @@
-// SI/values/all.h - includes all header files in SI/values/ (for convenience)
+// SI/data/all.h - includes all header files in SI/data/ (for convenience)
+#pragma once
 
 #include "ISO.h"
 #include "densities.h"

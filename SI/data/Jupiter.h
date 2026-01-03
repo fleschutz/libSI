@@ -1,10 +1,11 @@
-// SI/values/Jupiter.h - type-safe values of planet Jupiter as of 2025
+// SI/data/Jupiter.h - type-safe data of planet Jupiter as of 2025
 #pragma once
 
 #include "../../SI/units.h"
 #define SET(_name, _value, _unit)  const auto _name = _unit(_value)
 
 namespace SI { namespace Jupiter {
+
 SET( equatorial_radius,            71'492, kilometer);
 SET( polar_radius,                 66'854, kilometer);
 SET( mean_radius,                  69'911, kilometer);
@@ -17,10 +18,11 @@ SET( equatorial_rotation_velocity, 12'600, meters_per_second);
 SET( day,                   9.9 * 60 * 60, second); 
 SET( satellites,                       97, dimensionless);
 SET( human_population,                  0, dimensionless);
+
 } }
+#undef SET
 
 // Sources
 // -------
 // https://en.wikipedia.org/wiki/Jupiter
 //
-#undef SET

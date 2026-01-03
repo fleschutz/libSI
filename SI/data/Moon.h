@@ -1,13 +1,11 @@
-// SI/values/Moon.h - type-safe values of the Moon as of 2025
+// SI/data/Moon.h - type-safe data of the Moon as of 2025
 #pragma once
 
 #include "../../SI/units.h"
-
-namespace SI
-{
-	namespace Moon // source: https://en.wikipedia.org/wiki/Moon
-	{
 #define SET(_name, _value, _unit) const auto _name = _unit(_value)
+
+namespace SI { namespace Moon {
+
 SET( equatorial_radius,              1'738.1, kilometer);
 SET( polar_radius,                   1'736.0, kilometer);
 SET( mean_radius,                    1'737.4, kilometer);
@@ -21,9 +19,10 @@ SET( surface_gravity,                  1.622, meters_per_second2);
 SET( equatorial_rotation_velocity,     4.627, meters_per_second);
 SET( day,                    708.7 * 60 * 60, second); 
 SET( human_population,                     0, dimensionless);
-//...
 
+}	}
 #undef SET
-	}
-}
 
+// Sources
+// -------
+// 1. https://en.wikipedia.org/wiki/Moon

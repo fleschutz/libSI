@@ -1,10 +1,11 @@
-// SI/values/Mercury.h - type-safe values of planet Mercury as of 2025
+// SI/data/Mercury.h - type-safe data of planet Mercury as of 2025
 #pragma once
 
 #include "../../SI/units.h"
 #define SET(_name, _value, _unit) const auto _name = _unit(_value)
 
 namespace SI { namespace Mercury {
+
 SET( mean_radius,                2'439.7, kilometer);
 SET( flattening,                  0.0009, dimensionless);
 SET( surface_area,                7.48e7, kilometer2);
@@ -16,9 +17,9 @@ SET( day,               4222.6 * 60 * 60, second);
 SET( satellites,                       0, dimensionless);
 SET( human_population,                 0, dimensionless);
 } }
+#undef SET
 
 // Sources
 // -------
-// https://en.wikipedia.org/wiki/Mercury_(planet)
+// 1. https://en.wikipedia.org/wiki/Mercury_(planet)
 //
-#undef SET
