@@ -113,7 +113,7 @@ SET(lightyear,     9'460'730'777'119'564, meter);
 SET(Marathon_length,              42'195, meter);
 SET(quarter_mile,                 402.34, meter);
 
-}	}
+} } // SI::constant
 #undef SET
 
 // Sources
