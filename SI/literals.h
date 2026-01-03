@@ -293,6 +293,13 @@ SET( Kbps,                           1e3 / 8, bytes_per_second); // 1_Kbps (kilo
 SET( Mbps,                           1e6 / 8, bytes_per_second); // 1_Mbps (megabit/sec)
 SET( Gbps,                           1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
 SET( Tbps,                          1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
+// pressure in...
+SET( Mbar,                              1e11, pascal_);  // 1_Mbar (megabar)
+SET( kbar,                               1e8, pascal_);  // 1_kbar (kilobar)
+SET( bar,                                1e5, pascal_);  // 1_bar 
+SET( mbar,                               1e2, pascal_);  // 1_mbar (millibar)
+SET( at,                            98'066.5, pascal_);  // 1_at   (atmosphere)
+SET( mmHg,                          133.3224, pascal_);  // 1_mmHg (millimeter mercury)
 // various units in...
 SET( degC,                                 1, celsius);  // 1_degC (°Celsius)
 SET( degR,                           5.0/9.0, kelvin);   // 1_degR (°Rankine)
@@ -301,9 +308,6 @@ SET( Da,                 1.6605390689252e-27, kilogram); // 1_Da   (dalton)
 SET( eV,                     1.602176634e-19, joule);    // 1_eV   (electronvolt)
 SET( hp,                  745.69987158227022, watt);     // 1_hp   (horsepower)
 SET( PS,                           735.49875, watt);     // 1_PS   ('Pferdestärke', german horsepower)
-SET( at,                            98'066.5, pascal_);  // 1_at   (atmosphere)
-SET( bar,                                1e5, pascal_);  // 1_bar 
-SET( mmHg,                          133.3224, pascal_);  // 1_mmHg (millimeter mercury)
 SET( Ang,                              1e-10, meter);    // 1_Ang  (angstrom)
 SET( smoot,                           1.7018, meter);    // 1_smoot (one Oliver R. Smoot height, fun unit)
 SET( percent,                           0.01, dimensionless); // 1_percent
