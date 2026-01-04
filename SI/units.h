@@ -42,7 +42,7 @@ namespace SI
 			static constexpr long mass = Mass;
 			static constexpr long time = Time;
 			static constexpr long temperature = Temperature;
-			static constexpr long angle = Current;
+			static constexpr long current = Current;
 		};
 
 		template <long Value>
@@ -61,10 +61,10 @@ namespace SI
 			using type = dimensionless;
 		};
 
-		template <long Length, long Mass, long Time, long Temperature, long Angle>
-		struct dimension_of<dimension<Length, Mass, Time, Temperature, Angle>>
+		template <long Length, long Mass, long Time, long Temperature, long Current>
+		struct dimension_of<dimension<Length, Mass, Time, Temperature, Current>>
 		{
-			using type = dimension<Length, Mass, Time, Temperature, Angle>;
+			using type = dimension<Length, Mass, Time, Temperature, Current>;
 		};
 
 		template <class Dimension, class T>
@@ -92,7 +92,7 @@ namespace SI
 			Lhs::mass op_ Rhs::mass,		\
 			Lhs::time op_ Rhs::time,		\
 			Lhs::temperature op_ Rhs::temperature,	\
-			Lhs::angle op_ Rhs::angle >
+			Lhs::current op_ Rhs::current >
 
 		template <class Lhs, class Rhs> using dimension_add_impl = SI_DIMENSION_OP(+);
 		template <class Lhs, class Rhs> using dimension_subtract_impl = SI_DIMENSION_OP(-);
@@ -668,7 +668,7 @@ namespace SI
 	SI_DIM(volume,              3, 0,  0, 0, 0, 0, 0); // (in m³)
 	SI_DIM(frequency,           0, 0, -1, 0, 0, 0, 0); // (per second)
 	SI_DIM(velocity,            1, 0, -1, 0, 0, 0, 0); // (in m/s)
-	SI_DIM(acceleration,        1, 0, -2, 0, 0, 0, 0); // (length per time²)
+	SI_DIM(acceleration,        1, 0, -2, 0, 0, 0, 0); // (in m/s²)
 	SI_DIM(jerk,                1, 0, -3, 0, 0, 0, 0);
 	SI_DIM(force,               1, 1, -2, 0, 0, 0, 0); // (in newton)
 	SI_DIM(energy,              2, 1, -2, 0, 0, 0, 0); // (in newton-meter)
