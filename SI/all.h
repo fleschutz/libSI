@@ -5,7 +5,8 @@
 #include "constants.h"  // <-- constants based on SI units, e.g. SI::constant::light_speed
 #include "literals.h"   // <-- literals based on SI units, e.g. 3_km
 #include "formulas.h"   // <-- formulas based on SI units, e.g. SI::formula::wavelength()
-#include "to_string.h"  // <-- conversion of SI units to string
+#include "from_string.h"// <-- string to SI unit conversion 
+#include "to_string.h"  // <-- SI unit to string conversion 
 #include "print.h"      // <-- simple print to the console interface
 #include "tests.h"      // <-- units tests
 #include "data/all.h"   // <-- real-world data in SI units
