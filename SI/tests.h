@@ -8,7 +8,9 @@ namespace SI
 {
 	// Some sample checks to see what's possible: (the serious checks follow below)
 
-	static_assert(1_km + 1_m + 1_cm == 1001.01_m);
+	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
+
+	static_assert(10_km / 30_min == 20_km_per_h);
 
 	static_assert(2_m * 3_m == 6_m²);
 
@@ -17,8 +19,6 @@ namespace SI
 	static_assert((2_m * 3_m * 4_m) / 2_s == 12_m³_per_s);
 
 	static_assert(1000 / 1_s == 1_kHz);
-
-	static_assert(1_km / 2_s == 500_m_per_s);
 
 	static_assert(1_Mach == 330_m_per_s);
 
