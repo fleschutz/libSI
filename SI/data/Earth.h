@@ -21,7 +21,7 @@ SET( water_area,              361'132'000, kilometer2);
 SET( volume,                   1.08321e12, kilometer3);
 SET( mass,                      5.9723e24, kilogram);
 SET( equatorial_rotation_velocity, 1674.4, kilometers_per_hour);
-SET( satellites,                        1, dimensionless); // see Moon.h
+SET( natural_satellites,                1, dimensionless); // see Moon.h
 SET( human_population,              8.2e9, dimensionless); 
 SET( solar_constant,                 1361, watts_per_meter2); // amount of Sun energy per square meter
 SET( magnetic_field,               3.2e-5, tesla); // strength of Earth's magnetic field at 0° lat, 0° long.

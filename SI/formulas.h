@@ -263,3 +263,4 @@ auto sound_intensity(power power_of_sound_source, length distance_from_sound_sou
 // 4. https://en.wikipedia.org/wiki/Lorentz_force
 // 5. https://de.wikipedia.org/wiki/Windchill
 // 6. https://en.wikipedia.org/wiki/Density_of_air
+// 7. https://physics.info/equations/

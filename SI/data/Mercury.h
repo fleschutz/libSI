@@ -14,7 +14,7 @@ SET( mass,                     3.3011e23, kilogram);
 SET( surface_gravity,                3.7, meters_per_second2);
 SET( equatorial_rotation_velocity, 3.026, meters_per_second);
 SET( day,               4222.6 * 60 * 60, second); 
-SET( satellites,                       0, dimensionless);
+SET( natural_satellites,               0, dimensionless);
 SET( human_population,                 0, dimensionless);
 
 } } // SI::Mercury

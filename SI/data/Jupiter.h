@@ -16,7 +16,7 @@ SET( mass,                      1.8982e27, kilogram);
 SET( surface_gravity,               24.79, meters_per_second2);
 SET( equatorial_rotation_velocity, 12'600, meters_per_second);
 SET( day,                   9.9 * 60 * 60, second); 
-SET( satellites,                       97, dimensionless);
+SET( natural_satellites,               97, dimensionless);
 SET( human_population,                  0, dimensionless);
 
 } } // SI::Jupiter

@@ -14,7 +14,7 @@ SET( mass,                   6.4171e23, kilogram);
 SET( surface_gravity,          3.72075, meters_per_second2);
 SET( equatorial_rotation_velocity, 241, meters_per_second);
 SET( day,               24.7 * 60 * 60, second); 
-SET( satellites,                     0, dimensionless);
+SET( natural_satellites,             0, dimensionless);
 SET( human_population,               0, dimensionless); 
 
 } } // SI::Venus

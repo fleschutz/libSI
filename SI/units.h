@@ -848,11 +848,13 @@ namespace SI
 		return std::atan2(meter(y), meter(x));
 	}
 
-	// Returns the square of x (x² or x*x).
+	// Raise any number to power of 2 (x² or x*x).
 	template <typename T>
-	SI_INLINE auto square(T x) {
-		return x * x;
-	}
+	[[nodiscard]] SI_INLINE_CONSTEXPR auto square(T x) { return x * x; }
+
+	// Raise any number to power of 3 (x³ or x*x*x).
+	template <typename T>
+	[[nodiscard]] SI_INLINE_CONSTEXPR auto cube(T x) { return x * x * x; }
 }
 
 #undef SI_RETURN_QUANTITY
