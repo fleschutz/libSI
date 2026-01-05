@@ -10,7 +10,7 @@ Apply math based on SI units correct, with high precision, and as easy as possib
 * **High precision** by using 'double' in SI base units internally, **without runtime overhead** (compiles to nothing but simple doubles).
 * **With [real-world data](SI/data/)** in SI units, e.g. [ISO standards](SI/data/ISO.h) or planet [Earth](SI/data/Earth.h)
 * **Supports** SI base units, derived SI units, Imperial units, and many more.
-* **Platform-independent** (requires C++11 or higher), tested on Linux (gcc 15.2 & clang 20.1.8) and on Windows (VS2017 & VS2026).
+* **Wide compatibility** for C++11 or higher and **platform-independent** for Linux (gcc & clang) and Windows (Visual Studio).
 * **Modern C++ lib**: compact, header only, own namespace ("SI::"), no external dependencies, with [unit tests](SI/tests.h).
 
 Code Example
