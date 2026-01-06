@@ -80,7 +80,7 @@ Frequently Asked Questions
 
 🤝 Contributing
 ---------------
-* Contributions, suggestions, and improvements are always welcome!
+* Contributions, suggestions, and improvements are welcome!
 * Open an Issue if you encounter bugs or have feature ideas.
 * Create a Pull Request if you'd like to improve something.
 
