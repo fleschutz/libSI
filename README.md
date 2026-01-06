@@ -24,21 +24,21 @@ print(E);
 See all 35 examples in [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates the following:
 
 ```
-What's the potential energy of just 1g mass? It's... 89.9 TJ
-What's the average speed of Kiptum's world record in Marathon? It's...21.1 km/h
-What's the free fall time from Burj Khalifa tower in Dubai? It's... 13.0 sec
-What's the kinetic energy of a car at 50 km/h? It's... 125.4 kJ
-What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 0.0 °C (32.0 °F)
-What's the average speed here? It's... 1002.0 km/h
-What's the wavelength of H2 in vacuum? It's... 21.1 cm
-What's the wavelength of the high 'c' music note? It's... 32.8 cm
-What's a radar's geometrical horizon (the distance it can see)? It's... 10.8 km
-What's the time needed to fly non-stop around the Earth at Mach 1? It's... 1.4 days
-What's the travel time of sun light to Earth? It's... 8.3 min
-What's the sum of 1 byte + 1kB + 1GB...(and so on)? It's... 1.001e+30
-What's the sum of 1m + 1NM + 1ft? It's... 1.9 km
-What's the population density on Earth (people per km² of land area)? It's... 55.1 /km²
-How much land area would be available for each person on Earth? It's... 1.8 hm²
+1) What's the potential energy of just 1g mass? It's... 89.9 TJ
+2) What's the average speed of Kiptum's world record in Marathon? It's...21.1 km/h
+3) What's the free fall time from Burj Khalifa tower in Dubai? It's... 13.0 sec
+4) What's the kinetic energy of a car at 50 km/h? It's... 125.4 kJ
+5) What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? It's... 0.0 °C (32.0 °F)
+6) What's the average speed here? It's... 1002.0 km/h
+7) What's the wavelength of H2 in vacuum? It's... 21.1 cm
+8) What's the wavelength of the high 'c' music note? It's... 32.8 cm
+9) What's a radar's geometrical horizon (the distance it can see)? It's... 10.8 km
+10) What's the time needed to fly non-stop around the Earth at Mach 1? It's... 1.4 days
+11) What's the travel time of sun light to Earth? It's... 8.3 min
+12) What's the sum of 1 byte + 1kB + 1GB...(and so on)? It's... 1.001e+30
+13) What's the sum of 1m + 1NM + 1ft? It's... 1.9 km
+14) What's the population density on Earth (people per km² of land area)? It's... 55.1 /km²
+15) How much land area would be available for each person on Earth? It's... 1.8 hm²
 ...
 ```
 
