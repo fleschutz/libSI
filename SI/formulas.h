@@ -253,6 +253,27 @@ auto sound_intensity(power power_of_sound_source, length distance_from_sound_sou
 	return power_of_sound_source / (4.0 * constant::pi * square(distance_from_sound_source));
 }
 
+// Calculates the max height of a bullet (without force of drag), based on:
+// initial launch velocity (v0), initial height (h), launch angle (a), and earth acceleration (g).
+length ballistic_max_height(velocity v0, length h, angle a, acceleration g)
+{
+	return h + square(v0 * sin(a)) / (2.0 * g);
+}
+
+// Calculates the max range of a bullet (without force of drag), based on:
+// initial launch velocity (v0), initial height (h), launch angle (a), and earth acceleration (g).
+length ballistic_max_range(velocity v0, length h, angle a, acceleration g)
+{
+	return ((v0 * sin(a) + sqrt(square(v0 * sin(a)) + 2.0 * g * h)) / g) * cos(a) * v0;
+}
+
+// Calculates the flight time of a bullet (without force of drag), based on:
+// initial launch velocity (v0), initial height (h), launch angle (a), and earth acceleration (g).
+time ballistic_travel_time(velocity v0, length h, angle a, acceleration g)
+{
+	return (v0 * sin(a) + sqrt(square(v0 * sin(a)) + 2.0 * g * h)) / g;
+}
+
 } } // SI::formula
 
 // Sources
@@ -264,3 +285,6 @@ auto sound_intensity(power power_of_sound_source, length distance_from_sound_sou
 // 5. https://de.wikipedia.org/wiki/Windchill
 // 6. https://en.wikipedia.org/wiki/Density_of_air
 // 7. https://physics.info/equations/
+// 8. https://www.vcalc.com/wiki/ballistic-max-height
+// 9. https://www.vcalc.com/wiki/ballistic-range
+// 10. https://www.vcalc.com/wiki/ballistic-travel-time

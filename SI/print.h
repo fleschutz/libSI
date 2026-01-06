@@ -147,6 +147,16 @@ namespace SI
 	}
 
 	// Print multiple units:
+	void print(length a, length b)
+	{
+		print(a); print(", "); print(b);
+	}
+
+	void print(length a, length b, time c)
+	{
+		print(a); print(", "); print(b); print(", "); print(c);
+	}
+
 	void print(area a, volume v, mass m)
 	{
 		print(a); print(", "); print(v); print(", "); print(m);

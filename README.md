@@ -39,23 +39,7 @@ What's the sum of 1 byte + 1kB + 1GB...(and so on)? It's... 1.001e+30
 What's the sum of 1m + 1NM + 1ft? It's... 1.9 km
 What's the population density on Earth (people per km² of land area)? It's... 55.1 /km²
 How much land area would be available for each person on Earth? It's... 1.8 hm²
-What's the surface area of a soccer ball? It's... 1559.7 cm²
-What's the volume of a soccer ball? It's... 5.8 l
-What's the surface area of a 30cm pizza? It's... 706.9 cm²
-What's the volume of a 30cm x 1cm pizza? It's... 706.9 ml
-What's the distance the Earth has travelled so far? It's... 447.1 Mly (megalight-years)
-What's a car's braking distance on dry asphalt from 100km/h? It's... 48.2 m
-What's a car's braking distance on wet asphalt from 100km/h? It's... 64.3 m
-How long takes a 1TB download at 100MBit speed? It's... 22.2 h
-What's the aircraft's glide path on final at 10NM distance in 3000ft height? It's... 2.8 °
-What's Donald Trump's body-mass index (BMI)? It's... 28.3 kg/m²
-What are the details of a 10m x 1m oak timber log? It's... 33.0 m², 7.9 m³, 5.6 t, 23.4 MWh
-What's the min cable wire size for 100m copper, 230V, 30A max? It's... 10.3 mm²
-What's the windchill temperature of 5°C air temperature at 55km/h wind? It's... -1.6 °C (29.1 °F)
-What's the lift force of an A380 wing on sea level at 284km/h rotation speed? It's... 4.5 MN
-What's the impact energy of a 50m asteroid at 50,000km/h? It's... 15.8 PJ (=3.8 Mt TNT, 254.543 Hiroshima bombs)
-What's the sound intensity of a 1W loudspeaker at 1m distance? It's... 79.6 mW/m² (=109.008 dB)
-What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? It's... 54.1 mV
+...
 ```
 
 
