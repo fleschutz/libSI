@@ -221,6 +221,12 @@ int main()
 	auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, Moon::surface_gravity);
 	print(max_height, max_range, flight_time);
 } {
+	print("\n36) What's the average speed to travel around the Earth in 80 days? It's... ");
+	auto time = 80.0 * Earth::day;
+	auto distance = Earth::equatorial_circumference;
+	auto avg_speed = distance / time;
+	print(avg_speed);
+} {
 	// Here's the basic principle:
 	dimensionless x = 42;        // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_sec;      // <- t is now 42 seconds
