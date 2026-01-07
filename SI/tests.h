@@ -10,13 +10,13 @@ namespace SI
 
 	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
 
-	static_assert(10_km / 30_min == 20_km_per_h);
+	static_assert(1_km / 30_min == 2_km_per_h);
 
-	static_assert(2_m * 3_m == 6_m²);
+	static_assert(1_m * 2_m == 2_m²);
 
-	static_assert(2_m * 3_m * 4_m == 24_m³);
+	static_assert(1_m * 2_m * 3_m == 6_m³);
 
-	static_assert((2_m * 3_m * 4_m) / 2_s == 12_m³_per_s);
+	static_assert((1_m * 2_m * 3_m) / 2_s == 3_m³_per_s);
 
 	static_assert(1000 / 1_s == 1_kHz);
 
