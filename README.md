@@ -46,30 +46,30 @@ See all 36 examples in [examples.cpp](examples.cpp). Executing: `cmake . && make
 📁 File Structure
 ------------------
 ```
-  ├📄CMakeLists.txt (360 bytes)
-  ├📄examples.cpp (6K)
-  ├📄LICENSE (7K)
-  ├📄README.md (5K)
-  ├📂SI
-     ├📄all.h (446 bytes)
-     ├📄constants.h (8K)
-     ├📄formulas.h (4K)
-     ├📄internal.h (18K)
-     ├📄literals.h (14K)
-     ├📄print.h (5K)
-     ├📄tests.h (2K)
-     ├📄units.h (31K)
-     ├📂data
-        ├📄densities.h (1K)
-        ├📄Earth.h (4K)
-        ├📄ISO.h (2K)
-        ├📄Jupiter.h (912 bytes)
-        ├📄Mars.h (787 bytes)
-        ├📄Mercury.h (801 bytes)
-        ├📄Moon.h (984 bytes)
-        ├📄music.h (535 bytes)
-        ├📄Sun.h (1K)
-(21 files, 3 folders, 112K total)
+├📄CMakeLists.txt 
+├📄examples.cpp 
+├📄LICENSE 
+├📄README.md
+├📂SI
+  ├📄all.h 
+  ├📄constants.h 
+  ├📄formulas.h
+  ├📄internal.h 
+  ├📄literals.h 
+  ├📄print.h
+  ├📄tests.h
+  ├📄units.h
+  ├📂data
+    ├📄densities.h
+    ├📄Earth.h
+    ├📄ISO.h
+    ├📄Jupiter.h
+    ├📄Mars.h
+    ├📄Mercury.h
+    ├📄Moon.h 
+    ├📄music.h
+    ├📄Sun.h
+    (21 files, 3 folders, 112K total)
 ```
 
 ❔ FAQ
