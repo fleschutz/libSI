@@ -39,10 +39,10 @@ int main()
 	auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
 	print(H2_wavelength);
 } {
-	print("\n8) What's the wavelength of the high 'c' music note? ");
+	print("\n8) What's the frequency and wavelength of the high 'c' music note? ");
 	auto high_c_frequency = 1046.5_Hz;
 	auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
-	print(wavelength);
+	print(high_c_frequency, wavelength);
 } {
 	print("\n9)What's a radar's geometrical horizon (the distance it can see)? ");
 	auto Earth_radius = 6371.009_km;
@@ -228,7 +228,7 @@ int main()
 	print(avg_speed);
 } {
 	print("\n37) What's the min speed to escape from the Moon? ");
-	auto speed = formula::escape_speed(Moon::mass, Moon::mean_radius);
+	auto speed = formula::gravitational_escape_speed(Moon::mass, Moon::mean_radius);
 	print(speed);
 } {
 	// Here's the basic principle:

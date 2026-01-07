@@ -263,7 +263,6 @@ SET( Gpc,           30'856'775'814'913'673e9, meter);  // 1_Gpc (gigaparsec, as 
 SET( Mpc,           30'856'775'814'913'673e6, meter);  // 1_Mpc (megaparsec, as of IAU 2012)
 SET( kpc,           30'856'775'814'913'673e3, meter);  // 1_kpc (kiloparsec, as of IAU 2012)
 SET( pc,              30'856'775'814'913'673, meter);  // 1_pc  (parsec, as of IAU 2012)
-SET( Mly,        9'460'730'472'580'800 * 1e6, meter);  // 1_Mly (megalight-year)
 SET( ly,               9'460'730'472'580'800, meter);  // 1_ly  (light-year)
 SET( au,                     149'597'870'700, meter);  // 1_au  (astronomical unit)
 // imperial units in...

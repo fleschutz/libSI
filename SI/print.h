@@ -74,6 +74,11 @@ namespace SI
 		print(to_string(f));
 	}
 
+	void print(frequency f, length d)
+	{
+		print(to_string(f)); print(", "); print(to_string(d));
+	}
+
 	void print(force F)
 	{
 		print(to_string(F));

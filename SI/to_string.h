@@ -7,21 +7,25 @@
 
 namespace SI
 {
-	const char* format_of_to_string = "%.1LF %s"; // <-- configurable (precision and whitespace)
+	std::string format_of_to_string = "%.2Lf%s"; // <-- configurable (precision / whitespace)
 
 	// Internal function to join and convert both value and unit into a string.
 	std::string _join(long double value, const std::string& unit)
 	{
 		char buf[256];
-		std::snprintf(buf, sizeof(buf), format_of_to_string, value, unit.c_str());
+		std::snprintf(buf, sizeof(buf), format_of_to_string.c_str(), value, unit.c_str());
 		return std::string(buf);
 	}
 
 	// Convert the 7 SI base units:
 	std::string to_string(length d)
 	{
-		if (d <= -1_Mly || d >= 1_Mly)
-			return _join(d / 1_Mly, "Mly (megalight-years)");
+		if (d <= -1_Gpc || d >= 1_Gpc)
+			return _join(d / 1_Gpc, "Gpc (gigaparsec)");
+		if (d <= -1_Mpc || d >= 1_Mpc)
+			return _join(d / 1_Mpc, "Mpc (megaparsec)");
+		if (d <= -1_kpc || d >= 1_kpc)
+			return _join(d / 1_kpc, "kpc (kiloparsec)");
 		if (d <= -1_pc || d >= 1_pc)
 			return _join(d / 1_pc, "pc (parsec)");
 		if (d <= -1_ly || d >= 1_ly)
