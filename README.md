@@ -13,15 +13,15 @@ Apply math based on SI units correct, with high precision, and as easy as possib
 * **Wide compatibility** (just requires C++17 or higher) and **cross-platform** support (e.g. Linux gcc & clang, Windows VS2017-VS2026).
 * **Modern C++ lib**: header only, compact, own namespace ("SI::"), no external dependencies, with [unit tests](SI/tests.h).
 
-Code Example
-------------
+🔎 Code Example
+---------------
 ```
 auto m = 1_g;
 auto c = constant::speed_of_light;
 auto E = m * c * c;
 print(E);
 ```
-See all 36 examples in [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates the following:
+Please find all 36 examples in: [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates the output:
 
 ```
 1) What's the potential energy of just 1g mass? It's... 89.9 TJ
