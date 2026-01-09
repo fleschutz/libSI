@@ -15,11 +15,18 @@ Apply math based on SI units correct, with high precision, and as easy as possib
 
 🔎 Code Example
 ---------------
-```
-auto m = 1_g;
-auto c = constant::speed_of_light;
-auto E = m * c * c;
-print(E);
+```cpp
+#include "SI/all.h"
+using namespace SI;
+
+int main()
+{	
+	print("What's the potential energy of just 1g mass? ");
+	auto m = 1_g;
+	auto c = constant::speed_of_light;
+	auto E = m * c * c;
+	print(E);
+}
 ```
 Please find all 37 examples in: [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates the output:
 
