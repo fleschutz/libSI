@@ -25,115 +25,115 @@ int main()
 	auto speed_limit = 50_km_per_h;
 	auto KE = formula::kinetic_energy(car_mass, speed_limit);
 	print(KE);
-{
-	print("\n5. What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? ");
-	auto average = (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4;
-	print(average);
-} {
-	print("\n6. What's the average speed here? ");
-	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
-	print(average);
-} {
-	print("\n7. What's the wavelength of H2 in vacuum? ");
+
+	print("\n5. What's the wavelength of H2 in vacuum? ");
 	auto H2_frequency = 1420.4057517682_MHz;
 	auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
 	print(H2_wavelength);
-} {
-	print("\n8. What's the frequency and wavelength of the high 'c' music note? ");
+
+	print("\n6. What's the frequency and wavelength of the high 'c' music note? ");
 	auto high_c_frequency = 1046.5_Hz;
 	auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
 	print(high_c_frequency, wavelength);
+
+	print("\n7. What's the population density on Earth (people per km² of land area)? ");
+	auto density = Earth::human_population / Earth::land_area;
+	print(density);
+
+	print("\n8. How much land area would be available for each person on Earth? ");
+	auto per_person = Earth::land_area / Earth::human_population;
+	print(per_person);
+
+	print("\n9. What's Donald Trump's body-mass index (BMI)? ");
+	auto Donalds_weight = 102_kg;
+	auto Donalds_height = 190_cm;
+	auto Donalds_BMI = formula::BMI(Donalds_weight, Donalds_height);
+	print(Donalds_BMI);
+{
+	print("\n10. What's the average temperature of 0°C, 32°F, 491.67°R, and 273.15K? ");
+	auto average = (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4;
+	print(average);
 } {
-	print("\n9. What's a radar's geometrical horizon (the distance it can see)? ");
+	print("\n11. What's the average speed here? ");
+	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
+	print(average);
+} {
+	print("\n12. What's a radar's geometrical horizon (the distance it can see)? ");
 	auto Earth_radius = 6371.009_km;
 	auto Radar_station_height = 30_ft;
 	auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
 	print(distance);
 } {
-	print("\n10. What's the time needed to fly non-stop around the Earth at Mach 1? ");
+	print("\n13. What's the time needed to fly non-stop around the Earth at Mach 1? ");
 	auto distance = Earth::equatorial_circumference;
 	auto speed = 1_Mach;
 	auto time = distance / speed;
 	print(time);
 } {
-	print("\n11. What's the travel time of sun light to Earth? ");
+	print("\n14. What's the travel time of sun light to Earth? ");
 	auto distance = constant::AU;
 	auto speed = constant::speed_of_light;
 	auto time = distance / speed;
 	print(time);
 } {
-	print("\n12. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
+	print("\n15. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
 	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
 	print(sum);
 } {
-	print("\n13. What's the sum of 1m + 1NM + 1ft? ");
+	print("\n16. What's the sum of 1m + 1NM + 1ft? ");
 	auto sum = 1_m + 1_NM + 1_ft;
 	print(sum);
 } {
-	print("\n14. What's the population density on Earth (people per km² of land area)? ");
-	auto density = Earth::human_population / Earth::land_area;
-	print(density);
-} {
-	print("\n15. How much land area would be available for each person on Earth? ");
-	auto per_person = Earth::land_area / Earth::human_population;
-	print(per_person);
-} {
-	print("\n16. What's the surface area of a soccer ball? ");
+	print("\n17. What's the surface area of a soccer ball? ");
 	auto circumference = 70_cm; // (69-71cm for FIFA ball size 5)
 	auto radius = formula::radius_of_circumference(circumference);
 	auto area = formula::area_of_sphere(radius);
 	print(area);
 } {
-	print("\n17. What's the volume of a soccer ball? ");
+	print("\n18. What's the volume of a soccer ball? ");
 	auto circumference = 70_cm; // (69-71cm for FIFA ball size 5)
 	auto radius = formula::radius_of_circumference(circumference);
 	auto volume = formula::volume_of_sphere(radius);
 	print(volume);
 } {
-	print("\n18. What's the surface area of a 30cm pizza? ");
+	print("\n19. What's the surface area of a 30cm pizza? ");
 	auto diameter = 30_cm;
 	auto area = formula::area_of_circle(diameter / 2);
 	print(area);
 } {
-	print("\n19. What's the volume of a 30cm x 1cm pizza? ");
+	print("\n20. What's the volume of a 30cm x 1cm pizza? ");
 	auto diameter = 30_cm; 
 	auto height = 1_cm;
 	auto volume = formula::volume_of_cylinder(diameter / 2, height);
 	print(volume);
 } {
-	print("\n20. What's the distance the Earth has travelled so far? ");
+	print("\n21. What's the distance the Earth has travelled so far? ");
 	auto distance_Earth_to_Sun = constant::AU;
 	auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
 	auto distance_total = distance_per_year * (Earth::age / Earth::year);
 	print(distance_total);
 } {
-	print("\n21. What's a car's braking distance on dry asphalt from 100km/h? ");
+	print("\n22. What's a car's braking distance on dry asphalt from 100km/h? ");
 	auto deceleration = 8_m_per_s²; // on dry asphalt
 	auto distance = formula::braking_distance(100_km_per_h, 0_km_per_h, deceleration);
 	print(distance);
 } {
-	print("\n22. What's a car's braking distance on wet asphalt from 100km/h? ");
+	print("\n23. What's a car's braking distance on wet asphalt from 100km/h? ");
 	auto deceleration = 6_m_per_s²; // on wet asphalt
 	auto distance = formula::braking_distance(100_km_per_h, 0_km_per_h, deceleration);
 	print(distance);
 } {
-	print("\n23. How long takes a 1TB download at 100MBit speed? ");
+	print("\n24. How long takes a 1TB download at 100MBit speed? ");
 	auto download_size  = 1_TB;
 	auto download_speed = 100_Mbps;
 	auto time = download_size / download_speed;
 	print(time);
 } {
-	print("\n24. What's the aircraft's glide path on final at 10NM distance in 3000ft height? ");
+	print("\n25. What's the aircraft's glide path on final at 10NM distance in 3000ft height? ");
 	auto distance_on_final = 10_NM;
 	auto height_on_final = 3000_ft;
 	auto glide_path = formula::glide_path(distance_on_final, height_on_final);
 	print(glide_path);
-} {
-	print("\n25. What's Donald Trump's body-mass index (BMI)? ");
-	auto Donalds_weight = 102_kg;
-	auto Donalds_height = 190_cm;
-	auto Donalds_BMI = formula::BMI(Donalds_weight, Donalds_height);
-	print(Donalds_BMI);
 } {
 	print("\n26. What are the details of a 10m x 1m oak timber log? ");
 	auto log_length = 10_m;
@@ -230,6 +230,16 @@ int main()
 	print("\n37. What's the min speed to escape from the Moon? ");
 	auto speed = formula::gravitational_escape_speed(Moon::mass, Moon::mean_radius);
 	print(speed);
+} {
+	for (const auto& material : data::materials)
+	{
+		print("\n");
+		print(material.name);
+		print(": ");
+		print(material.density);
+	}
+	print("\nAlu: ");
+	print(data::Aluminium.density);
 } {
 	// Here's the basic principle:
 	dimensionless x = 42;        // <- x contains a dimensionless number (no unit)

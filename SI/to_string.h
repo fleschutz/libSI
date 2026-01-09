@@ -335,6 +335,11 @@ namespace SI
 		return _join(v / 1_kg_per_m², "kg/m²");
 	}
 
+	std::string to_string(density d)
+	{
+		return _join(d / 1_kg_per_m³, "kg/m³");
+	}
+
 	std::string to_string(angle a)
 	{
 		return _join(a / 1_deg, "°");
