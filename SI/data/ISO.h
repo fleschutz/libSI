@@ -1,45 +1,43 @@
 // SI/data/ISO.h - data of International ISO standards as of 2025
 #pragma once
 
-#include "../../SI/units.h"
-#define SET(_name, _value, _unit)  const auto _name = _unit(_value ## L)
+#include "../../SI/literals.h"
 
 namespace SI { namespace ISO {
 
 // ISO 216 - Paper Sizes
-SET( paper_A0_with,              841, millimeter);
-SET( paper_A0_height,           1189, millimeter);
-SET( paper_A1_with,              594, millimeter);
-SET( paper_A1_height,            841, millimeter);
-SET( paper_A2_with,              420, millimeter);
-SET( paper_A2_height,            594, millimeter);
-SET( paper_A3_with,              297, millimeter);
-SET( paper_A3_height,            420, millimeter);
-SET( paper_A4_with,              210, millimeter);
-SET( paper_A4_height,            297, millimeter);
-SET( paper_A5_with,              148, millimeter);
-SET( paper_A5_height,            210, millimeter);
-SET( paper_A6_with,              105, millimeter);
-SET( paper_A6_height,            148, millimeter);
-SET( paper_A7_with,               74, millimeter);
-SET( paper_A7_height,            105, millimeter);
-SET( paper_A8_with,               52, millimeter);
-SET( paper_A8_height,             74, millimeter);
-SET( paper_A9_with,               37, millimeter);
-SET( paper_A9_height,             52, millimeter);
-SET( paper_A10_width,             26, millimeter);
-SET( paper_A10_height,            37, millimeter);
+const auto A0_paper_width = 841_mm;
+const auto A0_paper_height = 1189_mm;
+const auto A1_paper_width = 594_mm;
+const auto A1_paper_height = 841_mm;
+const auto A2_paper_width = 420_mm;
+const auto A2_paper_height = 594_mm;
+const auto A3_paper_width = 297_mm;
+const auto A3_paper_height = 420_mm;
+const auto A4_paper_width = 210_mm;
+const auto A4_paper_height = 297_mm;
+const auto A5_paper_width = 148_mm;
+const auto A5_paper_height = 210_mm;
+const auto A6_paper_width = 105_mm;
+const auto A6_paper_height = 148_mm;
+const auto A7_paper_width = 74_mm;
+const auto A7_paper_height = 105_mm;
+const auto A8_paper_width = 52_mm;
+const auto A8_paper_height = 74_mm;
+const auto A9_paper_width = 37_mm;
+const auto A9_paper_height = 52_mm;
+const auto A10_paper_width = 26_mm;
+const auto A10_paper_height = 37_mm;
 //...
 
 // ISO 668 - Series 1 freight containers
-SET( container_1AA_ext_length,     12.192, meter); // (aka 40-foot standard)
-SET( container_1AA_ext_height,      2.591, meter);
-SET( container_1AA_ext_width,       2.438, meter);
-SET( container_1AA_max_gross_mass, 36'000, kilogram);
+const auto container_1AA_ext_length = 12.192_m; // (aka 40-foot standard)
+const auto container_1AA_ext_height =  2.591_m;
+const auto container_1AA_ext_width  =  2.438_m;
+const auto container_1AA_max_gross_mass = 36'000_kg;
 //...
 
 } } // SI::ISO
-#undef SET
 
 // Sources
 // -------
