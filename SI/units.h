@@ -13,7 +13,7 @@
 
 namespace SI
 {
-	typedef double_t dimensionless; // basic datatype to hold a dimensionless value (without any unit), e.g. 42
+	typedef SIfloat dimensionless; // basic datatype to hold a dimensionless value (without any unit), e.g. 42
 
 	namespace detail
 	{
@@ -446,7 +446,7 @@ namespace SI
 		template <long Num, long Den>
 		struct ratio
 		{
-			static constexpr auto factor = static_cast<double_t>(Num) / Den;
+			static constexpr auto factor = static_cast<SIfloat>(Num) / Den;
 		};
 
 		struct tag_celsius {};
@@ -465,7 +465,7 @@ namespace SI
 		};
 
 		template <class T>
-		using promoted_scalar_type = std::conditional_t<std::is_same_v<scalar_value_type_t<T>, float_t>, float_t, double_t>;
+		using promoted_scalar_type = std::conditional_t<std::is_same_v<scalar_value_type_t<T>, SIfloat>, SIfloat, SIfloat>;
 
 		template <class T>
 		struct is_arithmetic : std::is_arithmetic<T> {};
@@ -583,17 +583,17 @@ namespace SI
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR double_t operator()(const quantity<Dimension, double_t>& q) const
+			SI_INLINE_CONSTEXPR SIfloat operator()(const quantity<Dimension, SIfloat>& q) const
 			{
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR vec2<double_t> operator()(const quantity<Dimension, vec2<double_t>>& q) const
+			SI_INLINE_CONSTEXPR vec2<SIfloat> operator()(const quantity<Dimension, vec2<SIfloat>>& q) const
 			{
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR vec3<double_t> operator()(const quantity<Dimension, vec3<double_t>>& q) const
+			SI_INLINE_CONSTEXPR vec3<SIfloat> operator()(const quantity<Dimension, vec3<SIfloat>>& q) const
 			{
 				return value(q);
 			}
@@ -646,9 +646,9 @@ namespace SI
 #define SI_DIM(name_, length_, mass_, time_, temperature_, current_, substance_, intensity_)		\
 	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, current_>; }\
 	template <class T> using name_ ## _t = detail::quantity<detail:: name_ ## _dimension, T>;		\
-	using name_ = name_ ## _t<double_t>;									\
-	using name_ ## 2 = name_ ## _t<detail::vec2<double_t>>;							\
-	using name_ ## 3 = name_ ## _t<detail::vec3<double_t>>
+	using name_ = name_ ## _t<SIfloat>;									\
+	using name_ ## 2 = name_ ## _t<detail::vec2<SIfloat>>;							\
+	using name_ ## 3 = name_ ## _t<detail::vec3<SIfloat>>
 
 	// The 7 SI Base Dimensions
 	// ------------------------ l  m  t  T  A  s  i
