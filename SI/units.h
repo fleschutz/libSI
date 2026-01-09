@@ -757,9 +757,9 @@ namespace SI
 
 	SI_INLINE_CONSTEXPR auto meters_per_second2 = unit<acceleration>();
 
-	SI_INLINE_CONSTEXPR auto newton      = unit<force>();
-	SI_INLINE_CONSTEXPR auto newtonmeters = newton * meter;
-	SI_INLINE_CONSTEXPR auto newtonseconds= newton * second;
+	SI_INLINE_CONSTEXPR auto newtons     = unit<force>();
+	SI_INLINE_CONSTEXPR auto newtonmeters = newtons * meter;
+	SI_INLINE_CONSTEXPR auto newtonseconds= newtons * second;
 
 	SI_INLINE_CONSTEXPR auto joules     = unit<energy>();
 	SI_INLINE_CONSTEXPR auto jouleseconds = joules * second;
@@ -797,9 +797,9 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto tesla       = kilogram / (ampere * second * second);
 	SI_INLINE_CONSTEXPR auto joules_per_tesla = joules / tesla;
 
-	SI_INLINE_CONSTEXPR auto steradian   = unit<detail::dimensionless>();
+	SI_INLINE_CONSTEXPR auto steradians  = unit<detail::dimensionless>();
 
-	SI_INLINE_CONSTEXPR auto lumens      = candelas * steradian; 
+	SI_INLINE_CONSTEXPR auto lumens      = candelas * steradians; 
 	SI_INLINE_CONSTEXPR auto lumenseconds= lumens * second;
 	SI_INLINE_CONSTEXPR auto lumens_per_watt = lumens / watts; 
 
@@ -810,14 +810,14 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto per_mol      = unit<per_amount_of_substance>(); 
 
 	// IMPERIAL UNITS
-	SI_INLINE_CONSTEXPR auto pound        = unit<mass, 45359237, 100000000>();
+	SI_INLINE_CONSTEXPR auto pounds       = unit<mass, 45359237, 100000000>();
 	SI_INLINE_CONSTEXPR auto feet         = unit<length, 3048, 10000>();
-	SI_INLINE_CONSTEXPR auto nautical_mile = unit<length, 1852, 100>();
-	SI_INLINE_CONSTEXPR auto inch         = unit<length, 254, 10000>();
-	SI_INLINE_CONSTEXPR auto statute_mile = unit<length, 1609344, 1000>();
+	SI_INLINE_CONSTEXPR auto nautical_miles = unit<length, 1852, 100>();
+	SI_INLINE_CONSTEXPR auto inches       = unit<length, 254, 10000>();
+	SI_INLINE_CONSTEXPR auto statute_miles = unit<length, 1609344, 1000>();
 	SI_INLINE_CONSTEXPR auto fahrenheit   = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
-	SI_INLINE_CONSTEXPR auto miles_per_hour = statute_mile / hour;
-	SI_INLINE_CONSTEXPR auto knots        = nautical_mile / hour;
+	SI_INLINE_CONSTEXPR auto miles_per_hour = statute_miles / hour;
+	SI_INLINE_CONSTEXPR auto knots        = nautical_miles / hour;
 
 	// VARIOUS UNITS
 	SI_INLINE_CONSTEXPR auto celsius     = detail::unit<detail::temperature_dimension, detail::tag_celsius>();

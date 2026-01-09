@@ -241,13 +241,13 @@ SET( Pa,       1, pascals);             // 1_Pa   (pascal)
 SET( mPa,   1e-3, pascals);             // 1_mPa  (millipascal) 
 SET( uPa,   1e-6, pascals);             // 1_uPa  (micropascal) 
 // force (F) in...
-SET( GN,     1e9, newton);              // 1_GN (giganewton)
-SET( MN,     1e6, newton);              // 1_MN (meganewton)
-SET( kN,     1e3, newton);              // 1_kN (kilonewton)
-SET( N,        1, newton);              // 1_N
-SET( mN,    1e-3, newton);              // 1_mN (millinewton)
-SET( uN,    1e-6, newton);              // 1_uN (micronewton)
-SET( pN,    1e-9, newton);              // 1_pN (piconewton)
+SET( GN,     1e9, newtons);             // 1_GN (giganewton)
+SET( MN,     1e6, newtons);             // 1_MN (meganewton)
+SET( kN,     1e3, newtons);             // 1_kN (kilonewton)
+SET( N,        1, newtons);             // 1_N
+SET( mN,    1e-3, newtons);             // 1_mN (millinewton)
+SET( uN,    1e-6, newtons);             // 1_uN (micronewton)
+SET( pN,    1e-9, newtons);             // 1_pN (piconewton)
 // luminous flux (m) in...
 SET( lm,       1, lumens);              // 1_lm (lumen)
 SET( lm_s,     1, lumenseconds);        // 1_lm_s (lumen second)
@@ -255,14 +255,14 @@ SET( lm_per_W, 1, lumens_per_watt);     // 1_lm_per_W (lumen per watt)
 // other...
 SET( Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
 // SI supplementary units in...
-SET( rad,      1, radian);              // 1_rad  (radian)
+SET( rad,      1, radian);              // 1_rad (radian)
 SET( deg,0.01745329251994329576923690768489, radian); // 1_deg  (angle degree)
-SET( sr,       1, steradian);           // 1_sr   (steradian)
+SET( sr,       1, steradians);          // 1_sr  (steradian)
 
 // Non-SI Units
 // ------------
 //   SYMBOL           FACTOR                  BASE UNIT   EXAMPLE
-// astronomical distances in...
+// astronomical units in...
 SET( Gpc,           30'856'775'814'913'673e9, meter);  // 1_Gpc (gigaparsec, as of IAU 2012)
 SET( Mpc,           30'856'775'814'913'673e6, meter);  // 1_Mpc (megaparsec, as of IAU 2012)
 SET( kpc,           30'856'775'814'913'673e3, meter);  // 1_kpc (kiloparsec, as of IAU 2012)
