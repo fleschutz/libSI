@@ -8,7 +8,7 @@ Apply math based on SI units correct, with high precision, and as easy as possib
 * **Type-safe** [units](SI/units.h) (can't add a mass to a length), [constants](SI/constants.h) (e.g. constant::sigma), and [formulas](SI/formulas.h) (e.g. formula::wavelength())
 * **Convenient** [literals](SI/literals.h) (e.g. 24_h or 3_GWh), [from_string()](SI/from_string.h), [to_string()](SI/to_string.h), and [print()](SI/print.h) functions.
 * **High precision** by using 'double' internally, **without runtime overhead** (compiles to nothing but simple doubles).
-* **With real-world data** in SI units: [stars](SI/data/stars.h), [planets](SI/data/planets.h), [moons](SI/data/moons.h), [materials](SI/data/materials.h), [ISO](SI/data/ISO.h), and [more...](SI/data/)
+* **With real-world data** in SI units: [stars](SI/data/stars.h), [planets](SI/data/planets.h), [moons](SI/data/moons.h), [materials](SI/data/materials.h), [ISO standards](SI/data/ISO.h), and [more...](SI/data/)
 * **Supports** SI base units, derived SI units, Imperial units, and many more.
 * **Wide compatibility** (just requires C++17 or higher) with **cross-platform** support (e.g. Linux gcc & clang, Windows VS2017-VS2026).
 * **Modern C++ lib**: header only, compact, own namespace ("SI::"), no external dependencies, with [unit tests](SI/tests.h).
@@ -67,15 +67,12 @@ Please find all 37 examples in: [examples.cpp](examples.cpp). Executing: `cmake 
   ├📄tests.h
   ├📄units.h
   ├📂data
-    ├📄densities.h
-    ├📄Earth.h
     ├📄ISO.h
-    ├📄Jupiter.h
-    ├📄Mars.h
-    ├📄Mercury.h
-    ├📄Moon.h 
+    ├📄materials.h 
+    ├📄moons.h 
     ├📄music.h
-    ├📄Sun.h
+    ├📄planets.h
+    ├📄stars.h
     (21 files, 3 folders, 112K total)
 ```
 
