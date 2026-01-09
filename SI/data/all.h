@@ -2,6 +2,7 @@
 #pragma once
 
 #include "ISO.h"
+#include "materials.h"
 #include "densities.h"
 #include "Sun.h"
 #include "Mercury.h"
