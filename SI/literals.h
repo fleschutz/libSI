@@ -63,6 +63,7 @@ SET( uA,    1e-6, ampere);              // 1_uA  (microampere)
 SET( nA,    1e-9, ampere);              // 1_nA  (nanoampere)
 SET( pA,   1e-12, ampere);              // 1_pA  (picoampere)
 // amount of substance (N_A) in...
+SET( Mmol,   1e6, mol);                 // 1_Mmol (megamole)
 SET( kmol,   1e3, mol);                 // 1_kmol (kilomole)
 SET( mol,      1, mol);                 // 1_mol
 SET( mmol,  1e-3, mol);                 // 1_mmol (millimole)
@@ -126,9 +127,18 @@ SET( MHz,    1e6, hertz);               // 1_MHz (megahertz)
 SET( kHz,    1e3, hertz);               // 1_kHz (kilohertz)
 SET( Hz,       1, hertz);               // 1_Hz  (hertz)
 SET( mHz,   1e-3, hertz);               // 1_mHz (millihertz)
-// activity referred to a radionuclide (A) in...
-SET( kBq,    1e3, hertz);               // 1_kBq
-SET( Bq,       1, hertz);               // 1_Bq (Bequerel)
+// radioactive activity (A) in...
+SET( TBq,   1e12, hertz);               // 1_TBq (terabecquerel)
+SET( GBq,    1e9, hertz);               // 1_GBq (gigabecquerel)
+SET( MBq,    1e6, hertz);               // 1_MBq (megabecquerel)
+SET( kBq,    1e3, hertz);               // 1_kBq (kilobecquerel)
+SET( Bq,       1, hertz);               // 1_Bq  (becquerel)
+// absorbed dose (D) in...
+SET( Gy,       1, gray);                // 1_Gy (gray)
+// equivalent dose (H) and effective dose (E) in...
+SET( Sv,       1, sievert);             // 1_Sv  (sievert)
+SET( mSv,   1e-3, sievert);             // 1_mSv (millisievert)
+SET( uSv,   1e-6, sievert);             // 1_uSv (microsievert)
 // mass per area in...
 SET( t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
 SET( kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
@@ -223,12 +233,6 @@ SET( kW_per_m²,1e3, watts_per_meter2);  // 1_kW_per_m² (kilowatt per square me
 SET( W_per_m², 1, watts_per_meter2);    // 1_W_per_m² (watt per square metre)
 SET( mW_per_m²,1e-3, watts_per_meter2); // 1_mW_per_m² (milliwatt per square metre)
 SET( uW_per_m²,1e-6, watts_per_meter2); // 1_uW_per_m² (milliwatt per square metre)
-// equivalent dose (H) in...
-SET( Sv,       1, sievert);             // 1_Sv  (sievert)
-SET( mSv,   1e-3, sievert);             // 1_mSv (millisievert)
-SET( uSv,   1e-6, sievert);             // 1_uSv (microsievert)
-// absorbed dose (D), kerma in...
-SET( Gy,       1, gray);                // 1_Gy (gray)
 // pressure (p) in...
 SET( MPa,    1e6, pascal_);             // 1_MPa  (megapascal) 
 SET( kPa,    1e3, pascal_);             // 1_kPa  (kilopascal) 
@@ -262,7 +266,7 @@ SET( sr,       1, steradian);           // 1_sr   (steradian)
 SET( Gpc,           30'856'775'814'913'673e9, meter);  // 1_Gpc (gigaparsec, as of IAU 2012)
 SET( Mpc,           30'856'775'814'913'673e6, meter);  // 1_Mpc (megaparsec, as of IAU 2012)
 SET( kpc,           30'856'775'814'913'673e3, meter);  // 1_kpc (kiloparsec, as of IAU 2012)
-SET( pc,              30'856'775'814'913'673, meter);  // 1_pc  (parsec, as of IAU 2012)
+SET( pc,            30'856'775'814'913'673e0, meter);  // 1_pc  (parsec, as of IAU 2012)
 SET( ly,               9'460'730'472'580'800, meter);  // 1_ly  (light-year)
 SET( au,                     149'597'870'700, meter);  // 1_au  (astronomical unit)
 // imperial units in...

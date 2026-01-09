@@ -1,4 +1,4 @@
-// SI/tests.h - unit tests to check SI-lib's functionality.
+// SI/tests.h - unit tests to check the SI-lib
 #pragma once
 
 #include <cassert>
@@ -38,12 +38,17 @@ namespace SI
 	static_assert(1_cm == 0.01_m);
 	static_assert(1_mm == 0.001_m);
 	static_assert(1_um == 0.001_mm);
+	static_assert(1_nm == 0.001_um);
+	static_assert(1_pm == 0.001_nm);
 	// time in...
+	static_assert(1_day == 24_h);
 	static_assert(1_h   == 60_min);
 	static_assert(1_min == 60_s);
 	static_assert(1_s   == 1000_ms);
 	static_assert(1_ms  == 0.001_s);
 	static_assert(1_us  == 0.001_ms);
+	static_assert(1_ns  == 0.001_us);
+	static_assert(1_ps  == 0.001_ns);
 	// mass in...
 	static_assert(1_Gt == 1000_Mt);
 	static_assert(1_Mt == 1000_kt);
@@ -53,6 +58,7 @@ namespace SI
 	static_assert(1_g  == 0.001_kg);
 	static_assert(1_mg == 0.001_g);
 	static_assert(1_ug == 0.001_mg);
+	static_assert(1_ng == 0.001_ug);
 	// thermodynamic temperature in...
 	static_assert(1_GK == 1000_MK);
 	static_assert(1_MK == 1000_kK);
@@ -67,12 +73,16 @@ namespace SI
 	static_assert(1_mA == 0.001_A);
 	static_assert(1_uA == 0.001_mA);
 	static_assert(1_nA == 0.001_uA);
+	static_assert(1_pA == 0.001_nA);
 	// amount of substance in...
+	static_assert(1_Mmol == 1000_kmol);
 	static_assert(1_kmol == 1000_mol);
 	static_assert(1_mol  == 0.001_kmol);
 	static_assert(1_mmol == 0.001_mol);
 	static_assert(1_umol == 0.001_mmol);
 	static_assert(1_nmol == 0.001_umol);
+	static_assert(1_pmol == 0.001_nmol);
+	static_assert(1_fmol == 0.001_pmol);
 	// luminous intensity in...
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
@@ -94,9 +104,10 @@ namespace SI
 	static_assert(1_km³ == 1_km * 1_km * 1_km);
 	static_assert(1_m³  == 1_m * 1_m * 1_m);
 	// velocity in...
+	static_assert(1_km_per_s == 1000_m_per_s);
 	static_assert(3.6_km_per_h == 1_m_per_s);
 	// acceleration in...
-	// TODO
+	static_assert(1_km_per_s² == 1000_m_per_s²);
 	// frequency in :
 	static_assert(1_THz == 1000_GHz);
 	static_assert(1_GHz == 1000_MHz);
@@ -105,50 +116,98 @@ namespace SI
 	static_assert(1_Hz  == 0.001_kHz);
 	static_assert(1_Hz  == 0.000001_MHz);
 	static_assert(1_Hz  == 0.000000001_GHz);
-	// radioactivity in...
-	// TODO
+	static_assert(1_mHz == 0.001_Hz);
+	// radioactive activity (A) in...
+	static_assert(1_TBq == 1000_GBq);
+	static_assert(1_GBq == 1000_MBq);
+	static_assert(1_MBq == 1000_kBq);
+	static_assert(1_kBq == 1000_Bq);
+	// equivalent dose (H) and effective dose (E) in...
+	static_assert(1_Sv  == 1000_mSv);
+	static_assert(1_mSv == 1000_uSv);
 	// mass per area in...
-	// TODO
+	static_assert(1_t_per_m² == 1000_kg_per_m²);
 	// mass per volume in...
-	// TODO
-	// electric potential in...
-	// TODO
-	// electric resistance in...
-	// TODO
-	// electric conductance in...
-	// TODO
-	// electric conductivity in...
-	// TODO
-	// electric charge in...
-	// TODO
-	// electric capacitance in...
-	// TODO
-	// electric inductance in...
-	// TODO
+	static_assert(1_t_per_m³ == 1000_kg_per_m³);
+	// electric potential (U) in...
+	static_assert(1_GV == 1000_MV);
+	static_assert(1_MV == 1000_kV);
+	static_assert(1_kV == 1000_V);
+	static_assert(1_V  == 1000_mV);
+	static_assert(1_mV == 1000_uV);
+	static_assert(1_uV == 1000_nV);
+	static_assert(1_nV == 1000_pV);
+	// electric resistance (R) in...
+	static_assert(1_GOhm == 1000_MOhm);
+	static_assert(1_MOhm == 1000_kOhm);
+	static_assert(1_kOhm == 1000_Ohm);
+	static_assert(1_Ohm  == 1000_mOhm);
+	static_assert(1_mOhm == 1000_uOhm);
+	// electric conductance (G) in...
+	static_assert(1_MS == 1000_kS);
+	static_assert(1_kS == 1000_S);
+	static_assert(1_S  == 1000_mS);
+	static_assert(1_mS == 1000_uS);
+	// electric conductivity (σ) in...
+	static_assert(1_MS_per_m == 1000_kS_per_m);
+	static_assert(1_kS_per_m == 1000_S_per_m);
+	// electric charge (Q) in...
+	static_assert(1_GAh == 1000_MAh);
+	static_assert(1_MAh == 1000_kAh);
+	static_assert(1_kAh == 1000_Ah);
+	static_assert(1_Ah  == 1000_mAh);
+	static_assert(1_mAh == 1000_uAh);
+	// electric capacitance (C) in...
+	static_assert(1_F  == 1000_mF);
+	static_assert(1_mF == 1000_uF);
+	static_assert(1_uF == 1000_nF);
+	static_assert(1_nF == 1000_pF);
+	// electric inductance (L) in...
+	static_assert(1_H   == 1000_mH);
+	static_assert(1_mH  == 1000_uH);
 	// magnetic flux in...
-	// TODO
-	// magnetic field in...
-	// TODO
-	// energy in...
-	// TODO
-	// active power in...
-	// TODO
+	// magnetic field (B) in...
+	static_assert(1_T  == 1000_mT);
+	static_assert(1_mT == 1000_uT);
+	static_assert(1_uT == 1000_nT);
+	// energy (E) in...
+	static_assert(1_PJ == 1000_TJ);
+	static_assert(1_TJ == 1000_GJ);
+	static_assert(1_GJ == 1000_MJ);
+	static_assert(1_MJ == 1000_kJ);
+	static_assert(1_kJ == 1000_J);
+	static_assert(1_J  == 1000_mJ);
+	// active power (P) in...
+	static_assert(1_TW == 1000_GW);
+	static_assert(1_GW == 1000_MW);
+	static_assert(1_MW == 1000_kW);
+	static_assert(1_kW == 1000_W);
+	static_assert(1_W  == 1000_mW);
+	static_assert(1_mW == 1000_uW);
 	// active power per mass in...
 	// TODO
-	// equivalent dose in...
-	// TODO
-	// absorbed dose in...
-	// TODO
-	// pressure in...
-	// TODO
-	// force in...
-	// TODO
+	// pressure (p) in...
+	static_assert(1_MPa == 1000_kPa);
+	static_assert(1_kPa == 1000_Pa);
+	static_assert(1_Pa  == 1000_mPa);
+	static_assert(1_mPa == 1000_uPa);
+	// force (F) in...
+	static_assert(1_GN == 1000_MN);
+	static_assert(1_MN == 1000_kN);
+	static_assert(1_kN == 1000_N);
+	static_assert(1_N  == 1000_mN);
+	static_assert(1_mN == 1000_uN);
+	static_assert(1_uN == 1000_pN);
 	// luminous flux in...
 	// TODO
 	// surface flow in...
 	// TODO
 	// volumetric flow in...
 	// TODO
+	// astronomical distances in...
+	static_assert(1_Gpc == 1000_Mpc);
+	static_assert(1_Mpc == 1000_kpc);
+	static_assert(1_kpc == 1000_pc);
 	// Imperial units in...
 	static_assert(1_NM == 1852_m);
 	static_assert(1_ft == 0.3048_m);
@@ -162,4 +221,8 @@ namespace SI
 	static_assert(1_GB == 1000_MB);
 	static_assert(1_MB == 1000_kB);
 	static_assert(1_kB == 1000_byte);
+	// pressure in...
+	static_assert(1_Mbar == 1000_kbar);
+	static_assert(1_kbar == 1000_bar);
+	static_assert(1_bar  == 1000_mbar);
 }
