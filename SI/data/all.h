@@ -3,7 +3,7 @@
 
 #include "ISO.h"
 #include "materials.h"
-#include "Sun.h"
+#include "stars.h"
 #include "Mercury.h"
 #include "Venus.h"
 #include "Earth.h"
