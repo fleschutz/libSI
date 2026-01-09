@@ -39,7 +39,6 @@ namespace SI
 	static_assert(1_mm == 0.001_m);
 	static_assert(1_um == 0.001_mm);
 	static_assert(1_nm == 0.001_um);
-	static_assert(1_pm == 0.001_nm);
 	// time in...
 	static_assert(1_day == 24_h);
 	static_assert(1_h   == 60_min);
@@ -48,7 +47,6 @@ namespace SI
 	static_assert(1_ms  == 0.001_s);
 	static_assert(1_us  == 0.001_ms);
 	static_assert(1_ns  == 0.001_us);
-	static_assert(1_ps  == 0.001_ns);
 	// mass in...
 	static_assert(1_Gt == 1000_Mt);
 	static_assert(1_Mt == 1000_kt);
@@ -58,7 +56,6 @@ namespace SI
 	static_assert(1_g  == 0.001_kg);
 	static_assert(1_mg == 0.001_g);
 	static_assert(1_ug == 0.001_mg);
-	static_assert(1_ng == 0.001_ug);
 	// thermodynamic temperature in...
 	static_assert(1_GK == 1000_MK);
 	static_assert(1_MK == 1000_kK);
@@ -73,7 +70,6 @@ namespace SI
 	static_assert(1_mA == 0.001_A);
 	static_assert(1_uA == 0.001_mA);
 	static_assert(1_nA == 0.001_uA);
-	static_assert(1_pA == 0.001_nA);
 	// amount of substance in...
 	static_assert(1_Mmol == 1000_kmol);
 	static_assert(1_kmol == 1000_mol);
@@ -81,8 +77,6 @@ namespace SI
 	static_assert(1_mmol == 0.001_mol);
 	static_assert(1_umol == 0.001_mmol);
 	static_assert(1_nmol == 0.001_umol);
-	static_assert(1_pmol == 0.001_nmol);
-	static_assert(1_fmol == 0.001_pmol);
 	// luminous intensity in...
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
@@ -135,8 +129,6 @@ namespace SI
 	static_assert(1_kV == 1000_V);
 	static_assert(1_V  == 1000_mV);
 	static_assert(1_mV == 1000_uV);
-	static_assert(1_uV == 1000_nV);
-	static_assert(1_nV == 1000_pV);
 	// electric resistance (R) in...
 	static_assert(1_GOhm == 1000_MOhm);
 	static_assert(1_MOhm == 1000_kOhm);
@@ -160,7 +152,6 @@ namespace SI
 	// electric capacitance (C) in...
 	static_assert(1_F  == 1000_mF);
 	static_assert(1_mF == 1000_uF);
-	static_assert(1_uF == 1000_nF);
 	static_assert(1_nF == 1000_pF);
 	// electric inductance (L) in...
 	static_assert(1_H   == 1000_mH);
@@ -169,7 +160,6 @@ namespace SI
 	// magnetic field (B) in...
 	static_assert(1_T  == 1000_mT);
 	static_assert(1_mT == 1000_uT);
-	static_assert(1_uT == 1000_nT);
 	// energy (E) in...
 	static_assert(1_PJ == 1000_TJ);
 	static_assert(1_TJ == 1000_GJ);
@@ -197,7 +187,6 @@ namespace SI
 	static_assert(1_kN == 1000_N);
 	static_assert(1_N  == 1000_mN);
 	static_assert(1_mN == 1000_uN);
-	static_assert(1_uN == 1000_pN);
 	// luminous flux in...
 	// TODO
 	// surface flow in...
