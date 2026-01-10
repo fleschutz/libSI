@@ -95,19 +95,19 @@ SET( per_μm², 1e9, per_meter2);         // 1_per μm² (per square micrometer)
 // surface flow (s) in...
 SET( m²_per_s, 1, meters2_per_second);  // 1_m²/s (square meter per second)
 // volume in...
-SET( km³,    1e9, meter3);              // 1_km³ (cubic kilometer)
-SET( m³,       1, meter3);              // 1_m³  (cubic meter)
-SET( dm³,   1e-3, meter3);              // 1_dm³ (cubic decimeter)
-SET( cm³,   1e-6, meter3);              // 1_cm³ (cubic centimeter)
-SET( mm³,   1e-9, meter3);              // 1_mm³ (cubic millimeter)
-SET( um³,  1e-12, meter3);              // 1_um³ (cubic micrometer)
+SET( km³,    1e9, meters3);             // 1_km³ (cubic kilometer)
+SET( m³,       1, meters3);             // 1_m³  (cubic meter)
+SET( dm³,   1e-3, meters3);             // 1_dm³ (cubic decimeter)
+SET( cm³,   1e-6, meters3);             // 1_cm³ (cubic centimeter)
+SET( mm³,   1e-9, meters3);             // 1_mm³ (cubic millimeter)
+SET( um³,  1e-12, meters3);             // 1_um³ (cubic micrometer)
 // or in...
-SET( hl,     0.1, meter3);              // 1_hl  (hectoliter)
-SET( l,     1e-3, meter3);              // 1_l   (liter)
-SET( ml,    1e-6, meter3);              // 1_ml  (milliliter)
-SET( ul,    1e-9, meter3);              // 1_ul  (microliter)
-SET( nl,   1e-12, meter3);              // 1_nl  (nanoliter)
-SET( pl,   1e-15, meter3);              // 1_pl  (picoliter)
+SET( hl,     0.1, meters3);             // 1_hl  (hectoliter)
+SET( l,     1e-3, meters3);             // 1_l   (liter)
+SET( ml,    1e-6, meters3);             // 1_ml  (milliliter)
+SET( ul,    1e-9, meters3);             // 1_ul  (microliter)
+SET( nl,   1e-12, meters3);             // 1_nl  (nanoliter)
+SET( pl,   1e-15, meters3);             // 1_pl  (picoliter)
 // volumetric flow (V) in...
 SET( m³_per_s, 1, meters3_per_second);   // 1_m³/s (cubic meter per second)
 SET( l_per_min,1.0/60000.0, meters3_per_second);   // 1_l_per_min (liter per minute)
@@ -255,8 +255,8 @@ SET( lm_per_W, 1, lumens_per_watt);     // 1_lm_per_W (lumen per watt)
 // other...
 SET( Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
 // SI supplementary units in...
-SET( rad,      1, radian);              // 1_rad (radian)
-SET( deg,0.01745329251994329576923690768489, radian); // 1_deg  (angle degree)
+SET( rad,      1, radians);             // 1_rad (radian)
+SET( deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 SET( sr,       1, steradians);          // 1_sr  (steradian)
 
 // Non-SI Units

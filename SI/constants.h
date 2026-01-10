@@ -90,10 +90,10 @@ SET(speed_of_sound_in_iron,         5120, meters_per_second);
 SET(speed_of_sound_in_diamonds,   12'000, meters_per_second);
 
 // Mathematical constants
-SET(pi,           3.14159265358979323846, radian); // (symbol: π)
-SET(half_pi,      1.57079632679489661923, radian);
-SET(quarter_pi,   0.78539816339744830961, radian);
-SET(tau,          6.28318530717958647692, radian); // (symbol: τ)
+SET(pi,           3.14159265358979323846, radians); // (symbol: π)
+SET(half_pi,      1.57079632679489661923, radians);
+SET(quarter_pi,   0.78539816339744830961, radians);
+SET(tau,          6.28318530717958647692, radians); // (symbol: τ)
 SET(phi,          1.61803398874989484820, dimensionless); // (symbol: φ)
 SET(Eulers_number,2.71828182845904523536, dimensionless);
 

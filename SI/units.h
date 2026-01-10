@@ -742,14 +742,14 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto meters2_per_second = meter2 / second;
 	SI_INLINE_CONSTEXPR auto kilograms_per_meter2 = kilogram / meter2;
 
-	SI_INLINE_CONSTEXPR auto meter3      = unit<volume>(); // (cubic meter)
-	SI_INLINE_CONSTEXPR auto kilometer3  = kilo * kilo * kilo * meter3;
-	SI_INLINE_CONSTEXPR auto centimeter3 = centi * centi * centi * meter3;
+	SI_INLINE_CONSTEXPR auto meters3     = unit<volume>(); // (cubic meter)
+	SI_INLINE_CONSTEXPR auto kilometers3 = kilo * kilo * kilo * meters3;
+	SI_INLINE_CONSTEXPR auto centimeters3 = centi * centi * centi * meters3;
 
-	SI_INLINE_CONSTEXPR auto meters3_per_second = meter3 / second;
-	SI_INLINE_CONSTEXPR auto meters3_per_kilogram_per_second2 = meter3 / kilogram / (second * second);
-	SI_INLINE_CONSTEXPR auto kilograms_per_meter3 = kilogram / meter3;
-	SI_INLINE_CONSTEXPR auto grams_per_centimeter3 = gram / centimeter3;
+	SI_INLINE_CONSTEXPR auto meters3_per_second = meters3 / second;
+	SI_INLINE_CONSTEXPR auto meters3_per_kilogram_per_second2 = meters3 / kilogram / (second * second);
+	SI_INLINE_CONSTEXPR auto kilograms_per_meter3 = kilogram / meters3;
+	SI_INLINE_CONSTEXPR auto grams_per_centimeter3 = gram / centimeters3;
 
 	SI_INLINE_CONSTEXPR auto meters_per_second = unit<velocity>();
 	SI_INLINE_CONSTEXPR auto kilometers_per_hour = kilometer / hour;
@@ -804,7 +804,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto lumens_per_watt = lumens / watts; 
 
 	SI_INLINE_CONSTEXPR auto kilograms_per_mol = kilogram / mol;
-	SI_INLINE_CONSTEXPR auto mols_per_meter3 = mol / meter3;
+	SI_INLINE_CONSTEXPR auto mols_per_meter3 = mol / meters3;
 	SI_INLINE_CONSTEXPR auto mols_per_kilogram = mol / kilogram;
 	SI_INLINE_CONSTEXPR auto mols_per_second = mol / second;
 	SI_INLINE_CONSTEXPR auto per_mol      = unit<per_amount_of_substance>(); 
@@ -827,21 +827,21 @@ namespace SI
 
 	// ANGLE (DIMENSIONLESS)
 	typedef long double angle;
-	typedef angle radian;
+	typedef angle radians;
 
 	SI_INLINE angle sin(angle a)
 	{
-		return std::sin(radian(a));
+		return std::sin(radians(a));
 	}
 
 	SI_INLINE angle cos(angle a)
 	{
-		return std::cos(radian(a));
+		return std::cos(radians(a));
 	}
 
 	SI_INLINE angle tan(angle a)
 	{
-		return std::tan(radian(a));
+		return std::tan(radians(a));
 	}
 
 	SI_INLINE angle atan2(length y, length x)

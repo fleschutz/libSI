@@ -18,7 +18,7 @@ SET( mean_diameter,       mean_radius * 2, meter);
 SET( surface_area,            510'072'000, kilometer2);
 SET( land_area,               148'940'000, kilometer2);
 SET( water_area,              361'132'000, kilometer2);
-SET( volume,                   1.08321e12, kilometer3);
+SET( volume,                   1.08321e12, kilometers3);
 SET( mass,                      5.9723e24, kilogram);
 SET( equatorial_rotation_velocity, 1674.4, kilometers_per_hour);
 SET( natural_satellites,                1, dimensionless); // see Moon.h

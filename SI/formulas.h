@@ -17,19 +17,19 @@ length hypotenuse_of_triangle(length a, length b)
 // Calculates the angle in a right triangle, based on opposite and hypotenuse.
 angle angle1_in_triangle(length opposite, length hypotenuse)
 {
-	return radian(asin(opposite / hypotenuse));
+	return radians(asin(opposite / hypotenuse));
 }
 
 // Calculates the angle in a right triangle, based on adjacent and hypotenuse.
 angle angle2_in_triangle(length adjacent, length hypotenuse)
 {
-	return radian(acos(adjacent / hypotenuse));
+	return radians(acos(adjacent / hypotenuse));
 }
 
 // Calculates the angle in a right triangle, based on adjacent and opposite.
 angle angle3_in_triangle(length adjacent, length opposite)
 {
-	return radian(atan(opposite / adjacent));
+	return radians(atan(opposite / adjacent));
 }
 
 area area_of_triangle(length base, length height)
