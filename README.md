@@ -35,7 +35,7 @@ Please find all 35 examples in: [examples.cpp](examples.cpp). Executing: `cmake 
 2. What's the free fall time from Burj Khalifa tower in Dubai? 12.99sec
 3. What's the average speed of Kiptum's world record in Marathon? 21.10km/h
 4. What's the kinetic energy of a car at 50 km/h? 125.39kJ
-5. What's the wavelength of H2 in vacuum? 21.11cm
+5. What's the wavelength of hydrogen (H2) in vacuum? 21.11cm
 6. What's the frequency and wavelength of the high 'c' music note? 1.05kHz, 32.78cm
 7. What's the population density on Earth (people per km² of land area)? 55.06/km²
 8. How much land area would be available for each person on Earth? 1.82hm²

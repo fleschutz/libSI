@@ -11,7 +11,7 @@ int main()
 
 	print("\n2. What's the free fall time from Burj Khalifa tower in Dubai? ");
 	auto tower_height = 828_m;
-	auto time = formula::time_of_free_fall(tower_height, data::Earth.surface_gravity);
+	auto time = formula::time_of_free_fall(tower_height, constant::standard_gravity);
 	print(time);
 
 	print("\n3. What's the average speed of Kiptum's world record in Marathon? ");
@@ -22,11 +22,11 @@ int main()
 
  	print("\n4. What's the kinetic energy of a car at 50 km/h? ");
 	auto car_mass = 1300_kg;
-	auto speed_limit = 50_km_per_h;
-	auto KE = formula::kinetic_energy(car_mass, speed_limit);
+	auto car_speed = 50_km_per_h;
+	auto KE = formula::kinetic_energy(car_mass, car_speed);
 	print(KE);
 
-	print("\n5. What's the wavelength of H2 in vacuum? ");
+	print("\n5. What's the wavelength of hydrogen (H2) in vacuum? ");
 	auto H2_frequency = 1420.4057517682_MHz;
 	auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
 	print(H2_wavelength);
