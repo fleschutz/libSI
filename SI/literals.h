@@ -1,4 +1,4 @@
-// SI/literals.h - literals based on type-safe SI units, e.g. 7_km (requires C++11 or higher)
+// SI/literals.h - convenient literals for SI units, e.g. 7_km (requires C++11 or higher)
 #pragma once
 
 #include "units.h"
@@ -63,20 +63,20 @@ SET( uA,    1e-6, ampere);              // 1_uA  (microampere)
 SET( nA,    1e-9, ampere);              // 1_nA  (nanoampere)
 SET( pA,   1e-12, ampere);              // 1_pA  (picoampere)
 // amount of substance (N_A) in...
-SET( Mmol,   1e6, mol);                 // 1_Mmol (megamole)
-SET( kmol,   1e3, mol);                 // 1_kmol (kilomole)
-SET( mol,      1, mol);                 // 1_mol
-SET( mmol,  1e-3, mol);                 // 1_mmol (millimole)
-SET( umol,  1e-6, mol);                 // 1_umol (micromole)
-SET( nmol,  1e-9, mol);                 // 1_nmol (nanomole)
-SET( pmol, 1e-12, mol);                 // 1_pmol (picomole)
-SET( fmol, 1e-15, mol);                 // 1_fmol (femtomole)
+SET( Mmol,   1e6, moles);               // 1_Mmol (megamole)
+SET( kmol,   1e3, moles);               // 1_kmol (kilomole)
+SET( mol,      1, moles);               // 1_mol
+SET( mmol,  1e-3, moles);               // 1_mmol (millimole)
+SET( umol,  1e-6, moles);               // 1_umol (micromole)
+SET( nmol,  1e-9, moles);               // 1_nmol (nanomole)
+SET( pmol, 1e-12, moles);               // 1_pmol (picomole)
+SET( fmol, 1e-15, moles);               // 1_fmol (femtomole)
 // luminous intensity (J) in...
 SET( kcd,    1e3, candelas);            // 1_kcd (kilocandela)
 SET( cd,       1, candelas);            // 1_cd  (candela)
 
-// The 22 Derived SI Units
-// -----------------------
+// The Derived SI Units
+// --------------------
 // SYMBOL FACTOR  BASE UNIT                EXAMPLE
 // area in...
 SET( km²,    1e6, meters2);             // 1_km² (square kilometer)

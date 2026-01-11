@@ -12,38 +12,38 @@
 namespace SI
 {
 	// The 7 Base SI Datatypes
-	// -----------------------       l  m  t  T  A  s  i
-	SI_DATATYPE(length,              1, 0, 0, 0, 0, 0, 0); // in m
-	SI_DATATYPE(mass,                0, 1, 0, 0, 0, 0, 0); // in kg
-	SI_DATATYPE(time,                0, 0, 1, 0, 0, 0, 0); // in s
-	SI_DATATYPE(temperature,         0, 0, 0, 1, 0, 0, 0); // in K (thermodynamic temperature)
-	SI_DATATYPE(electric_current,    0, 0, 0, 0, 1, 0, 0); // in A
-	SI_DATATYPE(amount_of_substance, 0, 0, 0, 0, 1, 1, 0); // in mol
-	SI_DATATYPE(luminous_intensity,  0, 0, 0, 0, 1, 0, 1); // in cal
+	// -----------------------          l  m  t  T  A  s  i
+	SI_DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in m
+	SI_DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kg
+	SI_DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in s
+	SI_DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in K (thermodynamic temperature)
+	SI_DATATYPE(electric_current,       0, 0, 0, 0, 1, 0, 0); // in A
+	SI_DATATYPE(amount_of_substance,    0, 0, 0, 0, 1, 1, 0); // in mol
+	SI_DATATYPE(luminous_intensity,     0, 0, 0, 0, 1, 0, 1); // in cal
 
 	// The Derived SI Datatypes
 	// ------------------------
-	SI_DATATYPE(per_length,         -1, 0,  0, 0, 0, 0, 0); // per m (reciprocal)
-	SI_DATATYPE(area,                2, 0,  0, 0, 0, 0, 0); // in m²
-	SI_DATATYPE(per_area,           -2, 0,  0, 0, 0, 0, 0); // per m² (reciprocal)
-	SI_DATATYPE(volume,              3, 0,  0, 0, 0, 0, 0); // in m³
-	SI_DATATYPE(frequency,           0, 0, -1, 0, 0, 0, 0); // per s (reciprocal)
-	SI_DATATYPE(velocity,            1, 0, -1, 0, 0, 0, 0); // in m/s
-	SI_DATATYPE(acceleration,        1, 0, -2, 0, 0, 0, 0); // in m/s²
-	SI_DATATYPE(jerk,                1, 0, -3, 0, 0, 0, 0);
-	SI_DATATYPE(force,               1, 1, -2, 0, 0, 0, 0); // in N
-	SI_DATATYPE(energy,              2, 1, -2, 0, 0, 0, 0); // in Nm
-	SI_DATATYPE(impulse,             1, 1, -1, 0, 0, 0, 0);
-	SI_DATATYPE(pressure,           -1, 1, -2, 0, 0, 0, 0); // in Pa
-	SI_DATATYPE(torque,              2, 1, -2, 0, 0, 0, 0);
-	SI_DATATYPE(power,               2, 1, -3, 0, 0, 0, 0); // in W
-	SI_DATATYPE(power_intensity,     0, 1, -3, 0, 0, 0, 0); // in W/m²
-	SI_DATATYPE(density,            -3, 1,  0, 0, 0, 0, 0); // in kg/m³
-	SI_DATATYPE(electric_potential,  2, 1, -3, 0,-1, 0, 0); // in V
-	SI_DATATYPE(electric_charge,     0, 0,  1, 0, 1, 0, 0); // (electric current and time)
-	SI_DATATYPE(mass_per_area,      -2, 1,  0, 0, 0, 0, 0); // in kg/m²)
-	SI_DATATYPE(per_amount_of_substance,0, 0,  0, 0,-1, 0, 0);// per mol (reciprocal)
-	SI_DATATYPE(angular_speed,       0, 0, -1, 0, 1, 0, 0); // in °/s
+	SI_DATATYPE(per_length,            -1, 0,  0, 0, 0, 0, 0); // per m (reciprocal)
+	SI_DATATYPE(area,                   2, 0,  0, 0, 0, 0, 0); // in m²
+	SI_DATATYPE(per_area,              -2, 0,  0, 0, 0, 0, 0); // per m² (reciprocal)
+	SI_DATATYPE(volume,                 3, 0,  0, 0, 0, 0, 0); // in m³
+	SI_DATATYPE(frequency,              0, 0, -1, 0, 0, 0, 0); // per s (reciprocal)
+	SI_DATATYPE(velocity,               1, 0, -1, 0, 0, 0, 0); // in m/s
+	SI_DATATYPE(acceleration,           1, 0, -2, 0, 0, 0, 0); // in m/s²
+	SI_DATATYPE(jerk,                   1, 0, -3, 0, 0, 0, 0); // in m/s³
+	SI_DATATYPE(force,                  1, 1, -2, 0, 0, 0, 0); // in N
+	SI_DATATYPE(energy,                 2, 1, -2, 0, 0, 0, 0); // in Nm
+	SI_DATATYPE(impulse,                1, 1, -1, 0, 0, 0, 0); // in kg*m/s
+	SI_DATATYPE(pressure,              -1, 1, -2, 0, 0, 0, 0); // in Pa
+	SI_DATATYPE(torque,                 2, 1, -2, 0, 0, 0, 0); // in kg*m²/s²
+	SI_DATATYPE(power,                  2, 1, -3, 0, 0, 0, 0); // in W
+	SI_DATATYPE(power_intensity,        0, 1, -3, 0, 0, 0, 0); // in W/m²
+	SI_DATATYPE(density,               -3, 1,  0, 0, 0, 0, 0); // in kg/m³
+	SI_DATATYPE(electric_potential,     2, 1, -3, 0,-1, 0, 0); // in V
+	SI_DATATYPE(electric_charge,        0, 0,  1, 0, 1, 0, 0); // (electric current and time)
+	SI_DATATYPE(mass_per_area,         -2, 1,  0, 0, 0, 0, 0); // in kg/m²)
+	SI_DATATYPE(per_amount_of_substance,0, 0,  0, 0,-1, 0, 0); // per mol (reciprocal)
+	SI_DATATYPE(angular_speed,          0, 0, -1, 0, 1, 0, 0); // in °/s
 
 	// The SI Prefixes
 	// ---------------
@@ -83,7 +83,7 @@ namespace SI
 	// electric current in...
 	SI_INLINE_CONSTEXPR auto ampere      = unit<electric_current>();
 	// amount of substance in...
-	SI_INLINE_CONSTEXPR auto mol         = unit<amount_of_substance>(); 
+	SI_INLINE_CONSTEXPR auto moles       = unit<amount_of_substance>(); 
 	// luminous intensity in...
 	SI_INLINE_CONSTEXPR auto candelas    = unit<luminous_intensity>();
 
@@ -123,7 +123,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto joules_per_kelvin = joules / kelvin;
 	SI_INLINE_CONSTEXPR auto joules_per_second_per_kilogram = joules / second / kilogram;
 	SI_INLINE_CONSTEXPR auto joules_per_kilogram_per_kelvin = joules / kilogram / kelvin;
-	SI_INLINE_CONSTEXPR auto joules_per_kelvin_per_mol = joules / kelvin / mol;
+	SI_INLINE_CONSTEXPR auto joules_per_kelvin_per_mol = joules / kelvin / moles;
 
 	SI_INLINE_CONSTEXPR auto gray = joules / kilogram;
 	SI_INLINE_CONSTEXPR auto sievert = joules / kilogram;
@@ -139,7 +139,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto ampere_hours= ampere * hour;
 
 	SI_INLINE_CONSTEXPR auto coulombs     = unit<electric_charge>();
-	SI_INLINE_CONSTEXPR auto coulombs_per_mol = coulombs / mol;
+	SI_INLINE_CONSTEXPR auto coulombs_per_mol = coulombs / moles;
 
 	SI_INLINE_CONSTEXPR auto volt        = unit<electric_potential>();
 	SI_INLINE_CONSTEXPR auto farad       = coulombs / volt;
@@ -159,10 +159,10 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto lumenseconds= lumens * second;
 	SI_INLINE_CONSTEXPR auto lumens_per_watt = lumens / watts; 
 
-	SI_INLINE_CONSTEXPR auto kilograms_per_mol = kilogram / mol;
-	SI_INLINE_CONSTEXPR auto mols_per_meter3 = mol / meters3;
-	SI_INLINE_CONSTEXPR auto mols_per_kilogram = mol / kilogram;
-	SI_INLINE_CONSTEXPR auto mols_per_second = mol / second;
+	SI_INLINE_CONSTEXPR auto kilograms_per_mol = kilogram / moles;
+	SI_INLINE_CONSTEXPR auto mols_per_meter3 = moles / meters3;
+	SI_INLINE_CONSTEXPR auto mols_per_kilogram = moles / kilogram;
+	SI_INLINE_CONSTEXPR auto mols_per_second = moles / second;
 	SI_INLINE_CONSTEXPR auto per_mol      = unit<per_amount_of_substance>(); 
 
 	// IMPERIAL UNITS
