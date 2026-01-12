@@ -349,6 +349,13 @@ namespace SI
 		return _join(value, "");
 	}
 
+	std::string to_string(char glyph)
+	{
+		char buf[256];
+		std::snprintf(buf, sizeof(buf), "%c", glyph);
+		return std::string(buf);
+	}
+
 	std::string to_string(const std::string& text)
 	{
 		return text;

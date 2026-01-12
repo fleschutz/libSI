@@ -227,6 +227,18 @@ int main()
 	auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, data::Moon.surface_gravity);
 	print(max_height, max_range, flight_time);
 } {
+	print("\n35. What are the frequencies and wavelengths of all music notes? ");
+	auto reference_note = 49;     // reference note is A in octave 4 (ranks #49 on a piano)...
+	auto reference_freq = 440_Hz; // ... which is at 440Hz.
+	auto notes = "CDEFGAB";       // notes string starting from A
+	for (int note = 1; note < 89; note++)
+	{
+		auto frequency = formula::frequency_of_chromatic_note(note, reference_note, reference_freq);
+		auto wavelength = formula::wavelength(constant::speed_of_sound, frequency);
+		print(notes[note % 7], frequency, wavelength);
+		print(" | ");
+	}
+} {
 	for (const auto& material : data::materials)
 	{
 		print("\n");

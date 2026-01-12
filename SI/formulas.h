@@ -206,6 +206,12 @@ length vertical_height(angle glide_path, length horizontal_distance)
 
 // Various Formulas
 // ----------------
+
+frequency frequency_of_chromatic_note(int note, int reference_note, frequency reference_frequency)
+{
+	return std::pow(std::pow(2., 1. / 12.), note - reference_note) * reference_frequency;
+}
+
 // Calculates the wavelength from velocity and frequency.
 length wavelength(velocity v, frequency f)
 {
