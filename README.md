@@ -48,14 +48,14 @@ Please find 34 more examples in: [examples.cpp](examples.cpp). Executing: `cmake
 
 🧱 The 8 Layers of libSI
 -------------------------
-1. **SI datatypes** such as SI::length, SI::mass or SI::time in [units.h](SI/units.h).
-2. **Units** such as SI::meters, SI::kilograms or SI::seconds in [units.h](SI/units.h).
-3. **Literals** such as 100_m, 50_kg or 60_sec in [literals.h](SI/literals.h).
-4. **Constants** such as SI::constant::speed_of_light in [constants.h](SI/constants.h).
-5. **Formulas** such as SI::formula::wavelength() in [formulas.h](SI/formulas.h).
-6. **Import/export** with [SI::from_string()](SI/from_string.h), [SI::to_string()](SI/to_string.h), and [print()](SI/print.h).
-7. **Data** such as SI::data::planets in [data/](SI/data/).
-8. **[Unit tests](SI/tests.h)** at compile-time.
+1. **SI datatypes** such as SI::length, SI::mass or SI::time (see [units.h](SI/units.h))
+2. **Units** such as SI::meters, SI::kilograms or SI::seconds (see [units.h](SI/units.h))
+3. **Literals** such as 100_m, 50_kg or 60_sec (see [literals.h](SI/literals.h))
+4. **Constants** such as SI::constant::speed_of_light (see [constants.h](SI/constants.h))
+5. **Formulas** such as SI::formula::wavelength() (see [formulas.h](SI/formulas.h))
+6. **Import/export** with print(), from_string(), to_string() (see [print.h](SI/print.h)
+7. **Big data** such as SI::data::planets (see [data/](SI/data/)
+8. **Unit tests** at compile-time (see [tests.h](SI/tests.h)
 
 📁 Project Structure
 --------------------
