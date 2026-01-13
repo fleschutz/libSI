@@ -43,7 +43,6 @@ Please find 34 more examples in: [examples.cpp](examples.cpp). Executing: `cmake
 10. What's an aircraft's glide path on final at 10NM distance in 3000ft height? 2.83°
 11. What's the min speed required to escape from the Moon? 8552.41km/h
 12. What's the average speed to travel around the Earth in 80 days? 20.87km/h
-13. What's Donald Trump's body-mass index (BMI)? 28.25kg/m²
 ...
 ```
 
@@ -54,7 +53,7 @@ Please find 34 more examples in: [examples.cpp](examples.cpp). Executing: `cmake
 3. **Literals** such as 100_m, 50_kg or 60_sec in [literals.h](SI/literals.h).
 4. **Constants** such as SI::constant::speed_of_light in [constants.h](SI/constants.h).
 5. **Formulas** such as SI::formula::wavelength() in [formulas.h](SI/formulas.h).
-6. **Import/export** with SI::from_string() and SI::to_string() in [from_string.h](SI/from_string.h) and [to_string.h](SI/to_string.h).
+6. **Import/export** with [SI::from_string()](SI/from_string.h), [SI::to_string()](SI/to_string.h), and [print()](SI/print.h).
 7. **Data** such as SI::data::planets in [data/](SI/data/).
 8. **Unit tests** at compile-time in [tests.h](SI/tests.h).
 
