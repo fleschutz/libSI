@@ -53,9 +53,9 @@ Please find 34 more examples in: [examples.cpp](examples.cpp). Executing: `cmake
 3. **Literals** such as 100_m, 50_kg or 60_sec (-> [literals.h](SI/literals.h))
 4. **Constants** such as SI::constant::speed_of_light (-> [constants.h](SI/constants.h))
 5. **Formulas** such as SI::formula::wavelength() (-> [formulas.h](SI/formulas.h))
-6. **Import/export** with print(), from_string(), to_string() (-> [print.h](SI/print.h)
+6. **Import/export** with print(), from_string(), to_string() (-> [print.h](SI/print.h))
 7. **Big data** such as SI::data::planets (-> [data/](SI/data/))
-8. **Unit tests** at compile-time (-> [tests.h](SI/tests.h)
+8. **Unit tests** at compile-time (-> [tests.h](SI/tests.h))
 
 📁 Project Structure
 --------------------
