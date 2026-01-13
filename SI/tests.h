@@ -1,4 +1,4 @@
-// SI/tests.h - unit tests to check the SI-lib
+// SI/tests.h - perform unit tests at compile-time to verify the libSI functionality.
 #pragma once
 
 #include <cassert>
