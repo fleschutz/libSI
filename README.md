@@ -47,18 +47,18 @@ Please find 34 more examples in: [examples.cpp](examples.cpp). Executing: `cmake
 ...
 ```
 
-The 7 Layers of libSI
----------------------
-1. **SI datatypes** such as SI::length, SI::time, etc. in [SI/units.h](SI/units.h).
-2. **Units** such as SI::meters in [SI/units.h](SI/units.h).
-3. **Constants** such as SI::constant::speed_of_light in [SI/constants.h](SI/constants.h).
-4. **Literals** such as 7_km or 24_h in [SI/literals.h](SI/literals.h).
-5. **Formulas** such as SI::formula::wavelength() in [SI/formulas.h](SI/formulas.h).
-6. **Import/export** by SI::from_string() and SI::to_string().
-7. **Data** such as SI::data::planets in [SI/data/](SI/data/).
+🧱 The 7 Layers of libSI
+-------------------------
+1. **SI datatypes** such as SI::length, SI::mass or SI::time in [units.h](SI/units.h).
+2. **Units** such as SI::meters, SI::kilograms or SI::seconds in [units.h](SI/units.h).
+3. **Constants** such as SI::constant::speed_of_light in [constants.h](SI/constants.h).
+4. **Literals** such as 7_km or 24_h in [literals.h](SI/literals.h).
+5. **Formulas** such as SI::formula::wavelength() in [formulas.h](SI/formulas.h).
+6. **Import/export** by SI::from_string() and SI::to_string() in [from_string.h](SI/from_string.h) and [to_string.h](SI/to_string.h).
+7. **Data** such as SI::data::planets in [data/](SI/data/).
 
-📁 File Structure
-------------------
+📁 Project Structure
+--------------------
 ```
 ├📄CMakeLists.txt 
 ├📄examples.cpp 
