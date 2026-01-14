@@ -50,9 +50,9 @@ Please find 34 more examples in: [examples.cpp](examples.cpp). Executing: `cmake
 3. **Literals** such as 100_m or 60_sec in [literals.h](SI/literals.h)
 4. **Constants** such as SI::constant::speed_of_light in [constants.h](SI/constants.h)
 5. **Formulas** such as SI::formula::wavelength() in [formulas.h](SI/formulas.h)
-6. **I/O** with print(), from_string(), to_string() in [print.h](SI/print.h)
+6. **I/O** such as SI::print() in [print.h](SI/print.h)
 7. **Big data** such as SI::data::planets in [data/](SI/data/) folder
-8. **Unit tests** at compile-time in [tests.h](SI/tests.h)
+8. **Tests** at compile-time in [unit_tests.h](SI/tests.h)
 
 📁 Project Structure
 --------------------
