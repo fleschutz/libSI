@@ -22,8 +22,8 @@ CONSTANT(N_A,                   6.02214076e23, per_mol); // the Avogadro constan
 CONSTANT(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
 
 // Universal constants
-CONSTANT(min_temperature,                   0, kelvin); // the lowest possible temperature (Absolute zero)
-CONSTANT(Z_0,                   376.730313667, ohm); // characteristic impedance of vacuum
+CONSTANT(min_temperature,                   0, kelvins); // the lowest possible temperature (Absolute zero)
+CONSTANT(Z_0,                   376.730313667, ohms); // characteristic impedance of vacuum
 CONSTANT(epsilon_0,  8.854'187'817'620'39e-12, farads_per_meter); // electric constant (vacuum permittivity, symbol: ε_0)
 //CONSTANT(mu_0,              1.256'637'06e-6, units::N / units::A2); // magnetic constant (vacuum permeability, symbol: μ_0)
 CONSTANT(G,                       6.67408e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
@@ -33,12 +33,12 @@ CONSTANT(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck 
 CONSTANT(mu_B,                  9.2740100e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
 CONSTANT(G_0,                  7.748091729e-5, siemens); // conductance quantum
 //CONSTANT(K_Jm90,                    48359e9, units::Hz / units::V); // conventional value of Josephson constant
-CONSTANT(R_Km90,                    25812.807, ohm); // conventional value of von Klitzing constant
-CONSTANT(G_0_inv,                 12906.40372, ohm); // inverse conductance quantum
+CONSTANT(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
+CONSTANT(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
 //CONSTANT(K_J,                 483597.8484e9, units::Hz / units::V); // Josephson constant
-CONSTANT(Phi_0,               2.067833848e-15, weber); // magnetic flux quantum (symbol: Φ_0)
+CONSTANT(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum (symbol: Φ_0)
 CONSTANT(mu_N,                  5.0507837e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
-CONSTANT(R_K,                     25812.80745, ohm); // von Klitzing constant
+CONSTANT(R_K,                     25812.80745, ohms); // von Klitzing constant
 //CONSTANT(k_e,      1.0 / (4*M_PI*epsilon_0), dimensionless);
 
 // Atomic and nuclear constants

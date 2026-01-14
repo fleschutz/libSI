@@ -44,13 +44,13 @@ LITERAL(_mg,    1e-6, kilogram);            // 1_mg (milligram)
 LITERAL(_ug,    1e-9, kilogram);            // 1_ug (microgram)
 LITERAL(_ng,   1e-12, kilogram);            // 1_ng (nanogram)
 // thermodynamic temperature in...
-LITERAL(_GK,     1e9, kelvin);              // 1_GK (gigakelvin)
-LITERAL(_MK,     1e6, kelvin);              // 1_MK (megakelvin)
-LITERAL(_kK,     1e3, kelvin);              // 1_kK (kilokelvin)
-LITERAL(_K,        1, kelvin);              // 1_K
-LITERAL(_mK,    1e-3, kelvin);              // 1_mK (millikelvin)
-LITERAL(_uK,    1e-6, kelvin);              // 1_uK (microkelvin)
-LITERAL(_nK,    1e-9, kelvin);              // 1_nK (nanokelvin)
+LITERAL(_GK,     1e9, kelvins);             // 1_GK (gigakelvin)
+LITERAL(_MK,     1e6, kelvins);             // 1_MK (megakelvin)
+LITERAL(_kK,     1e3, kelvins);             // 1_kK (kilokelvin)
+LITERAL(_K,        1, kelvins);             // 1_K
+LITERAL(_mK,    1e-3, kelvins);             // 1_mK (millikelvin)
+LITERAL(_uK,    1e-6, kelvins);             // 1_uK (microkelvin)
+LITERAL(_nK,    1e-9, kelvins);             // 1_nK (nanokelvin)
 // electric current (I) in...
 LITERAL(_GA,     1e9, amperes);             // 1_GA  (gigaampere)
 LITERAL(_MA,     1e6, amperes);             // 1_MA  (megaampere)
@@ -132,11 +132,13 @@ LITERAL(_MBq,    1e6, hertz);               // 1_MBq (megabecquerel)
 LITERAL(_kBq,    1e3, hertz);               // 1_kBq (kilobecquerel)
 LITERAL(_Bq,       1, hertz);               // 1_Bq  (becquerel)
 // absorbed dose (D) in...
-LITERAL(_Gy,       1, gray);                // 1_Gy (gray)
+LITERAL(_Gy,       1, grays);               // 1_Gy  (gray)
+LITERAL(_mGy,   1e-3, grays);               // 1_mGy (milligray)
+LITERAL(_uGy,   1e-6, grays);               // 1_uGy (microgray)
 // equivalent dose (H) and effective dose (E) in...
-LITERAL(_Sv,       1, sievert);             // 1_Sv  (sievert)
-LITERAL(_mSv,   1e-3, sievert);             // 1_mSv (millisievert)
-LITERAL(_uSv,   1e-6, sievert);             // 1_uSv (microsievert)
+LITERAL(_Sv,       1, sieverts);            // 1_Sv  (sievert)
+LITERAL(_mSv,   1e-3, sieverts);            // 1_mSv (millisievert)
+LITERAL(_uSv,   1e-6, sieverts);            // 1_uSv (microsievert)
 // mass per area in...
 LITERAL(_t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
 LITERAL(_kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
@@ -146,23 +148,23 @@ LITERAL(_kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m³
 LITERAL(_kg_per_cm³,1e-6, kilograms_per_meter3);// 1_kg_per_cm³
 LITERAL(_g_per_cm³,1e3, kilograms_per_meter3);// 1_g_per_cm³
 // electric potential (U) in...
-LITERAL(_GV,     1e9, volt);                // 1_GV (gigavolt)
-LITERAL(_MV,     1e6, volt);                // 1_MV (megavolt)
-LITERAL(_kV,     1e3, volt);                // 1_kV (kilovolt)
-LITERAL(_V,        1, volt);                // 1_V 
-LITERAL(_mV,    1e-3, volt);                // 1_mV (millivolt)
-LITERAL(_uV,    1e-6, volt);                // 1_uV (microvolt)
-LITERAL(_nV,    1e-9, volt);                // 1_nV (nanovolt)
-LITERAL(_pV,   1e-12, volt);                // 1_pV (picovolt)
+LITERAL(_GV,     1e9, volts);               // 1_GV (gigavolt)
+LITERAL(_MV,     1e6, volts);               // 1_MV (megavolt)
+LITERAL(_kV,     1e3, volts);               // 1_kV (kilovolt)
+LITERAL(_V,        1, volts);               // 1_V 
+LITERAL(_mV,    1e-3, volts);               // 1_mV (millivolt)
+LITERAL(_uV,    1e-6, volts);               // 1_uV (microvolt)
+LITERAL(_nV,    1e-9, volts);               // 1_nV (nanovolt)
+LITERAL(_pV,   1e-12, volts);               // 1_pV (picovolt)
 // electric resistance (R) in...
-LITERAL(_GOhm,   1e9, ohm);                 // 1_GOhm (gigaohm)
-LITERAL(_MOhm,   1e6, ohm);                 // 1_MOhm (megaohm)
-LITERAL(_kOhm,   1e3, ohm);                 // 1_kOhm (kiloohm)
-LITERAL(_Ohm,      1, ohm);                 // 1_Ohm
-LITERAL(_mOhm,  1e-3, ohm);                 // 1_mOhm (milliohm)
-LITERAL(_uOhm,  1e-6, ohm);                 // 1_uOhm (microohm)
+LITERAL(_GOhm,   1e9, ohms);                // 1_GOhm (gigaohm)
+LITERAL(_MOhm,   1e6, ohms);                // 1_MOhm (megaohm)
+LITERAL(_kOhm,   1e3, ohms);                // 1_kOhm (kiloohm)
+LITERAL(_Ohm,      1, ohms);                // 1_Ohm
+LITERAL(_mOhm,  1e-3, ohms);                // 1_mOhm (milliohm)
+LITERAL(_uOhm,  1e-6, ohms);                // 1_uOhm (microohm)
 // electric resistance meter in...
-LITERAL(_Ohm_m,    1, ohm_meter);           // 1_Ohm_m (ohm meter)
+LITERAL(_Ohm_m,    1, ohm_meters);          // 1_Ohm_m (ohm meter)
 // electric conductance (G) in...
 LITERAL(_MS,     1e6, siemens);             // 1_MS   (megasiemens)
 LITERAL(_kS,     1e3, siemens);             // 1_kS   (kilosiemens)
@@ -182,22 +184,24 @@ LITERAL(_Ah,       1, ampere_hours);        // 1_Ah  (ampere-hours)
 LITERAL(_mAh,   1e-3, ampere_hours);        // 1_mAh (milliampere-hours)
 LITERAL(_uAh,   1e-6, ampere_hours);        // 1_uAh (microampere-hours)
 // electric capacitance (C) in...
-LITERAL(_F,        1, farad);               // 1_F   (farad)
-LITERAL(_mF,    1e-3, farad);               // 1_mF  (millifarad)
-LITERAL(_uF,    1e-6, farad);               // 1_uF  (microfarad)
-LITERAL(_nF,    1e-9, farad);               // 1_nF  (nanofarad)
-LITERAL(_pF,   1e-12, farad);               // 1_pF  (picofarad)
+LITERAL(_F,        1, farads);              // 1_F   (farad)
+LITERAL(_mF,    1e-3, farads);              // 1_mF  (millifarad)
+LITERAL(_uF,    1e-6, farads);              // 1_uF  (microfarad)
+LITERAL(_nF,    1e-9, farads);              // 1_nF  (nanofarad)
+LITERAL(_pF,   1e-12, farads);              // 1_pF  (picofarad)
 // electric inductance (L) in...
-LITERAL(_H,        1, henry);               // 1_H   (henry)
-LITERAL(_mH,    1e-3, henry);               // 1_mH  (millihenry)
-LITERAL(_uH,    1e-6, henry);               // 1_uH  (microhenry)
+LITERAL(_H,        1, henrys);              // 1_H   (henry)
+LITERAL(_mH,    1e-3, henrys);              // 1_mH  (millihenry)
+LITERAL(_uH,    1e-6, henrys);              // 1_uH  (microhenry)
+LITERAL(_nH,    1e-9, henrys);              // 1_nH  (nanohenry)
 // magnetic flux in...
-LITERAL(_Wb,       1, weber);               // 1_Wb  (weber)
+LITERAL(_Wb,       1, webers);              // 1_Wb  (weber)
 // magnetic field (B) in...
-LITERAL(_T,        1, tesla);               // 1_T  (tesla)
-LITERAL(_mT,    1e-3, tesla);               // 1_mT (millitesla)
-LITERAL(_uT,    1e-6, tesla);               // 1_uT (microtesla)
-LITERAL(_nT,    1e-9, tesla);               // 1_nT (nanotesla)
+LITERAL(_kT,     1e3, teslas);              // 1_kT  (kilotesla)
+LITERAL(_T,        1, teslas);              // 1_T   (tesla)
+LITERAL(_mT,    1e-3, teslas);              // 1_mT  (millitesla)
+LITERAL(_uT,    1e-6, teslas);              // 1_uT  (microtesla)
+LITERAL(_nT,    1e-9, teslas);              // 1_nT  (nanotesla)
 // energy (E) in...
 LITERAL(_PJ,    1e15, joules);              // 1_PJ  (petajoule)
 LITERAL(_TJ,    1e12, joules);              // 1_TJ  (terajoule)
@@ -311,7 +315,7 @@ LITERAL(_at,                            98'066.5, pascals);  // 1_at   (atmosphe
 LITERAL(_mmHg,                          133.3224, pascals);  // 1_mmHg (millimeter mercury)
 // various units in...
 LITERAL(_degC,                                 1, celsius);  // 1_degC (°Celsius)
-LITERAL(_degR,                           5.0/9.0, kelvin);   // 1_degR (°Rankine)
+LITERAL(_degR,                           5.0/9.0, kelvins);  // 1_degR (°Rankine)
 LITERAL(_Mach,                               330, meters_per_second); // 1_Mach
 LITERAL(_Da,                 1.6605390689252e-27, kilogram); // 1_Da   (dalton)
 LITERAL(_eV,                     1.602176634e-19, joules);   // 1_eV   (electronvolt)

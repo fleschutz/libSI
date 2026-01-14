@@ -45,7 +45,7 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto kilogram    = unit<mass>();
 	SI_INLINE_CONSTEXPR auto gram        = milli * kilogram;
 	// thermodynamic temperature in...
-	SI_INLINE_CONSTEXPR auto kelvin      = unit<temperature>();
+	SI_INLINE_CONSTEXPR auto kelvins     = unit<temperature>();
 	// electric current in...
 	SI_INLINE_CONSTEXPR auto amperes     = unit<electric_current>();
 	// amount of substance in...
@@ -86,13 +86,13 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto joules     = unit<energy>();
 	SI_INLINE_CONSTEXPR auto jouleseconds = joules * second;
 	SI_INLINE_CONSTEXPR auto joules_per_second = joules / second;
-	SI_INLINE_CONSTEXPR auto joules_per_kelvin = joules / kelvin;
+	SI_INLINE_CONSTEXPR auto joules_per_kelvin = joules / kelvins;
 	SI_INLINE_CONSTEXPR auto joules_per_second_per_kilogram = joules / second / kilogram;
-	SI_INLINE_CONSTEXPR auto joules_per_kilogram_per_kelvin = joules / kilogram / kelvin;
-	SI_INLINE_CONSTEXPR auto joules_per_kelvin_per_mol = joules / kelvin / moles;
+	SI_INLINE_CONSTEXPR auto joules_per_kilogram_per_kelvin = joules / kilogram / kelvins;
+	SI_INLINE_CONSTEXPR auto joules_per_kelvin_per_mol = joules / kelvins / moles;
 
-	SI_INLINE_CONSTEXPR auto gray = joules / kilogram;
-	SI_INLINE_CONSTEXPR auto sievert = joules / kilogram;
+	SI_INLINE_CONSTEXPR auto grays = joules / kilogram;
+	SI_INLINE_CONSTEXPR auto sieverts = joules / kilogram;
 
 	SI_INLINE_CONSTEXPR auto watts       = unit<power>();
 	SI_INLINE_CONSTEXPR auto wattmeters2 = watts * meters2;
@@ -107,17 +107,17 @@ namespace SI
 	SI_INLINE_CONSTEXPR auto coulombs     = unit<electric_charge>();
 	SI_INLINE_CONSTEXPR auto coulombs_per_mol = coulombs / moles;
 
-	SI_INLINE_CONSTEXPR auto volt        = unit<electric_potential>();
-	SI_INLINE_CONSTEXPR auto farad       = coulombs / volt;
-	SI_INLINE_CONSTEXPR auto farads_per_meter = farad / meter;
-	SI_INLINE_CONSTEXPR auto ohm         = volt / amperes;
-	SI_INLINE_CONSTEXPR auto ohm_meter   = ohm * meter;
-	SI_INLINE_CONSTEXPR auto siemens     = amperes / volt;
+	SI_INLINE_CONSTEXPR auto volts       = unit<electric_potential>();
+	SI_INLINE_CONSTEXPR auto farads      = coulombs / volts;
+	SI_INLINE_CONSTEXPR auto farads_per_meter = farads / meter;
+	SI_INLINE_CONSTEXPR auto ohms        = volts / amperes;
+	SI_INLINE_CONSTEXPR auto ohm_meters  = ohms * meter;
+	SI_INLINE_CONSTEXPR auto siemens     = amperes / volts;
 	SI_INLINE_CONSTEXPR auto siemens_per_meter = siemens / meter;
-	SI_INLINE_CONSTEXPR auto henry       = volt * second / amperes;
-	SI_INLINE_CONSTEXPR auto weber       = volt * second;
-	SI_INLINE_CONSTEXPR auto tesla       = kilogram / (amperes * second * second);
-	SI_INLINE_CONSTEXPR auto joules_per_tesla = joules / tesla;
+	SI_INLINE_CONSTEXPR auto henrys      = volts * second / amperes;
+	SI_INLINE_CONSTEXPR auto webers      = volts * second;
+	SI_INLINE_CONSTEXPR auto teslas      = kilogram / (amperes * second * second);
+	SI_INLINE_CONSTEXPR auto joules_per_tesla = joules / teslas;
 
 	SI_INLINE_CONSTEXPR auto steradians  = unit<detail::dimensionless>();
 
