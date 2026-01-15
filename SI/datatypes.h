@@ -1,4 +1,4 @@
-// SI/datatypes.h - type-safe SI datatypes, e.g. SI::length, SI::mass or SI::time
+// SI/datatypes.h - type-safe SI datatypes such as SI::length or SI::time
 #pragma once
 
 #include <limits>
@@ -8,11 +8,11 @@
 
 namespace SI
 {
-#define DATATYPE(name_, length_, mass_, time_, temperature_, current_, substance_, intensity_)			\
-	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, current_>; }\
-	template <class T> using name_ ## _t = detail::quantity<detail:: name_ ## _dimension, T>;		\
-	using name_ = name_ ## _t<SIfloat>;									\
-	using name_ ## 2 = name_ ## _t<detail::vec2<SIfloat>>;							\
+#define DATATYPE(name_, length_, mass_, time_, temperature_, current_, substance_, intensity_)                     \
+	namespace detail { using name_ ## _dimension = dimension<length_, mass_, time_, temperature_, current_>; } \
+	template <class T> using name_ ## _t = detail::quantity<detail:: name_ ## _dimension, T>;                  \
+	using name_ = name_ ## _t<SIfloat>;                                                                        \
+	using name_ ## 2 = name_ ## _t<detail::vec2<SIfloat>>;                                                     \
 	using name_ ## 3 = name_ ## _t<detail::vec3<SIfloat>>
 
 	// The 7 Base SI Datatypes
