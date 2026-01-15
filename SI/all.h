@@ -9,5 +9,5 @@
 #include "from_string.h"// <-- convert string -> SI datatype
 #include "to_string.h"  // <-- convert SI datatype -> string
 #include "print.h"      // <-- simple print to the console interface
-#include "tests.h"      // <-- units tests
+#include "unit_tests.h" // <-- units tests
 #include "data/all.h"   // <-- real-world data 

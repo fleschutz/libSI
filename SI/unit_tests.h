@@ -1,10 +1,10 @@
-// SI/tests.h - unit tests at compile-time to double-check everything.
+// SI/unit_tests.h - unit tests at compile-time to double-check everything.
 #pragma once
 
 #include <cassert>
 #include "literals.h"
 
-namespace SI { namespace tests {
+namespace SI { namespace unit_tests {
 
 	// Demo checks to see what's possible: (the serious checks follow below)
 	static_assert(3_m == meters(3));
@@ -220,4 +220,5 @@ namespace SI { namespace tests {
 	static_assert(1_Mbar == 1000_kbar);
 	static_assert(1_kbar == 1000_bar);
 	static_assert(1_bar  == 1000_mbar);
-} } // SI::tests
+
+} } // SI::unit_tests
