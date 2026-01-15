@@ -1,7 +1,8 @@
-// SI/print.h - print to the console functions: single and multiple SI datatypes, equivalents, and text.
+// SI/IO.h - I/O functions to print single and multiple SI datatypes, equivalents, and text.
 #pragma once
 
 #include <iostream>
+#include "from_string.h"
 #include "to_string.h"
 
 namespace SI
