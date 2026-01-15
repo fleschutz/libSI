@@ -11,7 +11,7 @@ This SI lib helps to apply math correct, with high precision, and as easy as pos
 * **Supports** SI base units, derived SI units, Imperial units, and many more.
 * **Wide compatibility** for C++17 or higher with **cross-platform** support for Linux (gcc & clang) and Windows (VS2017-VS2026).
 * **Modern C++ lib**: header only, compact, own namespace ("SI::"), no external dependencies, with [unit tests](SI/tests.h).
-* * **With data** in SI units: [stars](SI/data/stars.h), [planets](SI/data/planets.h), [moons](SI/data/moons.h), [materials](SI/data/materials.h), [ISO standards](SI/data/ISO.h), and [more...](SI/data/)
+* **With data** in SI units: [stars](SI/data/stars.h), [planets](SI/data/planets.h), [moons](SI/data/moons.h), [materials](SI/data/materials.h), [ISO standards](SI/data/ISO.h), and [more...](SI/data/)
 
 🧱 Building Blocks
 ------------------
