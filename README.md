@@ -5,12 +5,12 @@ Type-safe SI Library in C++
 
 Apply math based on SI units correct, with high precision, and as easy as possible. This SI library provides the following features:
 
-* **Type-safe** [units](SI/units.h) (can't add a mass to a length), [constants](SI/constants.h) (e.g. constant::sigma), and [formulas](SI/formulas.h) (e.g. formula::wavelength())
-* **Convenient** [literals](SI/literals.h) (e.g. 24_h or 3_GWh), [from_string()](SI/from_string.h), [to_string()](SI/to_string.h), and [print()](SI/print.h) functions.
+* **Strong type-safety** for units (can't add a mass to a length), constants, and formulas.
+* **Convenient** literals (e.g. 24_h or 3_GWh) and I/O functions.
 * **High precision** by using 'double' internally, **without runtime overhead** (compiles to nothing but simple doubles).
 * **With data** in SI units: [stars](SI/data/stars.h), [planets](SI/data/planets.h), [moons](SI/data/moons.h), [materials](SI/data/materials.h), [ISO standards](SI/data/ISO.h), and [more...](SI/data/)
 * **Supports** SI base units, derived SI units, Imperial units, and many more.
-* **Wide compatibility** (just requires C++17 or higher) with **cross-platform** support (e.g. Linux gcc & clang, Windows VS2017-VS2026).
+* **Wide compatibility** for C++17 or higher with **cross-platform** support for Linux (gcc & clang) and Windows (VS2017-VS2026).
 * **Modern C++ lib**: header only, compact, own namespace ("SI::"), no external dependencies, with [unit tests](SI/tests.h).
 
 🧱 Building Blocks
