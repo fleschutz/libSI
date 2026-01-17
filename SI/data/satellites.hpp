@@ -1,11 +1,11 @@
-// converted from ./satellites.csv by csv2hpp (000=unknown)
+// converted from satellites.csv by csv2hpp (000=unknown)
 #pragma once
 
 #include <string>
 
 namespace SI {
 
-struct csv_data_entry {
+struct data_entries {
     std::string planet;
     std::string name;
     std::string gm;
@@ -15,7 +15,7 @@ struct csv_data_entry {
     std::string albedo;
 };
 
-const csv_data_entry satellites[] {
+const data_entries csv_data[] {
     {"Earth", "Moon", "4902.801±0.001", "1737.5±0.1", "3.344±0.005", "-12.74", "0.12", },
     {"Mars", "Phobos", "0.0007112±0.0000010", "11.1±0.15", "1.872±0.076", "11.4±0.2", "0.071±0.012", },
     {"Mars", "Deimos", "0.0000985±0.0000024", "6.2±0.18", "1.471±0.166", "12.45±0.05", "0.068±0.007", },

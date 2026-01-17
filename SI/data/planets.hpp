@@ -1,12 +1,11 @@
-// imported from planets.csv by csv2hpp (000=unknown)
+// converted from planets.csv by csv2hpp (000=unknown)
 #pragma once
 
-#include <array>
 #include <string>
 
 namespace SI {
 
-struct csv_data_entry {
+struct data_entries {
     std::string planetName;
     SI::mass mass;
     SI::length diameter;
@@ -30,7 +29,7 @@ struct csv_data_entry {
     bool has_global_magnetic_field;
 };
 
-const csv_data_entry planets[] {
+const data_entries csv_data[] {
     {"Mercury", 0.330_kg, 4879_km, 5427_kg_per_m³, 3.7_m_per_s², 4.3_m_per_s, 1407.6_h, 4222.6_h, 57.9_kg, 46.0, 69.8, 88.0_h, 47.4_m_per_s, 7.0, 0.205, 0.034, 167_degC, 0_bar, 0, false, true, },
     {"Venus", 4.87_kg, 12104_km, 5243_kg_per_m³, 8.9_m_per_s², 10.4_m_per_s, -5832.5_h, 2802.0_h, 108.2_kg, 107.5, 108.9, 224.7_h, 35.0_m_per_s, 3.4, 0.007, 177.4, 464_degC, 92_bar, 0, false, false, },
     {"Earth", 5.97_kg, 12756_km, 5514_kg_per_m³, 9.8_m_per_s², 11.2_m_per_s, 23.9_h, 24.0_h, 149.6_kg, 147.1, 152.1, 365.2_h, 29.8_m_per_s, 0.0, 0.017, 23.4, 15_degC, 1_bar, 1, false, true, },
@@ -40,6 +39,7 @@ const csv_data_entry planets[] {
     {"Uranus", 86.8_kg, 51118_km, 1271_kg_per_m³, 8.7_m_per_s², 21.3_m_per_s, -17.2_h, 17.2_h, 2872.5_kg, 2741.3, 3003.6, 30589_h, 6.8_m_per_s, 0.8, 0.046, 97.8, -195_degC, 000_bar, 27, true, true, },
     {"Neptune", 102_kg, 49528_km, 1638_kg_per_m³, 11.0_m_per_s², 23.5_m_per_s, 16.1_h, 16.1_h, 4495.1_kg, 4444.5, 4545.7, 59800_h, 5.4_m_per_s, 1.8, 0.011, 28.3, -200_degC, 000_bar, 14, true, true, },
     {"Pluto", 0.0146_kg, 2370_km, 2095_kg_per_m³, 0.7_m_per_s², 1.3_m_per_s, -153.3_h, 153.3_h, 5906.4_kg, 4436.8, 7375.9, 90560_h, 4.7_m_per_s, 17.2, 0.244, 122.5, -225_degC, 0.00001_bar, 5, false, false, },
+    {},
 };
 
 } // SI::
