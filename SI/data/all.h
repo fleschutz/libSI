@@ -7,3 +7,4 @@
 #include "moons.h"
 #include "materials.h"
 #include "ISO.h"
+#include "satellites.h"
