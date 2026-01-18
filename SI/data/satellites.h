@@ -5,7 +5,7 @@
 
 namespace SI { namespace dataset { 
 
-struct data_entries {
+struct satellite_data {
     std::string planet;
     std::string name;
     float gm;
@@ -15,7 +15,7 @@ struct data_entries {
     float albedo;
 };
 
-const data_entries satellites[] {
+const satellite_data satellites[] {
  { "Earth", "Moon", 4902.801000, 1737.500000_km, 3.344000_g_per_cm³, -12.740000, 0.120000, },
  { "Mars", "Phobos", 0.000711, 11.100000_km, 1.872000_g_per_cm³, 11.400000, 0.071000, },
  { "Mars", "Deimos", 0.000098, 6.200000_km, 1.471000_g_per_cm³, 12.450000, 0.068000, },
