@@ -1,8 +1,9 @@
 #include <SI/all.h>
+#include "datasets/all.h"
 using namespace SI;
 
 int main()
-{ 
+{
 	print("1. What's the potential energy of just 1g mass? ");
 	auto m = 1_g;
 	auto c = constant::speed_of_light;
@@ -239,6 +240,26 @@ int main()
 		print(" | ");
 	}
 } {
+	print("\n36. Which exoplanets are near and seem life-friendly? ");
+	for (const auto &exoplanet : SI::dataset::exoplanets)
+	{
+		if (exoplanet.number_of_stars == 0)
+			continue; // too cold without a star
+		if (exoplanet.equilibrium_temperature > 50_degC)
+			continue; // too hot
+		if (exoplanet.equilibrium_temperature > 0_K && exoplanet.equilibrium_temperature < -40_degC)
+			continue; // too cold
+		if (exoplanet.orbit_semimajor_axis > 2_au)
+			continue; // too far from star
+		if (exoplanet.eccentricity >= 0.02)
+			continue; // no circular orbit
+		if (exoplanet.orbital_period < 100_days)
+			continue; // too near or unknown
+		if (exoplanet.distance == 0_m || exoplanet.distance > 9_pc)
+			continue; // too far away
+		printf("%s to '%s' in %s, ", to_string(exoplanet.distance).c_str(), exoplanet.name, exoplanet.hostname);
+	}
+} {
 	for (const auto& material : data::materials)
 	{
 		print("\n");
@@ -246,10 +267,8 @@ int main()
 		print(": ");
 		print(material.density);
 	}
-	print("\nAlu: ");
-	print(data::Aluminium.density);
 } {
-	// Here's the basic principle:
+	// Conversion example:
 	dimensionless x = 42;      // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_s;      // <- t is now 42 seconds
 	dimensionless y = t / 1_s; // <- y again contains a dimensionless number (no unit)

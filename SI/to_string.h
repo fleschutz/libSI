@@ -26,11 +26,11 @@ namespace SI
 		if (d <= -1_kpc || d >= 1_kpc)
 			return _join(d / 1_kpc, "kpc (kiloparsec)");
 		if (d <= -1_pc || d >= 1_pc)
-			return _join(d / 1_pc, "pc (parsec)");
+			return _join(d / 1_pc, "pc"); // parsec
 		if (d <= -1_ly || d >= 1_ly)
-			return _join(d / 1_ly, "ly (light-years)");
+			return _join(d / 1_ly, "ly"); // light-years
 		if (d <= -1_au || d >= 1_au)
-			return _join(d / 1_au, "au (astronomical unit)");
+			return _join(d / 1_au, "au"); // astronomical unit
 		if (d <= -1_km || d >= 1_km)
 			return _join(d / 1_km, "km");
 		if (d <= -1_m || d >= 1_m || d == 0.0_m)

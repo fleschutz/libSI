@@ -1,4 +1,4 @@
-planet_name, hostname, number_of_stars (int), number_of_planets (int), orbital_period (_days), orbit_semimajor_axis (_au),radius_vs_Earth (float),mass_vs_Earth (float),eccentricity (float), insolation_flux (float), equilibrium_temperature (_K),distance (_pc)
+name, hostname, number_of_stars (int), number_of_planets (int), orbital_period (_days), orbit_semimajor_axis (_au),radius_vs_Earth (float),mass_vs_Earth (float),eccentricity (float), insolation_flux (float), equilibrium_temperature (_K),distance (_pc)
 11 Com b,11 Com,2,1,323.21000000000,1.1780000000,,,0.238000,,,93.18460000
 11 Com b,11 Com,2,1,326.03000000000,1.2900000000,,,0.231000,,,93.18460000
 11 Com b,11 Com,2,1,,1.2100000000,,,,,,93.18460000

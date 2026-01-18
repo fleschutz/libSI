@@ -6,7 +6,7 @@
 namespace SI { namespace dataset { 
 
 struct exoplanet_data {
-    const char* planet_name;
+    const char* name;
     const char* hostname;
     int number_of_stars;
     int number_of_planets;
