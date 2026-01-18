@@ -1,11 +1,12 @@
 // SI/all.h - includes all header files (for convenience)
 #pragma once
 
-#include "datatypes.h"  // <-- type-safe SI datatypes, e.g. SI::mass
-#include "units.h"      // <-- type-safe SI units, e.g. SI::kilograms
-#include "constants.h"  // <-- type-safe constants, e.g. SI::constant::light_speed
-#include "literals.h"   // <-- convenient literals for SI units, e.g. 3_km
-#include "formulas.h"   // <-- common formulas, e.g. SI::formula::wavelength()
-#include "IO.h"         // <-- input/output functions
-#include "unit_tests.h" // <-- units tests
+#include "datatypes.h"  // <-- type-safe SI datatypes such as SI::length or SI::time
+#include "units.h"      // <-- type-safe units such as SI::meters or SI::seconds
+#include "constants.h"  // <-- type-safe constants such as SI::constant::speed_of_light
+#include "literals.h"   // <-- convenient literals such as 100_m or 60_sec
+#include "formulas.h"   // <-- common formulas such as SI::formula::wavelength()
+#include "IO.h"         // <-- input/output functions such as SI::print()
+#include "tests.h"      // <-- units tests to double-check everything
+
 #include "data/all.h"   // <-- real-world data 
