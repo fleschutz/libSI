@@ -1,4 +1,4 @@
-// SI/to_string.h - convert a SI datatype into a string, e.g. std::string str = to_string(12_m); 
+// <SI/to_string.h> - convert a SI datatype into a string, e.g. std::string str = to_string(12_m); 
 #pragma once
 
 #include <string>

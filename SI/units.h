@@ -1,4 +1,4 @@
-// SI/units.h - type-safe SI units, e.g. SI::mass
+// <SI/units.h> - type-safe SI units such as SI::meters or SI::seconds
 #pragma once
 
 #include <type_traits>

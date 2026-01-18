@@ -1,4 +1,4 @@
-// SI/constants.h - type-safe constants based on SI units
+// <SI/constants.h> - type-safe constants based on SI units
 #pragma once
 
 #include "units.h"

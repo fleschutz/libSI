@@ -1,4 +1,4 @@
-// SI/formulas.h - 48 common formulas based on type-safe SI units (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
+// <SI/formulas.h> - 48 common formulas based on type-safe SI units (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
 #pragma once
 
 #include "constants.h"

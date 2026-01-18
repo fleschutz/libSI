@@ -1,4 +1,4 @@
-// SI/tests.h - unit tests at compile-time to double-check everything.
+// <SI/tests.h> - unit tests at compile-time to double-check everything.
 #pragma once
 
 #include <cassert>

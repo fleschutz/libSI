@@ -1,4 +1,4 @@
-// SI/literals.h - convenient literals for SI units, e.g. 7_km (requires C++11 or higher)
+// <SI/literals.h> - convenient literals for SI units, e.g. 7_km (requires C++11 or higher)
 #pragma once
 
 #include "units.h"

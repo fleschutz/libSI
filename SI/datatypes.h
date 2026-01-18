@@ -1,4 +1,4 @@
-// SI/datatypes.h - type-safe SI datatypes such as SI::length or SI::time
+// <SI/datatypes.h> - type-safe SI datatypes such as SI::length or SI::time
 #pragma once
 
 #include <limits>

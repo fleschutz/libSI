@@ -1,4 +1,4 @@
-// SI/internal.h - internal datatypes, classes, etc.
+// <SI/internal.h> - internal datatypes, classes, etc.
 #pragma once
 
 #include <cmath>

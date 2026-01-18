@@ -1,4 +1,4 @@
-// SI/all.h - includes all header files (for convenience)
+// <SI/all.h> - includes all header files (for convenience)
 #pragma once
 
 #include "datatypes.h"  // <-- type-safe SI datatypes such as SI::length or SI::time
