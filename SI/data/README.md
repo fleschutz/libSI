@@ -1,5 +1,9 @@
+libSI's Datasets
+================
+Most datasets have been converted from a .CSV file by csv2hpp.
 
-
+exoplanets.csv 
+--------------
 # This file was produced by the NASA Exoplanet Archive  http://exoplanetarchive.ipac.caltech.edu
 # Mon Jan 12 06:51:06 2026
 #
