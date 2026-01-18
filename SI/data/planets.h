@@ -1,7 +1,7 @@
 // SI/data/planets.h - data of planets as of 2025
 #pragma once
 
-#include "../../SI/literals.h"
+#include <SI/literals.h>
 
 namespace SI { namespace data {
 
@@ -24,8 +24,6 @@ const planet_data Jupiter = { "Jupiter", 1425.5e12_km³,    1898.70e24_kg, 1.33_
 const planet_data Saturn  = { "Saturn",  827.13e12_km³,    568.510e24_kg, 0.7_g_per_cm³,  10.44_m_per_s²,   0_km,          0,     };
 const planet_data Uranus  = { "Uranus",  69.142e12_km³,    86.849e24_kg,  1.3_g_per_cm³,  8.87_m_per_s²,    0_km,          0,     };
 const planet_data Neptune = { "Neptune", 62.526e12_km³,    102.44e24_kg,  1.64_g_per_cm³, 11.15_m_per_s²,   0_km,          0,     };
-
-const planet_data planets[] = { Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune };
 
 } } // SI::data
 

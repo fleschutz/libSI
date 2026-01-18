@@ -1,9 +1,9 @@
-// SI/data/ISO.h - data of International ISO standards as of 2025
+// SI/data/ISO.h - dataset of International ISO standards as of 2025
 #pragma once
 
-#include "../../SI/literals.h"
+#include <SI/literals.h>
 
-namespace SI { namespace ISO {
+namespace SI { namespace dataset {
 
 // ISO 216 - international standard for paper sizes
 const auto A0_paper_width = 841_mm;
@@ -82,7 +82,7 @@ const auto container_1AA_ext_width  =  2.438_m;
 const auto container_1AA_max_gross_mass = 36'000_kg;
 //...
 
-} } // SI::ISO
+} } // SI::dataset
 
 // Sources
 // -------

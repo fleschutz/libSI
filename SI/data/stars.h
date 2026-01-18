@@ -1,7 +1,7 @@
 // SI/data/stars.h - data of stars as of 2025
 #pragma once
 
-#include "../../SI/literals.h"
+#include <SI/literals.h>
 
 namespace SI { namespace data {
 

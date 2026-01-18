@@ -2,6 +2,7 @@
 #pragma once
 
 #include <string>
+#include <SI/literals.h>
 
 namespace SI { namespace dataset { 
 

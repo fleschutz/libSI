@@ -1,7 +1,7 @@
 // SI/data/materials.h - data of materials as of 2025
 #pragma once
 
-#include "../../SI/units.h"
+#include <SI/units.h>
 
 namespace SI { namespace data {
 
