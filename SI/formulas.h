@@ -174,8 +174,7 @@ acceleration acceleration_for_distance(velocity v0, velocity v1, length distance
 	return (square(v1) - square(v0)) / (2.0 * distance);
 }
 
-// Formulas for Vehicles
-// ---------------------
+// *** FORMULAS FOR VEHICLES ***
 // Calculates the turning radius of wheeled vehicles.
 length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length tire_width)
 {
