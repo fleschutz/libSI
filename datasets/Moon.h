@@ -1,12 +1,12 @@
-// SI/data/moons.h - data of moons as of 2025
+// <dataset/Moon.h> - data of the Moons as of 2025
 #pragma once
 
 #include <SI/literals.h>
 
-namespace SI { namespace data {
+namespace SI { namespace dataset {
 
 typedef struct {
-	std::string name;
+	const char* name;
 	SI::mass mass;
 	SI::volume volume;
 	SI::length equatorial_radius;
@@ -18,9 +18,9 @@ typedef struct {
 	SI::acceleration surface_gravity;
 	SI::velocity equatorial_rotation_velocity;
 	SI::time day;
-} moon_data;
+} Moon_data;
 
-const moon_data Moon = {
+const Moon_data Moon = {
 	"Moon",
 	7.346e22_kg,
 	2.1958e10_km³,
@@ -35,9 +35,7 @@ const moon_data Moon = {
 	708.7 * 60 * 60_s, 
 };
 
-const moon_data moons[] = { Moon };
-
-} } // SI::data
+} } // SI::dataset
 
 // Sources
 // -------

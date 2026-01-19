@@ -60,7 +60,7 @@ int main()
 	print(glide_path);
 
 	print("\n11. What's the min speed required to escape from the Moon? ");
-	auto escape_speed = formula::gravitational_escape_velocity(data::Moon.mass, data::Moon.mean_radius);
+	auto escape_speed = formula::gravitational_escape_velocity(dataset::Moon.mass, dataset::Moon.mean_radius);
 	print(escape_speed);
 
 	print("\n12. What's the average speed to travel around the Earth in 80 days? ");
@@ -223,9 +223,9 @@ int main()
 	auto muzzle_velocity = 1000_m_per_s;
 	auto altitude = 0_m;
 	auto launch_angle = 45_deg;
-	auto max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, data::Moon.surface_gravity);
-	auto max_range = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, data::Moon.surface_gravity);
-	auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, data::Moon.surface_gravity);
+	auto max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+	auto max_range = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+	auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
 	print(max_height, max_range, flight_time);
 } {
 	print("\n35. What are the frequencies and wavelengths of all music notes? ");
