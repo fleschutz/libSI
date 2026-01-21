@@ -15,9 +15,9 @@ namespace SI
 
 	// The SI Prefixes
 	// ---------------
-	//UNIT(exa)  = unit<detail::dimensionless, 1000000000000000000>();
-	//UNIT(peta) = unit<detail::dimensionless, 1000000000000000>();
-	//UNIT(tera) = unit<detail::dimensionless, 1000000000000>();
+	UNIT(exa)    = unit<detail::dimensionless, 1000000000000000000>();
+	UNIT(peta)   = unit<detail::dimensionless, 1000000000000000>();
+	UNIT(tera)   = unit<detail::dimensionless, 1000000000000>();
 	UNIT(giga)   = unit<detail::dimensionless, 1000000000>();
 	UNIT(mega)   = unit<detail::dimensionless, 1000000>();
 	UNIT(kilo)   = unit<detail::dimensionless, 1000>();
@@ -28,6 +28,7 @@ namespace SI
 	UNIT(nano)   = unit<detail::dimensionless, 1, 1000000000>();
 	UNIT(pico)   = unit<detail::dimensionless, 1, 1000000000000>();
 	UNIT(femto)  = unit<detail::dimensionless, 1, 1000000000000000>();
+	UNIT(atto)   = unit<detail::dimensionless, 1, 1000000000000000000>();
 
 	// The 7 Base SI Units
 	// -------------------

@@ -828,8 +828,8 @@ namespace SI
 
 	SI_INLINE_CONSTEXPR detail::zero_t zero;
 
-	template <class Dimension, long Numerator = 1, long Denumerator = 1>
-	using unit = detail::unit<detail::dimension_of_t<Dimension>, detail::ratio<Numerator, Denumerator>>;
+	template <class Dimension, long long numerator = 1, long long denumerator = 1>
+	using unit = detail::unit<detail::dimension_of_t<Dimension>, detail::ratio<numerator, denumerator>>;
 
 	using detail::abs;
 	using detail::normalize;
