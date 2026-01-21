@@ -1,4 +1,4 @@
-// <SI/units.h> - type-safe SI units such as SI::meters or SI::seconds
+// <SI/units.h> - type-safe SI units such as meters or seconds
 #pragma once
 
 #include <type_traits>
@@ -15,47 +15,41 @@ namespace SI
 
 	// The SI Prefixes
 	// ---------------
-	UNIT(exa)    = unit<detail::dimensionless, 1000000000000000000>();
-	UNIT(peta)   = unit<detail::dimensionless, 1000000000000000>();
-	UNIT(tera)   = unit<detail::dimensionless, 1000000000000>();
-	UNIT(giga)   = unit<detail::dimensionless, 1000000000>();
-	UNIT(mega)   = unit<detail::dimensionless, 1000000>();
-	UNIT(kilo)   = unit<detail::dimensionless, 1000>();
-	UNIT(hecto)  = unit<detail::dimensionless, 100>();
-	UNIT(centi)  = unit<detail::dimensionless, 1, 100>();
-	UNIT(milli)  = unit<detail::dimensionless, 1, 1000>();
-	UNIT(micro)  = unit<detail::dimensionless, 1, 1000000>();
-	UNIT(nano)   = unit<detail::dimensionless, 1, 1000000000>();
-	UNIT(pico)   = unit<detail::dimensionless, 1, 1000000000000>();
-	UNIT(femto)  = unit<detail::dimensionless, 1, 1000000000000000>();
-	UNIT(atto)   = unit<detail::dimensionless, 1, 1000000000000000000>();
+	UNIT(exa)          = unit<detail::dimensionless, 1000000000000000000, 1>();
+	UNIT(peta)         = unit<detail::dimensionless, 1000000000000000, 1>();
+	UNIT(tera)         = unit<detail::dimensionless, 1000000000000, 1>();
+	UNIT(giga)         = unit<detail::dimensionless, 1000000000, 1>();
+	UNIT(mega)         = unit<detail::dimensionless, 1000000, 1>();
+	UNIT(kilo)         = unit<detail::dimensionless, 1000, 1>();
+	UNIT(hecto)        = unit<detail::dimensionless, 100, 1>();
+
+	UNIT(centi)        = unit<detail::dimensionless, 1, 100>();
+	UNIT(milli)        = unit<detail::dimensionless, 1, 1000>();
+	UNIT(micro)        = unit<detail::dimensionless, 1, 1000000>();
+	UNIT(nano)         = unit<detail::dimensionless, 1, 1000000000>();
+	UNIT(pico)         = unit<detail::dimensionless, 1, 1000000000000>();
+	UNIT(femto)        = unit<detail::dimensionless, 1, 1000000000000000>();
+	UNIT(atto)         = unit<detail::dimensionless, 1, 1000000000000000000>();
 
 	// The 7 Base SI Units
 	// -------------------
-	// length in...
 	UNIT(meters)       = unit<length>();
-	UNIT(kilometers)   = kilo * meters; 
-	UNIT(centimeters)  = centi * meters;
-	UNIT(millimeters)  = milli * meters;
-	UNIT(per_meter)    = unit<per_length>();
-	// time in...
 	UNIT(seconds)      = unit<time>();
-	UNIT(minutes)      = unit<time, 60>();
-	UNIT(hours)        = unit<time, 60*60>();
-	// mass in...
 	UNIT(kilograms)    = unit<mass>();
-	UNIT(grams)        = milli * kilograms;
-	// thermodynamic temperature in...
 	UNIT(kelvins)      = unit<temperature>();
-	// electric current in...
 	UNIT(amperes)      = unit<electric_current>();
-	// amount of substance in...
 	UNIT(moles)        = unit<amount_of_substance>();
-	// luminous intensity in...
 	UNIT(candelas)     = unit<luminous_intensity>();
 
 	// The Derived SI Units
 	// --------------------
+	UNIT(kilometers)   = kilo * meters; 
+	UNIT(centimeters)  = centi * meters;
+	UNIT(millimeters)  = milli * meters;
+	UNIT(per_meter)    = unit<per_length>();
+	UNIT(minutes)      = unit<time, 60>();
+	UNIT(hours)        = unit<time, 60*60>();
+	UNIT(grams)        = milli * kilograms;
 	UNIT(hertz)        = unit<frequency>();
 	// area in...
 	UNIT(meters2)      = unit<area>(); // (square meter)
