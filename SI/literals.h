@@ -326,7 +326,6 @@ LITERAL(_smoot,                           1.7018, meters);   // 1_smoot (one Oli
 LITERAL(_percent,                           0.01, dimensionless); // 1_percent
 
 #undef LITERAL
-
 } // SI::
 
 // Sources

@@ -50,4 +50,8 @@ namespace SI
 	DATATYPE(angular_speed,          0, 0, -1, 0, 1, 0, 0); // in °/s
 
 #undef DATATYPE
-}
+} // SI::
+
+// Sources
+// -------
+// 1. https://en.wikipedia.org/wiki/International_System_of_Units

@@ -114,10 +114,8 @@ CONSTANT(Marathon_length,              42'195, meters);
 CONSTANT(quarter_mile,                 402.34, meters);
 
 #undef CONSTANT
-
 } } // SI::constant
  
-
 // Sources
 // -------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units

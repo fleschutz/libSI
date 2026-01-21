@@ -71,3 +71,7 @@ namespace SI
 		_print("dB)");
 	}
 }
+
+// Sources
+// -------
+// 1. https://en.wikipedia.org/wiki/International_System_of_Units

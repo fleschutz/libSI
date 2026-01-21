@@ -184,3 +184,7 @@ namespace SI
 #undef SI_RETURN_QUANTITY
 #undef SI_INLINE_CONSTEXPR
 #undef SI_INLINE
+
+// Sources
+// -------
+// 1. https://en.wikipedia.org/wiki/International_System_of_Units

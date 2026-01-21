@@ -246,3 +246,7 @@ namespace SI { namespace tests {
 	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 
 } } // SI::tests
+ 
+// Sources
+// -------
+// 1. https://en.wikipedia.org/wiki/International_System_of_Units
