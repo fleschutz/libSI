@@ -4,7 +4,7 @@
 #include <cassert>
 #include "literals.h"
 
-namespace SI { namespace unit_tests {
+namespace SI { namespace tests {
 
 	// #1 DEMO CHECKS (to show what's possible, the serious checks follow below)
 	static_assert(3_m == meters(3));
@@ -222,15 +222,27 @@ namespace SI { namespace unit_tests {
 	static_assert(1_bar  == 1000_mbar);
 
 	// #5 CHECK FUNCTIONS
+	static_assert(abs(-3.5_m) == 3.5_m);
+	static_assert(abs(-1_m) == 1_m);
+	static_assert(abs(0_m) == 0_m);
+	static_assert(abs(1_m) == 1_m);
+	static_assert(abs(5.6_m) == 5.6_m);
+
 	static_assert(square(0_m) == 0_m²);
 	static_assert(square(1_m) == 1_m²);
 	static_assert(square(3_m) == 9_m²);
+
+	// static_assert(sqrt(9_m²) == 3_m); (TODO)
 
 	static_assert(cube(0_m) == 0_m³);
 	static_assert(cube(1_m) == 1_m³);
 	static_assert(cube(3_m) == 27_m³);
 
+	// static_assert(cbrt(27_m³) == 3_m); (TODO)
+
+	static_assert(clamp(-3_m, 4_m,5_m) == 4_m);
 	static_assert(clamp(3_m, 4_m,5_m) == 4_m);
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
+	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 
-} } // SI::unit_tests
+} } // SI::tests
