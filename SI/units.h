@@ -13,26 +13,8 @@ namespace SI
 {
 #define UNIT(_name) inline constexpr auto _name
 
-	// The SI Prefixes
+	// 7 Base SI Units
 	// ---------------
-	UNIT(exa)          = unit<detail::dimensionless, 1000000000000000000, 1>();
-	UNIT(peta)         = unit<detail::dimensionless, 1000000000000000, 1>();
-	UNIT(tera)         = unit<detail::dimensionless, 1000000000000, 1>();
-	UNIT(giga)         = unit<detail::dimensionless, 1000000000, 1>();
-	UNIT(mega)         = unit<detail::dimensionless, 1000000, 1>();
-	UNIT(kilo)         = unit<detail::dimensionless, 1000, 1>();
-	UNIT(hecto)        = unit<detail::dimensionless, 100, 1>();
-
-	UNIT(centi)        = unit<detail::dimensionless, 1, 100>();
-	UNIT(milli)        = unit<detail::dimensionless, 1, 1000>();
-	UNIT(micro)        = unit<detail::dimensionless, 1, 1000000>();
-	UNIT(nano)         = unit<detail::dimensionless, 1, 1000000000>();
-	UNIT(pico)         = unit<detail::dimensionless, 1, 1000000000000>();
-	UNIT(femto)        = unit<detail::dimensionless, 1, 1000000000000000>();
-	UNIT(atto)         = unit<detail::dimensionless, 1, 1000000000000000000>();
-
-	// The 7 Base SI Units
-	// -------------------
 	UNIT(meters)       = unit<length>();
 	UNIT(seconds)      = unit<time>();
 	UNIT(kilograms)    = unit<mass>();
@@ -41,8 +23,25 @@ namespace SI
 	UNIT(moles)        = unit<amount_of_substance>();
 	UNIT(candelas)     = unit<luminous_intensity>();
 
-	// The Derived SI Units
-	// --------------------
+	// SI Prefixes
+	// -----------
+	UNIT(exa)          = unit<detail::dimensionless, 1000000000000000000, 1>();
+	UNIT(peta)         = unit<detail::dimensionless, 1000000000000000, 1>();
+	UNIT(tera)         = unit<detail::dimensionless, 1000000000000, 1>();
+	UNIT(giga)         = unit<detail::dimensionless, 1000000000, 1>();
+	UNIT(mega)         = unit<detail::dimensionless, 1000000, 1>();
+	UNIT(kilo)         = unit<detail::dimensionless, 1000, 1>();
+	UNIT(hecto)        = unit<detail::dimensionless, 100, 1>();
+	UNIT(centi)        = unit<detail::dimensionless, 1, 100>();
+	UNIT(milli)        = unit<detail::dimensionless, 1, 1000>();
+	UNIT(micro)        = unit<detail::dimensionless, 1, 1000000>();
+	UNIT(nano)         = unit<detail::dimensionless, 1, 1000000000>();
+	UNIT(pico)         = unit<detail::dimensionless, 1, 1000000000000>();
+	UNIT(femto)        = unit<detail::dimensionless, 1, 1000000000000000>();
+	UNIT(atto)         = unit<detail::dimensionless, 1, 1000000000000000000>();
+
+	// Derived/Combined SI Units
+	// -------------------------
 	UNIT(kilometers)   = kilo * meters; 
 	UNIT(centimeters)  = centi * meters;
 	UNIT(millimeters)  = milli * meters;
