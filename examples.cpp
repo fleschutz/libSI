@@ -241,22 +241,18 @@ int main()
 	}
 } {
 	print("\n36. Which exoplanets are near and seem life-friendly? ");
-	for (const auto &exoplanet : SI::dataset::exoplanets)
+	for (auto exoplanet : SI::dataset::exoplanets)
 	{
 		if (exoplanet.number_of_stars == 0)
 			continue; // too cold without a star
 		if (exoplanet.equilibrium_temperature > 40_degC)
 			continue; // too hot
-		if (exoplanet.equilibrium_temperature > 0_K && exoplanet.equilibrium_temperature < -40_degC)
+		if (exoplanet.equilibrium_temperature < -40_degC)
 			continue; // too cold
-		if (exoplanet.orbit_semimajor_axis > 5_au)
-			continue; // too far from star
 		if (exoplanet.eccentricity >= 0.02)
-			continue; // no circular orbit
-		if (exoplanet.orbital_period < 100_days)
-			continue; // too near or unknown
-		if (exoplanet.distance == 0_m || exoplanet.distance > 9_pc)
-			continue; // too far away
+			continue; // orbit too elliptic or even parabolic 
+		if (exoplanet.distance > 3_pc || exoplanet.distance == 0_m)
+			continue; // too far away or distance unknown yet
 		printf("it's %s to '%s' in %s, ", to_string(exoplanet.distance).c_str(), exoplanet.name, exoplanet.hostname);
 	}
 } {

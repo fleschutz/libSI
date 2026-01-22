@@ -1,6 +1,5 @@
-#
-# Platform-independent CMakefile
-# ------------------------------
+# Cross-platform CMakefile for libSI
+# ==================================
 
 cmake_minimum_required(VERSION 3.10)
 
