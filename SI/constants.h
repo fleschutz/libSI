@@ -56,7 +56,6 @@ CONSTANT(alpha,                  7.2973525e-3, dimensionless); // fine-structure
 CONSTANT(alpha_inv,             137.035999084, dimensionless); // inverse fine-structure constant
 CONSTANT(E_h,                4.3597447222e-18, joules);    // Hartree energy
 CONSTANT(sin2Theta_W,                 0.22290, dimensionless); // weak mixing angle
-//CONSTANT(G0_F,                    1.1663e-5, / units::GeV  / units::GeV); // Fermi coupling constant
 CONSTANT(h_2me,                  3.6369475e-4, meters2_per_second); // quantum of circulation
 CONSTANT(R_inf,               10973731.568160, per_meter); // Rydberg constant
 CONSTANT(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
@@ -98,16 +97,10 @@ CONSTANT(tau,          6.28318530717958647692, radians); // (symbol: τ)
 CONSTANT(phi,          1.61803398874989484820, dimensionless); // (symbol: φ)
 CONSTANT(Eulers_number,2.71828182845904523536, dimensionless);
 
-//CONSTANT(σ,                  5.670374419e-8, units::W / units::m2 / units::K2); // Stefan–Boltzmann constant
-//CONSTANT(α,                    7.2973525e-3, dimensionless); // fine-structure constant
-//CONSTANT(α_inv,               137.035999084, dimensionless); // inverse fine-structure constant
-//CONSTANT(sin2θ_W,                   0.22290, dimensionless); // weak mixing angle
-
 // Astronomical constants
-CONSTANT(AU,                  149'597'870'691, meters); // astronomical unit
+CONSTANT(AU,                  149'597'870'691, meters); // astronomical unit (symbol: au)
 CONSTANT(parsec,       30'856'775'814'913'700, meters); // Parsec (symbol: pc)
 CONSTANT(lightyear,     9'460'730'777'119'564, meters); 
-//CONSTANT(Hubble,                       70.1, km s−1 Mpc−1); // symbol: H0
 
 // Various constants
 CONSTANT(Marathon_length,              42'195, meters);

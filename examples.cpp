@@ -54,7 +54,7 @@ int main()
 	print(download_time);
 
 	print("\n10. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
-	auto distance_on_final = 10_NM;
+	auto distance_on_final = 10_nmi;
 	auto height_on_final = 3000_ft;
 	auto glide_path = formula::glide_path(distance_on_final, height_on_final);
 	print(glide_path);
@@ -108,8 +108,8 @@ int main()
 	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
 	print(sum);
 } {
-	print("\n20. What's the sum of 1m + 1NM + 1ft? ");
-	auto sum = 1_m + 1_NM + 1_ft;
+	print("\n20. What's the sum of 1m + 1nmi + 1ft? ");
+	auto sum = 1_m + 1_nmi + 1_ft;
 	print(sum);
 } {
 	print("\n21. What's the surface area of a soccer ball? ");

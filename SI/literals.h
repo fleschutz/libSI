@@ -1,4 +1,4 @@
-// <SI/literals.h> - convenient literals for SI units, e.g. 7_km (requires C++11 or higher)
+// <SI/literals.h> - convenient literals for SI and non-SI units, e.g. 7_km (requires C++11 or higher)
 #pragma once
 
 #include "units.h"
@@ -9,8 +9,8 @@ namespace SI {
 constexpr auto operator "" _symbol(long double x) { return _base_unit(static_cast<double_t>(_factor ## L * x)); } \
 constexpr auto operator "" _symbol(unsigned long long x) { return _base_unit(static_cast<double_t>(_factor ## L * x)); }
 
-// The 7 SI Base Units
-// -------------------
+// (1) SI Base Units
+// -----------------
 //     SYMBOL FACTOR  BASE UNIT                EXAMPLE
 // length in...                                     (sorted from big to small unit)
 LITERAL(_Gm,     1e9, meters);              // 1_Gm (gigameter)
@@ -73,9 +73,9 @@ LITERAL(_fmol, 1e-15, moles);               // 1_fmol (femtomole)
 LITERAL(_kcd,    1e3, candelas);            // 1_kcd (kilocandela)
 LITERAL(_cd,       1, candelas);            // 1_cd  (candela)
 
-// The Derived SI Units
+// (2) Derived SI Units
 // --------------------
-// SYMBOL FACTOR  BASE UNIT                EXAMPLE
+//     SYMBOL FACTOR  BASE UNIT                EXAMPLE
 // area in...
 LITERAL(_km²,    1e6, meters2);             // 1_km² (square kilometer)
 LITERAL(_hm²,    1e4, meters2);             // 1_hm² (hectare)
@@ -256,36 +256,46 @@ LITERAL(_lm_s,     1, lumenseconds);        // 1_lm_s (lumen second)
 LITERAL(_lm_per_W, 1, lumens_per_watt);     // 1_lm_per_W (lumen per watt)
 // other...
 LITERAL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
-// SI supplementary units in...
+
+// (3) SI Supplementary Units
+// --------------------------
 LITERAL(_rad,      1, radians);             // 1_rad (radian)
 LITERAL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 LITERAL(_sr,       1, steradians);          // 1_sr  (steradian)
 
-// Non-SI Units
-// ------------
-//   SYMBOL           FACTOR                  BASE UNIT   EXAMPLE
-// astronomical units in...
+// (4) Non-SI Units
+// ----------------
+//       SYMBOL                FACTOR             BASE UNIT   EXAMPLE
+// Astronomical units in...
 LITERAL(_Gpc,           30'856'775'814'913'673e9, meters); // 1_Gpc (gigaparsec, as of IAU 2012)
 LITERAL(_Mpc,           30'856'775'814'913'673e6, meters); // 1_Mpc (megaparsec, as of IAU 2012)
 LITERAL(_kpc,           30'856'775'814'913'673e3, meters); // 1_kpc (kiloparsec, as of IAU 2012)
 LITERAL(_pc,            30'856'775'814'913'673e0, meters); // 1_pc  (parsec, as of IAU 2012)
 LITERAL(_ly,               9'460'730'472'580'800, meters); // 1_ly  (light-year)
 LITERAL(_au,                     149'597'870'700, meters); // 1_au  (astronomical unit)
-// imperial units in...
-LITERAL(_degF,                                 1, fahrenheit); // 1_degF (°Fahrenheit)
-LITERAL(_ft,                               .3048, meters); // 1_ft (feet)
-LITERAL(_ft_per_min,                     0.00508, meters_per_second); // 1_ft_per_min (feet/min)
+LITERAL(_AU,                     149'597'870'700, meters); // 1_AU  (astronomical unit)
+LITERAL(_Msun,                        1.98892e30, kilograms);// 1_Msun (solar mass, about the mass of the Sun)
+LITERAL(_Mjup,                          1.898e27, kilograms);// 1_Mjup (Jupiter mass)
+LITERAL(_Mearth,                       5.9742e24, kilograms);// 1_Mearth (Earth mass)
+// Imperial units, length in...
 LITERAL(_in,                              0.0254, meters); // 1_in (inch)
+LITERAL(_ft,                               .3048, meters); // 1_ft (feet, 12 in)
+LITERAL(_yd,                               .9144, meters); // 1_yd (yard)
+LITERAL(_mi,                           1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
+LITERAL(_cable,                            185.2, meters); // 1_cable (one tenth of a nautical mile)
+LITERAL(_nmi,                              1'852, meters); // 1_nmi (nautical mile, about one arc minute)
+LITERAL(_NM,                               1'852, meters); // 1_NM  (nautical mile, about one arc minute)
+// Imperial units, mass in...
+LITERAL(_oz,                      28.349'523'125, grams);  // 1_oz (ounce, 1/16 of a pound)
+LITERAL(_lb,                          0.45359237, kilograms);// 1_lb (pound)
+// Imperial units, velocity in...
+LITERAL(_kn,                               1.852, kilometers_per_hour); // 1_kn (knots)
+LITERAL(_ft_per_min,                     0.00508, meters_per_second); // 1_ft_per_min (feet/min)
 LITERAL(_in_per_s,                        0.0254, meters_per_second); // 1_in_per_s (inch/sec)
 LITERAL(_in_per_h,                  0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
-LITERAL(_kn,                               1.852, kilometers_per_hour); // 1_kn (knots)
-LITERAL(_lb,                          453.592'37, grams);  // 1_lb
-LITERAL(_oz,                      28.349'523'125, grams);  // 1_oz
-LITERAL(_mi,                           1'609.344, meters); // 1_mi (statute mile)
-LITERAL(_mph,                             .44704, meters_per_second); // 1_mph (miles per hour)
-LITERAL(_NM,                               1'852, meters); // 1_NM (nautical mile)
-LITERAL(_nmi,                              1'852, meters); // 1_nmi (nautical mile)
-LITERAL(_yd,                               .9144, meters); // 1_yd (yard)
+LITERAL(_mph,                             .44704, meters_per_second); // 1_mph (miles/hour)
+// Imperial units, temperature in...
+LITERAL(_degF,                                 1, fahrenheit); // 1_degF (°Fahrenheit)
 // digital units in...
 LITERAL(_byte,                                 1, bytes);   // 1_byte
 LITERAL(_kB,                                 1e3, bytes);   // 1_kB (kilobyte)
@@ -331,3 +341,5 @@ LITERAL(_percent,                           0.01, dimensionless); // 1_percent
 // Sources
 // -------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units
+// 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
+// 3. https://en.wikipedia.org/wiki/Imperial_units

@@ -204,7 +204,7 @@ namespace SI { namespace tests {
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
 	// Imperial units in...
-	static_assert(1_NM == 1852_m);
+	static_assert(1_nmi == 1852_m);
 	static_assert(1_ft == 0.3048_m);
 	// various units in...
 	//static_assert(0_deg == 273.15_K);
