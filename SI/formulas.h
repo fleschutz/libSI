@@ -1,7 +1,7 @@
 // <SI/formulas.h> - 50 common formulas based on type-safe SI units (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
 #pragma once
 
-#include "constants.h"
+#include <SI/constants.h>
 
 namespace SI { namespace formula {
 

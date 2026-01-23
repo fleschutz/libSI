@@ -1,7 +1,7 @@
 // <SI/literals.h> - convenient literals for SI and non-SI units, e.g. 7_km (requires C++11 or higher)
 #pragma once
 
-#include "units.h"
+#include <SI/units.h>
 
 namespace SI {
 

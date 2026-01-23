@@ -7,7 +7,7 @@
 #include <cmath>
 #include <algorithm>
 #include <charconv>
-#include "datatypes.h"
+#include <SI/datatypes.h>
 
 namespace SI
 {

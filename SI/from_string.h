@@ -2,7 +2,7 @@
 #pragma once
 
 #include <string>
-#include "literals.h"
+#include <SI/literals.h>
 
 namespace SI
 {

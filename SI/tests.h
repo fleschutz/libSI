@@ -2,7 +2,7 @@
 #pragma once
 
 #include <cassert>
-#include "literals.h"
+#include <SI/literals.h>
 
 namespace SI { namespace tests {
 
