@@ -1,4 +1,4 @@
-// <SI/formulas.h> - 50 common formulas based on type-safe SI units (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
+// <SI/formulas.h> - 52 common formulas based on type-safe SI units (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
 #pragma once
 
 #include <SI/constants.h>
@@ -174,6 +174,18 @@ acceleration acceleration_for_distance(velocity v0, velocity v1, length distance
 	return (square(v1) - square(v0)) / (2.0 * distance);
 }
 
+// Calculates the final velocity based on initial velocity (i) with acceleration (a) for time (t).
+velocity final_velocity(velocity i, acceleration a, time t)
+{
+	return i + a * t;
+}
+
+// Calculate the acceleration from change in velocity (delta_v) and time interval (delta_t).
+acceleration acceleration_of(velocity delta_v, time delta_t)
+{
+	return delta_v / delta_t;
+}
+
 // *** FORMULAS FOR VEHICLES ***
 // Calculates the turning radius of wheeled vehicles.
 length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length tire_width)
@@ -289,7 +301,7 @@ velocity gravitational_escape_velocity(mass M, length r)
 	return sqrt((2.0 * constant::G * M) / r);
 }
 
-// Computes the amount of energy absorbed (E) from a source of radiation by some material per mass (m)
+// Calculates the amount of energy absorbed (E) from a source of radiation by some material per mass (m)
 specific_energy absorbed_dose(energy E, mass m)
 {
 	return E / m;
