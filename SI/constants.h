@@ -25,21 +25,17 @@ CONSTANT(K_cd,                            683, lumens_per_watt); // the luminous
 CONSTANT(min_temperature,                   0, kelvins); // the lowest possible temperature (Absolute zero)
 CONSTANT(Z_0,                   376.730313667, ohms); // characteristic impedance of vacuum
 CONSTANT(epsilon_0,  8.854'187'817'620'39e-12, farads_per_meter); // electric constant (vacuum permittivity, symbol: ε_0)
-//CONSTANT(mu_0,              1.256'637'06e-6, units::N / units::A2); // magnetic constant (vacuum permeability, symbol: μ_0)
 CONSTANT(G,                       6.67408e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
 CONSTANT(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
 
 // Electromagnetic constants
 CONSTANT(mu_B,                  9.2740100e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
 CONSTANT(G_0,                  7.748091729e-5, siemens); // conductance quantum
-//CONSTANT(K_Jm90,                    48359e9, units::Hz / units::V); // conventional value of Josephson constant
 CONSTANT(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
 CONSTANT(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
-//CONSTANT(K_J,                 483597.8484e9, units::Hz / units::V); // Josephson constant
 CONSTANT(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum (symbol: Φ_0)
 CONSTANT(mu_N,                  5.0507837e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
 CONSTANT(R_K,                     25812.80745, ohms); // von Klitzing constant
-//CONSTANT(k_e,      1.0 / (4*M_PI*epsilon_0), dimensionless);
 
 // Atomic and nuclear constants
 CONSTANT(electron_mass,      9.1093837139e-31, kilograms);
@@ -65,16 +61,9 @@ CONSTANT(m_u,                  1.66053906e-27, kilograms); // Atomic mass consta
 CONSTANT(F,                       96485.33212, coulombs_per_mol); // Faraday constant
 CONSTANT(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
 CONSTANT(c_1L,                1.191042972e-16, watts_per_meter2); // first radiation constant for spectral radiance
-//CONSTANT(n_0,                2.651645804e25, / units::m3); // Loschmidt constant
 CONSTANT(R,                       8.314462618, joules_per_kelvin_per_mol); // gas constant
 CONSTANT(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); // specific gas constant for dry air
-//CONSTANT(N_Ah,              3.990312712e-10, units::J / units::Hz / units::mol); // molar Planck constant
-//CONSTANT(M_u,                 0.99999999e-3, kilograms_per_mol); // molar mass constant
-//CONSTANT(V_m,                22.71095464e-3, units::m3 / units::mol); // molar volume of an ideal gas
-//CONSTANT(c_2,                1.438776877e-2, units::m * units::K); // second radiation constant
-//CONSTANT(sigma,              5.670374419e-8, units::W / units::m2 / units::K2); // Stefan–Boltzmann constant
 CONSTANT(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
-//CONSTANT(b_prime,            5.878925757e10, units::Hz / units::K); // Wien frequency displacement law constant
 CONSTANT(S_0_by_R,             -1.15170753706, dimensionless); // Sackur–Tetrode constant
 
 // Adopted values
