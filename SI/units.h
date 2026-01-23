@@ -1,12 +1,6 @@
 // <SI/units.h> - type-safe SI units such as meters or seconds
 #pragma once
 
-#include <type_traits>
-#include <limits>
-#include <utility>
-#include <cmath>
-#include <algorithm>
-#include <charconv>
 #include <SI/datatypes.h>
 
 namespace SI

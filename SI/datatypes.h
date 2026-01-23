@@ -1,10 +1,7 @@
 // <SI/datatypes.h> - type-safe SI datatypes such as SI::length or SI::time
 #pragma once
 
-#include <limits>
-#include <utility>
-#include <algorithm>
-#include "internal.h"
+#include <SI/internal.h>
 
 namespace SI
 {

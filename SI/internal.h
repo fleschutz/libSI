@@ -1,8 +1,10 @@
 // <SI/internal.h> - internal datatypes, classes, etc.
 #pragma once
 
+#include <limits>
+#include <utility>
+#include <algorithm>
 #include <cmath>
-#include <type_traits>
 #define SI_INLINE inline 
 #define SI_INLINE_CONSTEXPR constexpr SI_INLINE
 
