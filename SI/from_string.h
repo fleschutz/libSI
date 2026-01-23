@@ -95,9 +95,10 @@ namespace SI
 			result = 1_ng * value;
 		else
 			return false; // unknown unit
+
+		return true;
 	}
 
-	// ... (TODO)
 }
 
 // Sources
