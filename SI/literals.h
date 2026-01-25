@@ -1,4 +1,5 @@
-// <SI/literals.h> - convenient literals for SI and non-SI units, e.g. 7_km (requires C++11 or higher)
+// <SI/literals.h> - convenient literals such as 100_m or 60_sec (requires C++11 or higher)
+//                   (sorted by: SI base units, SI derived units, and non-SI units)
 #pragma once
 
 #include <SI/units.h>
@@ -9,8 +10,8 @@ namespace SI {
 constexpr auto operator "" _symbol(long double x) { return _base_unit(static_cast<double_t>(_factor ## L * x)); } \
 constexpr auto operator "" _symbol(unsigned long long x) { return _base_unit(static_cast<double_t>(_factor ## L * x)); }
 
-// (1) SI Base Units
-// -----------------
+// SI Base Units
+// -------------
 //     SYMBOL FACTOR  BASE UNIT                EXAMPLE
 // length in...                                     (sorted from big to small unit)
 LITERAL(_Gm,     1e9, meters);              // 1_Gm (gigameter)
@@ -38,7 +39,7 @@ LITERAL(_Gt,    1e12, kilograms);           // 1_Gt (metric gigaton)
 LITERAL(_Mt,     1e9, kilograms);           // 1_Mt (metric megaton)
 LITERAL(_kt,     1e6, kilograms);           // 1_kt (metric kiloton)
 LITERAL(_t,      1e3, kilograms);           // 1_t  (metric ton)
-LITERAL(_kg,       1, kilograms);           // 1_kg
+LITERAL(_kg,       1, kilograms);           // 1_kg (kilogram)
 LITERAL(_g,     1e-3, kilograms);           // 1_g  (gram)
 LITERAL(_mg,    1e-6, kilograms);           // 1_mg (milligram)
 LITERAL(_ug,    1e-9, kilograms);           // 1_ug (microgram)
@@ -47,7 +48,7 @@ LITERAL(_ng,   1e-12, kilograms);           // 1_ng (nanogram)
 LITERAL(_GK,     1e9, kelvins);             // 1_GK (gigakelvin)
 LITERAL(_MK,     1e6, kelvins);             // 1_MK (megakelvin)
 LITERAL(_kK,     1e3, kelvins);             // 1_kK (kilokelvin)
-LITERAL(_K,        1, kelvins);             // 1_K
+LITERAL(_K,        1, kelvins);             // 1_K  (kelvin)
 LITERAL(_mK,    1e-3, kelvins);             // 1_mK (millikelvin)
 LITERAL(_uK,    1e-6, kelvins);             // 1_uK (microkelvin)
 LITERAL(_nK,    1e-9, kelvins);             // 1_nK (nanokelvin)
@@ -55,7 +56,7 @@ LITERAL(_nK,    1e-9, kelvins);             // 1_nK (nanokelvin)
 LITERAL(_GA,     1e9, amperes);             // 1_GA  (gigaampere)
 LITERAL(_MA,     1e6, amperes);             // 1_MA  (megaampere)
 LITERAL(_kA,     1e3, amperes);             // 1_kA  (kiloampere)
-LITERAL(_A,        1, amperes);             // 1_A 
+LITERAL(_A,        1, amperes);             // 1_A   (ampere)
 LITERAL(_mA,    1e-3, amperes);             // 1_mA  (milliampere)
 LITERAL(_uA,    1e-6, amperes);             // 1_uA  (microampere)
 LITERAL(_nA,    1e-9, amperes);             // 1_nA  (nanoampere)
@@ -63,7 +64,7 @@ LITERAL(_pA,   1e-12, amperes);             // 1_pA  (picoampere)
 // amount of substance (N_A) in...
 LITERAL(_Mmol,   1e6, moles);               // 1_Mmol (megamole)
 LITERAL(_kmol,   1e3, moles);               // 1_kmol (kilomole)
-LITERAL(_mol,      1, moles);               // 1_mol
+LITERAL(_mol,      1, moles);               // 1_mol  (mole)
 LITERAL(_mmol,  1e-3, moles);               // 1_mmol (millimole)
 LITERAL(_umol,  1e-6, moles);               // 1_umol (micromole)
 LITERAL(_nmol,  1e-9, moles);               // 1_nmol (nanomole)
@@ -73,8 +74,8 @@ LITERAL(_fmol, 1e-15, moles);               // 1_fmol (femtomole)
 LITERAL(_kcd,    1e3, candelas);            // 1_kcd (kilocandela)
 LITERAL(_cd,       1, candelas);            // 1_cd  (candela)
 
-// (2) Derived SI Units
-// --------------------
+// SI Derived Units
+// ----------------
 //     SYMBOL FACTOR  BASE UNIT                EXAMPLE
 // area in...
 LITERAL(_km²,    1e6, meters2);             // 1_km² (square kilometer)
@@ -218,7 +219,7 @@ LITERAL(_TW,    1e12, watts);               // 1_TW  (terawatt)
 LITERAL(_GW,     1e9, watts);               // 1_GW  (gigawatt)
 LITERAL(_MW,     1e6, watts);               // 1_MW  (megawatt)
 LITERAL(_kW,     1e3, watts);               // 1_kW  (kilowatt)
-LITERAL(_W,        1, watts);               // 1_W   (Watt)
+LITERAL(_W,        1, watts);               // 1_W   (watt)
 LITERAL(_mW,    1e-3, watts);               // 1_mW  (milliwatt)
 LITERAL(_uW,    1e-6, watts);               // 1_uW  (microwatt)
 LITERAL(_TWh, 3.6e15, watts);               // 1_TWh (terawatt-hour)
@@ -236,17 +237,17 @@ LITERAL(_W_per_m², 1, watts_per_meter2);    // 1_W_per_m² (watt per square met
 LITERAL(_mW_per_m²,1e-3, watts_per_meter2); // 1_mW_per_m² (milliwatt per square metre)
 LITERAL(_uW_per_m²,1e-6, watts_per_meter2); // 1_uW_per_m² (milliwatt per square metre)
 // pressure (p) in...
-LITERAL(_MPa,    1e6, pascals);             // 1_MPa  (megapascal) 
-LITERAL(_kPa,    1e3, pascals);             // 1_kPa  (kilopascal) 
-LITERAL(_hPa,    100, pascals);             // 1_hPa  (hectopascal) 
-LITERAL(_Pa,       1, pascals);             // 1_Pa   (pascal) 
-LITERAL(_mPa,   1e-3, pascals);             // 1_mPa  (millipascal) 
-LITERAL(_uPa,   1e-6, pascals);             // 1_uPa  (micropascal) 
+LITERAL(_MPa,    1e6, pascals);             // 1_MPa (megapascal) 
+LITERAL(_kPa,    1e3, pascals);             // 1_kPa (kilopascal) 
+LITERAL(_hPa,    100, pascals);             // 1_hPa (hectopascal) 
+LITERAL(_Pa,       1, pascals);             // 1_Pa  (pascal) 
+LITERAL(_mPa,   1e-3, pascals);             // 1_mPa (millipascal) 
+LITERAL(_uPa,   1e-6, pascals);             // 1_uPa (micropascal) 
 // force (F) in...
 LITERAL(_GN,     1e9, newtons);             // 1_GN (giganewton)
 LITERAL(_MN,     1e6, newtons);             // 1_MN (meganewton)
 LITERAL(_kN,     1e3, newtons);             // 1_kN (kilonewton)
-LITERAL(_N,        1, newtons);             // 1_N
+LITERAL(_N,        1, newtons);             // 1_N  (newton)
 LITERAL(_mN,    1e-3, newtons);             // 1_mN (millinewton)
 LITERAL(_uN,    1e-6, newtons);             // 1_uN (micronewton)
 LITERAL(_pN,    1e-9, newtons);             // 1_pN (piconewton)
@@ -256,84 +257,81 @@ LITERAL(_lm_s,     1, lumenseconds);        // 1_lm_s (lumen second)
 LITERAL(_lm_per_W, 1, lumens_per_watt);     // 1_lm_per_W (lumen per watt)
 // other...
 LITERAL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
-
-// (3) SI Supplementary Units
-// --------------------------
 LITERAL(_rad,      1, radians);             // 1_rad (radian)
 LITERAL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 LITERAL(_sr,       1, steradians);          // 1_sr  (steradian)
 
-// (4) Non-SI Units
-// ----------------
-//       SYMBOL                FACTOR             BASE UNIT   EXAMPLE
+// Non-SI Units
+// ------------
+//       SYMBOL               FACTOR        BASE UNIT   EXAMPLE
 // Astronomical units in...
-LITERAL(_Gpc,           30'856'775'814'913'673e9, meters); // 1_Gpc (gigaparsec, as of IAU 2012)
-LITERAL(_Mpc,           30'856'775'814'913'673e6, meters); // 1_Mpc (megaparsec, as of IAU 2012)
-LITERAL(_kpc,           30'856'775'814'913'673e3, meters); // 1_kpc (kiloparsec, as of IAU 2012)
-LITERAL(_pc,            30'856'775'814'913'673e0, meters); // 1_pc  (parsec, as of IAU 2012)
-LITERAL(_ly,               9'460'730'472'580'800, meters); // 1_ly  (light-year)
-LITERAL(_au,                     149'597'870'700, meters); // 1_au  (astronomical unit)
-LITERAL(_AU,                     149'597'870'700, meters); // 1_AU  (astronomical unit)
-LITERAL(_Msun,                        1.98892e30, kilograms);// 1_Msun (solar mass, about the mass of the Sun)
-LITERAL(_Mjup,                          1.898e27, kilograms);// 1_Mjup (Jupiter mass)
-LITERAL(_Mearth,                       5.9742e24, kilograms);// 1_Mearth (Earth mass)
+LITERAL(_Gpc,     30'856'775'814'913'673e9, meters); // 1_Gpc (gigaparsec, as of IAU 2012)
+LITERAL(_Mpc,     30'856'775'814'913'673e6, meters); // 1_Mpc (megaparsec, as of IAU 2012)
+LITERAL(_kpc,     30'856'775'814'913'673e3, meters); // 1_kpc (kiloparsec, as of IAU 2012)
+LITERAL(_pc,      30'856'775'814'913'673e0, meters); // 1_pc  (parsec, as of IAU 2012)
+LITERAL(_ly,         9'460'730'472'580'800, meters); // 1_ly  (light-year)
+LITERAL(_au,               149'597'870'700, meters); // 1_au  (astronomical unit)
+LITERAL(_AU,               149'597'870'700, meters); // 1_AU  (astronomical unit)
+LITERAL(_Msun,                  1.98892e30, kilograms);// 1_Msun (solar mass, about the mass of the Sun)
+LITERAL(_Mjup,                    1.898e27, kilograms);// 1_Mjup (Jupiter mass)
+LITERAL(_Mearth,                 5.9742e24, kilograms);// 1_Mearth (Earth mass)
 // Imperial units, length in...
-LITERAL(_in,                              0.0254, meters); // 1_in (inch)
-LITERAL(_ft,                               .3048, meters); // 1_ft (feet, 12 in)
-LITERAL(_yd,                               .9144, meters); // 1_yd (yard)
-LITERAL(_mi,                           1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
-LITERAL(_cable,                            185.2, meters); // 1_cable (one tenth of a nautical mile)
-LITERAL(_nmi,                              1'852, meters); // 1_nmi (nautical mile, about one arc minute)
-LITERAL(_NM,                               1'852, meters); // 1_NM  (nautical mile, about one arc minute)
+LITERAL(_in,                        0.0254, meters); // 1_in (inch)
+LITERAL(_ft,                         .3048, meters); // 1_ft (feet, 12 in)
+LITERAL(_yd,                         .9144, meters); // 1_yd (yard)
+LITERAL(_mi,                     1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
+LITERAL(_cable,                      185.2, meters); // 1_cable (one tenth of a nautical mile)
+LITERAL(_nmi,                        1'852, meters); // 1_nmi (nautical mile, about one arc minute)
+LITERAL(_NM,                         1'852, meters); // 1_NM  (nautical mile, about one arc minute)
 // Imperial units, mass in...
-LITERAL(_oz,                      28.349'523'125, grams);  // 1_oz (ounce, 1/16 of a pound)
-LITERAL(_lb,                          0.45359237, kilograms);// 1_lb (pound)
+LITERAL(_oz,                28.349'523'125, grams);  // 1_oz (ounce, 1/16 of a pound)
+LITERAL(_lb,                    0.45359237, kilograms);// 1_lb (pound)
 // Imperial units, velocity in...
-LITERAL(_kn,                               1.852, kilometers_per_hour); // 1_kn (knots)
-LITERAL(_ft_per_min,                     0.00508, meters_per_second); // 1_ft_per_min (feet/min)
-LITERAL(_in_per_s,                        0.0254, meters_per_second); // 1_in_per_s (inch/sec)
-LITERAL(_in_per_h,                  0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
-LITERAL(_mph,                             .44704, meters_per_second); // 1_mph (miles/hour)
+LITERAL(_kn,                         1.852, kilometers_per_hour); // 1_kn (knots)
+LITERAL(_ft_per_min,               0.00508, meters_per_second); // 1_ft_per_min (feet/min)
+LITERAL(_in_per_s,                  0.0254, meters_per_second); // 1_in_per_s (inch/sec)
+LITERAL(_in_per_h,            0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
+LITERAL(_mph,                       .44704, meters_per_second); // 1_mph (miles/hour)
 // Imperial units, temperature in...
-LITERAL(_degF,                                 1, fahrenheit); // 1_degF (°Fahrenheit)
+LITERAL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 // digital units in...
-LITERAL(_byte,                                 1, bytes);   // 1_byte
-LITERAL(_kB,                                 1e3, bytes);   // 1_kB (kilobyte)
-LITERAL(_MB,                                 1e6, bytes);   // 1_MB (megabyte)
-LITERAL(_GB,                                 1e9, bytes);   // 1_GB (gigabyte)
-LITERAL(_TB,                                1e12, bytes);   // 1_TB (terabyte)
-LITERAL(_PB,                                1e15, bytes);   // 1_PB (terabyte)
-LITERAL(_EB,                                1e18, bytes);   // 1_EB (exabyte)
-LITERAL(_ZB,                                1e21, bytes);   // 1_ZB (zettabyte)
-LITERAL(_YB,                                1e24, bytes);   // 1_ZY (yottabyte)
-LITERAL(_RB,                                1e27, bytes);   // 1_RY (ronnabyte)
-LITERAL(_QB,                                1e30, bytes);   // 1_QY (quettabyte)
-LITERAL(_KBps,                               1e3, bytes_per_second); // 1_KBps (kilobyte/sec)
-LITERAL(_MBps,                               1e6, bytes_per_second); // 1_MBps (megabyte/sec)
-LITERAL(_GBps,                               1e9, bytes_per_second); // 1_GBps (gigabyte/sec)
-LITERAL(_TBps,                              1e12, bytes_per_second); // 1_TBps (terabyte/sec)
-LITERAL(_Kbps,                           1e3 / 8, bytes_per_second); // 1_Kbps (kilobit/sec)
-LITERAL(_Mbps,                           1e6 / 8, bytes_per_second); // 1_Mbps (megabit/sec)
-LITERAL(_Gbps,                           1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
-LITERAL(_Tbps,                          1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
+LITERAL(_byte,                           1, bytes);   // 1_byte
+LITERAL(_kB,                           1e3, bytes);   // 1_kB (kilobyte)
+LITERAL(_MB,                           1e6, bytes);   // 1_MB (megabyte)
+LITERAL(_GB,                           1e9, bytes);   // 1_GB (gigabyte)
+LITERAL(_TB,                          1e12, bytes);   // 1_TB (terabyte)
+LITERAL(_PB,                          1e15, bytes);   // 1_PB (terabyte)
+LITERAL(_EB,                          1e18, bytes);   // 1_EB (exabyte)
+LITERAL(_ZB,                          1e21, bytes);   // 1_ZB (zettabyte)
+LITERAL(_YB,                          1e24, bytes);   // 1_ZY (yottabyte)
+LITERAL(_RB,                          1e27, bytes);   // 1_RY (ronnabyte)
+LITERAL(_QB,                          1e30, bytes);   // 1_QY (quettabyte)
+LITERAL(_KBps,                         1e3, bytes_per_second); // 1_KBps (kilobyte/sec)
+LITERAL(_MBps,                         1e6, bytes_per_second); // 1_MBps (megabyte/sec)
+LITERAL(_GBps,                         1e9, bytes_per_second); // 1_GBps (gigabyte/sec)
+LITERAL(_TBps,                        1e12, bytes_per_second); // 1_TBps (terabyte/sec)
+LITERAL(_Kbps,                     1e3 / 8, bytes_per_second); // 1_Kbps (kilobit/sec)
+LITERAL(_Mbps,                     1e6 / 8, bytes_per_second); // 1_Mbps (megabit/sec)
+LITERAL(_Gbps,                     1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
+LITERAL(_Tbps,                    1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
 // pressure in...
-LITERAL(_Mbar,                              1e11, pascals);  // 1_Mbar (megabar)
-LITERAL(_kbar,                               1e8, pascals);  // 1_kbar (kilobar)
-LITERAL(_bar,                                1e5, pascals);  // 1_bar 
-LITERAL(_mbar,                               1e2, pascals);  // 1_mbar (millibar)
-LITERAL(_at,                            98'066.5, pascals);  // 1_at   (atmosphere)
-LITERAL(_mmHg,                          133.3224, pascals);  // 1_mmHg (millimeter mercury)
+LITERAL(_Mbar,                        1e11, pascals);  // 1_Mbar (megabar)
+LITERAL(_kbar,                         1e8, pascals);  // 1_kbar (kilobar)
+LITERAL(_bar,                          1e5, pascals);  // 1_bar 
+LITERAL(_mbar,                         1e2, pascals);  // 1_mbar (millibar)
+LITERAL(_at,                      98'066.5, pascals);  // 1_at   (atmosphere)
+LITERAL(_mmHg,                    133.3224, pascals);  // 1_mmHg (millimeter mercury)
 // various units in...
-LITERAL(_degC,                                 1, celsius);  // 1_degC (°Celsius)
-LITERAL(_degR,                           5.0/9.0, kelvins);  // 1_degR (°Rankine)
-LITERAL(_Mach,                               330, meters_per_second); // 1_Mach
-LITERAL(_Da,                 1.6605390689252e-27, kilograms);// 1_Da   (dalton)
-LITERAL(_eV,                     1.602176634e-19, joules);   // 1_eV   (electronvolt)
-LITERAL(_hp,                  745.69987158227022, watts);    // 1_hp   (horsepower)
-LITERAL(_PS,                           735.49875, watts);    // 1_PS   ('Pferdestärke', german horsepower)
-LITERAL(_Ang,                              1e-10, meters);   // 1_Ang  (angstrom)
-LITERAL(_smoot,                           1.7018, meters);   // 1_smoot (one Oliver R. Smoot height, fun unit)
-LITERAL(_percent,                           0.01, dimensionless); // 1_percent
+LITERAL(_degC,                           1, celsius);  // 1_degC (°Celsius)
+LITERAL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
+LITERAL(_Mach,                         330, meters_per_second); // 1_Mach
+LITERAL(_Da,           1.6605390689252e-27, kilograms);// 1_Da   (dalton)
+LITERAL(_eV,               1.602176634e-19, joules);   // 1_eV   (electronvolt)
+LITERAL(_hp,            745.69987158227022, watts);    // 1_hp   (horsepower)
+LITERAL(_PS,                     735.49875, watts);    // 1_PS   ('Pferdestärke', german horsepower)
+LITERAL(_Ang,                        1e-10, meters);   // 1_Ang  (angstrom)
+LITERAL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R. Smoot height, fun unit)
+LITERAL(_percent,                     0.01, dimensionless); // 1_percent
 
 #undef LITERAL
 } // SI::
