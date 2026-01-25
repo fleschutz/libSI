@@ -1,11 +1,12 @@
-// <SI/formulas.h> - 52 common formulas based on type-safe SI units (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
+// <SI/formulas.h> - 52 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
+//                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
 #pragma once
 
 #include <SI/constants.h>
 
 namespace SI { namespace formula {
 
-// *** FORMULAS FOR 2D ***
+// +++ 2D +++
 // Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
 length hypotenuse_of_triangle(length a, length b)
 {
@@ -104,7 +105,7 @@ length distance(length x1, length y1, length x2, length y2)
 	return sqrt((dx * dx) + (dy * dy));
 }
 
-// *** FORMULAS FOR 3D ***
+// +++ 3D +++
 area area_of_cube(length a)
 {
 	return 6. * a * a;
@@ -150,7 +151,7 @@ volume volume_of_prism(area base_area, length height)
 	return base_area * height;
 }
 
-// *** FORMULAS FOR MOVING OBJECTS ***
+// +++ MOVING OBJECTS +++
 // Calculates the kinetic energy of a non-rotating object of mass m traveling at velocity v.
 energy kinetic_energy(mass m, velocity v)
 {
@@ -186,14 +187,14 @@ acceleration acceleration_of(velocity delta_v, time delta_t)
 	return delta_v / delta_t;
 }
 
-// *** FORMULAS FOR VEHICLES ***
+// +++ VEHICLES +++
 // Calculates the turning radius of wheeled vehicles.
 length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length tire_width)
 {
 	return wheelbase / sin(steering_angle) + tire_width / 2.0;
 }
 
-// *** FORMULAS FOR AIRCRAFTS ***
+// +++ AIRCRAFTS +++
 // Calculates the true airspeed (TAS).
 velocity true_airspeed(force lift_force, dimensionless lift_coefficient, area wing_surface, density air_density)
 {
@@ -221,7 +222,7 @@ velocity climb_rate(velocity ground_speed, angle climb_angle)
 	return sin(climb_angle) * ground_speed;
 }
 
-// *** VARIOUS FORMULAS ***
+// +++ VARIOUS FORMULAS +++
 frequency frequency_of_chromatic_note(int note, int reference_note, frequency reference_frequency)
 {
 	return std::pow(std::pow(2., 1. / 12.), note - reference_note) * reference_frequency;
