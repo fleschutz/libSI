@@ -2,8 +2,7 @@
 #pragma once
 
 #include <iostream>
-#include "from_string.h"
-#include "to_string.h"
+#include <SI/conversion.h>
 
 namespace SI
 {

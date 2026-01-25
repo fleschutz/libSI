@@ -63,6 +63,7 @@ Please find 34 more examples in: [examples.cpp](examples.cpp). Executing: `cmake
 ├📂SI
 |  ├📄all.h 
 |  ├📄constants.h
+|  ├📄conversion.h
 |  ├📄datatypes.h 
 |  ├📄formulas.h
 |  ├📄internal.h 

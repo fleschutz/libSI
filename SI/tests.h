@@ -1,5 +1,5 @@
 // <SI/tests.h> - unit tests at compile-time to verify everything.
-//                (sorted by: demo checks, basic C++, SI base units, derived SI units, astronomical units, Imperial units, digital units, various units, function checks)
+//                (sorted by: demo checks, basic C++, SI base units, SI derived units, astronomical units, Imperial units, digital units, various units, function checks)
 #pragma once
 
 #include <cassert>
@@ -92,7 +92,7 @@ namespace SI { namespace tests {
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
 
-	// +++ DERIVED SI UNITS +++
+	// +++ SI DERIVED UNITS +++
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
