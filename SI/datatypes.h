@@ -1,4 +1,4 @@
-// <SI/datatypes.h> - type-safe SI datatypes such as SI::length or SI::time
+// <SI/datatypes.h> - type-safe SI datatypes, e.g. SI::length or SI::time
 #pragma once
 
 #include <SI/internal.h>
@@ -12,8 +12,8 @@ namespace SI
     using _name ## 2 = _name ## _t<detail::vec2<SIfloat>>;                                                     \
     using _name ## 3 = _name ## _t<detail::vec3<SIfloat>>
 
-	// The 7 Base SI Datatypes
-	// -----------------------       l  m  t  T  c  s  i
+	// +++ SI BASE DATATYPES +++
+	//                               l  m  t  T  c  s  i
 	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in m
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kg
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in s
@@ -22,8 +22,7 @@ namespace SI
 	DATATYPE(amount_of_substance,    0, 0, 0, 0, 1, 1, 0); // in mol
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 1, 0, 1); // in cal
 
-	// The Derived SI Datatypes
-	// ------------------------
+	// +++ DERIVED SI DATATYPES +++
 	DATATYPE(per_length,            -1, 0,  0, 0, 0, 0, 0); // per m (reciprocal)
 	DATATYPE(area,                   2, 0,  0, 0, 0, 0, 0); // in m²
 	DATATYPE(per_area,              -2, 0,  0, 0, 0, 0, 0); // per m² (reciprocal)

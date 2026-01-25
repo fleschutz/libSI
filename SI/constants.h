@@ -1,4 +1,4 @@
-// <SI/constants.h> - type-safe constants based on SI units
+// <SI/constants.h> - type-safe constants based on SI units, e.g. SI::constant::speed_of_light
 //                    (sorted by: SI defining, universal, electromagnetic, atomic and nuclear, physico-chemical,...)
 #pragma once
 
