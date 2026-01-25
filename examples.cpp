@@ -236,8 +236,8 @@ int main()
 	{
 		auto frequency = formula::frequency_of_chromatic_note(note, reference_note, reference_freq);
 		auto wavelength = formula::wavelength(constant::speed_of_sound, frequency);
-		print(notes[note % 7], frequency, wavelength);
-		print(" | ");
+		printf(" %c%d=", notes[note % 7], note / 7);
+		print(frequency, wavelength);
 	}
 } {
 	print("\n36. Which exoplanets are near and seem life-friendly? ");
