@@ -1,4 +1,5 @@
 // <SI/constants.h> - type-safe constants based on SI units
+//                    (sorted by: SI defining, universal, electromagnetic, atomic and nuclear, physico-chemical,...)
 #pragma once
 
 #include <SI/units.h>
@@ -7,7 +8,7 @@ namespace SI { namespace constant {
 
 #define CONSTANT(_name, _value, _base_unit) const auto _name = _base_unit(_value)
 
-// The 7 defining constants of SI (as of 20 May 2019)
+// +++ SI DEFINING CONSTANTS ++ (as of 20 May 2019)
 CONSTANT(caesium_frequency,     9'192'631'770, hertz); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
 CONSTANT(delta_v_Cs,            9'192'631'770, hertz); // (the symbol)
 CONSTANT(speed_of_light,          299'792'458, meters_per_second); // the speed of light in vacuum
@@ -21,14 +22,14 @@ CONSTANT(k,                     1.380'649e-23, joules_per_kelvin); // (the symbo
 CONSTANT(N_A,                   6.02214076e23, per_mol); // the Avogadro constant
 CONSTANT(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
 
-// Universal constants
+// +++ UNIVERSAL CONSTANTS +++
 CONSTANT(min_temperature,                   0, kelvins); // the lowest possible temperature (Absolute zero)
 CONSTANT(Z_0,                   376.730313667, ohms); // characteristic impedance of vacuum
 CONSTANT(epsilon_0,  8.854'187'817'620'39e-12, farads_per_meter); // electric constant (vacuum permittivity, symbol: ε_0)
 CONSTANT(G,                       6.67408e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
 CONSTANT(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
 
-// Electromagnetic constants
+// +++ ELECTROMAGNETIC CONSTANTS +++
 CONSTANT(mu_B,                  9.2740100e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
 CONSTANT(G_0,                  7.748091729e-5, siemens); // conductance quantum
 CONSTANT(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
@@ -37,7 +38,7 @@ CONSTANT(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum
 CONSTANT(mu_N,                  5.0507837e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
 CONSTANT(R_K,                     25812.80745, ohms); // von Klitzing constant
 
-// Atomic and nuclear constants
+// +++ ATOMIC AND NUCLEAR CONSTANTS +++
 CONSTANT(electron_mass,      9.1093837139e-31, kilograms);
 CONSTANT(m_e,                9.1093837139e-31, kilograms); // electron mass
 CONSTANT(muon_mass,           1.883531627e-28, kilograms);
@@ -56,7 +57,7 @@ CONSTANT(h_2me,                  3.6369475e-4, meters2_per_second); // quantum o
 CONSTANT(R_inf,               10973731.568160, per_meter); // Rydberg constant
 CONSTANT(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
 
-// Physico-chemical constants
+// +++ PHYSICO-CHEMICAL CONSTANTS +++
 CONSTANT(m_u,                  1.66053906e-27, kilograms); // Atomic mass constant
 CONSTANT(F,                       96485.33212, coulombs_per_mol); // Faraday constant
 CONSTANT(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
@@ -66,10 +67,7 @@ CONSTANT(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); 
 CONSTANT(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
 CONSTANT(S_0_by_R,             -1.15170753706, dimensionless); // Sackur–Tetrode constant
 
-// Adopted values
-CONSTANT(atm,                          101325, pascals); // standard atmosphere
-   
-// Physical constants
+// +++ PHYSICAL CONSTANTS +++
 CONSTANT(standard_gravity,            9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
 CONSTANT(g_0,                         9.80665, meters_per_second2); // (the symbol)
 CONSTANT(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
@@ -78,7 +76,7 @@ CONSTANT(speed_of_sound_in_fresh_water,  1481, meters_per_second); // at 20°C (
 CONSTANT(speed_of_sound_in_iron,         5120, meters_per_second);
 CONSTANT(speed_of_sound_in_diamonds,   12'000, meters_per_second);
 
-// Mathematical constants
+// +++ MATHEMATICAL CONSTANTS +++
 CONSTANT(pi,           3.14159265358979323846, radians); // (symbol: π)
 CONSTANT(half_pi,      1.57079632679489661923, radians);
 CONSTANT(quarter_pi,   0.78539816339744830961, radians);
@@ -86,12 +84,13 @@ CONSTANT(tau,          6.28318530717958647692, radians); // (symbol: τ)
 CONSTANT(phi,          1.61803398874989484820, dimensionless); // (symbol: φ)
 CONSTANT(Eulers_number,2.71828182845904523536, dimensionless);
 
-// Astronomical constants
+// +++ ASTRONOMICAL CONSTANTS +++
 CONSTANT(AU,                  149'597'870'691, meters); // astronomical unit (symbol: au)
 CONSTANT(parsec,       30'856'775'814'913'700, meters); // Parsec (symbol: pc)
 CONSTANT(lightyear,     9'460'730'777'119'564, meters); 
 
-// Various constants
+// +++ VARIOUS CONSTANTS +++
+CONSTANT(atm,                          101325, pascals); // standard atmosphere
 CONSTANT(Marathon_length,              42'195, meters);
 CONSTANT(quarter_mile,                 402.34, meters);
 
