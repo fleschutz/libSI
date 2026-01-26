@@ -10,3 +10,4 @@
 #include "Moon.h"
 #include "satellites.h"
 #include "exoplanets.h"
+#include "sunspots.h"
