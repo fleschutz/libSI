@@ -2,6 +2,7 @@
 #pragma once
 
 #include "chemical_elements.h"
+#include "physics_particles.h"
 #include "materials.h"
 #include "ISO_standards.h"
 
