@@ -21,7 +21,7 @@ struct particle_data {
     float width_upper;
 };
 
-const particle_data particles[] {
+const particle_data physics_particles[] {
 {-2212,"p","anti_proton",-1.,4,"UUD",938.27208816,2.9e-07,2.9e-07,0.,0.,0.,},
 {-2112,"n","anti_neutron",0.,4,"UDD",939.5654205,5e-07,5e-07,7.493e-25,4e-28,4e-28,},
 {-321,"K","kaon-",-1.,0,"Us",493.677,0.016,0.016,5.317e-14,9e-17,9e-17,},
@@ -68,7 +68,6 @@ const particle_data particles[] {
 {3312,"Xi","xi-",-1.,4,"dss",1321.71,0.07,0.07,4.02e-12,4e-14,4e-14,},
 {3322,"Xi","xi0",0.,4,"uss",1314.86,0.2,0.2,2.27e-12,7e-14,7e-14,},
 {3334,"Omega","omega-",-1.,4,"sss",1672.45,0.29,0.29,8.02e-12,1.1e-13,1.1e-13,},
-{},
 };
 
 } // namespace dataset
