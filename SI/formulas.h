@@ -308,7 +308,7 @@ specific_energy absorbed_dose(energy E, mass m)
 	return E / m;
 }
 
-} } // SI::formula
+} } // namespace SI::formula
 
 // Sources
 // -------

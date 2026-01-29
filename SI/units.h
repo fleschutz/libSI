@@ -172,7 +172,7 @@ namespace SI
 	}
 
 #undef UNIT
-}
+} // namespace SI
 
 #undef SI_RETURN_QUANTITY
 #undef SI_INLINE_CONSTEXPR

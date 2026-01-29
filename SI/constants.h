@@ -95,7 +95,7 @@ CONSTANT(Marathon_length,              42'195, meters);
 CONSTANT(quarter_mile,                 402.34, meters);
 
 #undef CONSTANT
-} } // SI::constant
+} } // namespace SI::constant
  
 // Sources
 // -------

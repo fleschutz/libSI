@@ -337,7 +337,7 @@ LITERAL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R.
 LITERAL(_percent,                     0.01, dimensionless); // 1_percent
 
 #undef LITERAL
-} // SI::
+} // namespace SI
 
 // Sources
 // -------

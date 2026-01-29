@@ -261,7 +261,7 @@ namespace SI { namespace tests {
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
 	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 
-} } // SI::tests
+} } // namespace SI::tests
  
 // Sources
 // -------

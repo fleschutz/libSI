@@ -69,7 +69,8 @@ namespace SI
 		print(decibel);
 		_print("dB)");
 	}
-}
+
+} // namespace SI
 
 // Sources
 // -------

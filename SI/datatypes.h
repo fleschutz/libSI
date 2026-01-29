@@ -47,7 +47,7 @@ namespace SI
 	DATATYPE(specific_energy,        2, 0, -2, 0, 0, 0, 0); // in J/kg
 
 #undef DATATYPE
-} // SI::
+} // namespace SI
 
 // Sources
 // -------

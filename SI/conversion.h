@@ -453,7 +453,7 @@ namespace SI
 	{
 		return text;
 	}
-}
+} // namespace SI
 
 // Sources
 // -------
