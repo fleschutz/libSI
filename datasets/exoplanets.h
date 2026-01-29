@@ -9,14 +9,14 @@ namespace dataset {
 struct exoplanet_data {
     const char* name;
     const char* hostname;
-    int number_of_stars;
-    int number_of_planets;
+    unsigned char number_of_stars;
+    unsigned char number_of_planets;
     SI::time orbital_period;
     SI::length orbit_semimajor_axis;
-    double radius_vs_Earth;
-    double mass_vs_Earth;
-    double eccentricity;
-    double insolation_flux;
+    float radius_vs_Earth;
+    float mass_vs_Earth;
+    float eccentricity;
+    float insolation_flux;
     SI::temperature equilibrium_temperature;
     SI::length distance;
 };
@@ -39257,8 +39257,7 @@ const exoplanet_data exoplanets[] {
 {"xi Aql b","xi Aql",1,1,00_days,0.58_au,00,00,00,00,00_K,56.1858_pc,},
 {"xi Aql b","xi Aql",1,1,136.75_days,0.68_au,00,00,0.,00,00_K,56.1858_pc,},
 {"xi Aql b","xi Aql",1,1,136.97_days,0.625_au,00,00,0.059,00,00_K,56.1858_pc,},
-{},
 };
 
-} // dataset::
+} // namespace dataset
 
