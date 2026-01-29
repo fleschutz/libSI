@@ -1,4 +1,4 @@
-// dataset converted from chemical_elements.csv by csv2hpp. NOTE: 00=empty (or unknown)
+// dataset converted from chemical_elements.csv by csv2hpp.
 #pragma once
 
 #include <SI/literals.h>
@@ -39,7 +39,7 @@ struct element_data {
     const char* discovered_by;
 };
 
-const element_data elements[] {
+const element_data elements[] { // NOTE: 00=empty or unknown field
 {1,"H","Hydrogen",1,1,"s","0",1.008,"1s1","1,,,,,,","0",0.00008988,14.01_degC,20.28_degC,14.304,0.117,0.904,53,38,120,2.2,1,1312,0.1805,72.769,1400,75,1766,false,"H. Cavendish",},
 {2,"He","Helium",18,1,"s","7",4.002602,"1s2","2,,,,,,","0",0.0001785,00_degC,4.22_degC,5.193,0.0138,0.0829,31,32,140,00,0,2372.3,0.1513,-50,0.008,23,1868,false,"P. Janssen, N. Lockyer",},
 {3,"Li","Lithium",1,2,"s","1",6.94,"[He] 2s1","2,1,,,,,","2",0.534,453.69_degC,1560_degC,3.582,3,136,167,134,182,0.98,1,520.2,84.8,59.632,20,0.0000006,1817,false,"A. Arfwedson",},

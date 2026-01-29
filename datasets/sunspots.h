@@ -1,4 +1,4 @@
-// dataset converted from sunspots.csv by csv2hpp. NOTE: 00=empty (or unknown)
+// dataset converted from sunspots.csv by csv2hpp.
 #pragma once
 
 #include <SI/literals.h>
@@ -12,7 +12,7 @@ struct sunspot_data {
     float monthly_mean_total_sunspot_number;
 };
 
-const sunspot_data sunspots[] {
+const sunspot_data sunspots[] { // NOTE: 00=empty or unknown field
 {0,"1749-01-31",96.7,},
 {1,"1749-02-28",104.3,},
 {2,"1749-03-31",116.7,},

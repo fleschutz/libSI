@@ -1,4 +1,4 @@
-// dataset converted from planets.csv by csv2hpp. NOTE: 00=empty (or unknown)
+// dataset converted from planets.csv by csv2hpp.
 #pragma once
 
 #include <SI/literals.h>
@@ -30,7 +30,7 @@ struct planet_data {
     bool has_global_magnetic_field;
 };
 
-const planet_data planets[] {
+const planet_data planets[] { // NOTE: 00=empty or unknown field
 {"Mercury",0.33_kg,4879_km,5427_kg_per_m³,3.7_m_per_s²,4.3_m_per_s,1407.6_h,4222.6_h,57.9_km,46.,69.8,88._h,47.4_m_per_s,7.,0.205,0.034,167_degC,0_bar,0,false,true,},
 {"Venus",4.87_kg,12104_km,5243_kg_per_m³,8.9_m_per_s²,10.4_m_per_s,-5832.5_h,2802._h,108.2_km,107.5,108.9,224.7_h,35._m_per_s,3.4,0.007,177.4,464_degC,92_bar,0,false,false,},
 {"Earth",5.97_kg,12756_km,5514_kg_per_m³,9.8_m_per_s²,11.2_m_per_s,23.9_h,24._h,149.6_km,147.1,152.1,365.2_h,29.8_m_per_s,0.,0.017,23.4,15_degC,1_bar,1,false,true,},

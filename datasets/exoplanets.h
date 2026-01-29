@@ -1,4 +1,4 @@
-// dataset converted from exoplanets.csv by csv2hpp. NOTE: 00=empty (or unknown)
+// dataset converted from exoplanets.csv by csv2hpp.
 #pragma once
 
 #include <SI/literals.h>
@@ -21,7 +21,7 @@ struct exoplanet_data {
     SI::length distance;
 };
 
-const exoplanet_data exoplanets[] {
+const exoplanet_data exoplanets[] { // NOTE: 00=empty or unknown field
 {"11 Com b","11 Com",2,1,323.21_days,1.178_au,00,00,0.238,00,00_K,93.1846_pc,},
 {"11 Com b","11 Com",2,1,326.03_days,1.29_au,00,00,0.231,00,00_K,93.1846_pc,},
 {"11 Com b","11 Com",2,1,00_days,1.21_au,00,00,00,00,00_K,93.1846_pc,},

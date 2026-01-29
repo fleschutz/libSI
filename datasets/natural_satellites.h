@@ -1,4 +1,4 @@
-// dataset converted from natural_satellites.csv by csv2hpp. NOTE: 00=empty (or unknown)
+// dataset converted from natural_satellites.csv by csv2hpp.
 #pragma once
 
 #include <SI/literals.h>
@@ -16,7 +16,7 @@ struct satellite_data {
     double albedo;
 };
 
-const satellite_data satellites[] {
+const satellite_data satellites[] { // NOTE: 00=empty or unknown field
 {"Earth","Moon",4902.801,1737.5_km,3.344_g_per_cm³,-12.74,0.12,},
 {"Mars","Phobos",0.0007112,11.1_km,1.872_g_per_cm³,11.4,0.071,},
 {"Mars","Deimos",0.0000985,6.2_km,1.471_g_per_cm³,12.45,0.068,},

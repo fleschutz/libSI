@@ -1,4 +1,4 @@
-// dataset converted from physics_particles.csv by csv2hpp. NOTE: 00=empty or unknown
+// dataset converted from physics_particles.csv by csv2hpp.
 #pragma once
 
 #include <SI/literals.h>
@@ -21,7 +21,7 @@ struct particle_data {
     double width_upper;
 };
 
-const particle_data physics_particles[] {
+const particle_data physics_particles[] { // NOTE: 00=empty or unknown field
 {-2212,"p","anti_proton",-1.,4,"UUD",938.27208816,2.9e-07,2.9e-07,0.,0.,0.,},
 {-2112,"n","anti_neutron",0.,4,"UDD",939.5654205,5e-07,5e-07,7.493e-25,4e-28,4e-28,},
 {-321,"K","kaon-",-1.,0,"Us",493.677,0.016,0.016,5.317e-14,9e-17,9e-17,},
