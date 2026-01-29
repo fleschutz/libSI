@@ -13,12 +13,12 @@ struct particle_data {
     float charge;
     float rank;
     const char* quarks;
-    float mass;
-    float mass_lower;
-    float mass_upper;
-    float width;
-    float width_lower;
-    float width_upper;
+    double mass;
+    double mass_lower;
+    double mass_upper;
+    double width;
+    double width_lower;
+    double width_upper;
 };
 
 const particle_data physics_particles[] {
