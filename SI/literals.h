@@ -262,6 +262,7 @@ LITERAL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
 LITERAL(_rad,      1, radians);             // 1_rad (radian)
 LITERAL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 LITERAL(_sr,       1, steradians);          // 1_sr  (steradian)
+LITERAL(_km³_per_s²,1e9, meters3_per_second2);// 1_km³_per_s² (km³/s²)
 
 // +++ NON-SI UNITS +++
 //
