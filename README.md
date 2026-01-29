@@ -22,7 +22,7 @@ Apply math based on SI units correct, with high precision, and as easy as possib
 6. **I/O** such as SI::print() in [<SI/IO.h>](SI/IO.h).
 7. **Datasets** such as chemical elements, satellites, exoplanets in 📂[datasets](datasets/).
 
-🔎 Quick Example
+🔎 Example Code
 ----------------
 ```cpp
 #include <SI/all.h>
