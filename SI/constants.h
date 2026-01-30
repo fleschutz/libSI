@@ -36,13 +36,14 @@ CONSTANT(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck 
 CONSTANT(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability (2022 CODATA)
 
 // +++ ELECTROMAGNETIC CONSTANTS +++
-CONSTANT(mu_B,                  9.2740100e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
-CONSTANT(G_0,                  7.748091729e-5, siemens); // conductance quantum
-CONSTANT(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
+CONSTANT(G_0,                7.748'091'729e-5, siemens); // conductance quantum (2022 CODATA)
 CONSTANT(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
+CONSTANT(K_J,                 483'597.848'4e9, hertz_per_volt); // Josephson constant (2022 CODATA)
+CONSTANT(mu_B,             9.274'010'0657e-24, joules_per_tesla); // Bohr magneton (symbol: µB, 2022 CODATA)
+CONSTANT(mu_N,             5.050'783'7393e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N, 2022 CODATA))
 CONSTANT(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum (symbol: Φ_0)
-CONSTANT(mu_N,                  5.0507837e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
-CONSTANT(R_K,                     25812.80745, ohms); // von Klitzing constant
+CONSTANT(R_K,                   25'812.807'45, ohms); // von Klitzing constant (2022 CODATA)
+CONSTANT(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
 
 // +++ ATOMIC AND NUCLEAR CONSTANTS +++
 CONSTANT(a_0,            5.291'772'105'44e-11, meters);   // Bohr radius (2022 CODATA)
