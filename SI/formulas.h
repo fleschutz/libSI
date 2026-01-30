@@ -207,9 +207,16 @@ force lift_force_of_wing(dimensionless lift_coefficient, area wing_surface, dens
 	return 0.5 * air_density * square(true_air_speed) * wing_surface * lift_coefficient;
 }
 
-angle glide_path(length horizontal_distance, length vertical_change)
+// Calculate the Mach number from velocity of moving aircraft (v) at altitude's speed of sound.
+dimensionless Mach_number(velocity v, velocity speed_of_sound)
 {
-	return atan2(vertical_change, horizontal_distance);
+	return v / speed_of_sound;
+}
+
+// Calculate the glide path from horizontal distance (h) and vertical change (v).
+angle glide_path(length h, length v)
+{
+	return atan2(v, h);
 }
 
 length vertical_height(angle glide_path, length horizontal_distance)
