@@ -1,6 +1,5 @@
 // <SI/IO.h> - I/O functions to print single and multiple SI datatypes, equivalents, and text.
 #pragma once
-
 #include <iostream>
 #include <SI/conversion.h>
 

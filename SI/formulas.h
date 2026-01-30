@@ -1,7 +1,6 @@
-// <SI/formulas.h> - 52 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
-//                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, various)
+// <SI/formulas.h> - 53 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
+//                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
-
 #include <SI/constants.h>
 
 namespace SI { namespace formula {

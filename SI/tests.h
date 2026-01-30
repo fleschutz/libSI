@@ -1,7 +1,6 @@
 // <SI/tests.h> - unit tests at compile-time to verify everything.
 //                (sorted by: demo checks, basic C++, SI base units, SI derived units, astronomical units, Imperial units, digital units, various units, function checks)
 #pragma once
-
 #include <cassert>
 #include <SI/literals.h>
 

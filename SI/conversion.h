@@ -1,6 +1,5 @@
 // <SI/conversion.h> - convert SI datatypes <-> string, e.g. from_string("12m", my_length); 
 #pragma once
-
 #include <string>
 #include <SI/literals.h>
 

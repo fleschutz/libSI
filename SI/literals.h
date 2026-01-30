@@ -1,7 +1,6 @@
 // <SI/literals.h> - convenient literals such as 100_m or 60_sec (requires C++11 or higher)
 //                   (sorted by: SI base units, SI derived units, and non-SI units)
 #pragma once
-
 #include <SI/units.h>
 
 namespace SI {
