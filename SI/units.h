@@ -52,6 +52,7 @@ namespace SI
 	UNIT(kilometers3)  = kilo * kilo * kilo * meters3;
 	UNIT(centimeters3) = centi * centi * centi * meters3;
 	UNIT(meters3_per_second) = meters3 / seconds;
+	UNIT(meters3_per_mol) = meters3 / moles;
 	UNIT(meters3_per_second2) = meters3 / (seconds * seconds);
 	UNIT(meters3_per_kilogram_per_second2) = meters3 / kilograms / (seconds * seconds);
 	UNIT(kilograms_per_meter3) = kilograms / meters3;

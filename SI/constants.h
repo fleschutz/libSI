@@ -1,5 +1,5 @@
 // <SI/constants.h> - type-safe constants based on SI units, e.g. SI::constant::G
-//                    (sorted by: SI defining, universal, electromagnetic, atomic and nuclear, physico-chemical,...)
+//                    (sorted by: defined, universal, electromagnetic, atomic and nuclear, physico-chemical,...)
 #pragma once
 #include <SI/units.h>
 
@@ -7,7 +7,7 @@ namespace SI { namespace constant {
 
 #define CONSTANT(_name, _value, _base_unit) const auto _name = _base_unit(_value)
 
-// +++ SI DEFINING CONSTANTS ++ (as of 20 May 2019)
+// +++ DEFINED CONSTANTS +++
 CONSTANT(caesium_frequency,     9'192'631'770, hertz); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
 CONSTANT(delta_v_Cs,            9'192'631'770, hertz); // (the symbol)
 CONSTANT(speed_of_light,          299'792'458, meters_per_second); // the speed of light in vacuum
@@ -20,6 +20,9 @@ CONSTANT(Boltzmann,             1.380'649e-23, joules_per_kelvin); // the Boltzm
 CONSTANT(k,                     1.380'649e-23, joules_per_kelvin); // (the symbol)
 CONSTANT(N_A,                   6.02214076e23, per_mol); // the Avogadro constant
 CONSTANT(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
+CONSTANT(g_n,                        9.806'65, meters_per_second2); // standard acceleration of gravity (2022 CODATA)
+CONSTANT(atm,                         101'325, pascals); // standard atmosphere (2022 CODATA)
+CONSTANT(ssp,                         100'000, pascals); // standard-state pressure (2022 CODATA)
 
 // +++ UNIVERSAL CONSTANTS +++
 CONSTANT(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation (2022 CODATA)
@@ -62,18 +65,19 @@ CONSTANT(sin2Theta_W,                 0.22290, dimensionless); // weak mixing an
 CONSTANT(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
 
 // +++ PHYSICO-CHEMICAL CONSTANTS +++
-CONSTANT(m_u,                  1.66053906e-27, kilograms); // Atomic mass constant
-CONSTANT(F,                       96485.33212, coulombs_per_mol); // Faraday constant
+CONSTANT(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
 CONSTANT(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
 CONSTANT(c_1L,                1.191042972e-16, watts_per_meter2); // first radiation constant for spectral radiance
-CONSTANT(R,                       8.314462618, joules_per_kelvin_per_mol); // gas constant
+CONSTANT(F,                     96'485.332'12, coulombs_per_mol); // Faraday constant (2022 CODATA)
+CONSTANT(m_u,                  1.66053906e-27, kilograms); // Atomic mass constant
+CONSTANT(M_u,             1.000'000'001'05e-3, kilograms_per_mol); // molar mass constant (2022 CODATA)
+CONSTANT(R,                     8.314'462'618, joules_per_kelvin_per_mol); // molar gas constant (2022 CODATA)
 CONSTANT(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); // specific gas constant for dry air
-CONSTANT(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
 CONSTANT(S_0_by_R,             -1.15170753706, dimensionless); // Sackur–Tetrode constant
+CONSTANT(V_m,                22.710'954'64e-3, meters3_per_mol); // molar volume of ideal gas (273.15K, 100kPa, 2022 CODATA)
 
 // +++ PHYSICAL CONSTANTS +++
 CONSTANT(standard_gravity,            9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
-CONSTANT(g_0,                         9.80665, meters_per_second2); // (the symbol)
 CONSTANT(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
 CONSTANT(speed_of_sound,                  343, meters_per_second); // speed of sound in dry air at 20°C (68°F)
 CONSTANT(speed_of_sound_in_fresh_water,  1481, meters_per_second); // at 20°C (68°F)
@@ -95,7 +99,6 @@ CONSTANT(lightyear,     9'460'730'777'119'564, meters); // one light-year (symbo
 
 // +++ VARIOUS CONSTANTS +++
 CONSTANT(min_temperature,                   0, kelvins); // the lowest possible temperature (absolute zero)
-CONSTANT(atm,                          101325, pascals); // standard atmosphere
 CONSTANT(Marathon_distance,            42'195, meters);
 CONSTANT(quarter_mile,                 402.34, meters);
 

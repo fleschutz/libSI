@@ -215,7 +215,7 @@ int main()
 	auto dive_depth = 10_m;
 	auto salt_water_density = 1033.23_kg_per_m³;
 	auto air_pressure = 1013.25_hPa;
-	auto water_pressure = salt_water_density * constant::g_0 * dive_depth + air_pressure;
+	auto water_pressure = salt_water_density * constant::g_n * dive_depth + air_pressure;
 	auto max_time = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
 	print(max_time);
 } {
