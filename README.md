@@ -27,8 +27,7 @@ Apply math based on SI units correct, with high precision, and as easy as possib
 #include <SI/all.h>
 using namespace SI;
 
-int main()
-{	
+int main() {	
 	print("What's the potential energy of just 1g mass? ");
 	auto m = 1_g;
 	auto c = constant::speed_of_light;
