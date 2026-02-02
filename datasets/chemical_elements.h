@@ -1,6 +1,5 @@
-// dataset converted from chemical_elements.csv by csv2hpp.
+// dataset from chemical_elements.csv (converted by csv2hpp 0.2 on 2026-02-01).
 #pragma once
-
 #include <SI/literals.h>
 using namespace SI;
 

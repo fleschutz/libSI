@@ -1,13 +1,12 @@
-// dataset converted from planets.csv by csv2hpp.
+// dataset from planets.csv (converted by csv2hpp 0.2 on 2026-02-01).
 #pragma once
-
 #include <SI/literals.h>
 using namespace SI;
 
 namespace dataset {
 
 struct planet_data {
-    const char* planet_name;
+    const char* name;
     SI::mass mass;
     SI::length diameter;
     SI::density density;

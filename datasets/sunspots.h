@@ -1,6 +1,5 @@
-// dataset converted from sunspots.csv by csv2hpp.
+// dataset from sunspots.csv (converted by csv2hpp 0.1 on 2026-02-01).
 #pragma once
-
 #include <SI/literals.h>
 using namespace SI;
 

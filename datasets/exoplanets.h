@@ -1,4 +1,4 @@
-// dataset converted from exoplanets.csv by csv2hpp.
+// dataset from exoplanets.csv (converted by csv2hpp 0.2 on 2026-02-01)
 #pragma once
 
 #include <SI/literals.h>

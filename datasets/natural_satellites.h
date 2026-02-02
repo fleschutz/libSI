@@ -1,4 +1,4 @@
-// dataset converted from natural_satellites.csv on 2026-02-01 by csv2hpp 0.1
+// dataset from natural_satellites.csv (converted by csv2hpp 0.1 on 2026-02-01).
 #pragma once
 #include <SI/literals.h>
 using namespace SI;

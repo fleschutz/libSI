@@ -1,6 +1,5 @@
-// dataset converted from physics_particles.csv by csv2hpp.
+// dataset from physics_particles.csv (converted by csv2hpp 0.2 on 2026-02-01).
 #pragma once
-
 #include <SI/literals.h>
 using namespace SI;
 
