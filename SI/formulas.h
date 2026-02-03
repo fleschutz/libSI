@@ -1,4 +1,4 @@
-// <SI/formulas.h> - 54 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
+// <SI/formulas.h> - 57 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
 //                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
@@ -283,6 +283,24 @@ temperature windchill_temperature(temperature air_temperature, velocity wind_spe
 density density_of_dry_air(pressure air_pressure, temperature air_temperature)
 {
 	return air_pressure / (constant::R_dry_air * air_temperature);
+}
+
+// Calculates the density from mass (m) and volume (V).
+density density_of(mass m, volume V)
+{
+	return m / V;
+}
+
+// Calculates the mass from density (p) and volume (V).
+mass mass_of(density p, volume V)
+{
+	return p * V;
+}
+
+// Calculates the volume from mass (m) and density (p).
+volume volume_of(mass m, density p)
+{
+	return m / p;
 }
 
 // Calculates the body-mass index (BMI).
