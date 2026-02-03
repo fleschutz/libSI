@@ -5,6 +5,7 @@
 #include "physics_particles.h"
 #include "materials.h"
 #include "ISO_standards.h"
+#include "musical_notes.h"
 
 #include "Earth.h"
 #include "planets.h"

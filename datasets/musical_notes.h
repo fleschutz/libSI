@@ -8,7 +8,7 @@ namespace dataset {
 struct music_note_data {
     int octave;
     const char* note;
-    _Hz frequency;
+    SI::frequency frequency;
 };
 
 const music_note_data music_notes[] { // NOTE: 00=empty or unknown field
