@@ -49,7 +49,7 @@ Please find all 39 examples in: [examples.cpp](examples.cpp). Executing: `cmake 
 -------
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
 * **Why use libSI?** To avoid mistakes and for precision and convenience (see the constants, common formulas, literals, and datasets)
-* **Where are the list of references?** At the end of each source code file.
+* **Where are the list of references?** See the sources listed at the end of each code file.
 * **Where are libSI's files and folders?** Here is the project structure:
 ```
 ├📄CMakeLists.txt 
