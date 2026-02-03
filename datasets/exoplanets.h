@@ -12,7 +12,7 @@ struct exoplanet_data {
 /*04*/   unsigned char number_of_planets;		// (byte)
 /*05*/   SI::time orbital_period;		// (_days)
 /*06*/   SI::length orbit_semimajor_axis;		// (_au)
-/*07*/   float radius_vs_Earth;		// (float)
+/*07*/   double radius_vs_Earth;		// (double)
 /*08*/   float mass_vs_Earth;		// (float)
 /*09*/   float eccentricity;		// (float)
 /*10*/   float insolation_flux;		// (float)
