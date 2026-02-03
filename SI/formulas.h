@@ -1,4 +1,4 @@
-// <SI/formulas.h> - 53 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
+// <SI/formulas.h> - 54 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
 //                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
@@ -229,6 +229,12 @@ velocity climb_rate(velocity ground_speed, angle climb_angle)
 }
 
 // +++ GRAVITATION +++
+
+// Calculates the gravitational potential energy of a mass (m) at height (h) based on gravity (e.g. on Earth).
+energy gravitational_potential_energy(mass m, length h, acceleration gravity)
+{
+	return m * h * gravity;
+}
 
 // Calculates the attractive force between two bodies of masses (m1) and (m2) with distance (d) between their centres of mass.
 force gravitational_attractive_force(mass m1, mass m2, length d)
