@@ -1,4 +1,4 @@
-// DO NOT EDIT! Data source is exoplanets.csv (converted by github.com/fleschutz/csv2hpp 0.2 on 2026-02-03)
+// DO NOT EDIT! Data source is exoplanets.csv (converted by github.com/fleschutz/csv2hpp 0.1 on 2026-02-03)
 #pragma once
 #include <SI/literals.h>
 using namespace SI;
@@ -13,9 +13,9 @@ struct exoplanet_data {
 /*05*/   SI::time orbital_period;		// (_days)
 /*06*/   SI::length orbit_semimajor_axis;		// (_au)
 /*07*/   double radius_vs_Earth;		// (double)
-/*08*/   float mass_vs_Earth;		// (float)
-/*09*/   float eccentricity;		// (float)
-/*10*/   float insolation_flux;		// (float)
+/*08*/   double mass_vs_Earth;		// (double)
+/*09*/   double eccentricity;		// (double)
+/*10*/   double insolation_flux;		// (double)
 /*11*/   SI::temperature equilibrium_temperature;		// (_K)
 /*12*/   SI::length distance;		// (_pc)
 };
