@@ -20,7 +20,7 @@ struct element_data {
 /*29*/   bool radioactive;		// (bool)
 };
 
-const element_data elements[] { // NOTE: 00=empty or unknown field
+const element_data chemical_elements[] { // NOTE: 00=empty or unknown field
 {1,"H","Hydrogen",1,1,1.008_Da,14.01_degC,20.28_degC,53_pm,38_pm,120_pm,false},
 {2,"He","Helium",18,1,4.002602_Da,00_degC,4.22_degC,31_pm,32_pm,140_pm,false},
 {3,"Li","Lithium",1,2,6.94_Da,453.69_degC,1560_degC,167_pm,134_pm,182_pm,false},

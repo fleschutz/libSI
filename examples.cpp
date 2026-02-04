@@ -265,6 +265,16 @@ int main() {
 		printf("it's %s to '%s' in %s, ", to_string(exoplanet.distance).c_str(), exoplanet.name, exoplanet.hostname);
 	}
 } {
+	print("\n40. Which chemical elements are radioactive and melt above 2000°C? ");
+	for (auto element : dataset::chemical_elements)
+	{
+		if (!element.radioactive)
+			continue;
+		if (element.melting_point < 2000_degC)
+			continue;
+		printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
+	}
+} {
 	// Conversion example:
 	dimensionless x = 42;      // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_s;      // <- t is now 42 seconds
