@@ -5,13 +5,13 @@ using namespace SI;
 
 namespace dataset { 
 
-struct music_note_data {
+struct musical_note_data {
 /*01*/   int octave;		// (int)
 /*02*/   const char* name;		// (string)
 /*03*/   SI::frequency frequency;		// (_Hz)
 };
 
-const music_note_data music_notes[] { // NOTE: 00=empty or unknown field
+const musical_note_data musical_notes[] { // NOTE: 00=empty or unknown field
 {0,"C",16.351_Hz},
 {0,"C#",17.324_Hz},
 {0,"D",18.354_Hz},

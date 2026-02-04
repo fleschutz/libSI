@@ -240,8 +240,8 @@ int main() {
 	auto force = formula::gravitational_attractive_force(Sun_mass, Earth_mass, constant::AU);
 	print(force);
 } {
-	print("\n38. What are the frequencies and wavelengths of all music notes? ");
-	for (auto note : dataset::music_notes)
+	print("\n38. What are the frequencies and wavelengths of all musical notes? ");
+	for (auto note : dataset::musical_notes)
 	{
 		auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
 		printf(" %s%d@", note.name, note.octave);
