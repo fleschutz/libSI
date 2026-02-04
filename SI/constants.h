@@ -70,7 +70,7 @@ CONSTANT(b,                    2.897771955e-3, meter_kelvins); // Wien wavelengt
 CONSTANT(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
 CONSTANT(c_1L,                1.191042972e-16, watts_per_meter2); // first radiation constant for spectral radiance
 CONSTANT(F,                     96'485.332'12, coulombs_per_mol); // Faraday constant (2022 CODATA)
-CONSTANT(m_u,                  1.66053906e-27, kilograms); // Atomic mass constant
+CONSTANT(m_u,          1.660'539'068'9252e-27, kilograms); // atomic mass constant (2022 CODATA)
 CONSTANT(M_u,             1.000'000'001'05e-3, kilograms_per_mol); // molar mass constant (2022 CODATA)
 CONSTANT(R,                     8.314'462'618, joules_per_kelvin_per_mol); // molar gas constant (2022 CODATA)
 CONSTANT(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); // specific gas constant for dry air

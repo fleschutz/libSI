@@ -337,7 +337,7 @@ LITERAL(_mmHg,                    133.3224, pascals);  // 1_mmHg (millimeter mer
 LITERAL(_degC,                           1, celsius);  // 1_degC (°Celsius)
 LITERAL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
 LITERAL(_Mach,                         330, meters_per_second); // 1_Mach
-LITERAL(_Da,           1.6605390689252e-27, kilograms);// 1_Da   (dalton)
+LITERAL(_Da,        1.660'539'068'9252e-27, kilograms);// 1_Da   (dalton, or unified atomic mass unit)
 LITERAL(_eV,               1.602176634e-19, joules);   // 1_eV   (electronvolt)
 LITERAL(_hp,            745.69987158227022, watts);    // 1_hp   (horsepower)
 LITERAL(_PS,                     735.49875, watts);    // 1_PS   ('Pferdestärke', german horsepower)
