@@ -7,7 +7,7 @@ namespace dataset {
 
 struct music_note_data {
 /*01*/   int octave;		// (int)
-/*02*/   const char* note;		// (string)
+/*02*/   const char* name;		// (string)
 /*03*/   SI::frequency frequency;		// (_Hz)
 };
 
@@ -50,24 +50,24 @@ const music_note_data music_notes[] { // NOTE: 00=empty or unknown field
 {2,"B",123.47_Hz},
 {3,"C",130.81_Hz},
 {3,"C#",138.59_Hz},
-{3,"D3",146.83_Hz},
+{3,"D",146.83_Hz},
 {3,"D#",155.56_Hz},
-{3,"E3",164.81_Hz},
-{3,"F3",174.61_Hz},
+{3,"E",164.81_Hz},
+{3,"F",174.61_Hz},
 {3,"F#",185._Hz},
-{3,"G3",196._Hz},
+{3,"G",196._Hz},
 {3,"G#",207.65_Hz},
 {3,"A",220._Hz},
 {3,"A#",233.08_Hz},
 {3,"B",246.94_Hz},
 {4,"C",261.63_Hz},
 {4,"C#",277.18_Hz},
-{4,"D4",293.66_Hz},
+{4,"D",293.66_Hz},
 {4,"D#",311.13_Hz},
 {4,"E",329.63_Hz},
 {4,"F",349.23_Hz},
 {4,"F#",369.99_Hz},
-{4,"G4",392._Hz},
+{4,"G",392._Hz},
 {4,"G#",415.3_Hz},
 {4,"A",440._Hz},
 {4,"A#",466.16_Hz},
@@ -93,7 +93,7 @@ const music_note_data music_notes[] { // NOTE: 00=empty or unknown field
 {6,"F#",1479.98_Hz},
 {6,"G",1567.98_Hz},
 {6,"G#",1661.22_Hz},
-{6,"A6",1760._Hz},
+{6,"A",1760._Hz},
 {6,"A#",1864.66_Hz},
 {6,"B",1975.53_Hz},
 {7,"C",2093._Hz},

@@ -166,7 +166,7 @@ int main() {
 	auto result = formula::windchill_temperature(air_temperature, wind_speed);
 	print(result);
 } {
-	print("\n29. What's the lift force of an A380 wing on sea level at 284km/h rotation speed? ");
+	print("\n29. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
 	auto wing_surface = 845_m²;
 	dimensionless lift_coefficient = 1.3939;
 	auto air_density = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
@@ -228,28 +228,25 @@ int main() {
 	print(max_height, max_range, flight_time);
 } {
 	print("\n36. What's the attractive force between Earth and Moon? ");
-	auto Earth_mass = 5.9722e24_kg;
-	auto Moon_mass = 7.346e22_kg;
+	auto Earth_mass = 5.9722E24_kg;
+	auto Moon_mass = 7.346E22_kg;
 	auto Earth_Moon_distance = 384'399_km;
 	auto force = formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_Moon_distance);
 	print(force);
 } {
 	print("\n37. What's the attractive force between Sun and Earth? ");
-	auto Sun_mass = 1.988416e30_kg;
-	auto Earth_mass = 5.9722e24_kg;
+	auto Sun_mass = 1.988416E30_kg;
+	auto Earth_mass = 5.9722E24_kg;
 	auto force = formula::gravitational_attractive_force(Sun_mass, Earth_mass, constant::AU);
 	print(force);
 } {
 	print("\n38. What are the frequencies and wavelengths of all music notes? ");
-	auto reference_note = 49;     // reference note is A in octave 4 (ranks #49 on a piano)...
-	auto reference_freq = 440_Hz; // ... which is at 440Hz.
-	auto notes = "CDEFGAB";       // notes string starting from A
-	for (int note = 1; note < 89; note++)
+	for (auto note : dataset::music_notes)
 	{
-		auto frequency = formula::frequency_of_chromatic_note(note, reference_note, reference_freq);
-		auto wavelength = formula::wavelength(constant::speed_of_sound, frequency);
-		printf(" %c%d=", notes[note % 7], note / 7);
-		print(frequency, wavelength);
+		auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
+		printf(" %s%d@", note.name, note.octave);
+		print(note.frequency, wavelength);
+
 	}
 } {
 	print("\n39. Which exoplanets are near and seem life-friendly? ");
