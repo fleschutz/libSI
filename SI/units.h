@@ -75,6 +75,7 @@ namespace SI
 	UNIT(joules_per_kelvin) = joules / kelvins;
 	UNIT(joules_per_second_per_kilogram) = joules / seconds / kilograms;
 	UNIT(joules_per_kilogram_per_kelvin) = joules / kilograms / kelvins;
+	UNIT(joules_per_mol) = unit<energy_per_mol>();
 	UNIT(joules_per_kelvin_per_mol) = joules / kelvins / moles;
 	// pressure in...
 	UNIT(pascals)      = unit<pressure>();

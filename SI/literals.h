@@ -212,6 +212,7 @@ LITERAL(_MJ,     1e6, joules);              // 1_MJ  (megajoule)
 LITERAL(_kJ,     1e3, joules);              // 1_kJ  (kilojoule)
 LITERAL(_J,        1, joules);              // 1_J   (joule)
 LITERAL(_mJ,    1e-3, joules);              // 1_mJ  (millijoule)
+LITERAL(_kJ_per_mol,1e3,joules_per_mol);    // 1_kJ_per_mol (kJ/mol)
 // or in...
 LITERAL(_cal, 4.1868, joules);              // 1_cal (calorie)
 LITERAL(_kcal,4186.8, joules);              // 1_kcal (kilocalorie)
