@@ -1,4 +1,4 @@
-pdg_id (int),pdg_name (string),name (string),charge (float),rank (float),quarks (string),mass (double),mass_lower (double),mass_upper (double),width (double),width_lower (double),width_upper (double)
+pdg_id (int),pdg_name (string),name (string),charge (float),rank (float),quarks (string),mass (_Da),mass_lower (_kg),mass_upper (_kg),width (_m),width_lower (_m),width_upper (_m)
 -2212,p,anti_proton,-1.0,4,UUD,938.27208816,2.9e-07,2.9e-07,0.0,0.0,0.0
 -2112,n,anti_neutron,0.0,4,UDD,939.5654205,5e-07,5e-07,7.493e-25,4e-28,4e-28
 -321,K,kaon-,-1.0,0,Us,493.677,0.016,0.016,5.317e-14,9e-17,9e-17
