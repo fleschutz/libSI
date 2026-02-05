@@ -1,4 +1,4 @@
-octave (int), name (string), frequency (_Hz)
+octave (byte), name (4chars), frequency (_Hz)
 0,C,16.351
 0,C#,17.324
 0,D,18.354

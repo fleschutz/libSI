@@ -6,9 +6,9 @@ using namespace SI;
 namespace dataset { 
 
 struct musical_note_data {
-	int octave;                               // column  1 (int) in CSV file
-	const char* name;                         // column  2 (string) in CSV file
-	SI::frequency frequency;                  // column  3 (_Hz) in CSV file
+	unsigned char octave;                    // column  1 (byte) in CSV file
+	char name[4];                            // column  2 (4chars) in CSV file
+	SI::frequency frequency;                 // column  3 (_Hz) in CSV file
 };
 
 const musical_note_data musical_notes[] { // NOTE: 00=empty or unknown field
