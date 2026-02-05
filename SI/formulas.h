@@ -248,11 +248,11 @@ velocity gravitational_escape_velocity(mass M, length r)
 	return sqrt((2.0 * constant::G * M) / r);
 }
 
-// The International Gravity Formula based on latitude (lat) and height above MSL (h).
+// Calculates the theoretical local gravity at latitude (lat) and height above MSL (h).
 acceleration gravity_at(angle lat, length h)
 {
-	auto IGF = 9.780327_m_per_s² * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat));
-	auto FAC = -3.086e-6_m_per_s² * meters(h);
+	auto IGF = 9.780327_m_per_s² * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat)); // International Gravity Formula
+	auto FAC = -3.086e-6_m_per_s² * meters(h); // Free Air Correction
 	return IGF + FAC;
 }
 
