@@ -43,7 +43,7 @@ namespace SI
 	DATATYPE(mass_per_area,         -2, 1,  0, 0, 0, 0, 0); // in kg/m²)
 	DATATYPE(per_amount_of_substance,0, 0,  0, 0,-1, 0, 0); // per mol (reciprocal)
 	DATATYPE(angular_speed,          0, 0, -1, 0, 1, 0, 0); // in °/s
-	DATATYPE(specific_energy,        2, 0, -2, 0, 0, 0, 0); // in J/kg
+	DATATYPE(specific_energy,        2, 0, -2, 0, 0, 0, 0); // in J/kg (or energy per mass or massic energy or gravimetric energy density)
 	DATATYPE(energy_per_mol,         2, 1, -2, 0, 0, 1, 0); // in J/mol
 	DATATYPE(volume_per_time_squared,3, 0, -2, 0, 0, 0, 0); // in m³/s²
 
