@@ -1,4 +1,4 @@
-// <SI/formulas.h> - 57 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
+// <SI/formulas.h> - 58 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
 //                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
@@ -246,6 +246,14 @@ force gravitational_attractive_force(mass m1, mass m2, length d)
 velocity gravitational_escape_velocity(mass M, length r)
 {
 	return sqrt((2.0 * constant::G * M) / r);
+}
+
+// The International Gravity Formula based on latitude (lat) and height above MSL (h).
+acceleration gravity_at(angle lat, length h)
+{
+	auto IGF = 9.780327_m_per_s² * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat));
+	auto FAC = -3.086e-6_m_per_s² * meters(h);
+	return IGF + FAC;
 }
 
 // +++ VARIOUS FORMULAS +++

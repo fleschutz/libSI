@@ -158,6 +158,16 @@ namespace SI
 		return std::atan2(meters(y), meters(x));
 	}
 
+	SI_INLINE angle sin2(angle x) // returns sin²x
+	{
+		return 0.5 * (1.0 - std::cos(2.0 * x));
+	}
+
+	SI_INLINE angle cos2(angle x) // returns cos²x
+	{
+		return 0.5 * (1.0 + std::cos(2.0 * x));
+	}
+
 	// +++ BASIC FUNCTIONS/TEMPLATES +++
 	// Raise any number <x> to power of 2 (x² or x*x).
 	template <typename T>
