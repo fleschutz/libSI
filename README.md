@@ -29,13 +29,13 @@ using namespace SI;
 
 int main() {	
 	print("What's the potential energy of just 1g mass? ");
-	auto m = 1_g;
-	auto c = constant::speed_of_light;
-	auto E = m * c * c;
+	mass m = 1_g;
+	velocity c = constant::speed_of_light;
+	energy E = m * c * c;
 	print(E);
 }
 ```
-Please find all 40 examples in: [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates this output:
+Please find all 42 examples in: [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates this output:
 
 ```
 1. What's the potential energy of just 1g mass? 89.88TJ
