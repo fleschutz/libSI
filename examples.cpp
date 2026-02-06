@@ -11,9 +11,8 @@ int main() {
 
 
     print("\n2. What's the free fall time from Burj Khalifa tower in Dubai? ");
-    auto tower_height = 828_m;
-    auto time = formula::time_of_free_fall(tower_height, constant::standard_gravity);
-    print(time);
+    length tower_height = 828_m;
+    print(formula::time_of_free_fall(tower_height, constant::standard_gravity));
 
 
     print("\n3. What's the average speed of Kiptum's world record in Marathon? ");
@@ -94,10 +93,9 @@ int main() {
 
 
     print("\n15. What's Donald Trump's body-mass index (BMI)? ");
-    length Donalds_height = 190_cm;
     mass Donalds_weight = 102_kg;
-    auto Donalds_BMI = formula::BMI(Donalds_weight, Donalds_height);
-    print(Donalds_BMI);
+    length Donalds_height = 190_cm;
+    print(formula::BMI(Donalds_weight, Donalds_height));
 
 
     print("\n16. What's the surface area and volume of a 30cm x 1cm pizza? ");

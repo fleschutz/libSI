@@ -312,9 +312,9 @@ volume volume_of(mass m, density p)
 }
 
 // Calculates the body-mass index (BMI).
-auto BMI(mass weight, length height)
+dimensionless BMI(mass weight, length height)
 {
-	return weight / square(height);
+	return (weight / square(height)) / 1_kg_per_m²;
 }
 
 auto consumed_electrical_power(electric_current I, electric_potential U)
