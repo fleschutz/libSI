@@ -1,4 +1,4 @@
-planet (string),name (string),GM (_km³_per_s²),mean_radius (_km),mean_density (_kg_per_m³),magnitude (float),albedo (float)
+planet (char[16]),name (char[16]),GM (_km³_per_s²),mean_radius (_km),mean_density (_kg_per_m³),magnitude (double),albedo (double)
 Earth,Moon,4902.801±0.001,1737.5±0.1,3.344±0.005,-12.74,0.12
 Mars,Phobos,0.0007112±0.0000010,11.1±0.15,1.872±0.076,11.4±0.2,0.071±0.012
 Mars,Deimos,0.0000985±0.0000024,6.2±0.18,1.471±0.166,12.45±0.05,0.068±0.007
