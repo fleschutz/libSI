@@ -104,10 +104,10 @@ int main()
 	print(pizza_area, pizza_volume);
 
 
-	print("\n16. What's the local gravity at the north pole? ");
-	auto latitude = 0_deg;
-	auto height = 0_m;
-	print(formula::gravity_at(latitude, height));
+	print("\n16. What's the local gravity at Mount Everest's peak? ");
+	auto latitude = 27.986065_deg;
+	auto above_sea_level = 8848_m;
+	print(formula::local_gravity(latitude, above_sea_level));
 
 {
 	print("\n17. What's the average speed here? ");
