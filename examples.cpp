@@ -2,120 +2,116 @@
 #include "datasets/all.h"
 using namespace SI;
 
-int main()
-{
-	print("1. What's the potential energy of just 1g mass? ");
-	mass m = 1_g;
-	velocity c = constant::speed_of_light;
-	energy E = m * c * c;
-	print(E);
+int main() {
+    print("1. What's the potential energy of just 1g mass? ");
+    mass m = 1_g;
+    velocity c = constant::speed_of_light;
+    energy E = m * c * c;
+    print(E);
 
 
-	print("\n2. What's the free fall time from Burj Khalifa tower in Dubai? ");
-	auto tower_height = 828_m;
-	auto time = formula::time_of_free_fall(tower_height, constant::standard_gravity);
-	print(time);
+    print("\n2. What's the free fall time from Burj Khalifa tower in Dubai? ");
+    auto tower_height = 828_m;
+    auto time = formula::time_of_free_fall(tower_height, constant::standard_gravity);
+    print(time);
 
 
-	print("\n3. What's the average speed of Kiptum's world record in Marathon? ");
-	auto Marathon_length = 42.195_km;
-	auto Kiptums_time = 2_h;
-	auto avg_speed = Marathon_length / Kiptums_time;
-	print(avg_speed);
+    print("\n3. What's the average speed of Kiptum's world record in Marathon? ");
+    auto Marathon_length = 42.195_km;
+    auto Kiptums_time = 2_h;
+    auto avg_speed = Marathon_length / Kiptums_time;
+    print(avg_speed);
 
 
- 	print("\n4. What's the kinetic energy of a car at 50 km/h? ");
-	auto car_mass = 1300_kg;
-	auto car_speed = 50_km_per_h;
-	auto car_energy = formula::kinetic_energy(car_mass, car_speed);
-	print(car_energy);
+    print("\n4. What's the kinetic energy of a car at 50 km/h? ");
+    auto car_mass = 1300_kg;
+    auto car_speed = 50_km_per_h;
+    auto car_energy = formula::kinetic_energy(car_mass, car_speed);
+    print(car_energy);
 
 
-	print("\n5. What's the wavelength of hydrogen (H2) in vacuum? ");
-	auto H2_frequency = 1420.4057517682_MHz;
-	auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
-	print(H2_wavelength);
+    print("\n5. What's the wavelength of hydrogen (H2) in vacuum? ");
+    auto H2_frequency = 1420.4057517682_MHz;
+    auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
+    print(H2_wavelength);
 
 
-	print("\n6. What's the frequency and wavelength of the high 'c' music note? ");
-	auto high_c_frequency = 1046.5_Hz;
-	auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
-	print(high_c_frequency, wavelength);
+    print("\n6. What's the frequency and wavelength of the high 'c' music note? ");
+    auto high_c_frequency = 1046.5_Hz;
+    auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
+    print(high_c_frequency, wavelength);
 
 
-	print("\n7. What's the population density on Earth (people per km² of land area)? ");
-	dimensionless Earth_population = 8.2e9;
-	auto Earth_land_area = 148'940'000_km²;
-	auto density = Earth_population / Earth_land_area;
-	print(density);
+    print("\n7. What's the population density on Earth (people per km² of land area)? ");
+    dimensionless Earth_population = 8.2e9;
+    auto Earth_land_area = 148'940'000_km²;
+    auto density = Earth_population / Earth_land_area;
+    print(density);
 
 
-	print("\n8. How much land area would be available for each person on Earth? ");
-	auto per_person = Earth_land_area / Earth_population;
-	print(per_person);
+    print("\n8. How much land area would be available for each person on Earth? ");
+    auto per_person = Earth_land_area / Earth_population;
+    print(per_person);
 
 
-	print("\n9. Which chemical elements melt above 2000°C and are radioactive? ");
-	for (auto element : dataset::chemical_elements)
-	{
-		if (element.melting_point > 2000_degC && element.radioactive)
-			printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
-	}
+    print("\n9. Which chemical elements melt above 2000°C and are radioactive? ");
+    for (auto element : dataset::chemical_elements) {
+        if (element.melting_point > 2000_degC && element.radioactive)
+            printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
+    }
 
 
-	print("\n10. Which moons are greater than Earth's moon? ");
-	for (auto moon : dataset::natural_satellites)
-	{
-		if (moon.mean_radius > 1737.5_km)
-			printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
-	}
+    print("\n10. Which moons are greater than Earth's moon? ");
+    for (auto moon : dataset::natural_satellites) {
+        if (moon.mean_radius > 1737.5_km)
+            printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
+    }
 
 
-	print("\n11. How long takes a 1TB download at 100MBit speed? ");
-	auto file_size = 1_TB;
-	auto download_speed = 100_Mbps;
-	auto download_time = file_size / download_speed;
-	print(download_time);
+    print("\n11. How long takes a 1TB download at 100MBit speed? ");
+    auto file_size = 1_TB;
+    auto download_speed = 100_Mbps;
+    auto download_time = file_size / download_speed;
+    print(download_time);
 
 
-	print("\n12. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
-	auto distance_on_final = 10_nmi;
-	auto height_on_final = 3000_ft;
-	auto glide_path = formula::glide_path(distance_on_final, height_on_final);
-	print(glide_path);
+    print("\n12. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
+    auto distance_on_final = 10_nmi;
+    auto height_on_final = 3000_ft;
+    print(formula::glide_path(distance_on_final, height_on_final));
 
 
-	print("\n13. What's the min speed required to escape from the Moon? ");
-	auto escape_speed = formula::gravitational_escape_velocity(dataset::Moon.mass, dataset::Moon.mean_radius);
-	print(escape_speed);
+    print("\n13. What's the min speed required to escape from the Moon? ");
+    auto escape_speed = formula::gravitational_escape_velocity(dataset::Moon.mass, dataset::Moon.mean_radius);
+    print(escape_speed);
 
 
-	print("\n14. What's the average speed to travel around the Earth in 80 days? ");
-	auto travel_distance = dataset::Earth.equatorial_circumference;
-	auto travel_time = 80_days;
-	auto speed_on_average = travel_distance / travel_time;
-	print(speed_on_average);
+    print("\n14. What's the average speed to travel around the Earth in 80 days? ");
+    auto travel_distance = dataset::Earth.equatorial_circumference;
+    auto travel_time = 80_days;
+    auto speed_on_average = travel_distance / travel_time;
+    print(speed_on_average);
 
 
-	print("\n15. What's Donald Trump's body-mass index (BMI)? ");
-	auto Donalds_weight = 102_kg;
-	auto Donalds_height = 190_cm;
-	auto Donalds_BMI = formula::BMI(Donalds_weight, Donalds_height);
-	print(Donalds_BMI);
+    print("\n15. What's Donald Trump's body-mass index (BMI)? ");
+    length Donalds_height = 190_cm;
+    mass Donalds_weight = 102_kg;
+    auto Donalds_BMI = formula::BMI(Donalds_weight, Donalds_height);
+    print(Donalds_BMI);
 
 
-	print("\n16. What's the surface area and volume of a 30cm x 1cm pizza? ");
-	auto pizza_radius = 30_cm / 2;
-	auto pizza_height = 1_cm;
-	auto pizza_area = formula::area_of_circle(pizza_radius);
-	auto pizza_volume = formula::volume_of_cylinder(pizza_radius, pizza_height);
-	print(pizza_area, pizza_volume);
+    print("\n16. What's the surface area and volume of a 30cm x 1cm pizza? ");
+    auto pizza_radius = 30_cm / 2;
+    auto pizza_height = 1_cm;
+    auto pizza_area = formula::area_of_circle(pizza_radius);
+    auto pizza_volume = formula::volume_of_cylinder(pizza_radius, pizza_height);
+    print(pizza_area, pizza_volume);
 
 
-	print("\n17. What's the local gravity at Mount Everest's peak? ");
-	auto latitude = 27.986065_deg;
-	auto above_sea_level = 8848_m;
-	print(formula::local_gravity(latitude, above_sea_level));
+    print("\n17. What's the local gravity at Mount Everest's peak? ");
+    auto latitude = 27.986065_deg;
+    auto above_sea_level = 8848_m;
+    print(formula::local_gravity(latitude, above_sea_level));
 
 {
 	print("\n18. What's the average speed here? ");
