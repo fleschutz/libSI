@@ -105,8 +105,9 @@ int main()
 
 
 	print("\n16. What's the local gravity at the north pole? ");
-	auto gravity = formula::gravity_at(0_deg, 0_m);
-	print(gravity);
+	auto latitude = 0_deg;
+	auto height = 0_m;
+	print(formula::gravity_at(latitude, height));
 
 {
 	print("\n17. What's the average speed here? ");
