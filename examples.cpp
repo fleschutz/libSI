@@ -290,6 +290,13 @@ int main()
 		printf("'%s' in %s (%s), ", exoplanet.name, exoplanet.hostname, to_string(exoplanet.distance).c_str());
 	}
 } {
+	print("\n42. Which moons are greater than Earth's moon? ");
+	for (auto moon : dataset::natural_satellites)
+	{
+		if (moon.mean_radius > 1737.5_km)
+			printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
+	}
+} {
 	// Conversion example:
 	dimensionless x = 42;      // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_s;      // <- t is now 42 seconds
