@@ -59,7 +59,7 @@ int main() {
 
 
     print("\n10. Which moons are greater than Earth's moon? ");
-    for (auto& moon : dataset::natural_satellites) {
+    for (auto& moon : dataset::moons) {
         if (moon.mean_radius > 1737.5_km)
             printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
     }

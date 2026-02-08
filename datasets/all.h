@@ -9,9 +9,9 @@
 
 // Astronomy datasets:
 #include "Earth.h"
-#include "planets.h"
 #include "Moon.h"
-#include "natural_satellites.h"
+#include "planets.h"
+#include "moons.h"
 #include "exoplanets.h"
 #include "monthly_sunspots.h"
 
