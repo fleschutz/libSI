@@ -349,8 +349,8 @@ LITERAL(_percent,                     0.01, dimensionless); // 1_percent
 #undef LITERAL
 } // namespace SI
 
-// Sources
-// -------
+// References
+// ----------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units
 // 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
 // 3. https://en.wikipedia.org/wiki/Imperial_units

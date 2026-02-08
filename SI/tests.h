@@ -270,6 +270,6 @@ namespace SI { namespace tests {
 
 } } // namespace SI::tests
  
-// Sources
-// -------
+// References
+// ----------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units

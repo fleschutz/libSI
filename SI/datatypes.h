@@ -51,6 +51,6 @@ namespace SI
 #undef DATATYPE
 } // namespace SI
 
-// Sources
-// -------
+// References
+// ----------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units

@@ -356,8 +356,8 @@ specific_energy absorbed_dose(energy E, mass m)
 
 } } // namespace SI::formula
 
-// Sources
-// -------
+// References
+// ----------
 // 1. https://en.wikipedia.org/wiki/Turning_radius
 // 2. https://en.wikipedia.org/wiki/Lift_(force)
 // 3. https://en.wikipedia.org/wiki/Wavelength

@@ -106,8 +106,8 @@ CONSTANT(quarter_mile,                 402.34, meters);
 #undef CONSTANT
 } } // namespace SI::constant
  
-// Sources
-// -------
+// References
+// ----------
 // 1. https://en.wikipedia.org/wiki/International_System_of_Units
 // 2. https://en.wikipedia.org/wiki/List_of_physical_constants
 // 3. https://en.wikipedia.org/wiki/List_of_mathematical_constants
