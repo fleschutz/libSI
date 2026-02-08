@@ -1,4 +1,4 @@
-// <SI/formulas.h> - 58 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
+// <SI/formulas.h> - 59 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
 //                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
@@ -246,6 +246,12 @@ force gravitational_attractive_force(mass m1, mass m2, length d)
 velocity gravitational_escape_velocity(mass M, length r)
 {
 	return sqrt((2.0 * constant::G * M) / r);
+}
+
+// Calculates the flattening factor (f) of an astronomical object from radius to equator (Re) and radius to pole (Rp).
+dimensionless flattening_factor(length radius_to_equator, length radius_to_pole)
+{
+	return (Re - Rp) / Re;
 }
 
 // Calculates the theoretical local gravity at latitude (lat) and height above MSL (h).
