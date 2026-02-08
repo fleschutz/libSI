@@ -249,7 +249,7 @@ velocity gravitational_escape_velocity(mass M, length r)
 }
 
 // Calculates the flattening factor (f) of an astronomical object from radius to equator (Re) and radius to pole (Rp).
-dimensionless flattening_factor(length radius_to_equator, length radius_to_pole)
+dimensionless flattening_factor(length Re, length Rp)
 {
 	return (Re - Rp) / Re;
 }
