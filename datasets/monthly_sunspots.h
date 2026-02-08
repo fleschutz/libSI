@@ -1,5 +1,5 @@
 // DO NOT EDIT! File converted from monthly_sunspots.csv on 2026-02-08 by github.com/fleschutz/csv2hpp 0.4.
-//              Usage: #include "monthly_sunspots.hpp" ... for(const auto& monthly_sunspot : monthly_sunspots) { ...
+//              Usage: #include "monthly_sunspots.hpp" ... for (auto& monthly_sunspot : monthly_sunspots) { ...
 #pragma once
 #include <SI/literals.h>
 using namespace SI;
