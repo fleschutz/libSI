@@ -38,10 +38,10 @@ int main() {
 Please find all 42 examples in: [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates this output:
 
 ```
-1. What's the potential energy of just 1g mass? 89.88TJ
-2. What's the free fall time from Burj Khalifa tower in Dubai? 12.99sec
-3. What's the average speed of Kiptum's world record in Marathon? 21.10km/h
-4. What's the kinetic energy of a car at 50 km/h? 125.39kJ
+ 1. What's the potential energy of just 1g mass? 89.88TJ
+ 2. What was the average speed of Kelvin Kiptum's world record in Marathon? 21.00km/h
+ 3. What's the free fall time from Burj Khalifa tower in Dubai? 12.99s
+ 4. What's the kinetic energy of a car at 50 km/h? 125.39kJ
 ...
 ```
 

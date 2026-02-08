@@ -3,65 +3,63 @@
 using namespace SI;
 
 int main() {
-    print("1. What's the potential energy of just 1g mass? ");
+    print(" 1. What's the potential energy of just 1g mass? ");
     mass m = 1_g;
     velocity c = constant::speed_of_light;
     energy E = m * c * c;
     print(E);
 
 
-    print("\n2. What's the free fall time from Burj Khalifa tower in Dubai? ");
+    print("\n 2. What was the average speed of Kelvin Kiptum's world record in Marathon? ");
+    auto Marathon_distance = 42.195_km;
+    auto Kiptums_time = 2_h + 35_s;
+    print(Marathon_distance / Kiptums_time);
+
+
+    print("\n 3. What's the free fall time from Burj Khalifa tower in Dubai? ");
     length tower_height = 828_m;
     print(formula::time_of_free_fall(tower_height, constant::standard_gravity));
 
 
-    print("\n3. What's the average speed of Kiptum's world record in Marathon? ");
-    auto Marathon_length = 42.195_km;
-    auto Kiptums_time = 2_h;
-    auto avg_speed = Marathon_length / Kiptums_time;
-    print(avg_speed);
-
-
-    print("\n4. What's the kinetic energy of a car at 50 km/h? ");
+    print("\n 4. What's the kinetic energy of a car at 50 km/h? ");
     auto car_mass = 1300_kg;
     auto car_speed = 50_km_per_h;
-    auto car_energy = formula::kinetic_energy(car_mass, car_speed);
-    print(car_energy);
+    print(formula::kinetic_energy(car_mass, car_speed));
 
 
-    print("\n5. What's the wavelength of hydrogen (H2) in vacuum? ");
+    print("\n 5. What's the wavelength of hydrogen (H2) in vacuum? ");
     auto H2_frequency = 1420.4057517682_MHz;
     auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
     print(H2_wavelength);
 
 
-    print("\n6. What's the frequency and wavelength of the high 'c' music note? ");
+    print("\n 6. What's the frequency and wavelength of the high 'c' music note? ");
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
     print(high_c_frequency, wavelength);
 
 
-    print("\n7. What's the population density on Earth (people per km² of land area)? ");
+    print("\n 7. What's the population density on Earth (people per km² of land area)? ");
     dimensionless Earth_population = 8.2e9;
     auto Earth_land_area = 148'940'000_km²;
     auto density = Earth_population / Earth_land_area;
     print(density);
 
 
-    print("\n8. How much land area would be available for each person on Earth? ");
+    print("\n 8. How much land area would be available for each person on Earth? ");
     auto per_person = Earth_land_area / Earth_population;
     print(per_person);
 
 
-    print("\n9. Which chemical elements melt above 2000°C and are radioactive? ");
-    for (auto element : dataset::chemical_elements) {
+    print("\n 9. Which chemical elements melt above 2000°C and are radioactive? ");
+    for (auto& element : dataset::chemical_elements) {
         if (element.melting_point > 2000_degC && element.radioactive)
             printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
     }
 
 
     print("\n10. Which moons are greater than Earth's moon? ");
-    for (auto moon : dataset::natural_satellites) {
+    for (auto& moon : dataset::natural_satellites) {
         if (moon.mean_radius > 1737.5_km)
             printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
     }
@@ -272,14 +270,14 @@ int main() {
 	print(force);
 } {
 	print("\n41. What are the frequencies and wavelengths of all musical notes? ");
-	for (auto note : dataset::musical_notes)
+	for (auto& note : dataset::musical_notes)
 	{
 		auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
 		printf("%s%d=%s/%s ", note.name, note.octave, to_string(note.frequency).c_str(), to_string(wavelength).c_str());
 	}
 } {
 	print("\n42. Which exoplanets are life-friendly and quite near? ");
-	for (auto exoplanet : dataset::exoplanets)
+	for (auto& exoplanet : dataset::exoplanets)
 	{
 		if (exoplanet.number_of_stars == 0)
 			continue; // too cold without a star
