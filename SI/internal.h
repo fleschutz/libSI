@@ -227,7 +227,7 @@ namespace SI
 		using vec3 = internal::vec3<T>;
 
 		// the dimension(s) of a physical quantity, specified by it's dimensional exponents.
-		template <long lengthExp, long massExp, long timeExp, long temperatureExp, long currentExp, long substanceExp>
+		template <long lengthExp, long massExp, long timeExp, long temperatureExp, long currentExp, long substanceExp, long intensityExp>
 		struct dimension
 		{
 			static constexpr long length = lengthExp;
@@ -236,13 +236,13 @@ namespace SI
 			static constexpr long temperature = temperatureExp;
 			static constexpr long current = currentExp;
 			static constexpr long substance = substanceExp;
-			static constexpr long intensity = 0;
+			static constexpr long intensity = intensityExp;
 		};
 
 		template <long Value>
-		using value_dimension = dimension<Value, Value, Value, Value, Value, Value>;
+		using value_dimension = dimension<Value, Value, Value, Value, Value, Value, Value>;
 
-		// datatype 'dimensionless' with zero dimensions
+		// the 'dimensionless' datatype with zero dimensions.
 		using dimensionless = value_dimension<0>;
 
 		template <class, class>
@@ -256,10 +256,10 @@ namespace SI
 			using type = dimensionless;
 		};
 
-		template <long Length, long Mass, long Time, long Temperature, long Current, long Substance>
-		struct dimension_of<dimension<Length, Mass, Time, Temperature, Current, Substance>>
+		template <long Length, long Mass, long Time, long Temperature, long Current, long Substance, long Intensity>
+		struct dimension_of<dimension<Length, Mass, Time, Temperature, Current, Substance, Intensity>>
 		{
-			using type = dimension<Length, Mass, Time, Temperature, Current, Substance>;
+			using type = dimension<Length, Mass, Time, Temperature, Current, Substance, Intensity>;
 		};
 
 		template <class Dimension, class T>
@@ -282,13 +282,14 @@ namespace SI
 		template <class T>
 		SI_INLINE_CONSTEXPR bool is_dimensionless_v = std::is_same_v<dimensionless, dimension_of_t<T>>;
 
-#define SI_DIMENSION_OP(op_) dimension<				\
-			Lhs::length op_ Rhs::length,		\
-			Lhs::mass op_ Rhs::mass,		\
-			Lhs::time op_ Rhs::time,		\
-			Lhs::temperature op_ Rhs::temperature,	\
-			Lhs::current op_ Rhs::current,          \
-			Lhs::substance op_ Rhs::substance>
+#define SI_DIMENSION_OP(op_) dimension<                        \
+			Lhs::length op_ Rhs::length,           \
+			Lhs::mass op_ Rhs::mass,               \
+			Lhs::time op_ Rhs::time,               \
+			Lhs::temperature op_ Rhs::temperature, \
+			Lhs::current op_ Rhs::current,         \
+			Lhs::substance op_ Rhs::substance,     \
+			Lhs::intensity op_ Rhs::intensity>
 
 		template <class Lhs, class Rhs> using dimension_add_impl = SI_DIMENSION_OP(+);
 		template <class Lhs, class Rhs> using dimension_subtract_impl = SI_DIMENSION_OP(-);
@@ -583,9 +584,9 @@ namespace SI
 		}
 
 		template <class T>
-		SI_INLINE auto distance(const quantity<dimension<1, 0, 0, 0, 0, 0>, T>& a, const quantity<dimension<1, 0, 0, 0, 0, 0>, T>& b)
+		SI_INLINE auto distance(const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& a, const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& b)
 		{
-			return quantity{ dimension<1, 0, 0, 0, 0, 0>(), distance(value(a), value(b)) };
+			return quantity{ dimension<1, 0, 0, 0, 0, 0, 0>(), distance(value(a), value(b)) };
 		}
 
 		template <long Exponent, class Dimension, class T>
@@ -619,7 +620,7 @@ namespace SI
 		template <class Dimension, class T>
 		SI_INLINE_CONSTEXPR auto deangle(const quantity<Dimension, T>& x)
 		{
-			using result_dimension = dimension<Dimension::length, Dimension::mass, Dimension::time, Dimension::temperature, Dimension::current, Dimension::substance>;
+			using result_dimension = dimension<Dimension::length, Dimension::mass, Dimension::time, Dimension::temperature, Dimension::current, Dimension::substance, Dimension::intensity>;
 			SI_RETURN_QUANTITY(result_dimension, value(x));
 		}
 
