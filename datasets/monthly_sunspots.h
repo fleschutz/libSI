@@ -1,16 +1,17 @@
-// DO NOT EDIT! Data source is sunspots.csv (converted by github.com/fleschutz/csv2hpp 0.4 on 2026-02-06)
+// DO NOT EDIT! File converted from monthly_sunspots.csv on 2026-02-08 by github.com/fleschutz/csv2hpp 0.4.
+//              Usage: #include "monthly_sunspots.hpp" ... for(const auto& monthly_sunspot : monthly_sunspots) { ...
 #pragma once
 #include <SI/literals.h>
 using namespace SI;
 
 namespace dataset { 
 
-struct sunspot_data {
-	char date[16];                           // column  2 (char[16]) in CSV file
-	float monthly_mean_total_sunspot_number; // column  3 (float) in CSV file
+struct monthly_sunspot_data {
+	char date[16];                           // CSV column  2 (char[16])
+	float monthly_mean_total_sunspot_number; // CSV column  3 (float)
 };
 
-const sunspot_data sunspots[] { // NOTE: 00=empty or unknown field
+const monthly_sunspot_data monthly_sunspots[] { // NOTE: 00=empty or unknown field
 {"1749-01-31",96.7f},
 {"1749-02-28",104.3f},
 {"1749-03-31",116.7f},
