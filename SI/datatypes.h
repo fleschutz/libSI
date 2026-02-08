@@ -4,8 +4,8 @@
 
 namespace SI
 {
-#define DATATYPE(_name, _length, _mass, _time, _temperature, _current, _substance, _intensity)                 \
-    namespace detail { using _name ## _dimension = dimension<_length, _mass, _time, _temperature, _current>; } \
+#define DATATYPE(_name, _length, _mass, _time, _Temp, _current, _substance, _intensity)                 \
+    namespace detail { using _name ## _dimension = dimension<_length, _mass, _time, _Temp, _current>; } \
     template <class T> using _name ## _t = detail::quantity<detail:: _name ## _dimension, T>;                  \
     using _name = _name ## _t<SIdouble>;                                                                       \
     using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                    \

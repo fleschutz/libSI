@@ -108,17 +108,17 @@ namespace SI
 		template <class T> using vec2 = vec<2, T>;
 		template <class T> using vec3 = vec<3, T>;
 
-		// Unary operators
+		// unary operators
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<T> operator-(const vec2<T>& v) { return { -v.x, -v.y }; }
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<T> operator-(const vec3<T>& v) { return { -v.x, -v.y, -v.z }; }
 
-		// Comparsion operators
+		// comparsion operators
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR bool operator==(const vec2<T>& lhs, const vec2<U>& rhs) { return lhs.x == rhs.x && lhs.y == rhs.y; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR bool operator==(const vec3<T>& lhs, const vec3<U>& rhs) { return lhs.x == rhs.x && lhs.y == rhs.y && lhs.z == rhs.z; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR bool operator!=(const vec2<T>& lhs, const vec2<U>& rhs) { return lhs.x != rhs.x || lhs.y != rhs.y; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR bool operator!=(const vec3<T>& lhs, const vec3<U>& rhs) { return lhs.x != rhs.x || lhs.y != rhs.y || lhs.z != rhs.z; }
 
-		// Compound assignment with other vectors
+		// compound assignment with other vectors
 		template <class T, class U> SI_INLINE_CONSTEXPR vec2<T>& operator+=(vec2<T>& lhs, const vec2<U>& rhs) { lhs.x += rhs.x; lhs.y += rhs.y; return lhs; }
 		template <class T, class U> SI_INLINE_CONSTEXPR vec3<T>& operator+=(vec3<T>& lhs, const vec3<U>& rhs) { lhs.x += rhs.x; lhs.y += rhs.y; lhs.z += rhs.z; return lhs; }
 		template <class T, class U> SI_INLINE_CONSTEXPR vec2<T>& operator-=(vec2<T>& lhs, const vec2<U>& rhs) { lhs.x -= rhs.x; lhs.y -= rhs.y; return lhs; }
@@ -128,7 +128,7 @@ namespace SI
 		template <class T, class U> SI_INLINE_CONSTEXPR vec2<T>& operator/=(vec2<T>& lhs, const vec2<U>& rhs) { lhs.x /= rhs.x; lhs.y /= rhs.y; return lhs; }
 		template <class T, class U> SI_INLINE_CONSTEXPR vec3<T>& operator/=(vec3<T>& lhs, const vec3<U>& rhs) { lhs.x /= rhs.x; lhs.y /= rhs.y; lhs.z /= rhs.z; return lhs; }
 
-		// Compound assignment with scalars
+		// compound assignment with scalars
 		template <class T, class U> SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<U>, vec2<T>&> operator+=(vec2<T>& lhs, U rhs) { lhs.x += rhs; lhs.y += rhs; return lhs; }
 		template <class T, class U> SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<U>, vec3<T>&> operator+=(vec3<T>& lhs, U rhs) { lhs.x += rhs; lhs.y += rhs; lhs.z += rhs; return lhs; }
 		template <class T, class U> SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<U>, vec2<T>&> operator-=(vec2<T>& lhs, U rhs) { lhs.x -= rhs; lhs.y -= rhs; return lhs; }
@@ -138,7 +138,7 @@ namespace SI
 		template <class T, class U> SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<U>, vec2<T>&> operator/=(vec2<T>& lhs, U rhs) { lhs.x /= rhs; lhs.y /= rhs; return lhs; }
 		template <class T, class U> SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<U>, vec3<T>&> operator/=(vec3<T>& lhs, U rhs) { lhs.x /= rhs; lhs.y /= rhs; lhs.z /= rhs; return lhs; }
 
-		// Binary operators with other vectors
+		// binary operators with other vectors
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator+(const vec2<T>& lhs, const vec2<U>& rhs) { return {lhs.x + rhs.x, lhs.y + rhs.y }; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> operator+(const vec3<T>& lhs, const vec3<U>& rhs) { return {lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z }; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator-(const vec2<T>& lhs, const vec2<U>& rhs) { return {lhs.x - rhs.x, lhs.y - rhs.y }; }
@@ -148,7 +148,7 @@ namespace SI
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator/(const vec2<T>& lhs, const vec2<U>& rhs) { return {lhs.x / rhs.x, lhs.y / rhs.y }; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> operator/(const vec3<T>& lhs, const vec3<U>& rhs) { return {lhs.x / rhs.x, lhs.y / rhs.y, lhs.z / rhs.z }; }
 
-		// Binary operators with scalars on the right side
+		// binary operators with scalars on the right side
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator+(const vec2<T>& lhs, U rhs) { return { lhs.x + rhs, lhs.y + rhs}; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> operator+(const vec3<T>& lhs, U rhs) { return { lhs.x + rhs, lhs.y + rhs, lhs.z + rhs}; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator-(const vec2<T>& lhs, U rhs) { return { lhs.x - rhs, lhs.y - rhs}; }
@@ -158,7 +158,7 @@ namespace SI
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator/(const vec2<T>& lhs, U rhs) { return { lhs.x / rhs, lhs.y / rhs}; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> operator/(const vec3<T>& lhs, U rhs) { return { lhs.x / rhs, lhs.y / rhs, lhs.z / rhs}; }
 
-		// Binary operators with scalars on the left side
+		// binary operators with scalars on the left side
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator+(T lhs, const vec2<U>& rhs) { return { lhs + rhs.x, lhs + rhs.y }; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> operator+(T lhs, const vec3<U>& rhs) { return { lhs + rhs.x, lhs + rhs.y, lhs + rhs.z }; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator-(T lhs, const vec2<U>& rhs) { return { lhs - rhs.x, lhs - rhs.y }; }
@@ -168,16 +168,16 @@ namespace SI
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> operator/(T lhs, const vec2<U>& rhs) { return { lhs / rhs.x, lhs / rhs.y }; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> operator/(T lhs, const vec3<U>& rhs) { return { lhs / rhs.x, lhs / rhs.y, lhs / rhs.z }; }
 
-		// Absolute Value (componentwise)
+		// absolute value (componentwise)
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T>> abs(const vec2<T>& v) { return { std::abs(v.x), std::abs(v.y) }; }
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T>> abs(const vec3<T>& v) { return { std::abs(v.x), std::abs(v.y), std::abs(v.z) }; }
 
-		// Sign Of (componentwise)
+		// sign Of (componentwise)
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<T>, T> sign(T x) { return x > 0 ? 1 : x < 0 ? -1 : 0; }
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T>> sign(const vec2<T>& v) { return { sign(v.x), sign(v.y) }; }
 		template <class T> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T>> sign(const vec3<T>& v) { return { sign(v.x), sign(v.y), sign(v.z) }; }
 
-		// Min / Max (componentwise)
+		// min / max (componentwise)
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<T> && std::is_arithmetic_v<U>, std::common_type_t<T, U>> min(T lhs, U rhs) { return (rhs < lhs) ? rhs : lhs; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<T> && std::is_arithmetic_v<U>, std::common_type_t<T, U>> max(T lhs, U rhs) { return (lhs < rhs) ? rhs : lhs; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> min(const vec2<T>& lhs, const vec2<U>& rhs) { return { min(lhs.x, rhs.x), min(lhs.y, rhs.y) }; }
@@ -185,34 +185,34 @@ namespace SI
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U>> max(const vec2<T>& lhs, const vec2<U>& rhs) { return { max(lhs.x, rhs.x), max(lhs.y, rhs.y) }; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> max(const vec3<T>& lhs, const vec3<U>& rhs) { return { max(lhs.x, rhs.x), max(lhs.y, rhs.y), max(lhs.z, rhs.z) }; }
 
-		// Clamping (componentwise)
+		// clamping (componentwise)
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<T>, std::common_type_t<T, U, V>> clamp(T value, U min, V max) { return (min > value) ? min : (max < value) ? max : value; }
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U, V>> clamp(const vec2<T>& value, U min, V max) { return { clamp(value.x, min, max), clamp(value.y, min, max) }; }
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U, V>> clamp(const vec2<T>& value, const vec2<U>& min, const vec2<V>& max) { return { clamp(value.x, min.x, max.x), clamp(value.y, min.y, max.y) }; }
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U, V>> clamp(const vec3<T>& value, U min, V max) { return { clamp(value.x, min, max), clamp(value.y, min, max), clamp(value.z, min, max) }; }
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U, V>> clamp(const vec3<T>& value, const vec3<U>& min, const vec3<V>& max) { return { clamp(value.x, min.x, max.x), clamp(value.y, min.y, max.y), clamp(value.z, min.z, max.z) }; }
 
-		// Dot Product / Inner Product of two vectors
+		// dot product / inner product of two vectors
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR auto dot(const vec2<T>& lhs, const vec2<U>& rhs) { return lhs.x * rhs.x + lhs.y * rhs.y; }
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR auto dot(const vec3<T>& lhs, const vec3<U>& rhs) { return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z; }
 
-		// Euclidean Length of a vector
+		// Euclidean length of a vector
 		template <class T> [[nodiscard]] SI_INLINE auto length(const vec2<T>& v) { return std::sqrt(dot(v, v)); }
 		template <class T> [[nodiscard]] SI_INLINE auto length(const vec3<T>& v) { return std::sqrt(dot(v, v)); }
 
-		// Normalization (returns null vector when given null vectors for robustness)
-		// Multiplies with the inverse sqrt to be 1:1 compatible to GLM (avoids minimal, but noticeable deviations)
+		// normalization (returns null vector when given null vectors for robustness)
+		// multiplies with the inverse sqrt to be 1:1 compatible to GLM (avoids minimal, but noticeable deviations)
 		template <class T> [[nodiscard]] SI_INLINE auto normalize(const vec2<T>& v) { auto l = length(v); return v * (l ? (1 / l) : 0); }
 		template <class T> [[nodiscard]] SI_INLINE auto normalize(const vec3<T>& v) { auto l = length(v); return v * (l ? (1 / l) : 0); }
 
-		// Euclidean Distance between to vectors / points
+		// Euclidean distance between to vectors / points
 		template <class T, class U> [[nodiscard]] SI_INLINE auto distance(const vec2<T>& a, const vec2<U>& b) { return length(b - a); }
 		template <class T, class U> [[nodiscard]] SI_INLINE auto distance(const vec3<T>& a, const vec3<U>& b) { return length(b - a); }
 
-		// Cross Product / Outer Product of two vectors
+		// cross product / outer product of two vectors
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> cross(const vec3<T>& lhs, const vec3<U>& rhs) { return { lhs.y * rhs.z - rhs.y * lhs.z, lhs.z * rhs.x - rhs.z * lhs.x, lhs.x * rhs.y - rhs.x * lhs.y }; }
 
-		// Mixing / Interpolation (componentwise), returns `(1 - t) * a + t * b`
+		// mixing / interpolation (componentwise), returns `(1 - t) * a + t * b`
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR std::common_type_t<T, U, V> mix(T a, U b, V t) { return (1 - t) * a + t * b; }
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR vec2<detail::vec_common_type_t<T, U, V>> mix(const vec2<T>& a, const vec2<U>& b, V t) { return { mix(a.x, b.x, t), mix(a.y, b.y, t) }; }
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U, V>> mix(const vec3<T>& a, const vec3<U>& b, V t) { return { mix(a.x, b.x, t), mix(a.y, b.y, t), mix(a.z, b.z, t) }; }
@@ -226,32 +226,24 @@ namespace SI
 		template <class T>
 		using vec3 = internal::vec3<T>;
 
-		// Dimension of a physical quantity
-		/*
-			Every physical quantity has a dimension which is specified by it's dimensional exponents.
-			Examples:
-			- velocity is length per time or length^1/time^1, so the exponents for velocity are Length=1,
-			  Mass=0, Time=-1, Temp=0, Current=0
-			- force is mass times acceleration which is mass^1*length^1/time^2, so the exponents are
-			  Length=1, Mass=1, Time=-2, Temp=0, Current=0
-
-			This template converts this concept into a C++ type.
-			In order to add a new exponent one has to update the three templates dimension, value_dimension and SI_DIMENSION_OP
-		*/
-		template <long Length, long Mass, long Time, long Temperature, long Current>
+		// the dimension(s) of a physical quantity, specified by it's dimensional exponents.
+		template <long lengthExp, long massExp, long timeExp, long temperatureExp, long currentExp>
 		struct dimension
 		{
-			static constexpr long length = Length;
-			static constexpr long mass = Mass;
-			static constexpr long time = Time;
-			static constexpr long temperature = Temperature;
-			static constexpr long current = Current;
+			static constexpr long length = lengthExp;
+			static constexpr long mass = massExp;
+			static constexpr long time = timeExp;
+			static constexpr long temperature = temperatureExp;
+			static constexpr long current = currentExp;
+			static constexpr long intensity = 0;
+			static constexpr long luminosity = 0;
 		};
 
 		template <long Value>
 		using value_dimension = dimension<Value, Value, Value, Value, Value>;
 
-		using dimensionless = value_dimension<0>; // zero dimensions
+		// datatype 'dimensionless' with zero dimensions
+		using dimensionless = value_dimension<0>;
 
 		template <class, class>
 		struct quantity;
