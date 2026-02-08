@@ -18,7 +18,7 @@ namespace SI
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in s
 	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in K (thermodynamic temperature)
 	DATATYPE(electric_current,       0, 0, 0, 0, 1, 0, 0); // in A
-	DATATYPE(amount_of_substance,    0, 0, 0, 0, 1, 1, 0); // in mol
+	DATATYPE(amount_of_substance,    0, 0, 0, 0, 0, 1, 0); // in mol
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 1, 0, 1); // in cal
 
 	// +++ DERIVED SI DATATYPES +++

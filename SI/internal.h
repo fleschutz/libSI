@@ -236,6 +236,7 @@ namespace SI
 			static constexpr long temperature = temperatureExp;
 			static constexpr long current = currentExp;
 			static constexpr long substance = substanceExp;
+			static constexpr long intensity = 0;
 		};
 
 		template <long Value>
