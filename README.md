@@ -19,7 +19,7 @@ Apply math based on SI units correct, with high precision, and as easy as possib
 3. **Literals** such as 100_m or 60_sec in [<SI/literals.h>](SI/literals.h).
 4. **Constants** such as SI::constant::speed_of_light in [<SI/constants.h>](SI/constants.h).
 5. **Formulas** such as SI::formula::wavelength() in [<SI/formulas.h>](SI/formulas.h).
-6. **Datasets** such as chemical elements, satellites, exoplanets in 📂[datasets](datasets/).
+6. **Datasets** such as chemical elements, planets, moons, exoplanets in 📂[datasets](datasets/).
 
 🔎 Example Code
 ----------------
