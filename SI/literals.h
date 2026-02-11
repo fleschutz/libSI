@@ -328,12 +328,16 @@ LITERAL(_Mbps,                     1e6 / 8, bytes_per_second); // 1_Mbps (megabi
 LITERAL(_Gbps,                     1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
 LITERAL(_Tbps,                    1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
 // pressure in...
+LITERAL(_Gbar,                        1e14, pascals);  // 1_Gbar (gigabar)
 LITERAL(_Mbar,                        1e11, pascals);  // 1_Mbar (megabar)
 LITERAL(_kbar,                         1e8, pascals);  // 1_kbar (kilobar)
 LITERAL(_bar,                          1e5, pascals);  // 1_bar 
 LITERAL(_mbar,                         1e2, pascals);  // 1_mbar (millibar)
-LITERAL(_at,                      98'066.5, pascals);  // 1_at   (atmosphere)
-LITERAL(_mmHg,                    133.3224, pascals);  // 1_mmHg (millimeter mercury)
+LITERAL(_psi,                     6'894.76, pascals);  // 1_psi  (pound per square inch)
+LITERAL(_atm,                      101'325, pascals);  // 1_atm  (atmosphere)
+LITERAL(_inHg,                    3'386.39, pascals);  // 1_inHg (inch of mercury)
+LITERAL(_mmHg,           101'325.0 / 760.0, pascals);  // 1_mmHg (millimetre of mercury)
+LITERAL(_Torr,           101'325.0 / 760.0, pascals);  // 1_Torr (same as mmHg)
 // various units in...
 LITERAL(_degC,                           1, celsius);  // 1_degC (°Celsius)
 LITERAL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
