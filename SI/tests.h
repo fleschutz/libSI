@@ -197,8 +197,6 @@ namespace SI { namespace tests {
 	static_assert(1_kW == 1000_W);
 	static_assert(1_W  == 1000_mW);
 	static_assert(1_mW == 1000_uW);
-	// active power per mass in...
-	// TODO
 	// pressure (p) in...
 	static_assert(1_MPa == 1000_kPa);
 	static_assert(1_kPa == 1000_Pa);
@@ -210,24 +208,20 @@ namespace SI { namespace tests {
 	static_assert(1_kN == 1000_N);
 	static_assert(1_N  == 1000_mN);
 	static_assert(1_mN == 1000_uN);
-	// luminous flux in...
-	// TODO
-	// surface flow in...
-	// TODO
-	// volumetric flow in...
-	// TODO
-
+	// luminous flux per area in...
+	static_assert(1_klx == 1000_lx);
+	static_assert(1_lx  == 1000_mlx);
+	static_assert(1_mlx == 1000_ulx);
+	static_assert(1_ulx == 1000_plx);
 	// +++ ASTRONOMICAL UNITS +++
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
-
 	// +++ IMPERIAL UNITS +++
 	//static_assert(1_ft == 12_in);
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
 	static_assert(1_ft == 0.3048_m);
-
 	// +++ DIGITAL UNITS +++
 	static_assert(1_ZB == 1000_EB);
 	static_assert(1_EB == 1000_PB);

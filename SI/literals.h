@@ -261,6 +261,12 @@ LITERAL(_pN,    1e-9, newtons);             // 1_pN (piconewton)
 LITERAL(_lm,       1, lumens);              // 1_lm       (lumen)
 LITERAL(_lm_s,     1, lumenseconds);        // 1_lm_s     (lumen second)
 LITERAL(_lm_per_W, 1, lumens_per_watt);     // 1_lm_per_W (lumen per watt)
+// luminous flux per area in...
+LITERAL(_klx,    1e3, lux);                 // 1_klx (kilolux)
+LITERAL(_lx,       1, lux);                 // 1_lx  (lux)
+LITERAL(_mlx,   1e-3, lux);                 // 1_mlx (millilux)
+LITERAL(_ulx,   1e-6, lux);                 // 1_ulx (microlux)
+LITERAL(_plx,   1e-9, lux);                 // 1_plx (picolux)
 // catalytic activity in...
 LITERAL(_kat,      1, mols_per_second);     // 1_kat   (katal)
 LITERAL(_mkat,  1e-3, mols_per_second);     // 1_mkat  (millikatal)

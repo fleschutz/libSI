@@ -112,6 +112,7 @@ namespace SI
 	UNIT(lumens)       = candelas * steradians;
 	UNIT(lumenseconds) = lumens * seconds;
 	UNIT(lumens_per_watt) = lumens / watts;
+	UNIT(lux)          = lumens / meters2;
 
 	UNIT(kilograms_per_mol) = kilograms / moles;
 	UNIT(mols_per_meter3) = moles / meters3;
