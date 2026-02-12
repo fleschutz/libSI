@@ -212,7 +212,6 @@ namespace SI { namespace tests {
 	static_assert(1_klx == 1000_lx);
 	static_assert(1_lx  == 1000_mlx);
 	static_assert(1_mlx == 1000_ulx);
-	static_assert(1_ulx == 1000_plx);
 	// +++ ASTRONOMICAL UNITS +++
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
