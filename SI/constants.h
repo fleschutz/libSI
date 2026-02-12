@@ -78,8 +78,8 @@ CONSTANT(S_0_by_R,             -1.15170753706, dimensionless); // Sackur–Tetro
 CONSTANT(V_m,                22.710'954'64e-3, meters3_per_mol); // molar volume of ideal gas (273.15K, 100kPa, 2022 CODATA)
 
 // +++ PHYSICAL CONSTANTS +++
-CONSTANT(standard_gravity,            9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
 CONSTANT(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
+CONSTANT(Earth_gravity,               9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
 CONSTANT(speed_of_sound,                  343, meters_per_second); // speed of sound in dry air at 20°C (68°F)
 CONSTANT(speed_of_sound_in_fresh_water,  1481, meters_per_second); // at 20°C (68°F)
 CONSTANT(speed_of_sound_in_iron,         5120, meters_per_second);
