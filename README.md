@@ -50,7 +50,7 @@ Please find a lot more examples in: [examples.cpp](examples.cpp). Executing: `cm
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
 * **Why use libSI?** To avoid mistakes and for precision and convenience (see the constants, common formulas, literals, and datasets)
 * **Where are the list of references?** References are listed at the end of each source code file.
-* **What are numbers like 1.23e23?** This is the scientific notation in C/C++ for: 1.23 x 10²³ (the letter 'e' or 'E' represents the 'times 10 to the power of' part). 
+* **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for: 1.2 x 10²³ (the letter 'e' or 'E' represents the 'times 10 to the power of' part). 
 * **Where are libSI's files and folders?** Here is the project structure:
 ```
 ├📄CMakeLists.txt 
