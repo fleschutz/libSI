@@ -31,11 +31,11 @@ int main() {
 	print("What's the potential energy of just 1g mass? ");
 	mass m = 1_g;
 	velocity c = constant::speed_of_light;
-	energy E = m * c * c;
+	energy E = m * c*c;
 	print(E);
-}
+...
 ```
-Please find a lot more examples in: [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates this output:
+Please find all 43 examples in [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates this output:
 
 ```
  1. What's the potential energy of just 1g mass? 89.88TJ
