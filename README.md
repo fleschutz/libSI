@@ -40,15 +40,17 @@ Please find a lot more examples in: [examples.cpp](examples.cpp). Executing: `cm
 ```
  1. What's the potential energy of just 1g mass? 89.88TJ
  2. What was the average speed of Kelvin Kiptum's world record in Marathon? 21.00km/h
- 3. What's the free fall time from Burj Khalifa tower in Dubai? 12.99s
- 4. What's the kinetic energy of a car at 50 km/h? 125.39kJ
+ 3. What's the free fall time from the Burj Khalifa tower in Dubai? 12.99s
+ 4. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l per 100km
+ 5. What's the kinetic energy of a mid-size SUV at 30MPH? 566.55kJ
+ 6. What's the local gravity at Mount Everest's peak? 9.76m/s²
 ...
 ```
 
 ❔ FAQ
 -------
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
-* **Why use libSI?** To avoid mistakes and for precision and convenience (see the constants, common formulas, literals, and datasets)
+* **What are typical use-cases for libSI?** Simulators, games and complex math & physics in general.
 * **Where are the list of references?** References are listed at the end of each source code file.
 * **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for: 1.2 x 10²³ (the letter 'e' or 'E' represents the 'times 10 to the power of' part). 
 * **Where are libSI's files and folders?** Here is the project structure:
