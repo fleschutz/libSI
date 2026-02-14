@@ -2,7 +2,8 @@
 #include "datasets/all.h"
 using namespace SI;
 
-int main() {
+int main()
+{
     print(" 1. What's the potential energy of just 1g mass? ");
     mass m = 1_g;
     velocity c = constant::speed_of_light;
@@ -12,8 +13,8 @@ int main() {
 
     print("\n 2. What was the average speed of Kelvin Kiptum's world record in Marathon? ");
     auto Marathon_distance = 42.195_km;
-    auto Kiptums_time = 2_h + 35_s;
-    print(Marathon_distance / Kiptums_time);
+    auto Kelvins_time = 2_h + 35_s;
+    print(Marathon_distance / Kelvins_time);
 
 
     print("\n 3. What's the free fall time from the Burj Khalifa tower in Dubai? ");
