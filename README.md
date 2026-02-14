@@ -35,7 +35,7 @@ int main() {
 	print(E);
 ...
 ```
-Please find all 43 examples in [examples.cpp](examples.cpp). Executing: `cmake . && make && ./examples` generates this output:
+See [examples.cpp](examples.cpp) with 43 examples in total. Executing: `cmake . && make && ./examples` generates this output:
 
 ```
  1. What's the potential energy of just 1g mass? 89.88TJ
