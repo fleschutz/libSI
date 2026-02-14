@@ -291,6 +291,13 @@ int main()
 		printf("'%s' in %s (%s), ", exoplanet.name, exoplanet.hostname, to_string(exoplanet.distance).c_str());
 	}
 } {
+#if 0
+	printf("\n What's the fuel efficiency for? ");
+	auto distance_traveled = 400_mi;
+	auto fuel_volume_consumed = 20_gal;
+	print(distance_traveled / fuel_volume_consumed);
+#endif
+	
 	// Conversion example:
 	dimensionless x = 42;      // <- x contains a dimensionless number (no unit)
 	SI::time t = x * 1_s;      // <- t is now 42 seconds
