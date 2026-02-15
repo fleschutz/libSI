@@ -10,7 +10,7 @@ Apply math with physical units correct, with high precision, and as easy as poss
 * **Convenient** literals (e.g. 24_h or 3_GWh), conversions, and I/O functions.
 * **Supports** SI units, Imperial units, Astronomical units, and many more.
 * **Modern C++ 17 lib**: header only, no dependencies, own namespace SI::, with [unit tests](SI/tests.h).
-* **Cross-platform** support for Linux (gcc & clang) and Windows (VS2017-VS2026).
+* **Cross-platform** support for Linux (gcc, clang) and Windows (VS2017-VS2026).
 
 🧱 Building Blocks
 ------------------
