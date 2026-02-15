@@ -1,4 +1,4 @@
-#include <SI/all.h>
+#include <SI/all.h> 
 #include "datasets/all.h"
 using namespace SI;
 
@@ -10,28 +10,28 @@ int main() {
     print(E);
 
 
-    print("\n 2. What was the average speed of Kelvin Kiptum's world record in Marathon? ");
+    print("\n 2. What was Kelvin Kiptum's average speed in his Marathon world record? ");
     auto Marathon_distance = 42.195_km;
     auto Kelvins_time = 2_h + 35_s;
     print(Marathon_distance / Kelvins_time);
 
 
-    print("\n 3. What's the free fall time from the Burj Khalifa tower in Dubai? ");
+    print("\n 3. What's the free fall time from Dubai's Burj Khalifa tower (828m)? ");
     length tower_height = 828_m;
     print(formula::time_of_free_fall(tower_height, constant::Earth_gravity));
 
 
-    printf("\n 4. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
+    print("\n 4. What's the kinetic energy of a mid-size SUV at 30MPH? ");
+    auto SUV_mass = 5000_lb; 
+    auto SUV_speed = 50_mph;
+    print(formula::kinetic_energy(SUV_mass, SUV_speed));
+
+
+    printf("\n 5. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
     length distance_driven = 400_mi;
     volume fuel_consumed = 15_gal;
     print((fuel_consumed * 100_km) / distance_driven);
     print(" per 100km");
-
-
-    print("\n 5. What's the kinetic energy of a mid-size SUV at 30MPH? ");
-    auto car_mass = 5000_lb; 
-    auto car_speed = 50_mph;
-    print(formula::kinetic_energy(car_mass, car_speed));
 
 
     print("\n 6. What's the local gravity at Mount Everest's peak? ");
@@ -41,13 +41,13 @@ int main() {
 
 
     print("\n 7. What's a car's braking distance on dry asphalt from 100km/h? ");
-    auto deceleration_on_dry_asphalt = 8_m_per_s²;
-    print(formula::braking_distance(100_km_per_h, 0_km_per_h, deceleration_on_dry_asphalt));
+    auto braking_on_dry_asphalt = 8_m_per_s²;
+    print(formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt));
 
 
     print("\n 8. What's a car's braking distance on wet asphalt from 100km/h? ");
-    auto deceleration_on_wet_asphalt = 6_m_per_s²;
-    print(formula::braking_distance(100_km_per_h, 0_km_per_h, deceleration_on_wet_asphalt));
+    auto braking_on_wet_asphalt = 6_m_per_s²;
+    print(formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt));
 
 
     print("\n 9. What's the wavelength of hydrogen (H2) in vacuum? ");
@@ -146,50 +146,66 @@ int main() {
         printf("'%s' in %s (%s), ", exoplanet.name, exoplanet.hostname, to_string(exoplanet.distance).c_str());
     }
 
+
+    print("\n23. What's the attractive force between Sun and Earth? ");
+    auto Sun_mass = 1.988416E30_kg;
+    auto Earth_mass = 5.9722E24_kg;
+    print(formula::gravitational_attractive_force(Sun_mass, Earth_mass, constant::AU));
+
+
+    print("\n24. What's the attractive force between Earth and Moon? ");
+    auto Moon_mass = 7.346E22_kg;
+    auto Earth_Moon_distance = 384'399_km;
+    print(formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_Moon_distance));
+
+
+    print("\n25. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
+    auto filament_weight = 750_g;
+    auto filament_diameter = 2.85_mm;
+    auto density_of_PLA = 1.24_g_per_cm³;
+    auto filament_volume = filament_weight / density_of_PLA;
+    auto filament_length = filament_volume / (constant::pi * square(filament_diameter / 2.0));
+    print(filament_length);
+
+
+    print("\n26. How long takes a flight non-stop around the Earth at Mach 1? ");
+    auto flight_distance = dataset::Earth.equatorial_circumference;
+    print(flight_distance / 1_Mach);
+
+
+    print("\n27. What's the surface area and volume of a soccer ball? ");
+    auto ball_circumference = 70_cm; // (69-71cm for FIFA ball size 5)
+    auto ball_radius = formula::radius_of_circumference(ball_circumference);
+    auto ball_area = formula::area_of_sphere(ball_radius);
+    auto ball_volume = formula::volume_of_sphere(ball_radius);
+    print(ball_area, ball_volume);
+
 {
-	print("\n23. What's the average speed here? ");
+	print("\n28. What's the average speed here? ");
 	auto average = (278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach) / 5.0;
 	print(average);
 } {
-	print("\n24. What's a radar's geometrical horizon (the distance it can see)? ");
+	print("\n29. What's a radar's geometrical horizon (the distance it can see)? ");
 	auto Earth_radius = 6371.009_km;
 	auto Radar_station_height = 30_ft;
 	auto distance = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
 	print(distance);
 } {
-	print("\n25. What's the time needed to fly non-stop around the Earth at Mach 1? ");
-	auto distance = dataset::Earth.equatorial_circumference;
-	auto speed = 1_Mach;
-	auto time = distance / speed;
-	print(time);
-} {
-	print("\n26. What's the travel time of sun light to Earth? ");
+	print("\n30. What's the travel time of sun light to Earth? ");
 	auto distance = constant::AU;
 	auto speed = constant::speed_of_light;
 	auto time = distance / speed;
 	print(time);
 } {
-	print("\n27. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
+	print("\n31. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
 	auto sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
 	print(sum);
 } {
-	print("\n28. What's the sum of 1m + 1nmi + 1ft? ");
+	print("\n32. What's the sum of 1m + 1nmi + 1ft? ");
 	auto sum = 1_m + 1_nmi + 1_ft;
 	print(sum);
 } {
-	print("\n29. What's the surface area of a soccer ball? ");
-	auto circumference = 70_cm; // (69-71cm for FIFA ball size 5)
-	auto radius = formula::radius_of_circumference(circumference);
-	auto area = formula::area_of_sphere(radius);
-	print(area);
-} {
-	print("\n30. What's the volume of a soccer ball? ");
-	auto circumference = 70_cm; // (69-71cm for FIFA ball size 5)
-	auto radius = formula::radius_of_circumference(circumference);
-	auto volume = formula::volume_of_sphere(radius);
-	print(volume);
-} {
-	print("\n31. What's the distance the Earth has travelled so far? ");
+	print("\n33. What's the distance the Earth has travelled so far? ");
 	auto distance_Earth_to_Sun = constant::AU;
 	auto distance_per_year = formula::circumference_of_circle(distance_Earth_to_Sun);
 	auto Earth_year = 365.25_days;
@@ -197,7 +213,7 @@ int main() {
 	auto distance_total = distance_per_year * (Earth_age / Earth_year);
 	print(distance_total);
 } {
-	print("\n32. What are the details of a 10m x 1m oak timber log? ");
+	print("\n34. What are the details of a 10m x 1m oak timber log? ");
 	auto log_length = 10_m;
 	auto log_diameter = 1_m;
 	auto dry_oak_weight = 710_kg_per_m³; 
@@ -208,7 +224,7 @@ int main() {
 	auto power = weight * dry_oak_power;
 	print(area, volume, weight, power);
 } {
-	print("\n33. What's the min cable wire size for 100m copper, 230V, 30A max? ");
+	print("\n35. What's the min cable wire size for 100m copper, 230V, 30A max? ");
 	auto conductor_resistivity = 1.7241e-8_Ohm_m; // for copper
 	auto cable_length = 100_m;
 	auto max_current = 30_A;
@@ -216,7 +232,7 @@ int main() {
 	auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
 	print(A);
 } {
-	print("\n34. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
+	print("\n36. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
 	auto wing_surface = 845_m²;
 	dimensionless lift_coefficient = 1.3939;
 	auto air_density = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
@@ -224,7 +240,7 @@ int main() {
 	auto force = formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed);
 	print(force);
 } {
-	print("\n35. What's the impact energy of a 50m asteroid at 50,000km/h? ");
+	print("\n37. What's the impact energy of a 50m asteroid at 50,000km/h? ");
 	auto diameter = 50_m;
 	auto density = 2500_kg_per_m³; // mostly estimated only 
 	auto speed = 50'000_km_per_h; // range is usually 50,000..100.000km/h
@@ -234,14 +250,14 @@ int main() {
 	print(energy);
 	print_equivalent(energy);
 } {
-	print("\n36. What's the sound intensity of a 1W loudspeaker at 1m distance? ");
+	print("\n38. What's the sound intensity of a 1W loudspeaker at 1m distance? ");
 	auto power = 1_W;
 	auto distance = 1_m;
 	auto intensity = formula::sound_intensity(power, distance);
 	print(intensity);
 	print_equivalent(intensity);
 } {
-	print("\n37. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
+	print("\n39. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
 	auto CC = 0.47_uF;
 	auto V0 = 5_V;
 	auto RR = 4.7_kOhm;
@@ -249,15 +265,7 @@ int main() {
 	auto V1 = V0 * exp(-time / (RR * CC));
 	print(V1);
 } {
-	print("\n38. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
-	auto net_filament_weight = 750_g;
-	auto filament_diameter = 2.85_mm;
-	auto PLA_density = 1.24_g_per_cm³; // for PLA filament
-	volume V = net_filament_weight / PLA_density;
-	length L = V / (constant::pi * square(filament_diameter / 2));
-	print(L);
-} {
-	print("\n39. What's the max diving time in 10m salt water using a 10l bottle? ");
+	print("\n40. What's the max diving time in 10m salt water using a 10l bottle? ");
 	auto average_breathing = 20_l_per_min;
 	auto bottle_volume = 10_l;
 	auto bottle_pressure = 150_bar;
@@ -268,7 +276,7 @@ int main() {
 	auto max_time = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
 	print(max_time);
 } {
-	print("\n40. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? ");
+	print("\n41. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? ");
 	auto muzzle_velocity = 1000_m_per_s;
 	auto altitude = 0_m;
 	auto launch_angle = 45_deg;
@@ -277,20 +285,7 @@ int main() {
 	auto flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
 	print(max_height, max_range, flight_time);
 } {
-	print("\n41. What's the attractive force between Earth and Moon? ");
-	auto Earth_mass = 5.9722E24_kg;
-	auto Moon_mass = 7.346E22_kg;
-	auto Earth_Moon_distance = 384'399_km;
-	auto force = formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_Moon_distance);
-	print(force);
-} {
-	print("\n42. What's the attractive force between Sun and Earth? ");
-	auto Sun_mass = 1.988416E30_kg;
-	auto Earth_mass = 5.9722E24_kg;
-	auto force = formula::gravitational_attractive_force(Sun_mass, Earth_mass, constant::AU);
-	print(force);
-} {
-	print("\n43. What are the frequencies and wavelengths of all musical notes? ");
+	print("\n42. What are the frequencies and wavelengths of all musical notes? ");
 	for (auto& note : dataset::musical_notes)
 	{
 		auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
