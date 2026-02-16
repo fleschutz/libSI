@@ -10,15 +10,15 @@ This lib helps to apply math with physical units correct, with high precision, a
 - [x] **Supports** SI units, Imperial units, Astronomical units, and many more.
 - [x] **Convenient** literals (e.g. 24_h or 3_GWh), conversions, and I/O functions.
 - [x] **Modern C++ 17 lib**: header only, no dependencies, own namespace SI::, with [unit tests](SI/tests.h).
-- [x] **Cross-platform** support for Linux (gcc, clang) and Windows (VS2017-VS2026).
+- [x] **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
 🧱 Building Blocks
 ------------------
-1. **Datatypes** such as SI::length or SI::time in [<SI/datatypes.h>](SI/datatypes.h).
-2. **Units** such as SI::meters or SI::seconds in [<SI/units.h>](SI/units.h).
-3. **Literals** such as 100_m or 60_sec in [<SI/literals.h>](SI/literals.h).
-4. **Constants** such as SI::constant::speed_of_light in [<SI/constants.h>](SI/constants.h).
-5. **Formulas** such as SI::formula::wavelength() in [<SI/formulas.h>](SI/formulas.h).
+1. **Datatypes** such as SI::length or SI::time in [<datatypes.h>](SI/datatypes.h).
+2. **Units** such as SI::meters or SI::seconds in [<units.h>](SI/units.h).
+3. **Literals** such as 100_m or 60_sec in [<literals.h>](SI/literals.h).
+4. **Constants** such as SI::constant::speed_of_light in [<constants.h>](SI/constants.h).
+5. **Formulas** such as SI::formula::wavelength() in [<formulas.h>](SI/formulas.h).
 6. **Datasets** such as chemical elements, planets, moons, exoplanets in 📂[datasets](datasets/).
 
 🔎 Example Code
