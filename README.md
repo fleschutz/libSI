@@ -5,12 +5,12 @@ Type-safe SI Library in C++
 
 Apply math with physical units correct, with high precision, and as easy as possible. This lib provides:
 
-* **Strong type-safety** for SI datatypes, constants, formulas, and literals (can't add a mass to a length).
-* **High precision** based on floating point 64-bit and **no runtime overhead** (just compiles to simple doubles).
-* **Convenient** literals (e.g. 24_h or 3_GWh), conversions, and I/O functions.
-* **Supports** SI units, Imperial units, Astronomical units, and many more.
-* **Modern C++ 17 lib**: header only, no dependencies, own namespace SI::, with [unit tests](SI/tests.h).
-* **Cross-platform** support for Linux (gcc, clang) and Windows (VS2017-VS2026).
+- [x] **Strong type-safety** for SI datatypes, constants, formulas, and literals (can't add a mass to a length).
+- [x] **High precision** based on floating point 64-bit and **no runtime overhead** (just compiles to simple doubles).
+- [x] **Supports** SI units, Imperial units, Astronomical units, and many more.
+- [x] **Convenient** literals (e.g. 24_h or 3_GWh), conversions, and I/O functions.
+- [x] **Modern C++ 17 lib**: header only, no dependencies, own namespace SI::, with [unit tests](SI/tests.h).
+- [x] **Cross-platform** support for Linux (gcc, clang) and Windows (VS2017-VS2026).
 
 🧱 Building Blocks
 ------------------
