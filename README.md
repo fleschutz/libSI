@@ -9,7 +9,7 @@ This lib helps to apply math with physical units correct, with high precision, a
 - [x] **High precision** based on floating point 64-bit and **no runtime overhead** (just compiles to simple doubles).
 - [x] **Supports** SI units, Imperial units, Astronomical units, and many more.
 - [x] **Convenient** literals (e.g. 24_h or 3_GWh), conversions, and I/O functions.
-- [x] **Modern C++ 17 lib**: header only, no dependencies, own namespace SI::, with [unit tests](SI/tests.h).
+- [x] **Modern C++ 17 lib**: header only, no dependencies, own namespace ("SI"), includes [unit tests](SI/tests.h).
 - [x] **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
 
 🧱 Building Blocks
