@@ -6,7 +6,7 @@
 
 namespace SI { namespace tests {
 
-	// +++ DEMO CHECKS +++ (to show what's possible, the serious checks follow below)
+	// +++ DEMO CHECKS +++ (just for demonstration, the serious checks follow below)
 	static_assert(3_m == meters(3));
 	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
 	static_assert(1_km / 30_min == 2_km_per_h);
@@ -18,7 +18,7 @@ namespace SI { namespace tests {
 	static_assert(1_Mach * 10_percent == 33_m_per_s);
 	static_assert((0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K);
 
-	// +++ BASIC C++ +++
+	// +++ BASIC C/C++ +++
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
 	static_assert(sizeof(int) <= sizeof(long));
