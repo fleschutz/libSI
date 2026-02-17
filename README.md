@@ -3,7 +3,7 @@
 Type-safe SI Library in C++
 ===========================
 
-This lib helps to apply math with physical units correct, with high precision, and as easy as possible. It provides:
+Get help to apply math with physical units correct, precise, and as quick and easy as possible. This lib provides:
 
 - [x] **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
 - [x] **High precision** based on floating point 64-bit and **no runtime overhead** (just compiles to simple doubles).
