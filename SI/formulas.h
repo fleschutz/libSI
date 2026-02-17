@@ -263,15 +263,25 @@ acceleration local_gravity(angle lat, length h)
 }
 
 // +++ VARIOUS FORMULAS +++
-frequency frequency_of_chromatic_note(int note, int reference_note, frequency reference_frequency)
-{
-	return std::pow(std::pow(2., 1. / 12.), note - reference_note) * reference_frequency;
-}
 
 // Calculates the wavelength from velocity (v) and frequency (f).
 length wavelength(velocity v, frequency f)
 {
 	return v / f;
+}
+
+#if 0
+velocity speed_of_sound_in_air(temperature T)
+{
+	double adiabatic_index = 1.4; // for air
+	auto M = 0.0289645_kg_per_mol; // molar mass of the gas
+	return sqrt((adiabatic_index * constant::R * T) / M);
+}
+#endif
+
+frequency frequency_of_chromatic_note(int note, int reference_note, frequency reference_frequency)
+{
+	return std::pow(std::pow(2., 1. / 12.), note - reference_note) * reference_frequency;
 }
 
 auto Newtons_motion(length s0, velocity v0, acceleration a, time t)
