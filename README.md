@@ -50,7 +50,7 @@ See [examples.cpp](examples.cpp) with 43 examples in total. Executing: `cmake . 
 ❔ FAQ
 -------
 * **What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units).
-* **What are typical use-cases for libSI?** Simulators, games and complex math & physics in general.
+* **What are typical use-cases for libSI?** Math and physics calculations, e.g. in simulations, simulators, games, etc.
 * **Where are the list of references?** References are listed at the end of each source code file.
 * **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for: 1.2 x 10²³ (the letter 'e' or 'E' represents the 'times 10 to the power of' part). 
 * **Where are libSI's files and folders?** Here is the project structure:
