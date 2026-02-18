@@ -74,9 +74,9 @@ int main() {
     print(per_person);
 
 
-    print("\n13. Which chemical elements melt above 2500°C and are radioactive? ");
+    print("\n13. Which chemical elements melt above 2500K and are radioactive? ");
     for (auto& element : dataset::chemical_elements) {
-        if (element.melting_point > 2500_degC && element.radioactive)
+        if (element.melting_point > 2500_K && element.radioactive)
             printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
     }
 
