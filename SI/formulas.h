@@ -1,96 +1,109 @@
-// <SI/formulas.h> - 59 common formulas based on type-safe SI units, e.g. SI::formula::wavelength()
-//                   (sorted by 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
+// <SI/formulas.h> - 61 common formulas based on type-safe SI datatypes, e.g. SI::formula::wavelength()
+//                   (sorted by: 2D, 3D, moving objects, vehicles, aircrafts, gravitation, various)
 #pragma once
 #include <SI/constants.h>
 
 namespace SI { namespace formula {
 
 // +++ 2D +++
+
 // Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
 length hypotenuse_of_triangle(length a, length b)
 {
 	return sqrt(a*a + b*b);
 }
 
-// Calculates the angle in a right triangle, based on opposite and hypotenuse.
-angle angle1_in_triangle(length opposite, length hypotenuse)
+// Calculates the angle in a right triangle from opposite (o) and hypotenuse (h).
+angle angle1_in_triangle(length o, length h)
 {
-	return radians(asin(opposite / hypotenuse));
+	return radians(asin(o / h));
 }
 
-// Calculates the angle in a right triangle, based on adjacent and hypotenuse.
-angle angle2_in_triangle(length adjacent, length hypotenuse)
+// Calculates the angle in a right triangle from adjacent (a) and hypotenuse (h).
+angle angle2_in_triangle(length a, length h)
 {
-	return radians(acos(adjacent / hypotenuse));
+	return radians(acos(a / h));
 }
 
-// Calculates the angle in a right triangle, based on adjacent and opposite.
-angle angle3_in_triangle(length adjacent, length opposite)
+// Calculates the angle in a right triangle from adjacent (a) and opposite (o).
+angle angle3_in_triangle(length a, length o)
 {
-	return radians(atan(opposite / adjacent));
+	return radians(atan(o / a));
 }
 
-area area_of_triangle(length base, length height)
+// Calculates the area of a triangle from base (b) and height (h).
+area area_of_triangle(length b, length h)
 {
-	return 0.5 * base * height;
+	return 0.5 * b * h;
 }
 
+// Calculates the perimeter of a rectangle from length (l) and base (b).
 length perimeter_of_rectangle(length l, length b)
 {
 	return 2. * (l + b);
 }
 
+// Calculates the area of a rectangle from length (l) and base (b).
 area area_of_rectangle(length l, length b)
 {
 	return l * b;
 }
 
+// Calculates the perimeter of a square from length (a).
 length perimeter_of_square(length a)
 {
 	return 4. * a;
 }
 
+// Calculates the area of a square from length (a).
 area area_of_square(length a)
 {
 	return a * a;
 }
 
+// Calculates the area of a trapezoid from base 1 (b1), base 2 (b2) and height (h).
 area area_of_trapezoid(length b1, length b2, length h)
 {
 	return 0.5 * (b1 + b2) * h;
 }
 
-length circumference_of_circle(length radius)
+// Calculates the circumference of a circle from radius (r).
+length circumference_of_circle(length r)
 {
-	return 2.0 * constant::pi * radius;
+	return constant::tau * r;
 }
 
-length radius_of_circumference(length circumference)
+// Calculates the radius of a circle from circumference (c).
+length radius_of_circumference(length c)
 {
-	return circumference / (2.0 * constant::pi);
+	return c / constant::tau;
 }
 
-area area_of_circle(length radius)
+// Calculates the area of a circle from radius (r).
+area area_of_circle(length r)
 {
-	return constant::pi * radius * radius;
+	return constant::pi * r * r;
 }
 
-// Calculates approximately(!) the perimeter of an ellipse, a=length of semi-major axis, b=length of semi-minor axis
+// Calculates approximately(!) the perimeter of an ellipse from length of semi-major axis (a) and length of semi-minor axis (b).
 length perimeter_of_ellipse(length a, length b)
 {
 	return constant::pi * sqrt(2.0 * (square(a) + square(b)));
 }
 
+// Calculates the area of an ellipse from radius (a) and (b).
 area area_of_ellipse(length a, length b)
 {
 	return constant::pi * a * b;
 }
 
+// Calculates the eccentricity of an ellipse from radius (a) and (b).
 dimensionless eccentricity_of_ellipse(length a, length b)
 {
 	return std::sqrt(1.0 - (square(b) / square(a)));
 }
 
+// Calculates the latus rectum of an ellipse from radius (a) and (b).
 length latus_rectum_of_ellipse(length a, length b)
 {
 	return 2.0 * square(b) / a;
@@ -105,52 +118,63 @@ length distance(length x1, length y1, length x2, length y2)
 }
 
 // +++ 3D +++
+
+// Calculates the area of a cube from length (a).
 area area_of_cube(length a)
 {
 	return 6. * a * a;
 }
 
+// Calculates the volume of a cube from length (a).
 volume volume_of_cube(length a)
 {
 	return a * a * a;
 }
 
-area area_of_cylinder(length radius, length height)
+// Calculates the area of a cylinder from radius (r) and height (h).
+area area_of_cylinder(length r, length h)
 {
-	return 2. * constant::pi * radius * (radius + height);
+	return constant::tau * r * (r + h);
 }
 
-volume volume_of_cylinder(length radius, length height)
+// Calculates the volume of a cylinder based on radius (r) and height (h).
+volume volume_of_cylinder(length r, length h)
 {
-	return constant::pi * square(radius) * height;
+	return constant::pi * square(r) * h;
 }
 
-area area_of_cone(length radius, length height)
+// Calculates the area of a cone from radius (r) and height (h).
+area area_of_cone(length r, length h)
 {
-	return constant::pi * radius * (radius + height);
+	return constant::pi * r * (r + h);
 }
 
-volume volume_of_cone(length radius, length height)
+// Calculates the volume of a cone from radius (r) and height (h).
+volume volume_of_cone(length r, length h)
 {
-	return (1./3.) * constant::pi * square(radius) * height;
+	return (1./3.) * constant::pi * square(r) * h;
 }
 
-area area_of_sphere(length radius)
+// Calculates the area of a sphere from radius (r).
+area area_of_sphere(length r)
 {
-	return 4. * constant::pi * square(radius);
+	return 4. * constant::pi * square(r);
 }
 
-volume volume_of_sphere(length radius)
+// Calculates the volume of a sphere from radius (r).
+volume volume_of_sphere(length r)
 {
-	return (4. / 3.) * constant::pi * radius * radius * radius;
+	return (4. / 3.) * constant::pi * r * r * r;
 }
 
-volume volume_of_prism(area base_area, length height)
+// Calculates the volume of a prism from base area (A) and height (h).
+volume volume_of_prism(area A, length h)
 {
-	return base_area * height;
+	return A * h;
 }
 
 // +++ MOVING OBJECTS +++
+
 // Calculates the kinetic energy of a non-rotating object of mass (m) traveling at velocity (v).
 energy kinetic_energy(mass m, velocity v)
 {
@@ -270,11 +294,18 @@ length wavelength(velocity v, frequency f)
 	return v / f;
 }
 
+// Calculates the speed of sound in air based on temperature (T).
 velocity speed_of_sound_in_air(temperature T)
 {
 	double adiabatic_index = 1.4; // for air
 	auto M = 0.0289645_kg_per_mol; // molar mass of the gas
 	return sqrt((adiabatic_index * constant::R * T) / M);
+}
+
+// Calculates the drag force based on mass density of the fluid (p), flow velocity (u), drag coefficient (cd) and reference area (A).
+force drag_in_fluid(density p, velocity u, dimensionless cd, area A)
+{
+	return 0.5 * p * (u * u) * cd * A;
 }
 
 frequency frequency_of_chromatic_note(int note, int reference_note, frequency reference_frequency)
