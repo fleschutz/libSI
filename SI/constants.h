@@ -1,5 +1,5 @@
-// <SI/constants.h> - type-safe constants based on SI units, e.g. SI::constant::G
-//                    (sorted by: defined, universal, electromagnetic, atomic and nuclear, physico-chemical,...)
+// <SI/constants.h> - type-safe constants based on SI units, e.g. SI::constant::c
+//                    (sorted by: defined, universal, electromagnetic, atomic and nuclear, physico-chemical, physical, mathematical, astronomical, various)
 #pragma once
 #include <SI/units.h>
 
