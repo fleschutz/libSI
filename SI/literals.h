@@ -1,5 +1,5 @@
 // <SI/literals.h> - convenient literals such as 100_m or 60_sec (requires C++11 or higher)
-//                   (sorted by: SI base units, SI derived units, and non-SI units)
+//                   (sorted by: SI base units, SI derived units, Imperial units, various units)
 #pragma once
 #include <SI/units.h>
 
@@ -280,7 +280,33 @@ LITERAL(_sr,       1, steradians);          // 1_sr  (steradian)
 LITERAL(_km³_per_s²,1e9, meters3_per_second2);// 1_km³_per_s² (km³/s²)
 LITERAL(_kg_per_mol,1,kilograms_per_mol);   // 1_kg_per_mol (kg/mol)
 
-// +++ NON-SI UNITS +++
+// +++ IMPERIAL UNITS +++
+//
+//       SYMBOL               FACTOR        BASE UNIT   EXAMPLE
+// -------------------------------------------------------------
+// length in...
+LITERAL(_in,                        0.0254, meters); // 1_in (inch)
+LITERAL(_ft,                         .3048, meters); // 1_ft (feet, 12 in)
+LITERAL(_yd,                         .9144, meters); // 1_yd (yard)
+LITERAL(_mi,                     1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
+LITERAL(_cable,                      185.2, meters); // 1_cable (one tenth of a nautical mile)
+LITERAL(_nmi,                        1'852, meters); // 1_nmi (nautical mile, about one arc minute)
+LITERAL(_NM,                         1'852, meters); // 1_NM  (nautical mile, about one arc minute)
+// mass in...
+LITERAL(_oz,                28.349'523'125, grams);  // 1_oz (ounce, 1/16 of a pound)
+LITERAL(_lb,                    0.45359237, kilograms);// 1_lb (pound)
+// volume in...
+LITERAL(_gal,                   4.54609e-3, meters3);// 1_gal (US gallon)
+// velocity in...
+LITERAL(_kn,                         1.852, kilometers_per_hour); // 1_kn (knots)
+LITERAL(_ft_per_min,               0.00508, meters_per_second); // 1_ft_per_min (feet/min)
+LITERAL(_in_per_s,                  0.0254, meters_per_second); // 1_in_per_s (inch/sec)
+LITERAL(_in_per_h,            0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
+LITERAL(_mph,                       .44704, meters_per_second); // 1_mph (miles/hour)
+// temperature in...
+LITERAL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
+
+// +++ VARIOUS UNITS +++
 //
 //       SYMBOL               FACTOR        BASE UNIT   EXAMPLE
 // -------------------------------------------------------------
@@ -295,27 +321,6 @@ LITERAL(_AU,               149'597'870'700, meters); // 1_AU  (astronomical unit
 LITERAL(_Msun,                  1.98892e30, kilograms);// 1_Msun (solar mass, about the mass of the Sun)
 LITERAL(_Mjup,                    1.898e27, kilograms);// 1_Mjup (Jupiter mass)
 LITERAL(_Mearth,                 5.9742e24, kilograms);// 1_Mearth (Earth mass)
-// length in Imperial units in...
-LITERAL(_in,                        0.0254, meters); // 1_in (inch)
-LITERAL(_ft,                         .3048, meters); // 1_ft (feet, 12 in)
-LITERAL(_yd,                         .9144, meters); // 1_yd (yard)
-LITERAL(_mi,                     1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
-LITERAL(_cable,                      185.2, meters); // 1_cable (one tenth of a nautical mile)
-LITERAL(_nmi,                        1'852, meters); // 1_nmi (nautical mile, about one arc minute)
-LITERAL(_NM,                         1'852, meters); // 1_NM  (nautical mile, about one arc minute)
-// mass in Imperial units in...
-LITERAL(_oz,                28.349'523'125, grams);  // 1_oz (ounce, 1/16 of a pound)
-LITERAL(_lb,                    0.45359237, kilograms);// 1_lb (pound)
-// volume in Imperial units in...
-LITERAL(_gal,                   4.54609e-3, meters3);// 1_gal (US gallon)
-// velocity in Imperial units in...
-LITERAL(_kn,                         1.852, kilometers_per_hour); // 1_kn (knots)
-LITERAL(_ft_per_min,               0.00508, meters_per_second); // 1_ft_per_min (feet/min)
-LITERAL(_in_per_s,                  0.0254, meters_per_second); // 1_in_per_s (inch/sec)
-LITERAL(_in_per_h,            0.0000070556, meters_per_second); // 1_in_per_h (inch/hour)
-LITERAL(_mph,                       .44704, meters_per_second); // 1_mph (miles/hour)
-// temperature in Imperial units in...
-LITERAL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 // digital units in...
 LITERAL(_byte,                           1, bytes);   // 1_byte
 LITERAL(_kB,                           1e3, bytes);   // 1_kB (kilobyte)
@@ -347,7 +352,7 @@ LITERAL(_atm,                      101'325, pascals);  // 1_atm  (atmosphere)
 LITERAL(_inHg,                    3'386.39, pascals);  // 1_inHg (inch of mercury)
 LITERAL(_mmHg,           101'325.0 / 760.0, pascals);  // 1_mmHg (millimetre of mercury)
 LITERAL(_Torr,           101'325.0 / 760.0, pascals);  // 1_Torr (same as mmHg)
-// various units in...
+// other units in...
 LITERAL(_degC,                           1, celsius);  // 1_degC (°Celsius)
 LITERAL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
 LITERAL(_Mach,                         330, meters_per_second); // 1_Mach
