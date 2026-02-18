@@ -278,6 +278,7 @@ LITERAL(_rad,      1, radians);             // 1_rad (radian)
 LITERAL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 LITERAL(_sr,       1, steradians);          // 1_sr  (steradian)
 LITERAL(_km³_per_s²,1e9, meters3_per_second2);// 1_km³_per_s² (km³/s²)
+LITERAL(_kg_per_mol,1,kilograms_per_mol);   // 1_kg_per_mol (kg/mol)
 
 // +++ NON-SI UNITS +++
 //
