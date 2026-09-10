@@ -1,5 +1,5 @@
 /// @file	SI/formulas.h
-/// @brief	Defines 64 common formulas based on SI datatypes.
+/// @brief	Defines 65 common formulas based on SI datatypes.
 /// @details	Contains formulas for: 1. 2D, 2. 3D, 3. Moving Objects, 4. Vehicles, 5. Aircraft, 6. Gravitation, 7. Various, 8. References
 
 #pragma once
@@ -356,6 +356,24 @@ namespace SI { namespace formula {
 		auto air_celsius = celsius(air_temperature);
 		return celsius(13.12 + 0.6215 * air_celsius
 		  + (0.3965 * air_celsius - 11.37) * std::pow(wind_speed / 1_km_per_h, 0.16));
+	}
+
+	/// @brief Returns the temperature gradient per kilometer for the given geopotential altitude.
+	temperature temperature_gradient(length altitude)
+	{
+		if (altitude <= 11_km)
+			return -6.5_K;
+		if (altitude <= 20_km)
+			return 0_K;
+		if (altitude <= 32_km)
+			return 1_K;
+		if (altitude <= 37_km)
+			return 2.8_K;
+		if (altitude <= 51_km)
+			return 0_K;
+		if (altitude <= 71_km)
+			return -2.8_K;
+		return -2_K;
 	}
 
 	/// @brief Calculates the density of dry air.
