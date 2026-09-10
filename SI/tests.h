@@ -1,5 +1,5 @@
 /// @file	SI/tests.h
-/// @brief	Defines unit tests at compile-time to verify everything.
+/// @brief	It contains 207 unit tests at compile-time to verify everything.
 /// @details	Contains: 1. Demo Checks, 2. Datatypes, 3. SI Base Units, 4. SI Derived Units, 5. Astronomical Units, 6. Imperial Units, 7. Digital Units, 8. Various Units, 9. Functions & Templates
 
 #pragma once

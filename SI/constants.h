@@ -1,5 +1,5 @@
 /// @file	constants.h
-/// @brief	Defines type-safe constants such as SI::constant::speed_of_light (source: 2022 CODATA)
+/// @brief	Defines 77 type-safe constants such as SI::constant::speed_of_light (source: 2022 CODATA)
 /// @details	Contains: 1. Defined Constants, 2. Universal, 3. Electromagnetic, 4. Atomic & Nuclear, 5. Physico-chemical, 6. Physical, 7. Mathematical, 8. Astronomical, 9. Various, 10. References
 
 #pragma once
