@@ -3,12 +3,18 @@ using namespace SI;
 
 void conversions() {
 
+    // Import as literal:
+    length distance = 42_m;
+    SI::time day = 24_h;
+    mass weight = 100_lb;
+
     // Import a number:
     double x = 42;               // <- x now contains a dimensionless number without unit
-    length distance = x * 1_m;   // <- distance now contains 42m
+    distance = x * 1_m;          // <- distance now contains 42m
 
     // Import a string:
     bool check = from_string("42m", distance);
+
 
     // Export a number:
     double y = distance / 1_m;  // <- y again contains a dimensionless number (no unit)
