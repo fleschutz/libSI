@@ -1,9 +1,9 @@
-CMake Support for libSI
-=======================
+libSI's CMake Support
+=====================
 
 
-Option 1: Using `FetchContent`
-------------------------------
+Using `FetchContent` (option #1)
+--------------------------------
 Pull it at configure time — no vendored copy in your tree:
 
 ```cmake
@@ -17,8 +17,8 @@ target_link_libraries(myapp PRIVATE libSI::libSI)
 ```
 
 
-Option 2: Using `add_subdirectory`
-----------------------------------
+Using `add_subdirectory` (option #2)
+------------------------------------
 Vendor the project (a submodule or a copy) and add it:
 
 ```cmake
@@ -29,8 +29,8 @@ target_link_libraries(myapp PRIVATE libSI::libSI)
 Linking the target propagates the include directory, so you do not set either yourself.
 
 
-Option 3: Using `find_package`
-------------------------------
+Using `find_package` (option #3)
+--------------------------------
 
 If `libSI` is installed (via `cmake --install`, or a Linux package), consume it with `find_package`:
 
@@ -40,8 +40,8 @@ target_link_libraries(myapp PRIVATE libSI::libSI)
 ```
 
 
-Option 4: Copy the headers (no CMake)
--------------------------------------
+Copy the headers (option #4, no CMake)
+---------------------------------------
 Put `include/` on your compiler's include path and build with C++23 (`-std=c++23` on GCC and Clang,
 `/std:c++latest` on MSVC). Nothing else is required.
 
