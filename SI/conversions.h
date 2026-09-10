@@ -8,7 +8,7 @@
 
 namespace SI
 {
-	std::string format_of_to_string = "%.2Lf%s"; // <-- configurable (precision / whitespace)
+	inline std::string format_of_to_string = "%.2Lf%s"; // <-- configurable (precision / whitespace)
 
 	inline bool from_string(const std::string& str, length& result)
 	{
