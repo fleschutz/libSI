@@ -1,5 +1,5 @@
 /// @file	SI/units.h
-/// @brief	Defines type-safe SI units such as SI::meters.
+/// @brief	Defines 105 type-safe units such as SI::meters.
 /// @details	Contains: 1. SI base units, 2. SI prefixes, 3. SI derived units, 4. Imperial units, 5. Various units, 6. References
 
 #pragma once

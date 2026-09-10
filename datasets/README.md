@@ -1,6 +1,6 @@
 Datasets
 ========
-This folder contains datasets for basic calculations on chemical elements, physics particles, planets, moons, etc. Most of them have been converted from .CSV files (in CSVs subfolder) by the csv2hpp utility.
+This folder contains 12 datasets for basic calculations on chemical elements, physics particles, planets, moons, etc. Most of them have been converted from .CSV files (in CSVs subfolder) by the csv2hpp utility.
 
 References
 ----------

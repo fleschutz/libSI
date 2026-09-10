@@ -13,14 +13,14 @@ A units library to apply math with physical units correct, convenient and with h
 
 🧱 Building Blocks of libSI
 ----------------------------
-- **Datatypes** such as *SI::length* in [SI/datatypes.h](SI/datatypes.h)
-- **Units** such as *SI::meters* in [SI/units.h](SI/units.h)
-- **Literals** such as *100_m* in [SI/literals.h](SI/literals.h)
+- 32 **Datatypes** such as *SI::length* in [SI/datatypes.h](SI/datatypes.h)
+- 105 **Units** such as *SI::meters* in [SI/units.h](SI/units.h)
+- 297 **Literals** such as *100_m* in [SI/literals.h](SI/literals.h)
 - 77 **Constants** such as *SI::constant::speed_of_light* in [SI/constants.h](SI/constants.h)
 - 65 **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
 - **Conversions** such as *SI::to_string()* in [SI/conversions.h](SI/conversions.h)
-- **Datasets** such as *dataset::chemical_elements* in 📂[datasets](datasets/)
 - 207 **Unit Tests** performed at compile-time in [SI/tests.h](SI/tests.h) and also performed on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
+- 12 **Datasets** such as *dataset::chemical_elements* in 📂[datasets](datasets/) (optional)
 
 
 🔎 Example

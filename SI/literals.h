@@ -1,6 +1,7 @@
 /// @file	SI/literals.h
-/// @brief	Defines convenient literals such as 24_h (requires a C++11 compiler or higher).
-/// @details	Contains: 1. SI Base Units, 2. SI Derived Units, 3. Imperial Units, 4. Various Units, 5. References
+/// @brief	Defines 297 literals as units such as 24_h.
+/// @details	Requires a C++11 compiler or higher.
+///             Contains: 1. SI Base Units, 2. SI Derived Units, 3. Imperial Units, 4. Various Units, 5. References
 
 #pragma once
 #include <SI/units.h>
