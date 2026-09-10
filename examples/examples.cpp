@@ -340,16 +340,18 @@ int main() {
     print("46. How many wine bottles are needed for 1 hectoliter? ");
     auto total_volume      = 1_hl;
     auto volume_per_bottle = 750_ml;
-    auto bottles           = total_volume / volume_per_bottle;
-    println(bottles);
+    auto number_of_bottles = total_volume / volume_per_bottle;
+    println(number_of_bottles);
 
  
     // Conversion example:
-    double x = 42;          // <- x contains a dimensionless number without unit
-    SI::time t = x * 1_s;   // <- t is now 42 seconds
-    double y = t / 1_s;     // <- y again contains a dimensionless number (no unit)
-    // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    double x = 42;          // <- x now contains a dimensionless number without unit
 
+    SI::time t = x * 1_s;   // <- t now contains 42 seconds
+			    //
+    double y = t / 1_s;     // <- y again contains a dimensionless number (no unit)
+
+    // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
     return 0;
 }
