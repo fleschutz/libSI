@@ -53,9 +53,7 @@ The potential energy of a single ounce is: 2.55PJ
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
-**How to import or export numbers?** Import `double x = 42;` with `length dist = x * 1_m;` and export with `double y = dist / 1_m;`.
-
-**How to import or export strings?** Import with `from_string("42m", dist)` and export with `std::string str = to_string(dist);`
+**How to import or export numbers and string?** See the examples in [conversions.cpp](examples/conversions.cpp).
 
 **Where are the list of references?** References are always listed at the end of each source code file.
 
