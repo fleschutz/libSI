@@ -9,7 +9,7 @@ A units library to apply math with physical units correct, convenient and with h
 - **Supports** SI units, Imperial units, astronomical units, various units, and convenient literals (e.g. 24_h).
 - **No runtime overhead:** just compiles to simple doubles for maximum performance.
 - **Modern C++ 17:** header only, own namespace, no external dependencies.
-- **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026).
+- **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](SI/CMake_support.md).
 
 🧱 Building Blocks of libSI
 ----------------------------
@@ -19,7 +19,7 @@ A units library to apply math with physical units correct, convenient and with h
 - 77 **Constants** such as *SI::constant::speed_of_light* in [SI/constants.h](SI/constants.h)
 - 65 **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
 - **Conversions** such as *SI::to_string()* in [SI/conversions.h](SI/conversions.h)
-- 207 **Unit Tests** performed at compile-time in [SI/tests.h](SI/tests.h) and also performed on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
+- 207 **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and also performed on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 - 12 **Datasets** such as *dataset::chemical_elements* in 📂[datasets](datasets/) (optional)
 
 
