@@ -1,7 +1,8 @@
 /// @file     SI/literals.h
 /// @brief    Defines 297 literals as units, e.g. 24_h.
 /// @details  Requires a C++11 compiler or higher.
-///           Categories are: SI Base Units, SI Derived Units, Imperial Units, Various Units, and References.
+///           Categories are: SI Base Units, SI Derived Units, Imperial Units, Astronomical Units,
+///                           Digital Units, Various Units, and References.
 
 #pragma once
 #include <SI/units.h>
@@ -14,7 +15,7 @@ namespace SI {
 	// 1. SI Base Units
 	// ----------------
 	//
-	//     SYMBOL FACTOR  BASE UNIT                EXAMPLE (sorted from big units to small one)
+	//     SYMBOL FACTOR  BASE UNIT             EXAMPLE (sorted from big units to small one)
 	// -------------------------------------------------------------
 	// length in...
 	LITERAL(_Pm,    1e15, meters);              // 1_Pm (petameter)
@@ -317,9 +318,8 @@ namespace SI {
 	// temperature in...
 	LITERAL(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 
-	// 4. Various Units
-	// ----------------
-	// astronomical units in...
+	// 4. Astronomical Units
+	// ---------------------
 	LITERAL(_Gpc,     30'856'775'814'913'673e9, meters); // 1_Gpc (gigaparsec, as of IAU 2012)
 	LITERAL(_Mpc,     30'856'775'814'913'673e6, meters); // 1_Mpc (megaparsec, as of IAU 2012)
 	LITERAL(_kpc,     30'856'775'814'913'673e3, meters); // 1_kpc (kiloparsec, as of IAU 2012)
@@ -331,7 +331,9 @@ namespace SI {
 	LITERAL(_Mjup,                    1.898e27, kilograms);// 1_Mjup (Jupiter mass)
 	LITERAL(_Mearth,                 5.9742e24, kilograms);// 1_Mearth (Earth mass)
 	LITERAL(_Mmoon,              7.34767309e22, kilograms);// 1_Mmoon (Moon mass)
-	// digital units in...
+
+	// 5. Digital Units
+	// ----------------
 	LITERAL(_byte,                           1, bytes);   // 1_byte
 	LITERAL(_kB,                           1e3, bytes);   // 1_kB (kilobyte)
 	LITERAL(_MB,                           1e6, bytes);   // 1_MB (megabyte)
@@ -351,7 +353,9 @@ namespace SI {
 	LITERAL(_Mbps,                     1e6 / 8, bytes_per_second); // 1_Mbps (megabit/sec)
 	LITERAL(_Gbps,                     1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
 	LITERAL(_Tbps,                    1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
-	// pressure in...
+								       //
+	// 6. Various Units
+	// ----------------
 	LITERAL(_Gbar,                        1e14, pascals);  // 1_Gbar (gigabar)
 	LITERAL(_Mbar,                        1e11, pascals);  // 1_Mbar (megabar)
 	LITERAL(_kbar,                         1e8, pascals);  // 1_kbar (kilobar)
@@ -362,7 +366,6 @@ namespace SI {
 	LITERAL(_inHg,                    3'386.39, pascals);  // 1_inHg (inch of mercury)
 	LITERAL(_mmHg,           101'325.0 / 760.0, pascals);  // 1_mmHg (millimetre of mercury)
 	LITERAL(_Torr,           101'325.0 / 760.0, pascals);  // 1_Torr (same as mmHg)
-	// various units:
 	LITERAL(_degC,                           1, celsius);  // 1_degC (°Celsius)
 	LITERAL(_degR,                     5.0/9.0, kelvins);  // 1_degR (°Rankine)
 	LITERAL(_Mach,                         330, meters_per_second); // 1_Mach
@@ -376,7 +379,7 @@ namespace SI {
 	LITERAL(_bpm,                     1.0/60.0, hertz);    // 1_bpm  (beats per minute)
 	LITERAL(_smoot,                     1.7018, meters);   // 1_smoot (one Oliver R. Smoot height, fun unit)
 
-	// 5. References
+	// 7. References
 	// -------------
 	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 	// 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
