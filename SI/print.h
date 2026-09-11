@@ -1,5 +1,5 @@
-/// @file	SI/print.h
-/// @brief	Contains simple print to console functions for SI datatypes and strings (similar to C++23).
+/// @file   SI/print.h
+/// @brief  Contains simple print to console templates for SI datatypes and strings (similar to C++23).
 
 #pragma once
 #include <iostream>
@@ -7,7 +7,7 @@
 
 namespace SI
 {
-	/// @brief Prints a single value (without newline).
+	/// @brief Prints a single value without a newline.
 	template <typename T>
 	void print(T value)
 	{
@@ -21,7 +21,7 @@ namespace SI
 		std::cout << to_string(value) << std::endl;
 	}
 
-	/// @brief Print two values (without newline).
+	/// @brief Print two values without a newline.
 	template <typename T1, typename T2>
 	void print(T1 v1, T2 v2)
 	{
@@ -35,7 +35,7 @@ namespace SI
 		std::cout << to_string(v1) << to_string(v2) << std::endl;
 	}
 
-	/// @brief Prints three values (without newline).
+	/// @brief Prints three values without a newline.
 	template <typename T1, typename T2, typename T3>
 	void print(T1 v1, T2 v2, T3 v3)
 	{
@@ -49,7 +49,7 @@ namespace SI
 		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << std::endl;
 	}
 
-	/// @brief Prints four values (without newline).
+	/// @brief Prints four values without a newline.
 	template <typename T1, typename T2, typename T3, typename T4>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4)
 	{
@@ -63,7 +63,7 @@ namespace SI
 		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << std::endl;
 	}
 
-	/// @brief Prints five values (without newline).
+	/// @brief Prints five values without a newline.
 	template <typename T1, typename T2, typename T3, typename T4, typename T5>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)
 	{
@@ -77,7 +77,7 @@ namespace SI
 		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << std::endl;
 	}
 
-	/// @brief Prints six values (without newline).
+	/// @brief Prints six values without a newline.
 	template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6)
 	{
@@ -91,7 +91,7 @@ namespace SI
 		std::cout << to_string(v1) << to_string(v2) << to_string(v3) << to_string(v4) << to_string(v5) << to_string(v6) << std::endl;
 	}
 
-	/// @brief Prints seven values (without a newline).
+	/// @brief Prints seven values without a newline.
 	template <typename T1, typename T2, typename T3, typename T4, typename T5, typename T6, typename T7>
 	void print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6, T7 v7)
 	{
