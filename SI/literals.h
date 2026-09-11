@@ -1,7 +1,7 @@
-/// @file	SI/literals.h
-/// @brief	Defines 297 literals as units such as 24_h.
-/// @details	Requires a C++11 compiler or higher.
-///             Contains: 1. SI Base Units, 2. SI Derived Units, 3. Imperial Units, 4. Various Units, 5. References
+/// @file     SI/literals.h
+/// @brief    Defines 297 literals as units, e.g. 24_h.
+/// @details  Requires a C++11 compiler or higher.
+///           Categories are: SI Base Units, SI Derived Units, Imperial Units, Various Units, and References.
 
 #pragma once
 #include <SI/units.h>
@@ -69,6 +69,7 @@ namespace SI {
 	LITERAL(_nA,    1e-9, amperes);             // 1_nA  (nanoampere)
 	LITERAL(_pA,   1e-12, amperes);             // 1_pA  (picoampere)
 	// amount of substance (N_A) in...
+	LITERAL(_Gmol,   1e9, moles);               // 1_Gmol (gigamole)
 	LITERAL(_Mmol,   1e6, moles);               // 1_Mmol (megamole)
 	LITERAL(_kmol,   1e3, moles);               // 1_kmol (kilomole)
 	LITERAL(_mol,      1, moles);               // 1_mol  (mole)
@@ -130,6 +131,7 @@ namespace SI {
 	LITERAL(_km_per_s²,1e3, meters_per_second2);// 1_km_per_s² (km/s²)
 	LITERAL(_m_per_s², 1, meters_per_second2);  // 1_m_per_s² (m/s²)
 	// frequency (f) in...
+	LITERAL(_PHz,   1e15, hertz);               // 1_PHz (petahertz)
 	LITERAL(_THz,   1e12, hertz);               // 1_THz (terahertz)
 	LITERAL(_GHz,    1e9, hertz);               // 1_GHz (gigahertz)
 	LITERAL(_MHz,    1e6, hertz);               // 1_MHz (megahertz)

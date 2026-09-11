@@ -1,6 +1,7 @@
-/// @file	SI/tests.h
-/// @brief	It contains 207 unit tests at compile-time to verify everything.
-/// @details	Contains: 1. Demo Checks, 2. Datatypes, 3. SI Base Units, 4. SI Derived Units, 5. Astronomical Units, 6. Imperial Units, 7. Digital Units, 8. Various Units, 9. Functions & Templates
+/// @file      SI/tests.h
+/// @brief     Contains 210 unit tests at compile-time to verify everything.
+/// @details   Categories are: Demo Checks, Datatypes, SI Base Units, SI Derived Units, Astronomical Units,
+///                            Imperial Units, Digital Units, Various Units, and Functions & Templates.
 
 #pragma once
 #include <cassert>
@@ -88,6 +89,7 @@ namespace SI {
 	static_assert(1_nK == 0.001_uK);
 
 	// electric current in...
+	static_assert(1_GA == 1000_MA);
 	static_assert(1_MA == 1000_kA);
 	static_assert(1_kA == 1000_A);
 	static_assert(1_A  == 1000_mA);
@@ -96,6 +98,7 @@ namespace SI {
 	static_assert(1_nA == 0.001_uA);
 
 	// amount of substance in...
+	static_assert(1_Gmol == 1000_Mmol);
 	static_assert(1_Mmol == 1000_kmol);
 	static_assert(1_kmol == 1000_mol);
 	static_assert(1_mol  == 0.001_kmol);
@@ -142,6 +145,7 @@ namespace SI {
 	static_assert(0.001_km_per_s² == 1_m_per_s²);
 
 	// frequency in :
+	static_assert(1_PHz == 1000_THz);
 	static_assert(1_THz == 1000_GHz);
 	static_assert(1_GHz == 1000_MHz);
 	static_assert(1_MHz == 1000_kHz);
