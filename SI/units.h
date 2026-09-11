@@ -148,34 +148,34 @@ namespace SI {
 	typedef long double angle;
 	typedef angle radians;
 
-	SI_INLINE angle sin(angle a)
+	[[nodiscard]] SI_INLINE angle sin(angle a)
 	{
 		return std::sin(radians(a));
 	}
 
-	SI_INLINE angle cos(angle a)
+	[[nodiscard]] SI_INLINE angle cos(angle a)
 	{
 		return std::cos(radians(a));
 	}
 
-	SI_INLINE angle tan(angle a)
+	[[nodiscard]] SI_INLINE angle tan(angle a)
 	{
 		return std::tan(radians(a));
 	}
 
-	SI_INLINE angle atan2(length y, length x)
+	[[nodiscard]] SI_INLINE angle atan2(length y, length x)
 	{
 		return std::atan2(meters(y), meters(x));
 	}
 
 	/// @brief Calculates sin²x
-	SI_INLINE angle sin2(angle x)
+	[[nodiscard]] SI_INLINE angle sin2(angle x)
 	{
 		return 0.5 * (1.0 - std::cos(2.0 * x));
 	}
 
 	/// @brief Calculates cos²x
-	SI_INLINE angle cos2(angle x)
+	[[nodiscard]] SI_INLINE angle cos2(angle x)
 	{
 		return 0.5 * (1.0 + std::cos(2.0 * x));
 	}
