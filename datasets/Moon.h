@@ -9,16 +9,16 @@ namespace dataset {
 
     const struct {
 
-	// Orbital characteristics
-	length        average_perigee =            362'600_km;
-	length        average_apogee =             405'400_km;
-	length        semi_major_axis =            384'399_km;
-	length        mean_orbit_radius =          384'784_km;
-	dimensionless eccentricity =                0.0549;
+        // Orbital characteristics
+        length        average_perigee =            362'600_km;
+        length        average_apogee =             405'400_km;
+        length        semi_major_axis =            384'399_km;
+        length        mean_orbit_radius =          384'784_km;
+        dimensionless eccentricity =                0.0549;
         SI::time      sidereal_orbital_period = 27.321'661_day;
         SI::time      synodic_orbital_period =  29.530'589_day;
         velocity      average_orbital_speed =        1'022_km_per_s;
-	angle         inclination =                  5.145_deg; // to the ecliptic
+        angle         inclination =                  5.145_deg; // to the ecliptic
 
         // Physical characteristics
         length        mean_radius =                1'737.4_km;
