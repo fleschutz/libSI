@@ -330,9 +330,9 @@ int main() {
     println(total_mass, " or ", to_equivalent(total_mass));
 
 
-    print("45. How long takes a trip to Alpha Centauri at 25km/s? ");
-    auto distance_Earth_to_Alpha_Centauri = 4.3_ly;
-    auto travel_speed                     = 25_km_per_s;
+    print("45. How long takes a trip to Alpha Centauri at 10% the speed of light? ");
+    auto distance_Earth_to_Alpha_Centauri = 4.37_ly;
+    auto travel_speed                     = constant::speed_of_light * 10_percent;
     auto time_needed                      = distance_Earth_to_Alpha_Centauri / travel_speed;
     println(time_needed);
 

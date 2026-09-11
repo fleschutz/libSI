@@ -84,9 +84,6 @@ namespace SI {
 
 	// 2. SI Derived Units
 	// -------------------
-	//
-	//     SYMBOL FACTOR  BASE UNIT                EXAMPLE
-	// ----------------------------------------------------
 	// area in...
 	LITERAL(_km²,    1e6, meters2);             // 1_km² (square kilometer)
 	LITERAL(_hm²,    1e4, meters2);             // 1_hm² (hectare)
@@ -298,9 +295,6 @@ namespace SI {
 
 	// 3. Imperial Units
 	// -----------------
-	//
-	//       SYMBOL               FACTOR        BASE UNIT   EXAMPLE
-	// -------------------------------------------------------------
 	// length in...
 	LITERAL(_in,                        0.0254, meters); // 1_in (inch)
 	LITERAL(_ft,                         .3048, meters); // 1_ft (feet, 12 inches)
@@ -325,9 +319,6 @@ namespace SI {
 
 	// 4. Various Units
 	// ----------------
-	//
-	//       SYMBOL               FACTOR        BASE UNIT   EXAMPLE
-	// -------------------------------------------------------------
 	// astronomical units in...
 	LITERAL(_Gpc,     30'856'775'814'913'673e9, meters); // 1_Gpc (gigaparsec, as of IAU 2012)
 	LITERAL(_Mpc,     30'856'775'814'913'673e6, meters); // 1_Mpc (megaparsec, as of IAU 2012)
