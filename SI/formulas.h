@@ -1,6 +1,6 @@
-/// @file	SI/formulas.h
-/// @brief	Defines 65 common formulas based on SI datatypes.
-/// @details	Contains formulas for: 1. 2D, 2. 3D, 3. Moving Objects, 4. Vehicles, 5. Aircraft, 6. Gravitation, 7. Various, 8. References
+/// @file     SI/formulas.h
+/// @brief    Contains 65 formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @details  Categories are: 2D, 3D, Moving Objects, Vehicles, Aircraft, Gravitation, Various, and References.
 
 #pragma once
 #include <SI/constants.h>
