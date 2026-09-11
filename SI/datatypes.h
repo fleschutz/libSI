@@ -1,6 +1,6 @@
-/// @file	SI/datatypes.h
-/// @brief	Defines 32 type-safe SI datatypes such as SI::length.
-/// @details	Contains: 1. SI Base Datatypes, 2. Derived SI datatypes, 3. References
+/// @file      SI/datatypes.h
+/// @brief     Defines 32 type-safe SI datatypes, e.g. SI::length.
+/// @details   It contains: 1. SI Base Datatypes, 2. Derived SI datatypes, 3. References
 
 #pragma once
 #include <SI/internal.h>
