@@ -1,5 +1,5 @@
 /// @file     SI/formulas.h
-/// @brief    Contains 65 formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @brief    Contains 66 formulas based on SI datatypes, e.g. SI::formula::wavelength().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicles, Aircraft, Gravitation, Various, and References.
 
 #pragma once
@@ -317,6 +317,12 @@ namespace SI { namespace formula {
 	inline length wavelength(velocity v, frequency f)
 	{
 		return v / f;
+	}
+
+	/// @brief Calculates V(t) from peak voltage (V0), frequency (f), and time (t).
+	inline electric_potential sine_wave(electric_potential V0, frequency f, SI::time t)
+	{
+		return V0 * sin(constant::tau * f * t);
 	}
 
 	/// @brief Calculates the speed of sound in air based on temperature (T).
