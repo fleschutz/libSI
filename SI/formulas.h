@@ -1,5 +1,5 @@
 /// @file     SI/formulas.h
-/// @brief    Contains 66 formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @brief    Provides 67 formulas based on SI datatypes, e.g. SI::formula::wavelength().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicles, Aircraft, Gravitation, Various, and References.
 
 #pragma once
@@ -309,6 +309,12 @@ namespace SI { namespace formula {
 		auto IGF = 9.780327_m_per_s² * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat)); // International Gravity Formula
 		auto FAC = -3.086e-6_m_per_s² * meters(h); // Free Air Correction
 		return IGF + FAC;
+	}
+
+	/// @brief Calculates the Schwarzschild radius and event horizon of a black hole from it's mass (M).
+	inline length Schwarzschild_radius(mass M)
+	{
+		return (2.0 * constant::G * M) / (constant::c * constant::c);
 	}
 
 	// 7. Various Formulas
