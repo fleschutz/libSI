@@ -27,9 +27,10 @@ A units library to apply math with physical units correct, convenient and with h
 ----------
 ```cpp
 #include <SI/all.h>
-using namespace SI;
 
 int main() {	
+    using namespace SI;
+
     mass m = 1_oz;
     velocity c = constant::speed_of_light;
     energy E = m * c * c;

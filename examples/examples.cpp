@@ -1,8 +1,8 @@
 #include <SI/all.h> 
 #include "datasets/all.h"
-using namespace SI;
 
 int main() {
+    using namespace SI;
 
     mass m = 1_oz;
     velocity c = constant::speed_of_light;
