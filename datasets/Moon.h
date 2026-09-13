@@ -1,11 +1,12 @@
 /// @file    datasets/Moon.h
-/// @brief   Contains physical data of the Moon, e.g. Moon.mass.
+/// @brief   Contains data of the Moon, e.g. dataset::Moon.mass
+/// @details Categories are: Orbital characteristics, Physical characteristics, Atmosphere, and References.
 
 #pragma once
 #include <SI/literals.h>
-using namespace SI;
 
 namespace dataset {
+    using namespace SI;
 
     const struct {
 

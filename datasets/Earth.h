@@ -1,12 +1,12 @@
 /// @file    datasets/Earth.h
-/// @brief   Contains data of the Earth, e.g. SI::dataset::Earth.mass.
+/// @brief   Contains data of the Earth, e.g. dataset::Earth.mass
 /// @details Categories are: Orbital characteristics, Physical characteristics, Atmosphere, Various, and References.
 
 #pragma once
 #include <SI/literals.h>
-using namespace SI;
 
 namespace dataset {
+    using namespace SI;
 
     const struct {
 
