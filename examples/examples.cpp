@@ -305,8 +305,7 @@ int main() {
 
 
     print("42. What are the frequencies and wavelengths of all musical notes? ");
-    for (auto& note : dataset::musical_notes)
-    {
+    for (auto& note : dataset::musical_notes) {
         auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
         print(note.name, note.octave, "=", note.frequency, ",", wavelength, " ");
     }
@@ -322,8 +321,7 @@ int main() {
 
     print("44. What's the sum of the masses of all moons in the solar system? ");
     auto total_mass = 0_kg;
-    for (auto& moon : dataset::moons)
-    {
+    for (auto& moon : dataset::moons) {
         auto volume = formula::volume_of_sphere(moon.mean_radius);
         total_mass += volume * moon.mean_density;
     }
@@ -342,6 +340,17 @@ int main() {
     auto volume_per_bottle = 750_ml;
     auto number_of_bottles = total_volume / volume_per_bottle;
     println(number_of_bottles);
+
+
+    print("47. What's the AC voltage within a tenth second: ");
+    auto peak_voltage = 220_V;
+    auto sample_rate = 50_Hz;
+    for (auto t = 0_s; t < 0.1_s; t += 0.005_s) {
+	    auto V = formula::sine_wave(peak_voltage, sample_rate, t);
+	    print(V, ", ");
+    }
+    println("");
+
 
     return 0;
 }
