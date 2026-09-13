@@ -1,4 +1,4 @@
-/// @file    dataset/Moon.h
+/// @file    datasets/Moon.h
 /// @brief   Contains physical data of the Moon, e.g. Moon.mass.
 
 #pragma once
