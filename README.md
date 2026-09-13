@@ -5,7 +5,7 @@ libSI - C++ Library of Type-safe Units
 A units library to apply math with physical units correct, convenient and with high precision. 
 
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
-- **High precision:** 64-bit floating point variables containing SI base units and CODATA 2022 constants.
+- **High precision:** 64-bit floating point datatypes containing SI base units, and CODATA 2022 constants.
 - **Supports** SI units, Imperial units, astronomical units, various units, and convenient literals (e.g. 24_h).
 - **No runtime overhead:** just compiles to simple doubles for maximum performance.
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
