@@ -1,5 +1,5 @@
-libSI - C++ Library of Type-safe SI Units
-=========================================
+libSI - C++ Library of Type-safe Units
+======================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
 A units library to apply math with physical units correct, convenient and with high precision. 
