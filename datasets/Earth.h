@@ -16,7 +16,7 @@ namespace dataset {
         length semi_major_axis =         149'598'023_km;
         dimensionless eccentricity =     0.016'7086;
         SI::time sidereal_orbital_period = 365.256'363'004_day;
-	velocity average_orbital_speed = 29.7827_km_per_s;
+        velocity average_orbital_speed = 29.7827_km_per_s;
         angle mean_anomaly =             358.617_deg;
 
         // Physical characteristics
@@ -26,20 +26,20 @@ namespace dataset {
         dimensionless flattening = 1.0/298.257'222'101;
         length equatorial_circumference = 40'075.017_km;
         length meridional_circumference = 40'007.863_km;
-	area surface_area =              510'072'000_km²;
-	area land_area =                 148'940'000_km²;
-	area water_area =                361'132'000_km²;
+        area surface_area =              510'072'000_km²;
+        area land_area =                 148'940'000_km²;
+        area water_area =                361'132'000_km²;
         SI::volume volume =               1.08321e12_km³;
         SI::mass mass =                   5.97217e24_kg; // ±0.00028e24
         density mean_density =                 5.513_g_per_cm³;
         acceleration surface_gravity =       9.80665_m_per_s²; // exactly 1 g0
         dimensionless moment_of_inertia_factor = 0.3307;
         velocity escape_velocity =            11.186_km_per_s;
-	SI::time synodic_rotation_period =        24_h;
+        SI::time synodic_rotation_period =        24_h;
         velocity equatorial_rotation_velocity = 1674.4_km_per_h;
         angle axial_tilt =               23.439'2811_deg;
-	dimensionless geometric_albedo = 0.434;
-	dimensionless bond_albedo =       0.294;
+        dimensionless geometric_albedo = 0.434;
+        dimensionless bond_albedo =       0.294;
         temperature blackbody_temperature = 255_K;
         temperature min_surface_temperature = -89.2_degC;
         temperature mean_surface_temperature = 14.76_degC;
@@ -59,12 +59,12 @@ namespace dataset {
         dimensionless hydrogen = 0.00006_percent;
 
         // Various
-	dimensionless population =           8.2e9;
+        dimensionless population =           8.2e9;
 
         // References
         // ----------
         // 1. https://en.wikipedia.org/wiki/Earth
-	// 2. https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Solar_System
+        // 2. https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Solar_System
 
     } Earth;
 
