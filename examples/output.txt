@@ -44,3 +44,4 @@
 44. What's the sum of the masses of all moons in the solar system? 639.00Pt or 1408747761318636027904.00lb
 45. How long takes a trip to Alpha Centauri at 10% the speed of light? 43.70 years
 46. How many wine bottles are needed for 1 hectoliter? 133.33
+47. What's the AC voltage within a tenth second: 0.00V, 220.00V, 0.01pV, -220.00V, -0.03pV, 220.00V, -0.08pV, -220.00V, -0.05pV, 220.00V, 0.42pV, -220.00V, -0.79pV, 220.00V, 0.69pV, -220.00V, -0.10pV, 220.00V, -0.49pV, -220.00V, 

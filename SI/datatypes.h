@@ -1,6 +1,6 @@
 /// @file      SI/datatypes.h
-/// @brief     Provides 32 type-safe SI datatypes, e.g. SI::length
-/// @details   Categories are: SI Base Datatypes, Derived SI datatypes, and References.
+/// @brief     Provides 32 type-safe datatypes for SI units, e.g. SI::length
+/// @details   Categories are: SI Base Datatypes, Derived SI Datatypes, and References.
 
 #pragma once
 #include <SI/internal.h>
@@ -16,8 +16,9 @@ namespace SI {
 
 	// 1. SI Base Datatypes
 	// --------------------
-	//                               l  m  t  T  c  s  i      (exponents for length,mass,time,temperature,..)
-	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
+	//                               Exponents:
+	//                               l  m  t  T  c  s  i 
+	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // base unit in meters
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
 	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in kelvins
@@ -27,11 +28,8 @@ namespace SI {
 
 	// 2. Derived SI Datatypes
 	// -----------------------
-	DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
 	DATATYPE(area,                   2, 0, 0, 0, 0, 0, 0); // in square meters
-	DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
 	DATATYPE(volume,                 3, 0, 0, 0, 0, 0, 0); // in cubic meter
-	DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
 	DATATYPE(velocity,               1, 0,-1, 0, 0, 0, 0); // in meter per second
 	DATATYPE(acceleration,           1, 0,-2, 0, 0, 0, 0); // in meter per square meter
 	DATATYPE(jerk,                   1, 0,-3, 0, 0, 0, 0); // in meter per cubic meter
@@ -47,11 +45,14 @@ namespace SI {
 	DATATYPE(electric_charge,        0, 0, 1, 0, 1, 0, 0); // in amperes per second
 	DATATYPE(mass_per_area,         -2, 1, 0, 0, 0, 0, 0); // in kilograms per square meter
 	DATATYPE(mass_per_power,        -2, 0, 3, 0, 0, 0, 0); // in kilograms per watt
-	DATATYPE(per_amount_of_substance,0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 	DATATYPE(angular_speed,          0, 0,-1, 0, 1, 0, 0); // in degrees per second
 	DATATYPE(specific_energy,        2, 0,-2, 0, 0, 0, 0); // in joules per kilogram
 	DATATYPE(energy_per_mol,         2, 1,-2, 0, 0, 1, 0); // in joules per mol
 	DATATYPE(volume_per_time_squared,3, 0,-2, 0, 0, 0, 0); // in cubic meter per square second
+	DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
+	DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
+	DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
+	DATATYPE(per_amount_of_substance,0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 
 	// 3. References
 	// -------------
