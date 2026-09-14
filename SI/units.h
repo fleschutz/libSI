@@ -69,13 +69,13 @@ namespace SI {
 	// acceleration in...
 	UNIT(meters_per_second2) = unit<acceleration>();
 	// force in...
-	UNIT(newtons)      = unit<force>();
-	UNIT(newtonmeters) = newtons * meters;
+	UNIT(newtons)       = unit<force>();
+	UNIT(newtonmeters)  = newtons * meters;
 	UNIT(newtonseconds) = newtons * seconds;
 	UNIT(newtons_per_ampere2) = newtons / (amperes * amperes);
 	// energy in...
-	UNIT(joules)       = unit<energy>();
-	UNIT(jouleseconds) = joules * seconds;
+	UNIT(joules)        = unit<energy>();
+	UNIT(jouleseconds)  = joules * seconds;
 	UNIT(joules_per_second) =  joules / seconds;
 	UNIT(joules_per_kelvin) = joules / kelvins;
 	UNIT(joules_per_second_per_kilogram) = joules / seconds / kilograms;
@@ -83,65 +83,65 @@ namespace SI {
 	UNIT(joules_per_mol) = unit<energy_per_mol>();
 	UNIT(joules_per_kelvin_per_mol) = joules / kelvins / moles;
 	// pressure in...
-	UNIT(pascals)      = unit<pressure>();
+	UNIT(pascals)       = unit<pressure>();
 
-	UNIT(grays)        = joules / kilograms;
-	UNIT(sieverts)     = joules / kilograms;
+	UNIT(grays)         = joules / kilograms;
+	UNIT(sieverts)      = joules / kilograms;
 
-	UNIT(watts)        = unit<power>();
-	UNIT(wattmeters2)  = watts * meters2;
+	UNIT(watts)         = unit<power>();
+	UNIT(wattmeters2)   = watts * meters2;
 	UNIT(watts_per_meter2) = watts / meters2;
 
 	UNIT(amperes_per_meter) = amperes / meters;
 	UNIT(amperes_per_meter2) = amperes / (meters * meters);
-	UNIT(ampere_hours) = amperes * hours;
+	UNIT(ampere_hours)  = amperes * hours;
 
-	UNIT(coulombs)     = unit<electric_charge>();
+	UNIT(coulombs)      = unit<electric_charge>();
 	UNIT(coulombs_per_mol) = coulombs / moles;
 
-	UNIT(volts)        = unit<electric_potential>();
-	UNIT(farads)       = coulombs / volts;
+	UNIT(volts)         = unit<electric_potential>();
+	UNIT(farads)        = coulombs / volts;
 	UNIT(hertz_per_volt) = hertz / volts;
 	UNIT(farads_per_meter) = farads / meters;
-	UNIT(ohms)         = volts / amperes;
-	UNIT(ohm_meters)   = ohms * meters;
-	UNIT(siemens)      = amperes / volts;
+	UNIT(ohms)          = volts / amperes;
+	UNIT(ohm_meters)    = ohms * meters;
+	UNIT(siemens)       = amperes / volts;
 	UNIT(siemens_per_meter) = siemens / meters;
-	UNIT(henrys)       = volts * seconds / amperes;
-	UNIT(webers)       = volts * seconds;
-	UNIT(teslas)       = kilograms / (amperes * seconds * seconds);
+	UNIT(henrys)        = volts * seconds / amperes;
+	UNIT(webers)        = volts * seconds;
+	UNIT(teslas)        = kilograms / (amperes * seconds * seconds);
 	UNIT(joules_per_tesla) = joules / teslas;
 
-	UNIT(steradians)   = unit<detail::dimensionless>();
+	UNIT(steradians)    = unit<detail::dimensionless>();
 
-	UNIT(lumens)       = candelas * steradians;
-	UNIT(lumenseconds) = lumens * seconds;
+	UNIT(lumens)        = candelas * steradians;
+	UNIT(lumenseconds)  = lumens * seconds;
 	UNIT(lumens_per_watt) = lumens / watts;
-	UNIT(lux)          = lumens / meters2;
+	UNIT(lux)           = lumens / meters2;
 
 	UNIT(kilograms_per_mol) = kilograms / moles;
 	UNIT(mols_per_meter3) = moles / meters3;
 	UNIT(mols_per_kilogram) = moles / kilograms;
 	UNIT(mols_per_second) = moles / seconds;
-	UNIT(per_mol)      = unit<per_amount_of_substance>();
+	UNIT(per_mol)       = unit<per_amount_of_substance>();
 
 	UNIT(kilograms_per_watt) = kilograms / watts;
 
 	// 4. Imperial Units
 	// -----------------
-	UNIT(pounds)       = unit<mass, 45359237, 100000000>();
-	UNIT(feet)         = unit<length, 3048, 10000>();
+	UNIT(pounds)         = unit<mass, 45359237, 100000000>();
+	UNIT(feet)           = unit<length, 3048, 10000>();
 	UNIT(nautical_miles) = unit<length, 1852, 100>();
-	UNIT(inches)       = unit<length, 254, 10000>();
-	UNIT(statute_miles)= unit<length, 1609344, 1000>();
-	UNIT(fahrenheit)   = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
+	UNIT(inches)         = unit<length, 254, 10000>();
+	UNIT(statute_miles)  = unit<length, 1609344, 1000>();
+	UNIT(fahrenheit)     = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
 	UNIT(miles_per_hour) = statute_miles / hours;
-	UNIT(knots)        = nautical_miles / hours;
+	UNIT(knots)          = nautical_miles / hours;
 
 	// 5. Various Units
 	// ----------------
-	UNIT(celsius)      = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
-	UNIT(bytes)        = unit<detail::dimensionless>();
+	UNIT(celsius)          = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
+	UNIT(bytes)            = unit<detail::dimensionless>();
 	UNIT(bytes_per_second) = bytes / seconds;
 
 	// ANGLE (DIMENSIONLESS)
