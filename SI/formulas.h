@@ -311,10 +311,10 @@ namespace SI { namespace formula {
 		return IGF + FAC;
 	}
 
-	/// @brief Calculates the Schwarzschild radius and event horizon of a black hole from it's mass (M).
+	/// @brief Calculates the Schwarzschild radius (event horizon) of a black hole from it's mass (M).
 	inline length Schwarzschild_radius(mass M)
 	{
-		return 2.0 * constant::G * M / square(constant::c);
+		return (2.0 * constant::G * M) / square(constant::c);
 	}
 
 	// 7. Various Formulas

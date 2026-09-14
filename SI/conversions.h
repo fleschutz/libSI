@@ -469,19 +469,24 @@ namespace SI
 		return text;
 	}
 
-	/// @brief Returns a length equivalent, e.g. in Imperial units.
+	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
 	inline std::string to_equivalent(length d)
 	{
+		if (d <= -1_ly || d >= 1_ly)
+			return _join(d / 1_ly, " light-years");
+		if (d <= -1_ls || d >= 1_ls)
+			return _join(d / 1_ls, " light-seconds");
 		if (d <= -1_mi || d >= 1_mi)
-			return _join(d / 1_mi, "mi");
+			return _join(d / 1_mi, " Miles");
 		if (d <= -1_yd || d >= 1_yd)
 			return _join(d / 1_yd, "yd");
 		if (d <= -1_ft || d >= 1_ft)
 			return _join(d / 1_ft, "ft");
+
 		return _join(d / 1_in, "in");
 	}
 
-	/// @brief Returns a mass equivalent, e.g. in Imperial units.
+	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
 	inline std::string to_equivalent(mass m)
 	{
 		if (m <= -1_Msun || m >= 1_Msun)
@@ -496,7 +501,7 @@ namespace SI
 		return _join(m / 1_lb, "lb");
 	}
 
-	/// @brief Returns a velocity equivalent, e.g. in Imperial units.
+	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
 	inline std::string to_equivalent(velocity V)
 	{
 		if (V <= -1_Mach || V >= 1_Mach)
@@ -504,19 +509,19 @@ namespace SI
 		return _join(V / 1_mph, "mph");
 	}
 
-	/// @brief Returns a temperature equivalent, e.g. in Fahrenheit.
+	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
 	inline std::string to_equivalent(temperature T)
 	{
 		return _join(fahrenheit(T), "°F");
 	}
 
-	/// @brief Returns a power intensity equivalent, e.g. in dB.
+	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
 	inline std::string to_equivalent(power_intensity I)
 	{
 		return _join(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB");
 	}
 
-	/// @brief Returns an energy equivalent, e.g. in kg TNT.
+	/// @brief Returns an energy equivalent as string, e.g. kg TNT.
 	inline std::string to_equivalent(energy E)
 	{
 		const auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
