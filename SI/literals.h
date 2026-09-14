@@ -320,17 +320,16 @@ namespace SI {
 
 	// 4. Astronomical Units
 	// ---------------------
-	LITERAL(_Gpc,     30'856'775'814'913'673e9, meters); // 1_Gpc (gigaparsec, as of IAU 2012)
-	LITERAL(_Mpc,     30'856'775'814'913'673e6, meters); // 1_Mpc (megaparsec, as of IAU 2012)
-	LITERAL(_kpc,     30'856'775'814'913'673e3, meters); // 1_kpc (kiloparsec, as of IAU 2012)
-	LITERAL(_pc,      30'856'775'814'913'673e0, meters); // 1_pc  (parsec, as of IAU 2012)
-	LITERAL(_ly,         9'460'730'472'580'800, meters); // 1_ly  (light-year)
-	LITERAL(_au,               149'597'870'700, meters); // 1_au  (astronomical unit)
-	LITERAL(_AU,               149'597'870'700, meters); // 1_AU  (astronomical unit)
-	LITERAL(_Msun,                  1.98892e30, kilograms);// 1_Msun (solar mass, about the mass of the Sun)
-	LITERAL(_Mjup,                    1.898e27, kilograms);// 1_Mjup (Jupiter mass)
+	LITERAL(_Gpc,     30'856'775'814'913'673e9, meters);   // 1_Gpc    (gigaparsec, IAU 2012)
+	LITERAL(_Mpc,     30'856'775'814'913'673e6, meters);   // 1_Mpc    (megaparsec, IAU 2012)
+	LITERAL(_kpc,     30'856'775'814'913'673e3, meters);   // 1_kpc    (kiloparsec, IAU 2012)
+	LITERAL(_pc,      30'856'775'814'913'673e0, meters);   // 1_pc     (parsec, IAU 2012)
+	LITERAL(_ly,         9'460'730'472'580'800, meters);   // 1_ly     (light-year)
+	LITERAL(_au,               149'597'870'700, meters);   // 1_au     (astronomical unit, Earth-Sun distance)
+	LITERAL(_Msun,                  1.98892e30, kilograms);// 1_Msun   (solar mass, ~1 Sun mass)
+	LITERAL(_Mjup,                    1.898e27, kilograms);// 1_Mjup   (Jupiter mass)
 	LITERAL(_Mearth,                 5.9742e24, kilograms);// 1_Mearth (Earth mass)
-	LITERAL(_Mmoon,              7.34767309e22, kilograms);// 1_Mmoon (Moon mass)
+	LITERAL(_Mmoon,              7.34767309e22, kilograms);// 1_Mmoon  (Moon mass)
 
 	// 5. Digital Units
 	// ----------------

@@ -14,8 +14,8 @@ namespace SI { namespace constant {
 	// --------------------
 	CONST(caesium_frequency,     9'192'631'770, hertz); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
 	CONST(delta_v_Cs,            9'192'631'770, hertz); // (the symbol)
-	CONST(speed_of_light,          299'792'458, meters_per_second); // the speed of light in vacuum
-	CONST(c,                       299'792'458, meters_per_second); // (the symbol)
+	CONST(speed_of_light,        299'792'458.0, meters_per_second); // the speed of light in vacuum
+	CONST(c,                     299'792'458.0, meters_per_second); // (the symbol)
 	CONST(Planck,             6.626'070'15e-34, jouleseconds); // the Planck constant
 	CONST(h,                  6.626'070'15e-34, jouleseconds); // (the symbol)
 	CONST(elementary_charge, 1.602'176'634e-19, coulombs); // the elementary charge

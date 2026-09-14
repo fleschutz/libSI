@@ -34,7 +34,7 @@
 34. What's the sum of 1 byte + 1kB + 1GB...(and so on)? 1001001001001000950466347008000.00
 35. What's the speed sum here? 5010.08km/h
 36. What's a radar's geometrical horizon from 30ft height? 10.79km or 6.71mi
-37. What's the distance the Earth has travelled so far? 137.08Mpc (megaparsec)
+37. What's the distance the Earth has travelled so far? 137.08Mpc
 38. What are the details of a 10m x 1m oak timber log? 32.99m², 7.85m³, 5.58t, 84.31GW
 39. What's the min cable wire size for 100m copper, 230V, 30A max? 10.34mm²
 40. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? 54.07mV
@@ -45,3 +45,4 @@
 45. How long takes a trip to Alpha Centauri at 10% the speed of light? 43.70 years
 46. How many wine bottles are needed for 1 hectoliter? 133.33
 47. What's the AC voltage within a tenth second: 0.00V, 220.00V, 0.01pV, -220.00V, -0.03pV, 220.00V, -0.08pV, -220.00V, -0.05pV, 220.00V, 0.42pV, -220.00V, -0.79pV, 220.00V, 0.69pV, -220.00V, -0.10pV, 220.00V, -0.49pV, -220.00V, 
+48. How large is the event horizon of our galaxy's black hole? The Schwarzschild radius is 12683881.74km or 7881398.72mi

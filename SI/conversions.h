@@ -1,6 +1,6 @@
 /// @file	SI/conversions.h
 /// @brief	Defines functions to convert from and to strings and equivalents, e.g. to_string(12_m).
-/// @details	Contains: from_string(), to_string(), and to_equivalent()
+/// @details	Provides from_string(), to_string(), and to_equivalent().
 
 #pragma once
 #include <string>
@@ -115,17 +115,17 @@ namespace SI
 	inline std::string to_string(length d)
 	{
 		if (d <= -1_Gpc || d >= 1_Gpc)
-			return _join(d / 1_Gpc, "Gpc (gigaparsec)");
+			return _join(d / 1_Gpc, "Gpc"); // gigaparsec
 		if (d <= -1_Mpc || d >= 1_Mpc)
-			return _join(d / 1_Mpc, "Mpc (megaparsec)");
+			return _join(d / 1_Mpc, "Mpc"); // megaparsec
 		if (d <= -1_kpc || d >= 1_kpc)
-			return _join(d / 1_kpc, "kpc (kiloparsec)");
+			return _join(d / 1_kpc, "kpc"); // kiloparsec
 		if (d <= -1_pc || d >= 1_pc)
-			return _join(d / 1_pc, "pc"); // parsec
+			return _join(d / 1_pc, "pc");   // parsec
 		if (d <= -1_ly || d >= 1_ly)
-			return _join(d / 1_ly, "ly"); // light-years
-		if (d <= -1_au || d >= 1_au)
-			return _join(d / 1_au, "au"); // astronomical unit
+			return _join(d / 1_ly, "ly");   // light-years
+		if (d <= -0.1_au || d >= 0.1_au)
+			return _join(d / 1_au, "au");   // astronomical unit
 		if (d <= -1_km || d >= 1_km)
 			return _join(d / 1_km, "km");
 		if (d <= -1_m || d >= 1_m || d == 0.0_m)

@@ -352,5 +352,11 @@ int main() {
     println("");
 
 
+    print("48. How large is the event horizon of our galaxy's black hole? ");
+    auto Sagittarius_A_mass = 8.54e36_kg;
+    auto event_horizon = formula::Schwarzschild_radius(Sagittarius_A_mass);
+    println("The Schwarzschild radius is ", event_horizon, " or ", to_equivalent(event_horizon));
+
+
     return 0;
 }
