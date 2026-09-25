@@ -343,19 +343,18 @@ int main() {
 
 
     print("47. What's the AC voltage within a tenth second: ");
-    auto peak_voltage = 220_V;
-    auto sample_rate = 50_Hz;
-    for (auto t = 0_s; t < 0.1_s; t += 0.005_s) {
-	    auto V = formula::sine_wave(peak_voltage, sample_rate, t);
-	    print(V, ", ");
+    for (auto time = 0.0_s; time < 0.1_s; time += 0.005_s) {
+            auto peak_voltage = 220_V;
+            auto sample_rate  = 50_Hz;
+	    print(formula::sine_wave(peak_voltage, sample_rate, time), ", ");
     }
     println("");
 
 
     print("48. How large is the event horizon of our galaxy's black hole? ");
     auto Sagittarius_A_mass = 8.54e36_kg;
-    auto ss_radius = formula::Schwarzschild_radius(Sagittarius_A_mass);
-    println("Sagittarius A* Schwarzschild radius is ", ss_radius, " or ", to_equivalent(ss_radius));
+    auto radius = formula::Schwarzschild_radius(Sagittarius_A_mass);
+    println("Sagittarius A* Schwarzschild radius is ", radius, " or ", to_equivalent(radius));
 
 
     return 0;
