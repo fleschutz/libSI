@@ -344,9 +344,9 @@ int main() {
 
     print("47. What's the AC voltage within a tenth second: ");
     for (auto time = 0.0_s; time < 0.1_s; time += 0.005_s) {
-            auto peak_voltage = 220_V;
-            auto sample_rate  = 50_Hz;
-	    print(formula::sine_wave(peak_voltage, sample_rate, time), ", ");
+        auto peak_voltage = 220_V;
+        auto sample_rate  = 50_Hz;
+        print(formula::sine_wave(peak_voltage, sample_rate, time), ", ");
     }
     println("");
 
