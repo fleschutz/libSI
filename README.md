@@ -2,7 +2,7 @@ libSI - The Library of Type-safe Units
 ======================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
-A C++ units library to apply math with physical units correct, precise, and convenient. Features are: 
+This C++ units library helps to apply math with physical units correct, precise, and convenient. Features are: 
 
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
 - **Top precision** due to 64-bit floating points containing SI base units and using CODATA 2022 constants.
