@@ -308,9 +308,13 @@ namespace SI {
 
 	// static_assert(cbrt(27_m³) == 3_m); (TODO)
 
-	static_assert(clamp(-3_m, 4_m,5_m) == 4_m);
+	static_assert(clamp(-2_m, -1_m,1_m) == -1_m);
+	static_assert(clamp(-1_m, 0_m,1_m) == 0_m);
+	static_assert(clamp(-1_m, 1_m,2_m) == 1_m);
+	static_assert(clamp(-0.5_m, 1_m,2_m) == 1_m);
+	static_assert(clamp(0_m, 0_m,1_m) == 0_m);
+	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 	static_assert(clamp(3_m, 4_m,5_m) == 4_m);
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
-	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 
 } // namespace SI

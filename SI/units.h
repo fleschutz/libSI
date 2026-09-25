@@ -190,11 +190,11 @@ namespace SI {
 	template <typename T>
 	[[nodiscard]] SI_INLINE_CONSTEXPR auto cube(T x) { return x * x * x; }
 
-	/// @brief Clamp any number <x> between min and max value.
+	/// @brief Clamp any number <x> between <min> and <max> value.
 	template <typename T>
 	[[nodiscard]] SI_INLINE_CONSTEXPR auto clamp(T x, T min, T max) {
-		if (x < min) x = min;
-		if (x > max) x = max;
+		if (x < min) return min;
+		if (x > max) return max;
 		return x;
 	}
 
