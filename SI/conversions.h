@@ -141,6 +141,12 @@ namespace SI
 		return _join(d / 1_pm, "pm");
 	}
 
+	inline std::ostream& operator<<(std::ostream& os, const length d)
+	{
+		os << to_string(d);
+		return os;
+	}
+
 	inline std::string to_string(const time t)
 	{
 		if (abs(t) > 365.25_days)
@@ -346,13 +352,11 @@ namespace SI
 		return _join(E / 1_mJ, "mJ");
 	}
 
-#if 1
 	inline std::ostream& operator<<(std::ostream& os, const energy E)
 	{
 		os << to_string(E);
 		return os;
 	}
-#endif
 
 	inline std::string to_string(const power P)
 	{

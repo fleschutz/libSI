@@ -15,7 +15,7 @@ This C++ physical units library lets you apply math correct, precise, and conven
 ------------------
 - **Datatypes** like *SI::length* in [SI/datatypes.h](SI/datatypes.h)
 - **Units** such as *SI::meters* in [SI/units.h](SI/units.h)
-- **Literals** such as *100_m* in [SI/literals.h](SI/literals.h)
+- **Literals** like *100_m* in [SI/literals.h](SI/literals.h)
 - **Constants** such as *SI::constant::speed_of_light_in_vacuum* in [SI/constants.h](SI/constants.h)
 - **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
 - **Conversions** such as *SI::to_string()*  and *SI::to_equivalent()* in [SI/conversions.h](SI/conversions.h)
@@ -40,7 +40,7 @@ Executing: `cd examples && cmake . && make && ./examples` writes to the console:
 ```
 The potential energy of a single ounce is: 2.55PJ
 ```
-**See 47 more examples** in the 📂[examples](examples/) folder, writing this [console output](examples/console_output.txt).
+**See 47 more examples** in 📂[examples](examples/), writing this: [console output](examples/console_output.txt)
 
 
 💡 Q & A
