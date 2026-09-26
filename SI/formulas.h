@@ -1,5 +1,5 @@
 /// @file     SI/formulas.h
-/// @brief    Provides 67 basic formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @brief    Provides 68 basic formulas based on SI datatypes, e.g. SI::formula::wavelength().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicles, Aircraft, Gravitation, Various, and References.
 
 #pragma once
@@ -7,8 +7,8 @@
 
 namespace SI { namespace formula {
 
-	// 1. Formulas for 2D
-	// ------------------
+	// 1. 2D Formulas
+	// --------------
 	/// @brief Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
 	inline length hypotenuse_of_triangle(length a, length b)
 	{
@@ -119,8 +119,8 @@ namespace SI { namespace formula {
 		return sqrt((dx * dx) + (dy * dy));
 	}
 
-	// 2. Formulas for 3D
-	// ------------------
+	// 2. 3D Formulas
+	// --------------
 	/// @brief Calculates the area of a cube from length (a).
 	inline area area_of_cube(length a)
 	{
@@ -175,8 +175,14 @@ namespace SI { namespace formula {
 		return A * h;
 	}
 
-	// 3. Formulas for Moving Objects
-	// ------------------------------
+	// 3. Moving Objects
+	// -----------------
+	/// @brief Calculates the average speed from distance (d) and time (t).
+	inline velocity average_speed(length d, SI::time t)
+	{
+		return d / t;
+	}
+
 	/// @brief Calculates the kinetic energy of a non-rotating object of mass (m) traveling at velocity (v).
 	inline energy kinetic_energy(mass m, velocity v)
 	{
