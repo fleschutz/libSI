@@ -7,7 +7,7 @@ This C++ physical units library lets you apply math correct, precise, and conven
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
 - **Top precision** due to 64-bit floating points containing SI base units and using CODATA 2022 constants.
 - **Maximum performance** without runtime overhead -  just compiles to simple doubles.
-- **Support** for SI units, Imperial units, astronomical units, various units, and convenient literals (e.g. 24_h).
+- **Supports** SI units, Imperial units, astronomical units, various units, and convenient literals (e.g. 24_h).
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](SI/CMake_support.md).
 
