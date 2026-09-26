@@ -334,28 +334,34 @@ namespace SI {
 
 	// 5. Digital Units
 	// ----------------
+	// bytes absolute...
 	LITERAL(_byte,                           1, bytes);   // 1_byte
 	LITERAL(_kB,                           1e3, bytes);   // 1_kB (kilobyte)
 	LITERAL(_kiB,                         1024, bytes);   // 1_kiB (kibibyte)
 	LITERAL(_MB,                           1e6, bytes);   // 1_MB (megabyte)
-	LITERAL(_MiB,                  1024 * 1024, bytes);   // 1_MiB (mibibyte)
+	LITERAL(_MiB,                    1'048'576, bytes);   // 1_MiB (mibibyte)
 	LITERAL(_GB,                           1e9, bytes);   // 1_GB (gigabyte)
-	LITERAL(_GiB,           1024 * 1024 * 1024, bytes);   // 1_GiB (gibibyte)
+	LITERAL(_GiB,                1'073'741'824, bytes);   // 1_GiB (gibibyte)
 	LITERAL(_TB,                          1e12, bytes);   // 1_TB (terabyte)
-	LITERAL(_TiB,    1024 * 1024 * 1024 * 1024, bytes);   // 1_TiB (tebibyte)
+	LITERAL(_TiB,            1'099'511'627'776, bytes);   // 1_TiB (tebibyte)
 	LITERAL(_PB,                          1e15, bytes);   // 1_PB (petabyte)
 	LITERAL(_EB,                          1e18, bytes);   // 1_EB (exabyte)
 	LITERAL(_ZB,                          1e21, bytes);   // 1_ZB (zettabyte)
 	LITERAL(_YB,                          1e24, bytes);   // 1_ZY (yottabyte)
 	LITERAL(_RB,                          1e27, bytes);   // 1_RY (ronnabyte)
 	LITERAL(_QB,                          1e30, bytes);   // 1_QY (quettabyte)
+	// bytes per second...
+	LITERAL(_bytes_per_s,                    1, bytes_per_second); // 1_bytes_per_s
 	LITERAL(_KBps,                         1e3, bytes_per_second); // 1_KBps (kilobyte/sec)
 	LITERAL(_KiBps,                       1024, bytes_per_second); // 1_KiBps (kibibyte/sec)
 	LITERAL(_MBps,                         1e6, bytes_per_second); // 1_MBps (megabyte/sec)
-	LITERAL(_MiBps,                1024 * 1024, bytes_per_second); // 1_MiBps (mibibyte/sec)
+	LITERAL(_MiBps,                  1'048'576, bytes_per_second); // 1_MiBps (mibibyte/sec)
 	LITERAL(_GBps,                         1e9, bytes_per_second); // 1_GBps (gigabyte/sec)
-	LITERAL(_GiBps,         1024 * 1024 * 1024, bytes_per_second); // 1_GiBps (gibibyte/sec)
+	LITERAL(_GiBps,              1'073'741'824, bytes_per_second); // 1_GiBps (gibibyte/sec)
 	LITERAL(_TBps,                        1e12, bytes_per_second); // 1_TBps (terabyte/sec)
+	LITERAL(_TiBps,          1'099'511'627'776, bytes_per_second); // 1_TiBps (tebibyte/sec)
+	LITERAL(_PBps,                        1e15, bytes_per_second); // 1_PBps (petabyte/sec)
+	// bits per second...
 	LITERAL(_Kbps,                     1e3 / 8, bytes_per_second); // 1_Kbps (kilobit/sec)
 	LITERAL(_Mbps,                     1e6 / 8, bytes_per_second); // 1_Mbps (megabit/sec)
 	LITERAL(_Gbps,                     1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)

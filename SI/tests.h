@@ -22,8 +22,8 @@ namespace SI {
 	static_assert(1_Mach * 10_percent == 33_m_per_s);
 	static_assert((0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K);
 
-	// 2. Check Datatypes
-	// ------------------
+	// 2. Datatypes
+	// ------------
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
 	static_assert(sizeof(int) <= sizeof(long));
@@ -45,8 +45,8 @@ namespace SI {
 	static_assert(sizeof(amount_of_substance) == sizeof(SIdouble));
 	static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
 
-	// 3. Check SI Base Units
-	// ----------------------
+	// 3. SI Base Units
+	// ----------------
 	// length in...
 	static_assert(1_Gm == 1000_Mm);
 	static_assert(1_Mm == 1000_km);
@@ -110,8 +110,8 @@ namespace SI {
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
 
-	// 4. Check SI Derived Units
-	// -------------------------
+	// 4. SI Derived Units
+	// -------------------
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
@@ -255,15 +255,16 @@ namespace SI {
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
 
-	// 6. Check Imperial Units
-	// -----------------------
+	// 6. Imperial Units
+	// -----------------
 	//static_assert(1_ft == 12_in);
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
 	static_assert(1_ft == 0.3048_m);
 
-	// 7. Check Digital Units
-	// ----------------------
+	// 7. Digital Units
+	// ----------------
+	// bytes absolute...
 	static_assert(1_kB == 1000_byte);
 	static_assert(1_MB == 1000_kB);
 	static_assert(1_GB == 1000_MB);
@@ -276,17 +277,28 @@ namespace SI {
 	static_assert(1_MiB == 1024_kiB);
 	static_assert(1_GiB == 1024_MiB);
 	static_assert(1_TiB == 1024_GiB);
+	// bytes per second...
+	static_assert(1_KBps == 1000_bytes_per_s);
+	static_assert(1_MBps == 1000_KBps);
+	static_assert(1_GBps == 1000_MBps);
+	static_assert(1_TBps == 1000_GBps);
+	static_assert(1_PBps == 1000_TBps);
 
-	// 8. Check Various Units
-	// ----------------------
+	static_assert(1_KiBps == 1024_bytes_per_s);
+	static_assert(1_MiBps == 1024_KiBps);
+	static_assert(1_GiBps == 1024_MiBps);
+	static_assert(1_TiBps == 1024_GiBps);
+
+	// 8. Various Units
+	// ----------------
 	// pressure in...
 	static_assert(1_bar  == 1000_mbar);
 	static_assert(1_kbar == 1000_bar);
 	static_assert(1_Mbar == 1000_kbar);
 	static_assert(1_Gbar == 1000_Mbar);
 
-	// 9. Check Functions & Templates
-	// ------------------------------
+	// 9. Functions & Templates
+	// ------------------------
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m)   == 1_m);
 	static_assert(abs(0_m)    == 0_m);
