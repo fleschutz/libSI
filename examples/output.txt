@@ -8,41 +8,42 @@
  8. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? 10.59l (per 100km)
  9. What's a car's braking distance from 100km/h on dry asphalt? 48.23m or 52.74yd
 10. What's a car's braking distance from 100km/h on wet asphalt? 64.30m or 70.32yd
-11. The wavelength of hydrogen (H2) in vacuum is: 21.11cm or 8.31in
-12. What's the frequency and wavelength of the high 'c' music note? 1.05kHz and 32.78cm (1.08ft)
-13. What's the population density on Earth (people per km² of land area)? 55.06/km²
-14. How much land area would be available for each person on Earth? 1.82hm²
-15. Which chemical elements melt above 2500K and are radioactive? Technetium at 2703.15K, Rutherfordium at 2673.15K, 
-16. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
-17. What's an aircraft's glide path on final at 10NM distance in 3000ft height? 2.83°
-18. What's the min speed required to escape from the planets? Mercury=15297.73km/h or 12.88 Mach, Venus=37310.87km/h or 31.41 Mach, Earth=40240.68km/h or 33.87 Mach, Mars=18084.40km/h or 15.22 Mach, Jupiter=214342.54km/h or 180.42 Mach, Saturn=127688.31km/h or 107.48 Mach, Uranus=76649.32km/h or 64.52 Mach, Neptune=84413.14km/h or 71.05 Mach, Pluto=4356.45km/h or 3.67 Mach, 
-19. What's the windchill temperature of 5°C air temperature at 55km/h wind? -1.60°C or 29.13°F
-20. What's the average speed to travel around the Earth in 80 days? 20.87km/h or 12.97mph
-21. What's the surface area and volume of a 30cm x 1cm pizza? 706.86cm² and 706.86ml
-22. Which exoplanets are life-friendly and quite near? 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen d' @ Proxima Cen in 1.30pc, 
-23. What's the attractive force between Sun and Earth? 35.42ZN
-24. What's the attractive force between Earth and Moon? 198.16EN
-25. What's the filament length of a 750g PLA roll with 2.85mm diameter? 94.81m or 103.69yd
-26. How long takes a flight non-stop around the Earth at Mach 1? 33.73h
-27. What's the surface area and volume of a soccer ball? 1559.72cm² and 5.79l
-28. What's the travel time of sun light to Earth? 8.32min
-29. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? 4.49MN
-30. What's the impact energy of a 50m asteroid at 50,000km/h? 15.78PJ or 254.54 Hiroshima bombs
-31. What's the sound intensity of a 1W loudspeaker in 1m distance? 79.58mW/m² or 109.01dB
-32. What's the max diving time in salt water in 10m depth using a 10l bottle? 37.01min
-33. What's the sum of 1m + 1nmi + 1ft + 1in? 1.85km
-34. What's the sum of 1 byte + 1kB + 1GB...(and so on)? 1001001001001000950466347008000.00
-35. What's the speed sum here? 5010.08km/h
-36. What's a radar's geometrical horizon from 30ft height? 10.79km or 6.71 Miles
-37. What's the distance the Earth has travelled so far? 137.08Mpc
-38. What are the details of a 10m x 1m oak timber log? 32.99m², 7.85m³, 5.58t, 84.31GW
-39. What's the min cable wire size for 100m copper, 230V, 30A max? 10.34mm²
-40. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? 54.07mV
-41. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? 154.13km, 616.52km, 14.53min
-42. What are the frequencies and wavelengths of all musical notes? C0=16.35Hz,20.98m C#0=17.32Hz,19.80m D0=18.35Hz,18.69m D#0=19.45Hz,17.64m E0=20.60Hz,16.65m F0=21.83Hz,15.71m F#0=23.12Hz,14.83m G0=24.50Hz,14.00m G#0=25.96Hz,13.21m A0=27.50Hz,12.47m A#0=29.14Hz,11.77m B0=30.87Hz,11.11m C1=32.70Hz,10.49m C#1=34.65Hz,9.90m D1=36.71Hz,9.34m D#1=38.89Hz,8.82m E1=41.20Hz,8.33m F1=43.65Hz,7.86m F#1=46.25Hz,7.42m G1=49.00Hz,7.00m G#1=51.91Hz,6.61m A1=55.00Hz,6.24m A#1=58.27Hz,5.89m B1=61.74Hz,5.56m C2=65.41Hz,5.24m C#2=69.30Hz,4.95m D2=73.42Hz,4.67m D#2=77.78Hz,4.41m E2=82.41Hz,4.16m F2=87.31Hz,3.93m F#2=92.50Hz,3.71m G2=98.00Hz,3.50m G#2=103.83Hz,3.30m A2=110.00Hz,3.12m A#2=116.54Hz,2.94m B2=123.47Hz,2.78m C3=130.81Hz,2.62m C#3=138.59Hz,2.47m D3=146.83Hz,2.34m D#3=155.56Hz,2.20m E3=164.81Hz,2.08m F3=174.61Hz,1.96m F#3=185.00Hz,1.85m G3=196.00Hz,1.75m G#3=207.65Hz,1.65m A3=220.00Hz,1.56m A#3=233.08Hz,1.47m B3=246.94Hz,1.39m C4=261.63Hz,1.31m C#4=277.18Hz,1.24m D4=293.66Hz,1.17m D#4=311.13Hz,1.10m E4=329.63Hz,1.04m F4=349.23Hz,98.22cm F#4=369.99Hz,92.71cm G4=392.00Hz,87.50cm G#4=415.30Hz,82.59cm A4=440.00Hz,77.95cm A#4=466.16Hz,73.58cm B4=493.88Hz,69.45cm C5=523.25Hz,65.55cm C#5=554.37Hz,61.87cm D5=587.33Hz,58.40cm D#5=622.25Hz,55.12cm E5=659.26Hz,52.03cm F5=698.46Hz,49.11cm F#5=739.99Hz,46.35cm G5=783.99Hz,43.75cm G#5=830.61Hz,41.29cm A5=880.00Hz,38.98cm A#5=932.33Hz,36.79cm B5=987.77Hz,34.72cm C6=1.05kHz,32.78cm C#6=1.11kHz,30.94cm D6=1.17kHz,29.20cm D#6=1.24kHz,27.56cm E6=1.32kHz,26.01cm F6=1.40kHz,24.55cm F#6=1.48kHz,23.18cm G6=1.57kHz,21.88cm G#6=1.66kHz,20.65cm A6=1.76kHz,19.49cm A#6=1.86kHz,18.39cm B6=1.98kHz,17.36cm C7=2.09kHz,16.39cm C#7=2.22kHz,15.47cm D7=2.35kHz,14.60cm D#7=2.49kHz,13.78cm E7=2.64kHz,13.01cm F7=2.79kHz,12.28cm F#7=2.96kHz,11.59cm G7=3.14kHz,10.94cm G#7=3.32kHz,10.32cm A7=3.52kHz,9.74cm A#7=3.73kHz,9.20cm B7=3.95kHz,8.68cm C8=4.19kHz,8.19cm C#8=4.43kHz,7.73cm D8=4.70kHz,7.30cm D#8=4.98kHz,6.89cm E8=5.27kHz,6.50cm F8=5.59kHz,6.14cm F#8=5.92kHz,5.79cm G8=6.27kHz,5.47cm G#8=6.64kHz,5.16cm A8=7.04kHz,4.87cm A#8=7.46kHz,4.60cm B8=7.90kHz,4.34cm C9=8.37kHz,4.10cm C#9=8.87kHz,3.87cm D9=9.40kHz,3.65cm D#9=9.96kHz,3.45cm E9=10.55kHz,3.25cm F9=11.18kHz,3.07cm F#9=11.84kHz,2.90cm G9=12.54kHz,2.73cm G#9=13.29kHz,2.58cm A9=14.08kHz,2.44cm A#9=14.92kHz,2.30cm B9=15.80kHz,2.17cm 
-43. What's the power of a 15PS motorcycle with 200kg weight? 11.03kW and 18.13kg/kW
-44. What's the sum of the masses of all moons in the solar system? 639.00Pt or 1408747761318636027904.00lb
-45. How long takes a trip to Alpha Centauri at 10% the speed of light? 43.70 years
-46. How many wine bottles are needed for 1 hectoliter? 133.33
-47. What's the AC voltage within a tenth second: 0.00V, 220.00V, 0.01pV, -220.00V, -0.03pV, 220.00V, -0.08pV, -220.00V, -0.05pV, 220.00V, 0.42pV, -220.00V, -0.79pV, 220.00V, 0.69pV, -220.00V, -0.10pV, 220.00V, -0.49pV, -220.00V, 
-48. How large is the event horizon of our galaxy's black hole? The Schwarzschild radius is 12683881.74km or 42.31 light-seconds
+11. What's the frequency and wavelength of the high 'c' music note? 1.05kHz and 32.78cm (1.08ft)
+12. What's the population density on Earth (people per km² of land area)? 55.06/km²
+13. How much land area would be available for each person on Earth? 1.82hm²
+14. Which chemical elements melt above 2500K and are radioactive? Technetium at 2703.15K, Rutherfordium at 2673.15K, 
+15. What's an aircraft's glide path on final at 10NM distance in 3000ft height? 2.83°
+16. What's the windchill temperature of 5°C air temperature at 55km/h wind? -1.60°C or 29.13°F
+17. What's the average speed to travel around the Earth in 80 days? 20.87km/h or 12.97mph
+18. What's the surface area and volume of a 30cm x 1cm pizza? 706.86cm² and 706.86ml
+19. What's the filament length of a 750g PLA roll with 2.85mm diameter? 94.81m or 103.69yd
+20. How long takes a flight non-stop around the Earth at Mach 1? 33.73h
+21. What's the surface area and volume of a soccer ball? 1559.72cm² and 5.79l
+22. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? 4.49MN
+23. What's the sound intensity of a 1W loudspeaker in 1m distance? 79.58mW/m² or 109.01dB
+24. What's the max diving time in salt water in 10m depth using a 10l bottle? 37.01min
+25. What's the sum of 1m + 1nmi + 1ft + 1in? 1.85km
+26. What's the sum of 1 byte + 1kB + 1GB...(and so on)? 1001001001001000950466347008000.00
+27. What's the speed sum here? 5010.08km/h
+28. What's a radar's geometrical horizon from 30ft height? 10.79km or 6.71 Miles
+29. What are the details of a 10m x 1m oak timber log? 32.99m², 7.85m³, 5.58t, 84.31GW
+30. What's the min cable wire size for 100m copper, 230V, 30A max? 10.34mm²
+31. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? 54.07mV
+32. What are the frequencies and wavelengths of all musical notes? C0=16.35Hz,20.98m C#0=17.32Hz,19.80m D0=18.35Hz,18.69m D#0=19.45Hz,17.64m E0=20.60Hz,16.65m F0=21.83Hz,15.71m F#0=23.12Hz,14.83m G0=24.50Hz,14.00m G#0=25.96Hz,13.21m A0=27.50Hz,12.47m A#0=29.14Hz,11.77m B0=30.87Hz,11.11m C1=32.70Hz,10.49m C#1=34.65Hz,9.90m D1=36.71Hz,9.34m D#1=38.89Hz,8.82m E1=41.20Hz,8.33m F1=43.65Hz,7.86m F#1=46.25Hz,7.42m G1=49.00Hz,7.00m G#1=51.91Hz,6.61m A1=55.00Hz,6.24m A#1=58.27Hz,5.89m B1=61.74Hz,5.56m C2=65.41Hz,5.24m C#2=69.30Hz,4.95m D2=73.42Hz,4.67m D#2=77.78Hz,4.41m E2=82.41Hz,4.16m F2=87.31Hz,3.93m F#2=92.50Hz,3.71m G2=98.00Hz,3.50m G#2=103.83Hz,3.30m A2=110.00Hz,3.12m A#2=116.54Hz,2.94m B2=123.47Hz,2.78m C3=130.81Hz,2.62m C#3=138.59Hz,2.47m D3=146.83Hz,2.34m D#3=155.56Hz,2.20m E3=164.81Hz,2.08m F3=174.61Hz,1.96m F#3=185.00Hz,1.85m G3=196.00Hz,1.75m G#3=207.65Hz,1.65m A3=220.00Hz,1.56m A#3=233.08Hz,1.47m B3=246.94Hz,1.39m C4=261.63Hz,1.31m C#4=277.18Hz,1.24m D4=293.66Hz,1.17m D#4=311.13Hz,1.10m E4=329.63Hz,1.04m F4=349.23Hz,98.22cm F#4=369.99Hz,92.71cm G4=392.00Hz,87.50cm G#4=415.30Hz,82.59cm A4=440.00Hz,77.95cm A#4=466.16Hz,73.58cm B4=493.88Hz,69.45cm C5=523.25Hz,65.55cm C#5=554.37Hz,61.87cm D5=587.33Hz,58.40cm D#5=622.25Hz,55.12cm E5=659.26Hz,52.03cm F5=698.46Hz,49.11cm F#5=739.99Hz,46.35cm G5=783.99Hz,43.75cm G#5=830.61Hz,41.29cm A5=880.00Hz,38.98cm A#5=932.33Hz,36.79cm B5=987.77Hz,34.72cm C6=1.05kHz,32.78cm C#6=1.11kHz,30.94cm D6=1.17kHz,29.20cm D#6=1.24kHz,27.56cm E6=1.32kHz,26.01cm F6=1.40kHz,24.55cm F#6=1.48kHz,23.18cm G6=1.57kHz,21.88cm G#6=1.66kHz,20.65cm A6=1.76kHz,19.49cm A#6=1.86kHz,18.39cm B6=1.98kHz,17.36cm C7=2.09kHz,16.39cm C#7=2.22kHz,15.47cm D7=2.35kHz,14.60cm D#7=2.49kHz,13.78cm E7=2.64kHz,13.01cm F7=2.79kHz,12.28cm F#7=2.96kHz,11.59cm G7=3.14kHz,10.94cm G#7=3.32kHz,10.32cm A7=3.52kHz,9.74cm A#7=3.73kHz,9.20cm B7=3.95kHz,8.68cm C8=4.19kHz,8.19cm C#8=4.43kHz,7.73cm D8=4.70kHz,7.30cm D#8=4.98kHz,6.89cm E8=5.27kHz,6.50cm F8=5.59kHz,6.14cm F#8=5.92kHz,5.79cm G8=6.27kHz,5.47cm G#8=6.64kHz,5.16cm A8=7.04kHz,4.87cm A#8=7.46kHz,4.60cm B8=7.90kHz,4.34cm C9=8.37kHz,4.10cm C#9=8.87kHz,3.87cm D9=9.40kHz,3.65cm D#9=9.96kHz,3.45cm E9=10.55kHz,3.25cm F9=11.18kHz,3.07cm F#9=11.84kHz,2.90cm G9=12.54kHz,2.73cm G#9=13.29kHz,2.58cm A9=14.08kHz,2.44cm A#9=14.92kHz,2.30cm B9=15.80kHz,2.17cm 
+33. What's the power of a 15PS motorcycle with 200kg weight? 11.03kW and 18.13kg/kW
+34. How many wine bottles are needed for 1 hectoliter? 133.33
+35. What's the AC voltage within a tenth second: 0.00V, 220.00V, 0.01pV, -220.00V, -0.03pV, 220.00V, -0.08pV, -220.00V, -0.05pV, 220.00V, 0.42pV, -220.00V, -0.79pV, 220.00V, 0.69pV, -220.00V, -0.10pV, 220.00V, -0.49pV, -220.00V, 
+ASTRONOMY
+1. The wavelength of hydrogen (H2) in vacuum is: 21.11cm or 8.31in
+2. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
+3. What's the min speed required to escape from the planets? Mercury=15297.73km/h or 12.88 Mach, Venus=37310.87km/h or 31.41 Mach, Earth=40240.68km/h or 33.87 Mach, Mars=18084.40km/h or 15.22 Mach, Jupiter=214342.54km/h or 180.42 Mach, Saturn=127688.31km/h or 107.48 Mach, Uranus=76649.32km/h or 64.52 Mach, Neptune=84413.14km/h or 71.05 Mach, Pluto=4356.45km/h or 3.67 Mach, 
+4. Which exoplanets are life-friendly and quite near? 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen d' @ Proxima Cen in 1.30pc, 
+5. What's the attractive force between Sun and Earth? 35.42ZN
+6. What's the attractive force between Earth and Moon? 198.16EN
+7. What's the travel time of sun light to Earth? 8.32min
+8. What's the impact energy of a 50m asteroid at 50,000km/h? 15.78PJ or 254.54 Hiroshima bombs
+9. What's the total distance the Earth has travelled so far? 137.08Mpc
+10. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? 154.13km, 616.52km, 14.53min
+11. What's the sum of the masses of all moons in the solar system? 639.00Pt or 1408747761318636027904.00lb
+12. How long takes a trip to Alpha Centauri at 10% the speed of light? 43.70 years
+13. How large is the event horizon of our galaxy's black hole? Sagittarius A* Schwarzschild radius is 12683881.74km or 42.31 light-seconds
