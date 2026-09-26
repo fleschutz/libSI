@@ -253,6 +253,13 @@ int main() {
     println("");
 
 
+    auto lever_arm     = 20_cm;
+    auto force_applied = 500_N;
+    auto angle         = 90_deg;
+    auto torque = lever_arm * force_applied * sin(angle);
+    println("36. Applying a perpendicular force of ", force_applied, " to a ", lever_arm, " long lever results in ", torque, " of torque.");
+
+
     extern void astronomy_examples();
     astronomy_examples();
 

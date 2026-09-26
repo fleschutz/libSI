@@ -33,6 +33,7 @@
 33. What's the power of a 15PS motorcycle with 200kg weight? 11.03kW and 18.13kg/kW
 34. How many wine bottles are needed for 1 hectoliter? 133.33
 35. What's the AC voltage within a tenth second: 0.00V, 220.00V, 0.01pV, -220.00V, -0.03pV, 220.00V, -0.08pV, -220.00V, -0.05pV, 220.00V, 0.42pV, -220.00V, -0.79pV, 220.00V, 0.69pV, -220.00V, -0.10pV, 220.00V, -0.49pV, -220.00V, 
+36. Applying a perpendicular force of 500.00N to a 20.00cm long lever results in 100.00J of torque.
  === ASTRONOMY EXAMPLES ===
  1. The travel time of sun light to Earth is: 8.32min
  2. The wavelength of hydrogen (H2) in vacuum is: 21.11cm or 8.31in
