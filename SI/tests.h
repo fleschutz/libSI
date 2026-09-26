@@ -264,21 +264,26 @@ namespace SI {
 
 	// 7. Check Digital Units
 	// ----------------------
-	static_assert(1_ZB == 1000_EB);
-	static_assert(1_EB == 1000_PB);
-	static_assert(1_PB == 1000_TB);
-	static_assert(1_TB == 1000_GB);
-	static_assert(1_GB == 1000_MB);
-	static_assert(1_MB == 1000_kB);
 	static_assert(1_kB == 1000_byte);
+	static_assert(1_MB == 1000_kB);
+	static_assert(1_GB == 1000_MB);
+	static_assert(1_TB == 1000_GB);
+	static_assert(1_PB == 1000_TB);
+	static_assert(1_EB == 1000_PB);
+	static_assert(1_ZB == 1000_EB);
+
+	static_assert(1_kiB == 1024_byte);
+	static_assert(1_MiB == 1024_kiB);
+	static_assert(1_GiB == 1024_MiB);
+	static_assert(1_TiB == 1024_GiB);
 
 	// 8. Check Various Units
 	// ----------------------
 	// pressure in...
-	static_assert(1_Gbar == 1000_Mbar);
-	static_assert(1_Mbar == 1000_kbar);
-	static_assert(1_kbar == 1000_bar);
 	static_assert(1_bar  == 1000_mbar);
+	static_assert(1_kbar == 1000_bar);
+	static_assert(1_Mbar == 1000_kbar);
+	static_assert(1_Gbar == 1000_Mbar);
 
 	// 9. Check Functions & Templates
 	// ------------------------------
