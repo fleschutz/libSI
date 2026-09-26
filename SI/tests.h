@@ -257,10 +257,11 @@ namespace SI {
 
 	// 6. Imperial Units
 	// -----------------
-	//static_assert(1_ft == 12_in);
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
-	static_assert(1_ft == 0.3048_m);
+	static_assert(1_ft  == 0.3048_m);
+	static_assert(1_mi  == 1760_yd);
+	//static_assert(1_ft == 12_in);
 
 	// 7. Digital Units
 	// ----------------
