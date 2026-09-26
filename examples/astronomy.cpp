@@ -1,5 +1,5 @@
 /// @file     examples/astronomy.cpp
-/// @brief    Contains 13 examples for astronomy.
+/// @brief    Contains 13 examples using libSI for astronomy.
 
 #include <SI/all.h> 
 #include "datasets/all.h"
@@ -7,14 +7,19 @@ using namespace SI;
 
 void astronomy_examples() {
 
-    println("ASTRONOMY");
+    println(" === ASTRONOMY EXAMPLES ===");
+
+    print(" 1. The travel time of sun light to Earth is: ");
+    auto Earth_to_Sun_distance = 149'597'870'691_m;
+    println(Earth_to_Sun_distance / constant::speed_of_light_in_vacuum);
+
 
     auto H2_frequency  = 1420.4057517682_MHz;
     auto H2_wavelength = formula::wavelength(constant::speed_of_light_in_vacuum, H2_frequency);
-    println("1. The wavelength of hydrogen (H2) in vacuum is: ", H2_wavelength, " or ", to_equivalent(H2_wavelength));
+    println(" 2. The wavelength of hydrogen (H2) in vacuum is: ", H2_wavelength, " or ", to_equivalent(H2_wavelength));
 
 
-    print("2. Which moons are greater than Earth's moon? ");
+    print(" 3. Which moons are greater than Earth's moon? ");
     for (auto& moon : dataset::moons) {
         if (moon.mean_radius > 1737.5_km)
             printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
@@ -22,7 +27,7 @@ void astronomy_examples() {
     println("");
 
 
-    print("3. What's the min speed required to escape from the planets? ");
+    print(" 4. What's the min speed required to escape from the planets? ");
     for (auto& planet : dataset::planets) {
         auto min_speed = formula::gravitational_escape_velocity(planet.mass, planet.diameter / 2.0);
         print(planet.name, "=", min_speed, " or ", to_equivalent(min_speed), ", ");
@@ -30,7 +35,7 @@ void astronomy_examples() {
     println("");
 
 
-    print("4. Which exoplanets are life-friendly and quite near? ");
+    print(" 5. Which exoplanets are life-friendly and quite near? ");
     for (auto& exoplanet : dataset::exoplanets) {
         if (exoplanet.number_of_stars == 0)
             continue; // too cold without a star
@@ -45,24 +50,19 @@ void astronomy_examples() {
     println("");
 
 
-    print("5. What's the attractive force between Sun and Earth? ");
+    print(" 6. What's the attractive force between Sun and Earth? ");
     auto Sun_mass              = 1.988416E30_kg;
     auto Earth_mass            = 5.9722E24_kg;
-    auto Earth_to_Sun_distance = 149'597'870'691_m;
     println(formula::gravitational_attractive_force(Sun_mass, Earth_mass, Earth_to_Sun_distance));
 
 
-    print("6. What's the attractive force between Earth and Moon? ");
+    print(" 7. What's the attractive force between Earth and Moon? ");
     auto Moon_mass              = 7.346E22_kg;
     auto Earth_to_Moon_distance = 384'399_km;
     println(formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_to_Moon_distance));
 
 
-    print("7. What's the travel time of sun light to Earth? ");
-    println(Earth_to_Sun_distance / constant::speed_of_light_in_vacuum);
-
-
-    print("8. What's the impact energy of a 50m asteroid at 50,000km/h? ");
+    print(" 8. What's the impact energy of a 50m asteroid at 50,000km/h? ");
     auto asteroid_diameter = 50_m;
     auto asteroid_density  = 2500_kg_per_m³; // mostly estimated only 
     auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
@@ -72,7 +72,7 @@ void astronomy_examples() {
     println(impact_energy, " or ", to_equivalent(impact_energy));
 
 
-    print("9. What's the total distance the Earth has travelled so far? ");
+    print(" 9. What's the total distance the Earth has travelled so far? ");
     auto distance_Earth_to_Sun = constant::AU;
     auto distance_per_year     = formula::circumference_of_circle(distance_Earth_to_Sun);
     auto Earth_year            = 365.25_days;

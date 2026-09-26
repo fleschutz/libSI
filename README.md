@@ -33,14 +33,14 @@ int main() {
     mass m     = 1_oz;
     velocity c = constant::speed_of_light_in_vacuum;
     energy E   = m * c * c;
-    println("The potential energy of a single ounce is: ", E);
+    std::cout << "The potential energy of a single ounce is: " << E << std::endl;
 }
 ```
 Executing: `cd examples && cmake . && make && ./examples` writes to the console:
 ```
 The potential energy of a single ounce is: 2.55PJ
 ```
-**See 47 further examples** in [examples/main.cpp](examples/main.cpp), writing this [console output](examples/output.txt).
+**See 47 more examples** in the 📂[examples](examples/) folder, writing this [console output](examples/console_output.txt).
 
 
 💡 Q & A

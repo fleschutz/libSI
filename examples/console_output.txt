@@ -33,16 +33,16 @@
 33. What's the power of a 15PS motorcycle with 200kg weight? 11.03kW and 18.13kg/kW
 34. How many wine bottles are needed for 1 hectoliter? 133.33
 35. What's the AC voltage within a tenth second: 0.00V, 220.00V, 0.01pV, -220.00V, -0.03pV, 220.00V, -0.08pV, -220.00V, -0.05pV, 220.00V, 0.42pV, -220.00V, -0.79pV, 220.00V, 0.69pV, -220.00V, -0.10pV, 220.00V, -0.49pV, -220.00V, 
-ASTRONOMY
-1. The wavelength of hydrogen (H2) in vacuum is: 21.11cm or 8.31in
-2. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
-3. What's the min speed required to escape from the planets? Mercury=15297.73km/h or 12.88 Mach, Venus=37310.87km/h or 31.41 Mach, Earth=40240.68km/h or 33.87 Mach, Mars=18084.40km/h or 15.22 Mach, Jupiter=214342.54km/h or 180.42 Mach, Saturn=127688.31km/h or 107.48 Mach, Uranus=76649.32km/h or 64.52 Mach, Neptune=84413.14km/h or 71.05 Mach, Pluto=4356.45km/h or 3.67 Mach, 
-4. Which exoplanets are life-friendly and quite near? 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen d' @ Proxima Cen in 1.30pc, 
-5. What's the attractive force between Sun and Earth? 35.42ZN
-6. What's the attractive force between Earth and Moon? 198.16EN
-7. What's the travel time of sun light to Earth? 8.32min
-8. What's the impact energy of a 50m asteroid at 50,000km/h? 15.78PJ or 254.54 Hiroshima bombs
-9. What's the total distance the Earth has travelled so far? 137.08Mpc
+ === ASTRONOMY EXAMPLES ===
+ 1. The travel time of sun light to Earth is: 8.32min
+ 2. The wavelength of hydrogen (H2) in vacuum is: 21.11cm or 8.31in
+ 3. Which moons are greater than Earth's moon? Jupiter's Io (ø=3643.20km), Jupiter's Ganymede (ø=5262.40km), Jupiter's Callisto (ø=4820.60km), Saturn's Titan (ø=5149.46km), 
+ 4. What's the min speed required to escape from the planets? Mercury=15297.73km/h or 12.88 Mach, Venus=37310.87km/h or 31.41 Mach, Earth=40240.68km/h or 33.87 Mach, Mars=18084.40km/h or 15.22 Mach, Jupiter=214342.54km/h or 180.42 Mach, Saturn=127688.31km/h or 107.48 Mach, Uranus=76649.32km/h or 64.52 Mach, Neptune=84413.14km/h or 71.05 Mach, Pluto=4356.45km/h or 3.67 Mach, 
+ 5. Which exoplanets are life-friendly and quite near? 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen b' @ Proxima Cen in 1.30pc, 'Proxima Cen d' @ Proxima Cen in 1.30pc, 
+ 6. What's the attractive force between Sun and Earth? 35.42ZN
+ 7. What's the attractive force between Earth and Moon? 198.16EN
+ 8. What's the impact energy of a 50m asteroid at 50,000km/h? 15.78PJ or 254.54 Hiroshima bombs
+ 9. What's the total distance the Earth has travelled so far? 137.08Mpc
 10. What's the ballistic max height/range/flight time of a bullet fired 45° on Moon's surface? 154.13km, 616.52km, 14.53min
 11. What's the sum of the masses of all moons in the solar system? 639.00Pt or 1408747761318636027904.00lb
 12. How long takes a trip to Alpha Centauri at 10% the speed of light? 43.70 years

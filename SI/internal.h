@@ -1,10 +1,11 @@
-// <SI/internal.h> - internal datatypes, classes, etc.
+/// @file     SI/internal.h
+/// @brief    Provides internal datatypes, classes, etc.
+
 #pragma once
 #include <limits>
 #include <utility>
 #include <algorithm>
 #include <cmath>
-
 #define SI_INLINE inline 
 #define SI_INLINE_CONSTEXPR constexpr SI_INLINE
 
@@ -22,7 +23,6 @@ namespace SI
 			template <class T> struct vec_value_type<vec_trivally_constructible<T>> { using type = T; };
 			template <class... T> using vec_common_type_t = std::common_type_t<typename vec_value_type<T>::type...>;
 		}
-
 
 		template <int N, class T>
 		struct vec;

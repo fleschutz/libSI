@@ -7,7 +7,7 @@ int main() {
     mass m     = 1_oz;
     velocity c = constant::speed_of_light_in_vacuum;
     energy E   = m * c * c;
-    println(" 1. The potential energy of a single ounce is: ", E);
+    std::cout << " 1. The potential energy of a single ounce is: " << E << std::endl;
 
 
     auto file_size      = 1_TB;
