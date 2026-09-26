@@ -357,5 +357,8 @@ int main() {
     println("Sagittarius A* Schwarzschild radius is ", radius, " or ", to_equivalent(radius));
 
 
+    extern void conversion_examples();
+    conversion_examples();
+
     return 0;
 }

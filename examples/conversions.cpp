@@ -1,7 +1,7 @@
 #include <SI/all.h> 
 using namespace SI;
 
-void conversions() {
+void conversion_examples() {
 
     // Import a Literal
     // ----------------
