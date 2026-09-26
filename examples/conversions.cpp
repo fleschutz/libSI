@@ -1,3 +1,6 @@
+/// @file     examples/conversions.cpp
+/// @brief    Contains 6 conversion examples.
+
 #include <SI/all.h> 
 using namespace SI;
 
