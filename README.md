@@ -16,7 +16,7 @@ This C++ physical units library lets you apply math correct, precise, and conven
 - **Datatypes** like *SI::length* in [SI/datatypes.h](SI/datatypes.h)
 - **Units** such as *SI::meters* in [SI/units.h](SI/units.h)
 - **Literals** such as *100_m* in [SI/literals.h](SI/literals.h)
-- **Constants** such as *SI::constant::speed_of_light* in [SI/constants.h](SI/constants.h)
+- **Constants** such as *SI::constant::speed_of_light_in_vacuum* in [SI/constants.h](SI/constants.h)
 - **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
 - **Conversions** such as *SI::to_string()*  and *SI::to_equivalent()* in [SI/conversions.h](SI/conversions.h)
 - **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and also on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
@@ -32,7 +32,7 @@ int main() {
     using namespace SI;
 
     mass m     = 1_oz;
-    velocity c = constant::speed_of_light;
+    velocity c = constant::speed_of_light_in_vacuum;
     energy E   = m * c * c;
     println("The potential energy of a single ounce is: ", E);
 }

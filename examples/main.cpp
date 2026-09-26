@@ -5,7 +5,7 @@ int main() {
     using namespace SI;
 
     mass m = 1_oz;
-    velocity c = constant::speed_of_light;
+    velocity c = constant::speed_of_light_in_vacuum;
     energy E = m * c * c;
     println(" 1. The potential energy of a single ounce is: ", E);
 
@@ -65,7 +65,7 @@ int main() {
 
 
     auto H2_frequency  = 1420.4057517682_MHz;
-    auto H2_wavelength = formula::wavelength(constant::speed_of_light, H2_frequency);
+    auto H2_wavelength = formula::wavelength(constant::speed_of_light_in_vacuum, H2_frequency);
     println("11. The wavelength of hydrogen (H2) in vacuum is: ", H2_wavelength, " or ", to_equivalent(H2_wavelength));
 
 
@@ -192,7 +192,7 @@ int main() {
 
 
     print("28. What's the travel time of sun light to Earth? ");
-    println(Earth_to_Sun_distance / constant::speed_of_light);
+    println(Earth_to_Sun_distance / constant::speed_of_light_in_vacuum);
 
 
     print("29. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
@@ -330,7 +330,7 @@ int main() {
 
     print("45. How long takes a trip to Alpha Centauri at 10% the speed of light? ");
     auto distance_Earth_to_Alpha_Centauri = 4.37_ly;
-    auto travel_speed                     = constant::speed_of_light * 10_percent;
+    auto travel_speed                     = constant::speed_of_light_in_vacuum * 10_percent;
     auto time_needed                      = distance_Earth_to_Alpha_Centauri / travel_speed;
     println(time_needed);
 
