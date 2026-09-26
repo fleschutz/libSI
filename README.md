@@ -26,14 +26,14 @@ This C++ physical units library lets you apply math correct, precise, and conven
 🔎 Example
 ----------
 ```cpp
-#include <SI/all.h> // all header files
+#include <SI/all.h>
 
 int main() {	
     using namespace SI;
 
-    mass m = 1_oz;
+    mass m     = 1_oz;
     velocity c = constant::speed_of_light;
-    energy E = m * c * c;
+    energy E   = m * c * c;
     println("The potential energy of a single ounce is: ", E);
 }
 ```
