@@ -27,10 +27,9 @@ This C++ physical units library lets you apply math correct, precise, and conven
 ----------
 ```cpp
 #include <SI/all.h>
+using namespace SI;
 
 int main() {	
-    using namespace SI;
-
     mass m     = 1_oz;
     velocity c = constant::speed_of_light_in_vacuum;
     energy E   = m * c * c;
