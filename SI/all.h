@@ -3,7 +3,6 @@
 /// @details  Add '#include <SI/all.h>' in your source code to use it.
 
 #pragma once
-
 #include "datatypes.h"    /// <-- datatypes such as SI::length
 #include "units.h"        /// <-- units such as SI::meters
 #include "literals.h"     /// <-- literals such as 100_m

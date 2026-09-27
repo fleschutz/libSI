@@ -1,6 +1,6 @@
-/// @file	SI/conversions.h
-/// @brief	Defines functions to convert from and to strings and equivalents, e.g. to_string(12_m).
-/// @details	Provides from_string(), to_string(), and to_equivalent().
+/// @file     SI/conversions.h
+/// @brief    Defines functions to convert from and to strings and equivalents, e.g. to_string(12_m).
+/// @details  Provides from_string(), to_string(), and to_equivalent().
 
 #pragma once
 #include <string>
@@ -8,7 +8,8 @@
 
 namespace SI
 {
-	inline std::string format_of_to_string = "%.2Lf%s"; // <-- configurable (precision / whitespace)
+	inline std::string to_string_formatting     = "%.2Lf%s";  // <-- configurable
+	inline std::string to_equivalent_formatting = "%.2Lf %s"; // <-- configurable
 
 	inline bool from_string(const std::string& str, length& result)
 	{
@@ -107,7 +108,7 @@ namespace SI
 	inline std::string _join(long double value, const std::string& unit)
 	{
 		char buf[256];
-		std::snprintf(buf, sizeof(buf), format_of_to_string.c_str(), value, unit.c_str());
+		std::snprintf(buf, sizeof(buf), to_string_formatting.c_str(), value, unit.c_str());
 		return std::string(buf);
 	}
 
@@ -481,56 +482,64 @@ namespace SI
 		return text;
 	}
 
+	// internal function to join and convert both value and unit into a string.
+	inline std::string _both(long double value, const std::string& unit)
+	{
+		char buf[256];
+		std::snprintf(buf, sizeof(buf), to_equivalent_formatting.c_str(), value, unit.c_str());
+		return std::string(buf);
+	}
+
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
 	inline std::string to_equivalent(const length d)
 	{
 		if (d <= -1_ly || d >= 1_ly)
-			return _join(d / 1_ly, " light-years");
+			return _both(d / 1_ly, "light-years");
 		if (d <= -1_ls || d >= 1_ls)
-			return _join(d / 1_ls, " light-seconds");
+			return _both(d / 1_ls, "light-seconds");
 		if (d <= -1_mi || d >= 1_mi)
-			return _join(d / 1_mi, " Miles");
+			return _both(d / 1_mi, "miles");
 		if (d <= -1_yd || d >= 1_yd)
-			return _join(d / 1_yd, "yd");
+			return _both(d / 1_yd, "yards");
 		if (d <= -1_ft || d >= 1_ft)
-			return _join(d / 1_ft, "ft");
+			return _both(d / 1_ft, "feet");
 
-		return _join(d / 1_in, "in");
+		return _both(d / 1_in, "inch");
 	}
 
 	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
 	inline std::string to_equivalent(const mass m)
 	{
 		if (m <= -1_Msun || m >= 1_Msun)
-			return _join(m / 1_Msun, " solar masses");
+			return _both(m / 1_Msun, "solar masses");
 		if (m <= -1_Mjup || m >= 1_Mjup)
-			return _join(m / 1_Mjup, " Jupiter masses");
+			return _both(m / 1_Mjup, "Jupiter masses");
 		if (m <= -1_Mearth || m >= 1_Mearth)
-			return _join(m / 1_Mearth, " Earth masses");
+			return _both(m / 1_Mearth, "Earth masses");
 		if (m <= -1_Mmoon || m >= 1_Mmoon)
-			return _join(m / 1_Mmoon, " Moon masses");
+			return _both(m / 1_Mmoon, "Moon masses");
 
-		return _join(m / 1_lb, "lb");
+		return _both(m / 1_lb, "lb");
 	}
 
 	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
 	inline std::string to_equivalent(const velocity V)
 	{
 		if (V <= -1_Mach || V >= 1_Mach)
-			return _join(V / 1_Mach, " Mach");
-		return _join(V / 1_mph, "mph");
+			return _both(V / 1_Mach, "Mach");
+		return _both(V / 1_mph, "mph");
 	}
 
 	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
 	inline std::string to_equivalent(const temperature T)
 	{
-		return _join(fahrenheit(T), "°F");
+		return _both(fahrenheit(T), "°F");
 	}
 
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
 	inline std::string to_equivalent(const power_intensity I)
 	{
-		return _join(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB");
+		return _both(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB");
 	}
 
 	/// @brief Returns an energy equivalent as string, e.g. kg TNT.
@@ -538,7 +547,7 @@ namespace SI
 	{
 		const auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
 		if (E >= Hiroshima_bomb)
-			return _join(E / Hiroshima_bomb, " Hiroshima bombs");
+			return _both(E / Hiroshima_bomb, "Hiroshima bombs");
 
 		const auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol)
 		mass kgTNT = kilograms(E / one_kg_TNT);
