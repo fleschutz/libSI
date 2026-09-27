@@ -1,6 +1,6 @@
 /// @file      SI/tests.h
 /// @brief     Contains 210 unit tests at compile-time to verify everything.
-/// @details   Categories are: Demo Checks, Datatypes, SI Base Units, SI Derived Units, Astronomical Units,
+/// @details   Categories are: Features, Datatypes, SI Base Units, SI Derived Units, Astronomical Units,
 ///                            Imperial Units, Digital Units, Various Units, and Functions & Templates.
 
 #pragma once
@@ -9,9 +9,11 @@
 
 namespace SI {
 
-	// 1. Demo Checks  (to demonstrate what's possible, the serious checks follow below)
-	// --------------
+	// 1. Features
+	// -----------
+	// This shows what's possible: (the serious checks follow below)
 	static_assert(3_m == meters(3));
+	static_assert(3_m == 3 * 1_m);
 	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
 	static_assert(1_km / 30_min == 2_km_per_h);
 	static_assert(1_m * 2_m == 2_m²);
