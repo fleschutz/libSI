@@ -1,6 +1,6 @@
-/// @file	SI/all.h
-/// @brief	Header file for convenience to include all header files of libSI.
-/// @details	Add '#include <SI/all.h>' in your source code to use it.
+/// @file     SI/all.h
+/// @brief    Header file for convenience to include all header files of libSI.
+/// @details  Add '#include <SI/all.h>' in your source code to use it.
 
 #pragma once
 
