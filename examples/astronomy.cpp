@@ -9,8 +9,8 @@ void astronomy_examples() {
 
     println("");
     println("    === ASTRONOMY EXAMPLES ===");
-    to_string_formatting     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-    to_equivalent_formatting = "%.1Lf %s";// one decimal place, with space between quantity and unit
+    to_string_formatting     = "%.1Lf%s"; // <-- one decimal place, no space between quantity and unit
+    to_equivalent_formatting = "%.1Lf %s";// <-- one decimal place, with space between quantity and unit
 
 
     print(" 1. The travel time of sun light to Earth is... ");

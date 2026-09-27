@@ -9,8 +9,9 @@ void speed_examples() {
 
     println("");
     println("    === SPEED EXAMPLES ===");
-    to_string_formatting     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-    to_equivalent_formatting = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_string_formatting     = "%.1Lf%s"; // <-- one decimal place, no space between quantity and unit
+    to_equivalent_formatting = "%.1Lf%s"; // <-- one decimal place, no space between quantity and unit
+
 
     print(" 1. The average speed of Kelvin Kiptum's Marathon world record was... ");
     auto Marathon_distance = 42.195_km;
