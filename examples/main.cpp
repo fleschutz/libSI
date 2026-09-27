@@ -17,8 +17,8 @@ int main() {
 
 
     auto Marathon_distance = 42.195_km;
-    auto Kelvins_time      = 2_h + 35_s;
-    auto avg_speed         = Marathon_distance / Kelvins_time;
+    auto Kelvins_duration  = 2_h + 35_s;
+    auto avg_speed         = Marathon_distance / Kelvins_duration;
     println(" 3. The average speed of Kelvin Kiptum's Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
 
 
