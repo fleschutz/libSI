@@ -16,73 +16,67 @@ int main() {
     println(" 2. The download of 1TB at 100MBit/s takes: ", download_time);
 
 
-    auto Marathon_distance = 42.195_km;
-    auto Kelvins_duration  = 2_h + 35_s;
-    auto avg_speed         = Marathon_distance / Kelvins_duration;
-    println(" 3. The average speed of Kelvin Kiptum's Marathon world record was: ", avg_speed, " or ", to_equivalent(avg_speed));
-
-
     auto tower_height   = 828_m;
     auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
-    println(" 4. The free fall time from Burj Khalifa tower (828m) is: ", free_fall_time);
+    println(" 3. The free fall time from Burj Khalifa tower (828m) is: ", free_fall_time);
 
 
     auto SUV_mass   = 5000_lb; 
     auto SUV_speed  = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
-    println(" 5. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
+    println(" 4. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
 
 
     auto Everest_latitude = 27.986065_deg;
     auto Everest_height   = 8848_m;
     auto local_gravity    = formula::local_gravity(Everest_latitude, Everest_height);
-    println(" 6. The local gravity at Mount Everest's peak is: ", local_gravity);
+    println(" 5. The local gravity at Mount Everest's peak is: ", local_gravity);
 
 
     auto Donalds_weight = 102_kg;
     auto Donalds_height = 190_cm;
     auto Donalds_BMI    = formula::BMI(Donalds_weight, Donalds_height);
-    println(" 7. The body-mass index (BMI) of Donald Trump is: ", Donalds_BMI);
+    println(" 6. The body-mass index (BMI) of Donald Trump is: ", Donalds_BMI);
 
 
-    print(" 8. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
+    print(" 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
     auto distance_driven = 400_mi;
     auto fuel_consumed   = 15_gal;
     auto fuel_efficiency = (fuel_consumed * 100_km) / distance_driven;
     println(fuel_efficiency, " (per 100km)");
 
 
-    print(" 9. What's a car's braking distance from 100km/h on dry asphalt? ");
+    print(" 8. What's a car's braking distance from 100km/h on dry asphalt? ");
     auto braking_on_dry_asphalt = 8_m_per_s²;
     auto dry_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
     println(dry_distance, " or ", to_equivalent(dry_distance));
 
 
-    print("10. What's a car's braking distance from 100km/h on wet asphalt? ");
+    print(" 9. What's a car's braking distance from 100km/h on wet asphalt? ");
     auto braking_on_wet_asphalt = 6_m_per_s²;
     auto wet_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
     println(wet_distance, " or ", to_equivalent(wet_distance));
 
 
-    print("11. What's the frequency and wavelength of the high 'c' music note? ");
+    print("10. What's the frequency and wavelength of the high 'c' music note? ");
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
     println(high_c_frequency, " and ", wavelength, " (", to_equivalent(wavelength), ")");
 
 
-    print("12. What's the population density on Earth (people per km² of land area)? ");
+    print("11. What's the population density on Earth (people per km² of land area)? ");
     dimensionless Earth_population = 8.2e9;
     auto Earth_land_area           = 148'940'000_km²;
     auto population_density        = Earth_population / Earth_land_area;
     println(population_density);
 
 
-    print("13. How much land area would be available for each person on Earth? ");
+    print("12. How much land area would be available for each person on Earth? ");
     auto per_person = Earth_land_area / Earth_population;
     println(per_person);
 
 
-    print("14. Which chemical elements melt above 2500K and are radioactive? ");
+    print("13. Which chemical elements melt above 2500K and are radioactive? ");
     for (auto& element : dataset::chemical_elements) {
         if (element.melting_point > 2500_K && element.radioactive)
             printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
@@ -90,28 +84,21 @@ int main() {
     println("");
 
 
-    print("15. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
+    print("14. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
     auto distance_on_final = 10_nmi;
     auto height_on_final   = 3000_ft;
     auto glide_path        = formula::glide_path(distance_on_final, height_on_final);
     println(glide_path);
 
 
-    print("16. What's the windchill temperature of 5°C air temperature at 55km/h wind? ");
+    print("15. What's the windchill temperature of 5°C air temperature at 55km/h wind? ");
     auto air_temperature = 5_degC;
     auto wind_speed      = 55_km_per_h;
     auto windchill_temp  = formula::windchill_temperature(air_temperature, wind_speed);
     println(windchill_temp, " or ", to_equivalent(windchill_temp));
 
 
-    print("17. What's the average speed to travel around the Earth in 80 days? ");
-    auto travel_distance  = dataset::Earth.equatorial_circumference;
-    auto travel_time      = 80_days;
-    auto avg_travel_speed = travel_distance / travel_time;
-    println(avg_travel_speed, " or ", to_equivalent(avg_travel_speed));
-
-
-    print("18. What's the surface area and volume of a 30cm x 1cm pizza? ");
+    print("16. What's the surface area and volume of a 30cm x 1cm pizza? ");
     auto pizza_radius = 30_cm / 2;
     auto pizza_height = 1_cm;
     auto pizza_area   = formula::area_of_circle(pizza_radius);
@@ -119,7 +106,7 @@ int main() {
     println(pizza_area, " and ", pizza_volume);
 
 
-    print("19. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
+    print("17. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
     auto filament_weight   = 750_g;
     auto filament_diameter = 2.85_mm;
     auto density_of_PLA    = 1.24_g_per_cm³;
@@ -128,13 +115,13 @@ int main() {
     println(filament_length, " or ", to_equivalent(filament_length));
 
 
-    print("20. How long takes a flight non-stop around the Earth at Mach 1? ");
+    print("18. How long takes a flight non-stop around the Earth at Mach 1? ");
     auto flight_distance = dataset::Earth.equatorial_circumference;
     auto flight_time     = flight_distance / 1_Mach;
     println(flight_time);
 
 
-    print("21. What's the surface area and volume of a soccer ball? ");
+    print("19. What's the surface area and volume of a soccer ball? ");
     auto ball_circumference = 70_cm; // (69-71cm for FIFA ball size 5)
     auto ball_radius        = formula::radius_of_circumference(ball_circumference);
     auto ball_area          = formula::area_of_sphere(ball_radius);
@@ -142,7 +129,7 @@ int main() {
     println(ball_area, " and ", ball_volume);
 
 
-    print("22. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
+    print("20. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
     auto wing_surface              = 845_m²;
     dimensionless lift_coefficient = 1.3939;
     auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
@@ -151,14 +138,14 @@ int main() {
     println(lift_force);
 
 
-    print("23. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
+    print("21. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
     auto loudspeaker_power    = 1_W;
     auto loudspeaker_distance = 1_m;
     auto sound_intensity      = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
     println(sound_intensity, " or ", to_equivalent(sound_intensity));
 
 
-    print("24. What's the max diving time in salt water in 10m depth using a 10l bottle? ");
+    print("22. What's the max diving time in salt water in 10m depth using a 10l bottle? ");
     auto average_breathing  = 20_l_per_min;
     auto bottle_volume      = 10_l;
     auto bottle_pressure    = 150_bar;
@@ -170,29 +157,24 @@ int main() {
     println(max_time);
 
 
-    print("25. What's the sum of 1m + 1nmi + 1ft + 1in? ");
+    print("23. What's the sum of 1m + 1nmi + 1ft + 1in? ");
     auto length_sum = 1_m + 1_nmi + 1_ft + 1_in;
     println(length_sum);
 
 
-    print("26. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
+    print("24. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
     auto byte_sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
     println(byte_sum);
 
 
-    print("27. What's the speed sum here? ");
-    auto speed_sum = 278_m_per_s + 1000_km_per_h + 540_kn + 621_mph + 0.85_Mach;
-    println(speed_sum);
-
-
-    print("28. What's a radar's geometrical horizon from 30ft height? ");
+    print("25. What's a radar's geometrical horizon from 30ft height? ");
     auto Earth_radius         = 6371.009_km;
     auto Radar_station_height = 30_ft;
     auto distance             = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
     println(distance, " or ", to_equivalent(distance));
 
 
-    print("29. What are the details of a 10m x 1m oak timber log? ");
+    print("26. What are the details of a 10m x 1m oak timber log? ");
     auto log_length     = 10_m;
     auto log_diameter   = 1_m;
     auto dry_oak_weight = 710_kg_per_m³; 
@@ -204,7 +186,7 @@ int main() {
     println(area, ", ", volume, ", ", weight, ", ", power);
 
 
-    print("30. What's the min cable wire size for 100m copper, 230V, 30A max? ");
+    print("27. What's the min cable wire size for 100m copper, 230V, 30A max? ");
     auto conductor_resistivity  = 1.7241e-8_Ohm_m; // for copper
     auto cable_length           = 100_m;
     auto max_current            = 30_A;
@@ -213,7 +195,7 @@ int main() {
     println(A);
 
 
-    print("31. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
+    print("28. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
     auto CC   = 0.47_uF;
     auto V0   = 5_V;
     auto RR   = 4.7_kOhm;
@@ -222,7 +204,7 @@ int main() {
     println(V1);
 
 
-    print("32. What are the frequencies and wavelengths of all musical notes? ");
+    print("29. What are the frequencies and wavelengths of all musical notes? ");
     for (auto& note : dataset::musical_notes) {
         auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
         print(note.name, note.octave, "=", note.frequency, ",", wavelength, " ");
@@ -230,21 +212,21 @@ int main() {
     println("");
 
 
-    print("33. What's the power of a 15PS motorcycle with 200kg weight? ");
+    print("30. What's the power of a 15PS motorcycle with 200kg weight? ");
     auto engine_power          = 15_PS;
     auto motorcycle_mass       = 200_kg;
     auto power_to_weight_ratio = motorcycle_mass / engine_power;
     println(engine_power, " and ", power_to_weight_ratio);
 
 
-    print("34. How many wine bottles are needed for 1 hectoliter? ");
+    print("31. How many wine bottles are needed for 1 hectoliter? ");
     auto total_volume      = 1_hl;
     auto volume_per_bottle = 750_ml;
     auto number_of_bottles = total_volume / volume_per_bottle;
     println(number_of_bottles);
 
 
-    print("35. What's the AC voltage within a tenth second: ");
+    print("32. What's the AC voltage within a tenth second: ");
     for (auto time = 0.0_s; time < 0.1_s; time += 0.005_s) {
         auto peak_voltage = 220_V;
         auto sample_rate  = 50_Hz;
@@ -257,7 +239,7 @@ int main() {
     auto force_applied = 500_N;
     auto angle         = 90_deg;
     auto torque = lever_arm * force_applied * SI::sin(angle);
-    println("36. Applying a perpendicular force of ", force_applied, " to a ", lever_arm, " long lever results in ", torque, " of torque.");
+    println("33. Applying a perpendicular force of ", force_applied, " to a ", lever_arm, " long lever results in ", torque, " of torque.");
 
 
     extern void astronomy_examples();
@@ -265,6 +247,9 @@ int main() {
 
     extern void conversion_examples();
     conversion_examples();
+
+    extern void speed_examples();
+    speed_examples();
 
     return 0;
 }

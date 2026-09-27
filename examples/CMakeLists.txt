@@ -1,5 +1,5 @@
-# CMake Build Instructions for the Examples
-# =========================================
+# CMake Build Instructions for libSI's Examples
+# =============================================
 
 cmake_minimum_required(VERSION 3.10)
 
@@ -14,7 +14,7 @@ endif(MSVC)
 
 include_directories(..)
 
-add_executable(examples main.cpp astronomy.cpp conversions.cpp)
+add_executable(examples main.cpp astronomy.cpp conversions.cpp speeds.cpp)
 
 # add unit tests
 enable_testing()
