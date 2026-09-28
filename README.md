@@ -18,7 +18,7 @@ Apply math with this C++ physical units library correct, precise, and convenient
 - **Literals** like *100_m* in [SI/literals.h](SI/literals.h)
 - **Constants** such as *SI::constant::speed_of_light_in_vacuum* in [SI/constants.h](SI/constants.h)
 - **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
-- **Conversions** such as *SI::to_string()*  and *SI::to_equivalent()* in [SI/conversions.h](SI/conversions.h)
+- **Conversions** such as *SI::to_string()* in [SI/conversions.h](SI/conversions.h)
 - **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 - **Datasets**, e.g. *dataset::chemical_elements* in 📂[datasets](datasets/) (optional)
 
