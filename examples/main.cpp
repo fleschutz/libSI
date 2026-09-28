@@ -242,14 +242,15 @@ int main() {
     println("33. Applying a perpendicular force of ", force_applied, " to a ", lever_arm, " long lever results in ", torque, " of torque.");
 
 
+    println("");
     extern void astronomy_examples();
     astronomy_examples();
 
-    extern void conversion_examples();
-    conversion_examples();
-
     extern void speed_examples();
     speed_examples();
+
+    extern void conversion_examples();
+    conversion_examples();
 
     return 0;
 }

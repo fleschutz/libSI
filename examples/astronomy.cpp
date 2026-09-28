@@ -7,7 +7,6 @@ using namespace SI;
 
 void astronomy_examples() {
 
-    println("");
     println("    === ASTRONOMY EXAMPLES ===");
     to_string_formatting     = "%.1Lf%s"; // <-- one decimal place, no space between quantity and unit
     to_equivalent_formatting = "%.1Lf %s";// <-- one decimal place, with space between quantity and unit
@@ -116,4 +115,7 @@ void astronomy_examples() {
     auto Sagittarius_A_mass = 8.54e36_kg;
     auto radius             = formula::Schwarzschild_radius(Sagittarius_A_mass);
     println(radius, " or ", to_equivalent(radius), " (Schwarzschild radius)");
+
+
+    println("");
 }

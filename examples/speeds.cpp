@@ -6,7 +6,6 @@ using namespace SI;
 
 void speed_examples() {
 
-    println("");
     println("    === SPEED EXAMPLES ===");
     to_string_formatting     = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
     to_equivalent_formatting = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
@@ -26,16 +25,16 @@ void speed_examples() {
     println(avg_travel_speed, " or ", to_equivalent(avg_travel_speed));
 
 
-    print(" 3. The sum of 5 different speeds is... ");
-    velocity sum = 1_m_per_s + 1_km_per_h + 1_kn + 1_mph + 1_Mach;
+    print(" 3. The sum of 7 different speeds is... ");
+    velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mph + 1_ft_per_min;
     println(sum);
 
 
-    print(" 4. The min/max/average/sum of an array of speeds is...");
-    velocity speeds[] = { 1_m_per_s, 1_km_per_h, 1_kn, 1_mph, 1_Mach };
+    print(" 4. The min/max/average/sum of an array of speeds is... ");
+    velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
     int n = sizeof(speeds) / sizeof(speeds[0]);
-    //print(" min=", minimum_of_array(speeds, n));
-    //print(" max=", maximum_of_array(speeds, n));
-    //print(" avg=", average_of_array(speeds, n));
-    //println(" sum=", sum_of_array(speeds, n));
+    //println("min=", min_of_array(speeds, n), " max=", max_of_array(speeds, n), " avg=", avg_of_array(speeds, n), " sum=", sum_of_array(speeds, n));
+
+
+    println("");
 }
