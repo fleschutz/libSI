@@ -2,7 +2,6 @@
 /// @brief    Contains 3 speed examples using libSI.
 
 #include <SI/all.h> 
-#include "datasets/Earth.h"
 using namespace SI;
 
 void speed_examples() {
@@ -33,8 +32,8 @@ void speed_examples() {
 
 
     print(" 4. The min/max/average/sum of an array of speeds is...");
-    //velocity speeds[] = { 1_m_per_s, 1_km_per_h, 1_kn, 1_mph, 1_Mach };
-    //int n = sizeof(speeds) / sizeof(speeds[0]);
+    velocity speeds[] = { 1_m_per_s, 1_km_per_h, 1_kn, 1_mph, 1_Mach };
+    int n = sizeof(speeds) / sizeof(speeds[0]);
     //print(" min=", minimum_of_array(speeds, n));
     //print(" max=", maximum_of_array(speeds, n));
     //print(" avg=", average_of_array(speeds, n));
