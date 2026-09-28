@@ -178,10 +178,10 @@ namespace SI { namespace formula {
 
 	// 3. Moving Objects
 	// -----------------
-	/// @brief Calculates the average speed from distance (d) and time (t).
-	FUNC velocity average_speed(const length d, const SI::time t)
+	/// @brief Calculates the average speed from distance and duration.
+	FUNC velocity average_speed(const length distance, const time duration)
 	{
-		return d / t;
+		return distance / duration;
 	}
 
 	/// @brief Calculates the kinetic energy of a non-rotating object of mass (m) traveling at velocity (v).
