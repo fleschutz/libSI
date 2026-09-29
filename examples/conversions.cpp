@@ -6,33 +6,31 @@ using namespace SI;
 
 void conversion_examples() {
 
-    // Import from a Literal
-    // ---------------------
+    // Import by using a Literal
+    // -------------------------
     length distance = 42_m;
-    SI::time day    = 24_h;
-    mass weight     = 100_lb;
 
-    // Import from a Dimensionless Number (option #1)
-    // ----------------------------------------------
+    // Import by Casting a Dimensionless Number
+    // ----------------------------------------
     distance = meters(42);
     
-    // Import from a Dimensionless Number (option #2)
-    // ----------------------------------------------
+    // Import by Multiplying a Dimensionless Number
+    // --------------------------------------------
     double x = 42;
-    distance = x * 1_m;          // <- distance now contains 42m
+    distance = x * 1_m; 
 
     // Import from a String
     // ---------------------
-    bool check = from_string("42m", distance);
+    bool is_valid = from_string("42m", distance);
 
 
     // Export to a Number
     // ------------------
-    double y = distance / 1_m;  // <- y again contains a dimensionless number (no unit)
+    double y = distance / 1_m;
 
     // Export to a String
     // ------------------
-    std::string result = to_string(distance); // <- result gets "42.00m" assigned
+    std::string result = to_string(distance);
 
     // Export to an Equivalent String
     // ------------------------------
