@@ -1,5 +1,5 @@
 /// @file     examples/conversions.cpp
-/// @brief    Contains 6 conversion examples.
+/// @brief    Contains 4 examples for import and 3 examples for export.
 
 #include <SI/all.h> 
 using namespace SI;
@@ -18,7 +18,7 @@ void conversion_examples() {
     
     // Import from a Dimensionless Number (option #2)
     // ----------------------------------------------
-    double x = 42;               // <- x now contains a dimensionless number without unit
+    double x = 42;
     distance = x * 1_m;          // <- distance now contains 42m
 
     // Import from a String
