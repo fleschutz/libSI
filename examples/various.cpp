@@ -2,6 +2,7 @@
 /// @brief    Contains various examples using libSI.
 
 #include <SI/core.h> 
+#include "datasets/all.h"
 using namespace SI;
 
 void various_examples() {
@@ -9,6 +10,244 @@ void various_examples() {
     println("    === VARIOUS EXAMPLES ===");
     to_string_formatting     = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
     to_equivalent_formatting = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
+
+
+    mass m     = 1_oz;
+    velocity c = constant::speed_of_light_in_vacuum;
+    energy E   = m * c * c;
+    std::cout << " 1. The potential energy of a single ounce is: " << E << std::endl;
+
+
+    auto file_size      = 1_TB;
+    auto download_speed = 100_Mbps;
+    auto download_time  = file_size / download_speed;
+    println(" 2. The download of 1TB at 100MBit/s takes: ", download_time);
+
+
+    auto tower_height   = 828_m;
+    auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
+    println(" 3. The free fall time from Burj Khalifa tower (828m) is: ", free_fall_time);
+
+
+    auto SUV_mass   = 5000_lb; 
+    auto SUV_speed  = 30_mph;
+    auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
+    println(" 4. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
+
+
+    auto Everest_latitude = 27.986065_deg;
+    auto Everest_height   = 8848_m;
+    auto local_gravity    = formula::local_gravity(Everest_latitude, Everest_height);
+    println(" 5. The local gravity at Mount Everest's peak is: ", local_gravity);
+
+
+    auto Donalds_weight = 102_kg;
+    auto Donalds_height = 190_cm;
+    auto Donalds_BMI    = formula::BMI(Donalds_weight, Donalds_height);
+    println(" 6. The body-mass index (BMI) of Donald Trump is: ", Donalds_BMI);
+
+
+    print(" 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
+    auto distance_driven = 400_mi;
+    auto fuel_consumed   = 15_gal;
+    auto fuel_efficiency = (fuel_consumed * 100_km) / distance_driven;
+    println(fuel_efficiency, " (per 100km)");
+
+
+    print(" 8. What's a car's braking distance from 100km/h on dry asphalt? ");
+    auto braking_on_dry_asphalt = 8_m_per_s²;
+    auto dry_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
+    println(dry_distance, " or ", to_equivalent(dry_distance));
+
+
+    print(" 9. What's a car's braking distance from 100km/h on wet asphalt? ");
+    auto braking_on_wet_asphalt = 6_m_per_s²;
+    auto wet_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
+    println(wet_distance, " or ", to_equivalent(wet_distance));
+
+
+    print("10. What's the frequency and wavelength of the high 'c' music note? ");
+    auto high_c_frequency = 1046.5_Hz;
+    auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
+    println(high_c_frequency, " and ", wavelength, " (", to_equivalent(wavelength), ")");
+
+
+    print("11. What's the population density on Earth (people per km² of land area)? ");
+    dimensionless Earth_population = 8.2e9;
+    auto Earth_land_area           = 148'940'000_km²;
+    auto population_density        = Earth_population / Earth_land_area;
+    println(population_density);
+
+
+    print("12. How much land area would be available for each person on Earth? ");
+    auto per_person = Earth_land_area / Earth_population;
+    println(per_person);
+
+
+    print("13. Which chemical elements melt above 2500K and are radioactive? ");
+    for (auto& element : dataset::chemical_elements) {
+        if (element.melting_point > 2500_K && element.radioactive)
+            printf("%s at %s, ", element.name, to_string(element.melting_point).c_str());
+    }
+    println("");
+
+
+    print("14. What's an aircraft's glide path on final at 10NM distance in 3000ft height? ");
+    auto distance_on_final = 10_nmi;
+    auto height_on_final   = 3000_ft;
+    auto glide_path        = formula::glide_path(distance_on_final, height_on_final);
+    println(glide_path);
+
+
+    print("15. What's the windchill temperature of 5°C air temperature at 55km/h wind? ");
+    auto air_temperature = 5_degC;
+    auto wind_speed      = 55_km_per_h;
+    auto windchill_temp  = formula::windchill_temperature(air_temperature, wind_speed);
+    println(windchill_temp, " or ", to_equivalent(windchill_temp));
+
+
+    print("16. What's the surface area and volume of a 30cm x 1cm pizza? ");
+    auto pizza_radius = 30_cm / 2;
+    auto pizza_height = 1_cm;
+    auto pizza_area   = formula::area_of_circle(pizza_radius);
+    auto pizza_volume = formula::volume_of_cylinder(pizza_radius, pizza_height);
+    println(pizza_area, " and ", pizza_volume);
+
+
+    print("17. What's the filament length of a 750g PLA roll with 2.85mm diameter? ");
+    auto filament_weight   = 750_g;
+    auto filament_diameter = 2.85_mm;
+    auto density_of_PLA    = 1.24_g_per_cm³;
+    auto filament_volume   = filament_weight / density_of_PLA;
+    auto filament_length   = filament_volume / (constant::pi * square(filament_diameter / 2.0));
+    println(filament_length, " or ", to_equivalent(filament_length));
+
+
+    print("18. How long takes a flight non-stop around the Earth at Mach 1? ");
+    auto flight_distance = dataset::Earth.equatorial_circumference;
+    auto flight_time     = flight_distance / 1_Mach;
+    println(flight_time);
+
+
+    print("19. What's the surface area and volume of a soccer ball? ");
+    auto ball_circumference = 70_cm; // (69-71cm for FIFA ball size 5)
+    auto ball_radius        = formula::radius_of_circumference(ball_circumference);
+    auto ball_area          = formula::area_of_sphere(ball_radius);
+    auto ball_volume        = formula::volume_of_sphere(ball_radius);
+    println(ball_area, " and ", ball_volume);
+
+
+    print("20. What's the lift force of an A380 wing at sea level with 284km/h rotation speed? ");
+    auto wing_surface              = 845_m²;
+    dimensionless lift_coefficient = 1.3939;
+    auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
+    auto air_speed                 = 284_km_per_h;
+    auto lift_force                = formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed);
+    println(lift_force);
+
+
+    print("21. What's the sound intensity of a 1W loudspeaker in 1m distance? ");
+    auto loudspeaker_power    = 1_W;
+    auto loudspeaker_distance = 1_m;
+    auto sound_intensity      = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
+    println(sound_intensity, " or ", to_equivalent(sound_intensity));
+
+
+    print("22. What's the max diving time in salt water in 10m depth using a 10l bottle? ");
+    auto average_breathing  = 20_l_per_min;
+    auto bottle_volume      = 10_l;
+    auto bottle_pressure    = 150_bar;
+    auto dive_depth         = 10_m;
+    auto salt_water_density = 1033.23_kg_per_m³;
+    auto air_pressure       = 1013.25_hPa;
+    auto water_pressure     = salt_water_density * constant::g_n * dive_depth + air_pressure;
+    auto max_time           = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
+    println(max_time);
+
+
+    print("23. What's the sum of 1m + 1nmi + 1ft + 1in? ");
+    auto length_sum = 1_m + 1_nmi + 1_ft + 1_in;
+    println(length_sum);
+
+
+    print("24. What's the sum of 1 byte + 1kB + 1GB...(and so on)? ");
+    auto byte_sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
+    println(byte_sum);
+
+
+    print("25. What's a radar's geometrical horizon from 30ft height? ");
+    auto Earth_radius         = 6371.009_km;
+    auto Radar_station_height = 30_ft;
+    auto distance             = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
+    println(distance, " or ", to_equivalent(distance));
+
+
+    print("26. What are the details of a 10m x 1m oak timber log? ");
+    auto log_length     = 10_m;
+    auto log_diameter   = 1_m;
+    auto dry_oak_weight = 710_kg_per_m³; 
+    auto dry_oak_power  = 4.2_kWh_per_kg;
+    auto area           = formula::area_of_cylinder(log_diameter / 2, log_length);
+    auto volume         = formula::volume_of_cylinder(log_diameter / 2, log_length);
+    auto weight         = volume * dry_oak_weight;
+    auto power          = weight * dry_oak_power;
+    println(area, ", ", volume, ", ", weight, ", ", power);
+
+
+    print("27. What's the min cable wire size for 100m copper, 230V, 30A max? ");
+    auto conductor_resistivity  = 1.7241e-8_Ohm_m; // for copper
+    auto cable_length           = 100_m;
+    auto max_current            = 30_A;
+    auto allowable_voltage_drop = 10_V; 
+    auto A = (2.0 * conductor_resistivity * cable_length * max_current) / allowable_voltage_drop;
+    println(A);
+
+
+    print("28. What's the voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms? ");
+    auto CC   = 0.47_uF;
+    auto V0   = 5_V;
+    auto RR   = 4.7_kOhm;
+    auto time = 10_ms;
+    auto V1   = V0 * exp(-time / (RR * CC));
+    println(V1);
+
+
+    print("29. What are the frequencies and wavelengths of all musical notes? ");
+    for (auto& note : dataset::musical_notes) {
+        auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
+        print(note.name, note.octave, "=", note.frequency, ",", wavelength, " ");
+    }
+    println("");
+
+
+    print("30. What's the power of a 15PS motorcycle with 200kg weight? ");
+    auto engine_power          = 15_PS;
+    auto motorcycle_mass       = 200_kg;
+    auto power_to_weight_ratio = motorcycle_mass / engine_power;
+    println(engine_power, " and ", power_to_weight_ratio);
+
+
+    print("31. How many wine bottles are needed for 1 hectoliter? ");
+    auto total_volume      = 1_hl;
+    auto volume_per_bottle = 750_ml;
+    auto number_of_bottles = total_volume / volume_per_bottle;
+    println(number_of_bottles);
+
+
+    print("32. What's the AC voltage within a tenth second: ");
+    for (auto time = 0.0_s; time < 0.1_s; time += 0.005_s) {
+        auto peak_voltage = 220_V;
+        auto sample_rate  = 50_Hz;
+        print(formula::sine_wave(peak_voltage, sample_rate, time), ", ");
+    }
+    println("");
+
+
+    auto lever_arm     = 20_cm;
+    auto force_applied = 500_N;
+    auto angle         = 90_deg;
+    auto torque = lever_arm * force_applied * SI::sin(angle);
+    println("33. Applying a perpendicular force of ", force_applied, " to a ", lever_arm, " long lever results in ", torque, " of torque.");
 
 
     println("");
