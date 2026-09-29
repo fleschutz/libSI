@@ -9,7 +9,7 @@ Apply math with this C++ physical units library correct, precise, and convenient
 - **Top speed** without runtime overhead. It just compiles to simple doubles.
 - **Supports** SI units, Imperial units, astronomical units, digital units, and a lot more.
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
-- **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](SI/CMake_support.md).
+- **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](doc/CMake_support.md).
 
 🧱 Core Building Blocks
 ------------------------
