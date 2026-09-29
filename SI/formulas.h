@@ -464,6 +464,46 @@ namespace SI { namespace formula {
 		return E / m;
 	}
 
+	// FUNC velocity min_of_array(velocity arr[], int n)
+	// {
+	//    if (n < 1)
+        //	  return meters_per_second(0);
+	//    velocity minimum = arr[0];
+	//    for (int i = 1; i < n; ++i)
+	//        if (arr[i] < minimum)
+	//        	minimum = arr[i];
+	//    return minimum;
+	// }
+
+	// FUNC velocity max_of_array(velocity arr[], int n)
+	// {
+	//    if (n < 1)
+        //	  return meters_per_second(0);
+	//    velocity maximum = arr[0];
+	//    for (int i = 1; i < n; ++i)
+	//        if (arr[i] > maximum)
+	//        	maximum = arr[i];
+	//    return maximum;
+	// }
+
+	// FUNC velocity avg_of_array(velocity arr[], int n)
+	// {
+	//    if (n < 1)
+        //	  return meters_per_second(0);
+	//    velocity sum = meters_per_second(0);
+	//    for (int i = 0; i < n; ++i)
+	//        sum += arr[i];
+	//    return sum / n;
+	// }
+
+	// FUNC velocity sum_of_array(velocity arr[], int n)
+	// {
+	//    velocity sum = meters_per_second(0);
+	//    for (int i = 0; i < n; ++i)
+	//        sum += arr[i];
+	//    return sum;
+	// }
+
 	// 8. References
 	// -------------
 	// 1. https://en.wikipedia.org/wiki/Turning_radius
