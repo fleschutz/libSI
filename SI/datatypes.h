@@ -1,6 +1,5 @@
 /// @file      SI/datatypes.h
-/// @brief     Provides 32 type-safe datatypes for SI units, e.g. SI::length
-/// @details   Categories are: SI Base Datatypes, Derived SI Datatypes, and References.
+/// @brief     Defines the 7 SI base datatypes and 25 derived ones, e.g. SI::length.
 
 #pragma once
 #include <SI/internal.h>
@@ -14,8 +13,8 @@
 
 namespace SI {
 
-	// 1. SI Base Datatypes
-	// --------------------
+	// SI Base Datatypes
+	// -----------------
 	//                               Exponents:
 	//                               l  m  t  T  c  s  i 
 	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // base unit in meters
@@ -26,8 +25,8 @@ namespace SI {
 	DATATYPE(amount_of_substance,    0, 0, 0, 0, 0, 1, 0); // in moles
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
 
-	// 2. Derived SI Datatypes
-	// -----------------------
+	// Derived SI Datatypes
+	// --------------------
 	DATATYPE(area,                   2, 0, 0, 0, 0, 0, 0); // in square meters
 	DATATYPE(volume,                 3, 0, 0, 0, 0, 0, 0); // in cubic meter
 	DATATYPE(velocity,               1, 0,-1, 0, 0, 0, 0); // in meter per second
@@ -53,10 +52,6 @@ namespace SI {
 	DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
 	DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
 	DATATYPE(per_amount_of_substance,0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
-
-	// 3. References
-	// -------------
-	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 
 } // namespace SI
 
