@@ -1,4 +1,4 @@
-#include <SI/all.h> 
+#include <SI/core.h> 
 #include "datasets/all.h"
 using namespace SI;
 

@@ -1,7 +1,7 @@
 /// @file     examples/speeds.cpp
 /// @brief    Contains 3 speed examples using libSI.
 
-#include <SI/all.h> 
+#include <SI/core.h> 
 using namespace SI;
 
 void speed_examples() {
