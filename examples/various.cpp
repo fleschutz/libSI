@@ -2,7 +2,7 @@
 /// @brief    Contains various examples using libSI.
 
 #include <SI/core.h> 
-#include "datasets/all.h"
+#include <SI/datasets/all.h>
 using namespace SI;
 
 void various_examples() {

@@ -2,7 +2,7 @@
 /// @brief    Contains 13 astronomy examples using libSI.
 
 #include <SI/core.h> 
-#include "datasets/astronomy.h"
+#include <SI/datasets/astronomy.h>
 using namespace SI;
 
 void astronomy_examples() {
