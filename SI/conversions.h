@@ -171,6 +171,12 @@ namespace SI
 		return _join(t / 1_ps, "ps");
 	}
 
+	inline std::ostream& operator<<(std::ostream& os, const time t)
+	{
+		os << to_string(t);
+		return os;
+	}
+
 	inline std::string to_string(const mass m)
 	{
 		if (m <= -1_Pt || m >= 1_Pt)
@@ -287,6 +293,12 @@ namespace SI
 		if (v <= -1_m_per_s || v >= 1_m_per_s || v == 0.0_m_per_s)
 			return _join(v / 1_m_per_s, "m/s");
 		return _join(v / 1_mm_per_h, "mm/h");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const velocity v)
+	{
+		os << to_string(v);
+		return os;
 	}
 
 	inline std::string to_string(const acceleration a)

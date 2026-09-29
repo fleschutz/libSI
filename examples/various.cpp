@@ -7,26 +7,25 @@ using namespace SI;
 
 void various_examples() {
 
-    println("    === VARIOUS EXAMPLES ===");
+    std::cout << "    === VARIOUS EXAMPLES ===" << std::endl;
     to_string_formatting     = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
     to_equivalent_formatting = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
 
 
-    mass m     = 1_oz;
-    velocity c = constant::speed_of_light_in_vacuum;
-    energy E   = m * c * c;
+    mass m   = 1_oz;
+    energy E = m * square(constant::speed_of_light_in_vacuum);
     std::cout << " 1. The potential energy of a single ounce is: " << E << std::endl;
 
 
     auto file_size      = 1_TB;
     auto download_speed = 100_Mbps;
     auto download_time  = file_size / download_speed;
-    println(" 2. The download of 1TB at 100MBit/s takes: ", download_time);
+    std::cout << " 2. The download of 1TB at 100MBit/s takes: " << download_time << std::endl;
 
 
     auto tower_height   = 828_m;
     auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
-    println(" 3. The free fall time from Burj Khalifa tower (828m) is: ", free_fall_time);
+    std::cout << " 3. The free fall time from Burj Khalifa tower (828m) is: " << free_fall_time << std::endl;
 
 
     auto SUV_mass   = 5000_lb; 
