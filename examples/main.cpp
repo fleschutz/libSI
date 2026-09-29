@@ -252,5 +252,8 @@ int main() {
     extern void conversion_examples();
     conversion_examples();
 
+    extern void various_examples();
+    various_examples();
+
     return 0;
 }

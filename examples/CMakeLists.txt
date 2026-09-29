@@ -14,7 +14,7 @@ endif(MSVC)
 
 include_directories(..)
 
-add_executable(examples main.cpp astronomy.cpp conversions.cpp speeds.cpp)
+add_executable(examples main.cpp astronomy.cpp conversions.cpp speeds.cpp various.cpp)
 
 # add unit tests
 enable_testing()

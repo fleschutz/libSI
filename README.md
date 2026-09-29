@@ -27,8 +27,8 @@ Apply math with this C++ physical units library correct, precise, and convenient
 using namespace SI;
 
 int main() {	
-    mass m     = 1_oz;
-    energy E   = m * square(constant::speed_of_light_in_vacuum);
+    mass m   = 1_oz;
+    energy E = m * square(constant::speed_of_light_in_vacuum);
     std::cout << "The potential energy of a single ounce is: " << E << std::endl;
 }
 ```
