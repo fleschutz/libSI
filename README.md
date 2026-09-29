@@ -13,12 +13,12 @@ Apply math with this C++ physical units library correct, precise, and convenient
 
 🧱 Core Building Blocks
 ------------------------
-- **Datatypes** like *SI::length* in [SI/datatypes.h](SI/datatypes.h)
-- **Units** such as *SI::meters* in [SI/units.h](SI/units.h)
-- **Literals** like *100_m* in [SI/literals.h](SI/literals.h)
-- **Constants** such as *SI::constant::speed_of_light_in_vacuum* in [SI/constants.h](SI/constants.h)
-- **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
-- **Conversions** such as *SI::to_string()* in [SI/conversions.h](SI/conversions.h)
+- **Datatypes** in [SI/datatypes.h](SI/datatypes.h), e.g. *SI::length*
+- **Units** in [SI/units.h](SI/units.h), e.g. *SI::meters*
+- **Literals** in [SI/literals.h](SI/literals.h), e.g. *100_m*
+- **Constants** in [SI/constants.h](SI/constants.h), e.g. *SI::constant::speed_of_light_in_vacuum*
+- **Formulas** in [SI/formulas.h](SI/formulas.h), e.g. *SI::formula::wavelength()*
+- **Conversions** in [SI/conversions.h](SI/conversions.h), e.g. *SI::to_string()*
 
 🔎 Example
 ----------
