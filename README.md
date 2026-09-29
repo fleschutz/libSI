@@ -11,37 +11,34 @@ Apply math with this C++ physical units library correct, precise, and convenient
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](SI/CMake_support.md).
 
-🧱 Building Blocks
-------------------
+🧱 Core Building Blocks
+------------------------
 - **Datatypes** like *SI::length* in [SI/datatypes.h](SI/datatypes.h)
 - **Units** such as *SI::meters* in [SI/units.h](SI/units.h)
 - **Literals** like *100_m* in [SI/literals.h](SI/literals.h)
 - **Constants** such as *SI::constant::speed_of_light_in_vacuum* in [SI/constants.h](SI/constants.h)
 - **Formulas** such as *SI::formula::wavelength()* in [SI/formulas.h](SI/formulas.h)
 - **Conversions** such as *SI::to_string()* in [SI/conversions.h](SI/conversions.h)
-- **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
-- **Datasets**, e.g. *dataset::chemical_elements* in 📂[datasets](datasets/) (optional)
-
 
 🔎 Example
 ----------
 ```cpp
-#include <SI/all.h>
+#include <SI/core.h>
 using namespace SI;
 
 int main() {	
     mass m     = 1_oz;
-    velocity c = constant::speed_of_light_in_vacuum;
-    energy E   = m * c * c;
+    energy E   = m * square(constant::speed_of_light_in_vacuum);
     std::cout << "The potential energy of a single ounce is: " << E << std::endl;
 }
 ```
-Executing: `cd examples && cmake . && make && ./examples` writes to the console:
-```
-The potential energy of a single ounce is: 2.55PJ
-```
-**See 47 more examples** in 📂[examples](examples/), writing this: [console output](examples/console_output.txt)
 
+
+💡 More Information
+--------------------
+- **47 more examples** in 📂[examples](examples/), writing this: [console output](examples/console_output.txt)
+- **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
+- **Datasets** based on SI units, e.g. *dataset::chemical_elements* in 📂[datasets](datasets/)
 
 💡 Q & A
 ---------
