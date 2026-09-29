@@ -1,5 +1,5 @@
-libSI - The Physical Units Library For Modern C++
-=================================================
+libSI - The Physical Units Library For C++
+==========================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
 Apply math with this C++ physical units library correct, precise, and convenient. Features are: 
