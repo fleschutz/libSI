@@ -1,5 +1,5 @@
 /// @file     examples/speeds.cpp
-/// @brief    Contains 3 speed examples using libSI.
+/// @brief    Contains 4 speed examples using libSI.
 
 #include <SI/core.h> 
 using namespace SI;
@@ -33,7 +33,8 @@ void speed_examples() {
     print(" 4. The min/max/average/sum of an array of speeds is... ");
     velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
     int n = sizeof(speeds) / sizeof(speeds[0]);
-    //println("min=", min_of_array(speeds, n), " max=", max_of_array(speeds, n), " avg=", avg_of_array(speeds, n), " sum=", sum_of_array(speeds, n));
+    println("min=", formula::min_of_array(speeds, n), " max=", formula::max_of_array(speeds, n),
+	    " avg=", formula::avg_of_array(speeds, n), " sum=", formula::sum_of_array(speeds, n));
 
 
     println("");

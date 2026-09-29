@@ -1,5 +1,5 @@
 /// @file     SI/formulas.h
-/// @brief    Provides 70 basic formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @brief    Provides 76 basic formulas based on SI datatypes, e.g. SI::formula::wavelength().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once
@@ -223,16 +223,16 @@ namespace SI { namespace formula {
 	// 4. Vehicle Formulas
 	// -------------------
 	/// @brief Calculates the revolutions per minute (RPM) from velocity (v) and wheel radius (r).
-	/// FUNC dimensionless wheel_rpm(const velocity v, const length r)
-	/// {
-	/// 	return v / (constant::tau * r) * 60.0;
-	/// }
+	FUNC dimensionless wheel_rpm(const velocity v, const length r)
+	{
+		return v / (constant::tau * r) * 60_s;
+	}
 
 	/// @brief Calculates the wheel speed from wheel radius (r) and revolutions per minute (RPM).
-	/// FUNC velocity wheel_speed(const length r, const dimensionless RPM)
-	/// {
-	/// 	return constant::tau * r * (RPM / 60.0);
-	/// }
+	FUNC velocity wheel_speed(const length r, const dimensionless RPM)
+	{
+		return constant::tau * r * (RPM / 60_s);
+	}
 
 	/// @brief Calculates the turning radius of wheeled vehicles.
 	FUNC length turning_radius_of_vehicle(const length wheelbase, const angle steering_angle, const length tire_width)
@@ -476,45 +476,45 @@ namespace SI { namespace formula {
 		return E / m;
 	}
 
-	// FUNC velocity min_of_array(velocity arr[], int n)
-	// {
-	//    if (n < 1)
-        //	  return meters_per_second(0);
-	//    velocity minimum = arr[0];
-	//    for (int i = 1; i < n; ++i)
-	//        if (arr[i] < minimum)
-	//        	minimum = arr[i];
-	//    return minimum;
-	// }
+	FUNC velocity min_of_array(velocity arr[], int n)
+	{
+		if (n < 1)
+			return meters_per_second(0);
+		velocity minimum = arr[0];
+		for (int i = 1; i < n; ++i)
+			if (arr[i] < minimum)
+				minimum = arr[i];
+		return minimum;
+	}
 
-	// FUNC velocity max_of_array(velocity arr[], int n)
-	// {
-	//    if (n < 1)
-        //	  return meters_per_second(0);
-	//    velocity maximum = arr[0];
-	//    for (int i = 1; i < n; ++i)
-	//        if (arr[i] > maximum)
-	//        	maximum = arr[i];
-	//    return maximum;
-	// }
+	FUNC velocity max_of_array(velocity arr[], int n)
+	{
+		if (n < 1)
+			return meters_per_second(0);
+		velocity maximum = arr[0];
+		for (int i = 1; i < n; ++i)
+			if (arr[i] > maximum)
+				maximum = arr[i];
+		return maximum;
+	}
 
-	// FUNC velocity avg_of_array(velocity arr[], int n)
-	// {
-	//    if (n < 1)
-        //	  return meters_per_second(0);
-	//    velocity sum = meters_per_second(0);
-	//    for (int i = 0; i < n; ++i)
-	//        sum += arr[i];
-	//    return sum / n;
-	// }
+	FUNC velocity avg_of_array(velocity arr[], int n)
+	{
+		if (n < 1)
+			return meters_per_second(0);
+		velocity sum = meters_per_second(0);
+		for (int i = 0; i < n; ++i)
+			sum += arr[i];
+		return sum / n;
+	}
 
-	// FUNC velocity sum_of_array(velocity arr[], int n)
-	// {
-	//    velocity sum = meters_per_second(0);
-	//    for (int i = 0; i < n; ++i)
-	//        sum += arr[i];
-	//    return sum;
-	// }
+	FUNC velocity sum_of_array(velocity arr[], int n)
+	{
+		velocity sum = meters_per_second(0);
+		for (int i = 0; i < n; ++i)
+			sum += arr[i];
+		return sum;
+	}
 
 	// 8. References
 	// -------------
