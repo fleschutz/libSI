@@ -17,27 +17,30 @@ void various_examples() {
     std::cout << " 1. The potential energy of a single ounce is: " << E << std::endl;
 
 
+    std::cout << " 2. The download of 1TB at 100MBit/s takes... ";
     auto file_size      = 1_TB;
     auto download_speed = 100_Mbps;
-    auto download_time  = file_size / download_speed;
-    std::cout << " 2. The download of 1TB at 100MBit/s takes: " << download_time << std::endl;
+    std::cout << file_size / download_speed << std::endl;
 
 
+    std::cout << " 3. The free fall time from Burj Khalifa tower (828m) is... ";
     auto tower_height   = 828_m;
     auto free_fall_time = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
-    std::cout << " 3. The free fall time from Burj Khalifa tower (828m) is: " << free_fall_time << std::endl;
+    std::cout << free_fall_time << std::endl;
 
 
+    std::cout << " 4. The kinetic energy of a mid-size SUV at 30MPH is... ";
     auto SUV_mass   = 5000_lb; 
     auto SUV_speed  = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
-    println(" 4. The kinetic energy of a mid-size SUV at 30MPH is: ", SUV_energy, " or ", to_equivalent(SUV_energy));
+    std::cout << SUV_energy << " or " << to_equivalent(SUV_energy) << std::endl;
 
 
+    std::cout << " 5. The local gravity at Mount Everest's peak is... ";
     auto Everest_latitude = 27.986065_deg;
     auto Everest_height   = 8848_m;
     auto local_gravity    = formula::local_gravity(Everest_latitude, Everest_height);
-    println(" 5. The local gravity at Mount Everest's peak is: ", local_gravity);
+    std::cout << local_gravity << std::endl;
 
 
     auto Donalds_weight = 102_kg;

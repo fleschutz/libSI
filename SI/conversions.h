@@ -202,6 +202,12 @@ namespace SI
 		return _join(m / 1_ng, "ng");
 	}
 
+	inline std::ostream& operator<<(std::ostream& os, const mass m)
+	{
+		os << to_string(m);
+		return os;
+	}
+
 	inline std::string to_string(const temperature T)
 	{
 		if (T <= -1_GK || T >= 1_GK)
@@ -308,6 +314,12 @@ namespace SI
 		return _join(a / 1_m_per_s², "m/s²");
 	}
 
+	inline std::ostream& operator<<(std::ostream& os, const acceleration a)
+	{
+		os << to_string(a);
+		return os;
+	}
+
 	inline std::string to_string(const frequency f)
 	{
 		if (f <= -1_THz || f >= 1_THz)
@@ -346,6 +358,12 @@ namespace SI
 		if (F <= -1_uN || F >= 1_uN)
 			return _join(F / 1_uN, "µN");
 		return _join(F / 1_pN, "pN");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const force F)
+	{
+		os << to_string(F);
+		return os;
 	}
 
 	inline std::string to_string(const energy E)
