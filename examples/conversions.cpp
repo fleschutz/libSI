@@ -18,6 +18,7 @@ void conversion_examples() {
     // --------------------------------------------
     double x = 42;
     distance = x * 1_m; 
+    // IMPORTANT NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
     // Import from a String
     // ---------------------
@@ -34,8 +35,5 @@ void conversion_examples() {
 
     // Export to an Equivalent String
     // ------------------------------
-    std::string equiv = to_equivalent(distance); // <- equiv gets "45.93yd" assigned
-
-
-    // NOTE: The above conversions don't work for celsius and fahrenheit due to the offset!
+    std::string equiv = to_equivalent(distance); // <- equiv gets "45.93yd" assigned    
 }
