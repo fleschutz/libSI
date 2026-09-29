@@ -1,6 +1,6 @@
 /// @file     SI/formulas.h
 /// @brief    Provides 70 basic formulas based on SI datatypes, e.g. SI::formula::wavelength().
-/// @details  Categories are: 2D, 3D, Moving Objects, Vehicles, Aircraft, Gravitation, Various, and References.
+/// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once
 #include <SI/constants.h>
@@ -220,8 +220,20 @@ namespace SI { namespace formula {
 		return delta_v / delta_t;
 	}
 
-	// 4. Formulas for Vehicles
-	// ------------------------
+	// 4. Vehicle Formulas
+	// -------------------
+	/// @brief Calculates the revolutions per minute (RPM) from velocity (v) and wheel radius (r).
+	/// FUNC dimensionless wheel_rpm(const velocity v, const length r)
+	/// {
+	/// 	return v / (constant::tau * r) * 60.0;
+	/// }
+
+	/// @brief Calculates the wheel speed from wheel radius (r) and revolutions per minute (RPM).
+	/// FUNC velocity wheel_speed(const length r, const dimensionless RPM)
+	/// {
+	/// 	return constant::tau * r * (RPM / 60.0);
+	/// }
+
 	/// @brief Calculates the turning radius of wheeled vehicles.
 	FUNC length turning_radius_of_vehicle(const length wheelbase, const angle steering_angle, const length tire_width)
 	{
@@ -234,8 +246,8 @@ namespace SI { namespace formula {
 		return (v1 - v0) / (t * constant::Earth_gravity);
 	}
 
-	// 5. Formulas for Aircraft
-	// ------------------------
+	// 5. Aircraft Formulas
+	// --------------------
 	/// @brief Calculates the true airspeed (TAS).
 	FUNC velocity true_airspeed(const force lift_force, const dimensionless lift_coefficient, const area wing_surface, const density air_density)
 	{
