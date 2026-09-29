@@ -18,7 +18,7 @@ void conversion_examples() {
     // --------------------------------------------
     double x = 42;
     distance = x * 1_m; 
-    // IMPORTANT NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
     // Import from a String
     // ---------------------
@@ -28,6 +28,7 @@ void conversion_examples() {
     // Export to a Number
     // ------------------
     double y = distance / 1_m;
+    // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
     // Export to a String
     // ------------------
