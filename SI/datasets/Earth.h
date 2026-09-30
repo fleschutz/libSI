@@ -1,6 +1,6 @@
-/// @file    datasets/Earth.h
-/// @brief   Contains data of the Earth, e.g. dataset::Earth.mass
-/// @details Categories are: Orbital characteristics, Physical characteristics, Atmosphere, Various, and References.
+/// @file     SI/datasets/Earth.h
+/// @brief    Contains data of our Earth, e.g. Earth.mass
+/// @details  Categories are: Orbital characteristics, Physical characteristics, Atmosphere, Various, and References.
 
 #pragma once
 #include <SI/literals.h>
