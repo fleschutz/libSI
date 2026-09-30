@@ -225,6 +225,12 @@ namespace SI
 		return _join(T / 1_nK, "nK");
 	}
 
+	inline std::ostream& operator<<(std::ostream& os, const temperature T)
+	{
+		os << to_string(T);
+		return os;
+	}
+
 	inline std::string to_string(const electric_current I)
 	{
 		if (I <= -1_GA || I >= 1_GA)
@@ -426,6 +432,12 @@ namespace SI
 		return _join(P / 1_W, "W");
 	}
 
+	inline std::ostream& operator<<(std::ostream& os, const power P)
+	{
+		os << to_string(P);
+		return os;
+	}
+
 	inline std::string to_string(const power_intensity I)
 	{
 		if (I <= -1_MW_per_m² || I >= 1_MW_per_m²)
@@ -435,6 +447,12 @@ namespace SI
 		if (I <= -1_W_per_m² || I >= 1_W_per_m²)
 			return _join(I / 1_W_per_m², "W/m²");
 		return _join(I / 1_mW_per_m², "mW/m²");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const power_intensity I)
+	{
+		os << to_string(I);
+		return os;
 	}
 
 	inline std::string to_string(const pressure p)
@@ -450,6 +468,12 @@ namespace SI
 		if (p <= -1_mPa || p >= 1_mPa)
 			return _join(p / 1_mPa, "mPa");
 		return _join(p / 1_uPa, "µPa");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const pressure p)
+	{
+		os << to_string(p);
+		return os;
 	}
 
 	inline std::string to_string(const electric_potential U)
@@ -469,6 +493,12 @@ namespace SI
 		if (U <= -1_nV || U >= 1_nV)
 			return _join(U / 1_nV, "nV");
 		return _join(U / 1_pV, "pV");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const electric_potential U)
+	{
+		os << to_string(U);
+		return os;
 	}
 
 	inline std::string to_string(const electric_charge Q)
@@ -498,6 +528,12 @@ namespace SI
 		if (m <= -1_kg_per_kW || m >= 1_kg_per_kW)
 			return _join(m / 1_kg_per_kW, "kg/kW");
 		return _join(m / 1_kg_per_W, "kg/W");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const mass_per_power m)
+	{
+		os << to_string(m);
+		return os;
 	}
 
 	inline std::string to_string(const density d)
