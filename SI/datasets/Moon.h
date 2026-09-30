@@ -1,6 +1,7 @@
 /// @file     SI/datasets/Moon.h
 /// @brief    Contains data of our Moon, e.g. Moon.mass
-/// @details  Categories are: Orbital characteristics, Physical characteristics, Atmosphere, and References.
+/// @details  Source: https://en.wikipedia.org/wiki/Moon (as of 2026)
+///           Categories are: Orbital characteristics, Physical characteristics, Atmosphere, and References.
 
 #pragma once
 #include <SI/literals.h>
@@ -39,10 +40,6 @@ namespace dataset {
         // Atmosphere
         pressure      surface_pressure_day  =        10e-7_Pa;
         pressure      surface_pressure_night  =     10e-10_Pa;
-
-        // References
-        // ----------
-        // 1. https://en.wikipedia.org/wiki/Moon (as of 2026)
 
     } Moon;
 

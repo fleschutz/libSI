@@ -1,6 +1,7 @@
 /// @file     SI/datasets/Earth.h
 /// @brief    Contains data of our Earth, e.g. Earth.mass
-/// @details  Categories are: Orbital characteristics, Physical characteristics, Atmosphere, Various, and References.
+/// @details  Source: https://en.wikipedia.org/wiki/Earth (as of 2026)
+///           Categories are: Orbital characteristics, Physical characteristics, Atmosphere, Various, and References.
 
 #pragma once
 #include <SI/literals.h>
@@ -60,11 +61,6 @@ namespace dataset {
 
         // Various
         dimensionless population =           8.2e9;
-
-        // References
-        // ----------
-        // 1. https://en.wikipedia.org/wiki/Earth
-        // 2. https://en.wikipedia.org/wiki/List_of_gravitationally_rounded_objects_of_the_Solar_System
 
     } Earth;
 
