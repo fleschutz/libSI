@@ -36,9 +36,10 @@ int main() {
 
 🎁 Additional Components
 -------------------------
-- **47 Examples** in 📂[examples](examples/), executing it write this: [console output](examples/console_output.txt)
-- **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
-- **Datasets** based on SI units in 📂[SI/datasets](SI/datasets/), e.g. *dataset::chemical_elements*
+- **47 Examples** in 📂[examples](examples/) which are writing this to the console: [console output](examples/console_output.txt)
+- **13 Datasets** based on SI units in 📂[SI/datasets](SI/datasets/), e.g. *dataset::chemical_elements*
+- **210 Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
+
 
 💡 Q & A
 ---------
