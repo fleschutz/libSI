@@ -51,7 +51,7 @@ int main() {
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
-**How to import or export numbers and string?** See the examples in [conversions.cpp](examples/conversions.cpp).
+**How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
 
 **Where are the list of references?** References are always listed at the end of each source code file.
 
