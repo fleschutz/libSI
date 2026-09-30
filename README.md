@@ -36,7 +36,7 @@ int main() {
 
 💡 Additional Components
 -------------------------
-- **47 more examples** in 📂[examples](examples/), writing this: [console output](examples/console_output.txt)
+- **47 Examples** in 📂[examples](examples/), writing this: [console output](examples/console_output.txt)
 - **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 - **Datasets** based on SI units in 📂[SI/datasets](SI/datasets/), e.g. *dataset::chemical_elements*
 
