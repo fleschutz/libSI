@@ -34,11 +34,11 @@ int main() {
 - **Conversions** in [SI/conversions.h](SI/conversions.h), e.g. *SI::to_string()*
 
 
-💡 More Information
---------------------
+💡 Additional Components
+-------------------------
 - **47 more examples** in 📂[examples](examples/), writing this: [console output](examples/console_output.txt)
 - **Unit tests** performed at compile-time in [SI/tests.h](SI/tests.h) and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
-- **Datasets** based on SI units, e.g. *dataset::chemical_elements* in 📂[datasets](datasets/)
+- **Datasets** based on SI units in 📂[SI/datasets](SI/datasets/), e.g. *dataset::chemical_elements*
 
 💡 Q & A
 ---------
