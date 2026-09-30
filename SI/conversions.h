@@ -260,6 +260,12 @@ namespace SI
 		return _join(a / 1_um², "μm²");
 	}
 
+	inline std::ostream& operator<<(std::ostream& os, const area a)
+	{
+		os << to_string(a);
+		return os;
+	}
+
 	inline std::string to_string(const per_area a)
 	{
 		if (a <= -1_per_km² || a >= 1_per_km²)
@@ -273,6 +279,12 @@ namespace SI
 		if (a <= -1_per_mm² || a >= 1_per_mm²)
 			return _join(a / 1_per_mm², "/mm²");
 		return _join(a / 1_per_μm², "/μm²");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const per_area a)
+	{
+		os << to_string(a);
+		return os;
 	}
 
 	inline std::string to_string(const volume v)
@@ -290,6 +302,12 @@ namespace SI
 		if (v <= -1_nl || v >= 1_nl)
 			return _join(v / 1_nl, "nl");
 		return _join(v / 1_pl, "pl");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const volume v)
+	{
+		os << to_string(v);
+		return os;
 	}
 
 	inline std::string to_string(const velocity v)
@@ -333,6 +351,12 @@ namespace SI
 		if (f <= -1_Hz || f >= 1_Hz || f == 0.0_Hz)
 			return _join(f / 1_Hz, "Hz");
 		return _join(f / 1_mHz, "mHz");
+	}
+
+	inline std::ostream& operator<<(std::ostream& os, const frequency f)
+	{
+		os << to_string(f);
+		return os;
 	}
 
 	inline std::string to_string(const force F)

@@ -43,47 +43,47 @@ void various_examples() {
     std::cout << local_gravity << std::endl;
 
 
+    std::cout << " 6. Donald Trump's body-mass index (BMI) is... ";
     auto Donalds_weight = 102_kg;
     auto Donalds_height = 190_cm;
-    auto Donalds_BMI    = formula::BMI(Donalds_weight, Donalds_height);
-    println(" 6. The body-mass index (BMI) of Donald Trump is: ", Donalds_BMI);
+    std::cout << formula::BMI(Donalds_weight, Donalds_height) << std::endl;
 
 
-    print(" 7. What's the fuel efficiency of a car driving 400 miles and consuming 15 US gallons? ");
+    std::cout << " 7. The fuel efficiency of a car driving 400 miles and consuming 15 US gallons is... ";
     auto distance_driven = 400_mi;
     auto fuel_consumed   = 15_gal;
     auto fuel_efficiency = (fuel_consumed * 100_km) / distance_driven;
-    println(fuel_efficiency, " (per 100km)");
+    std::cout << fuel_efficiency << " (per 100km)" << std::endl;
 
 
-    print(" 8. What's a car's braking distance from 100km/h on dry asphalt? ");
+    std::cout << " 8. A car's braking distance from 100km/h on dry asphalt is... ";
     auto braking_on_dry_asphalt = 8_m_per_s²;
     auto dry_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
-    println(dry_distance, " or ", to_equivalent(dry_distance));
+    std::cout << dry_distance << " or " << to_equivalent(dry_distance) << std::endl;
 
 
-    print(" 9. What's a car's braking distance from 100km/h on wet asphalt? ");
+    std::cout << " 9. A car's braking distance from 100km/h on wet asphalt is... ";
     auto braking_on_wet_asphalt = 6_m_per_s²;
     auto wet_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
-    println(wet_distance, " or ", to_equivalent(wet_distance));
+    std::cout << wet_distance << " or " << to_equivalent(wet_distance) << std::endl;
 
 
-    print("10. What's the frequency and wavelength of the high 'c' music note? ");
+    std::cout << "10. The frequency and wavelength of the high 'c' music note is...";
     auto high_c_frequency = 1046.5_Hz;
     auto wavelength = formula::wavelength(constant::speed_of_sound, high_c_frequency);
-    println(high_c_frequency, " and ", wavelength, " (", to_equivalent(wavelength), ")");
+    std::cout << high_c_frequency << " and " << wavelength << " (" << to_equivalent(wavelength) << ")" << std::endl;
 
 
-    print("11. What's the population density on Earth (people per km² of land area)? ");
+    std::cout << "11. The population density on Earth (people per km² of land area) is... ";
     dimensionless Earth_population = 8.2e9;
     auto Earth_land_area           = 148'940'000_km²;
     auto population_density        = Earth_population / Earth_land_area;
-    println(population_density);
+    std::cout << population_density << std::endl;
 
 
-    print("12. How much land area would be available for each person on Earth? ");
+    std::cout << "12. How much land area would be available for each person on Earth? ";
     auto per_person = Earth_land_area / Earth_population;
-    println(per_person);
+    std::cout << per_person << std::endl;
 
 
     print("13. Which chemical elements melt above 2500K and are radioactive? ");
