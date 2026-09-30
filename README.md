@@ -11,6 +11,19 @@ Apply math with this C++ physical units library correct, precise, and convenient
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](doc/CMake_support.md).
 
+🔎 Usage Example
+----------------
+```cpp
+#include <SI/core.h>
+using namespace SI;
+
+int main() {	
+    mass m    = 1_oz;
+    energy E  = m * square(constant::speed_of_light_in_vacuum);
+    std::cout << "The potential energy of a single ounce is: " << E << std::endl;
+}
+```
+
 🧱 Core Building Blocks
 ------------------------
 - **Datatypes** in [SI/datatypes.h](SI/datatypes.h), e.g. *SI::length*
@@ -19,19 +32,6 @@ Apply math with this C++ physical units library correct, precise, and convenient
 - **Constants** in [SI/constants.h](SI/constants.h), e.g. *SI::constant::speed_of_light_in_vacuum*
 - **Formulas** in [SI/formulas.h](SI/formulas.h), e.g. *SI::formula::wavelength()*
 - **Conversions** in [SI/conversions.h](SI/conversions.h), e.g. *SI::to_string()*
-
-🔎 Example
-----------
-```cpp
-#include <SI/core.h>
-using namespace SI;
-
-int main() {	
-    mass m   = 1_oz;
-    energy E = m * square(constant::speed_of_light_in_vacuum);
-    std::cout << "The potential energy of a single ounce is: " << E << std::endl;
-}
-```
 
 
 💡 More Information
