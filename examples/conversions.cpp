@@ -1,6 +1,7 @@
-/// @file     examples/conversions.cpp
-/// @brief    Contains 4 examples for import and 3 examples for export.
+/// @file   examples/conversions.cpp
+/// @brief  Contains 7 import/export examples.
 
+#include <string>
 #include <SI/core.h> 
 using namespace SI;
 
@@ -25,8 +26,8 @@ void conversion_examples() {
     bool is_valid = from_string("42m", distance);
 
 
-    // Export to a Number
-    // ------------------
+    // Export to a Dimensionless Number
+    // --------------------------------
     double y = distance / 1_m;
     // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
@@ -36,5 +37,5 @@ void conversion_examples() {
 
     // Export to an Equivalent String
     // ------------------------------
-    std::string equiv = to_equivalent(distance); // <- equiv gets "45.93yd" assigned    
+    std::string equiv = to_equivalent(distance); // <- this assigns "45.93yd" to equiv    
 }
