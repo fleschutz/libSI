@@ -1,28 +1,29 @@
-// USAGE:  #include "material_properties.h" ... for (auto& material_property : dataset::material_properties) { ...
-// SOURCE: material_properties.csv
-// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
+/// @file     material_properties.h
+/// @brief    Contains the dataset from material_properties.csv
+/// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
+///           USAGE: #include "material_properties.h" ... for (auto& material_property : dataset::material_properties) { ...
+
 #pragma once
 #include <SI/literals.h>
 
 namespace dataset {
-using namespace SI;
 
 struct material_property_details {
-	const char* Name;                  // from column  1 (string)
-	const char* Type;                  // from column  2 (string)
-	float Cost;                        // from column  3 ($/kg)
-	SI::density Density;               // from column  4 (mg/m³)
-	SI::pressure Youngs_Modulus;       // from column  5 (GPa)
-	SI::pressure Shear_Modulus;        // from column  6 (GPa)
-	double Poissons_Ratio;             // from column  7 (double)
-	SI::pressure Yield_Stress;         // from column  8 (MPa)
-	SI::pressure UTS;                  // from column  9 (MPa)
-	double Breaking_strain;            // from column 10 (%)
-	double Fracture_Toughness;         // from column 11 (double)
-	double Thermal_Expansion;          // from column 12 (double)
+	const char* Name;                  ///< from column  1 (string)
+	const char* Type;                  ///< from column  2 (string)
+	float Cost;                        ///< from column  3 ($/kg)
+	SI::density Density;               ///< from column  4 (mg/m³)
+	SI::pressure Youngs_Modulus;       ///< from column  5 (GPa)
+	SI::pressure Shear_Modulus;        ///< from column  6 (GPa)
+	double Poissons_Ratio;             ///< from column  7 (double)
+	SI::pressure Yield_Stress;         ///< from column  8 (MPa)
+	SI::pressure UTS;                  ///< from column  9 (MPa)
+	double Breaking_strain;            ///< from column 10 (%)
+	double Fracture_Toughness;         ///< from column 11 (double)
+	double Thermal_Expansion;          ///< from column 12 (double)
 };
 
-const material_property_details material_propertys[] { // HINT: 00=empty or unknown field
+const material_property_details material_propertys[] {      // NOTE: 00=empty or unknown field
 {"Alumina (Al2O3)","ceramic",1.90 ,3.9_g_per_m³,390_GPa,125_GPa,0.26,4800_MPa,35_MPa,0.,4.4,8.1},
 {"Aluminum alloy (7075-T6)","metal",1.80 ,2.7_g_per_m³,70_GPa,28_GPa,0.34,500_MPa,570_MPa,12,28,33},
 {"Beryllium alloy","metal",315.00 ,2.9_g_per_m³,245_GPa,110_GPa,0.12,360_MPa,500_MPa,6.,5.,14},
@@ -59,4 +60,3 @@ const material_property_details material_propertys[] { // HINT: 00=empty or unkn
 }; // (12 columns x 33 rows = 396 cells)
 
 } // end of namespace 'dataset'
-
