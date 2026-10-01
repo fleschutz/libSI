@@ -1,23 +1,24 @@
-// USAGE:  #include "moons.h" ... for (auto& moon : dataset::moons) { ...
-// SOURCE: moons.csv
-// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
+/// @file     moons.h
+/// @brief    Contains the dataset from moons.csv
+/// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
+///           USAGE: #include "moons.h" ... for (auto& moon : dataset::moons) { ...
+
 #pragma once
 #include <SI/literals.h>
 
 namespace dataset {
-using namespace SI;
 
 struct moon_details {
-	char planet[16];                   // from column  1 (char[16])
-	char name[16];                     // from column  2 (char[16])
-	SI::volume_per_time_squared GM;    // from column  3 (km³/s²)
-	SI::length mean_radius;            // from column  4 (km)
-	SI::density mean_density;          // from column  5 (kg/m³)
-	float magnitude;                   // from column  6 (float)
-	float albedo;                      // from column  7 (float)
+	char planet[16];                   ///< from column  1 (char[16])
+	char name[16];                     ///< from column  2 (char[16])
+	SI::volume_per_time_squared GM;    ///< from column  3 (km³/s²)
+	SI::length mean_radius;            ///< from column  4 (km)
+	SI::density mean_density;          ///< from column  5 (kg/m³)
+	float magnitude;                   ///< from column  6 (float)
+	float albedo;                      ///< from column  7 (float)
 };
 
-const moon_details moons[] { // HINT: 00=empty or unknown field
+const moon_details moons[] {               // NOTE: 00=empty or unknown field
 {"Earth","Moon",4902.801_km³_per_s²,1737.5_km,3.344_kg_per_m³,-12.74f,0.12f},
 {"Mars","Phobos",0.0007112_km³_per_s²,11.1_km,1.872_kg_per_m³,11.4f,0.071f},
 {"Mars","Deimos",0.0000985_km³_per_s²,6.2_km,1.471_kg_per_m³,12.45f,0.068f},
