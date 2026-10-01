@@ -1,7 +1,7 @@
 /// @file   examples/conversions.cpp
 /// @brief  Contains 7 import/export examples.
 
-#include <string>
+#include <iostream>
 #include <SI/core.h> 
 using namespace SI;
 
