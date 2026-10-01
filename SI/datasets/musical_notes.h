@@ -1,7 +1,7 @@
 /// @file     musical_notes.h
 /// @brief    Contains the dataset from musical_notes.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "musical_notes.hpp" ... for (auto& musical_note : dataset::musical_notes) { ...
+///           USAGE: #include "musical_notes.h" ... for (auto& musical_note : dataset::musical_notes) { ...
 
 #pragma once
 #include <SI/literals.h>

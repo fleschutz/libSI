@@ -1,7 +1,7 @@
 /// @file     monthly_sunspots.h
 /// @brief    Contains the dataset from monthly_sunspots.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "monthly_sunspots.hpp" ... for (auto& monthly_sunspot : dataset::monthly_sunspots) { ...
+///           USAGE: #include "monthly_sunspots.h" ... for (auto& monthly_sunspot : dataset::monthly_sunspots) { ...
 
 #pragma once
 
