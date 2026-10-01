@@ -1,13 +1,18 @@
 cmake_minimum_required(VERSION 3.23)
 
+# first we can indicate the documentation build as an option and set it to ON by default
+option(BUILD_DOC "Build documentation" ON)
+
 find_package(Doxygen)
 
-if(NOT Doxygen_FOUND)
-  message(
-    WARNING
-      "Doxygen not found. Targets for building documentation are not available")
-  return()
+if(NOT DOXYGEN_FOUND)
+    message("Doxygen need to be installed to generate the doxygen documentation")
+    return()
 endif()
+
+# set input and output files
+set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
+set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
 
 set(DOXYGEN_EXTRACT_ALL YES)
 set(DOXYGEN_BUILTIN_STL_SUPPORT YES)
