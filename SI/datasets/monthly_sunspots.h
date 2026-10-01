@@ -1,20 +1,18 @@
-// NOTE: This C/C++ header file has been converted from 'monthly_sunspots.csv'
-//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
-//       /usr/local/bin/csv2hpp monthly_sunspots.csv monthly_sunspot
-//       (more information at: https://github.com/fleschutz/csv2hpp)
-// USAGE: #include "monthly_sunspots.hpp" ... for (auto& monthly_sunspot : dataset::monthly_sunspots) { ...
+/// @file     monthly_sunspots.hpp
+/// @brief    Contains the dataset from monthly_sunspots.csv
+/// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
+///           USAGE: #include "monthly_sunspots.hpp" ... for (auto& monthly_sunspot : dataset::monthly_sunspots) { ...
+
 #pragma once
-#include <SI/literals.h>
-using namespace SI;
 
-namespace dataset { 
+namespace dataset {
 
-struct monthly_sunspot_data {
-	char date[16];                     // from column  2 (char[16])
-	float monthly_mean_total_sunspot_number;// from column  3 (float)
+struct monthly_sunspot_details {
+	char date[16];                     ///< from column  2 (char[16])
+	float monthly_mean_total_sunspot_number;///< from column  3 (float)
 };
 
-const monthly_sunspot_data monthly_sunspots[] { // HINT: 00=empty or unknown field
+const monthly_sunspot_details monthly_sunspots[] {      // NOTE: 00=empty or unknown field
 {"1749-01-31",96.7f},
 {"1749-02-28",104.3f},
 {"1749-03-31",116.7f},
@@ -3282,5 +3280,5 @@ const monthly_sunspot_data monthly_sunspots[] { // HINT: 00=empty or unknown fie
 {"2021-01-31",10.4f},
 }; // (2 columns x 3266 rows = 6532 cells)
 
-} // namespace dataset
+} // end of namespace 'dataset'
 
