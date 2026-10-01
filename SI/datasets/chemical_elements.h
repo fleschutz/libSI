@@ -1,6 +1,8 @@
-// USAGE:  #include "chemical_elements.h" ... for (auto& chemical_element : dataset::chemical_elements) { ...
-// SOURCE: chemical_elements.csv
-// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
+/// @file     chemical_elements.h
+/// @brief    Contains the dataset from chemical_elements.csv
+/// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
+///           USAGE: #include "chemical_elements.h" ... for (auto& chemical_element : dataset::chemical_elements) { ...
+
 #pragma once
 #include <SI/literals.h>
 
@@ -8,29 +10,29 @@ namespace dataset {
 using namespace SI;
 
 struct chemical_element_details {
-	unsigned char atomic_number;       // from column  1 (byte)
-	char symbol[4];                    // from column  2 (char[4])
-	const char* name;                  // from column  3 (string)
-	unsigned char group;               // from column  4 (byte)
-	unsigned char period;              // from column  5 (byte)
-	char block[4];                     // from column  6 (char[4])
-	unsigned char category;            // from column  7 (byte)
-	SI::mass atomic_mass;              // from column  8 (Da)
-	unsigned char standard_state;      // from column 11 (byte)
-	double density;                    // from column 12 (double)
-	SI::temperature melting_point;     // from column 13 (°C)
-	SI::temperature boiling_point;     // from column 14 (°C)
-	double heat_capacity;              // from column 15 (double)
-	double heat_of_fusion;             // from column 16 (double)
-	double heat_of_vaporization;       // from column 17 (double)
-	SI::length atomic_radius;          // from column 18 (pm)
-	SI::length covalent_radius;        // from column 19 (pm)
-	SI::length VanDerWaals_radius;     // from column 20 (pm)
-	SI::energy_per_mol ionization_energy;// from column 23 (kJ/mol)
-	bool radioactive;                  // from column 29 (bool)
+	unsigned char atomic_number;       ///< from column  1 (byte)
+	char symbol[4];                    ///< from column  2 (char[4])
+	const char* name;                  ///< from column  3 (string)
+	unsigned char group;               ///< from column  4 (byte)
+	unsigned char period;              ///< from column  5 (byte)
+	char block[4];                     ///< from column  6 (char[4])
+	unsigned char category;            ///< from column  7 (byte)
+	SI::mass atomic_mass;              ///< from column  8 (Da)
+	unsigned char standard_state;      ///< from column 11 (byte)
+	double density;                    ///< from column 12 (double)
+	SI::temperature melting_point;     ///< from column 13 (°C)
+	SI::temperature boiling_point;     ///< from column 14 (°C)
+	double heat_capacity;              ///< from column 15 (double)
+	double heat_of_fusion;             ///< from column 16 (double)
+	double heat_of_vaporization;       ///< from column 17 (double)
+	SI::length atomic_radius;          ///< from column 18 (pm)
+	SI::length covalent_radius;        ///< from column 19 (pm)
+	SI::length VanDerWaals_radius;     ///< from column 20 (pm)
+	SI::energy_per_mol ionization_energy;///< from column 23 (kJ/mol)
+	bool radioactive;                  ///< from column 29 (bool)
 };
 
-const chemical_element_details chemical_elements[] { // HINT: 00=empty or unknown field
+const chemical_element_details chemical_elements[] { // NOTE: 00=empty or unknown field
 {1,"H","Hydrogen",1,1,"s",0,1.008_Da,0,0.00008988,14.01_degC,20.28_degC,14.304,0.117,0.904,53_pm,38_pm,120_pm,1312_kJ_per_mol,false},
 {2,"He","Helium",18,1,"s",7,4.002602_Da,0,0.0001785,00_degC,4.22_degC,5.193,0.0138,0.0829,31_pm,32_pm,140_pm,2372.3_kJ_per_mol,false},
 {3,"Li","Lithium",1,2,"s",1,6.94_Da,2,0.534,453.69_degC,1560_degC,3.582,3,136,167_pm,134_pm,182_pm,520.2_kJ_per_mol,false},
@@ -152,4 +154,3 @@ const chemical_element_details chemical_elements[] { // HINT: 00=empty or unknow
 }; // (20 columns x 118 rows = 2360 cells)
 
 } // end of namespace 'dataset'
-
