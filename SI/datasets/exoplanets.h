@@ -1,6 +1,8 @@
-// USAGE:  #include "exoplanets.h" ... for (auto& exoplanet : dataset::exoplanets) { ...
-// SOURCE: exoplanets.csv
-// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
+/// @file     exoplanets.h
+/// @brief    Contains the dataset from exoplanets.csv
+/// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
+///           USAGE: #include "exoplanets.h" ... for (auto& exoplanet : dataset::exoplanets) { ...
+
 #pragma once
 #include <SI/literals.h>
 
@@ -8,21 +10,21 @@ namespace dataset {
 using namespace SI;
 
 struct exoplanet_details {
-	const char* name;                  // from column  1 (string)
-	const char* hostname;              // from column  2 (string)
-	unsigned char number_of_stars;     // from column  3 (byte)
-	unsigned char number_of_planets;   // from column  4 (byte)
-	SI::time orbital_period;           // from column  5 (days)
-	SI::length orbit_semimajor_axis;   // from column  6 (au)
-	double radius_vs_Earth;            // from column  7 (double)
-	double mass_vs_Earth;              // from column  8 (double)
-	double eccentricity;               // from column  9 (double)
-	double insolation_flux;            // from column 10 (double)
-	SI::temperature equilibrium_temperature;// from column 11 (K)
-	SI::length distance;               // from column 12 (pc)
+	const char* name;                  ///< from column  1 (string)
+	const char* hostname;              ///< from column  2 (string)
+	unsigned char number_of_stars;     ///< from column  3 (byte)
+	unsigned char number_of_planets;   ///< from column  4 (byte)
+	SI::time orbital_period;           ///< from column  5 (days)
+	SI::length orbit_semimajor_axis;   ///< from column  6 (au)
+	double radius_vs_Earth;            ///< from column  7 (double)
+	double mass_vs_Earth;              ///< from column  8 (double)
+	double eccentricity;               ///< from column  9 (double)
+	double insolation_flux;            ///< from column 10 (double)
+	SI::temperature equilibrium_temperature;///< from column 11 (K)
+	SI::length distance;               ///< from column 12 (pc)
 };
 
-const exoplanet_details exoplanets[] { // HINT: 00=empty or unknown field
+const exoplanet_details exoplanets[] {     // NOTE: 00=empty or unknown field
 {"11 Com b","11 Com",2,1,323.21_days,1.178_au,00,00,0.238,00,00_K,93.1846_pc},
 {"11 Com b","11 Com",2,1,326.03_days,1.29_au,00,00,0.231,00,00_K,93.1846_pc},
 {"11 Com b","11 Com",2,1,00_days,1.21_au,00,00,00,00,00_K,93.1846_pc},
