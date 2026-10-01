@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['geometric_5falbedo_0',['geometric_albedo',['../namespacedataset.html#ada769760175211089a622ca1dcc25372',1,'dataset']]],
+  ['gm_1',['GM',['../structdataset_1_1moon__details.html#a3130ad6ee9c93065d37e5bde489dbc21',1,'dataset::moon_details']]],
+  ['gravity_2',['gravity',['../structdataset_1_1planet__details.html#a187d67cd4b5c3921a6a8653007976058',1,'dataset::planet_details']]],
+  ['group_3',['group',['../structdataset_1_1chemical__element__details.html#a57654b1c8c179113b411201ef7c234fd',1,'dataset::chemical_element_details']]]
+];

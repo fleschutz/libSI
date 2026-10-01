@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['💡_20q_20a_0',['💡 Q &amp;amp; A',['../index.html#autotoc_md3',1,'']]]
+];
