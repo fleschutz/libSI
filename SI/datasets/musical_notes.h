@@ -1,21 +1,20 @@
-// NOTE: This C/C++ header file has been converted from 'musical_notes.csv'
-//       on March 16, 2026 by using csv2hpp 0.7 with command-line:
-//       /usr/local/bin/csv2hpp musical_notes.csv musical_note
-//       (more information at: https://github.com/fleschutz/csv2hpp)
-// USAGE: #include "musical_notes.hpp" ... for (auto& musical_note : dataset::musical_notes) { ...
+/// @file     musical_notes.h
+/// @brief    Contains the dataset from musical_notes.csv
+/// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
+///           USAGE: #include "musical_notes.hpp" ... for (auto& musical_note : dataset::musical_notes) { ...
+
 #pragma once
 #include <SI/literals.h>
-using namespace SI;
 
-namespace dataset { 
+namespace dataset {
 
-struct musical_note_data {
-	unsigned char octave;              // from column  1 (byte)
-	char name[4];                      // from column  2 (char[4])
-	SI::frequency frequency;           // from column  3 (Hz)
+struct musical_note_details {
+	unsigned char octave;              ///< from column  1 (byte)
+	char name[4];                      ///< from column  2 (char[4])
+	SI::frequency frequency;           ///< from column  3 (Hz)
 };
 
-const musical_note_data musical_notes[] { // HINT: 00=empty or unknown field
+const musical_note_details musical_notes[] {  // NOTE: 00=empty or unknown field
 {0,"C",16.351_Hz},
 {0,"C#",17.324_Hz},
 {0,"D",18.354_Hz},
@@ -138,5 +137,5 @@ const musical_note_data musical_notes[] { // HINT: 00=empty or unknown field
 {9,"B",15804.264_Hz},
 }; // (3 columns x 120 rows = 360 cells)
 
-} // namespace dataset
+} // end of namespace 'dataset'
 
