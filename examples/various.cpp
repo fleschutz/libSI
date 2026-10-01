@@ -189,7 +189,7 @@ void various_examples() {
     auto volume         = formula::volume_of_cylinder(log_diameter / 2, log_length);
     auto weight         = volume * dry_oak_weight;
     auto power          = weight * dry_oak_power;
-    cout << area << ", " << volume << ", " << weight << ", " << power << endl;
+    cout << area << " area, " << volume << " volume, " << weight << " volume , " << power << endl;
 
 
     cout << "26. The min cable wire size for 100m copper, 230V, 30A max are... ";
