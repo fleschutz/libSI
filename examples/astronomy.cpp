@@ -38,13 +38,23 @@ void astronomy_examples() {
     cout << formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_to_Moon_distance) << endl;
 
 
-    cout << " 5. The wavelength of hydrogen (H2) in vacuum is... ";
+    cout << " 5. The impact energy of a 50m asteroid at 50,000km/h is... ";
+    auto asteroid_diameter = 50_m;
+    auto asteroid_density  = 2500_kg_per_m³; // mostly estimated only 
+    auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
+    auto asteroid_volume   = formula::volume_of_sphere(asteroid_diameter / 2.0);
+    auto asteroid_mass     = asteroid_volume * asteroid_density;
+    auto impact_energy     = formula::kinetic_energy(asteroid_mass, asteroid_velocity);
+    cout << impact_energy << " or " << to_equivalent(impact_energy) << endl;
+
+
+    cout << " 6. The wavelength of hydrogen (H2) in vacuum is... ";
     auto H2_frequency  = 1420.4057517682_MHz;
     auto H2_wavelength = formula::wavelength(constant::speed_of_light_in_vacuum, H2_frequency);
     cout << H2_wavelength << " or " << to_equivalent(H2_wavelength) << endl;
 
 
-    cout << " 6. Bigger moons than Earth's moon are... ";
+    cout << " 7. Bigger moons than Earth's moon are... ";
     for (auto& moon : dataset::moons) {
         if (moon.mean_radius > 1737.5_km)
             cout << moon.planet << "'s " << moon.name << " (ø=" << moon.mean_radius * 2. << "), ";
@@ -52,7 +62,7 @@ void astronomy_examples() {
     cout << endl;
 
 
-    cout << " 7. The min speed required to escape from the planets are... ";
+    cout << " 8. The min speed required to escape from the planets are... ";
     for (auto& planet : dataset::planets) {
         auto min_speed = formula::gravitational_escape_velocity(planet.mass, planet.diameter / 2.0);
         cout << planet.name << "=" << min_speed << " or " << to_equivalent(min_speed) << ", ";
@@ -60,7 +70,7 @@ void astronomy_examples() {
     cout << endl;
 
 
-    cout << " 8. Exoplanets that are life-friendly and quite near are... ";
+    cout << " 9. Exoplanets that are life-friendly and quite near are... ";
     for (auto& exoplanet : dataset::exoplanets) {
         if (exoplanet.number_of_stars == 0)
             continue;   // too cold without a star
@@ -73,16 +83,6 @@ void astronomy_examples() {
         cout << "'" << exoplanet.name << "' @ " << exoplanet.hostname << " in " << exoplanet.distance << ", ";
     }
     cout << endl;
-
-
-    cout << " 9. The impact energy of a 50m asteroid at 50,000km/h is... ";
-    auto asteroid_diameter = 50_m;
-    auto asteroid_density  = 2500_kg_per_m³; // mostly estimated only 
-    auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
-    auto asteroid_volume   = formula::volume_of_sphere(asteroid_diameter / 2.0);
-    auto asteroid_mass     = asteroid_volume * asteroid_density;
-    auto impact_energy     = formula::kinetic_energy(asteroid_mass, asteroid_velocity);
-    cout << impact_energy << " or " << to_equivalent(impact_energy) << endl;
 
 
     cout << "10. The estimated total distance the Earth has travelled is... ";
