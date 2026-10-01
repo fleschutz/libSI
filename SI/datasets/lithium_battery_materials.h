@@ -1,24 +1,26 @@
-// USAGE:  #include "lithium_battery_materials.h" ... for (auto& lithium_battery_material : dataset::lithium_battery_materials) { ...
-// SOURCE: lithium_battery_materials.csv
-// NOTE:   Converted by csv2hpp 0.8 on Sep 05, 2026 (see https://github.com/fleschutz/csv2hpp)
+/// @file     lithium_battery_materials.h
+/// @brief    Contains the dataset from lithium_battery_materials.csv
+/// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
+///           USAGE: #include "lithium_battery_materials.h" ... for (auto& lithium_battery_material : dataset::lithium_battery_materials) { ...
+
 #pragma once
 
 namespace dataset {
 
 struct lithium_battery_material_details {
-	const char* formula_pretty;        // from column  2 (string)
-	unsigned char n_elements;          // from column  3 (byte)
-	bool contains_transition_metal;    // from column  4 (bool)
-	double formation_energy_per_atom;  // from column  5 (double)
-	double energy_per_atom;            // from column  6 (double)
-	double band_gap;                   // from column  7 (double)
-	bool is_semiconductor;             // from column  8 (bool)
-	double density;                    // from column  9 (double)
-	double volume;                     // from column 10 (double)
-	const char* elements;              // from column 11 (string)
+	const char* formula_pretty;        ///< from column  2 (string)
+	unsigned char n_elements;          ///< from column  3 (byte)
+	bool contains_transition_metal;    ///< from column  4 (bool)
+	double formation_energy_per_atom;  ///< from column  5 (double)
+	double energy_per_atom;            ///< from column  6 (double)
+	double band_gap;                   ///< from column  7 (double)
+	bool is_semiconductor;             ///< from column  8 (bool)
+	double density;                    ///< from column  9 (double)
+	double volume;                     ///< from column 10 (double)
+	const char* elements;              ///< from column 11 (string)
 };
 
-const lithium_battery_material_details lithium_battery_materials[] { // HINT: 00=empty or unknown field
+const lithium_battery_material_details lithium_battery_materials[] {      // NOTE: 00=empty or unknown field
 {"LiO8",2,false,1.7203586379401712,0.6547974887464866,-0.7652264839983115,false,-1.1818622813732287,-0.9119972879764253,"['Li', 'O']"},
 {"LiO8",2,false,1.7191374711502612,0.6544754323313176,-0.808018982847179,false,-1.2375279478825794,-0.8977194504305112,"['Li', 'O']"},
 {"LiS4",2,false,1.9025296874122548,0.03693780886388817,0.6264776636909677,true,-2.3521663582490717,4.289055150856411,"['Li', 'S']"},
