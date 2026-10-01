@@ -23,6 +23,8 @@ namespace SI {
 	static_assert(1_Mach == 330_m_per_s);
 	static_assert(1_Mach * 10_percent == 33_m_per_s);
 	static_assert((0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K);
+	static_assert(1_A * 1_h == 3600_C);
+	static_assert(1_Ah == 3600_C);
 
 	// 2. Datatypes
 	// ------------
@@ -291,14 +293,17 @@ namespace SI {
 	static_assert(1_MiBps == 1024_KiBps);
 	static_assert(1_GiBps == 1024_MiBps);
 	static_assert(1_TiBps == 1024_GiBps);
+	// bits per seconds...
+	static_assert(1_Mbps == 1000 * 1_Kbps);
+	static_assert(1_Gbps == 1000 * 1_Mbps);
 
 	// 8. Various Units
 	// ----------------
 	// pressure in...
-	static_assert(1_bar  == 1000_mbar);
-	static_assert(1_kbar == 1000_bar);
-	static_assert(1_Mbar == 1000_kbar);
-	static_assert(1_Gbar == 1000_Mbar);
+	static_assert(1_bar  == 1000 * 1_mbar);
+	static_assert(1_kbar == 1000 * 1_bar);
+	static_assert(1_Mbar == 1000 * 1_kbar);
+	static_assert(1_Gbar == 1000 * 1_Mbar);
 
 	// 9. Functions & Templates
 	// ------------------------
@@ -337,4 +342,4 @@ namespace SI {
 	static_assert(clamp(3_m, 4_m,5_m) == 4_m);
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
 
-} // namespace SI
+} // end of namespace SI

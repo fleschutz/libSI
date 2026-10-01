@@ -30,8 +30,8 @@ namespace SI {
 	LITERAL(_nm,    1e-9, meters);              // 1_nm (nanometer)
 	LITERAL(_pm,   1e-12, meters);              // 1_pm (picometer)
 	// time in...
-	LITERAL(_day,  86400, seconds);             // 1_day (day on Earth)
-	LITERAL(_days, 86400, seconds);             // 2_days(day on Earth)
+	LITERAL(_day,  86400, seconds);             // 1_day (Earth day)
+	LITERAL(_days, 86400, seconds);             // 2_days(Earth days)
 	LITERAL(_h,     3600, seconds);             // 1_h   (hour)
 	LITERAL(_min,     60, seconds);             // 1_min (minute)
 	LITERAL(_s,        1, seconds);             // 1_s   (second)
@@ -100,14 +100,15 @@ namespace SI {
 	LITERAL(_per_μm², 1e9, per_meter2);         // 1_per μm² (per square micrometer)
 	// surface flow (s) in...
 	LITERAL(_m²_per_s, 1, meters2_per_second);  // 1_m²/s (square meter per second)
-	// volume in...
+	// volume in cubic meter
 	LITERAL(_km³,    1e9, meters3);             // 1_km³ (cubic kilometer)
 	LITERAL(_m³,       1, meters3);             // 1_m³  (cubic meter)
 	LITERAL(_dm³,   1e-3, meters3);             // 1_dm³ (cubic decimeter)
 	LITERAL(_cm³,   1e-6, meters3);             // 1_cm³ (cubic centimeter, aka ccm)
 	LITERAL(_mm³,   1e-9, meters3);             // 1_mm³ (cubic millimeter)
 	LITERAL(_um³,  1e-12, meters3);             // 1_um³ (cubic micrometer)
-	// or in...
+	// volume in liter...
+	LITERAL(_Ml,     1e3, meters3);             // 1_Ml  (megaliter)
 	LITERAL(_kl,       1, meters3);             // 1_kl  (kiloliter)
 	LITERAL(_hl,     0.1, meters3);             // 1_hl  (hectoliter)
 	LITERAL(_l,     1e-3, meters3);             // 1_l   (liter)
@@ -135,6 +136,7 @@ namespace SI {
 	LITERAL(_kHz,    1e3, hertz);               // 1_kHz (kilohertz)
 	LITERAL(_Hz,       1, hertz);               // 1_Hz  (hertz)
 	LITERAL(_mHz,   1e-3, hertz);               // 1_mHz (millihertz)
+	LITERAL(_uHz,   1e-6, hertz);               // 1_uHz (microhertz)
 	// radioactive activity (A) in...
 	LITERAL(_TBq,   1e12, hertz);               // 1_TBq (terabecquerel)
 	LITERAL(_GBq,    1e9, hertz);               // 1_GBq (gigabecquerel)
@@ -178,23 +180,35 @@ namespace SI {
 	// electric resistance meter in...
 	LITERAL(_Ohm_m,    1, ohm_meters);          // 1_Ohm_m (ohm meter)
 	// electric conductance (G) in...
+	LITERAL(_GS,     1e9, siemens);             // 1_GS   (gigasiemens)
 	LITERAL(_MS,     1e6, siemens);             // 1_MS   (megasiemens)
 	LITERAL(_kS,     1e3, siemens);             // 1_kS   (kilosiemens)
 	LITERAL(_S,        1, siemens);             // 1_S    (siemens)
 	LITERAL(_mS,    1e-3, siemens);             // 1_mS   (millisiemens)
 	LITERAL(_uS,    1e-6, siemens);             // 1_uS   (microsiemens)
+	LITERAL(_nS,    1e-9, siemens);             // 1_nS   (nanosiemens)
 	// electric conductivity (σ) in...
 	LITERAL(_MS_per_m,1e6, siemens_per_meter);  // 1_MS_per_m (MS/m, megasiemens per meter)
 	LITERAL(_kS_per_m,1e3, siemens_per_meter);  // 1_kS_per_m (kS/m, kilosiemens per meter)
 	LITERAL(_S_per_m,  1, siemens_per_meter);   // 1_S_per_m (S/m, siemens per meter)
-	// electric charge (Q) in...
+	// electric charge (Q) in coulombs...
+	LITERAL(_GC,     1e9, coulombs);            // 1_GC  (gigaoulomb)
+	LITERAL(_MC,     1e6, coulombs);            // 1_MC  (megaoulomb)
+	LITERAL(_kC,     1e3, coulombs);            // 1_kC  (kilocoulomb)
 	LITERAL(_C,        1, coulombs);            // 1_C   (coulomb)
+	LITERAL(_mC,    1e-3, coulombs);            // 1_mC  (millicoulomb)
+	LITERAL(_uC,    1e-6, coulombs);            // 1_uC  (microcoulomb)
+	LITERAL(_nC,    1e-9, coulombs);            // 1_nC  (nanocoulomb)
+	LITERAL(_pC,   1e-12, coulombs);            // 1_pC  (picocoulomb)
+	// electric charge (Q) in ampere-hours...
 	LITERAL(_GAh,    1e9, ampere_hours);        // 1_GAh (gigaampere-hours)
 	LITERAL(_MAh,    1e6, ampere_hours);        // 1_MAh (megaampere-hours)
 	LITERAL(_kAh,    1e3, ampere_hours);        // 1_kAh (kiloampere-hours)
 	LITERAL(_Ah,       1, ampere_hours);        // 1_Ah  (ampere-hours)
 	LITERAL(_mAh,   1e-3, ampere_hours);        // 1_mAh (milliampere-hours)
 	LITERAL(_uAh,   1e-6, ampere_hours);        // 1_uAh (microampere-hours)
+	LITERAL(_nAh,   1e-9, ampere_hours);        // 1_nAh (nanoampere-hours)
+	LITERAL(_pAh,  1e-12, ampere_hours);        // 1_pAh (picoampere-hours)
 	// electric capacitance (C) in...
 	LITERAL(_F,        1, farads);              // 1_F   (farad)
 	LITERAL(_mF,    1e-3, farads);              // 1_mF  (millifarad)
