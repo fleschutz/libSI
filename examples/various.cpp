@@ -1,10 +1,11 @@
-/// @file     examples/various.cpp
-/// @brief    Contains various examples using libSI.
+/// @file   examples/various.cpp
+/// @brief  Contains 31 various examples using libSI.
 
+#include <iostream>
 #include <SI/core.h> 
 #include <SI/datasets/all.h>
-using namespace SI;
 using namespace std;
+using namespace SI;
 
 void various_examples() {
 
@@ -126,13 +127,7 @@ void various_examples() {
     cout << filament_length << " or " << to_equivalent(filament_length) << endl;
 
 
-    cout << "18. A flight non-stop around the Earth at Mach 1 takes... ";
-    auto flight_distance = dataset::Earth.equatorial_circumference;
-    auto flight_time     = flight_distance / 1_Mach;
-    cout << flight_time << endl;
-
-
-    cout << "19. The surface area and volume of a soccer ball is... ";
+    cout << "18. The surface area and volume of a soccer ball is... ";
     auto ball_circumference  = 70_cm; // (69-71cm for FIFA ball size 5)
     auto ball_radius         = formula::radius_of_circumference(ball_circumference);
     auto ball_area           = formula::area_of_sphere(ball_radius);
@@ -140,7 +135,7 @@ void various_examples() {
     cout << ball_area << " and " << ball_volume << endl;
 
 
-    cout << "20. The lift force of an A380 wing at sea level with 284km/h rotation speed is... ";
+    cout << "19. The lift force of an A380 wing at sea level with 284km/h rotation speed is... ";
     auto wing_surface              = 845_m²;
     dimensionless lift_coefficient = 1.3939;
     auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
@@ -149,14 +144,14 @@ void various_examples() {
     cout << lift_force << endl;
 
 
-    cout << "21. The sound intensity of a 1W loudspeaker in 1m distance is... ";
+    cout << "20. The sound intensity of a 1W loudspeaker in 1m distance is... ";
     auto loudspeaker_power     = 1_W;
     auto loudspeaker_distance  = 1_m;
     auto sound_intensity       = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
     cout << sound_intensity << " or " << to_equivalent(sound_intensity) << endl;
 
 
-    cout << "22. The max diving time in salt water in 10m depth using a 10l bottle is... ";
+    cout << "21. The max diving time in salt water in 10m depth using a 10l bottle is... ";
     auto average_breathing  = 20_l_per_min;
     auto bottle_volume      = 10_l;
     auto bottle_pressure    = 150_bar;
@@ -168,24 +163,24 @@ void various_examples() {
     cout << max_time << endl;
 
 
-    cout << "23. The sum of 1m + 1km + 1nmi + 1ft + 1in is... ";
+    cout << "22. The sum of 1m + 1km + 1nmi + 1ft + 1in is... ";
     auto length_sum = 1_m + 1_km + 1_nmi + 1_ft + 1_in;
     cout << length_sum << endl;
 
 
-    cout << "24. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... ";
+    cout << "23. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... ";
     auto byte_sum = 1_byte + 1_kB + 1_MB + 1_GB + 1_TB + 1_PB + 1_EB + 1_ZB + 1_YB + 1_RB + 1_QB;
     cout << byte_sum << endl;
 
 
-    cout << "25. The radar's geometrical horizon from 30ft height is... ";
+    cout << "24. The radar's geometrical horizon from 30ft height is... ";
     auto Earth_radius         = 6371.009_km;
     auto Radar_station_height = 30_ft;
     auto distance             = sqrt((Earth_radius + Radar_station_height) * (Earth_radius + Radar_station_height) - Earth_radius * Earth_radius);
     cout << distance << " or " << to_equivalent(distance) << endl;
 
 
-    cout << "26. The details of a 10m x 1m oak timber log are... ";
+    cout << "25. The details of a 10m x 1m oak timber log are... ";
     auto log_length     = 10_m;
     auto log_diameter   = 1_m;
     auto dry_oak_weight = 710_kg_per_m³; 
@@ -197,7 +192,7 @@ void various_examples() {
     cout << area << ", " << volume << ", " << weight << ", " << power << endl;
 
 
-    cout << "27. The min cable wire size for 100m copper, 230V, 30A max are... ";
+    cout << "26. The min cable wire size for 100m copper, 230V, 30A max are... ";
     auto conductor_resistivity  = 1.7241e-8_Ohm_m; // for copper
     auto cable_length           = 100_m;
     auto max_current            = 30_A;
@@ -206,7 +201,7 @@ void various_examples() {
     cout << A << endl;
 
 
-    cout << "28. The voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms is... ";
+    cout << "27. The voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms is... ";
     auto CC   = 0.47_uF;
     auto V0   = 5_V;
     auto RR   = 4.7_kOhm;
@@ -215,7 +210,7 @@ void various_examples() {
     cout << V1 << endl;
 
 
-    cout << "29. The frequencies and wavelengths of all musical notes are... ";
+    cout << "28. The frequencies and wavelengths of all musical notes are... ";
     for (auto& note : dataset::musical_notes) {
         auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
         cout << note.name << note.octave << "=" << note.frequency << "," << wavelength << " ";
@@ -223,21 +218,21 @@ void various_examples() {
     cout << endl;
 
 
-    cout << "30. The power of a 15PS motorcycle with 200kg weight is... ";
+    cout << "29. The power of a 15PS motorcycle with 200kg weight is... ";
     auto engine_power           = 15_PS;
     auto motorcycle_mass        = 200_kg;
     auto power_to_weight_ratio  = motorcycle_mass / engine_power;
     cout << engine_power << " and " << power_to_weight_ratio << endl;
 
 
-    cout << "31. How many wine bottles are needed for 1 hectoliter? ";
+    cout << "30. How many wine bottles are needed for 1 hectoliter? ";
     auto total_volume       = 1_hl;
     auto volume_per_bottle  = 750_ml;
     auto number_of_bottles  = total_volume / volume_per_bottle;
     cout << number_of_bottles << endl;
 
 
-    cout << "32. The AC voltages within a tenth second are... ";
+    cout << "31. The AC voltages within a tenth second are... ";
     for (auto time = 0.0_s; time < 0.1_s; time += 0.005_s) {
         auto peak_voltage = 220_V;
         auto sample_rate  = 50_Hz;
@@ -246,7 +241,7 @@ void various_examples() {
     cout << endl;
 
 
-    cout << "33. Applying a perpendicular force of 500N to a 20cm long lever results in... ";
+    cout << "32. Applying a perpendicular force of 500N to a 20cm long lever results in... ";
     auto lever_arm     = 20_cm;
     auto force_applied = 500_N;
     auto angle         = 90_deg;

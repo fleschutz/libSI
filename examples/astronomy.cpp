@@ -1,10 +1,11 @@
 /// @file     examples/astronomy.cpp
 /// @brief    Contains 13 astronomy examples using libSI.
 
+#include <iostream>
 #include <SI/core.h> 
 #include <SI/datasets/astronomy.h>
-using namespace SI;
 using namespace std;
+using namespace SI;
 
 void astronomy_examples() {
 
@@ -43,35 +44,35 @@ void astronomy_examples() {
     cout << H2_wavelength << " or " << to_equivalent(H2_wavelength) << endl;
 
 
-    print(" 6. Greater moons than Earth's moon are... ");
+    cout << " 6. Bigger moons than Earth's moon are... ";
     for (auto& moon : dataset::moons) {
         if (moon.mean_radius > 1737.5_km)
-            printf("%s's %s (ø=%s), ", moon.planet, moon.name, to_string(2. * moon.mean_radius).c_str());
+            cout << moon.planet << "'s " << moon.name << " (ø=" << moon.mean_radius * 2. << "), ";
     }
-    println("");
+    cout << endl;
 
 
-    print(" 7. The min speed required to escape from the planets are... ");
+    cout << " 7. The min speed required to escape from the planets are... ";
     for (auto& planet : dataset::planets) {
         auto min_speed = formula::gravitational_escape_velocity(planet.mass, planet.diameter / 2.0);
-        print(planet.name, "=", min_speed, " or ", to_equivalent(min_speed), ", ");
+        cout << planet.name << "=" << min_speed << " or " << to_equivalent(min_speed) << ", ";
     }
-    println("");
+    cout << endl;
 
 
-    print(" 8. Exoplanets that are life-friendly and quite near are... ");
+    cout << " 8. Exoplanets that are life-friendly and quite near are... ";
     for (auto& exoplanet : dataset::exoplanets) {
         if (exoplanet.number_of_stars == 0)
-            continue; // too cold without a star
+            continue;   // too cold without a star
         if (exoplanet.equilibrium_temperature < -40_degC || exoplanet.equilibrium_temperature > 40_degC)
-            continue; // too cold or too hot
+            continue;   // too cold or too hot
         if (exoplanet.eccentricity >= 0.02)
-            continue; // orbit too elliptic or even parabolic 
+            continue;   // orbit too elliptic or even parabolic 
         if (exoplanet.distance > 3_pc || exoplanet.distance == 0_m)
-            continue; // too far away or distance unknown yet
-        print("'", exoplanet.name, "' @ ", exoplanet.hostname, " in ", exoplanet.distance, ", ");
+            continue;   // too far away or distance unknown yet
+        cout << "'" << exoplanet.name << "' @ " << exoplanet.hostname << " in " << exoplanet.distance << ", ";
     }
-    println("");
+    cout << endl;
 
 
     cout << " 9. The impact energy of a 50m asteroid at 50,000km/h is... ";
@@ -93,14 +94,14 @@ void astronomy_examples() {
     cout << distance_total << endl;
 
 
-    print("11. The ballistic max height/range/flight time of a bullet fired 45° on Moon's surface is... ");
-    auto muzzle_velocity   = 1000_m_per_s;
-    auto altitude          = 0_m;
-    auto launch_angle      = 45_deg;
-    auto bullet_max_height = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto bullet_max_range  = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto bullet_flight_time= formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    println(bullet_max_height, ", ", bullet_max_range, ", ", bullet_flight_time);
+    cout << "11. The ballistic max height/range/flight time of a bullet fired 45° on Moon's surface is... ";
+    auto muzzle_velocity    = 1000_m_per_s;
+    auto altitude           = 0_m;
+    auto launch_angle       = 45_deg;
+    auto bullet_max_height  = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto bullet_max_range   = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto bullet_flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    cout << bullet_max_height << ", " << bullet_max_range << ", " << bullet_flight_time << endl;
 
 
     cout << "12. The sum of the masses of all moons in the solar system is... ";

@@ -1,9 +1,10 @@
-/// @file     examples/speeds.cpp
-/// @brief    Contains 4 speed examples using libSI.
+/// @file   examples/speeds.cpp
+/// @brief  Contains 5 speed examples using libSI.
 
+#include <iostream>
 #include <SI/core.h> 
-using namespace SI;
 using namespace std;
+using namespace SI;
 
 void speed_examples() {
 
@@ -26,12 +27,17 @@ void speed_examples() {
     cout << avg_travel_speed << " or " << to_equivalent(avg_travel_speed) << endl;
 
 
-    cout << " 3. The sum of 7 different speeds is... ";
+    cout << " 3. A flight non-stop around the Earth at Mach 1 would take... ";
+    auto flight_time     = equatorial_circumference / 1_Mach;
+    cout << flight_time << endl;
+
+
+    cout << " 4. The sum of 7 different speeds is... ";
     velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mph + 1_ft_per_min;
     cout << sum << endl;
 
 
-    cout << " 4. The min/max/average/sum of an array of speeds is...";
+    cout << " 5. The min/max/average/sum of an array of speeds is...";
     velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
     int n = sizeof(speeds) / sizeof(speeds[0]);
     cout << " min=" << formula::min_of_array(speeds, n) << " max=" << formula::max_of_array(speeds, n)
