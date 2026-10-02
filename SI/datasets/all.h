@@ -1,5 +1,5 @@
 /// @file   SI/datasets/all.h
-/// @brief  Includes all dataset header files (convenient but compilation times are slow)
+/// @brief  Includes the header files of all datasets (for convenience)
 
 #pragma once
 

@@ -26,6 +26,7 @@ namespace SI {
 	static_assert(1_Ah == 3600_C);
     }
 
+    /// @brief  Checks the basic datatypes of C/C++ and libSI.
     inline void checkDatatypes() {
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
@@ -49,6 +50,7 @@ namespace SI {
 	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
     }
 
+    /// @brief  Checks all SI base units.
     inline void checkBaseUnits() {
 	// length in...
 	static_assert(1_Gm == 1000_Mm);
@@ -108,6 +110,7 @@ namespace SI {
 	static_assert(1_cd == 0.001_kcd);
     }
 
+    /// @brief  Checks all SI derived units.
     inline void checkDerivedUnits() {
 	// area in...
 	static_assert(1_km² == 100_hm²);
@@ -226,12 +229,14 @@ namespace SI {
 	static_assert(1_mlx == 1000_ulx);
     }
 
+    /// @brief  Checks all astronomical units.
     inline void checkAstronomicalUnits() {
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
     }
 
+    /// @brief  Checks all Imperial units.
     inline void checkImperialUnits() {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
@@ -240,6 +245,7 @@ namespace SI {
 	//static_assert(1_ft == 12_in);
     }
 
+    /// @brief  Checks all digital units.
     inline void checkDigitalUnits() {
 	// bytes absolute...
 	static_assert(1_kB == 1000_byte);
@@ -270,6 +276,7 @@ namespace SI {
 	static_assert(1_Gbps == 1000 * 1_Mbps);
     }
 
+    /// @brief  Checks all various units.
     inline void checkVariousUnits() {
 	// pressure in...
 	static_assert(1_bar  == 1000 * 1_mbar);
@@ -278,6 +285,7 @@ namespace SI {
 	static_assert(1_Gbar == 1000 * 1_Mbar);
     }
 
+    /// @brief  Checks all functions and templates.
     inline void checkFunctionsAndTemplates() {
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m)   == 1_m);
