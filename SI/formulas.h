@@ -533,6 +533,6 @@ namespace SI { namespace formula {
 	// 9. https://www.vcalc.com/wiki/ballistic-range
 	// 10. https://www.vcalc.com/wiki/ballistic-travel-time
 
-} } // namespace SI::formula
+} } // end of namespace SI::formula
  
 #undef FUNC

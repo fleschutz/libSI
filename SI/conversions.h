@@ -644,7 +644,7 @@ namespace SI
 		return to_string(kgTNT) + " TNT";
 	}
 
-} // namespace SI
+} // end of namespace SI
 
 // References
 // ----------

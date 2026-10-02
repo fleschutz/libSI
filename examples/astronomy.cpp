@@ -98,9 +98,9 @@ void astronomy_examples() {
     auto muzzle_velocity    = 1000_m_per_s;
     auto altitude           = 0_m;
     auto launch_angle       = 45_deg;
-    auto bullet_max_height  = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto bullet_max_range   = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
-    auto bullet_flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, dataset::Moon.surface_gravity);
+    auto bullet_max_height  = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, Moon::surface_gravity);
+    auto bullet_max_range   = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, Moon::surface_gravity);
+    auto bullet_flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, Moon::surface_gravity);
     cout << bullet_max_height << ", " << bullet_max_range << ", " << bullet_flight_time << endl;
 
 

@@ -7,6 +7,7 @@
 #include <SI/literals.h>
 
 namespace dataset {
+using namespace SI;
 
 struct moon_details {
 	char planet[16];                   ///< from column  1 (char[16])
@@ -198,5 +199,4 @@ const moon_details moons[] {               // NOTE: 00=empty or unknown field
 {"Pluto","Styx",0._km³_per_s²,10._km,00_kg_per_m³,27.f,0.35f},
 }; // (7 columns x 177 rows = 1239 cells)
 
-} // end of namespace 'dataset'
-
+} // end of namespace dataset

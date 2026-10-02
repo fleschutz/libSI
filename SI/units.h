@@ -202,7 +202,7 @@ namespace SI {
 	// -------------
 	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 
-} // namespace SI
+} // end of namespace SI
 
 #undef UNIT
 #undef SI_RETURN_QUANTITY

@@ -7,6 +7,7 @@
 #include <SI/literals.h>
 
 namespace dataset {
+using namespace SI;
 
 struct planet_details {
 	const char* name;                  ///< from column  1 (string)
@@ -44,5 +45,4 @@ const planet_details planets[] {           // NOTE: 00=empty or unknown field
 {"Pluto",0.0146_kg,2370_km,2095_kg_per_m³,0.7_m_per_s²,1.3_m_per_s,-153.3_h,153.3_h,5906.4_km,4436.8f,7375.9f,90560_h,4.7_m_per_s,17.2f,0.244f,122.5,-225_degC,0.00001_bar,5,false,false},
 }; // (21 columns x 9 rows = 189 cells)
 
-} // end of namespace 'dataset'
-
+} // end of namespace dataset

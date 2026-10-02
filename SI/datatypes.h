@@ -53,6 +53,6 @@ namespace SI {
 	DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
 	DATATYPE(per_amount_of_substance,0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 
-} // namespace SI
+} // end of namespace SI
 
 #undef DATATYPE

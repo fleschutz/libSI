@@ -124,6 +124,6 @@ namespace SI { namespace constant {
 	// 4. https://en.wikipedia.org/wiki/Astronomical_constant
 	// 5. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)
 
-} } // namespace SI::constant
+} } // end of namespace SI::constant
 
 #undef CONST

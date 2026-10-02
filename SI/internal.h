@@ -839,4 +839,4 @@ namespace SI
 	using detail::deangle;
 	using detail::is_si;
 	using detail::is_si_v;
-} // namespace SI
+} // end of namespace SI

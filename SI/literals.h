@@ -412,6 +412,6 @@ namespace SI {
 	// 2. https://en.wikipedia.org/wiki/Astronomical_system_of_units
 	// 3. https://en.wikipedia.org/wiki/Imperial_units
 
-} // namespace SI
+} // end of namespace SI
 
 #undef LITERAL
