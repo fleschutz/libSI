@@ -1,5 +1,14 @@
 var NAVTREEINDEX4 =
 {
+"namespaceSI_1_1internal.html#af40335f8c30a5f51d823d77260446661":[1,0,3,2,23],
+"namespaceSI_1_1internal.html#af450f87cb78d2ce940964d7ddbb52e5b":[1,0,3,2,14],
+"namespaceSI_1_1internal.html#af63780756060e5972c776b86e0a23a48":[1,0,3,2,7],
+"namespaceSI_1_1internal.html#af7dcc340ca47d543d67b22d4dd2a5da8":[1,0,3,2,40],
+"namespaceSI_1_1internal.html#afd0f999834c63542963d0e326802b593":[1,0,3,2,50],
+"namespaceSI_1_1internal_1_1detail.html":[1,0,3,2,0],
+"namespaceSI_1_1internal_1_1detail.html#a9615a64b57ff43ac4144e77eeebef943":[1,0,3,2,0,3],
+"namespacedataset.html":[1,0,0],
+"namespacedataset.html#a000c34291f309cda811a5e26f9b0695e":[1,0,0,59],
 "namespacedataset.html#a0a4e78fc2e34179d8504ec39466828c3":[1,0,0,23],
 "namespacedataset.html#a0d37695f385235aa84ca1dd803fdc707":[1,0,0,32],
 "namespacedataset.html#a10c554226e60722af26eb5a0bc9f023a":[1,0,0,45],
@@ -240,14 +249,5 @@ var NAVTREEINDEX4 =
 "structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html":[1,0,3,2,3],
 "structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html":[2,0,1,0,3],
 "structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#a379980fec311e5989d175a33af9e15d6":[1,0,3,2,3,5],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#a379980fec311e5989d175a33af9e15d6":[2,0,1,0,3,5],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#a511ac05c22ee8e8c218a4431a74d0a17":[1,0,3,2,3,0],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#a511ac05c22ee8e8c218a4431a74d0a17":[2,0,1,0,3,0],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#ab579c8ab1c06058d4ad6ca72d6113fb1":[1,0,3,2,3,6],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#ab579c8ab1c06058d4ad6ca72d6113fb1":[2,0,1,0,3,6],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#ad2b83838f9c0d97b1ba712b5fbd762af":[1,0,3,2,3,7],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#ad2b83838f9c0d97b1ba712b5fbd762af":[2,0,1,0,3,7],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#ada9b9bbc2f55f8c63fc2e8cca6a733aa":[1,0,3,2,3,4],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#ada9b9bbc2f55f8c63fc2e8cca6a733aa":[2,0,1,0,3,4],
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#ae0a1eafeafc1cac08e202068215e19f1":[1,0,3,2,3,1]
+"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#a379980fec311e5989d175a33af9e15d6":[2,0,1,0,3,5]
 };
