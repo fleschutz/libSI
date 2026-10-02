@@ -33,7 +33,7 @@ namespace dataset {
         SI::volume volume =               1.08321e12_km³;
         SI::mass mass =                   5.97217e24_kg; // ±0.00028e24
         density mean_density =                 5.513_g_per_cm³;
-        acceleration surface_gravity =       9.80665_m_per_s²; // exactly 1 g0
+        acceleration surface_gravity =       9.80665_m_per_s²; ///< exactly 1 g0
         dimensionless moment_of_inertia_factor = 0.3307;
         velocity escape_velocity =            11.186_km_per_s;
         SI::time synodic_rotation_period =        24_h;
@@ -47,10 +47,10 @@ namespace dataset {
         temperature max_surface_temperature = 56.7_degC;
 
         // Atmosphere
-        pressure surface_pressure = 101.325_kPa; // (at sea level)
-        dimensionless nitrogen = 78.08_percent; // (dry air)
-        dimensionless oxygen = 20.95_percent; // (dry air)
-        dimensionless water_vapor = 1_percent; // (up to, variable)
+        pressure surface_pressure = 101.325_kPa; ///< at sea level
+        dimensionless nitrogen = 78.08_percent;  ///< dry air
+        dimensionless oxygen = 20.95_percent;    ///< dry air
+        dimensionless water_vapor = 1_percent;   ///< up to 1%, is variable
         dimensionless argon = 0.9340_percent;
         dimensionless carbon_dioxide = 0.0430_percent;
         dimensionless neon = 0.00182_percent;

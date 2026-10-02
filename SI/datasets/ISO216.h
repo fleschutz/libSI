@@ -16,7 +16,7 @@ namespace ISO216 {
 	const length A2_height  = 594_mm;
 	const length A3_width   = 297_mm;
 	const length A3_height  = 420_mm;
-	const length A4_width   = 210_mm; // (A4 - the most commonly available paper size worldwide)
+	const length A4_width   = 210_mm; ///< A4 - the most commonly available paper size worldwide
 	const length A4_height  = 297_mm;
 	const length A5_width   = 148_mm;
 	const length A5_height  = 210_mm;
