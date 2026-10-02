@@ -1,6 +1,5 @@
 var dir_38f2f3d5dc201515ebf546cd419e86e4 =
 [
-    [ "datasets", "dir_24a56e304d6d87be5513174eb61f7a37.html", "dir_24a56e304d6d87be5513174eb61f7a37" ],
     [ "constants.h", "constants_8h.html", "constants_8h" ],
     [ "conversions.h", "conversions_8h.html", "conversions_8h" ],
     [ "core.h", "core_8h.html", null ],

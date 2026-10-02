@@ -8,8 +8,8 @@ var searchData=
   ['ratio_5',['ratio',['../structSI_1_1detail_1_1ratio.html',1,'SI::detail']]],
   ['ratio_5fproduct_6',['ratio_product',['../structSI_1_1detail_1_1ratio__product.html',1,'SI::detail']]],
   ['ratio_5fquotient_7',['ratio_quotient',['../structSI_1_1detail_1_1ratio__quotient.html',1,'SI::detail']]],
-  ['readme_2emd_8',['README.md',['../README_8md.html',1,'(Global Namespace)'],['../SI_2datasets_2README_8md.html',1,'(Global Namespace)']]],
-  ['references_9',['References',['../dir_24a56e304d6d87be5513174eb61f7a37.html#autotoc_md6',1,'']]],
+  ['readme_2emd_8',['README.md',['../datasets_2README_8md.html',1,'(Global Namespace)'],['../README_8md.html',1,'(Global Namespace)']]],
+  ['references_9',['References',['../dir_1980d45cf0f5d379b20659e576a76c09.html#autotoc_md6',1,'']]],
   ['root_10',['root',['../namespaceSI_1_1detail.html#aa7b16015add1a984f5b2a1f4297a4652',1,'SI::detail::root()'],['../namespaceSI.html#aa7b16015add1a984f5b2a1f4297a4652',1,'SI::root()']]],
   ['rotation_5fperiod_11',['rotation_period',['../structdataset_1_1planet__details.html#a280f5004642bb628950a5ae653f7f35b',1,'dataset::planet_details']]]
 ];

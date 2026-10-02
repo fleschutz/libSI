@@ -7,7 +7,7 @@ var Earth_8h =
     [ "dataset::blackbody_temperature", "namespacedataset.html#a334d570d591e89aa755c1a7774c44ad0", null ],
     [ "dataset::bond_albedo", "namespacedataset.html#aa4b634d56c3cf065747ac57caaa6ecca", null ],
     [ "dataset::carbon_dioxide", "namespacedataset.html#aa16a5fba2c9e4f7afb3f250cd7c6b533", null ],
-    [ "dataset::Earth", "namespacedataset.html#ab8c8cb4b535c3f18d6f0fe23fcd948f5", null ],
+    [ "dataset::Earth", "namespacedataset.html#a05687b65947ec3a83511130b95ed18d5", null ],
     [ "dataset::eccentricity", "namespacedataset.html#aaa74d1b6e3425c9c58cbe86eb4db7707", null ],
     [ "dataset::equatorial_circumference", "namespacedataset.html#aa848ad650a2835e00614153707475284", null ],
     [ "dataset::equatorial_radius", "namespacedataset.html#a0a4e78fc2e34179d8504ec39466828c3", null ],

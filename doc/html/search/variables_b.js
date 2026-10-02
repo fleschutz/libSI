@@ -1,7 +1,7 @@
 var searchData=
 [
   ['magnitude_0',['magnitude',['../structdataset_1_1moon__details.html#aeba9c6d1ec6769c7612b72155b5be44c',1,'dataset::moon_details']]],
-  ['mass_1',['mass',['../structdataset_1_1particle__details.html#ab97b99c055bc0e79b2732d1a4a5ea80e',1,'dataset::particle_details::mass'],['../structdataset_1_1planet__details.html#aac19408da9cfe0f51769d167019a85ff',1,'dataset::planet_details::mass'],['../structSI_1_1detail_1_1dimension.html#a804ab8d5d05e83ef2ea07acc57fab5b4',1,'SI::detail::dimension::mass'],['../namespacedataset.html#a8114c80b3be78e53f5dbfc6cb7400d35',1,'dataset::mass']]],
+  ['mass_1',['mass',['../structSI_1_1detail_1_1dimension.html#a804ab8d5d05e83ef2ea07acc57fab5b4',1,'SI::detail::dimension::mass'],['../structdataset_1_1particle__details.html#ab97b99c055bc0e79b2732d1a4a5ea80e',1,'dataset::particle_details::mass'],['../structdataset_1_1planet__details.html#aac19408da9cfe0f51769d167019a85ff',1,'dataset::planet_details::mass'],['../namespacedataset.html#a8114c80b3be78e53f5dbfc6cb7400d35',1,'dataset::mass']]],
   ['mass_5flower_2',['mass_lower',['../structdataset_1_1particle__details.html#af6f9f1d94b75ee145f80ce69fc4a0c60',1,'dataset::particle_details']]],
   ['mass_5fupper_3',['mass_upper',['../structdataset_1_1particle__details.html#adc7fc740a113be2cbce2ad9ab81c69f2',1,'dataset::particle_details']]],
   ['mass_5fvs_5fearth_4',['mass_vs_Earth',['../structdataset_1_1exoplanet__details.html#ab7eb13c0c7d47152c984b6889bbfc567',1,'dataset::exoplanet_details']]],
@@ -20,7 +20,7 @@ var searchData=
   ['moment_5fof_5finertia_5ffactor_17',['moment_of_inertia_factor',['../namespacedataset.html#a30eb822bda1bca3df3371b458bc2924e',1,'dataset']]],
   ['monthly_5fmean_5ftotal_5fsunspot_5fnumber_18',['monthly_mean_total_sunspot_number',['../structdataset_1_1monthly__sunspot__details.html#a66ed844c4aea859e7fbb987db64f26da',1,'dataset::monthly_sunspot_details']]],
   ['monthly_5fsunspots_19',['monthly_sunspots',['../namespacedataset.html#a304745639f2ad0d4e560384b02655ce1',1,'dataset']]],
-  ['moon_20',['Moon',['../namespacedataset.html#aa49ddaf0df38a517bc327c1328b7ed61',1,'dataset']]],
+  ['moon_20',['Moon',['../namespacedataset.html#a95b60f50c793bdd0a7730a2f816ef07e',1,'dataset']]],
   ['moons_21',['moons',['../namespacedataset.html#a7dab645e1aada5ed76d2ef3824d9ac5b',1,'dataset']]],
   ['musical_5fnotes_22',['musical_notes',['../namespacedataset.html#ac0ebbba3781b40c73948c1f6556420d3',1,'dataset']]]
 ];
