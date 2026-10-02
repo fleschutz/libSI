@@ -51,6 +51,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -60,12 +61,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Earth_8h.html",
-"namespaceSI.html#a2b6759ba7d39500a495125dabb9ad6a8",
-"namespaceSI.html#a9ca1ef0761544c61ee7075e2c096b2f2",
-"namespaceSI_1_1constant.html#a6561521ef0bf67caffa6f3d76eec0b9f",
-"namespaceSI_1_1internal.html#af40335f8c30a5f51d823d77260446661",
-"structSI_1_1internal_1_1vec_3_012_00_01detail_1_1vec__trivally__constructible_3_01T_01_4_01_4.html#a511ac05c22ee8e8c218a4431a74d0a17",
-"structdataset_1_1planet__details.html#ab71c7ffc2732a0b179e87f6787d86cbc"
+"namespaceSI.html#a286e0833953e9012949d1cf13eacd316",
+"namespaceSI.html#a9803eb8d32c933e84f6cfb1b6624e53d",
+"namespaceSI_1_1constant.html#a43c14420c67ca76400284069354ec901",
+"namespaceSI_1_1internal.html#abf506ff41d2031910c3094a0dfc74e8e",
+"structSI_1_1internal_1_1detail_1_1vec__value__type_3_01vec__trivally__constructible_3_01T_01_4_01_4.html",
+"structdataset_1_1planet__details.html#a53faccac10cdd7f504a839ed76d95afc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
