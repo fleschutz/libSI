@@ -23,9 +23,9 @@ var searchData=
   ['b9_5fheight_20',['B9_height',['../namespaceISO216.html#a07d158d57d594721c3752a6958e49172',1,'ISO216']]],
   ['b9_5fwidth_21',['B9_width',['../namespaceISO216.html#a56c69fb4362e5b0652a56935711733cb',1,'ISO216']]],
   ['band_5fgap_22',['band_gap',['../structdataset_1_1lithium__battery__material__details.html#aa7cb26b03ca4327a4b15b7651d9c3697',1,'dataset::lithium_battery_material_details']]],
-  ['blackbody_5ftemperature_23',['blackbody_temperature',['../namespacedataset.html#a334d570d591e89aa755c1a7774c44ad0',1,'dataset']]],
+  ['blackbody_5ftemperature_23',['blackbody_temperature',['../namespaceEarth.html#ac48abc1f9ebfcdbcd20b792ce2b93c7f',1,'Earth']]],
   ['block_24',['block',['../structdataset_1_1chemical__element__details.html#ab45516a93015a6a75ff5fb24876f7e0d',1,'dataset::chemical_element_details']]],
   ['boiling_5fpoint_25',['boiling_point',['../structdataset_1_1chemical__element__details.html#af963a753d7ca61bfcb88d355e93eb67a',1,'dataset::chemical_element_details']]],
-  ['bond_5falbedo_26',['bond_albedo',['../namespacedataset.html#aa4b634d56c3cf065747ac57caaa6ecca',1,'dataset']]],
+  ['bond_5falbedo_26',['bond_albedo',['../namespaceEarth.html#a8c9f114ac5682a154583feb508defd95',1,'Earth']]],
   ['breaking_5fstrain_27',['Breaking_strain',['../structdataset_1_1material__property__details.html#ad2161df2c7ed36225794eff88e910202',1,'dataset::material_property_details']]]
 ];

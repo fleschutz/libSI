@@ -3,7 +3,7 @@ var searchData=
   ['factor_0',['factor',['../structSI_1_1detail_1_1ratio.html#ad8c9e194e8af60b25284cc7e12b995ba',1,'SI::detail::ratio::factor'],['../structSI_1_1detail_1_1ratio__product.html#a518767285734123b2fb41287a772680c',1,'SI::detail::ratio_product::factor'],['../structSI_1_1detail_1_1ratio__quotient.html#a08ffddde271e05fc9a1c7832a19518de',1,'SI::detail::ratio_quotient::factor']]],
   ['fill_1',['fill',['../namespaceSI_1_1detail.html#a3967820bb5dbac07e91b863b063d8890',1,'SI::detail']]],
   ['final_5fvelocity_2',['final_velocity',['../namespaceSI_1_1formula.html#a2ac36d16798a6c3d931502d5d21442d3',1,'SI::formula']]],
-  ['flattening_3',['flattening',['../namespacedataset.html#ad3586dd19d2e2ebdc11bd25640b486ca',1,'dataset']]],
+  ['flattening_3',['flattening',['../namespaceEarth.html#a78c57edeaf666e7c051fcf17d44ee576',1,'Earth::flattening'],['../namespaceMoon.html#a0268eec12551fbb35a1bcd1cac38a333',1,'Moon::flattening']]],
   ['flattening_5ffactor_4',['flattening_factor',['../namespaceSI_1_1formula.html#af54e5c2b317e45c92c59b9343d558850',1,'SI::formula']]],
   ['for_20c_5',['libSI - The Physical Units Library For C++',['../index.html',1,'']]],
   ['formation_5fenergy_5fper_5fatom_6',['formation_energy_per_atom',['../structdataset_1_1lithium__battery__material__details.html#afdf84ee084a84487fbfa98e5978965bf',1,'dataset::lithium_battery_material_details']]],

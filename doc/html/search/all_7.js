@@ -1,7 +1,7 @@
 var searchData=
 [
   ['g_5fforce_5fof_5facceleration_0',['g_force_of_acceleration',['../namespaceSI_1_1formula.html#a78aca1f45e942c1d52c940a7b891c4a6',1,'SI::formula']]],
-  ['geometric_5falbedo_1',['geometric_albedo',['../namespacedataset.html#ada769760175211089a622ca1dcc25372',1,'dataset']]],
+  ['geometric_5falbedo_1',['geometric_albedo',['../namespaceEarth.html#a26051d785bc65350e508932cf0b0d690',1,'Earth']]],
   ['glide_5fpath_2',['glide_path',['../namespaceSI_1_1formula.html#a7b5a8bcf71605f93be1ff720c6a3cdbb',1,'SI::formula']]],
   ['glide_5fratio_3',['glide_ratio',['../namespaceSI_1_1formula.html#a529995064b0a747fdc0a4167a16b6597',1,'SI::formula']]],
   ['gm_4',['GM',['../structdataset_1_1moon__details.html#a3130ad6ee9c93065d37e5bde489dbc21',1,'dataset::moon_details']]],

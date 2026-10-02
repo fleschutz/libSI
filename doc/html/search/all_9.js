@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['inclination_0',['inclination',['../namespacedataset.html#abaf60cf471b15e109469915c454a7fa1',1,'dataset']]],
+  ['inclination_0',['inclination',['../namespaceMoon.html#a371f304913555a8731a12b660d3b34c0',1,'Moon']]],
   ['infinity_1',['infinity',['../structSI_1_1detail_1_1quantity.html#a51a4b3699fb7170dbc73b481cf5af56b',1,'SI::detail::quantity']]],
   ['insolation_5fflux_2',['insolation_flux',['../structdataset_1_1exoplanet__details.html#afeee06e87489ad7a79c8d10c41d48ab1',1,'dataset::exoplanet_details']]],
   ['intensity_3',['intensity',['../structSI_1_1detail_1_1dimension.html#ad8b757294fa4ab8c8b38bf6c0656b0c5',1,'SI::detail::dimension']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['land_5farea_0',['land_area',['../namespacedataset.html#acd20cd58a9f0d4b4660acebef2a86bb2',1,'dataset']]],
+  ['land_5farea_0',['land_area',['../namespaceEarth.html#a5211a13c0aea337f9d93c25eebfb8cea',1,'Earth']]],
   ['latus_5frectum_5fof_5fellipse_1',['latus_rectum_of_ellipse',['../namespaceSI_1_1formula.html#ab0d93e6526b77380daeaa2131f80c5a8',1,'SI::formula']]],
   ['length_2',['length',['../structSI_1_1detail_1_1dimension.html#afd3aa2530b6afffed68c92a76f41127a',1,'SI::detail::dimension::length'],['../namespaceSI_1_1internal.html#a58fcbcebf73b3532147a88ffa3711893',1,'SI::internal::length(const vec2&lt; T &gt; &amp;v)'],['../namespaceSI_1_1internal.html#a0063d2d9e3914e8c92c60567deb61f1f',1,'SI::internal::length(const vec3&lt; T &gt; &amp;v)']]],
   ['length_5fof_5fday_3',['length_of_day',['../structdataset_1_1planet__details.html#a7e5e6b14fae3fb9382333e66ac996cdd',1,'dataset::planet_details']]],

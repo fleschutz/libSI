@@ -22,14 +22,14 @@ var searchData=
   ['a8_5fwidth_19',['A8_width',['../namespaceISO216.html#ae75a82b515244b5df1f152143d1c0505',1,'ISO216']]],
   ['a9_5fheight_20',['A9_height',['../namespaceISO216.html#a55b3cd5865caa857d2c4fed3756ad392',1,'ISO216']]],
   ['a9_5fwidth_21',['A9_width',['../namespaceISO216.html#ad340c16fec4ad98919f166c92411af93',1,'ISO216']]],
-  ['albedo_22',['albedo',['../structdataset_1_1moon__details.html#aa4bdfdca6af7d85b63622d9a41663c3d',1,'dataset::moon_details::albedo'],['../namespacedataset.html#ade1ab9dd415081c80af7bbe7b8f94ee2',1,'dataset::albedo']]],
-  ['aphelion_23',['aphelion',['../structdataset_1_1planet__details.html#a4ce5db449eb52869c99f1d5428567cd3',1,'dataset::planet_details::aphelion'],['../namespacedataset.html#a46f33f6ad2900356ab8c34722a5f1aa7',1,'dataset::aphelion']]],
-  ['argon_24',['argon',['../namespacedataset.html#af70b76753c019b785fafa39cb69e35b4',1,'dataset']]],
+  ['albedo_22',['albedo',['../structdataset_1_1moon__details.html#aa4bdfdca6af7d85b63622d9a41663c3d',1,'dataset::moon_details::albedo'],['../namespaceMoon.html#aa12316b40c69d1b234c7b3e5a2068c1a',1,'Moon::albedo']]],
+  ['aphelion_23',['aphelion',['../structdataset_1_1planet__details.html#a4ce5db449eb52869c99f1d5428567cd3',1,'dataset::planet_details::aphelion'],['../namespaceEarth.html#a684228f5193e8009451025e053d264f3',1,'Earth::aphelion']]],
+  ['argon_24',['argon',['../namespaceEarth.html#af9ba581c8116027fdd356fe0e1368aaf',1,'Earth']]],
   ['atomic_5fmass_25',['atomic_mass',['../structdataset_1_1chemical__element__details.html#a1e1766e14b4ce7152e240b6464fc59f3',1,'dataset::chemical_element_details']]],
   ['atomic_5fnumber_26',['atomic_number',['../structdataset_1_1chemical__element__details.html#a34d27eb47e4113af02f72d4de85cb636',1,'dataset::chemical_element_details']]],
   ['atomic_5fradius_27',['atomic_radius',['../structdataset_1_1chemical__element__details.html#a5d891cbc3da4c8131bc5f091d91e4386',1,'dataset::chemical_element_details']]],
-  ['average_5fapogee_28',['average_apogee',['../namespacedataset.html#a733d8e395dd1e13667b4f5eefe3b9cbc',1,'dataset']]],
-  ['average_5forbital_5fspeed_29',['average_orbital_speed',['../namespacedataset.html#a1d9779f3b846e9fbac03c3a4e4279a61',1,'dataset']]],
-  ['average_5fperigee_30',['average_perigee',['../namespacedataset.html#a9b455a38a4cd9bee2e3977da124b8b96',1,'dataset']]],
-  ['axial_5ftilt_31',['axial_tilt',['../namespacedataset.html#a58161edfaf239aeebdec46ce66ab82bc',1,'dataset']]]
+  ['average_5fapogee_28',['average_apogee',['../namespaceMoon.html#aebe0f8eb2c4bd3b7fcb1583266ab4413',1,'Moon']]],
+  ['average_5forbital_5fspeed_29',['average_orbital_speed',['../namespaceEarth.html#ab55b7292db84fe6e7449d6c2f49fa35f',1,'Earth::average_orbital_speed'],['../namespaceMoon.html#a03603905452fa66293977a74cae34859',1,'Moon::average_orbital_speed']]],
+  ['average_5fperigee_30',['average_perigee',['../namespaceMoon.html#ad84e33e775b470c52477b7dda9c0b0a3',1,'Moon']]],
+  ['axial_5ftilt_31',['axial_tilt',['../namespaceEarth.html#a3a273ff48c37db1f60a53d747c09ef62',1,'Earth']]]
 ];
