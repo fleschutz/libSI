@@ -20,5 +20,5 @@ set(DOXYGEN_USE_MDFILE_AS_MAINPAGE "${PROJECT_SOURCE_DIR}/../README.md")
 set(DOXYGEN_PROJECT_LOGO "${PROJECT_SOURCE_DIR}/project_logo.jpg")
 
 doxygen_add_docs(
-  api_doc "${PROJECT_SOURCE_DIR}/../README.md" "${PROJECT_SOURCE_DIR}/../SI/" "${PROJECT_SOURCE_DIR}/../examples/"
+  api_doc "${PROJECT_SOURCE_DIR}/../README.md" "${PROJECT_SOURCE_DIR}/../SI/" "${PROJECT_SOURCE_DIR}/../examples/" "${PROJECT_SOURCE_DIR}/../datasets/"
   WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}/")

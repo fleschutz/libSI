@@ -38,7 +38,7 @@ int main() {
 -------------------------
 - **47 Examples** in 📂[examples](examples/), writing this to the console: [console output](examples/console_output.txt)
 - **210 Unit tests** in [SI/tests.h](SI/tests.h), performed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
-- **13 Basic datasets** using libSI in 📂[SI/datasets](SI/datasets/), e.g. *chemical_elements*
+- **13 Useful datasets** using libSI in 📂[datasets](datasets/), e.g. *chemical_elements*
 
 
 💡 Q & A
