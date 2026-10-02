@@ -1,4 +1,4 @@
-/// @file     SI/datasets/Moon.h
+/// @file     datasets/Moon.h
 /// @brief    Contains data of our Moon, e.g. Moon.mass
 /// @details  Source: https://en.wikipedia.org/wiki/Moon (as of 2026)
 

@@ -1,4 +1,4 @@
-/// @file     SI/datasets/Earth.h
+/// @file     datasets/Earth.h
 /// @brief    Contains data of our Earth, e.g. Earth.mass
 /// @details  Source: https://en.wikipedia.org/wiki/Earth (as of 2026)
 ///           Categories are: Orbital characteristics, Physical characteristics, Atmosphere, Various, and References.

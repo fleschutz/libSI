@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <SI/core.h> 
-#include <SI/datasets/all.h>
+#include <datasets/all.h>
 using namespace std;
 using namespace SI;
 

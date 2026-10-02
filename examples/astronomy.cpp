@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <SI/core.h> 
-#include <SI/datasets/astronomy.h>
+#include <datasets/astronomy.h>
 using namespace std;
 using namespace SI;
 
