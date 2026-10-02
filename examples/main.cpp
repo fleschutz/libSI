@@ -1,19 +1,19 @@
 /// @file     examples/main.cpp
-/// @brief    Contains the main function which calls all the examples
+/// @brief    The main() function calling all other example functions
 
-#include <SI/tests.h>  // perform unit tests at compile-time to verify everything
+#include <SI/tests.h>  ///< perform unit tests at compile-time to verify everything
 
 extern void astronomy_examples(), speed_examples(), conversion_examples(), various_examples();
 
 int main() {
 
-    astronomy_examples();
+    astronomy_examples();    ///< in astronomy.cpp
 
-    speed_examples();
+    speed_examples();        ///< in speeds.cpp
 
-    conversion_examples();
+    conversion_examples();   ///< in conversions.cpp
 
-    various_examples();
+    various_examples();      ///< in various.cpp
 
     return 0;
 }
