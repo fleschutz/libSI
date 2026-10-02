@@ -1,5 +1,5 @@
 /// @file   <SI/core.h>
-/// @brief  Includes the 6 core header files of libSI.
+/// @brief  Includes the 6 core header files (for convenience)
 
 #pragma once
 #include <SI/datatypes.h>    ///< datatypes like SI::length

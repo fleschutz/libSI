@@ -1,5 +1,5 @@
 /// @file   SI/print.h
-/// @brief  Contains simple print to console templates for SI datatypes and strings (similar to C++23).
+/// @brief  Defines simple print() and println() templates (similar to C++23)
 
 #pragma once
 #include <iostream>

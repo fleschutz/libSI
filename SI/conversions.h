@@ -1,5 +1,5 @@
 /// @file     SI/conversions.h
-/// @brief    Defines functions to convert from and to strings and equivalents, e.g. to_string(12_m).
+/// @brief    Defines conversion functions, e.g. to_string(12_m).
 /// @details  Provides from_string(), to_string(), and to_equivalent().
 
 #pragma once
@@ -8,8 +8,8 @@
 
 namespace SI
 {
-	inline std::string to_string_formatting     = "%.2Lf%s";  // <-- configurable
-	inline std::string to_equivalent_formatting = "%.2Lf %s"; // <-- configurable
+	inline std::string to_string_formatting     = "%.2Lf%s";  ///< configurable
+	inline std::string to_equivalent_formatting = "%.2Lf %s"; ///< configurable
 
 	inline bool from_string(const std::string& str, length& result)
 	{

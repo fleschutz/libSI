@@ -1,7 +1,7 @@
 /// @file      SI/tests.h
-/// @brief     Contains 210 unit tests at compile-time to verify everything.
-/// @details   Categories are: Features, Datatypes, SI Base Units, SI Derived Units, Astronomical Units,
-///                            Imperial Units, Digital Units, Various Units, and Functions & Templates.
+/// @brief     Contains 210 unit tests at compile-time to verify everything
+/// @details   Categories are: features, datatypes, base units, derived units, astronomical units, imperial units,
+///                            digital units, various units, functions and templates
 
 #pragma once
 #include <cassert>
@@ -9,9 +9,8 @@
 
 namespace SI {
 
-	// 1. Features
-	// -----------
-	// This shows what's possible: (the serious checks follow below)
+    /// @brief  This just shows what's possible, the serious checks follow below.
+    inline void checkFeatures() {
 	static_assert(3_m == meters(3));
 	static_assert(3_m == 3 * 1_m);
 	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
@@ -25,9 +24,9 @@ namespace SI {
 	static_assert((0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K);
 	static_assert(1_A * 1_h == 3600_C);
 	static_assert(1_Ah == 3600_C);
+    }
 
-	// 2. Datatypes
-	// ------------
+    inline void checkDatatypes() {
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
 	static_assert(sizeof(int) <= sizeof(long));
@@ -40,7 +39,6 @@ namespace SI {
 	static_assert(sizeof(int) == sizeof(unsigned int));
 	static_assert(sizeof(long) == sizeof(unsigned long));
 
-	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
 	static_assert(sizeof(length) == sizeof(SIdouble));
 	static_assert(sizeof(mass) == sizeof(SIdouble));
 	static_assert(sizeof(time) == sizeof(SIdouble));
@@ -48,9 +46,10 @@ namespace SI {
 	static_assert(sizeof(electric_current) == sizeof(SIdouble));
 	static_assert(sizeof(amount_of_substance) == sizeof(SIdouble));
 	static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
+	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
+    }
 
-	// 3. SI Base Units
-	// ----------------
+    inline void checkBaseUnits() {
 	// length in...
 	static_assert(1_Gm == 1000_Mm);
 	static_assert(1_Mm == 1000_km);
@@ -64,7 +63,6 @@ namespace SI {
 	static_assert(1_mm == 0.001_m);
 	static_assert(1_um == 0.001_mm);
 	static_assert(1_nm == 0.001_um);
-
 	// time in...
 	static_assert(1_day == 24_h);
 	static_assert(1_h   == 60_min);
@@ -73,7 +71,6 @@ namespace SI {
 	static_assert(1_ms  == 0.001_s);
 	static_assert(1_us  == 0.001_ms);
 	static_assert(1_ns  == 0.001_us);
-
 	// mass in...
 	static_assert(1_Gt == 1000_Mt);
 	static_assert(1_Mt == 1000_kt);
@@ -83,7 +80,6 @@ namespace SI {
 	static_assert(1_g  == 0.001_kg);
 	static_assert(1_mg == 0.001_g);
 	static_assert(1_ug == 0.001_mg);
-
 	// thermodynamic temperature in...
 	static_assert(1_GK == 1000_MK);
 	static_assert(1_MK == 1000_kK);
@@ -91,7 +87,6 @@ namespace SI {
 	static_assert(1_mK == 0.001_K);
 	static_assert(1_uK == 0.001_mK);
 	static_assert(1_nK == 0.001_uK);
-
 	// electric current in...
 	static_assert(1_GA == 1000_MA);
 	static_assert(1_MA == 1000_kA);
@@ -100,7 +95,6 @@ namespace SI {
 	static_assert(1_mA == 0.001_A);
 	static_assert(1_uA == 0.001_mA);
 	static_assert(1_nA == 0.001_uA);
-
 	// amount of substance in...
 	static_assert(1_Gmol == 1000_Mmol);
 	static_assert(1_Mmol == 1000_kmol);
@@ -109,13 +103,12 @@ namespace SI {
 	static_assert(1_mmol == 0.001_mol);
 	static_assert(1_umol == 0.001_mmol);
 	static_assert(1_nmol == 0.001_umol);
-
 	// luminous intensity in...
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
+    }
 
-	// 4. SI Derived Units
-	// -------------------
+    inline void checkDerivedUnits() {
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
@@ -126,13 +119,11 @@ namespace SI {
 	static_assert(1_m²  == 1_m * 1_m);
 	static_assert(1_cm² == 1_cm * 1_cm);
 	static_assert(1_mm² == 1_mm * 1_mm);
-
 	// volume in...
 	static_assert(1_m³  == 1'000'000_cm³);
 	static_assert(1_cm³ == 0.000'001_m³);
 	static_assert(1_km³ == 1_km * 1_km * 1_km);
 	static_assert(1_m³  == 1_m * 1_m * 1_m);
-
 	// velocity in...
 	static_assert(1_km_per_s == 1000_m_per_s);
 	static_assert(3.6_km_per_h == 1_m_per_s);
@@ -143,12 +134,10 @@ namespace SI {
 	static_assert(1_km_per_h == 1_km / 3600_s);
 	static_assert(1_km_per_h == 1000_m / 3600_s);
 	static_assert(1_km_per_h == 500_m / 1800_s);
-
 	// acceleration in...
 	static_assert(1_km_per_s² == 1000_m_per_s²);
 	static_assert(0.001_km_per_s² == 1_m_per_s²);
-
-	// frequency in :
+	// frequency in...
 	static_assert(1_PHz == 1000_THz);
 	static_assert(1_THz == 1000_GHz);
 	static_assert(1_GHz == 1000_MHz);
@@ -158,67 +147,54 @@ namespace SI {
 	static_assert(1_Hz  == 0.000001_MHz);
 	static_assert(1_Hz  == 0.000000001_GHz);
 	static_assert(1_mHz == 0.001_Hz);
-
 	// radioactive activity (A) in...
 	static_assert(1_TBq == 1000_GBq);
 	static_assert(1_GBq == 1000_MBq);
 	static_assert(1_MBq == 1000_kBq);
 	static_assert(1_kBq == 1000_Bq);
-
 	// equivalent dose (H) and effective dose (E) in...
 	static_assert(1_Sv  == 1000_mSv);
 	static_assert(1_mSv == 1000_uSv);
-
 	// mass per area in...
 	static_assert(1_t_per_m² == 1000_kg_per_m²);
-
 	// mass per volume in...
 	static_assert(1_t_per_m³ == 1000_kg_per_m³);
-
 	// electric potential (U) in...
 	static_assert(1_GV == 1000_MV);
 	static_assert(1_MV == 1000_kV);
 	static_assert(1_kV == 1000_V);
 	static_assert(1_V  == 1000_mV);
 	static_assert(1_mV == 1000_uV);
-
 	// electric resistance (R) in...
 	static_assert(1_GOhm == 1000_MOhm);
 	static_assert(1_MOhm == 1000_kOhm);
 	static_assert(1_kOhm == 1000_Ohm);
 	static_assert(1_Ohm  == 1000_mOhm);
 	static_assert(1_mOhm == 1000_uOhm);
-
 	// electric conductance (G) in...
 	static_assert(1_MS == 1000_kS);
 	static_assert(1_kS == 1000_S);
 	static_assert(1_S  == 1000_mS);
 	static_assert(1_mS == 1000_uS);
-
 	// electric conductivity (σ) in...
 	static_assert(1_MS_per_m == 1000_kS_per_m);
 	static_assert(1_kS_per_m == 1000_S_per_m);
-
 	// electric charge (Q) in...
 	static_assert(1_GAh == 1000_MAh);
 	static_assert(1_MAh == 1000_kAh);
 	static_assert(1_kAh == 1000_Ah);
 	static_assert(1_Ah  == 1000_mAh);
 	static_assert(1_mAh == 1000_uAh);
-
 	// electric capacitance (C) in...
 	static_assert(1_F  == 1000_mF);
 	static_assert(1_mF == 1000_uF);
 	static_assert(1_nF == 1000_pF);
-
 	// electric inductance (L) in...
 	static_assert(1_H   == 1000_mH);
 	static_assert(1_mH  == 1000_uH);
-
 	// magnetic field (B) in...
 	static_assert(1_T  == 1000_mT);
 	static_assert(1_mT == 1000_uT);
-
 	// energy (E) in...
 	static_assert(1_PJ == 1000_TJ);
 	static_assert(1_TJ == 1000_GJ);
@@ -226,7 +202,6 @@ namespace SI {
 	static_assert(1_MJ == 1000_kJ);
 	static_assert(1_kJ == 1000_J);
 	static_assert(1_J  == 1000_mJ);
-
 	// active power (P) in...
 	static_assert(1_TW == 1000_GW);
 	static_assert(1_GW == 1000_MW);
@@ -234,41 +209,38 @@ namespace SI {
 	static_assert(1_kW == 1000_W);
 	static_assert(1_W  == 1000_mW);
 	static_assert(1_mW == 1000_uW);
-
 	// pressure (p) in...
 	static_assert(1_MPa == 1000_kPa);
 	static_assert(1_kPa == 1000_Pa);
 	static_assert(1_Pa  == 1000_mPa);
 	static_assert(1_mPa == 1000_uPa);
-
 	// force (F) in...
 	static_assert(1_GN == 1000_MN);
 	static_assert(1_MN == 1000_kN);
 	static_assert(1_kN == 1000_N);
 	static_assert(1_N  == 1000_mN);
 	static_assert(1_mN == 1000_uN);
-
 	// luminous flux per area in...
 	static_assert(1_klx == 1000_lx);
 	static_assert(1_lx  == 1000_mlx);
 	static_assert(1_mlx == 1000_ulx);
+    }
 
-	// 5. Astronomical Units
-	// ---------------------
+    inline void checkAstronomicalUnits() {
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
+    }
 
-	// 6. Imperial Units
-	// -----------------
+    inline void checkImperialUnits() {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_nmi == 1852_m);
 	static_assert(1_ft  == 0.3048_m);
 	static_assert(1_mi  == 1760_yd);
 	//static_assert(1_ft == 12_in);
+    }
 
-	// 7. Digital Units
-	// ----------------
+    inline void checkDigitalUnits() {
 	// bytes absolute...
 	static_assert(1_kB == 1000_byte);
 	static_assert(1_MB == 1000_kB);
@@ -296,17 +268,17 @@ namespace SI {
 	// bits per seconds...
 	static_assert(1_Mbps == 1000 * 1_Kbps);
 	static_assert(1_Gbps == 1000 * 1_Mbps);
+    }
 
-	// 8. Various Units
-	// ----------------
+    inline void checkVariousUnits() {
 	// pressure in...
 	static_assert(1_bar  == 1000 * 1_mbar);
 	static_assert(1_kbar == 1000 * 1_bar);
 	static_assert(1_Mbar == 1000 * 1_kbar);
 	static_assert(1_Gbar == 1000 * 1_Mbar);
+    }
 
-	// 9. Functions & Templates
-	// ------------------------
+    inline void checkFunctionsAndTemplates() {
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m)   == 1_m);
 	static_assert(abs(0_m)    == 0_m);
@@ -341,5 +313,6 @@ namespace SI {
 	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 	static_assert(clamp(3_m, 4_m,5_m) == 4_m);
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
+    }
 
 } // end of namespace SI

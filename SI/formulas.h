@@ -1,5 +1,5 @@
 /// @file     SI/formulas.h
-/// @brief    Provides 76 basic formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @brief    Defines 76 formulas based on SI datatypes, e.g. SI::formula::wavelength().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once
@@ -476,6 +476,7 @@ namespace SI { namespace formula {
 		return E / m;
 	}
 
+	/// @brief Returns the minimum velocity in the given array.
 	FUNC velocity min_of_array(velocity arr[], int n)
 	{
 		if (n < 1)
@@ -487,6 +488,7 @@ namespace SI { namespace formula {
 		return minimum;
 	}
 
+	/// @brief Returns the maximum velocity in the given array.
 	FUNC velocity max_of_array(velocity arr[], int n)
 	{
 		if (n < 1)
@@ -498,6 +500,7 @@ namespace SI { namespace formula {
 		return maximum;
 	}
 
+	/// @brief Returns the average velocity in the given array.
 	FUNC velocity avg_of_array(velocity arr[], int n)
 	{
 		if (n < 1)
@@ -508,6 +511,7 @@ namespace SI { namespace formula {
 		return sum / n;
 	}
 
+	/// @brief Returns the sum of all velocities in the given array.
 	FUNC velocity sum_of_array(velocity arr[], int n)
 	{
 		velocity sum = meters_per_second(0);

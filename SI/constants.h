@@ -1,8 +1,9 @@
 /// @file     SI/constants.h
-/// @brief    Defines 77 type-safe constants, e.g. speed_of_light_in_vacuum (source: 2022 CODATA).
-/// @details  Categories are: Defined Constants, Universal Constants, Electromagnetic Constants,
-///           Atomic & Nuclear Constants, Physico-chemical Constants, Physical Constants,
-///           Mathematical Constants, Astronomical Constants, Various Constants, and References.
+/// @brief    Defines 77 type-safe constants, e.g. speed_of_light_in_vacuum
+/// @details  Source: 2022 CODATA (mostly)
+///           Categories are: Defined Constants, Universal Constants, Electromagnetic Constants,
+///                           Atomic & Nuclear Constants, Physico-chemical Constants, Physical Constants,
+///                           Mathematical Constants, Astronomical Constants, Various Constants, and References.
 
 #pragma once
 #include <SI/units.h>

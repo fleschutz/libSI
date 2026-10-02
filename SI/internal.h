@@ -1,5 +1,5 @@
-/// @file     SI/internal.h
-/// @brief    Provides internal datatypes, classes, etc.
+/// @file    SI/internal.h
+/// @brief   Internal header file (providing datatypes, classes, etc.)
 
 #pragma once
 #include <limits>
