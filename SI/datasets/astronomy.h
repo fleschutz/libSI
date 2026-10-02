@@ -1,5 +1,5 @@
 /// @file   SI/datasets/astronomy.h
-/// @brief  Includes the header files of all astronomy datasets.
+/// @brief  Includes the header files of all astronomy datasets (for convenience).
 
 #pragma once
 #include "Earth.h"
