@@ -6,7 +6,7 @@ option(BUILD_DOC "Build documentation" ON)
 find_package(Doxygen)
 
 if(NOT DOXYGEN_FOUND)
-    message("Doxygen need to be installed to generate the doxygen documentation")
+    message("Please install Doxygen to generate the doxygen documentation")
     return()
 endif()
 
