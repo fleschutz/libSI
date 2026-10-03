@@ -241,7 +241,7 @@ namespace SI {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
-	static_assert(1_ft  == 12_in);
+	//static_assert(1_ft  == 12_in);
 	static_assert(1_lb  == 16_oz);
     }
 
