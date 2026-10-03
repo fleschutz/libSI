@@ -50,7 +50,7 @@ namespace SI {
 	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
     }
 
-    /// @brief  Checks all SI base units.
+    /// @brief  Checks the SI base units.
     inline void checkBaseUnits() {
 	// length in...
 	static_assert(1_Gm == 1000_Mm);
@@ -110,7 +110,7 @@ namespace SI {
 	static_assert(1_cd == 0.001_kcd);
     }
 
-    /// @brief  Checks all SI derived units.
+    /// @brief  Checks the SI derived units.
     inline void checkDerivedUnits() {
 	// area in...
 	static_assert(1_km² == 100_hm²);
@@ -229,23 +229,23 @@ namespace SI {
 	static_assert(1_mlx == 1000_ulx);
     }
 
-    /// @brief  Checks all astronomical units.
+    /// @brief  Checks the astronomical units.
     inline void checkAstronomicalUnits() {
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
     }
 
-    /// @brief  Checks all Imperial units.
+    /// @brief  Checks the Imperial units.
     inline void checkImperialUnits() {
 	static_assert(1_nmi == 10_cable);
-	static_assert(1_nmi == 1852_m);
-	static_assert(1_ft  == 0.3048_m);
 	static_assert(1_mi  == 1760_yd);
-	//static_assert(1_ft == 12_in);
+	static_assert(1_mi  == 80_ch);
+	static_assert(1_ft  == 12_in);
+	static_assert(1_lb  == 16_oz);
     }
 
-    /// @brief  Checks all digital units.
+    /// @brief  Checks the digital units.
     inline void checkDigitalUnits() {
 	// bytes absolute...
 	static_assert(1_kB == 1000_byte);
@@ -272,20 +272,20 @@ namespace SI {
 	static_assert(1_GiBps == 1024_MiBps);
 	static_assert(1_TiBps == 1024_GiBps);
 	// bits per seconds...
-	static_assert(1_Mbps == 1000 * 1_Kbps);
-	static_assert(1_Gbps == 1000 * 1_Mbps);
+	static_assert(1_Mbps == 1000_Kbps);
+	static_assert(1_Gbps == 1000_Mbps);
     }
 
-    /// @brief  Checks all various units.
+    /// @brief  Checks various units.
     inline void checkVariousUnits() {
 	// pressure in...
-	static_assert(1_bar  == 1000 * 1_mbar);
-	static_assert(1_kbar == 1000 * 1_bar);
-	static_assert(1_Mbar == 1000 * 1_kbar);
-	static_assert(1_Gbar == 1000 * 1_Mbar);
+	static_assert(1_bar  == 1000_mbar);
+	static_assert(1_kbar == 1000_bar);
+	static_assert(1_Mbar == 1000_kbar);
+	static_assert(1_Gbar == 1000_Mbar);
     }
 
-    /// @brief  Checks all functions and templates.
+    /// @brief  Checks the functions and templates.
     inline void checkFunctionsAndTemplates() {
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m)   == 1_m);

@@ -1,5 +1,5 @@
 /// @file     SI/units.h
-/// @brief    Defines 105 type-safe units, e.g. SI::meters
+/// @brief    Defines 103 type-safe units, e.g. SI::meters
 /// @details  Categories are: SI Base Units, SI Prefixes, SI Derived Units, Imperial Units, Various Units, and References.
 
 #pragma once
@@ -38,12 +38,10 @@ namespace SI {
 	// 3. SI Derived Units
 	// -------------------
 	UNIT(kilometers)   = kilo * meters; 
-	UNIT(centimeters)  = centi * meters;
 	UNIT(millimeters)  = milli * meters;
 	UNIT(per_meter)    = unit<per_length>();
 	UNIT(minutes)      = unit<time, 60>();
 	UNIT(hours)        = unit<time, 60*60>();
-	UNIT(grams)        = milli * kilograms;
 	UNIT(hertz)        = unit<frequency>();
 	// area in...
 	UNIT(meters2)      = unit<area>(); // (square meter)
@@ -55,18 +53,14 @@ namespace SI {
 	// volume in...
 	UNIT(meters3)      = unit<volume>(); // (cubic meter)
 	UNIT(kilometers3)  = kilo * kilo * kilo * meters3;
-	UNIT(centimeters3) = centi * centi * centi * meters3;
 	UNIT(meters3_per_second) = meters3 / seconds;
 	UNIT(meters3_per_mol) = meters3 / moles;
 	UNIT(meters3_per_second2) = meters3 / (seconds * seconds);
 	UNIT(meters3_per_kilogram_per_second2) = meters3 / kilograms / (seconds * seconds);
 	UNIT(kilograms_per_meter3) = kilograms / meters3;
-	UNIT(grams_per_centimeter3) = grams / centimeters3;
 	// velocity in...
 	UNIT(meters_per_second)    = unit<velocity>();
 	UNIT(meters_per_hour)      = meters / hours;
-	UNIT(kilometers_per_hour)  = kilometers / hours;
-	UNIT(millimeters_per_hour) = millimeters / hours;
 	// acceleration in...
 	UNIT(meters_per_second2) = unit<acceleration>();
 	// force in...

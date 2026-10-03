@@ -316,15 +316,16 @@ namespace SI {
 	// -----------------
 	// length in...
 	LITERAL(_in,                        0.0254, meters); // 1_in (inch)
-	LITERAL(_ft,                         .3048, meters); // 1_ft (feet, 12 inches)
-	LITERAL(_yd,                         .9144, meters); // 1_yd (yard)
+	LITERAL(_ft,                        0.3048, meters); // 1_ft (feet, 12 inches)
+	LITERAL(_yd,                        0.9144, meters); // 1_yd (yard)
+	LITERAL(_ch,                       20.1168, meters); // 1_ch (chain)
 	LITERAL(_mi,                     1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
 	LITERAL(_cable,                      185.2, meters); // 1_cable (one tenth of a nautical mile)
-	LITERAL(_nmi,                        1'852, meters); // 1_nmi (nautical mile, about one arc minute)
-	LITERAL(_NM,                         1'852, meters); // 1_NM  (nautical mile, about one arc minute)
+	LITERAL(_nmi,                         1852, meters); // 1_nmi (nautical mile, about one arc minute)
+	LITERAL(_NM,                          1852, meters); // 1_NM  (nautical mile, about one arc minute)
 	// mass in...
-	LITERAL(_oz,                28.349'523'125, grams);  // 1_oz (ounce, 1/16 of a pound)
-	LITERAL(_lb,                    0.45359237, kilograms);// 1_lb (pound)
+	LITERAL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)
+	LITERAL(_lb,                  0.453'592'37, kilograms); // 1_lb (pound)
 	// volume in...
 	LITERAL(_gal,                   4.54609e-3, meters3);// 1_gal (US gallon)
 	// velocity in...

@@ -8,9 +8,10 @@
 
 namespace SI
 {
-	inline std::string to_string_formatting     = "%.2Lf%s";  ///< configurable
-	inline std::string to_equivalent_formatting = "%.2Lf %s"; ///< configurable
+	inline std::string to_string_formatting     = "%.2Lf %s"; ///< configurable, SI standard formatting by default
+	inline std::string to_equivalent_formatting = "%.2Lf %s"; ///< configurable, SI standard formatting by default
 
+	/// @brief The from_string() function
 	inline bool from_string(const std::string& str, length& result)
 	{
 		double value;
