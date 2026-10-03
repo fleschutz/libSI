@@ -1,5 +1,5 @@
 /// @file   examples/speeds.cpp
-/// @brief  Contains 5 speed examples using libSI.
+/// @brief  Provides 5 speed examples using libSI.
 
 #include <iostream>
 #include <SI/core.h> 
@@ -9,8 +9,8 @@ using namespace SI;
 void speed_examples() {
 
     cout << "    === SPEED EXAMPLES ===" << endl;
-    to_string_formatting     = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
-    to_equivalent_formatting = "%.1Lf%s"; // (one decimal place, no space between quantity and unit)
+    to_string_formatting     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_equivalent_formatting = "%.1Lf%s"; // one decimal place, no space between quantity and unit
 
 
     cout << " 1. The average speed of Kelvin Kiptum's Marathon world record was... ";

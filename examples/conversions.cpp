@@ -1,5 +1,5 @@
 /// @file   examples/conversions.cpp
-/// @brief  Contains 7 import/export examples.
+/// @brief  Provides 7 import/export examples.
 
 #include <iostream>
 #include <SI/core.h> 
