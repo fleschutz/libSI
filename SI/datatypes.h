@@ -1,5 +1,5 @@
 /// @file      SI/datatypes.h
-/// @brief     Defines the 7 SI base datatypes and 25 derived ones, e.g. SI::length.
+/// @brief     Defines the dimensionless, the SI base, and the derived datatypes, e.g. SI::length
 
 #pragma once
 #include <SI/internal.h>
@@ -13,11 +13,15 @@
 
 namespace SI {
 
-	// SI Base Datatypes
-	// -----------------
+	// The Dimensionless Datatype
+	// --------------------------
+	typedef double dimensionless;   ///< to hold a quantity without any unit, e.g. 42
+
+	// The 7 SI Base Datatypes
+	// -----------------------
 	//                               Exponents:
 	//                               l  m  t  T  c  s  i 
-	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // base unit in meters
+	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
 	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in kelvins
@@ -25,8 +29,8 @@ namespace SI {
 	DATATYPE(amount_of_substance,    0, 0, 0, 0, 0, 1, 0); // in moles
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
 
-	// Derived SI Datatypes
-	// --------------------
+	// The Derived SI Datatypes
+	// ------------------------
 	DATATYPE(area,                   2, 0, 0, 0, 0, 0, 0); // in square meters
 	DATATYPE(volume,                 3, 0, 0, 0, 0, 0, 0); // in cubic meter
 	DATATYPE(velocity,               1, 0,-1, 0, 0, 0, 0); // in meter per second
