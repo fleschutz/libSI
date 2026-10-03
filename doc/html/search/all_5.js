@@ -15,8 +15,9 @@ var searchData=
   ['equatorial_5frotation_5fvelocity_12',['equatorial_rotation_velocity',['../namespaceEarth.html#abb9ec2cff187659aee8af721da379ee8',1,'Earth::equatorial_rotation_velocity'],['../namespaceMoon.html#aa848cdfdee25aecab28aef247fa94bec',1,'Moon::equatorial_rotation_velocity']]],
   ['equilibrium_5ftemperature_13',['equilibrium_temperature',['../structdataset_1_1exoplanet__details.html#a752d1ed00131e4d8ca31c3aaba286fda',1,'dataset::exoplanet_details']]],
   ['escape_5fvelocity_14',['escape_velocity',['../structdataset_1_1planet__details.html#a53faccac10cdd7f504a839ed76d95afc',1,'dataset::planet_details::escape_velocity'],['../namespaceEarth.html#a9c7b9989dc699e2946b96410123cc2b4',1,'Earth::escape_velocity'],['../namespaceMoon.html#ae36cf0ba0e5e2e4683434e945b6883f9',1,'Moon::escape_velocity']]],
-  ['example_15',['🔎 Usage Example',['../index.html#autotoc_md0',1,'']]],
-  ['exoplanet_5fdetails_16',['exoplanet_details',['../structdataset_1_1exoplanet__details.html',1,'dataset']]],
-  ['exoplanets_17',['exoplanets',['../namespacedataset.html#a2b2fd597b8ff55bc202811f08c28a4c9',1,'dataset']]],
-  ['exoplanets_2eh_18',['exoplanets.h',['../exoplanets_8h.html',1,'']]]
+  ['exa_15',['exa',['../namespaceSI_1_1prefix.html#a8699d4400bd7044aaeffb92714c6725e',1,'SI::prefix']]],
+  ['example_16',['🔎 Usage Example',['../index.html#autotoc_md0',1,'']]],
+  ['exoplanet_5fdetails_17',['exoplanet_details',['../structdataset_1_1exoplanet__details.html',1,'dataset']]],
+  ['exoplanets_18',['exoplanets',['../namespacedataset.html#a2b2fd597b8ff55bc202811f08c28a4c9',1,'dataset']]],
+  ['exoplanets_2eh_19',['exoplanets.h',['../exoplanets_8h.html',1,'']]]
 ];

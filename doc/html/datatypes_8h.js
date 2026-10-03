@@ -1,6 +1,7 @@
 var datatypes_8h =
 [
     [ "DATATYPE", "datatypes_8h.html#a2dd1d9826696af24891fcf0b0dc060be", null ],
+    [ "SI::dimensionless", "namespaceSI.html#a6d93edb3c7a5acd6f14c92e43ff7f499", null ],
     [ "SI::DATATYPE", "namespaceSI.html#ac44c8b554b472fc54cb18a633fed5fc3", null ],
     [ "SI::DATATYPE", "namespaceSI.html#a42607d51c95cd77f3bbf5d8e76e390b3", null ],
     [ "SI::DATATYPE", "namespaceSI.html#ac431133017dd2fe155e32b8b4b521274", null ],
