@@ -117,4 +117,10 @@ void astronomy_examples() {
     auto Sagittarius_A_mass = 8.54e36_kg;
     auto radius             = formula::Schwarzschild_radius(Sagittarius_A_mass);
     cout << radius << " or " << to_equivalent(radius) << " (Schwarzschild radius)" << endl << endl;
+
+
+    cout << "14. The current ISS position is at.. ";
+    auto ISS_altitude       = 415_km; // 410 - 420 km
+    auto ISS_speed          = 28'000_km_per_h;
+    auto ISS_orbital_period = 90_min; // ~90min
 }

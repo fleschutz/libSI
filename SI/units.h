@@ -63,8 +63,9 @@ namespace SI {
 	UNIT(kilograms_per_meter3) = kilograms / meters3;
 	UNIT(grams_per_centimeter3) = grams / centimeters3;
 	// velocity in...
-	UNIT(meters_per_second) = unit<velocity>();
-	UNIT(kilometers_per_hour) = kilometers / hours;
+	UNIT(meters_per_second)    = unit<velocity>();
+	UNIT(meters_per_hour)      = meters / hours;
+	UNIT(kilometers_per_hour)  = kilometers / hours;
 	UNIT(millimeters_per_hour) = millimeters / hours;
 	// acceleration in...
 	UNIT(meters_per_second2) = unit<acceleration>();
