@@ -1,5 +1,5 @@
 /// @file      SI/datatypes.h
-/// @brief     Defines the dimensionless, the SI base, and the derived datatypes, e.g. SI::length
+/// @brief     Defines the dimensionless, the SI base, and the derived SI datatypes, e.g. SI::length
 
 #pragma once
 #include <SI/internal.h>
@@ -19,7 +19,7 @@ namespace SI {
 
 	// The 7 SI Base Datatypes
 	// -----------------------
-	//                               Exponents:
+	//                                   Exponents:           Internal base unit:
 	//                               l  m  t  T  c  s  i 
 	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
