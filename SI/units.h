@@ -139,10 +139,8 @@ namespace SI {
 	UNIT(bytes)            = unit<detail::dimensionless>();
 	UNIT(bytes_per_second) = bytes / seconds;
 
-	// ANGLE (DIMENSIONLESS)
-	typedef long double angle;
-	typedef angle radians;
-
+	// 6. Basic Functions & Templates
+	// ------------------------------
 	[[nodiscard]] SI_INLINE angle sin(angle a)
 	{
 		return std::sin(radians(a));
@@ -175,8 +173,6 @@ namespace SI {
 		return 0.5 * (1.0 + std::cos(2.0 * x));
 	}
 
-	// BASIC FUNCTIONS/TEMPLATES
-
 	/// @brief Raise any number <x> to power of 2 (x² or x*x).
 	template <typename T>
 	[[nodiscard]] SI_INLINE_CONSTEXPR auto square(T x) { return x * x; }
@@ -193,7 +189,7 @@ namespace SI {
 		return x;
 	}
 
-	// 6. References
+	// 7. References
 	// -------------
 	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 

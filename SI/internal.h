@@ -11,8 +11,10 @@
 
 namespace SI
 {
-	typedef double SIdouble;        // <- internal datatype to hold floating point values
-	typedef SIdouble dimensionless; // <- basic datatype to hold a dimensionless value (without any unit), e.g. 42
+	typedef double dimensionless;   ///< basic datatype to hold a quantity only (without any unit), e.g. 42
+	typedef long double angle;      ///< basic datatype to hold a dimensionless angle, e.g. 3.1415
+	typedef angle radians;          ///< basic unit of radians for angle
+	typedef double SIdouble;        ///< internal datatype to hold floating point values
 
 	namespace internal
 	{
