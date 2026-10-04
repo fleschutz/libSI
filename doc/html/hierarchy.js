@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "dataset::airport_details", "structdataset_1_1airport__details.html", null ],
     [ "std::bool_constant", null, [
       [ "SI::detail::is_si< quantity< Dimension, T > >", "structSI_1_1detail_1_1is__si_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html", null ],
       [ "SI::detail::is_si< zero_t >", "structSI_1_1detail_1_1is__si_3_01zero__t_01_4.html", null ],

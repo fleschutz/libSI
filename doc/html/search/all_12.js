@@ -28,7 +28,7 @@ var searchData=
   ['speed_5fexamples_25',['speed_examples',['../main_8cpp.html#a5926443423680b88650c61926a96bd50',1,'speed_examples():&#160;main.cpp'],['../speeds_8cpp.html#a5926443423680b88650c61926a96bd50',1,'speed_examples():&#160;speeds.cpp']]],
   ['speed_5fof_5fsound_5fin_5fair_26',['speed_of_sound_in_air',['../namespaceSI_1_1formula.html#a556ae8c671bb2fa24cafbe6c6eed1e1c',1,'SI::formula']]],
   ['speeds_2ecpp_27',['speeds.cpp',['../speeds_8cpp.html',1,'']]],
-  ['sqrt_28',['sqrt',['../namespaceSI_1_1detail.html#af613c9b43b98978cfed5ff7bd27338b2',1,'SI::detail::sqrt()'],['../namespaceSI.html#af613c9b43b98978cfed5ff7bd27338b2',1,'SI::sqrt(const quantity&lt; Dimension, T &gt; &amp;x)']]],
+  ['sqrt_28',['sqrt',['../namespaceSI_1_1detail.html#af613c9b43b98978cfed5ff7bd27338b2',1,'SI::detail::sqrt()'],['../namespaceSI.html#a949dadf2bb6107544fa6a98c0c0eb6e4',1,'SI::sqrt(angle a)'],['../namespaceSI.html#af613c9b43b98978cfed5ff7bd27338b2',1,'SI::sqrt(const quantity&lt; Dimension, T &gt; &amp;x)']]],
   ['square_29',['square',['../namespaceSI.html#ae6c9bb35c359944d03bee69427857b0b',1,'SI']]],
   ['standard_5fstate_30',['standard_state',['../structdataset_1_1chemical__element__details.html#aaa0bc2e3ded8e25a934f2d1763e4a2cd',1,'dataset::chemical_element_details']]],
   ['substance_31',['substance',['../structSI_1_1detail_1_1dimension.html#afd28b58671133ba8448b37b715ebf8ec',1,'SI::detail::dimension']]],

@@ -18,7 +18,7 @@ var searchData=
   ['area_5fof_5ftrapezoid_15',['area_of_trapezoid',['../namespaceSI_1_1formula.html#ace56f52c54cfdedeffef2bcbb63df995',1,'SI::formula']]],
   ['area_5fof_5ftriangle_16',['area_of_triangle',['../namespaceSI_1_1formula.html#ad342d34e447cad58aecaeacb5d076eab',1,'SI::formula']]],
   ['astronomy_5fexamples_17',['astronomy_examples',['../astronomy_8cpp.html#a9541428fb2cda56215045653d2d86154',1,'astronomy_examples():&#160;astronomy.cpp'],['../main_8cpp.html#a9541428fb2cda56215045653d2d86154',1,'astronomy_examples():&#160;main.cpp']]],
-  ['atan2_18',['atan2',['../namespaceSI.html#abc35b32e2c989aab0b20f2ac501b5a74',1,'SI']]],
+  ['atan2_18',['atan2',['../namespaceSI.html#aac18acce9c436f902349418c1bd19d42',1,'SI::atan2(angle y, angle x)'],['../namespaceSI.html#abc35b32e2c989aab0b20f2ac501b5a74',1,'SI::atan2(length y, length x)']]],
   ['average_5fspeed_19',['average_speed',['../namespaceSI_1_1formula.html#a86166e45220be3058c16f0fc73002a38',1,'SI::formula']]],
   ['avg_5fof_5farray_20',['avg_of_array',['../namespaceSI_1_1formula.html#a4253dfbcc5a5a9849a94144e38062e04',1,'SI::formula']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['quantity_0',['quantity',['../structSI_1_1detail_1_1quantity.html',1,'SI::detail']]],
-  ['quantity_5fstorage_1',['quantity_storage',['../classSI_1_1detail_1_1quantity__storage.html',1,'SI::detail']]]
+  ['particle_5fdetails_0',['particle_details',['../structdataset_1_1particle__details.html',1,'dataset']]],
+  ['planet_5fdetails_1',['planet_details',['../structdataset_1_1planet__details.html',1,'dataset']]]
 ];

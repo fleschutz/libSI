@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "dataset", "namespacedataset.html", [
+      [ "airport_details", "structdataset_1_1airport__details.html", "structdataset_1_1airport__details" ],
       [ "chemical_element_details", "structdataset_1_1chemical__element__details.html", "structdataset_1_1chemical__element__details" ],
       [ "exoplanet_details", "structdataset_1_1exoplanet__details.html", "structdataset_1_1exoplanet__details" ],
       [ "lithium_battery_material_details", "structdataset_1_1lithium__battery__material__details.html", "structdataset_1_1lithium__battery__material__details" ],

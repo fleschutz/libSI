@@ -1,6 +1,7 @@
 var units_8h =
 [
     [ "UNIT", "units_8h.html#a2b60d55fe4877d79cf729c30d61310ba", null ],
+    [ "SI::atan2", "namespaceSI.html#aac18acce9c436f902349418c1bd19d42", null ],
     [ "SI::atan2", "namespaceSI.html#abc35b32e2c989aab0b20f2ac501b5a74", null ],
     [ "SI::clamp", "namespaceSI.html#a801a983b8fdcd4ab3844a62377bfdec6", null ],
     [ "SI::cos", "namespaceSI.html#a8ecdba606db764791d70f2c11544725f", null ],
@@ -8,6 +9,7 @@ var units_8h =
     [ "SI::cube", "namespaceSI.html#a12cb4993a348ff572ff83059a1b4d6d3", null ],
     [ "SI::sin", "namespaceSI.html#a3fc1a28189566b23868915967f345b2a", null ],
     [ "SI::sin2", "namespaceSI.html#aa8655f5ae7b01b073cb5dfe6f0dcd073", null ],
+    [ "SI::sqrt", "namespaceSI.html#a949dadf2bb6107544fa6a98c0c0eb6e4", null ],
     [ "SI::square", "namespaceSI.html#ae6c9bb35c359944d03bee69427857b0b", null ],
     [ "SI::tan", "namespaceSI.html#a9d494f0e5b1ad59b137d1f8975319307", null ],
     [ "SI::UNIT", "namespaceSI.html#aca0c0ec2ac32111941c1ea6cc9103dff", null ],

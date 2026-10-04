@@ -1,5 +1,6 @@
 var namespacedataset =
 [
+    [ "airport_details", "structdataset_1_1airport__details.html", "structdataset_1_1airport__details" ],
     [ "chemical_element_details", "structdataset_1_1chemical__element__details.html", "structdataset_1_1chemical__element__details" ],
     [ "exoplanet_details", "structdataset_1_1exoplanet__details.html", "structdataset_1_1exoplanet__details" ],
     [ "lithium_battery_material_details", "structdataset_1_1lithium__battery__material__details.html", "structdataset_1_1lithium__battery__material__details" ],
@@ -9,6 +10,7 @@ var namespacedataset =
     [ "musical_note_details", "structdataset_1_1musical__note__details.html", "structdataset_1_1musical__note__details" ],
     [ "particle_details", "structdataset_1_1particle__details.html", "structdataset_1_1particle__details" ],
     [ "planet_details", "structdataset_1_1planet__details.html", "structdataset_1_1planet__details" ],
+    [ "airports", "namespacedataset.html#ac7c280ea75726ecce85bf19c4555535e", null ],
     [ "chemical_elements", "namespacedataset.html#a13abc773b65a333f9e4a58dc9cbd7d89", null ],
     [ "exoplanets", "namespacedataset.html#a2b2fd597b8ff55bc202811f08c28a4c9", null ],
     [ "lithium_battery_materials", "namespacedataset.html#a85d7f6df2b5b84b1c555b74d73a81ab5", null ],

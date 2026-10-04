@@ -1,7 +1,6 @@
 var conversions_8h =
 [
-    [ "SI::_both", "namespaceSI.html#abac2a4e5bf9bd318d753a04950eaa9c8", null ],
-    [ "SI::_join", "namespaceSI.html#a1f2c24178a471d9c86e1978f729220ee", null ],
+    [ "SI::_join", "namespaceSI.html#aa6842102b881a5e50ed4dfbaefbfd65f", null ],
     [ "SI::from_string", "namespaceSI.html#aa089ab812e54b91569392dc4be992bab", null ],
     [ "SI::from_string", "namespaceSI.html#a0908891105ca3301aae260b8a634fa46", null ],
     [ "SI::from_string", "namespaceSI.html#a54b494cb5d204604b51a4ea46e7adfa9", null ],
@@ -28,6 +27,7 @@ var conversions_8h =
     [ "SI::to_equivalent", "namespaceSI.html#a5727ca7210ee2733ff80961e5e9c985a", null ],
     [ "SI::to_equivalent", "namespaceSI.html#a5f5db365e435a894fbaba32dca7a595a", null ],
     [ "SI::to_equivalent", "namespaceSI.html#ac9797f6f92c3b8ab9da3e587c75c6cf6", null ],
+    [ "SI::to_percentage", "namespaceSI.html#ad8590b08a427d5ff2ef34a0aa3944416", null ],
     [ "SI::to_string", "namespaceSI.html#a811e546983ba8a34179d6862747de9da", null ],
     [ "SI::to_string", "namespaceSI.html#a0bd0ca6fb8828eede6897f11307516cf", null ],
     [ "SI::to_string", "namespaceSI.html#abaa4e350c773666631e19833d972a06e", null ],
@@ -54,6 +54,7 @@ var conversions_8h =
     [ "SI::to_string", "namespaceSI.html#a85c8db5cc8d8d2af731bd950741fb2d7", null ],
     [ "SI::to_string", "namespaceSI.html#ad61234a0cd22eaf996b883bd50ec67a5", null ],
     [ "SI::to_string", "namespaceSI.html#a0d36d5967f313842073c3ad5a4c2e10d", null ],
-    [ "SI::to_equivalent_formatting", "namespaceSI.html#a5f4dc5f7c97c26b3c285a23c38da842e", null ],
-    [ "SI::to_string_formatting", "namespaceSI.html#a620bc4f80192f3d105b5c2e15448ddff", null ]
+    [ "SI::to_equivalent_format", "namespaceSI.html#a7d1089e4174f348099f7eb197f1f80bf", null ],
+    [ "SI::to_percentage_format", "namespaceSI.html#a27fea073fb3a50220e82d98dfed8701c", null ],
+    [ "SI::to_string_format", "namespaceSI.html#a2cc716995c45b19eb14094793c7918e9", null ]
 ];

@@ -124,63 +124,85 @@ Functions</h2></td></tr>
 <tr class="memdesc:aa089ab812e54b91569392dc4be992bab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="#aa089ab812e54b91569392dc4be992bab" title="The from_string() function.">from_string()</a> function.  <br /></td></tr>
 <tr class="memitem:a54b494cb5d204604b51a4ea46e7adfa9" id="r_a54b494cb5d204604b51a4ea46e7adfa9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b494cb5d204604b51a4ea46e7adfa9">from_string</a> (const std::string &amp;str, time &amp;result)</td></tr>
 <tr class="memitem:a0908891105ca3301aae260b8a634fa46" id="r_a0908891105ca3301aae260b8a634fa46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0908891105ca3301aae260b8a634fa46">from_string</a> (const std::string &amp;str, mass &amp;result)</td></tr>
-<tr class="memitem:a1f2c24178a471d9c86e1978f729220ee" id="r_a1f2c24178a471d9c86e1978f729220ee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f2c24178a471d9c86e1978f729220ee">_join</a> (long double value, const std::string &amp;<a class="el" href="#a29e82c72c44ad5fb7602c7bfc96067cc">unit</a>)</td></tr>
+<tr class="memitem:aa6842102b881a5e50ed4dfbaefbfd65f" id="r_aa6842102b881a5e50ed4dfbaefbfd65f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6842102b881a5e50ed4dfbaefbfd65f">_join</a> (long double quantity, const char *<a class="el" href="#a29e82c72c44ad5fb7602c7bfc96067cc">unit</a>, const char *formatString)</td></tr>
 <tr class="memitem:a1671c441ee55e52c5b4dfdf6096d396a" id="r_a1671c441ee55e52c5b4dfdf6096d396a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1671c441ee55e52c5b4dfdf6096d396a">to_string</a> (const length d)</td></tr>
+<tr class="memdesc:a1671c441ee55e52c5b4dfdf6096d396a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given length as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
+<tr class="memitem:a9005d66b3a42f5d14ea2e145bf347a8a" id="r_a9005d66b3a42f5d14ea2e145bf347a8a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9005d66b3a42f5d14ea2e145bf347a8a">to_equivalent</a> (const length d)</td></tr>
+<tr class="memdesc:a9005d66b3a42f5d14ea2e145bf347a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a length equivalent as string, e.g. in Imperial units.  <br /></td></tr>
 <tr class="memitem:a2a60ce132f6eed4adbe221bdfd351b37" id="r_a2a60ce132f6eed4adbe221bdfd351b37"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a60ce132f6eed4adbe221bdfd351b37">operator&lt;&lt;</a> (std::ostream &amp;os, const length d)</td></tr>
 <tr class="memitem:a0eb3f175b9a8c17bf41f01c24cfdbe16" id="r_a0eb3f175b9a8c17bf41f01c24cfdbe16"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eb3f175b9a8c17bf41f01c24cfdbe16">to_string</a> (const time t)</td></tr>
+<tr class="memdesc:a0eb3f175b9a8c17bf41f01c24cfdbe16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given time as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a9b1476e677e62df830bfdc08420ba9e0" id="r_a9b1476e677e62df830bfdc08420ba9e0"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b1476e677e62df830bfdc08420ba9e0">operator&lt;&lt;</a> (std::ostream &amp;os, const time t)</td></tr>
 <tr class="memitem:a228f85061c0d3875cc3178c6760fc8a0" id="r_a228f85061c0d3875cc3178c6760fc8a0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a228f85061c0d3875cc3178c6760fc8a0">to_string</a> (const mass m)</td></tr>
+<tr class="memdesc:a228f85061c0d3875cc3178c6760fc8a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given mass as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
+<tr class="memitem:a808f68c34e02d315581c09469d5a4194" id="r_a808f68c34e02d315581c09469d5a4194"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a808f68c34e02d315581c09469d5a4194">to_equivalent</a> (const mass m)</td></tr>
+<tr class="memdesc:a808f68c34e02d315581c09469d5a4194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mass equivalent as string, e.g. in Imperial units.  <br /></td></tr>
 <tr class="memitem:af5b67c02b41da4e406c5c8d4abc552eb" id="r_af5b67c02b41da4e406c5c8d4abc552eb"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5b67c02b41da4e406c5c8d4abc552eb">operator&lt;&lt;</a> (std::ostream &amp;os, const mass m)</td></tr>
 <tr class="memitem:a170c73e4e3df0d1224b9b707a22f94ba" id="r_a170c73e4e3df0d1224b9b707a22f94ba"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a170c73e4e3df0d1224b9b707a22f94ba">to_string</a> (const temperature T)</td></tr>
+<tr class="memdesc:a170c73e4e3df0d1224b9b707a22f94ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given temperature as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
+<tr class="memitem:a5f5db365e435a894fbaba32dca7a595a" id="r_a5f5db365e435a894fbaba32dca7a595a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f5db365e435a894fbaba32dca7a595a">to_equivalent</a> (const temperature T)</td></tr>
+<tr class="memdesc:a5f5db365e435a894fbaba32dca7a595a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a temperature equivalent as string, e.g. in Fahrenheit.  <br /></td></tr>
 <tr class="memitem:a1db0a6d5576e0a3a8ba9ff138f5decd8" id="r_a1db0a6d5576e0a3a8ba9ff138f5decd8"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1db0a6d5576e0a3a8ba9ff138f5decd8">operator&lt;&lt;</a> (std::ostream &amp;os, const temperature T)</td></tr>
 <tr class="memitem:a21af04d3919f78a467d31b6096e54194" id="r_a21af04d3919f78a467d31b6096e54194"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21af04d3919f78a467d31b6096e54194">to_string</a> (const electric_current I)</td></tr>
+<tr class="memdesc:a21af04d3919f78a467d31b6096e54194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the electric current (I) as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:abaa4e350c773666631e19833d972a06e" id="r_abaa4e350c773666631e19833d972a06e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaa4e350c773666631e19833d972a06e">to_string</a> (const area a)</td></tr>
+<tr class="memdesc:abaa4e350c773666631e19833d972a06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given area as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a4a01946be60eec1e7efa0212acb7f5f4" id="r_a4a01946be60eec1e7efa0212acb7f5f4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a01946be60eec1e7efa0212acb7f5f4">operator&lt;&lt;</a> (std::ostream &amp;os, const area a)</td></tr>
 <tr class="memitem:aaf464362639289da8681543fa373a61b" id="r_aaf464362639289da8681543fa373a61b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf464362639289da8681543fa373a61b">to_string</a> (const per_area a)</td></tr>
+<tr class="memdesc:aaf464362639289da8681543fa373a61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the per area as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a0900093b9c60a8251bbdd557d620a285" id="r_a0900093b9c60a8251bbdd557d620a285"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0900093b9c60a8251bbdd557d620a285">operator&lt;&lt;</a> (std::ostream &amp;os, const per_area a)</td></tr>
 <tr class="memitem:a0d36d5967f313842073c3ad5a4c2e10d" id="r_a0d36d5967f313842073c3ad5a4c2e10d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d36d5967f313842073c3ad5a4c2e10d">to_string</a> (const volume v)</td></tr>
+<tr class="memdesc:a0d36d5967f313842073c3ad5a4c2e10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the given volume as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:acb45f784c3a95a35ca030db0cf12a2ed" id="r_acb45f784c3a95a35ca030db0cf12a2ed"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb45f784c3a95a35ca030db0cf12a2ed">operator&lt;&lt;</a> (std::ostream &amp;os, const volume v)</td></tr>
 <tr class="memitem:ad61234a0cd22eaf996b883bd50ec67a5" id="r_ad61234a0cd22eaf996b883bd50ec67a5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad61234a0cd22eaf996b883bd50ec67a5">to_string</a> (const velocity v)</td></tr>
+<tr class="memdesc:ad61234a0cd22eaf996b883bd50ec67a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns velocity as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
+<tr class="memitem:ac9797f6f92c3b8ab9da3e587c75c6cf6" id="r_ac9797f6f92c3b8ab9da3e587c75c6cf6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9797f6f92c3b8ab9da3e587c75c6cf6">to_equivalent</a> (const velocity V)</td></tr>
+<tr class="memdesc:ac9797f6f92c3b8ab9da3e587c75c6cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a velocity equivalent as string, e.g. in Imperial units.  <br /></td></tr>
 <tr class="memitem:ab0e328e46605921f164a6c5226aaf79e" id="r_ab0e328e46605921f164a6c5226aaf79e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0e328e46605921f164a6c5226aaf79e">operator&lt;&lt;</a> (std::ostream &amp;os, const velocity v)</td></tr>
 <tr class="memitem:a811e546983ba8a34179d6862747de9da" id="r_a811e546983ba8a34179d6862747de9da"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a811e546983ba8a34179d6862747de9da">to_string</a> (const acceleration a)</td></tr>
+<tr class="memdesc:a811e546983ba8a34179d6862747de9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the acceleration as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:abf485d459645e2a380af7b4515f418e4" id="r_abf485d459645e2a380af7b4515f418e4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf485d459645e2a380af7b4515f418e4">operator&lt;&lt;</a> (std::ostream &amp;os, const acceleration a)</td></tr>
 <tr class="memitem:ab946683a3a7d721b9d25f12a72b997dd" id="r_ab946683a3a7d721b9d25f12a72b997dd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab946683a3a7d721b9d25f12a72b997dd">to_string</a> (const frequency f)</td></tr>
+<tr class="memdesc:ab946683a3a7d721b9d25f12a72b997dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the frequency as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:aa397ad1750fd98e1e44f3ffed3cdb803" id="r_aa397ad1750fd98e1e44f3ffed3cdb803"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa397ad1750fd98e1e44f3ffed3cdb803">operator&lt;&lt;</a> (std::ostream &amp;os, const frequency f)</td></tr>
 <tr class="memitem:a54b4a72f9e711a2170124a20586e6cd0" id="r_a54b4a72f9e711a2170124a20586e6cd0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b4a72f9e711a2170124a20586e6cd0">to_string</a> (const force F)</td></tr>
+<tr class="memdesc:a54b4a72f9e711a2170124a20586e6cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the force as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a8a12f905c5758b4cecaff0a283767b3a" id="r_a8a12f905c5758b4cecaff0a283767b3a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a12f905c5758b4cecaff0a283767b3a">operator&lt;&lt;</a> (std::ostream &amp;os, const force F)</td></tr>
 <tr class="memitem:a9eb10a5564a662b5caa11e4e0274e48e" id="r_a9eb10a5564a662b5caa11e4e0274e48e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eb10a5564a662b5caa11e4e0274e48e">to_string</a> (const energy E)</td></tr>
+<tr class="memdesc:a9eb10a5564a662b5caa11e4e0274e48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the energy as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:af70b75154ecb1baa01f601a37ba227a5" id="r_af70b75154ecb1baa01f601a37ba227a5"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af70b75154ecb1baa01f601a37ba227a5">operator&lt;&lt;</a> (std::ostream &amp;os, const energy E)</td></tr>
 <tr class="memitem:aa73a7176c524f11e4774f372ce38fc1d" id="r_aa73a7176c524f11e4774f372ce38fc1d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa73a7176c524f11e4774f372ce38fc1d">to_string</a> (const power P)</td></tr>
+<tr class="memdesc:aa73a7176c524f11e4774f372ce38fc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the power as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a11345da82b2c93517c135a0d42f285c4" id="r_a11345da82b2c93517c135a0d42f285c4"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11345da82b2c93517c135a0d42f285c4">operator&lt;&lt;</a> (std::ostream &amp;os, const power P)</td></tr>
 <tr class="memitem:a219fafc481ce87521d21afcb9a6a1eb1" id="r_a219fafc481ce87521d21afcb9a6a1eb1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a219fafc481ce87521d21afcb9a6a1eb1">to_string</a> (const power_intensity I)</td></tr>
+<tr class="memdesc:a219fafc481ce87521d21afcb9a6a1eb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the power intensity as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a975d6414a6a9f0c543962f6f4d78e08e" id="r_a975d6414a6a9f0c543962f6f4d78e08e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a975d6414a6a9f0c543962f6f4d78e08e">operator&lt;&lt;</a> (std::ostream &amp;os, const power_intensity I)</td></tr>
 <tr class="memitem:a07bcec302cd8c2b42ec3d9ae01f4d561" id="r_a07bcec302cd8c2b42ec3d9ae01f4d561"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07bcec302cd8c2b42ec3d9ae01f4d561">to_string</a> (const pressure p)</td></tr>
+<tr class="memdesc:a07bcec302cd8c2b42ec3d9ae01f4d561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the pressure as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a39a92e2c51affbd1f885c80af12e4981" id="r_a39a92e2c51affbd1f885c80af12e4981"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39a92e2c51affbd1f885c80af12e4981">operator&lt;&lt;</a> (std::ostream &amp;os, const pressure p)</td></tr>
 <tr class="memitem:a5fa7ef0c93c3924d076174b858c0b7ec" id="r_a5fa7ef0c93c3924d076174b858c0b7ec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fa7ef0c93c3924d076174b858c0b7ec">to_string</a> (const electric_potential U)</td></tr>
+<tr class="memdesc:a5fa7ef0c93c3924d076174b858c0b7ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the electric potential as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:ae7eab24079e4065e67bd00717c652bf1" id="r_ae7eab24079e4065e67bd00717c652bf1"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7eab24079e4065e67bd00717c652bf1">operator&lt;&lt;</a> (std::ostream &amp;os, const electric_potential U)</td></tr>
 <tr class="memitem:ad54886c57471a27ce830e110da4c6e48" id="r_ad54886c57471a27ce830e110da4c6e48"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad54886c57471a27ce830e110da4c6e48">to_string</a> (const electric_charge Q)</td></tr>
+<tr class="memdesc:ad54886c57471a27ce830e110da4c6e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the electric charge as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a6ae5c1b6645d15d126b9c47557169914" id="r_a6ae5c1b6645d15d126b9c47557169914"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ae5c1b6645d15d126b9c47557169914">to_string</a> (const mass_per_area m)</td></tr>
 <tr class="memitem:a57baac276ddd046233087228db925d43" id="r_a57baac276ddd046233087228db925d43"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57baac276ddd046233087228db925d43">to_string</a> (const mass_per_power m)</td></tr>
+<tr class="memdesc:a57baac276ddd046233087228db925d43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mass per power as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:adf7ca69dc0604eea90299e9b2c94dc80" id="r_adf7ca69dc0604eea90299e9b2c94dc80"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf7ca69dc0604eea90299e9b2c94dc80">operator&lt;&lt;</a> (std::ostream &amp;os, const mass_per_power m)</td></tr>
 <tr class="memitem:a0fac5526fb2ba1b59569a69f81daf4fc" id="r_a0fac5526fb2ba1b59569a69f81daf4fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fac5526fb2ba1b59569a69f81daf4fc">to_string</a> (const density d)</td></tr>
+<tr class="memdesc:a0fac5526fb2ba1b59569a69f81daf4fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns density as string using <a class="el" href="namespaceSI.html">SI</a> units.  <br /></td></tr>
 <tr class="memitem:a0bd0ca6fb8828eede6897f11307516cf" id="r_a0bd0ca6fb8828eede6897f11307516cf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bd0ca6fb8828eede6897f11307516cf">to_string</a> (const <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> a)</td></tr>
+<tr class="memdesc:a0bd0ca6fb8828eede6897f11307516cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the angle as string in degree.  <br /></td></tr>
 <tr class="memitem:a1c82d81fa3fd5791f846a93dfd09f1ea" id="r_a1c82d81fa3fd5791f846a93dfd09f1ea"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c82d81fa3fd5791f846a93dfd09f1ea">to_string</a> (const <a class="el" href="#a6d93edb3c7a5acd6f14c92e43ff7f499">dimensionless</a> value)</td></tr>
 <tr class="memitem:a85c8db5cc8d8d2af731bd950741fb2d7" id="r_a85c8db5cc8d8d2af731bd950741fb2d7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85c8db5cc8d8d2af731bd950741fb2d7">to_string</a> (const unsigned char byte)</td></tr>
 <tr class="memitem:a5da10d06b413ab53df7daeaed25ada1c" id="r_a5da10d06b413ab53df7daeaed25ada1c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5da10d06b413ab53df7daeaed25ada1c">to_string</a> (const char glyph)</td></tr>
 <tr class="memitem:a7efc45413310ec430d416a92ef96f092" id="r_a7efc45413310ec430d416a92ef96f092"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7efc45413310ec430d416a92ef96f092">to_string</a> (const std::string &amp;text)</td></tr>
-<tr class="memitem:abac2a4e5bf9bd318d753a04950eaa9c8" id="r_abac2a4e5bf9bd318d753a04950eaa9c8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abac2a4e5bf9bd318d753a04950eaa9c8">_both</a> (long double value, const std::string &amp;<a class="el" href="#a29e82c72c44ad5fb7602c7bfc96067cc">unit</a>)</td></tr>
-<tr class="memitem:a9005d66b3a42f5d14ea2e145bf347a8a" id="r_a9005d66b3a42f5d14ea2e145bf347a8a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9005d66b3a42f5d14ea2e145bf347a8a">to_equivalent</a> (const length d)</td></tr>
-<tr class="memdesc:a9005d66b3a42f5d14ea2e145bf347a8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a length equivalent as string, e.g. in Imperial units.  <br /></td></tr>
-<tr class="memitem:a808f68c34e02d315581c09469d5a4194" id="r_a808f68c34e02d315581c09469d5a4194"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a808f68c34e02d315581c09469d5a4194">to_equivalent</a> (const mass m)</td></tr>
-<tr class="memdesc:a808f68c34e02d315581c09469d5a4194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mass equivalent as string, e.g. in Imperial units.  <br /></td></tr>
-<tr class="memitem:ac9797f6f92c3b8ab9da3e587c75c6cf6" id="r_ac9797f6f92c3b8ab9da3e587c75c6cf6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9797f6f92c3b8ab9da3e587c75c6cf6">to_equivalent</a> (const velocity V)</td></tr>
-<tr class="memdesc:ac9797f6f92c3b8ab9da3e587c75c6cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a velocity equivalent as string, e.g. in Imperial units.  <br /></td></tr>
-<tr class="memitem:a5f5db365e435a894fbaba32dca7a595a" id="r_a5f5db365e435a894fbaba32dca7a595a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f5db365e435a894fbaba32dca7a595a">to_equivalent</a> (const temperature T)</td></tr>
-<tr class="memdesc:a5f5db365e435a894fbaba32dca7a595a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a temperature equivalent as string, e.g. in Fahrenheit.  <br /></td></tr>
 <tr class="memitem:a5727ca7210ee2733ff80961e5e9c985a" id="r_a5727ca7210ee2733ff80961e5e9c985a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5727ca7210ee2733ff80961e5e9c985a">to_equivalent</a> (const power_intensity I)</td></tr>
 <tr class="memdesc:a5727ca7210ee2733ff80961e5e9c985a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a power intensity equivalent as string, e.g. in dB.  <br /></td></tr>
 <tr class="memitem:a37c79a0148129ec435b7f037b36315dc" id="r_a37c79a0148129ec435b7f037b36315dc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37c79a0148129ec435b7f037b36315dc">to_equivalent</a> (const energy E)</td></tr>
 <tr class="memdesc:a37c79a0148129ec435b7f037b36315dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an energy equivalent as string, e.g. kg TNT.  <br /></td></tr>
+<tr class="memitem:ad8590b08a427d5ff2ef34a0aa3944416" id="r_ad8590b08a427d5ff2ef34a0aa3944416"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8590b08a427d5ff2ef34a0aa3944416">to_percentage</a> (length part, length total)</td></tr>
+<tr class="memdesc:ad8590b08a427d5ff2ef34a0aa3944416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the percentage as string, e.g. 50.0%.  <br /></td></tr>
 <tr class="memitem:a2ccf39ae93903052b34d0cbf71658a6a" id="r_a2ccf39ae93903052b34d0cbf71658a6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ccf39ae93903052b34d0cbf71658a6a">DATATYPE</a> (length, 1, 0, 0, 0, 0, 0, 0)</td></tr>
 <tr class="memitem:a39ca63fd2f3b30906811b54595c8a940" id="r_a39ca63fd2f3b30906811b54595c8a940"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39ca63fd2f3b30906811b54595c8a940">DATATYPE</a> (mass, 0, 1, 0, 0, 0, 0, 0)</td></tr>
 <tr class="memitem:a94abeb2bdef5ed9360d179dce7ff6f1d" id="r_a94abeb2bdef5ed9360d179dce7ff6f1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94abeb2bdef5ed9360d179dce7ff6f1d">DATATYPE</a> (time, 0, 0, 1, 0, 0, 0, 0)</td></tr>
@@ -706,13 +728,19 @@ Functions</h2></td></tr>
 <tr class="memitem:aad5365f1a69dd284e0ca48f6726d773a" id="r_aad5365f1a69dd284e0ca48f6726d773a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5365f1a69dd284e0ca48f6726d773a">UNIT</a> (bytes)</td></tr>
 <tr class="memitem:a972654ef8db3d6e32f08e9651609dc7a" id="r_a972654ef8db3d6e32f08e9651609dc7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a972654ef8db3d6e32f08e9651609dc7a">UNIT</a> (bytes_per_second)</td></tr>
 <tr class="memitem:a3fc1a28189566b23868915967f345b2a" id="r_a3fc1a28189566b23868915967f345b2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fc1a28189566b23868915967f345b2a">sin</a> (<a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> a)</td></tr>
+<tr class="memdesc:a3fc1a28189566b23868915967f345b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the sinus of an angle (a).  <br /></td></tr>
 <tr class="memitem:a8ecdba606db764791d70f2c11544725f" id="r_a8ecdba606db764791d70f2c11544725f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8ecdba606db764791d70f2c11544725f">cos</a> (<a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> a)</td></tr>
+<tr class="memdesc:a8ecdba606db764791d70f2c11544725f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the cosinus of an angle (a).  <br /></td></tr>
 <tr class="memitem:a9d494f0e5b1ad59b137d1f8975319307" id="r_a9d494f0e5b1ad59b137d1f8975319307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d494f0e5b1ad59b137d1f8975319307">tan</a> (<a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> a)</td></tr>
-<tr class="memitem:abc35b32e2c989aab0b20f2ac501b5a74" id="r_abc35b32e2c989aab0b20f2ac501b5a74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc35b32e2c989aab0b20f2ac501b5a74">atan2</a> (length y, length x)</td></tr>
+<tr class="memdesc:a9d494f0e5b1ad59b137d1f8975319307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the tangens of an angle (a).  <br /></td></tr>
+<tr class="memitem:aac18acce9c436f902349418c1bd19d42" id="r_aac18acce9c436f902349418c1bd19d42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac18acce9c436f902349418c1bd19d42">atan2</a> (<a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> y, <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> x)</td></tr>
+<tr class="memdesc:aac18acce9c436f902349418c1bd19d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the atangens of two angles.  <br /></td></tr>
 <tr class="memitem:aa8655f5ae7b01b073cb5dfe6f0dcd073" id="r_aa8655f5ae7b01b073cb5dfe6f0dcd073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8655f5ae7b01b073cb5dfe6f0dcd073">sin2</a> (<a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> x)</td></tr>
 <tr class="memdesc:aa8655f5ae7b01b073cb5dfe6f0dcd073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates sin²x.  <br /></td></tr>
 <tr class="memitem:abd15b018d2a4fd096df4435144f03af7" id="r_abd15b018d2a4fd096df4435144f03af7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd15b018d2a4fd096df4435144f03af7">cos2</a> (<a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> x)</td></tr>
 <tr class="memdesc:abd15b018d2a4fd096df4435144f03af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates cos²x.  <br /></td></tr>
+<tr class="memitem:a949dadf2bb6107544fa6a98c0c0eb6e4" id="r_a949dadf2bb6107544fa6a98c0c0eb6e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a949dadf2bb6107544fa6a98c0c0eb6e4">sqrt</a> (<a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> a)</td></tr>
+<tr class="memitem:abc35b32e2c989aab0b20f2ac501b5a74" id="r_abc35b32e2c989aab0b20f2ac501b5a74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc35b32e2c989aab0b20f2ac501b5a74">atan2</a> (length y, length x)</td></tr>
 <tr class="memitem:ae6c9bb35c359944d03bee69427857b0b" id="r_ae6c9bb35c359944d03bee69427857b0b"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:ae6c9bb35c359944d03bee69427857b0b template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#a947e759cb27e35ed52184dc44d0709de">SI_INLINE_CONSTEXPR</a> auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6c9bb35c359944d03bee69427857b0b">square</a> (T x)</td></tr>
 <tr class="memdesc:ae6c9bb35c359944d03bee69427857b0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raise any number &lt;x&gt; to power of 2 (x² or x*x).  <br /></td></tr>
@@ -745,10 +773,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a620bc4f80192f3d105b5c2e15448ddff" id="r_a620bc4f80192f3d105b5c2e15448ddff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a620bc4f80192f3d105b5c2e15448ddff">to_string_formatting</a> = &quot;%.2Lf %s&quot;</td></tr>
-<tr class="memdesc:a620bc4f80192f3d105b5c2e15448ddff"><td class="mdescLeft">&#160;</td><td class="mdescRight">configurable, <a class="el" href="namespaceSI.html">SI</a> standard formatting by default  <br /></td></tr>
-<tr class="memitem:a5f4dc5f7c97c26b3c285a23c38da842e" id="r_a5f4dc5f7c97c26b3c285a23c38da842e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f4dc5f7c97c26b3c285a23c38da842e">to_equivalent_formatting</a> = &quot;%.2Lf %s&quot;</td></tr>
-<tr class="memdesc:a5f4dc5f7c97c26b3c285a23c38da842e"><td class="mdescLeft">&#160;</td><td class="mdescRight">configurable, <a class="el" href="namespaceSI.html">SI</a> standard formatting by default  <br /></td></tr>
+<tr class="memitem:a2cc716995c45b19eb14094793c7918e9" id="r_a2cc716995c45b19eb14094793c7918e9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cc716995c45b19eb14094793c7918e9">to_string_format</a> = &quot;%.2Lf %s&quot;</td></tr>
+<tr class="memdesc:a2cc716995c45b19eb14094793c7918e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">configurable, <a class="el" href="namespaceSI.html">SI</a> standard formatting by default  <br /></td></tr>
+<tr class="memitem:a7d1089e4174f348099f7eb197f1f80bf" id="r_a7d1089e4174f348099f7eb197f1f80bf"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d1089e4174f348099f7eb197f1f80bf">to_equivalent_format</a> = &quot;%.2Lf %s&quot;</td></tr>
+<tr class="memdesc:a7d1089e4174f348099f7eb197f1f80bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">configurable, <a class="el" href="namespaceSI.html">SI</a> standard formatting by default  <br /></td></tr>
+<tr class="memitem:a27fea073fb3a50220e82d98dfed8701c" id="r_a27fea073fb3a50220e82d98dfed8701c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27fea073fb3a50220e82d98dfed8701c">to_percentage_format</a> = &quot;%.0Lf %s&quot;</td></tr>
+<tr class="memdesc:a27fea073fb3a50220e82d98dfed8701c"><td class="mdescLeft">&#160;</td><td class="mdescRight">configurable  <br /></td></tr>
 <tr class="memitem:a9375f55a05c623d3e47e4ebc836550a4" id="r_a9375f55a05c623d3e47e4ebc836550a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#a947e759cb27e35ed52184dc44d0709de">SI_INLINE_CONSTEXPR</a> <a class="el" href="structSI_1_1detail_1_1zero__t.html">detail::zero_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9375f55a05c623d3e47e4ebc836550a4">zero</a></td></tr>
 <tr class="memitem:aa13dec9853875cedea600c70daf4bdf0" id="r_aa13dec9853875cedea600c70daf4bdf0"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
 <tr class="memitem:aa13dec9853875cedea600c70daf4bdf0 template"><td class="memItemLeft" align="right" valign="top"><a class="el" href="internal_8h.html#a947e759cb27e35ed52184dc44d0709de">SI_INLINE_CONSTEXPR</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa13dec9853875cedea600c70daf4bdf0">is_si_v</a></td></tr>
@@ -835,37 +865,8 @@ template&lt;class Dimension, long long numerator = 1, long long denumerator = 1&
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="abac2a4e5bf9bd318d753a04950eaa9c8" name="abac2a4e5bf9bd318d753a04950eaa9c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abac2a4e5bf9bd318d753a04950eaa9c8">&#9670;&#160;</a></span>_both()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string SI::_both </td>
-          <td>(</td>
-          <td class="paramtype">long double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>unit</em></span>&#160;)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1f2c24178a471d9c86e1978f729220ee" name="a1f2c24178a471d9c86e1978f729220ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f2c24178a471d9c86e1978f729220ee">&#9670;&#160;</a></span>_join()</h2>
+<a id="aa6842102b881a5e50ed4dfbaefbfd65f" name="aa6842102b881a5e50ed4dfbaefbfd65f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6842102b881a5e50ed4dfbaefbfd65f">&#9670;&#160;</a></span>_join()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -876,12 +877,17 @@ template&lt;class Dimension, long long numerator = 1, long long denumerator = 1&
         <tr>
           <td class="memname">std::string SI::_join </td>
           <td>(</td>
-          <td class="paramtype">long double</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+          <td class="paramtype">long double</td>          <td class="paramname"><span class="paramname"><em>quantity</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>unit</em></span>&#160;)</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>unit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>formatString</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -912,8 +918,39 @@ template&lt;class Dimension, class T&gt; </div>
 
 </div>
 </div>
+<a id="aac18acce9c436f902349418c1bd19d42" name="aac18acce9c436f902349418c1bd19d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac18acce9c436f902349418c1bd19d42">&#9670;&#160;</a></span>atan2() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> SI::atan2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the atangens of two angles. </p>
+
+</div>
+</div>
 <a id="abc35b32e2c989aab0b20f2ac501b5a74" name="abc35b32e2c989aab0b20f2ac501b5a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc35b32e2c989aab0b20f2ac501b5a74">&#9670;&#160;</a></span>atan2()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abc35b32e2c989aab0b20f2ac501b5a74">&#9670;&#160;</a></span>atan2() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1272,6 +1309,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the cosinus of an angle (a). </p>
 
 </div>
 </div>
@@ -12787,6 +12826,8 @@ template&lt;long Degree, class Dimension, class T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the sinus of an angle (a). </p>
+
 </div>
 </div>
 <a id="aa8655f5ae7b01b073cb5dfe6f0dcd073" name="aa8655f5ae7b01b073cb5dfe6f0dcd073"></a>
@@ -12816,8 +12857,33 @@ template&lt;long Degree, class Dimension, class T&gt; </div>
 
 </div>
 </div>
+<a id="a949dadf2bb6107544fa6a98c0c0eb6e4" name="a949dadf2bb6107544fa6a98c0c0eb6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a949dadf2bb6107544fa6a98c0c0eb6e4">&#9670;&#160;</a></span>sqrt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="internal_8h.html#ac0df027513662a8534049a3adb230f3a">SI_INLINE</a> <a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a> SI::sqrt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aba6f659bd709507f32224c552d83ae7f">angle</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af613c9b43b98978cfed5ff7bd27338b2" name="af613c9b43b98978cfed5ff7bd27338b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af613c9b43b98978cfed5ff7bd27338b2">&#9670;&#160;</a></span>sqrt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af613c9b43b98978cfed5ff7bd27338b2">&#9670;&#160;</a></span>sqrt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12886,6 +12952,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the tangens of an angle (a). </p>
 
 </div>
 </div>
@@ -13051,6 +13119,37 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="ad8590b08a427d5ff2ef34a0aa3944416" name="ad8590b08a427d5ff2ef34a0aa3944416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8590b08a427d5ff2ef34a0aa3944416">&#9670;&#160;</a></span>to_percentage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SI::to_percentage </td>
+          <td>(</td>
+          <td class="paramtype">length</td>          <td class="paramname"><span class="paramname"><em>part</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">length</td>          <td class="paramname"><span class="paramname"><em>total</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the percentage as string, e.g. 50.0%. </p>
+
+</div>
+</div>
 <a id="a811e546983ba8a34179d6862747de9da" name="a811e546983ba8a34179d6862747de9da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a811e546983ba8a34179d6862747de9da">&#9670;&#160;</a></span>to_string() <span class="overload">[1/26]</span></h2>
 
@@ -13073,6 +13172,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the acceleration as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13099,6 +13200,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the angle as string in degree. </p>
+
 </div>
 </div>
 <a id="abaa4e350c773666631e19833d972a06e" name="abaa4e350c773666631e19833d972a06e"></a>
@@ -13123,6 +13226,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the given area as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13174,6 +13279,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns density as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a1c82d81fa3fd5791f846a93dfd09f1ea" name="a1c82d81fa3fd5791f846a93dfd09f1ea"></a>
@@ -13224,6 +13331,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the electric charge as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a21af04d3919f78a467d31b6096e54194" name="a21af04d3919f78a467d31b6096e54194"></a>
@@ -13248,6 +13357,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the electric current (I) as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13274,6 +13385,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the electric potential as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a9eb10a5564a662b5caa11e4e0274e48e" name="a9eb10a5564a662b5caa11e4e0274e48e"></a>
@@ -13298,6 +13411,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the energy as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13324,6 +13439,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the force as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="ab946683a3a7d721b9d25f12a72b997dd" name="ab946683a3a7d721b9d25f12a72b997dd"></a>
@@ -13348,6 +13465,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the frequency as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13374,6 +13493,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the given length as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a228f85061c0d3875cc3178c6760fc8a0" name="a228f85061c0d3875cc3178c6760fc8a0"></a>
@@ -13398,6 +13519,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the given mass as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13449,6 +13572,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the mass per power as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="aaf464362639289da8681543fa373a61b" name="aaf464362639289da8681543fa373a61b"></a>
@@ -13473,6 +13598,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the per area as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13499,6 +13626,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the power as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a219fafc481ce87521d21afcb9a6a1eb1" name="a219fafc481ce87521d21afcb9a6a1eb1"></a>
@@ -13524,6 +13653,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the power intensity as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a07bcec302cd8c2b42ec3d9ae01f4d561" name="a07bcec302cd8c2b42ec3d9ae01f4d561"></a>
@@ -13548,6 +13679,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the pressure as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13599,6 +13732,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the given temperature as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a0eb3f175b9a8c17bf41f01c24cfdbe16" name="a0eb3f175b9a8c17bf41f01c24cfdbe16"></a>
@@ -13623,6 +13758,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the given time as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -13674,6 +13811,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns velocity as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
+
 </div>
 </div>
 <a id="a0d36d5967f313842073c3ad5a4c2e10d" name="a0d36d5967f313842073c3ad5a4c2e10d"></a>
@@ -13698,6 +13837,8 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the given volume as string using <a class="el" href="namespaceSI.html">SI</a> units. </p>
 
 </div>
 </div>
@@ -15418,8 +15559,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="a5f4dc5f7c97c26b3c285a23c38da842e" name="a5f4dc5f7c97c26b3c285a23c38da842e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f4dc5f7c97c26b3c285a23c38da842e">&#9670;&#160;</a></span>to_equivalent_formatting</h2>
+<a id="a7d1089e4174f348099f7eb197f1f80bf" name="a7d1089e4174f348099f7eb197f1f80bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d1089e4174f348099f7eb197f1f80bf">&#9670;&#160;</a></span>to_equivalent_format</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -15428,7 +15569,7 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string SI::to_equivalent_formatting = &quot;%.2Lf %s&quot;</td>
+          <td class="memname">auto SI::to_equivalent_format = &quot;%.2Lf %s&quot;</td>
         </tr>
       </table>
   </td>
@@ -15442,8 +15583,8 @@ template&lt;class T&gt; </div>
 
 </div>
 </div>
-<a id="a620bc4f80192f3d105b5c2e15448ddff" name="a620bc4f80192f3d105b5c2e15448ddff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a620bc4f80192f3d105b5c2e15448ddff">&#9670;&#160;</a></span>to_string_formatting</h2>
+<a id="a27fea073fb3a50220e82d98dfed8701c" name="a27fea073fb3a50220e82d98dfed8701c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27fea073fb3a50220e82d98dfed8701c">&#9670;&#160;</a></span>to_percentage_format</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -15452,7 +15593,31 @@ template&lt;class T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string SI::to_string_formatting = &quot;%.2Lf %s&quot;</td>
+          <td class="memname">auto SI::to_percentage_format = &quot;%.0Lf %s&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>configurable </p>
+
+</div>
+</div>
+<a id="a2cc716995c45b19eb14094793c7918e9" name="a2cc716995c45b19eb14094793c7918e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc716995c45b19eb14094793c7918e9">&#9670;&#160;</a></span>to_string_format</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto SI::to_string_format = &quot;%.2Lf %s&quot;</td>
         </tr>
       </table>
   </td>

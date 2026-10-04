@@ -1,0 +1,3 @@
+/Repos/libSI/doc/CMakeFiles/api_doc.dir
+/Repos/libSI/doc/CMakeFiles/edit_cache.dir
+/Repos/libSI/doc/CMakeFiles/rebuild_cache.dir

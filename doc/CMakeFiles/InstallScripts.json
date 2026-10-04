@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Repos/libSI/doc/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
