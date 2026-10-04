@@ -1,5 +1,5 @@
 /// @file   examples/various.cpp
-/// @brief  Provides 31 various examples using libSI.
+/// @brief  Provides 33 various examples using libSI.
 
 #include <iostream>
 #include <SI/core.h> 
@@ -189,7 +189,7 @@ void various_examples() {
     auto volume         = formula::volume_of_cylinder(log_diameter / 2, log_length);
     auto weight         = volume * dry_oak_weight;
     auto power          = weight * dry_oak_power;
-    cout << area << " area, " << volume << " volume, " << weight << " volume , " << power << endl;
+    cout << area << " area, " << volume << " volume, " << weight << " weight, " << power << endl;
 
 
     cout << "26. The min cable wire size for 100m copper, 230V, 30A max are... ";
@@ -246,5 +246,13 @@ void various_examples() {
     auto force_applied = 500_N;
     auto angle         = 90_deg;
     auto torque = lever_arm * force_applied * SI::sin(angle);
-    cout << torque << " of torque" << endl << endl;
+    cout << torque << " of torque" << endl;
+
+
+    cout << "33. The direct distance between Singapore and Tokyo is...";
+    auto Singapore_lat  = 1.3521_deg;
+    auto Singapore_long = 103.8198_deg;
+    auto Tokyo_lat  = 35.6762_deg;
+    auto Tokyo_long = 139.6503_deg;
+    cout << formula::distance_on_Earth(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long) << endl << endl;
 }

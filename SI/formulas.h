@@ -330,7 +330,7 @@ namespace SI { namespace formula {
 		return IGF + FAC;
 	}
 
-	/// @brief Calculates the Schwarzschild radius (event horizon) of a black hole from it's mass (M).
+	/// @brief Calculates the Schwarzschild radius of a black hole from it's mass (M).
 	FUNC length Schwarzschild_radius(const mass M)
 	{
 		return (2.0 * constant::G * M) / square(constant::c);
@@ -431,10 +431,10 @@ namespace SI { namespace formula {
 		return m / p;
 	}
 
-	/// @brief Calculates the body-mass index (BMI).
-	FUNC dimensionless BMI(const mass weight, const length height)
+	/// @brief Calculates the human body-mass index (BMI) from weight (w) and height (h).
+	FUNC dimensionless BMI(const mass w, const length h)
 	{
-		return (weight / square(height)) / 1_kg_per_m²;
+		return (w / square(h)) / 1_kg_per_m²;
 	}
 
 	/// @brief Calculates the consumed electrical power of a current (I) and potential (U).
@@ -520,6 +520,18 @@ namespace SI { namespace formula {
 		return sum;
 	}
 
+	/// @brief Calculates the distance between two lat/long coordinates on Earth (haversine formula).
+	FUNC length distance_on_Earth(angle lat1, angle long1, angle lat2, angle long2)
+	{
+		angle dLat = lat1 - lat2;    // difference in latitude
+		angle dLong = long1 - long2; // difference in longitude
+
+		angle a = sin2(dLat / 2.) + cos(lat1) * cos(lat2) * sin2(dLong / 2.); // Haversine intermediate
+		auto  c = 2. * atan2(sqrt(a), sqrt(1. - a)); // central angle 
+
+		return c * 6371.0088_km; // mean Earth radius, recommended by NOAA
+	}
+
 	// 8. References
 	// -------------
 	// 1. https://en.wikipedia.org/wiki/Turning_radius
@@ -532,6 +544,7 @@ namespace SI { namespace formula {
 	// 8. https://www.vcalc.com/wiki/ballistic-max-height
 	// 9. https://www.vcalc.com/wiki/ballistic-range
 	// 10. https://www.vcalc.com/wiki/ballistic-travel-time
+	// 11. https://best-calculators.com/tools/latitude-longitude-distance-calculator/
 
 } } // end of namespace SI::formula
  
