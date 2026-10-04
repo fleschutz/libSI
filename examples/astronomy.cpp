@@ -11,8 +11,8 @@ using namespace SI;
 void astronomy_examples() {
 
     cout << "    === ASTRONOMY EXAMPLES ===" << endl;
-    to_string_formatting     = "%.1Lf%s";  // one decimal place, no space between quantity and unit
-    to_equivalent_formatting = "%.1Lf %s"; // one decimal place, with space between quantity and unit
+    to_string_format     = "%.1Lf%s";  // one decimal place, no space between quantity and unit
+    to_equivalent_format = "%.1Lf %s"; // one decimal place, with space between quantity and unit
 
 
     cout << " 1. The travel time of sun light to Earth is... ";

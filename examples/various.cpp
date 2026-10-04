@@ -10,8 +10,8 @@ using namespace SI;
 void various_examples() {
 
     cout << "    === VARIOUS EXAMPLES ===" << endl;
-    to_string_formatting     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-    to_equivalent_formatting = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_string_format     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
 
 
     mass m   = 1_oz;

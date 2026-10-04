@@ -9,8 +9,8 @@ using namespace SI;
 void speed_examples() {
 
     cout << "    === SPEED EXAMPLES ===" << endl;
-    to_string_formatting     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-    to_equivalent_formatting = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_string_format     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
 
 
     cout << " 1. The average speed of Kelvin Kiptum's Marathon world record was... ";
