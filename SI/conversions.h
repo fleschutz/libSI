@@ -115,6 +115,8 @@ namespace SI
 	}
 
 	// convert the 7 SI base units:
+
+	/// @brief Returns the given length as string using SI units.
 	inline std::string to_string(const length d)
 	{
 		if (d <= -1_Gpc || d >= 1_Gpc)
@@ -144,12 +146,29 @@ namespace SI
 		return _join(d / 1_pm, "pm", to_string_format);
 	}
 
+	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
+	inline std::string to_equivalent(const length d)
+	{
+		if (d <= -1_ly || d >= 1_ly)
+			return _join(d / 1_ly, "light-years", to_equivalent_format);
+		if (d <= -1_ls || d >= 1_ls)
+			return _join(d / 1_ls, "light-seconds", to_equivalent_format);
+		if (d <= -1_mi || d >= 1_mi)
+			return _join(d / 1_mi, "miles", to_equivalent_format);
+		if (d <= -1_yd || d >= 1_yd)
+			return _join(d / 1_yd, "yards", to_equivalent_format);
+		if (d <= -1_ft || d >= 1_ft)
+			return _join(d / 1_ft, "feet", to_equivalent_format);
+		return _join(d / 1_in, "inch", to_equivalent_format);
+	}
+
 	inline std::ostream& operator<<(std::ostream& os, const length d)
 	{
 		os << to_string(d);
 		return os;
 	}
 
+	/// @brief Returns the given time as string using SI units.
 	inline std::string to_string(const time t)
 	{
 		if (abs(t) > 365.25_days)
@@ -179,6 +198,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the given mass as string using SI units.
 	inline std::string to_string(const mass m)
 	{
 		if (m <= -1_Pt || m >= 1_Pt)
@@ -204,19 +224,36 @@ namespace SI
 		return _join(m / 1_ng, "ng", to_string_format);
 	}
 
+	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
+	inline std::string to_equivalent(const mass m)
+	{
+		if (m <= -1_Msun || m >= 1_Msun)
+			return _join(m / 1_Msun, "solar masses", to_equivalent_format);
+		if (m <= -1_Mjup || m >= 1_Mjup)
+			return _join(m / 1_Mjup, "Jupiter masses", to_equivalent_format);
+		if (m <= -1_Mearth || m >= 1_Mearth)
+			return _join(m / 1_Mearth, "Earth masses", to_equivalent_format);
+		if (m <= -1_Mmoon || m >= 1_Mmoon)
+			return _join(m / 1_Mmoon, "Moon masses", to_equivalent_format);
+		if (m <= -1_lb || m >= 1_lb)
+			return _join(m / 1_lb, "lb", to_equivalent_format);
+		return _join(m / 1_oz, "oz", to_equivalent_format);
+	}
+
 	inline std::ostream& operator<<(std::ostream& os, const mass m)
 	{
 		os << to_string(m);
 		return os;
 	}
 
+	/// @brief Returns the given temperature as string using SI units.
 	inline std::string to_string(const temperature T)
 	{
-		if (T <= -1_GK || T >= 1_GK)
+		if (T >= 1_GK)
 			return _join(T / 1_GK, "GK", to_string_format);
-		if (T <= -1_MK || T >= 1_MK)
+		if (T >= 1_MK)
 			return _join(T / 1_MK, "MK", to_string_format);
-		if (T >= 250_K && T <= 470_K) // human temperature range
+		if (T >= -150_degC && T <= 150_degC) // human temperature range
 			return _join(celsius(T), "°C", to_string_format);
 		if (T <= -1_K || T >= 1_K || T == 0.0_K)
 			return _join(T / 1_K, "K", to_string_format);
@@ -227,12 +264,19 @@ namespace SI
 		return _join(T / 1_nK, "nK", to_string_format);
 	}
 
+	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
+	inline std::string to_equivalent(const temperature T)
+	{
+		return _join(fahrenheit(T), "°F", to_equivalent_format);
+	}
+
 	inline std::ostream& operator<<(std::ostream& os, const temperature T)
 	{
 		os << to_string(T);
 		return os;
 	}
 
+	/// @brief Returns the electric current (I) as string using SI units.
 	inline std::string to_string(const electric_current I)
 	{
 		if (I <= -1_GA || I >= 1_GA)
@@ -253,6 +297,8 @@ namespace SI
 	}
 
 	// Convert the 22 derived SI units:
+
+	/// @brief Returns the given area as string using SI units.
 	inline std::string to_string(const area a)
 	{
 		if (a <= -1_km² || a >= 1_km²)
@@ -274,6 +320,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the per area as string using SI units.
 	inline std::string to_string(const per_area a)
 	{
 		if (a <= -1_per_km² || a >= 1_per_km²)
@@ -295,6 +342,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the given volume as string using SI units.
 	inline std::string to_string(const volume v)
 	{
 		if (v <= -1_km³ || v >= 1_km³)
@@ -318,13 +366,24 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns velocity as string using SI units.
 	inline std::string to_string(const velocity v)
 	{
+		if (v <= -1_km_per_s || v >= 1_km_per_s)
+			return _join(v / 1_km_per_s, "km/s", to_string_format);
 		if (v <= -1_km_per_h || v >= 1_km_per_h)
 			return _join(v / 1_km_per_h, "km/h", to_string_format);
 		if (v <= -1_m_per_s || v >= 1_m_per_s || v == 0.0_m_per_s)
 			return _join(v / 1_m_per_s, "m/s", to_string_format);
 		return _join(v / 1_mm_per_h, "mm/h", to_string_format);
+	}
+
+	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
+	inline std::string to_equivalent(const velocity V)
+	{
+		if (V <= -1_Mach || V >= 1_Mach)
+			return _join(V / 1_Mach, "Mach", to_equivalent_format);
+		return _join(V / 1_mph, "mph", to_equivalent_format);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, const velocity v)
@@ -333,6 +392,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the acceleration as string using SI units.
 	inline std::string to_string(const acceleration a)
 	{
 		if (a <= -1_km_per_s² || a >= 1_km_per_s²)
@@ -346,6 +406,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the frequency as string using SI units.
 	inline std::string to_string(const frequency f)
 	{
 		if (f <= -1_THz || f >= 1_THz)
@@ -367,6 +428,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the force as string using SI units.
 	inline std::string to_string(const force F)
 	{
 		if (F <= -1_ZN || F >= 1_ZN)
@@ -398,6 +460,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the energy as string using SI units.
 	inline std::string to_string(const energy E)
 	{
 		if (E <= -1_PJ || E >= 1_PJ)
@@ -421,6 +484,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the power as string using SI units.
 	inline std::string to_string(const power P)
 	{
 		if (P <= -1_TW || P >= 1_TW)
@@ -440,6 +504,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the power intensity as string using SI units.
 	inline std::string to_string(const power_intensity I)
 	{
 		if (I <= -1_MW_per_m² || I >= 1_MW_per_m²)
@@ -457,6 +522,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the pressure as string using SI units.
 	inline std::string to_string(const pressure p)
 	{
 		if (p <= -1_MPa || p >= 1_MPa)
@@ -478,6 +544,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the electric potential as string using SI units.
 	inline std::string to_string(const electric_potential U)
 	{
 		if (U <= -1_GV || U >= 1_GV)
@@ -503,6 +570,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns the electric charge as string using SI units.
 	inline std::string to_string(const electric_charge Q)
 	{
 		if (Q <= -1_GAh || Q >= 1_GAh)
@@ -525,6 +593,7 @@ namespace SI
 		return _join(m / 1_kg_per_m², "kg/m²", to_string_format);
 	}
 
+	/// @brief Returns the mass per power as string using SI units.
 	inline std::string to_string(const mass_per_power m)
 	{
 		if (m <= -1_kg_per_kW || m >= 1_kg_per_kW)
@@ -538,6 +607,7 @@ namespace SI
 		return os;
 	}
 
+	/// @brief Returns density as string using SI units.
 	inline std::string to_string(const density d)
 	{
 		if (d <= -1_t_per_m³ || d >= 1_t_per_m³)
@@ -545,6 +615,7 @@ namespace SI
 		return _join(d / 1_kg_per_m³, "kg/m³", to_string_format);
 	}
 
+	/// @brief Returns the angle as string in degree.
 	inline std::string to_string(const angle a)
 	{
 		return _join(a / 1_deg, "°", to_string_format);
@@ -572,52 +643,6 @@ namespace SI
 	inline std::string to_string(const std::string& text)
 	{
 		return text;
-	}
-
-	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
-	inline std::string to_equivalent(const length d)
-	{
-		if (d <= -1_ly || d >= 1_ly)
-			return _join(d / 1_ly, "light-years", to_equivalent_format);
-		if (d <= -1_ls || d >= 1_ls)
-			return _join(d / 1_ls, "light-seconds", to_equivalent_format);
-		if (d <= -1_mi || d >= 1_mi)
-			return _join(d / 1_mi, "miles", to_equivalent_format);
-		if (d <= -1_yd || d >= 1_yd)
-			return _join(d / 1_yd, "yards", to_equivalent_format);
-		if (d <= -1_ft || d >= 1_ft)
-			return _join(d / 1_ft, "feet", to_equivalent_format);
-
-		return _join(d / 1_in, "inch", to_equivalent_format);
-	}
-
-	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
-	inline std::string to_equivalent(const mass m)
-	{
-		if (m <= -1_Msun || m >= 1_Msun)
-			return _join(m / 1_Msun, "solar masses", to_equivalent_format);
-		if (m <= -1_Mjup || m >= 1_Mjup)
-			return _join(m / 1_Mjup, "Jupiter masses", to_equivalent_format);
-		if (m <= -1_Mearth || m >= 1_Mearth)
-			return _join(m / 1_Mearth, "Earth masses", to_equivalent_format);
-		if (m <= -1_Mmoon || m >= 1_Mmoon)
-			return _join(m / 1_Mmoon, "Moon masses", to_equivalent_format);
-
-		return _join(m / 1_lb, "lb", to_equivalent_format);
-	}
-
-	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
-	inline std::string to_equivalent(const velocity V)
-	{
-		if (V <= -1_Mach || V >= 1_Mach)
-			return _join(V / 1_Mach, "Mach", to_equivalent_format);
-		return _join(V / 1_mph, "mph", to_equivalent_format);
-	}
-
-	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
-	inline std::string to_equivalent(const temperature T)
-	{
-		return _join(fahrenheit(T), "°F", to_equivalent_format);
 	}
 
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
