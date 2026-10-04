@@ -1,5 +1,5 @@
 /// @file   examples/various.cpp
-/// @brief  Provides 33 various examples using libSI.
+/// @brief  Provides 34 various examples using libSI.
 
 #include <iostream>
 #include <SI/core.h> 
@@ -254,5 +254,24 @@ void various_examples() {
     auto Singapore_long = 103.8198_deg;
     auto Tokyo_lat  = 35.6762_deg;
     auto Tokyo_long = 139.6503_deg;
-    cout << formula::distance_on_Earth(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long) << endl << endl;
+    cout << formula::distance_on_Earth(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long) << endl;
+
+
+    cout << "34. The nearest airport neighbours are...";
+    length nearestDistance = 999999_km;
+    std::string nearest1 = "";
+    std::string nearest2 = "";
+    for (auto& airport1 : dataset::airports) { 
+        for (auto& airport2 : dataset::airports) { 
+            if (&airport1 == &airport2)
+                continue;
+            auto distance = formula::distance_on_Earth(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);
+	    if (distance < nearestDistance) {
+		    nearestDistance = distance;
+		    nearest1 = airport1.name;
+		    nearest2 = airport2.name;
+            }
+        }
+    }
+    cout << nearest1 << " and " << nearest2 << " with only " << nearestDistance << " in between" << endl << endl;
 }

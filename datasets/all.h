@@ -19,4 +19,5 @@
 #include "monthly_sunspots.h"
 
 // Various:
+#include "airports.h"
 #include "musical_notes.h"
