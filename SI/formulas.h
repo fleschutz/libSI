@@ -1,5 +1,5 @@
 /// @file     SI/formulas.h
-/// @brief    Defines 76 formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @brief    Defines 77 formulas based on SI datatypes, e.g. SI::formula::wavelength().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once
