@@ -53,6 +53,8 @@ namespace SI {
     /// @brief  Checks the SI base units.
     inline void checkBaseUnits() {
 	// length in...
+	static_assert(1_Pm == 1000_Tm);
+	static_assert(1_Tm == 1000_Gm);
 	static_assert(1_Gm == 1000_Mm);
 	static_assert(1_Mm == 1000_km);
 	static_assert(1_km == 1000_m);
