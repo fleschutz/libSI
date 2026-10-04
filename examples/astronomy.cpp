@@ -119,7 +119,7 @@ void astronomy_examples() {
     auto radius             = formula::Schwarzschild_radius(Sagittarius_A_mass);
     cout << radius << " or " << to_equivalent(radius) << " (Schwarzschild radius)" << endl << endl;
 
-
+#if 0 // TODO
     cout << "14. The current ISS position is at.. ";
     // orbital parameters
     auto ISS_perigee         = 416_km;
@@ -135,5 +135,5 @@ void astronomy_examples() {
     auto ISS_speed           = 27'588_km_per_h;
     auto ISS_eccentricity    = 0.0007;
     auto ISS_semi_major_axis = 6'792_km;
-
+#endif
 }

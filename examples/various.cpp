@@ -31,7 +31,7 @@ void various_examples() {
     cout << free_fall_time << endl;
 
 
-    cout << " 4. The kinetic energy of a mid-size SUV at 30MPH is... ";
+    cout << " 4. The kinetic energy of a mid-size SUV at 30mph is... ";
     auto SUV_mass   = 5000_lb; 
     auto SUV_speed  = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
