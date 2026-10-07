@@ -1,5 +1,5 @@
 /// @file     SI/constants.h
-/// @brief    Defines 77 type-safe constants, e.g. speed_of_light_in_vacuum
+/// @brief    Defines 78 type-safe constants, e.g. speed_of_light_in_vacuum
 /// @details  Source: 2022 CODATA (mostly)
 ///           Categories are: Defined Constants, Universal Constants, Electromagnetic Constants,
 ///                           Atomic & Nuclear Constants, Physico-chemical Constants, Physical Constants,
@@ -109,10 +109,11 @@ namespace SI { namespace constant {
 	CONST(AU,                  149'597'870'691, meters); // one astronomical unit (symbol: au)
 	CONST(parsec,       30'856'775'814'913'700, meters); // one Parsec (symbol: pc)
 	CONST(lightyear,     9'460'730'777'119'564, meters); // one light-year (symbol: ly)
+	CONST(F1AU,                         1366.1, watts_per_meter2);// total solar irradiance at 1 AU (solar constant)
 
 	// 9. Various Constants
 	// --------------------
-	CONST(T0,                                0, kelvins); // absolute zero (-273.15°C, the lowest possible temperature)
+	CONST(T0,                                0, kelvins); // absolute zero (0K, the lowest possible temperature)
 	CONST(Marathon_distance,            42'195, meters);
 	CONST(quarter_mile,                 402.34, meters);
  
