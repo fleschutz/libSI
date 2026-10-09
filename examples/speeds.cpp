@@ -1,16 +1,16 @@
 /// @file   examples/speeds.cpp
-/// @brief  Provides 5 speed examples using libSI.
+/// @brief  Contains 5 speed examples using libSI
 
 #include <iostream>
-#include <SI/core.h> 
 using namespace std;
+
+#include <SI/core.h> 
 using namespace SI;
 
 void speed_examples() {
 
     cout << "    === SPEED EXAMPLES ===" << endl;
-    to_string_format     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-    to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_string_format = to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
 
 
     cout << " 1. The average speed of Kelvin Kiptum's Marathon world record was... ";
@@ -34,7 +34,7 @@ void speed_examples() {
 
     cout << " 4. The sum of 7 different speeds is... ";
     velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mph + 1_ft_per_min;
-    cout << sum << endl;
+    cout << sum << " or " << to_equivalent(sum) << endl;
 
 
     cout << " 5. The min/max/average/sum of an array of speeds is...";

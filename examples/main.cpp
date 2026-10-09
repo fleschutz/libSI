@@ -3,13 +3,13 @@
 
 #include <SI/tests.h>  // perform unit tests at compile-time to verify everything
 
-extern void astronomy_examples(), speed_examples(), conversion_examples(), various_examples();
+extern void speed_examples(), astronomy_examples(), conversion_examples(), various_examples();
 
 int main() {
 
-    astronomy_examples();    // in astronomy.cpp
-
     speed_examples();        // in speeds.cpp
+
+    astronomy_examples();    // in astronomy.cpp
 
     conversion_examples();   // in conversions.cpp
 
