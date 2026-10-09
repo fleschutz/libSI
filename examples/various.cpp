@@ -1,17 +1,17 @@
 /// @file   examples/various.cpp
-/// @brief  Provides 34 various examples using libSI.
+/// @brief  Provides 34 various examples using libSI
 
 #include <iostream>
+using namespace std;
+
 #include <SI/core.h> 
 #include <datasets/all.h>
-using namespace std;
 using namespace SI;
 
 void various_examples() {
 
     cout << "    === VARIOUS EXAMPLES ===" << endl;
-    to_string_format     = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-    to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
+    to_string_format = to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
 
 
     mass m   = 1_oz;

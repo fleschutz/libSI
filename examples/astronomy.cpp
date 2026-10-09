@@ -1,11 +1,11 @@
 /// @file     examples/astronomy.cpp
-/// @brief    Provides 13 astronomy examples using libSI.
+/// @brief    Contains 13 astronomy examples using libSI
 
 #include <iostream>
-#include <SI/core.h> 
-#include <SI/prefixes.h>
-#include <datasets/astronomy.h>
 using namespace std;
+
+#include <SI/core.h> 
+#include <datasets/astronomy.h>
 using namespace SI;
 
 void astronomy_examples() {
