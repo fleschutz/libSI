@@ -213,4 +213,3 @@ namespace SI {
 #undef UNIT
 #undef SI_RETURN_QUANTITY
 #undef SI_INLINE_CONSTEXPR
-#undef SI_INLINE

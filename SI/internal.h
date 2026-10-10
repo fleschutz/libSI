@@ -6,7 +6,6 @@
 #include <utility>
 #include <algorithm>
 #include <cmath>
-#define SI_INLINE inline 
 #define SI_INLINE_CONSTEXPR constexpr inline
 
 namespace SI {
@@ -185,17 +184,17 @@ namespace SI {
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR auto dot(const vec3<T>& lhs, const vec3<U>& rhs) { return lhs.x * rhs.x + lhs.y * rhs.y + lhs.z * rhs.z; }
 
 		// Euclidean length of a vector
-		template <class T> [[nodiscard]] SI_INLINE auto length(const vec2<T>& v) { return std::sqrt(dot(v, v)); }
-		template <class T> [[nodiscard]] SI_INLINE auto length(const vec3<T>& v) { return std::sqrt(dot(v, v)); }
+		template <class T> [[nodiscard]] inline auto length(const vec2<T>& v) { return std::sqrt(dot(v, v)); }
+		template <class T> [[nodiscard]] inline auto length(const vec3<T>& v) { return std::sqrt(dot(v, v)); }
 
 		// normalization (returns null vector when given null vectors for robustness)
 		// multiplies with the inverse sqrt to be 1:1 compatible to GLM (avoids minimal, but noticeable deviations)
-		template <class T> [[nodiscard]] SI_INLINE auto normalize(const vec2<T>& v) { auto l = length(v); return v * (l ? (1 / l) : 0); }
-		template <class T> [[nodiscard]] SI_INLINE auto normalize(const vec3<T>& v) { auto l = length(v); return v * (l ? (1 / l) : 0); }
+		template <class T> [[nodiscard]] inline auto normalize(const vec2<T>& v) { auto l = length(v); return v * (l ? (1 / l) : 0); }
+		template <class T> [[nodiscard]] inline auto normalize(const vec3<T>& v) { auto l = length(v); return v * (l ? (1 / l) : 0); }
 
 		// Euclidean distance between to vectors / points
-		template <class T, class U> [[nodiscard]] SI_INLINE auto distance(const vec2<T>& a, const vec2<U>& b) { return length(b - a); }
-		template <class T, class U> [[nodiscard]] SI_INLINE auto distance(const vec3<T>& a, const vec3<U>& b) { return length(b - a); }
+		template <class T, class U> [[nodiscard]] inline auto distance(const vec2<T>& a, const vec2<U>& b) { return length(b - a); }
+		template <class T, class U> [[nodiscard]] inline auto distance(const vec3<T>& a, const vec3<U>& b) { return length(b - a); }
 
 		// cross product / outer product of two vectors
 		template <class T, class U> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U>> cross(const vec3<T>& lhs, const vec3<U>& rhs) { return { lhs.y * rhs.z - rhs.y * lhs.z, lhs.z * rhs.x - rhs.z * lhs.x, lhs.x * rhs.y - rhs.x * lhs.y }; }
@@ -521,29 +520,29 @@ namespace SI {
 		}
 
 		template <class Dimension, class T>
-		SI_INLINE auto normalize(const quantity<Dimension, T>& x) {
+		inline auto normalize(const quantity<Dimension, T>& x) {
 			return normalize(value(x));
 		}
 
 		template <class Dimension, class T>
-		SI_INLINE auto norm(const quantity<Dimension, T>& x) {
+		inline auto norm(const quantity<Dimension, T>& x) {
 			return quantity{ Dimension(), length(value(x)) };
 		}
 
 		template <class T>
-		SI_INLINE auto distance(const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& a, const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& b) {
+		inline auto distance(const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& a, const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& b) {
 			return quantity{ dimension<1, 0, 0, 0, 0, 0, 0>(), distance(value(a), value(b)) };
 		}
 
 		template <long Exponent, class Dimension, class T>
-		SI_INLINE auto pow(const quantity<Dimension, T>& x) {
+		inline auto pow(const quantity<Dimension, T>& x) {
 			using std::pow;
 			using result_dimension = dimension_multiply<Dimension, value_dimension<Exponent>>;
 			SI_RETURN_QUANTITY(result_dimension, pow(value(x), Exponent));
 		}
 
 		template <long Degree, class Dimension, class T>
-		SI_INLINE auto root(const quantity<Dimension, T>& x) {
+		inline auto root(const quantity<Dimension, T>& x) {
 			using std::pow;
 			using result_dimension = dimension_divide<Dimension, value_dimension<Degree>>;
 			static_assert(std::is_same_v<dimension_multiply<result_dimension, value_dimension<Degree>>, Dimension>, "cannot take root of this SI dimension");
@@ -551,7 +550,7 @@ namespace SI {
 		}
 
 		template <class Dimension, class T>
-		SI_INLINE auto sqrt(const quantity<Dimension, T>& x) {
+		inline auto sqrt(const quantity<Dimension, T>& x) {
 			using std::sqrt;
 			using result_dimension = dimension_divide<Dimension, value_dimension<2>>;
 			static_assert(std::is_same_v<dimension_multiply<result_dimension, value_dimension<2>>, Dimension>, "cannot take sqrt of this SI dimension");
