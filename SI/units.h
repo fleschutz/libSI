@@ -139,54 +139,55 @@ namespace SI {
 	UNIT(bytes)            = unit<detail::dimensionless>();
 	UNIT(bytes_per_second) = bytes / seconds;
 
-	// 6. Basic Functions & Templates
-	// ------------------------------
+	// 6. Basic Functions and Templates
+	// --------------------------------
 	/// @brief Calculates the sinus of an angle (a).
-	[[nodiscard]] SI_INLINE angle sin(angle a)
+	[[nodiscard]] inline angle sin(angle a)
 	{
 		return std::sin(radians(a));
 	}
 
 	/// @brief Calculates the cosinus of an angle (a).
-	[[nodiscard]] SI_INLINE angle cos(angle a)
+	[[nodiscard]] inline angle cos(angle a)
 	{
 		return std::cos(radians(a));
 	}
 
 	/// @brief Calculates the tangens of an angle (a).
-	[[nodiscard]] SI_INLINE angle tan(angle a)
+	[[nodiscard]] inline angle tan(angle a)
 	{
 		return std::tan(radians(a));
 	}
 
-	/// @brief Calculates the atangens of two angles.
-	[[nodiscard]] SI_INLINE angle atan2(angle y, angle x)
-	{
-		return std::atan2(radians(y), radians(x));
-	}
-
 	/// @brief Calculates sin²x
-	[[nodiscard]] SI_INLINE angle sin2(angle x)
+	[[nodiscard]] inline angle sin2(angle x)
 	{
 		return 0.5 * (1. - std::cos(2. * x));
 	}
 
 	/// @brief Calculates cos²x
-	[[nodiscard]] SI_INLINE angle cos2(angle x)
+	[[nodiscard]] inline angle cos2(angle x)
 	{
 		return 0.5 * (1. + std::cos(2. * x));
 	}
 
-	[[nodiscard]] SI_INLINE angle sqrt(angle a)
+	/// @brief Calculates the square root of an angle (a).
+	[[nodiscard]] inline angle sqrt(angle a)
 	{
 		return std::sqrt(radians(a));
 	}
 
-	[[nodiscard]] SI_INLINE angle atan2(length y, length x)
+	/// @brief Calculates the atangens of two angles.
+	[[nodiscard]] inline angle atan2(angle y, angle x)
+	{
+		return std::atan2(radians(y), radians(x));
+	}
+
+	/// @brief Calculates the angle between the positive x-axis and a point (x, y).
+	[[nodiscard]] inline angle atan2(length y, length x)
 	{
 		return std::atan2(meters(y), meters(x));
 	}
-
 	/// @brief Raise any number <x> to power of 2 (x² or x*x).
 	template <typename T>
 	[[nodiscard]] SI_INLINE_CONSTEXPR auto square(T x) { return x * x; }

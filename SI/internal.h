@@ -1,5 +1,5 @@
 /// @file    SI/internal.h
-/// @brief   Internal header file (providing datatypes, classes, etc.)
+/// @brief   Internal header file providing datatypes, classes, templates, etc.
 
 #pragma once
 #include <limits>
@@ -7,18 +7,15 @@
 #include <algorithm>
 #include <cmath>
 #define SI_INLINE inline 
-#define SI_INLINE_CONSTEXPR constexpr SI_INLINE
+#define SI_INLINE_CONSTEXPR constexpr inline
 
-namespace SI
-{
+namespace SI {
 	typedef long double angle;      ///< basic datatype to hold a dimensionless angle, e.g. 3.1415
 	typedef angle radians;          ///< basic unit of radians for angle
 	typedef double SIdouble;        ///< internal datatype to hold floating point values
 
-	namespace internal
-	{
-		namespace detail
-		{
+	namespace internal {
+		namespace detail {
 			template <class T> struct vec_trivally_constructible { using type = T; };
 			template <class T> struct vec_value_type { using type = T; };
 			template <class T> struct vec_value_type<vec_trivally_constructible<T>> { using type = T; };
@@ -29,22 +26,19 @@ namespace SI
 		struct vec;
 
 		template <class T>
-		struct vec<2, T> : vec<2, detail::vec_trivally_constructible<T>>
-		{
+		struct vec<2, T> : vec<2, detail::vec_trivally_constructible<T>> {
 			using vec<2, detail::vec_trivally_constructible<T>>::vec;
 
 			SI_INLINE_CONSTEXPR vec() : vec<2, detail::vec_trivally_constructible<T>>(0, 0) {}
 		};
 
 		template <class T>
-		struct vec<2, detail::vec_trivally_constructible<T>>
-		{
+		struct vec<2, detail::vec_trivally_constructible<T>> {
 			static_assert(std::is_arithmetic_v<T>);
 
 			SI_INLINE_CONSTEXPR vec() = default;
 
-			SI_INLINE_CONSTEXPR vec(T x, T y) : x(x), y(y)
-			{
+			SI_INLINE_CONSTEXPR vec(T x, T y) : x(x), y(y) {
 				static_assert(sizeof(vec) == 2 * sizeof(T));
 				static_assert(std::is_trivially_copyable_v<vec>);
 			}
@@ -65,21 +59,16 @@ namespace SI
 		};
 
 		template <class T>
-		struct vec<3, T> : vec<3, detail::vec_trivally_constructible<T>>
-		{
+		struct vec<3, T> : vec<3, detail::vec_trivally_constructible<T>> {
 			using vec<3, detail::vec_trivally_constructible<T>>::vec;
 			SI_INLINE_CONSTEXPR vec() : vec<3, detail::vec_trivally_constructible<T>>(0, 0, 0) {}
 		};
 
 		template <class T>
-		struct vec<3, detail::vec_trivally_constructible<T>>
-		{
+		struct vec<3, detail::vec_trivally_constructible<T>> {
 			static_assert(std::is_arithmetic_v<T>);
-
 			SI_INLINE_CONSTEXPR vec() = default;
-			
-			SI_INLINE_CONSTEXPR vec(T x, T y, T z) : x(x), y(y), z(z)
-			{
+			SI_INLINE_CONSTEXPR vec(T x, T y, T z) : x(x), y(y), z(z) {
 				static_assert(sizeof(vec) == 3 * sizeof(T));
 				static_assert(std::is_trivially_copyable_v<vec>);
 			}
@@ -94,10 +83,8 @@ namespace SI
 			SI_INLINE_CONSTEXPR operator vec<3, U>() const { return vec<3, U>(x, static_cast<detail::vec_common_type_t<U>>(y), static_cast<detail::vec_common_type_t<U>>(z)); } // NOLINT(google-explicit-constructor)
 
 			SI_INLINE_CONSTEXPR explicit operator bool() const noexcept { return !(x == 0 && y == 0 && z == 0); }
-			union
-			{
-				struct
-				{
+			union {
+				struct {
 					T x;
 					T y;
 				};
@@ -219,8 +206,7 @@ namespace SI
 		template <class T, class U, class V> [[nodiscard]] SI_INLINE_CONSTEXPR vec3<detail::vec_common_type_t<T, U, V>> mix(const vec3<T>& a, const vec3<U>& b, V t) { return { mix(a.x, b.x, t), mix(a.y, b.y, t), mix(a.z, b.z, t) }; }
 	}
 
-	namespace detail
-	{
+	namespace detail {
 		template <class T>
 		using vec2 = internal::vec2<T>;
 
@@ -229,8 +215,7 @@ namespace SI
 
 		// the dimension(s) of a physical quantity, specified by it's dimensional exponents.
 		template <long lengthExp, long massExp, long timeExp, long temperatureExp, long currentExp, long substanceExp, long intensityExp>
-		struct dimension
-		{
+		struct dimension {
 			static constexpr long length = lengthExp;
 			static constexpr long mass = massExp;
 			static constexpr long time = timeExp;
@@ -252,26 +237,22 @@ namespace SI
 		struct unit;
 
 		template <class T>
-		struct dimension_of
-		{
+		struct dimension_of {
 			using type = dimensionless;
 		};
 
 		template <long Length, long Mass, long Time, long Temperature, long Current, long Substance, long Intensity>
-		struct dimension_of<dimension<Length, Mass, Time, Temperature, Current, Substance, Intensity>>
-		{
+		struct dimension_of<dimension<Length, Mass, Time, Temperature, Current, Substance, Intensity>> {
 			using type = dimension<Length, Mass, Time, Temperature, Current, Substance, Intensity>;
 		};
 
 		template <class Dimension, class T>
-		struct dimension_of<quantity<Dimension, T>>
-		{
+		struct dimension_of<quantity<Dimension, T>> {
 			using type = Dimension;
 		};
 
 		template <class Dimension, class Ratio>
-		struct dimension_of<unit<Dimension, Ratio>>
-		{
+		struct dimension_of<unit<Dimension, Ratio>> {
 			using type = Dimension;
 		};
 
@@ -296,7 +277,6 @@ namespace SI
 		template <class Lhs, class Rhs> using dimension_subtract_impl = SI_DIMENSION_OP(-);
 		template <class Lhs, class Rhs> using dimension_multiply_impl = SI_DIMENSION_OP(*);
 		template <class Lhs, class Rhs> using dimension_divide_impl = SI_DIMENSION_OP(/);
-
 		template <class Lhs, class Rhs> using dimension_add = dimension_add_impl <dimension_of_t<Lhs>, dimension_of_t<Rhs>>;
 		template <class Lhs, class Rhs> using dimension_subtract = dimension_subtract_impl <dimension_of_t<Lhs>, dimension_of_t<Rhs>>;
 		template <class Lhs, class Rhs> using dimension_multiply = dimension_multiply_impl <dimension_of_t<Lhs>, dimension_of_t<Rhs>>;
@@ -315,36 +295,31 @@ namespace SI
 
 		// Storage for plain arithmetic types (float, double, int, ...)
 		template <class Dimension, class T>
-		class quantity_storage
-		{
+		class quantity_storage {
 		public:
 			SI_INLINE_CONSTEXPR quantity_storage()
 				: m_value(0)
 			{}
 
-			SI_INLINE_CONSTEXPR explicit operator bool() const
-			{
+			SI_INLINE_CONSTEXPR explicit operator bool() const {
 				return static_cast<bool>(m_value);
 			}
 
 		private:
 			T m_value;
 
-			friend SI_INLINE_CONSTEXPR const T& value(const quantity_storage& x)
-			{
+			friend SI_INLINE_CONSTEXPR const T& value(const quantity_storage& x) {
 				return x.m_value;
 			}
 
-			friend SI_INLINE_CONSTEXPR T& value(quantity_storage& x)
-			{
+			friend SI_INLINE_CONSTEXPR T& value(quantity_storage& x) {
 				return x.m_value;
 			}
 		};
 
 		// Helper function for filling all components of either a scalar or a vector to a given value
 		template <class T>
-		SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<T>> fill(T& x, T value)
-		{
+		SI_INLINE_CONSTEXPR std::enable_if_t<std::is_arithmetic_v<T>> fill(T& x, T value) {
 			x = value;
 		}
 
@@ -357,23 +332,19 @@ namespace SI
 			using value_type = T;
 			using dimension_type = Dimension;
 
-			SI_INLINE_CONSTEXPR quantity(zero_t = {}) // NOLINT(google-explicit-constructor)
-			{
+			SI_INLINE_CONSTEXPR quantity(zero_t = {}) {
 			}
 
-			SI_INLINE_CONSTEXPR quantity(Dimension, const T& x)
-			{
+			SI_INLINE_CONSTEXPR quantity(Dimension, const T& x) {
 				value(*this) = x;
 			}
 
 			template <class U>
-			SI_INLINE_CONSTEXPR quantity(const quantity<Dimension, U>& q) // NOLINT(google-explicit-constructor)
-			{
+			SI_INLINE_CONSTEXPR quantity(const quantity<Dimension, U>& q) {
 				value(*this) = value(q);
 			}
 
-			static SI_INLINE_CONSTEXPR quantity<Dimension, T> infinity()
-			{
+			static SI_INLINE_CONSTEXPR quantity<Dimension, T> infinity() {
 				using scalar_type = scalar_value_type_t<T>;
 				static_assert(std::is_floating_point_v<scalar_type>);
 				T value = {};
@@ -381,8 +352,7 @@ namespace SI
 				return { Dimension(), value };
 			}
 
-			static SI_INLINE_CONSTEXPR quantity<Dimension, T> NaN()
-			{
+			static SI_INLINE_CONSTEXPR quantity<Dimension, T> NaN() {
 				using scalar_type = scalar_value_type_t<T>;
 				static_assert(std::is_floating_point_v<scalar_type>);
 				T value = {};
@@ -400,41 +370,36 @@ namespace SI
 		template <>
 		struct is_si<zero_t> : std::bool_constant<true> {};
 
-		// Checks wheter the given type is a si type
+		// Checks wheter the given type is a SI type
 		template <class T>
 		SI_INLINE_CONSTEXPR bool is_si_v = is_si<T>::value;
 
 		// Fallback value for any plain type, simply returns the value as-is
 		template <class T, class = std::enable_if_t<!is_si_v<T>>>
-		SI_INLINE_CONSTEXPR const T& value(const T& x)
-		{
+		SI_INLINE_CONSTEXPR const T& value(const T& x) {
 			return x;
 		}
 
-		SI_INLINE_CONSTEXPR long value(zero_t)
-		{
+		SI_INLINE_CONSTEXPR long value(zero_t) {
 			return 0;
 		}
 
 		// Helper function for arithmetic functions with two arguments, returns the value of the first argument but uses
 		// the second argument to deduce the returned type in case of si::zero
 		template <class T, class U>
-		SI_INLINE_CONSTEXPR decltype(auto) value2(T&& x, U)
-		{
+		SI_INLINE_CONSTEXPR decltype(auto) value2(T&& x, U) {
 			return value(std::forward<T>(x));
 		}
 
 		template <class U>
-		SI_INLINE_CONSTEXPR auto value2(zero_t, const U& other)
-		{
+		SI_INLINE_CONSTEXPR auto value2(zero_t, const U& other) {
 			// Return zero of the given other type (i.e. return vec2() instead of plain 0)
 			return decltype(value(other)){};
 		}
 
 		// Checks wheter two types have compatible dimensions (zero is compatible with everything)
 		template <class Lhs, class Rhs>
-		SI_INLINE_CONSTEXPR bool has_common_dimension_v = 
-			std::is_same_v<dimension_of_t<Lhs>, dimension_of_t<Rhs>> || std::is_same_v<Lhs, zero_t> || std::is_same_v<Rhs, zero_t>;
+		SI_INLINE_CONSTEXPR bool has_common_dimension_v = std::is_same_v<dimension_of_t<Lhs>, dimension_of_t<Rhs>> || std::is_same_v<Lhs, zero_t> || std::is_same_v<Rhs, zero_t>;
 
 		template <class Lhs, class Rhs>
 		using dimension_common = std::conditional_t<std::is_same_v<Lhs, zero_t>, dimension_of_t<Rhs>, dimension_of_t<Lhs>>;
@@ -443,184 +408,158 @@ namespace SI
 		using enable_for_si = std::enable_if_t<is_si_v<T> || is_si_v<U> || is_si_v<V>>;
 
 		template <class T, class Dimension>
-		SI_INLINE_CONSTEXPR quantity<Dimension, T> operator-(quantity<Dimension, T> x)
-		{
+		SI_INLINE_CONSTEXPR quantity<Dimension, T> operator-(quantity<Dimension, T> x) {
 			value(x) = -value(x);
 			return x;
 		}
 
 		template <class T, class Dimension, class U>
-		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator+=(quantity<Dimension, T>& lhs, const U& rhs)
-		{
+		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator+=(quantity<Dimension, T>& lhs, const U& rhs) {
 			static_assert(has_common_dimension_v<Dimension, U>, "incompatible SI dimensions");
 			value(lhs) += value(rhs);
 			return lhs;
 		}
 
 		template <class T, class Dimension, class U>
-		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator-=(quantity<Dimension, T>& lhs, const U& rhs)
-		{
+		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator-=(quantity<Dimension, T>& lhs, const U& rhs) {
 			static_assert(has_common_dimension_v<Dimension, U>, "incompatible SI dimensions");
 			value(lhs) -= value(rhs);
 			return lhs;
 		}
 
 		template <class T, class Dimension, class U>
-		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator*=(quantity<Dimension, T>& lhs, const U& rhs)
-		{
+		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator*=(quantity<Dimension, T>& lhs, const U& rhs) {
 			static_assert(is_dimensionless_v<U>, "incompatible SI dimensions");
 			value(lhs) *= value(rhs);
 			return lhs;
 		}
 
 		template <class T, class Dimension, class U>
-		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator/=(quantity<Dimension, T>& lhs, const U& rhs)
-		{
+		SI_INLINE_CONSTEXPR quantity<Dimension, T>& operator/=(quantity<Dimension, T>& lhs, const U& rhs) {
 			static_assert(is_dimensionless_v<U>, "incompatible SI dimensions");
 			value(lhs) /= value(rhs);
 			return lhs;
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator<(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator<(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			return value2(lhs, rhs) < value2(rhs, lhs);
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator<=(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator<=(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			return value2(lhs, rhs) <= value2(rhs, lhs);
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator>(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator>(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			return value2(lhs, rhs) > value2(rhs, lhs);
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator>=(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator>=(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			return value2(lhs, rhs) >= value2(rhs, lhs);
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator==(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator==(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			return value2(lhs, rhs) == value2(rhs, lhs);
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator!=(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator!=(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			return value2(lhs, rhs) != value2(rhs, lhs);
 		}
 
 		// helper macro returning a quantity for non-null dimensions and plain value otherwise
-#define SI_RETURN_QUANTITY(dimension_, ...)										\
-		if constexpr(is_dimensionless_v<dimension_>)	return (__VA_ARGS__);	\
+#define SI_RETURN_QUANTITY(dimension_, ...)                                        \
+		if constexpr(is_dimensionless_v<dimension_>) return (__VA_ARGS__); \
 		else return quantity{dimension_(), (__VA_ARGS__)}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator+(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator+(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			using result_dimension = dimension_common<Lhs, Rhs>;
 			SI_RETURN_QUANTITY(result_dimension, value2(lhs, rhs) + value2(rhs, lhs));
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator-(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator-(const Lhs& lhs, const Rhs& rhs) {
 			static_assert(has_common_dimension_v<Lhs, Rhs>, "incompatible SI dimensions");
 			using result_dimension = dimension_common<Lhs, Rhs>;
 			SI_RETURN_QUANTITY(result_dimension, value2(lhs, rhs) - value2(rhs, lhs));
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator*(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator*(const Lhs& lhs, const Rhs& rhs) {
 			using result_dimension = dimension_add<Lhs, Rhs>;
 			SI_RETURN_QUANTITY(result_dimension, value2(lhs, rhs) * value2(rhs, lhs));
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto operator/(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto operator/(const Lhs& lhs, const Rhs& rhs) {
 			using result_dimension = dimension_subtract<Lhs, Rhs>;
 			SI_RETURN_QUANTITY(result_dimension, value2(lhs, rhs) / value2(rhs, lhs));
 		}
 
 		// Computes the absolute value of x.
 		template <class Dimension, class T>
-		SI_INLINE_CONSTEXPR quantity<Dimension, T> abs(const quantity<Dimension, T>& x)
-		{
+		SI_INLINE_CONSTEXPR quantity<Dimension, T> abs(const quantity<Dimension, T>& x) {
 			return value(x) < 0.0 ? -x : x;
 		}
 
 		template <class Lhs, class Rhs, class = enable_for_si<Lhs, Rhs>>
-		SI_INLINE_CONSTEXPR auto dot(const Lhs& lhs, const Rhs& rhs)
-		{
+		SI_INLINE_CONSTEXPR auto dot(const Lhs& lhs, const Rhs& rhs) {
 			using result_dimension = dimension_add<Lhs, Rhs>;
 			SI_RETURN_QUANTITY(result_dimension, dot(value(lhs), value(rhs)));
 		}
 
 		template <class Dimension, class T>
-		SI_INLINE auto normalize(const quantity<Dimension, T>& x)
-		{
+		SI_INLINE auto normalize(const quantity<Dimension, T>& x) {
 			return normalize(value(x));
 		}
 
 		template <class Dimension, class T>
-		SI_INLINE auto norm(const quantity<Dimension, T>& x)
-		{
+		SI_INLINE auto norm(const quantity<Dimension, T>& x) {
 			return quantity{ Dimension(), length(value(x)) };
 		}
 
 		template <class T>
-		SI_INLINE auto distance(const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& a, const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& b)
-		{
+		SI_INLINE auto distance(const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& a, const quantity<dimension<1, 0, 0, 0, 0, 0, 0>, T>& b) {
 			return quantity{ dimension<1, 0, 0, 0, 0, 0, 0>(), distance(value(a), value(b)) };
 		}
 
 		template <long Exponent, class Dimension, class T>
-		SI_INLINE auto pow(const quantity<Dimension, T>& x)
-		{
+		SI_INLINE auto pow(const quantity<Dimension, T>& x) {
 			using std::pow;
 			using result_dimension = dimension_multiply<Dimension, value_dimension<Exponent>>;
 			SI_RETURN_QUANTITY(result_dimension, pow(value(x), Exponent));
 		}
 
 		template <long Degree, class Dimension, class T>
-		SI_INLINE auto root(const quantity<Dimension, T>& x)
-		{
+		SI_INLINE auto root(const quantity<Dimension, T>& x) {
 			using std::pow;
 			using result_dimension = dimension_divide<Dimension, value_dimension<Degree>>;
 			static_assert(std::is_same_v<dimension_multiply<result_dimension, value_dimension<Degree>>, Dimension>, "cannot take root of this SI dimension");
-
 			SI_RETURN_QUANTITY(result_dimension, pow(value(x), 1. / Degree));
 		}
 
 		template <class Dimension, class T>
-		SI_INLINE auto sqrt(const quantity<Dimension, T>& x)
-		{
+		SI_INLINE auto sqrt(const quantity<Dimension, T>& x) {
 			using std::sqrt;
 			using result_dimension = dimension_divide<Dimension, value_dimension<2>>;
 			static_assert(std::is_same_v<dimension_multiply<result_dimension, value_dimension<2>>, Dimension>, "cannot take sqrt of this SI dimension");
-
 			SI_RETURN_QUANTITY(result_dimension, sqrt(value(x)));
 		}
 
 		template <class Dimension, class T>
-		SI_INLINE_CONSTEXPR auto deangle(const quantity<Dimension, T>& x)
-		{
+		SI_INLINE_CONSTEXPR auto deangle(const quantity<Dimension, T>& x) {
 			using result_dimension = dimension<Dimension::length, Dimension::mass, Dimension::time, Dimension::temperature, Dimension::current, Dimension::substance, Dimension::intensity>;
 			SI_RETURN_QUANTITY(result_dimension, value(x));
 		}
@@ -632,18 +571,15 @@ namespace SI
 		SI_INLINE_CONSTEXPR long element_count_v = element_count<T>::value;
 
 		template <class Value, class Min, class Max>
-		SI_INLINE_CONSTEXPR auto clamp(const Value& x, const Min& min, const Max& max)
-		{
+		SI_INLINE_CONSTEXPR auto clamp(const Value& x, const Min& min, const Max& max) {
 			static_assert(has_common_dimension_v<Value, Min>, "incompatible SI dimensions");
 			static_assert(has_common_dimension_v<Value, Max>, "incompatible SI dimensions");
-
 			using result_dimension = dimension_of_t<Value>;
 			SI_RETURN_QUANTITY(result_dimension, std::clamp(value(x), value(min), value(max)));
 		}
 
 		template <long Num, long Den>
-		struct ratio
-		{
+		struct ratio {
 			static constexpr auto factor = static_cast<SIdouble>(Num) / Den;
 		};
 
@@ -651,14 +587,12 @@ namespace SI
 		struct tag_fahrenheit {};
 
 		template <class Lhs, class Rhs>
-		struct ratio_product
-		{
+		struct ratio_product {
 			static constexpr auto factor = Lhs::factor * Rhs::factor;
 		};
 
 		template <class Lhs, class Rhs>
-		struct ratio_quotient
-		{
+		struct ratio_quotient {
 			static constexpr auto factor = Lhs::factor / Rhs::factor;
 		};
 
@@ -669,58 +603,45 @@ namespace SI
 		struct is_arithmetic : std::is_arithmetic<T> {};
 
 		template <class Dimension, class UnitRatio>
-		struct unit
-		{
+		struct unit {
 			template <class T, class = std::enable_if_t<is_arithmetic<T>::value>>
-			SI_INLINE_CONSTEXPR auto operator()(const T& x) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(const T& x) const {
 				using scalar_type = promoted_scalar_type<T>;
-
-				if constexpr (std::is_same_v<tag_celsius, UnitRatio>)
-				{
+				if constexpr (std::is_same_v<tag_celsius, UnitRatio>) {
 					SI_RETURN_QUANTITY(Dimension, x + static_cast<scalar_type>(273.15));
 				}
-				else if constexpr (std::is_same_v<tag_fahrenheit, UnitRatio>)
-				{
+				else if constexpr (std::is_same_v<tag_fahrenheit, UnitRatio>) {
 					SI_RETURN_QUANTITY(Dimension, (x + static_cast<scalar_type>(459.67)) * static_cast<scalar_type>(5. / 9));
 				}
-				else
-				{
+				else {
 					SI_RETURN_QUANTITY(Dimension, x * static_cast<scalar_type>(UnitRatio::factor));
 				}
 			}
 			template <class T, class U>
-			SI_INLINE_CONSTEXPR auto operator()(T x, U y) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(T x, U y) const {
 				using common_type = std::common_type_t<T, U>;
 				using scalar_type = promoted_scalar_type<common_type>;
 
-				if constexpr (std::is_same_v<tag_celsius, UnitRatio>)
-				{
+				if constexpr (std::is_same_v<tag_celsius, UnitRatio>) {
 					SI_RETURN_QUANTITY(Dimension, vec2<scalar_type>(x, y) + static_cast<scalar_type>(273.15));
 				}
-				else if constexpr (std::is_same_v<tag_fahrenheit, UnitRatio>)
-				{
+				else if constexpr (std::is_same_v<tag_fahrenheit, UnitRatio>) {
 					SI_RETURN_QUANTITY(Dimension, (vec2<scalar_type>(x, y) + static_cast<scalar_type>(459.67)) * static_cast<scalar_type>(5. / 9));
 				}
-				else
-				{
+				else {
 					SI_RETURN_QUANTITY(Dimension, vec2<scalar_type>(x, y) * static_cast<scalar_type>(UnitRatio::factor));
 				}
 			}
 
 			template <class T, class U, class V>
-			SI_INLINE_CONSTEXPR auto operator()(T x, U y, V z) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(T x, U y, V z) const {
 				using common_type = std::common_type_t<T, U, V>;
 				using scalar_type = promoted_scalar_type<common_type>;
 
-				if constexpr (std::is_same_v<tag_celsius, UnitRatio>)
-				{
+				if constexpr (std::is_same_v<tag_celsius, UnitRatio>) {
 					SI_RETURN_QUANTITY(Dimension, vec3<scalar_type>(x, y, z) + static_cast<scalar_type>(273.15));
 				}
-				else if constexpr (std::is_same_v<tag_fahrenheit, UnitRatio>)
-				{
+				else if constexpr (std::is_same_v<tag_fahrenheit, UnitRatio>) {
 					SI_RETURN_QUANTITY(Dimension, (vec3<scalar_type>(x, y, z) + static_cast<scalar_type>(459.67)) * static_cast<scalar_type>(5. / 9));
 				}
 				else
@@ -730,8 +651,7 @@ namespace SI
 			}
 
 			template <class T>
-			SI_INLINE_CONSTEXPR auto operator()(const quantity<Dimension, T>& q) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(const quantity<Dimension, T>& q) const {
 				using scalar_type = promoted_scalar_type<T>;
 
 				if constexpr(std::is_same_v<tag_celsius, UnitRatio>)
@@ -744,55 +664,44 @@ namespace SI
 		};
 
 		template <class Dimension, long N>
-		struct unit<Dimension, ratio<N, N>>
-		{
+		struct unit<Dimension, ratio<N, N>> {
 			template <class T, class = std::enable_if_t<is_arithmetic<T>::value>>
-			SI_INLINE_CONSTEXPR auto operator()(T value) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(T value) const {
 				SI_RETURN_QUANTITY(Dimension, value);
 			}
 
 			// Special operator for constructing a SI quantity from a trivally constructible internal::vec
 			template <long D, class T>
-			SI_INLINE_CONSTEXPR auto operator()(const internal::vec<D, internal::detail::vec_trivally_constructible<T>>& value) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(const internal::vec<D, internal::detail::vec_trivally_constructible<T>>& value) const {
 				SI_RETURN_QUANTITY(Dimension, internal::vec<D, T>(value));
 			}
 
 			template <class T, class U>
-			SI_INLINE_CONSTEXPR auto operator()(T x, U y) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(T x, U y) const {
 				using common_type = std::common_type_t<T, U>;
-
 				SI_RETURN_QUANTITY(Dimension, vec2<common_type>(x, y));
 			}
 
 			template <class T, class U, class V>
-			SI_INLINE_CONSTEXPR auto operator()(T x, U y, V z) const
-			{
+			SI_INLINE_CONSTEXPR auto operator()(T x, U y, V z) const {
 				using common_type = std::common_type_t<T, U, V>;
-
 				SI_RETURN_QUANTITY(Dimension, vec3<common_type>(x, y, z));
 			}
 
 			template <class T>
-			SI_INLINE_CONSTEXPR T operator()(const quantity<Dimension, T>& q) const
-			{
+			SI_INLINE_CONSTEXPR T operator()(const quantity<Dimension, T>& q) const {
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR SIdouble operator()(const quantity<Dimension, SIdouble>& q) const
-			{
+			SI_INLINE_CONSTEXPR SIdouble operator()(const quantity<Dimension, SIdouble>& q) const {
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR vec2<SIdouble> operator()(const quantity<Dimension, vec2<SIdouble>>& q) const
-			{
+			SI_INLINE_CONSTEXPR vec2<SIdouble> operator()(const quantity<Dimension, vec2<SIdouble>>& q) const {
 				return value(q);
 			}
 
-			SI_INLINE_CONSTEXPR vec3<SIdouble> operator()(const quantity<Dimension, vec3<SIdouble>>& q) const
-			{
+			SI_INLINE_CONSTEXPR vec3<SIdouble> operator()(const quantity<Dimension, vec3<SIdouble>>& q) const {
 				return value(q);
 			}
 		};
@@ -801,24 +710,20 @@ namespace SI
 		struct unit<dimensionless, Ratio> {};
 
 		template <long N>
-		struct unit<dimensionless, ratio<N, N>>
-		{
+		struct unit<dimensionless, ratio<N, N>> {
 			template <class T, class = std::enable_if_t<is_arithmetic<T>::value>>
-			SI_INLINE_CONSTEXPR const T& operator()(const T& value) const
-			{
+			SI_INLINE_CONSTEXPR const T& operator()(const T& value) const {
 				return value;
 			}
 		};
 
 		template <class DimensionLhs, class RatioLhs, class DimensionRhs, class RatioRhs>
-		SI_INLINE_CONSTEXPR auto operator*(unit<DimensionLhs, RatioLhs>, unit<DimensionRhs, RatioRhs>)
-		{
+		SI_INLINE_CONSTEXPR auto operator*(unit<DimensionLhs, RatioLhs>, unit<DimensionRhs, RatioRhs>) {
 			return unit<dimension_add<DimensionLhs, DimensionRhs>, ratio_product<RatioLhs, RatioRhs>>();
 		}
 
 		template <class DimensionLhs, class RatioLhs, class DimensionRhs, class RatioRhs>
-		SI_INLINE_CONSTEXPR auto operator/(unit<DimensionLhs, RatioLhs>, unit<DimensionRhs, RatioRhs>)
-		{
+		SI_INLINE_CONSTEXPR auto operator/(unit<DimensionLhs, RatioLhs>, unit<DimensionRhs, RatioRhs>) {
 			return unit<dimension_subtract<DimensionLhs, DimensionRhs>, ratio_quotient<RatioLhs, RatioRhs>>();
 		}
 	}
