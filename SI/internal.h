@@ -27,19 +27,15 @@ namespace SI {
 		template <class T>
 		struct vec<2, T> : vec<2, detail::vec_trivally_constructible<T>> {
 			using vec<2, detail::vec_trivally_constructible<T>>::vec;
-
 			SI_INLINE_CONSTEXPR vec() : vec<2, detail::vec_trivally_constructible<T>>(0, 0) {}
 		};
 
 		template <class T>
 		struct vec<2, detail::vec_trivally_constructible<T>> {
 			static_assert(std::is_arithmetic_v<T>);
-
 			SI_INLINE_CONSTEXPR vec() = default;
-
 			SI_INLINE_CONSTEXPR vec(T x, T y) : x(x), y(y) {
 				static_assert(sizeof(vec) == 2 * sizeof(T));
-				static_assert(std::is_trivially_copyable_v<vec>);
 			}
 
 			template <class U>
@@ -51,7 +47,7 @@ namespace SI {
 			template <class U>
 			SI_INLINE_CONSTEXPR explicit vec(const vec<3, U>& other) : vec(static_cast<T>(other.x), static_cast<T>(other.y)) {}
 
-			SI_INLINE_CONSTEXPR explicit operator bool() const noexcept { return !(x == 0 && y == 0); }
+			SI_INLINE_CONSTEXPR explicit operator bool() const noexcept { return x != 0 || y != 0; }
 
 			T x;
 			T y;
@@ -69,7 +65,6 @@ namespace SI {
 			SI_INLINE_CONSTEXPR vec() = default;
 			SI_INLINE_CONSTEXPR vec(T x, T y, T z) : x(x), y(y), z(z) {
 				static_assert(sizeof(vec) == 3 * sizeof(T));
-				static_assert(std::is_trivially_copyable_v<vec>);
 			}
 
 			template <class U>
@@ -325,14 +320,11 @@ namespace SI {
 		template <class Dimension, class T>
 		struct quantity final : quantity_storage<Dimension, T>
 		{
-			// Make sure we are not creating quantities with dimensionless (dimensionlesss should be plain arithmetic types)
-			static_assert(!is_dimensionless_v<Dimension>);
-
+			static_assert(!is_dimensionless_v<Dimension>); // make sure we are not creating quantities with dimensionless (dimensionlesss should be plain arithmetic types)
 			using value_type = T;
 			using dimension_type = Dimension;
 
-			SI_INLINE_CONSTEXPR quantity(zero_t = {}) {
-			}
+			SI_INLINE_CONSTEXPR quantity(zero_t = {}) { }
 
 			SI_INLINE_CONSTEXPR quantity(Dimension, const T& x) {
 				value(*this) = x;
@@ -375,20 +367,14 @@ namespace SI {
 
 		// Fallback value for any plain type, simply returns the value as-is
 		template <class T, class = std::enable_if_t<!is_si_v<T>>>
-		SI_INLINE_CONSTEXPR const T& value(const T& x) {
-			return x;
-		}
+		SI_INLINE_CONSTEXPR const T& value(const T& x) { return x; }
 
-		SI_INLINE_CONSTEXPR long value(zero_t) {
-			return 0;
-		}
+		SI_INLINE_CONSTEXPR long value(zero_t) { return 0; }
 
 		// Helper function for arithmetic functions with two arguments, returns the value of the first argument but uses
 		// the second argument to deduce the returned type in case of si::zero
 		template <class T, class U>
-		SI_INLINE_CONSTEXPR decltype(auto) value2(T&& x, U) {
-			return value(std::forward<T>(x));
-		}
+		SI_INLINE_CONSTEXPR decltype(auto) value2(T&& x, U) { return value(std::forward<T>(x)); }
 
 		template <class U>
 		SI_INLINE_CONSTEXPR auto value2(zero_t, const U& other) {
