@@ -154,12 +154,12 @@ namespace SI
 		if (d <= -1_ls || d >= 1_ls)
 			return _join(d / 1_ls, "light-seconds", to_equivalent_format);
 		if (d <= -1_mi || d >= 1_mi)
-			return _join(d / 1_mi, "miles", to_equivalent_format);
+			return _join(d / 1_mi, "mi", to_equivalent_format);
 		if (d <= -1_yd || d >= 1_yd)
-			return _join(d / 1_yd, "yards", to_equivalent_format);
+			return _join(d / 1_yd, "yd", to_equivalent_format);
 		if (d <= -1_ft || d >= 1_ft)
-			return _join(d / 1_ft, "feet", to_equivalent_format);
-		return _join(d / 1_in, "inch", to_equivalent_format);
+			return _join(d / 1_ft, "ft", to_equivalent_format);
+		return _join(d / 1_in, "in", to_equivalent_format);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, const length d)

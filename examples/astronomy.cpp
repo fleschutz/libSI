@@ -4,7 +4,6 @@
 #include <iostream>
 using namespace std;
 
-#include <SI/core.h> 
 #include <datasets/astronomy.h>
 using namespace SI;
 

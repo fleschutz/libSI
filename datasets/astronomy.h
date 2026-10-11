@@ -2,6 +2,7 @@
 /// @brief  Includes the header files of all astronomy datasets (for convenience).
 
 #pragma once
+#include <SI/core.h> 
 #include "Earth.h"
 #include "Moon.h"
 #include "planets.h"

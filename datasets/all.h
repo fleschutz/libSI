@@ -2,15 +2,16 @@
 /// @brief  Includes the header files of all datasets (for convenience)
 
 #pragma once
+#include <SI/core.h> 
 
-// Basic ones:
+// Basic
 #include "chemical_elements.h"
 #include "physics_particles.h"
 #include "material_properties.h"
 #include "ISO216.h"
 #include "ISO668.h"
 
-// Astronomy:
+// Astronomy
 #include "Earth.h"
 #include "Moon.h"
 #include "planets.h"
@@ -18,6 +19,6 @@
 #include "exoplanets.h"
 #include "monthly_sunspots.h"
 
-// Various:
+// Various
 #include "airports.h"
 #include "musical_notes.h"
