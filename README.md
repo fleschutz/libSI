@@ -34,8 +34,8 @@ int main() {
 - **Conversions** in [SI/conversions.h](SI/conversions.h), e.g. *SI::to_string()*
 
 
-🎁 Additional Components
--------------------------
+📦 Other Components
+--------------------
 - **47 Examples** in 📂[examples](examples/), writing this to the console: [console output](examples/console_output.txt)
 - **210 Unit tests** in [SI/tests.h](SI/tests.h), performed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
 - **13 Basic datasets** based on libSI in 📂[datasets](datasets/), e.g. *chemical_elements*
