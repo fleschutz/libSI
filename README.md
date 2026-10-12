@@ -26,8 +26,8 @@ int main() {
 
 🧱 Core Building Blocks
 ------------------------
-- **Datatypes** in [SI/datatypes.h](SI/datatypes.h), e.g. *SI::length*
-- **Units** in [SI/units.h](SI/units.h), e.g. *SI::meters*
+- **Datatypes** in [SI/datatypes.h](SI/datatypes.h) like: *SI::length*
+- **Units** in [SI/units.h](SI/units.h) such as: *SI::meters*
 - **Literals** in [SI/literals.h](SI/literals.h), e.g. *100_m*
 - **Constants** in [SI/constants.h](SI/constants.h), e.g. *SI::constant::speed_of_light_in_vacuum*
 - **Formulas** in [SI/formulas.h](SI/formulas.h), e.g. *SI::formula::wavelength()*
