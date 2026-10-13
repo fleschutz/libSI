@@ -26,19 +26,19 @@ int main() {
 
 🧱 Core Building Blocks
 ------------------------
-- **Datatypes** in [SI/datatypes.h](SI/datatypes.h) like: *SI::length*
-- **Units** in [SI/units.h](SI/units.h) such as: *SI::meters*
-- **Literals** in [SI/literals.h](SI/literals.h), e.g. *100_m*
-- **Constants** in [SI/constants.h](SI/constants.h), e.g. *SI::constant::speed_of_light_in_vacuum*
-- **Formulas** in [SI/formulas.h](SI/formulas.h), e.g. *SI::formula::wavelength()*
-- **Conversions** in [SI/conversions.h](SI/conversions.h), e.g. *SI::to_string()*
+- **Datatypes** like *SI::length* in [<SI/datatypes.h>](SI/datatypes.h) 
+- **Units** such as *SI::meters* in [<SI/units.h>](SI/units.h) 
+- **Literals** like *100_m* in [<SI/literals.h>](SI/literals.h)
+- **Constants** such as *SI::constant::speed_of_light_in_vacuum* in [<SI/constants.h>](SI/constants.h)
+- **Formulas** like *SI::formula::wavelength()* in [<SI/formulas.h>](SI/formulas.h)
+- **Conversions** such as *SI::to_string()* in [<SI/conversions.h>](SI/conversions.h)
 
 
 📦 Other Components
 --------------------
 - **47 Examples** in 📂[examples](examples/), writing this to the console: [console output](examples/console_output.txt)
 - **210 Unit tests** in [SI/tests.h](SI/tests.h), performed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
-- **Basic datasets** based on libSI in 📂[datasets](datasets/), e.g. *chemical_elements*
+- **Basic datasets** like *chemical_elements* in 📂[datasets](datasets/) (using libSI datatypes and units)
 - **Documentation** in the [API reference manual](https://fleschutz.github.io/libSI/doc/html/)
 
 
