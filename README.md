@@ -36,9 +36,9 @@ int main() {
 
 📦 Other Components
 --------------------
-- **47 Examples** in 📂[examples](examples/), writing this to the console: [console output](examples/console_output.txt)
-- **210 Unit tests** in [SI/tests.h](SI/tests.h), performed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
-- **Basic datasets** like *chemical_elements* in 📂[datasets](datasets/) (using libSI datatypes and units)
+- **47 Examples** writing this [console output](examples/console_output.txt) in subfolder 📂[examples](examples/) 
+- **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
+- **Datasets** like *chemical_elements* in 📂[datasets](datasets/) (using libSI datatypes and units)
 - **Documentation** in the [API reference manual](https://fleschutz.github.io/libSI/doc/html/)
 
 
