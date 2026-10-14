@@ -312,8 +312,8 @@ namespace SI {
 	LITERAL(_kg_per_W, 1,kilograms_per_watt);   // 1_kg_per_W (kg/W)
 	LITERAL(_kg_per_kW,1e-3,kilograms_per_watt);   // 1_kg_per_kW (kg/kW)
 
-	// 3. Imperial Units
-	// -----------------
+	// 3. Imperial / US Units
+	// ----------------------
 	// length in...
 	LITERAL(_in,                        0.0254, meters); // 1_in (inch)
 	LITERAL(_ft,                        0.3048, meters); // 1_ft (feet, 12 inches)
@@ -326,8 +326,20 @@ namespace SI {
 	// mass in...
 	LITERAL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)
 	LITERAL(_lb,                  0.453'592'37, kilograms); // 1_lb (pound)
-	// volume in...
-	LITERAL(_gal,                   4.54609e-3, meters3);// 1_gal (US gallon)
+	// Imperial volume in...
+	LITERAL(_Imp_gal,               4.54609e-3, meters3); // 1_Imp_gal   (Imperial gallon)
+	LITERAL(_Imp_qt,                 1.1365e-3, meters3); // 1_Imp_qt    (Imperial quart)
+	LITERAL(_Imp_pt,                 0.5683e-3, meters3); // 1_Imp_pt    (Imperial pint)
+	LITERAL(_Imp_cup,     0.284130642624675e-3, meters3); // 1_Imp_cup   (Imperial cup)
+	LITERAL(_Imp_gi,         0.142065312500e-3, meters3); // 1_Imp_gi    (Imperial gill)
+	LITERAL(_Imp_fl_oz,  0.0284130642624675e-3, meters3); // 1_Imp_fl_oz (Imperial fluid ounce)
+	// US volume in...
+	LITERAL(_US_gal,            3.785411784e-3, meters3); // 1_US_gal   (US gallon)
+	LITERAL(_US_li_qt,                1.101e-3, meters3); // 1_US_qt    (US liquid quart)
+	LITERAL(_US_li_pt,          0.473176473e-3, meters3); // 1_US_qt    (US liquid pint)
+	LITERAL(_US_cup,           0.2365882365e-3, meters3); // 1_US_cup   (US cup)
+	LITERAL(_US_li_gi,       0.118294118250e-3, meters3); // 1_US_gi    (US liquid gill)
+	LITERAL(_US_fl_oz,      0.0295735295625e-3, meters3); // 1_US_fl_oz (US fluid ounce)
 	// velocity in...
 	LITERAL(_kn,                          1852, meters_per_hour);   // 1_kn (knots)
 	LITERAL(_ft_per_min,               0.00508, meters_per_second); // 1_ft_per_min (feet/min)

@@ -46,7 +46,7 @@ void various_examples() {
 
     cout << " 6. The fuel efficiency of a car driving 400 miles and consuming 15 US gallons is... ";
     auto distance_driven = 400_mi;
-    auto fuel_consumed   = 15_gal;
+    auto fuel_consumed   = 15_US_gal;
     auto fuel_efficiency = (fuel_consumed * 100_km) / distance_driven;
     cout << fuel_efficiency << " (per 100km)" << endl;
 
