@@ -1,10 +1,10 @@
 /// @file   examples/main.cpp
-/// @brief  The main() function calling all other example functions
+/// @brief  The main() function, calling all examples
 
+#include <SI/tests.h>  // perform unit tests at compile-time to verify everything
 #ifdef _WIN32
 #include <Windows.h>
 #endif
-#include <SI/tests.h>  // perform unit tests at compile-time to verify everything
 
 extern void speed_examples(), astronomy_examples(), conversion_examples(), various_examples();
 
