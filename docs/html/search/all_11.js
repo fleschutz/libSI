@@ -12,6 +12,6 @@ var searchData=
   ['references_9',['References',['../dir_1980d45cf0f5d379b20659e576a76c09.html#autotoc_md6',1,'']]],
   ['ronna_10',['ronna',['../namespaceSI_1_1prefix.html#a8f0f254ade24b6edf64383d177905be2',1,'SI::prefix']]],
   ['ronto_11',['ronto',['../namespaceSI_1_1prefix.html#af19a89bee4cc77e4a6361b19b4294c71',1,'SI::prefix']]],
-  ['root_12',['root',['../namespaceSI_1_1detail.html#aa7b16015add1a984f5b2a1f4297a4652',1,'SI::detail::root()'],['../namespaceSI.html#aa7b16015add1a984f5b2a1f4297a4652',1,'SI::root()']]],
+  ['root_12',['root',['../namespaceSI_1_1detail.html#a2dc9477cda07dfa402dc6b876519abb8',1,'SI::detail::root()'],['../namespaceSI.html#a2dc9477cda07dfa402dc6b876519abb8',1,'SI::root()']]],
   ['rotation_5fperiod_13',['rotation_period',['../structdataset_1_1planet__details.html#a280f5004642bb628950a5ae653f7f35b',1,'dataset::planet_details']]]
 ];

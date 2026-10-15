@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🎁_20additional_20components_0',['🎁 Additional Components',['../index.html#autotoc_md2',1,'']]]
+  ['💡_20q_20a_0',['💡 Q &amp;amp; A',['../index.html#autotoc_md3',1,'']]]
 ];

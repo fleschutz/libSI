@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['references_0',['References',['../dir_1980d45cf0f5d379b20659e576a76c09.html#autotoc_md6',1,'']]]
+  ['q_20a_0',['💡 Q &amp;amp; A',['../index.html#autotoc_md3',1,'']]]
 ];

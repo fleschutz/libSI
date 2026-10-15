@@ -2,7 +2,7 @@ var searchData=
 [
   ['tag_5fcelsius_0',['tag_celsius',['../structSI_1_1detail_1_1tag__celsius.html',1,'SI::detail']]],
   ['tag_5ffahrenheit_1',['tag_fahrenheit',['../structSI_1_1detail_1_1tag__fahrenheit.html',1,'SI::detail']]],
-  ['tan_2',['tan',['../namespaceSI.html#a9d494f0e5b1ad59b137d1f8975319307',1,'SI']]],
+  ['tan_2',['tan',['../namespaceSI.html#ada1828730ec7cb1accf0c566eeb08754',1,'SI']]],
   ['temperature_3',['temperature',['../structSI_1_1detail_1_1dimension.html#accb8aed4e15bcec27ba22b30c2dbeb75',1,'SI::detail::dimension']]],
   ['temperature_5fgradient_4',['temperature_gradient',['../namespaceSI_1_1formula.html#a91231e453b69d0b396e58bc35ce62077',1,'SI::formula']]],
   ['tera_5',['tera',['../namespaceSI_1_1prefix.html#a66455a1b5cad33b2d59cc6f6f8d8bae0',1,'SI::prefix']]],

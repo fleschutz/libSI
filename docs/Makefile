@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Repos/libSI/doc
+CMAKE_SOURCE_DIR = /Repos/libSI/docs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Repos/libSI/doc
+CMAKE_BINARY_DIR = /Repos/libSI/docs
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Repos/libSI/doc/CMakeFiles /Repos/libSI/doc//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Repos/libSI/docs/CMakeFiles /Repos/libSI/docs//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Repos/libSI/doc/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Repos/libSI/docs/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named api_doc
+# Target rules for targets named docs
 
 # Build rule for target.
-api_doc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 api_doc
-.PHONY : api_doc
+docs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 docs
+.PHONY : docs
 
 # fast build rule for target.
-api_doc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/api_doc.dir/build.make CMakeFiles/api_doc.dir/build
-.PHONY : api_doc/fast
+docs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
+.PHONY : docs/fast
 
 # Help Target
 help:
@@ -137,7 +137,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... api_doc"
+	@echo "... docs"
 .PHONY : help
 
 

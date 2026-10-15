@@ -1,5 +1,16 @@
 var NAVTREEINDEX5 =
 {
+"structSI_1_1detail_1_1scalar__value__type.html":[1,0,5,3,8],
+"structSI_1_1detail_1_1scalar__value__type.html":[2,0,1,1,8],
+"structSI_1_1detail_1_1scalar__value__type.html#ae7c19102650cc9f7557d3608e72bde92":[1,0,5,3,8,0],
+"structSI_1_1detail_1_1scalar__value__type.html#ae7c19102650cc9f7557d3608e72bde92":[2,0,1,1,8,0],
+"structSI_1_1detail_1_1scalar__value__type_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html":[1,0,5,3,10],
+"structSI_1_1detail_1_1scalar__value__type_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html":[2,0,1,1,10],
+"structSI_1_1detail_1_1scalar__value__type_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html#a61d2e8f19305055db3a8715474eb1505":[1,0,5,3,10,0],
+"structSI_1_1detail_1_1scalar__value__type_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html#a61d2e8f19305055db3a8715474eb1505":[2,0,1,1,10,0],
+"structSI_1_1detail_1_1scalar__value__type_3_01zero__t_01_4.html":[1,0,5,3,9],
+"structSI_1_1detail_1_1scalar__value__type_3_01zero__t_01_4.html":[2,0,1,1,9],
+"structSI_1_1detail_1_1scalar__value__type_3_01zero__t_01_4.html#afbdbe7a3b3ee69a8f5c49dd6135c4365":[1,0,5,3,9,0],
 "structSI_1_1detail_1_1scalar__value__type_3_01zero__t_01_4.html#afbdbe7a3b3ee69a8f5c49dd6135c4365":[2,0,1,1,9,0],
 "structSI_1_1detail_1_1tag__celsius.html":[1,0,5,3,18],
 "structSI_1_1detail_1_1tag__celsius.html":[2,0,1,1,18],
@@ -238,16 +249,5 @@ var NAVTREEINDEX5 =
 "structdataset_1_1monthly__sunspot__details.html#a66ed844c4aea859e7fbb987db64f26da":[1,0,0,5,1],
 "structdataset_1_1monthly__sunspot__details.html#a66ed844c4aea859e7fbb987db64f26da":[2,0,0,5,1],
 "structdataset_1_1monthly__sunspot__details.html#adebed810e984731d7d73d8ecf3dd0f76":[1,0,0,5,0],
-"structdataset_1_1monthly__sunspot__details.html#adebed810e984731d7d73d8ecf3dd0f76":[2,0,0,5,0],
-"structdataset_1_1moon__details.html":[1,0,0,6],
-"structdataset_1_1moon__details.html":[2,0,0,6],
-"structdataset_1_1moon__details.html#a3130ad6ee9c93065d37e5bde489dbc21":[1,0,0,6,1],
-"structdataset_1_1moon__details.html#a3130ad6ee9c93065d37e5bde489dbc21":[2,0,0,6,1],
-"structdataset_1_1moon__details.html#a509bf91720ad7b7555694a9b56fe533c":[1,0,0,6,6],
-"structdataset_1_1moon__details.html#a509bf91720ad7b7555694a9b56fe533c":[2,0,0,6,6],
-"structdataset_1_1moon__details.html#a62c87a4969eaced478c23b181c3d412d":[1,0,0,6,4],
-"structdataset_1_1moon__details.html#a62c87a4969eaced478c23b181c3d412d":[2,0,0,6,4],
-"structdataset_1_1moon__details.html#aa4bdfdca6af7d85b63622d9a41663c3d":[1,0,0,6,0],
-"structdataset_1_1moon__details.html#aa4bdfdca6af7d85b63622d9a41663c3d":[2,0,0,6,0],
-"structdataset_1_1moon__details.html#ab5362df47eadcfd6033f03f04df980e6":[1,0,0,6,5]
+"structdataset_1_1monthly__sunspot__details.html#adebed810e984731d7d73d8ecf3dd0f76":[2,0,0,5,0]
 };

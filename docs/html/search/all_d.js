@@ -8,8 +8,8 @@ var searchData=
   ['neon_5',['neon',['../namespaceEarth.html#aa2efdd0475a71a4b7f59a85acb4dd306',1,'Earth']]],
   ['newtons_5fmotion_6',['Newtons_motion',['../namespaceSI_1_1formula.html#ab67893448239bce7296c950f9e2a58e9',1,'SI::formula']]],
   ['nitrogen_7',['nitrogen',['../namespaceEarth.html#aa784f4a1f04504130283275ef1241b4d',1,'Earth']]],
-  ['norm_8',['norm',['../namespaceSI_1_1detail.html#a9de8f496dce43a3df92e5ccf621a9694',1,'SI::detail::norm()'],['../namespaceSI.html#a9de8f496dce43a3df92e5ccf621a9694',1,'SI::norm()']]],
-  ['normalize_9',['normalize',['../namespaceSI_1_1internal.html#aac6ec4dfb2bf87175815fdd896854b8e',1,'SI::internal::normalize(const vec2&lt; T &gt; &amp;v)'],['../namespaceSI_1_1internal.html#ab42cff4fac883a224c9e3703ddd27b2b',1,'SI::internal::normalize(const vec3&lt; T &gt; &amp;v)'],['../namespaceSI_1_1detail.html#a2e630637a53563e95c7daa25ade55545',1,'SI::detail::normalize()'],['../namespaceSI.html#a2e630637a53563e95c7daa25ade55545',1,'SI::normalize()']]],
+  ['norm_8',['norm',['../namespaceSI_1_1detail.html#a1eb2a6f6c756a0194b8cc95ccb165bd3',1,'SI::detail::norm()'],['../namespaceSI.html#a1eb2a6f6c756a0194b8cc95ccb165bd3',1,'SI::norm()']]],
+  ['normalize_9',['normalize',['../namespaceSI_1_1internal.html#a8308fa730ee00f989a2661d80e991d94',1,'SI::internal::normalize(const vec2&lt; T &gt; &amp;v)'],['../namespaceSI_1_1internal.html#ac21554c68533c750f9e4609d338d4457',1,'SI::internal::normalize(const vec3&lt; T &gt; &amp;v)'],['../namespaceSI_1_1detail.html#ad373ff844854ebe3d281b43358ce23a4',1,'SI::detail::normalize()'],['../namespaceSI.html#ad373ff844854ebe3d281b43358ce23a4',1,'SI::normalize()']]],
   ['number_5fof_5fmoons_10',['number_of_moons',['../structdataset_1_1planet__details.html#a79a0050a11b457f6764c944a01e6872b',1,'dataset::planet_details']]],
   ['number_5fof_5fplanets_11',['number_of_planets',['../structdataset_1_1exoplanet__details.html#a6073d0357ef0bad0b8925c45056a4980',1,'dataset::exoplanet_details']]],
   ['number_5fof_5fstars_12',['number_of_stars',['../structdataset_1_1exoplanet__details.html#a8829b0f56c302dd8a0e49e546219a62e',1,'dataset::exoplanet_details']]]

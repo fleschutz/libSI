@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/api_doc"
+  "CMakeFiles/docs"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )
-  include(CMakeFiles/api_doc.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/docs.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

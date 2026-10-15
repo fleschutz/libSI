@@ -143,11 +143,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/4.2.3/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
-  "Doxyfile.api_doc"
+  "Doxyfile.docs"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/api_doc.dir/DependInfo.cmake"
+  "CMakeFiles/docs.dir/DependInfo.cmake"
   )
