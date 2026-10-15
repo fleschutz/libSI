@@ -7,7 +7,7 @@ Use libSI to apply math in C++ correct, precise, and convenient. Top features ar
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
 - **High precision** by FP 64-bit, calculations on SI base units only, and CODATA 2022 constants.
 - **Maximum speed** without runtime overhead. It just compiles to simple doubles.
-- **Supports** SI units, Imperial units, digital units, astronomical units, and a lot more.
+- **Supports** SI units, Imperial/US units, digital units, astronomical units, and a lot more.
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
@@ -38,7 +38,7 @@ int main() {
 --------------------
 - **47 Examples** writing this [console output](examples/console_output.txt) in subfolder 📂[examples](examples/) 
 - **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
-- **Datasets** like *chemical_elements* in 📂[datasets](datasets/) (using libSI datatypes and units)
+- **Basic datasets** like *chemical_elements* in 📂[datasets](datasets/)
 - **Documentation** in the [API reference manual](https://fleschutz.github.io/libSI/docs/html/)
 
 
