@@ -11,8 +11,8 @@ Use libSI to apply math in C++ correct, precise, and convenient. Top features ar
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
-🔎 Usage Example
-----------------
+🔎 Hello, World Example
+-----------------------
 ```cpp
 #include <SI/core.h>
 using namespace SI;
@@ -24,14 +24,14 @@ int main() {
 }
 ```
 
-🧱 Core Building Blocks
-------------------------
-- **Datatypes** like *SI::length* in [<SI/datatypes.h>](SI/datatypes.h) 
-- **Units** such as *SI::meters* in [<SI/units.h>](SI/units.h) 
-- **Literals** like *100_m* in [<SI/literals.h>](SI/literals.h)
-- **Constants** such as *SI::constant::lightyear* in [<SI/constants.h>](SI/constants.h)
-- **Formulas** like *SI::formula::wavelength()* in [<SI/formulas.h>](SI/formulas.h)
-- **Conversions** such as *SI::to_string()* in [<SI/conversions.h>](SI/conversions.h)
+🧱 Building Blocks in <SI/core.h>
+---------------------------------
+- **Datatypes** like *SI::length*
+- **Units** such as *SI::meters*
+- **Literals** like *100_m*
+- **Constants** such as *SI::constant::speed_of_light_in_vacuum*
+- **Formulas** like *SI::formula::wavelength()*
+- **Conversions** such as *SI::to_string()*
 
 
 📦 Other Components
