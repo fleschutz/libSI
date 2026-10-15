@@ -24,8 +24,8 @@ int main() {
 }
 ```
 
-🧱 Core Building Blocks in <SI/core>
-------------------------------------
+🧱 Building Blocks in <SI/core>
+--------------------------------
 - **Datatypes** like *SI::length*
 - **Units** such as *SI::meters*
 - **Literals** like *100_m*
