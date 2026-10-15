@@ -2,7 +2,7 @@
 /// @brief  Provides 7 import/export examples.
 
 #include <iostream>
-#include <SI/core.h> 
+#include <SI/core> 
 using namespace SI;
 
 void conversion_examples() {

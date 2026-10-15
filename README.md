@@ -14,7 +14,7 @@ Use libSI to apply math in C++ correct, precise, and convenient. Top features ar
 🔎 Hello, World Example
 -----------------------
 ```cpp
-#include <SI/core.h>
+#include <SI/core>
 using namespace SI;
 
 int main() {	
@@ -24,8 +24,8 @@ int main() {
 }
 ```
 
-🧱 Building Blocks in <SI/core.h>
----------------------------------
+🧱 Core Building Blocks in <SI/core>
+------------------------------------
 - **Datatypes** like *SI::length*
 - **Units** such as *SI::meters*
 - **Literals** like *100_m*

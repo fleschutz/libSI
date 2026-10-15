@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-#include <SI/core.h> 
+#include <SI/core> 
 using namespace SI;
 
 void speed_examples() {
