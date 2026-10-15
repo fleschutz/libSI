@@ -1,5 +1,5 @@
 /// @file   examples/speeds.cpp
-/// @brief  Contains 8 speed examples using libSI
+/// @brief  Contains 9 speed examples using libSI
 
 #include <iostream>
 using namespace std;
@@ -49,12 +49,19 @@ void speed_examples() {
     auto wet_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
     cout << wet_distance << " or " << to_equivalent(wet_distance) << endl;
 
-    cout << " 7. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... ";
+
+    cout << " 7. The download of 10TB at 1000MBit/s takes... ";
+    auto file_size      = 10_TB;
+    auto download_speed = 1000_Mbps;
+    cout << file_size / download_speed << endl;
+
+
+    cout << " 8. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... ";
     velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mph + 1_ft_per_min;
     cout << sum << " or " << to_equivalent(sum) << endl;
 
 
-    cout << " 8. The min/max/average/sum of an array of speeds is...";
+    cout << " 9. The min/max/average/sum of an array of speeds is...";
     velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
     int n = sizeof(speeds) / sizeof(speeds[0]);
     cout << " min=" << formula::min_of_array(speeds, n) << " max=" << formula::max_of_array(speeds, n)

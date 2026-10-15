@@ -5,8 +5,9 @@
  4. A flight non-stop around the Earth at Mach 1 would take... 33.7h
  5. A car's braking distance from 100km/h on dry asphalt is... 48.2m or 52.7yd
  6. A car's braking distance from 100km/h on wet asphalt is... 64.3m or 70.3yd
- 7. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... 1.3km/s or 4.0Mach
- 8. The min/max/average/sum of an array of speeds is... min=18288.0mm/h max=1.0km/s avg=685.2km/h sum=1.3km/s
+ 7. The download of 10TB at 1000MBit/s takes... 22.2h
+ 8. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... 1.3km/s or 4.0Mach
+ 9. The min/max/average/sum of an array of speeds is... min=18288.0mm/h max=1.0km/s avg=685.2km/h sum=1.3km/s
 
     === ASTRONOMY EXAMPLES ===
  1. The travel time of sun light to Earth is... 8.3min
@@ -25,34 +26,33 @@
 
     === VARIOUS EXAMPLES ===
  1. The potential energy of a single ounce is: 2.5PJ
- 2. The download of 1TB at 100MBit/s takes... 22.2h
- 3. The kinetic energy of a mid-size SUV at 30mph is... 204.0kJ or 48.7g TNT
- 4. The local gravity at Mount Everest's peak is... 9.8m/s²
- 5. Donald Trump's body-mass index (BMI) is... 28.2548
- 6. The fuel efficiency of a car driving 400 miles and consuming 15 US gallons is... 10.6l (per 100km)
- 7. The frequency and wavelength of the high 'c' music note is...1.0kHz and 32.8cm or 1.1ft
- 8. The population density on Earth (people per km² of land area) is... 55.1/km²
- 9. How much land area would be available for each person on Earth? 1.8hm²
-10. Which radioactive chemical elements melt above 2500K? Technetium at 2703.2K, Rutherfordium at 2673.2K, 
-11. An aircraft glide path on final at 10NM distance in 3000ft height is... 0.0493336
-12. The windchill temperature of 5°C air temperature at 55km/h wind is... -1.6°C or 29.1°F
-13. The surface area and volume of a 30cm x 1cm pizza is... 706.9cm² and 706.9ml
-14. The filament length of a 750g PLA roll with 2.85mm diameter is... 94.8m or 103.7yd
-15. The surface area and volume of a soccer ball is... 1559.7cm² and 5.8l
-16. The lift force of an A380 wing at sea level with 284km/h rotation speed is... 4.5MN
-17. The sound intensity of a 1W loudspeaker in 1m distance is... 79.6mW/m² or 109.0dB
-18. The max diving time in salt water in 10m depth using a 10l bottle is... 37.0min
-19. The sum of 1m + 1km + 1nmi + 1ft + 1in is... 2.9km
-20. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... 1.001e+30
-21. The radar's geometrical horizon from 30ft height is... 10.8km or 6.7mi
-22. The details of a 10m x 1m oak timber log are... 33.0m² area, 7.9m³ volume, 5.6t weight, 84.3GW
-23. The min cable wire size for 100m copper, 230V, 30A max are... 10.3mm²
-24. The voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms is... 54.1mV
-25. The frequencies and wavelengths of all musical notes are... C0=16.4Hz,21.0m C#0=17.3Hz,19.8m D0=18.4Hz,18.7m D#0=19.4Hz,17.6m E0=20.6Hz,16.6m F0=21.8Hz,15.7m F#0=23.1Hz,14.8m G0=24.5Hz,14.0m G#0=26.0Hz,13.2m A0=27.5Hz,12.5m A#0=29.1Hz,11.8m B0=30.9Hz,11.1m C1=32.7Hz,10.5m C#1=34.6Hz,9.9m D1=36.7Hz,9.3m D#1=38.9Hz,8.8m E1=41.2Hz,8.3m F1=43.6Hz,7.9m F#1=46.2Hz,7.4m G1=49.0Hz,7.0m G#1=51.9Hz,6.6m A1=55.0Hz,6.2m A#1=58.3Hz,5.9m B1=61.7Hz,5.6m C2=65.4Hz,5.2m C#2=69.3Hz,4.9m D2=73.4Hz,4.7m D#2=77.8Hz,4.4m E2=82.4Hz,4.2m F2=87.3Hz,3.9m F#2=92.5Hz,3.7m G2=98.0Hz,3.5m G#2=103.8Hz,3.3m A2=110.0Hz,3.1m A#2=116.5Hz,2.9m B2=123.5Hz,2.8m C3=130.8Hz,2.6m C#3=138.6Hz,2.5m D3=146.8Hz,2.3m D#3=155.6Hz,2.2m E3=164.8Hz,2.1m F3=174.6Hz,2.0m F#3=185.0Hz,1.9m G3=196.0Hz,1.8m G#3=207.7Hz,1.7m A3=220.0Hz,1.6m A#3=233.1Hz,1.5m B3=246.9Hz,1.4m C4=261.6Hz,1.3m C#4=277.2Hz,1.2m D4=293.7Hz,1.2m D#4=311.1Hz,1.1m E4=329.6Hz,1.0m F4=349.2Hz,98.2cm F#4=370.0Hz,92.7cm G4=392.0Hz,87.5cm G#4=415.3Hz,82.6cm A4=440.0Hz,78.0cm A#4=466.2Hz,73.6cm B4=493.9Hz,69.5cm C5=523.2Hz,65.6cm C#5=554.4Hz,61.9cm D5=587.3Hz,58.4cm D#5=622.2Hz,55.1cm E5=659.3Hz,52.0cm F5=698.5Hz,49.1cm F#5=740.0Hz,46.4cm G5=784.0Hz,43.8cm G#5=830.6Hz,41.3cm A5=880.0Hz,39.0cm A#5=932.3Hz,36.8cm B5=987.8Hz,34.7cm C6=1.0kHz,32.8cm C#6=1.1kHz,30.9cm D6=1.2kHz,29.2cm D#6=1.2kHz,27.6cm E6=1.3kHz,26.0cm F6=1.4kHz,24.6cm F#6=1.5kHz,23.2cm G6=1.6kHz,21.9cm G#6=1.7kHz,20.6cm A6=1.8kHz,19.5cm A#6=1.9kHz,18.4cm B6=2.0kHz,17.4cm C7=2.1kHz,16.4cm C#7=2.2kHz,15.5cm D7=2.3kHz,14.6cm D#7=2.5kHz,13.8cm E7=2.6kHz,13.0cm F7=2.8kHz,12.3cm F#7=3.0kHz,11.6cm G7=3.1kHz,10.9cm G#7=3.3kHz,10.3cm A7=3.5kHz,9.7cm A#7=3.7kHz,9.2cm B7=4.0kHz,8.7cm C8=4.2kHz,8.2cm C#8=4.4kHz,7.7cm D8=4.7kHz,7.3cm D#8=5.0kHz,6.9cm E8=5.3kHz,6.5cm F8=5.6kHz,6.1cm F#8=5.9kHz,5.8cm G8=6.3kHz,5.5cm G#8=6.6kHz,5.2cm A8=7.0kHz,4.9cm A#8=7.5kHz,4.6cm B8=7.9kHz,4.3cm C9=8.4kHz,4.1cm C#9=8.9kHz,3.9cm D9=9.4kHz,3.6cm D#9=10.0kHz,3.4cm E9=10.5kHz,3.3cm F9=11.2kHz,3.1cm F#9=11.8kHz,2.9cm G9=12.5kHz,2.7cm G#9=13.3kHz,2.6cm A9=14.1kHz,2.4cm A#9=14.9kHz,2.3cm B9=15.8kHz,2.2cm 
-26. The power of a 15PS motorcycle with 200kg weight is... 11.0kW and 18.1kg/kW
-27. How many wine bottles are needed for 1 hectoliter? 133.333
-28. The AC voltages within a tenth second are... 0.0V, 220.0V, 0.0pV, -220.0V, -0.0pV, 220.0V, -0.1pV, -220.0V, -0.1pV, 220.0V, 0.4pV, -220.0V, -0.8pV, 220.0V, 0.7pV, -220.0V, -0.1pV, 220.0V, -0.5pV, -220.0V, 
-29. Applying a perpendicular force of 500N to a 20cm long lever results in... 100.0J of torque
-30. The distance between Singapore and Tokyo measures...5311.2km or 3300.2mi
-31. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0m in between
+ 2. The kinetic energy of a mid-size SUV at 30mph is... 204.0kJ or 48.7g TNT
+ 3. The local gravity at Mount Everest's peak is... 9.8m/s²
+ 4. Donald Trump's body-mass index (BMI) is... 28.2548
+ 5. The fuel efficiency of a car driving 400 miles and consuming 15 US gallons is... 8.8l (per 100km)
+ 6. The frequency and wavelength of the high 'c' music note is...1.0kHz and 32.8cm or 1.1ft
+ 7. The population density on Earth (people per km² of land area) is... 55.1/km²
+ 8. How much land area would be available for each person on Earth? 1.8hm²
+ 9. Which radioactive chemical elements melt above 2500K? Technetium at 2703.2K, Rutherfordium at 2673.2K, 
+10. An aircraft glide path on final at 10NM distance in 3000ft height is... 0.0493336
+11. The windchill temperature of 5°C air temperature at 55km/h wind is... -1.6°C or 29.1°F
+12. The surface area and volume of a 30cm x 1cm pizza is... 706.9cm² and 706.9ml
+13. The filament length of a 750g PLA roll with 2.85mm diameter is... 94.8m or 103.7yd
+14. The surface area and volume of a soccer ball is... 1559.7cm² and 5.8l
+15. The lift force of an A380 wing at sea level with 284km/h rotation speed is... 4.5MN
+16. The sound intensity of a 1W loudspeaker in 1m distance is... 79.6mW/m² or 109.0dB
+17. The max diving time in salt water in 10m depth using a 10l bottle is... 37.0min
+18. The sum of 1m + 1km + 1nmi + 1ft + 1in is... 2.9km
+19. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... 1.001e+30
+20. The radar's geometrical horizon from 30ft height is... 10.8km or 6.7mi
+21. The details of a 10m x 1m oak timber log are... 33.0m² area, 7.9m³ volume, 5.6t weight, 84.3GW
+22. The min cable wire size for 100m copper, 230V, 30A max are... 10.3mm²
+23. The voltage of a capacitor (5V, 0.47µF, 4.7KOhm) after 10ms is... 54.1mV
+24. The frequencies and wavelengths of all musical notes are... C0=16.4Hz,21.0m C#0=17.3Hz,19.8m D0=18.4Hz,18.7m D#0=19.4Hz,17.6m E0=20.6Hz,16.6m F0=21.8Hz,15.7m F#0=23.1Hz,14.8m G0=24.5Hz,14.0m G#0=26.0Hz,13.2m A0=27.5Hz,12.5m A#0=29.1Hz,11.8m B0=30.9Hz,11.1m C1=32.7Hz,10.5m C#1=34.6Hz,9.9m D1=36.7Hz,9.3m D#1=38.9Hz,8.8m E1=41.2Hz,8.3m F1=43.6Hz,7.9m F#1=46.2Hz,7.4m G1=49.0Hz,7.0m G#1=51.9Hz,6.6m A1=55.0Hz,6.2m A#1=58.3Hz,5.9m B1=61.7Hz,5.6m C2=65.4Hz,5.2m C#2=69.3Hz,4.9m D2=73.4Hz,4.7m D#2=77.8Hz,4.4m E2=82.4Hz,4.2m F2=87.3Hz,3.9m F#2=92.5Hz,3.7m G2=98.0Hz,3.5m G#2=103.8Hz,3.3m A2=110.0Hz,3.1m A#2=116.5Hz,2.9m B2=123.5Hz,2.8m C3=130.8Hz,2.6m C#3=138.6Hz,2.5m D3=146.8Hz,2.3m D#3=155.6Hz,2.2m E3=164.8Hz,2.1m F3=174.6Hz,2.0m F#3=185.0Hz,1.9m G3=196.0Hz,1.8m G#3=207.7Hz,1.7m A3=220.0Hz,1.6m A#3=233.1Hz,1.5m B3=246.9Hz,1.4m C4=261.6Hz,1.3m C#4=277.2Hz,1.2m D4=293.7Hz,1.2m D#4=311.1Hz,1.1m E4=329.6Hz,1.0m F4=349.2Hz,98.2cm F#4=370.0Hz,92.7cm G4=392.0Hz,87.5cm G#4=415.3Hz,82.6cm A4=440.0Hz,78.0cm A#4=466.2Hz,73.6cm B4=493.9Hz,69.5cm C5=523.2Hz,65.6cm C#5=554.4Hz,61.9cm D5=587.3Hz,58.4cm D#5=622.2Hz,55.1cm E5=659.3Hz,52.0cm F5=698.5Hz,49.1cm F#5=740.0Hz,46.4cm G5=784.0Hz,43.8cm G#5=830.6Hz,41.3cm A5=880.0Hz,39.0cm A#5=932.3Hz,36.8cm B5=987.8Hz,34.7cm C6=1.0kHz,32.8cm C#6=1.1kHz,30.9cm D6=1.2kHz,29.2cm D#6=1.2kHz,27.6cm E6=1.3kHz,26.0cm F6=1.4kHz,24.6cm F#6=1.5kHz,23.2cm G6=1.6kHz,21.9cm G#6=1.7kHz,20.6cm A6=1.8kHz,19.5cm A#6=1.9kHz,18.4cm B6=2.0kHz,17.4cm C7=2.1kHz,16.4cm C#7=2.2kHz,15.5cm D7=2.3kHz,14.6cm D#7=2.5kHz,13.8cm E7=2.6kHz,13.0cm F7=2.8kHz,12.3cm F#7=3.0kHz,11.6cm G7=3.1kHz,10.9cm G#7=3.3kHz,10.3cm A7=3.5kHz,9.7cm A#7=3.7kHz,9.2cm B7=4.0kHz,8.7cm C8=4.2kHz,8.2cm C#8=4.4kHz,7.7cm D8=4.7kHz,7.3cm D#8=5.0kHz,6.9cm E8=5.3kHz,6.5cm F8=5.6kHz,6.1cm F#8=5.9kHz,5.8cm G8=6.3kHz,5.5cm G#8=6.6kHz,5.2cm A8=7.0kHz,4.9cm A#8=7.5kHz,4.6cm B8=7.9kHz,4.3cm C9=8.4kHz,4.1cm C#9=8.9kHz,3.9cm D9=9.4kHz,3.6cm D#9=10.0kHz,3.4cm E9=10.5kHz,3.3cm F9=11.2kHz,3.1cm F#9=11.8kHz,2.9cm G9=12.5kHz,2.7cm G#9=13.3kHz,2.6cm A9=14.1kHz,2.4cm A#9=14.9kHz,2.3cm B9=15.8kHz,2.2cm 
+25. The power of a 15PS motorcycle with 200kg weight is... 11.0kW and 18.1kg/kW
+26. How many wine bottles are needed for 1 hectoliter? 133.333
+27. The AC voltages within a tenth second are... 0.0V, 220.0V, 0.0pV, -220.0V, -0.0pV, 220.0V, -0.1pV, -220.0V, -0.1pV, 220.0V, 0.4pV, -220.0V, -0.8pV, 220.0V, 0.7pV, -220.0V, -0.1pV, 220.0V, -0.5pV, -220.0V, 
+28. Applying a perpendicular force of 500N to a 20cm long lever results in... 100.0J of torque
+29. The distance between Singapore and Tokyo measures...5311.2km or 3300.2mi
+30. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0m in between
 
