@@ -36,7 +36,7 @@ int main() {
 
 🎉 Various
 -----------
-- **Many examples** in the 📂[examples](examples/) subfolder, which write this: [console output](examples/console_output.txt)
+- **Many examples** in the 📂[examples](examples/) subfolder, which write this: [console output](docs/console_output.txt)
 - **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
 - **Basic datasets** like *chemical_elements* in the 📂[datasets](datasets/) subfolder
 - **Documentation** in the [API reference manual](https://fleschutz.github.io/libSI/docs/html/)
