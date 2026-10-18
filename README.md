@@ -5,7 +5,7 @@ libSI - The Physical Units Library For C++
 Use libSI to apply math in C++ correct, precise, and convenient. Top features are: 
 
 - **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
-- **High precision** by FP 64-bit, calculations on SI base units only, and CODATA 2022 constants.
+- **High precision:** 64-bit FP datatypes, internal calculations on SI base units, and CODATA 2022 constants.
 - **Maximum speed** without runtime overhead. It just compiles to simple doubles.
 - **Supports** SI units, Imperial/US units, digital units, astronomical units, and a lot more.
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
