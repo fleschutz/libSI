@@ -1,5 +1,5 @@
-libSI's CMake Support
-=====================
+Using libSI in Your Project with CMake
+======================================
 
 
 Option 1: Using `FetchContent` 
