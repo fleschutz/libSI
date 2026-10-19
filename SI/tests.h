@@ -10,7 +10,7 @@
 namespace SI {
 
     /// @brief  This just shows what's possible, the serious checks follow below.
-    inline void checkFeatures() {
+    inline void check_some_features() {
 	static_assert(3_m == meters(3));
 	static_assert(3_m == 3 * 1_m);
 	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
@@ -26,8 +26,7 @@ namespace SI {
 	static_assert(1_Ah == 3600_C);
     }
 
-    /// @brief  Checks the basic datatypes of C/C++ and libSI.
-    inline void checkDatatypes() {
+    inline void check_the_datatypes() {
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
 	static_assert(sizeof(int) <= sizeof(long));
@@ -50,8 +49,7 @@ namespace SI {
 	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
     }
 
-    /// @brief  Checks the SI base units.
-    inline void checkBaseUnits() {
+    inline void check_the_SI_base_units() {
 	// length in...
 	static_assert(1_Pm == 1000_Tm);
 	static_assert(1_Tm == 1000_Gm);
@@ -112,8 +110,7 @@ namespace SI {
 	static_assert(1_cd == 0.001_kcd);
     }
 
-    /// @brief  Checks the SI derived units.
-    inline void checkDerivedUnits() {
+    inline void check_the_SI_derived_units() {
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
@@ -231,15 +228,13 @@ namespace SI {
 	static_assert(1_mlx == 1000_ulx);
     }
 
-    /// @brief  Checks the astronomical units.
-    inline void checkAstronomicalUnits() {
+    inline void check_the_astronomical_units() {
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
     }
 
-    /// @brief  Checks the Imperial/US units.
-    inline void checkImperialUnits() {
+    inline void check_the_Imperial_units() {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
@@ -249,8 +244,7 @@ namespace SI {
 	//static_assert(0_degF == 255.37_K);
     }
 
-    /// @brief  Checks the digital units.
-    inline void checkDigitalUnits() {
+    inline void check_the_digital_units() {
 	// bytes absolute...
 	static_assert(1_kB == 1000_byte);
 	static_assert(1_MB == 1000_kB);
@@ -280,14 +274,12 @@ namespace SI {
 	static_assert(1_Gbps == 1000_Mbps);
     }
 
-    /// @brief  Checks angles.
-    inline void checkAngles() {
+    inline void check_the_angles() {
         static_assert(1_rad == 1000_mrad);
         static_assert(0_deg == 0_rad);
     }
 
-    /// @brief  Checks various units.
-    inline void checkVariousUnits() {
+    inline void check_various_units() {
 	// pressure in...
 	static_assert(1_bar  == 1000_mbar);
 	static_assert(1_kbar == 1000_bar);
@@ -295,8 +287,7 @@ namespace SI {
 	static_assert(1_Gbar == 1000_Mbar);
     }
 
-    /// @brief  Checks the functions and templates.
-    inline void checkFunctionsAndTemplates() {
+    inline void check_functions_and_templates() {
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m)   == 1_m);
 	static_assert(abs(0_m)    == 0_m);
@@ -333,4 +324,4 @@ namespace SI {
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
     }
 
-} // end of namespace SI
+} // end of namespace
