@@ -238,13 +238,15 @@ namespace SI {
 	static_assert(1_kpc == 1000_pc);
     }
 
-    /// @brief  Checks the Imperial units.
+    /// @brief  Checks the Imperial/US units.
     inline void checkImperialUnits() {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
 	//static_assert(1_ft  == 12_in);
 	static_assert(1_lb  == 16_oz);
+	//static_assert(0_K == -459.67_degF);
+	//static_assert(0_degF == 255.37_K);
     }
 
     /// @brief  Checks the digital units.
@@ -276,6 +278,11 @@ namespace SI {
 	// bits per seconds...
 	static_assert(1_Mbps == 1000_Kbps);
 	static_assert(1_Gbps == 1000_Mbps);
+    }
+
+    /// @brief  Checks angles.
+    inline void checkAngles() {
+        static_assert(30_deg + 60_deg == 90_deg);
     }
 
     /// @brief  Checks various units.
