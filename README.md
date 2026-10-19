@@ -1,5 +1,5 @@
-libSI - The Physical Units Library For C++
-==========================================
+📐libSI - The Physical Units Library For C++
+=============================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
 Use libSI to apply math in C++ correct, precise, and convenient. Top features are: 
@@ -8,6 +8,7 @@ Use libSI to apply math in C++ correct, precise, and convenient. Top features ar
 - **High precision:** 64-bit FP datatypes, internal calculations on SI base units, and CODATA 2022 constants.
 - **Maximum speed** without runtime overhead. It just compiles to simple doubles.
 - **Supports** SI units, Imperial/US units, digital units, astronomical units, and a lot more.
+- **Supports** implicit scale conversion when mixing different units, e.g. 1_km + 1_m + 1_ft + 1_in.
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
