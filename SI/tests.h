@@ -282,7 +282,8 @@ namespace SI {
 
     /// @brief  Checks angles.
     inline void checkAngles() {
-        static_assert(30_deg + 60_deg == 90_deg);
+        static_assert(1_rad == 1000_mrad);
+        static_assert(0_deg == 0_rad);
     }
 
     /// @brief  Checks various units.

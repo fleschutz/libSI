@@ -304,13 +304,14 @@ namespace SI {
 	LITERAL(_nkat,  1e-9, mols_per_second);     // 1_nkat  (nanokatal)
 	// other...
 	LITERAL(_Nm,       1, newtonmeters);        // 1_Nm  (newtonmeter)
-	LITERAL(_rad,      1, radians);             // 1_rad (radian)
-	LITERAL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 	LITERAL(_sr,       1, steradians);          // 1_sr  (steradian)
 	LITERAL(_km³_per_s²,1e9, meters3_per_second2);// 1_km³_per_s² (km³/s²)
 	LITERAL(_kg_per_mol,1,kilograms_per_mol);   // 1_kg_per_mol (kg/mol)
 	LITERAL(_kg_per_W, 1,kilograms_per_watt);   // 1_kg_per_W (kg/W)
 	LITERAL(_kg_per_kW,1e-3,kilograms_per_watt);   // 1_kg_per_kW (kg/kW)
+	LITERAL(_rad,      1, radians);             // 1_rad  (radian)
+	LITERAL(_mrad,  1e-3, radians);             // 1_mrad (milliradians)
+	LITERAL(_deg,0.01745329251994329576923690768489, radians); // 1_deg  (angle degree)
 
 	// 3. Imperial / US Units
 	// ----------------------
