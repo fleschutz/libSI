@@ -1,6 +1,6 @@
 /// @file     SI/units.h
 /// @brief    Defines 103 type-safe units, e.g. SI::meters
-/// @details  Categories are: SI Base Units, SI Prefixes, SI Derived Units, Imperial Units, Various Units, and References.
+/// @details  Categories are: SI Base Units, SI Derived Units, Imperial Units, Various Units, and References.
 
 #pragma once
 #include <SI/datatypes.h>
@@ -8,59 +8,42 @@
 
 namespace SI {
 
-	// 1. SI Base Units
+	// SI Base Units
+	// -------------
+	UNIT(meters)        = unit<length>();
+	UNIT(seconds)       = unit<time>();
+	UNIT(kilograms)     = unit<mass>();
+	UNIT(kelvins)       = unit<temperature>();
+	UNIT(amperes)       = unit<current>();
+	UNIT(moles)         = unit<substance>();
+	UNIT(candelas)      = unit<luminous_intensity>();
+
+	// Derived SI Units
 	// ----------------
-	UNIT(meters)       = unit<length>();
-	UNIT(seconds)      = unit<time>();
-	UNIT(kilograms)    = unit<mass>();
-	UNIT(kelvins)      = unit<temperature>();
-	UNIT(amperes)      = unit<current>();
-	UNIT(moles)        = unit<substance>();
-	UNIT(candelas)     = unit<luminous_intensity>();
-
-	// 2. SI Prefixes
-	// --------------
-	UNIT(exa)          = unit<detail::dimensionless, 1000000000000000000, 1>();
-	UNIT(peta)         = unit<detail::dimensionless, 1000000000000000, 1>();
-	UNIT(tera)         = unit<detail::dimensionless, 1000000000000, 1>();
-	UNIT(giga)         = unit<detail::dimensionless, 1000000000, 1>();
-	UNIT(mega)         = unit<detail::dimensionless, 1000000, 1>();
-	UNIT(kilo)         = unit<detail::dimensionless, 1000, 1>();
-	UNIT(hecto)        = unit<detail::dimensionless, 100, 1>();
-	UNIT(centi)        = unit<detail::dimensionless, 1, 100>();
-	UNIT(milli)        = unit<detail::dimensionless, 1, 1000>();
-	UNIT(micro)        = unit<detail::dimensionless, 1, 1000000>();
-	UNIT(nano)         = unit<detail::dimensionless, 1, 1000000000>();
-	UNIT(pico)         = unit<detail::dimensionless, 1, 1000000000000>();
-	UNIT(femto)        = unit<detail::dimensionless, 1, 1000000000000000>();
-	UNIT(atto)         = unit<detail::dimensionless, 1, 1000000000000000000>();
-
-	// 3. SI Derived Units
-	// -------------------
-	UNIT(kilometers)   = kilo * meters; 
-	UNIT(millimeters)  = milli * meters;
-	UNIT(per_meter)    = unit<per_length>();
-	UNIT(minutes)      = unit<time, 60>();
-	UNIT(hours)        = unit<time, 60*60>();
-	UNIT(hertz)        = unit<frequency>();
+	UNIT(kilometers)    = unit<length, 1000>();
+	UNIT(millimeters)   = unit<length, 1, 1000>();
+	UNIT(per_meter)     = unit<per_length>();
+	UNIT(minutes)       = unit<time, 60>();
+	UNIT(hours)         = unit<time, 3600>();
+	UNIT(hertz)         = unit<frequency>();
 	// area in...
-	UNIT(meters2)      = unit<area>(); // (square meter)
-	UNIT(kilometers2)  = kilo * kilo * meters2;
-	UNIT(per_meter2)   = unit<per_area>();
-	UNIT(meter_kelvins)= meters * kelvins;
+	UNIT(meters2)       = unit<area>(); // (square meter)
+	UNIT(kilometers2)   = unit<area, 1000*1000>();
+	UNIT(per_meter2)    = unit<per_area>();
+	UNIT(meter_kelvins) = meters * kelvins;
 	UNIT(meters2_per_second) = meters2 / seconds;
 	UNIT(kilograms_per_meter2) = kilograms / meters2;
 	// volume in...
-	UNIT(meters3)      = unit<volume>(); // (cubic meter)
-	UNIT(kilometers3)  = kilo * kilo * kilo * meters3;
+	UNIT(meters3)       = unit<volume>(); // (cubic meter)
+	UNIT(kilometers3)   = unit<volume, 1000*1000*1000>();
 	UNIT(meters3_per_second) = meters3 / seconds;
 	UNIT(meters3_per_mol) = meters3 / moles;
 	UNIT(meters3_per_second2) = meters3 / (seconds * seconds);
 	UNIT(meters3_per_kilogram_per_second2) = meters3 / kilograms / (seconds * seconds);
 	UNIT(kilograms_per_meter3) = kilograms / meters3;
 	// velocity in...
-	UNIT(meters_per_second)    = unit<velocity>();
-	UNIT(meters_per_hour)      = meters / hours;
+	UNIT(meters_per_second) = unit<velocity>();
+	UNIT(meters_per_hour)   = meters / hours;
 	// acceleration in...
 	UNIT(meters_per_second2) = unit<acceleration>();
 	// force in...
@@ -79,7 +62,7 @@ namespace SI {
 	UNIT(joules_per_kelvin_per_mol) = joules / kelvins / moles;
 	// pressure in...
 	UNIT(pascals)       = unit<pressure>();
-
+	// absorbed dose in...
 	UNIT(grays)         = joules / kilograms;
 	UNIT(sieverts)      = joules / kilograms;
 
@@ -118,12 +101,12 @@ namespace SI {
 	UNIT(mols_per_meter3) = moles / meters3;
 	UNIT(mols_per_kilogram) = moles / kilograms;
 	UNIT(mols_per_second) = moles / seconds;
-	UNIT(per_mol)       = unit<per_substance>();
+	UNIT(per_mol)        = unit<per_substance>();
 
 	UNIT(kilograms_per_watt) = kilograms / watts;
 
-	// 4. Imperial Units
-	// -----------------
+	// Imperial Units
+	// --------------
 	UNIT(pounds)         = unit<mass, 45359237, 100000000>();
 	UNIT(feet)           = unit<length, 3048, 10000>();
 	UNIT(nautical_miles) = unit<length, 1852, 100>();
@@ -133,58 +116,58 @@ namespace SI {
 	UNIT(miles_per_hour) = statute_miles / hours;
 	UNIT(knots)          = nautical_miles / hours;
 
-	// 5. Various Units
-	// ----------------
+	// Various Units
+	// -------------
 	UNIT(celsius)          = detail::unit<detail::temperature_dimension, detail::tag_celsius>();
 	UNIT(bytes)            = unit<detail::dimensionless>();
 	UNIT(bytes_per_second) = bytes / seconds;
 
-	// 6. Basic Functions and Templates
-	// --------------------------------
+	// Basic Functions and Templates
+	// -----------------------------
 	/// @brief Calculates the sinus of an angle (a).
-	[[nodiscard]] inline angle sin(angle a)
+	[[nodiscard]] inline angle sin(const angle a)
 	{
 		return std::sin(radians(a));
 	}
 
 	/// @brief Calculates the cosinus of an angle (a).
-	[[nodiscard]] inline angle cos(angle a)
+	[[nodiscard]] inline angle cos(const angle a)
 	{
 		return std::cos(radians(a));
 	}
 
 	/// @brief Calculates the tangens of an angle (a).
-	[[nodiscard]] inline angle tan(angle a)
+	[[nodiscard]] inline angle tan(const angle a)
 	{
 		return std::tan(radians(a));
 	}
 
 	/// @brief Calculates sin²x
-	[[nodiscard]] inline angle sin2(angle x)
+	[[nodiscard]] inline angle sin2(const angle x)
 	{
 		return 0.5 * (1. - std::cos(2. * x));
 	}
 
 	/// @brief Calculates cos²x
-	[[nodiscard]] inline angle cos2(angle x)
+	[[nodiscard]] inline angle cos2(const angle x)
 	{
 		return 0.5 * (1. + std::cos(2. * x));
 	}
 
 	/// @brief Calculates the square root of an angle (a).
-	[[nodiscard]] inline angle sqrt(angle a)
+	[[nodiscard]] inline angle sqrt(const angle a)
 	{
 		return std::sqrt(radians(a));
 	}
 
 	/// @brief Calculates the atangens of two angles.
-	[[nodiscard]] inline angle atan2(angle y, angle x)
+	[[nodiscard]] inline angle atan2(const angle y, const angle x)
 	{
 		return std::atan2(radians(y), radians(x));
 	}
 
 	/// @brief Calculates the angle between the positive x-axis and a point (x, y).
-	[[nodiscard]] inline angle atan2(length y, length x)
+	[[nodiscard]] inline angle atan2(const length y, const length x)
 	{
 		return std::atan2(meters(y), meters(x));
 	}
