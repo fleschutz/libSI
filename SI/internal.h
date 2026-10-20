@@ -596,7 +596,7 @@ namespace SI {
 					SI_RETURN_QUANTITY(Dimension, x + static_cast<scalar_type>(273.15));
 				}
 				else if constexpr (std::is_same_v<tag_fahrenheit, UnitRatio>) {
-					SI_RETURN_QUANTITY(Dimension, (x + static_cast<scalar_type>(459.67)) * static_cast<scalar_type>(5. / 9));
+					SI_RETURN_QUANTITY(Dimension, (x + static_cast<scalar_type>(459.67)) * static_cast<scalar_type>(5. / 9.));
 				}
 				else {
 					SI_RETURN_QUANTITY(Dimension, x * static_cast<scalar_type>(UnitRatio::factor));

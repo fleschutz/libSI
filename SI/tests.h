@@ -26,7 +26,7 @@ namespace SI {
 	static_assert(1_Ah == 3600_C);
     }
 
-    inline void check_the_datatypes() {
+    inline void check_basic_datatypes() {
 	static_assert(sizeof(char) <= sizeof(short));
 	static_assert(sizeof(short) <= sizeof(int));
 	static_assert(sizeof(int) <= sizeof(long));
@@ -49,7 +49,7 @@ namespace SI {
 	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
     }
 
-    inline void check_the_SI_base_units() {
+    inline void check_SI_base_units() {
 	// length in...
 	static_assert(1_Pm == 1000_Tm);
 	static_assert(1_Tm == 1000_Gm);
@@ -110,7 +110,7 @@ namespace SI {
 	static_assert(1_cd == 0.001_kcd);
     }
 
-    inline void check_the_SI_derived_units() {
+    inline void check_SI_derived_units() {
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
@@ -228,23 +228,25 @@ namespace SI {
 	static_assert(1_mlx == 1000_ulx);
     }
 
-    inline void check_the_astronomical_units() {
+    inline void check_astronomical_units() {
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
     }
 
-    inline void check_the_Imperial_units() {
+    inline void check_Imperial_units() {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
 	//static_assert(1_ft  == 12_in);
 	static_assert(1_lb  == 16_oz);
-	//static_assert(0_K == -459.67_degF);
-	//static_assert(0_degF == 255.37_K);
+	//static_assert(32_degF == 273.15_K);
+
+	static_assert(0_degC == 273.15_K);
+	static_assert(491.67_degR == 273.15_K);
     }
 
-    inline void check_the_digital_units() {
+    inline void check_digital_units() {
 	// bytes absolute...
 	static_assert(1_kB == 1000_byte);
 	static_assert(1_MB == 1000_kB);
