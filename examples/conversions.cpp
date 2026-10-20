@@ -7,8 +7,7 @@ using namespace SI;
 
 void conversion_examples() {
 
-    // Imports
-    // -------
+    // ** IMPORT **
     length distance = 42_m; // <- use a literal
 
     distance = meters(42.0); // <- cast a dimensionless number
@@ -20,8 +19,7 @@ void conversion_examples() {
     bool is_valid = from_string("42m", distance); // <- convert from a string
 
 
-    // Exports
-    // -------
+    // ** EXPORT **
     double y = meters(distance); // <- cast to a unit (=42)
 
     double z = distance / 1_m; // <- divide to a dimensionless number (=42)
