@@ -8,8 +8,8 @@
 
 namespace SI { namespace formula {
 
-	// 1. 2D Formulas
-	// --------------
+	// Formulas for 2D
+	// ---------------
 	/// @brief Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
 	FUNC length hypotenuse_of_triangle(const length a, const length b)
 	{
@@ -120,8 +120,8 @@ namespace SI { namespace formula {
 		return sqrt((dx * dx) + (dy * dy));
 	}
 
-	// 2. 3D Formulas
-	// --------------
+	// Formulas for 3D
+	// ---------------
 	/// @brief Calculates the area of a cube from length (a).
 	FUNC area area_of_cube(const length a)
 	{
@@ -176,8 +176,21 @@ namespace SI { namespace formula {
 		return A * h;
 	}
 
-	// 3. Moving Objects
-	// -----------------
+	/// @brief Calculates the distance between two lat/long coordinates on Earth (haversine formula).
+	FUNC length distance_on_sphere(angle lat1, angle long1, angle lat2, angle long2,
+			               length radius = 6371.0088_km) // mean Earth radius, recommended by NOAA
+	{
+		angle dLat = lat1 - lat2;    // difference in latitude
+		angle dLong = long1 - long2; // difference in longitude
+
+		angle a = sin2(dLat / 2.) + cos(lat1) * cos(lat2) * sin2(dLong / 2.); // Haversine intermediate
+		auto  c = 2. * atan2(sqrt(a), sqrt(1. - a)); // central angle 
+
+		return c * radius;
+	}
+
+	// Formulas for Moving Objects
+	// ---------------------------
 	/// @brief Calculates the average speed from distance and duration.
 	FUNC velocity average_speed(const length distance, const time duration)
 	{
@@ -220,8 +233,8 @@ namespace SI { namespace formula {
 		return delta_v / delta_t;
 	}
 
-	// 4. Vehicle Formulas
-	// -------------------
+	// Formulas for Vehicles
+	// ---------------------
 	/// @brief Calculates the revolutions per minute (RPM) from velocity (v) and wheel radius (r).
 	FUNC dimensionless wheel_rpm(const velocity v, const length r)
 	{
@@ -246,8 +259,8 @@ namespace SI { namespace formula {
 		return (v1 - v0) / (t * constant::Earth_gravity);
 	}
 
-	// 5. Aircraft Formulas
-	// --------------------
+	// Formulas for Aircraft
+	// ---------------------
 	/// @brief Calculates the true airspeed (TAS).
 	FUNC velocity true_airspeed(const force lift_force, const dimensionless lift_coefficient, const area wing_surface, const density air_density)
 	{
@@ -296,8 +309,8 @@ namespace SI { namespace formula {
 		return (ground_speed * ground_speed) / (constant::Earth_gravity * tan(bank_angle));
 	}
 
-	// 6. Formulas for Gravitation
-	// ---------------------------
+	// Formulas for Gravitation
+	// ------------------------
 	/// @brief Calculates the gravitational potential energy of a mass (m) at height (h) based on gravity (e.g. on Earth).
 	FUNC energy gravitational_potential_energy(const mass m, const length h, const acceleration gravity)
 	{
@@ -336,8 +349,8 @@ namespace SI { namespace formula {
 		return (2.0 * constant::G * M) / square(constant::c);
 	}
 
-	// 7. Various Formulas
-	// -------------------
+	// Various Formulas
+	// ----------------
 	/// @brief Calculates the wavelength from velocity (v) and frequency (f).
 	FUNC length wavelength(const velocity v, const frequency f)
 	{
@@ -520,20 +533,8 @@ namespace SI { namespace formula {
 		return sum;
 	}
 
-	/// @brief Calculates the distance between two lat/long coordinates on Earth (haversine formula).
-	FUNC length distance_on_Earth(angle lat1, angle long1, angle lat2, angle long2)
-	{
-		angle dLat = lat1 - lat2;    // difference in latitude
-		angle dLong = long1 - long2; // difference in longitude
-
-		angle a = sin2(dLat / 2.) + cos(lat1) * cos(lat2) * sin2(dLong / 2.); // Haversine intermediate
-		auto  c = 2. * atan2(sqrt(a), sqrt(1. - a)); // central angle 
-
-		return c * 6371.0088_km; // mean Earth radius, recommended by NOAA
-	}
-
-	// 8. References
-	// -------------
+	// References
+	// ----------
 	// 1. https://en.wikipedia.org/wiki/Turning_radius
 	// 2. https://en.wikipedia.org/wiki/Lift_(force)
 	// 3. https://en.wikipedia.org/wiki/Wavelength
@@ -546,6 +547,6 @@ namespace SI { namespace formula {
 	// 10. https://www.vcalc.com/wiki/ballistic-travel-time
 	// 11. https://best-calculators.com/tools/latitude-longitude-distance-calculator/
 
-} } // end of namespace SI::formula
+} } // end of namespaces
  
 #undef FUNC

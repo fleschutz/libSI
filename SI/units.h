@@ -15,7 +15,7 @@ namespace SI {
 	UNIT(kilograms)    = unit<mass>();
 	UNIT(kelvins)      = unit<temperature>();
 	UNIT(amperes)      = unit<current>();
-	UNIT(moles)        = unit<amount_of_substance>();
+	UNIT(moles)        = unit<substance>();
 	UNIT(candelas)     = unit<luminous_intensity>();
 
 	// 2. SI Prefixes
@@ -118,7 +118,7 @@ namespace SI {
 	UNIT(mols_per_meter3) = moles / meters3;
 	UNIT(mols_per_kilogram) = moles / kilograms;
 	UNIT(mols_per_second) = moles / seconds;
-	UNIT(per_mol)       = unit<per_amount_of_substance>();
+	UNIT(per_mol)       = unit<per_substance>();
 
 	UNIT(kilograms_per_watt) = kilograms / watts;
 
@@ -208,7 +208,7 @@ namespace SI {
 	// -------------
 	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 
-} // end of namespace SI
+} // end of namespace
 
 #undef UNIT
 #undef SI_RETURN_QUANTITY

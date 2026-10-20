@@ -26,7 +26,7 @@ namespace SI {
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
 	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in kelvins
 	DATATYPE(current,                0, 0, 0, 0, 1, 0, 0); // in amperes
-	DATATYPE(amount_of_substance,    0, 0, 0, 0, 0, 1, 0); // in moles
+	DATATYPE(substance,              0, 0, 0, 0, 0, 1, 0); // in moles
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
 
 	// The Derived SI Datatypes
@@ -55,8 +55,8 @@ namespace SI {
 	DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
 	DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
 	DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
-	DATATYPE(per_amount_of_substance,0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
+	DATATYPE(per_substance,          0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 
-} // end of namespace SI
+} // end of namespace
 
 #undef DATATYPE

@@ -44,7 +44,7 @@ namespace SI {
 	static_assert(sizeof(time) == sizeof(SIdouble));
 	static_assert(sizeof(temperature) == sizeof(SIdouble));
 	static_assert(sizeof(current) == sizeof(SIdouble));
-	static_assert(sizeof(amount_of_substance) == sizeof(SIdouble));
+	static_assert(sizeof(substance) == sizeof(SIdouble));
 	static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
 	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
     }
