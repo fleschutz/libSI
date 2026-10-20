@@ -1,5 +1,5 @@
 /// @file   examples/conversions.cpp
-/// @brief  Provides 7 import/export examples.
+/// @brief  Contains 4 import and 4 export examples.
 
 #include <iostream>
 #include <SI/core> 
@@ -7,35 +7,27 @@ using namespace SI;
 
 void conversion_examples() {
 
-    // Import by using a Literal
-    // -------------------------
-    length distance = 42_m;
+    // Imports
+    // -------
+    length distance = 42_m; // <- use a literal
 
-    // Import by Casting a Dimensionless Number
-    // ----------------------------------------
-    distance = meters(42);
+    distance = meters(42.0); // <- cast a dimensionless number
     
-    // Import by Multiplying a Dimensionless Number
-    // --------------------------------------------
     double x = 42;
-    distance = x * 1_m; 
-    // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    distance = x * 1_m; // <- multiply a dimensionless number
+                        //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
-    // Import from a String
-    // ---------------------
-    bool is_valid = from_string("42m", distance);
+    bool is_valid = from_string("42m", distance); // <- convert from a string
 
 
-    // Export to a Dimensionless Number
-    // --------------------------------
-    double y = distance / 1_m;
-    // NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    // Exports
+    // -------
+    double y = meters(distance); // <- cast to a unit (=42)
 
-    // Export to a String
-    // ------------------
-    std::string result = to_string(distance);
+    double z = distance / 1_m; // <- divide to a dimensionless number (=42)
+                               //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
-    // Export to an Equivalent String
-    // ------------------------------
-    std::string equiv = to_equivalent(distance); // <- this assigns "45.93yd" to equiv    
+    std::string str = to_string(distance); // <- convert to a string (="42.0m")
+
+    std::string equiv = to_equivalent(distance); // <- convert to an equivalent string (="45.93yd")
 }
