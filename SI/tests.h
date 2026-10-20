@@ -6,6 +6,7 @@
 #pragma once
 #include <cassert>
 #include <SI/literals.h>
+#include <SI/prefixes.h>
 
 namespace SI {
 
@@ -324,6 +325,32 @@ namespace SI {
 	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 	static_assert(clamp(3_m, 4_m,5_m) == 4_m);
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
+    }
+
+    inline void check_SI_prefixes() {
+        static_assert(quetta == 1000 * ronna);
+        static_assert(ronna  == 1000 * yotta);
+        static_assert(yotta  == 1000 * zetta);
+        static_assert(zetta  == 1000 * exa);
+        static_assert(exa    == 1000 * peta);
+        static_assert(peta   == 1000 * tera);
+        static_assert(tera   == 1000 * giga);
+        static_assert(giga   == 1000 * mega);
+        static_assert(mega   == 1000 * kilo);
+        static_assert(kilo   ==   10 * hecto);
+        static_assert(hecto  ==   10 * deca);
+        static_assert(deca   ==  100 * deci);
+        static_assert(deci   ==   10 * centi);
+        static_assert(centi  ==   10 * milli);
+        static_assert(milli  == 1000 * micro);
+        //static_assert(micro == 1000 * nano);
+        //static_assert(nano  == 1000 * pico);
+        //static_assert(pico  == 1000 * femto);
+        //static_assert(femto == 1000 * atto);
+        //static_assert(atto  == 1000 * zepto);
+        //static_assert(zepto == 1000 * yocto);
+        //static_assert(yocto == 1000 * ronto);
+        //static_assert(ronto == 1000 * quecto);
     }
 
 } // end of namespace
