@@ -39,7 +39,7 @@ int main() {
 -----------
 - **Many examples** in the 📂[examples](examples/) subfolder, which write this: [console output](docs/console_output.txt)
 - **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
-- **Basic datasets** like *chemical_elements* in the 📂[datasets](datasets/) subfolder
+- **Basic datasets** like *chemical_elements* in subfolder 📂[datasets](datasets/)
 - **Documentation** in the [API reference manual](https://fleschutz.github.io/libSI/docs/html/)
 
 
