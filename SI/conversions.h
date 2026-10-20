@@ -277,7 +277,7 @@ namespace SI
 	}
 
 	/// @brief Returns the electric current (I) as string using SI units.
-	inline std::string to_string(const electric_current I)
+	inline std::string to_string(const current I)
 	{
 		if (I <= -1_GA || I >= 1_GA)
 			return _join(I / 1_GA, "GA", to_string_format);

@@ -43,7 +43,7 @@ namespace SI {
 	static_assert(sizeof(mass) == sizeof(SIdouble));
 	static_assert(sizeof(time) == sizeof(SIdouble));
 	static_assert(sizeof(temperature) == sizeof(SIdouble));
-	static_assert(sizeof(electric_current) == sizeof(SIdouble));
+	static_assert(sizeof(current) == sizeof(SIdouble));
 	static_assert(sizeof(amount_of_substance) == sizeof(SIdouble));
 	static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
 	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
@@ -241,9 +241,6 @@ namespace SI {
 	//static_assert(1_ft  == 12_in);
 	static_assert(1_lb  == 16_oz);
 	//static_assert(32_degF == 273.15_K);
-
-	static_assert(0_degC == 273.15_K);
-	static_assert(491.67_degR == 273.15_K);
     }
 
     inline void check_digital_units() {
@@ -287,6 +284,9 @@ namespace SI {
 	static_assert(1_kbar == 1000_bar);
 	static_assert(1_Mbar == 1000_kbar);
 	static_assert(1_Gbar == 1000_Mbar);
+	// temperature in...
+	static_assert(0_degC == 273.15_K);
+	//static_assert(491.67_degR == 273.15_K);
     }
 
     inline void check_functions_and_templates() {

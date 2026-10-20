@@ -438,7 +438,7 @@ namespace SI { namespace formula {
 	}
 
 	/// @brief Calculates the consumed electrical power of a current (I) and potential (U).
-	FUNC auto consumed_electrical_power(const electric_current I, const electric_potential U)
+	FUNC auto consumed_electrical_power(const current I, const electric_potential U)
 	{
 		return I * U;
 	}

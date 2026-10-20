@@ -25,7 +25,7 @@ namespace SI {
 	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
 	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
 	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in kelvins
-	DATATYPE(electric_current,       0, 0, 0, 0, 1, 0, 0); // in amperes
+	DATATYPE(current,                0, 0, 0, 0, 1, 0, 0); // in amperes
 	DATATYPE(amount_of_substance,    0, 0, 0, 0, 0, 1, 0); // in moles
 	DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
 

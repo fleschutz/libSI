@@ -14,7 +14,7 @@ namespace SI {
 	UNIT(seconds)      = unit<time>();
 	UNIT(kilograms)    = unit<mass>();
 	UNIT(kelvins)      = unit<temperature>();
-	UNIT(amperes)      = unit<electric_current>();
+	UNIT(amperes)      = unit<current>();
 	UNIT(moles)        = unit<amount_of_substance>();
 	UNIT(candelas)     = unit<luminous_intensity>();
 
