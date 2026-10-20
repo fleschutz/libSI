@@ -2,13 +2,12 @@
 /// @brief    Contains 13 astronomy examples using libSI
 
 #include <iostream>
-using namespace std;
-
 #include <datasets/astronomy.h>
-using namespace SI;
 
 void astronomy_examples() {
 
+    using namespace std;
+    using namespace SI;
     cout << "    === ASTRONOMY EXAMPLES ===" << endl;
     to_string_format     = "%.1Lf%s";  // one decimal place, no space between quantity and unit
     to_equivalent_format = "%.1Lf %s"; // one decimal place, with space between quantity and unit

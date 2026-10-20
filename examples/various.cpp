@@ -2,13 +2,12 @@
 /// @brief  Provides 30 various examples using libSI
 
 #include <iostream>
-using namespace std;
-
 #include <datasets/all.h>
-using namespace SI;
 
 void various_examples() {
 
+    using namespace std;
+    using namespace SI;
     cout << "    === VARIOUS EXAMPLES ===" << endl;
     to_string_format = to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
 

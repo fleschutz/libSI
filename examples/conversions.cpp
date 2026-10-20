@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <SI/core> 
-using namespace SI;
 
 void conversion_examples() {
 
     // ** IMPORT **
+    using namespace SI;
     length distance = 42_m; // <- use a literal
 
     distance = meters(42.0); // <- cast a dimensionless number

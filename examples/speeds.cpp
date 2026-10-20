@@ -2,13 +2,12 @@
 /// @brief  Contains 9 speed examples using libSI
 
 #include <iostream>
-using namespace std;
-
 #include <SI/core> 
-using namespace SI;
 
 void speed_examples() {
 
+    using namespace std;
+    using namespace SI;
     cout << "    === SPEED EXAMPLES ===" << endl;
     to_string_format = to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
 
