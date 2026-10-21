@@ -1,10 +1,10 @@
 /// @file   <SI/core>
-/// @brief  Includes the 6 core header files 
+/// @brief  Includes the 6 core header files of libSI
 
 #pragma once
-#include <SI/datatypes.h>    ///< datatypes like SI::length
-#include <SI/units.h>        ///< units such as SI::meters
-#include <SI/literals.h>     ///< literals like 100_m
-#include <SI/constants.h>    ///< constants such as SI::constant::speed_of_light_in_vacuum
-#include <SI/formulas.h>     ///< formulas like SI::formula::wavelength()
-#include <SI/conversions.h>  ///< conversions such as SI::to_string()
+#include <SI/datatypes.h>
+#include <SI/units.h>
+#include <SI/literals.h>
+#include <SI/constants.h>
+#include <SI/formulas.h>
+#include <SI/conversions.h>
