@@ -15,9 +15,9 @@ namespace SI
 	/// @brief The from_string() function
 	inline bool from_string(const std::string& str, length& result)
 	{
-		double value;
-		char unit[1024];
-		if (std::sscanf(str.c_str(), "%lf%s", &value, unit) != 2)
+		double value = 0.0;
+		char unit[100] = "";
+		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
 			return false; // not recognized
 
 		if (unit == "Gm")
@@ -48,9 +48,9 @@ namespace SI
 
 	inline bool from_string(const std::string& str, time& result)
 	{
-		double value;
-		char unit[1024];
-		if (std::sscanf(str.c_str(), "%lf%s", &value, unit) != 2)
+		double value = 0.0;
+		char unit[100] = "";
+		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
 			return false; // not recognized
 
 		if (unit == "day" || unit == "days")
@@ -77,9 +77,9 @@ namespace SI
 
 	inline bool from_string(const std::string& str, mass& result)
 	{
-		double value;
-		char unit[1024];
-		if (std::sscanf(str.c_str(), "%lf%s", &value, unit) != 2)
+		double value = 0.0;
+		char unit[100] = "";
+		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
 			return false; // not recognized
 
 		if (unit == "Gt")
