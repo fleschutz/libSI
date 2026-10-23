@@ -26,7 +26,7 @@
 
     === VARIOUS EXAMPLES ===
  1. The potential energy of a single ounce is: 2.5PJ
- 2. The kinetic energy of a mid-size SUV at 30mph is... 204.0kJ or 48.7g TNT
+ 2. The kinetic energy of a mid-size 5000lb SUV at 30mph is... 204.0kJ or 48.7g TNT
  3. The local gravity at Mount Everest's peak is... 9.8m/s²
  4. Donald Trump's body-mass index (BMI) is... 28.2548
  5. The fuel efficiency of a car driving 400 miles and consuming 15 US gallons is... 8.8l (per 100km)

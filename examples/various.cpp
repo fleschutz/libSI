@@ -14,7 +14,7 @@ void various_examples() {
     cout << " 1. The potential energy of a single ounce is: " << E << endl;
 
 
-    cout << " 2. The kinetic energy of a mid-size SUV at 30mph is... ";
+    cout << " 2. The kinetic energy of a mid-size 5000lb SUV at 30mph is... ";
     auto SUV_mass   = 5000_lb; 
     auto SUV_speed  = 30_mph;
     auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
