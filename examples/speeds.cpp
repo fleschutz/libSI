@@ -3,15 +3,12 @@
 
 #include <iostream>
 #include <SI/core> 
+using namespace std;
+using namespace SI;
 
 void speed_examples() {
 
-    using namespace std;
-    using namespace SI;
     cout << "    === SPEED EXAMPLES ===" << endl;
-    to_string_format = to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-
-
     cout << " 1. The average speed of Kelvin Kiptum's Marathon world record was... ";
     auto Marathon_distance  = 42.195_km;
     auto Kelvins_duration   = 2_h + 35_s;

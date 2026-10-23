@@ -3,18 +3,18 @@
 
 #include <iostream>
 #include <SI/core> 
+using namespace SI;
 
 void conversion_examples() {
 
     // ** IMPORT **
-    using namespace SI;
-    length distance = 42_m; // <- use a literal
+    length distance = 42_m;  // <- use a literal
 
     distance = meters(42.0); // <- cast a dimensionless number
     
     double x = 42;
-    distance = x * 1_m; // <- multiply a dimensionless number
-                        //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    distance = x * 1_m;      // <- multiply a dimensionless number
+                             //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
     bool is_valid = from_string("42m", distance); // <- convert from a string
 
@@ -22,8 +22,8 @@ void conversion_examples() {
     // ** EXPORT **
     double y = meters(distance); // <- cast to a unit (=42)
 
-    double z = distance / 1_m; // <- divide to a dimensionless number (=42)
-                               //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    double z = distance / 1_m;   // <- divide to a dimensionless number (=42)
+                                 //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
 
     std::string str = to_string(distance); // <- convert to a string (="42.0m")
 

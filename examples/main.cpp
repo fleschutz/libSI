@@ -1,7 +1,7 @@
 /// @file   examples/main.cpp
-/// @brief  The main() function, calling all examples
+/// @brief  The main() function calling all examples.
 
-#include <SI/tests.h>  // perform unit tests at compile-time to verify everything
+#include <SI/all>
 #ifdef _WIN32
 #include <Windows.h>
 #endif
@@ -10,14 +10,16 @@ extern void speed_examples(), astronomy_examples(), conversion_examples(), vario
 
 int main() {
 #ifdef _WIN32
-    SetConsoleOutputCP(CP_UTF8); // switch to UTF-8 console output
+    SetConsoleOutputCP(CP_UTF8);          // <- switch to UTF-8 console output
 #endif
+    SI::to_string_format = "%.1Lf%s";     // <- one decimal place and no space between quantity and unit
+    SI::to_equivalent_format = "%.1Lf%s"; // <- one decimal place and no space between quantity and unit
 
-    speed_examples();            // see speeds.cpp
+    speed_examples();                     // <- calls examples in speeds.cpp
 
-    astronomy_examples();        // see astronomy.cpp
+    astronomy_examples();                 // <- calls examples in astronomy.cpp
 
-    conversion_examples();       // see conversions.cpp
+    conversion_examples();                // <- calls examples in conversions.cpp
 
-    various_examples();          // see various.cpp
+    various_examples();                   // <- calls examples in various.cpp
 }

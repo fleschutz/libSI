@@ -3,15 +3,12 @@
 
 #include <iostream>
 #include <datasets/all.h>
+using namespace std;
+using namespace SI;
 
 void various_examples() {
 
-    using namespace std;
-    using namespace SI;
     cout << "    === VARIOUS EXAMPLES ===" << endl;
-    to_string_format = to_equivalent_format = "%.1Lf%s"; // one decimal place, no space between quantity and unit
-
-
     mass m   = 1_oz;
     energy E = m * square(constant::speed_of_light_in_vacuum);
     cout << " 1. The potential energy of a single ounce is: " << E << endl;

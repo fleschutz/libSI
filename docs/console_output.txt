@@ -14,15 +14,15 @@
  2. The travel time to Alpha Centauri at 10% the speed of light takes... 43.7y
  3. The attractive force between Sun and Earth is... 35.4ZN
  4. The attractive force between Earth and Moon is... 198.2EN
- 5. The impact energy of a 50m asteroid at 50,000km/h is... 15.8PJ or 254.5 Hiroshima bombs
- 6. The wavelength of hydrogen (H2) in vacuum is... 21.1cm or 8.3 in
+ 5. The impact energy of a 50m asteroid at 50,000km/h is... 15.8PJ or 254.5Hiroshima bombs
+ 6. The wavelength of hydrogen (H2) in vacuum is... 21.1cm or 8.3in
  7. Bigger moons than Earth's moon are... Jupiter's Io (ø=3643.2km), Jupiter's Ganymede (ø=5262.4km), Jupiter's Callisto (ø=4820.6km), Saturn's Titan (ø=5149.5km), 
- 8. The min speed required to escape from the planets are... Mercury=0.0mm/h or 0.0 mph, Venus=0.0mm/h or 0.0 mph, Earth=0.0mm/h or 0.0 mph, Mars=0.0mm/h or 0.0 mph, Jupiter=0.2mm/h or 0.0 mph, Saturn=0.1mm/h or 0.0 mph, Uranus=0.1mm/h or 0.0 mph, Neptune=0.1mm/h or 0.0 mph, Pluto=0.0mm/h or 0.0 mph, 
+ 8. The min speed required to escape from the planets are... Mercury=0.0mm/h or 0.0mph, Venus=0.0mm/h or 0.0mph, Earth=0.0mm/h or 0.0mph, Mars=0.0mm/h or 0.0mph, Jupiter=0.2mm/h or 0.0mph, Saturn=0.1mm/h or 0.0mph, Uranus=0.1mm/h or 0.0mph, Neptune=0.1mm/h or 0.0mph, Pluto=0.0mm/h or 0.0mph, 
  9. Exoplanets that are life-friendly and quite near are... 'Proxima Cen b' @ Proxima Cen in 1.3pc, 'Proxima Cen b' @ Proxima Cen in 1.3pc, 'Proxima Cen d' @ Proxima Cen in 1.3pc, 
 10. The estimated total distance the Earth has travelled is... 137.1Mpc
 11. The ballistic max height/range/flight time of a bullet fired 45° on Moon's surface is... 154.1km, 616.5km, 14.5min
-12. The sum of the masses of all moons in the solar system is... 639.0Pt or 1408747761318636027904.0 lb
-13. The event horizon of our galaxy's black hole (Sagittarius A*) is... 12683881.7km or 42.3 light-seconds (Schwarzschild radius)
+12. The sum of the masses of all moons in the solar system is... 639.0Pt or 1408747761318636027904.0lb
+13. The event horizon of our galaxy's black hole (Sagittarius A*) is... 12683881.7km or 42.3light-seconds (Schwarzschild radius)
 
     === VARIOUS EXAMPLES ===
  1. The potential energy of a single ounce is: 2.5PJ

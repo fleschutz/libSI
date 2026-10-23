@@ -3,16 +3,12 @@
 
 #include <iostream>
 #include <datasets/astronomy.h>
+using namespace std;
+using namespace SI;
 
 void astronomy_examples() {
 
-    using namespace std;
-    using namespace SI;
     cout << "    === ASTRONOMY EXAMPLES ===" << endl;
-    to_string_format     = "%.1Lf%s";  // one decimal place, no space between quantity and unit
-    to_equivalent_format = "%.1Lf %s"; // one decimal place, with space between quantity and unit
-
-
     cout << " 1. The travel time of sun light to Earth is... ";
     auto Earth_to_Sun_distance = 149'597'870'691_m;
     cout << (Earth_to_Sun_distance / constant::speed_of_light_in_vacuum) << endl;
