@@ -67,7 +67,7 @@ namespace SI {
 	static_assert(1_um == 0.001_mm);
 	static_assert(1_nm == 0.001_um);
 	// time in...
-	static_assert(1_day == 24_h);
+	static_assert(1_d   == 24_h);
 	static_assert(1_h   == 60_min);
 	static_assert(1_min == 60_s);
 	static_assert(1_s   == 1000_ms);

@@ -14,8 +14,8 @@ namespace Moon {
   const length        semi_major_axis =            384'399_km;
   const length        mean_orbit_radius =          384'784_km;
   const dimensionless eccentricity =                0.0549;
-  const SI::time      sidereal_orbital_period = 27.321'661_day;
-  const SI::time      synodic_orbital_period =  29.530'589_day;
+  const SI::time      sidereal_orbital_period = 27.321'661_days;
+  const SI::time      synodic_orbital_period =  29.530'589_days;
   const velocity      average_orbital_speed =        1'022_km_per_s;
   const angle         inclination =                  5.145_deg; // to the ecliptic
 

@@ -54,7 +54,7 @@ namespace SI
 			return false; // not recognized
 
 		if (unit == "day" || unit == "days")
-			result = 1_day * value;
+			result = 1_d * value;
 		else if (unit == "h" || unit == "hrs")
 			result = 1_h * value;
 		else if (unit == "m" || unit == "min")
@@ -175,8 +175,8 @@ namespace SI
 			return _join(t / 365.25_days, "y", to_string_format);
 		if (abs(t) > 10_days)
 			return _join(t / 7_days, "w", to_string_format);
-		if (abs(t) > 2_day)
-			return _join(t / 1_day, "d", to_string_format);
+		if (abs(t) > 2_days)
+			return _join(t / 1_days, "d", to_string_format);
 		if (t <= -1_h || t >= 1_h)
 			return _join(t / 1_h, "h", to_string_format);
 		if (t <= -1_min || t >= 1_min)

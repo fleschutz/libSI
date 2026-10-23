@@ -14,7 +14,7 @@ namespace Earth {
   const length        perihelion =      147'098'450_km;
   const length        semi_major_axis = 149'598'023_km;
   const dimensionless eccentricity =              0.016'7086;
-  const SI::time      sidereal_orbital_period = 365.256'363'004_day;
+  const SI::time      sidereal_orbital_period = 365.256'363'004_days;
   const velocity      average_orbital_speed =    29.7827_km_per_s;
   const angle         mean_anomaly =            358.617_deg;
 

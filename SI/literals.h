@@ -30,7 +30,8 @@ namespace SI {
 	LITERAL(_nm,    1e-9, meters);              // 1_nm (nanometer)
 	LITERAL(_pm,   1e-12, meters);              // 1_pm (picometer)
 	// time in...
-	LITERAL(_day,  86400, seconds);             // 1_day (Earth day)
+	LITERAL(_w,  604'800, seconds);             // 1_w   (Earth week)
+	LITERAL(_d,    86400, seconds);             // 1_d   (Earth day)
 	LITERAL(_days, 86400, seconds);             // 2_days(Earth days)
 	LITERAL(_h,     3600, seconds);             // 1_h   (hour)
 	LITERAL(_min,     60, seconds);             // 1_min (minute)
@@ -158,12 +159,12 @@ namespace SI {
 	LITERAL(_t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
 	LITERAL(_kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
 	// density in...
-	LITERAL(_t_per_m³, 1e3, kilograms_per_meter3);// 1_t_per_m³
-	LITERAL(_kg_per_m³,  1, kilograms_per_meter3);// 1_kg_per_m³
-	LITERAL(_g_per_m³,1e-3, kilograms_per_meter3);// 1_g_per_m³
-	LITERAL(_mg_per_m³,1e-9, kilograms_per_meter3);// 1_mg_per_m³
-	LITERAL(_kg_per_cm³,1e-6, kilograms_per_meter3);// 1_kg_per_cm³
-	LITERAL(_g_per_cm³,1e3, kilograms_per_meter3);// 1_g_per_cm³
+	LITERAL(_t_per_m³, 1e3, kilograms_per_meter3);   // 1_t_per_m³
+	LITERAL(_kg_per_m³,  1, kilograms_per_meter3);   // 1_kg_per_m³
+	LITERAL(_g_per_m³,1e-3, kilograms_per_meter3);   // 1_g_per_m³
+	LITERAL(_mg_per_m³,1e-9, kilograms_per_meter3);  // 1_mg_per_m³
+	LITERAL(_kg_per_cm³,1e-6, kilograms_per_meter3); // 1_kg_per_cm³
+	LITERAL(_g_per_cm³,1e3, kilograms_per_meter3);   // 1_g_per_cm³
 	// electric potential in...
 	LITERAL(_GV,     1e9, volts);               // 1_GV (gigavolt)
 	LITERAL(_MV,     1e6, volts);               // 1_MV (megavolt)
@@ -315,14 +316,14 @@ namespace SI {
 	// 3. Imperial / US Units
 	// ----------------------
 	// length in...
-	LITERAL(_in,                        0.0254, meters); // 1_in (inch)
-	LITERAL(_ft,                        0.3048, meters); // 1_ft (feet, 12 inches)
-	LITERAL(_yd,                        0.9144, meters); // 1_yd (yard)
-	LITERAL(_ch,                       20.1168, meters); // 1_ch (chain)
-	LITERAL(_mi,                     1'609.344, meters); // 1_mi (statute mile, 1760 yd or 80 chains)
+	LITERAL(_in,                        0.0254, meters); // 1_in    (inch)
+	LITERAL(_ft,                        0.3048, meters); // 1_ft    (feet, 12 inches)
+	LITERAL(_yd,                        0.9144, meters); // 1_yd    (yard)
+	LITERAL(_ch,                       20.1168, meters); // 1_ch    (chain)
+	LITERAL(_mi,                     1'609.344, meters); // 1_mi    (statute mile, 1760 yd or 80 chains)
 	LITERAL(_cable,                      185.2, meters); // 1_cable (one tenth of a nautical mile)
-	LITERAL(_nmi,                         1852, meters); // 1_nmi (nautical mile, about one arc minute)
-	LITERAL(_NM,                          1852, meters); // 1_NM  (nautical mile, about one arc minute)
+	LITERAL(_nmi,                         1852, meters); // 1_nmi   (nautical mile, about one arc minute)
+	LITERAL(_NM,                          1852, meters); // 1_NM    (nautical mile, about one arc minute)
 	// mass in...
 	LITERAL(_oz,             0.028'349'523'125, kilograms); // 1_oz (ounce, 1/16 of a pound)
 	LITERAL(_lb,                  0.453'592'37, kilograms); // 1_lb (pound)
@@ -367,20 +368,21 @@ namespace SI {
 	// ----------------
 	// bytes absolute...
 	LITERAL(_byte,                           1, bytes);   // 1_byte
-	LITERAL(_kB,                           1e3, bytes);   // 1_kB (kilobyte)
+	LITERAL(_kB,                           1e3, bytes);   // 1_kB  (kilobyte)
 	LITERAL(_kiB,                         1024, bytes);   // 1_kiB (kibibyte)
-	LITERAL(_MB,                           1e6, bytes);   // 1_MB (megabyte)
+	LITERAL(_MB,                           1e6, bytes);   // 1_MB  (megabyte)
 	LITERAL(_MiB,                    1'048'576, bytes);   // 1_MiB (mibibyte)
-	LITERAL(_GB,                           1e9, bytes);   // 1_GB (gigabyte)
+	LITERAL(_GB,                           1e9, bytes);   // 1_GB  (gigabyte)
 	LITERAL(_GiB,                1'073'741'824, bytes);   // 1_GiB (gibibyte)
-	LITERAL(_TB,                          1e12, bytes);   // 1_TB (terabyte)
+	LITERAL(_TB,                          1e12, bytes);   // 1_TB  (terabyte)
 	LITERAL(_TiB,            1'099'511'627'776, bytes);   // 1_TiB (tebibyte)
-	LITERAL(_PB,                          1e15, bytes);   // 1_PB (petabyte)
-	LITERAL(_EB,                          1e18, bytes);   // 1_EB (exabyte)
-	LITERAL(_ZB,                          1e21, bytes);   // 1_ZB (zettabyte)
-	LITERAL(_YB,                          1e24, bytes);   // 1_ZY (yottabyte)
-	LITERAL(_RB,                          1e27, bytes);   // 1_RY (ronnabyte)
-	LITERAL(_QB,                          1e30, bytes);   // 1_QY (quettabyte)
+	LITERAL(_PB,                          1e15, bytes);   // 1_PB  (petabyte)
+	LITERAL(_PiB,        1'125'899'906'842'624, bytes);   // 1_PiB (pebibyte)
+	LITERAL(_EB,                          1e18, bytes);   // 1_EB  (exabyte)
+	LITERAL(_ZB,                          1e21, bytes);   // 1_ZB  (zettabyte)
+	LITERAL(_YB,                          1e24, bytes);   // 1_ZY  (yottabyte)
+	LITERAL(_RB,                          1e27, bytes);   // 1_RY  (ronnabyte)
+	LITERAL(_QB,                          1e30, bytes);   // 1_QY  (quettabyte)
 	// bytes per second...
 	LITERAL(_bytes_per_s,                    1, bytes_per_second); // 1_bytes_per_s
 	LITERAL(_KBps,                         1e3, bytes_per_second); // 1_KBps (kilobyte/sec)
