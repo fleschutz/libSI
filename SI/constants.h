@@ -11,8 +11,8 @@
 
 namespace SI { namespace constant {
 
-	// 1. Defined Constants
-	// --------------------
+	// Defined Constants
+	// -----------------
 	CONST(caesium_frequency,     9'192'631'770, hertz); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
 	CONST(delta_v_Cs,            9'192'631'770, hertz); // (the symbol)
 	CONST(speed_of_light_in_vacuum,299'792'458.0, meters_per_second); // the speed of light in vacuum
@@ -29,8 +29,8 @@ namespace SI { namespace constant {
 	CONST(atm,                         101'325, pascals); // standard atmosphere (2022 CODATA)
 	CONST(ssp,                         100'000, pascals); // standard-state pressure (2022 CODATA)
 
-	// 2. Universal Constants
-	// ----------------------
+	// Universal Constants
+	// -------------------
 	CONST(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation (2022 CODATA)
 	CONST(Z_0,                 376.730'313'412, ohms); // characteristic impedance of vacuum (2022 CODATA)
 	CONST(epsilon_0,        8.854'187'8188e-12, farads_per_meter); // vacuum electric permittivity, symbol: ε_0, 2022 CODATA)
@@ -41,8 +41,8 @@ namespace SI { namespace constant {
 	CONST(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant (2022 CODATA)
 	CONST(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability (2022 CODATA)
 
-	// 3. Electromagnetic Constants
-	// ----------------------------
+	// Electromagnetic Constants
+	// -------------------------
 	CONST(G_0,                7.748'091'729e-5, siemens); // conductance quantum (2022 CODATA)
 	CONST(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
 	CONST(K_J,                 483'597.848'4e9, hertz_per_volt); // Josephson constant (2022 CODATA)
@@ -52,8 +52,8 @@ namespace SI { namespace constant {
 	CONST(R_K,                   25'812.807'45, ohms); // von Klitzing constant (2022 CODATA)
 	CONST(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
 
-	// 4. Atomic & Nuclear Constants
-	// -----------------------------
+	// Atomic & Nuclear Constants
+	// --------------------------
 	CONST(a_0,            5.291'772'105'44e-11, meters);   // Bohr radius (2022 CODATA)
 	CONST(alpha,                  7.2973525e-3, dimensionless); // fine-structure constant
 	CONST(alpha_inv,           137.035'999'177, dimensionless); // inverse fine-structure constant (2022 CODATA)
@@ -73,8 +73,8 @@ namespace SI { namespace constant {
 	CONST(sin2Theta_W,                 0.22290, dimensionless); // weak mixing angle
 	CONST(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
 
-	// 5. Physico-chemical Constants
-	// -----------------------------
+	// Physico-chemical Constants
+	// --------------------------
 	CONST(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
 	CONST(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
 	CONST(c_1L,                1.191042972e-16, watts_per_meter2); // first radiation constant for spectral radiance
@@ -86,8 +86,8 @@ namespace SI { namespace constant {
 	CONST(S_0_by_R,             -1.15170753706, dimensionless); // Sackur–Tetrode constant
 	CONST(V_m,                22.710'954'64e-3, meters3_per_mol); // molar volume of ideal gas (273.15K, 100kPa, 2022 CODATA)
 
-	// 6. Physical Constants
-	// ---------------------
+	// Physical Constants
+	// ------------------
 	CONST(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
 	CONST(Earth_gravity,               9.80665, meters_per_second2); // standard gravitational acceleration (G) for the surface of the Earth, defined in the third General Conference on Weights and Measures (1901, CR 70).
 	CONST(speed_of_sound,                  343, meters_per_second); // speed of sound in dry air at 20°C (68°F)
@@ -95,8 +95,8 @@ namespace SI { namespace constant {
 	CONST(speed_of_sound_in_iron,         5120, meters_per_second);
 	CONST(speed_of_sound_in_diamonds,   12'000, meters_per_second);
 
-	// 7. Mathematical Constants
-	// -------------------------
+	// Mathematical Constants
+	// ----------------------
 	CONST(tau,          6.28318530717958647692, radians); // (symbol: τ)
 	CONST(pi,           3.14159265358979323846, radians); // (symbol: π)
 	CONST(half_pi,      1.57079632679489661923, radians); // (π / 2)
@@ -104,27 +104,27 @@ namespace SI { namespace constant {
 	CONST(phi,          1.61803398874989484820, dimensionless); // (symbol: φ)
 	CONST(Eulers_number,2.71828182845904523536, dimensionless);
 
-	// 8. Astronomical Constants
-	// -------------------------
+	// Astronomical Constants
+	// ----------------------
 	CONST(AU,                  149'597'870'691, meters); // one astronomical unit (symbol: au)
 	CONST(parsec,       30'856'775'814'913'700, meters); // one Parsec (symbol: pc)
 	CONST(lightyear,     9'460'730'777'119'564, meters); // one light-year (symbol: ly)
 	CONST(F1AU,                         1366.1, watts_per_meter2);// total solar irradiance at 1 AU (solar constant)
 
-	// 9. Various Constants
-	// --------------------
+	// Various Constants
+	// -----------------
 	CONST(T0,                                0, kelvins); // absolute zero (0K, the lowest possible temperature)
 	CONST(Marathon_distance,            42'195, meters);
 	CONST(quarter_mile,                 402.34, meters);
  
-	// 10. References
-	// --------------
+	// References
+	// ----------
 	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 	// 2. https://en.wikipedia.org/wiki/List_of_physical_constants
 	// 3. https://en.wikipedia.org/wiki/List_of_mathematical_constants
 	// 4. https://en.wikipedia.org/wiki/Astronomical_constant
 	// 5. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)
 
-} } // end of namespace SI::constant
+} } // end of namespaces
 
 #undef CONST
