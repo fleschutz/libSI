@@ -12,8 +12,8 @@ int main() {
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);          // <- switches to UTF-8 console output
 #endif
-    SI::to_string_format = "%.1Lf%s";     // <- one decimal place and no space between quantity and unit
-    SI::to_equivalent_format = "%.1Lf%s"; // <- one decimal place and no space between quantity and unit
+    SI::to_string_format = "%.1Lf %s";    // <- one decimal place and space between quantity and unit
+    SI::to_equivalent_format = "%.1Lf %s";// <- one decimal place and space between quantity and unit
 
     speed_examples();                     // <- calls examples in speeds.cpp
 
