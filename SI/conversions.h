@@ -3,6 +3,7 @@
 /// @details  Provides from_string(), to_string(), to_equivalent(), and to_percentage().
 
 #pragma once
+#include <iostream>
 #include <string>
 #include <SI/literals.h>
 
