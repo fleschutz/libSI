@@ -12,8 +12,8 @@ Use libSI to apply math in C++ correct, precise, and convenient. Top features ar
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
-🔎 Hello, World Example
------------------------
+🔎 Example
+-----------
 ```cpp
 #include <SI/core>
 using namespace SI;
