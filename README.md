@@ -38,7 +38,7 @@ int main() {
 🎉 Various
 -----------
 - **Many examples** in the 📂[examples](examples/) subfolder, which write this: [console output](docs/console_output.txt)
-- For convenience <SI/core> includes the core header file, <SI/all> includes all header files.
+- **Convenient** <SI/core> to include the core header files, and <SI/all> to include all header files.
 - **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
 - **Basic datasets** like *chemical_elements* in subfolder 📂[datasets](datasets/)
 - **Documentation** in the [API reference manual](https://fleschutz.github.io/libSI/docs/html/)
