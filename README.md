@@ -35,8 +35,8 @@ int main() {
 | Conversions           | *SI::to_string()*                         | [<SI/conversions.h>](SI/conversions.h) |
 
 
-🎉 Various
------------
+📦 Components
+--------------
 - **More examples** in the 📂[examples](examples/) subfolder, writing this to the: [console output](docs/console_output.txt)
 - **Convenient** <SI/core> to include the core header files, and <SI/all> to include all header files.
 - **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
