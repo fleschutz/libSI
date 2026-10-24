@@ -1,6 +1,6 @@
 /// @file     SI/conversions.h
-/// @brief    Defines conversion functions, e.g. to_string(12_m).
-/// @details  Provides from_string(), to_string(), to_equivalent(), and to_percentage().
+/// @brief    Provides conversion functions, e.g. to_string(12_m).
+/// @details  Contains from_string(), to_string(), to_equivalent(), and to_percentage().
 
 #pragma once
 #include <iostream>
@@ -13,6 +13,8 @@ namespace SI
 	inline auto to_equivalent_format = "%.2Lf %s"; ///< configurable, SI standard formatting by default
 	inline auto to_percentage_format = "%.0Lf%s";  ///< configurable
 
+	// Function from_string()
+	// ----------------------
 	/// @brief The from_string() function
 	inline bool from_string(const std::string& str, length& result)
 	{
@@ -115,7 +117,8 @@ namespace SI
 		return std::string(buf);
 	}
 
-	// convert the 7 SI base units:
+	// Function to_string()
+	// --------------------
 
 	/// @brief Returns the given length as string using SI units.
 	inline std::string to_string(const length d)
@@ -145,22 +148,6 @@ namespace SI
 		if (d <= -1_nm || d >= 1_nm)
 			return _join(d / 1_nm, "nm", to_string_format);
 		return _join(d / 1_pm, "pm", to_string_format);
-	}
-
-	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
-	inline std::string to_equivalent(const length d)
-	{
-		if (d <= -1_ly || d >= 1_ly)
-			return _join(d / 1_ly, "light-years", to_equivalent_format);
-		if (d <= -1_ls || d >= 1_ls)
-			return _join(d / 1_ls, "light-seconds", to_equivalent_format);
-		if (d <= -1_mi || d >= 1_mi)
-			return _join(d / 1_mi, "mi", to_equivalent_format);
-		if (d <= -1_yd || d >= 1_yd)
-			return _join(d / 1_yd, "yd", to_equivalent_format);
-		if (d <= -1_ft || d >= 1_ft)
-			return _join(d / 1_ft, "ft", to_equivalent_format);
-		return _join(d / 1_in, "in", to_equivalent_format);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, const length d)
@@ -225,22 +212,6 @@ namespace SI
 		return _join(m / 1_ng, "ng", to_string_format);
 	}
 
-	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
-	inline std::string to_equivalent(const mass m)
-	{
-		if (m <= -1_Msun || m >= 1_Msun)
-			return _join(m / 1_Msun, "solar masses", to_equivalent_format);
-		if (m <= -1_Mjup || m >= 1_Mjup)
-			return _join(m / 1_Mjup, "Jupiter masses", to_equivalent_format);
-		if (m <= -1_Mearth || m >= 1_Mearth)
-			return _join(m / 1_Mearth, "Earth masses", to_equivalent_format);
-		if (m <= -1_Mmoon || m >= 1_Mmoon)
-			return _join(m / 1_Mmoon, "Moon masses", to_equivalent_format);
-		if (m <= -1_lb || m >= 1_lb)
-			return _join(m / 1_lb, "lb", to_equivalent_format);
-		return _join(m / 1_oz, "oz", to_equivalent_format);
-	}
-
 	inline std::ostream& operator<<(std::ostream& os, const mass m)
 	{
 		os << to_string(m);
@@ -263,12 +234,6 @@ namespace SI
 		if (T <= -1_uK || T >= 1_uK)
 			return _join(T / 1_uK, "μK", to_string_format);
 		return _join(T / 1_nK, "nK", to_string_format);
-	}
-
-	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
-	inline std::string to_equivalent(const temperature T)
-	{
-		return _join(fahrenheit(T), "°F", to_equivalent_format);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, const temperature T)
@@ -377,14 +342,6 @@ namespace SI
 		if (v <= -1_m_per_s || v >= 1_m_per_s || v == 0.0_m_per_s)
 			return _join(v / 1_m_per_s, "m/s", to_string_format);
 		return _join(v / 1_mm_per_h, "mm/h", to_string_format);
-	}
-
-	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
-	inline std::string to_equivalent(const velocity V)
-	{
-		if (V <= -1_Mach || V >= 1_Mach)
-			return _join(V / 1_Mach, "Mach", to_equivalent_format);
-		return _join(V / 1_mph, "mph", to_equivalent_format);
 	}
 
 	inline std::ostream& operator<<(std::ostream& os, const velocity v)
@@ -661,6 +618,55 @@ namespace SI
 		return text;
 	}
 
+	// Function to_equivalent()
+	// ------------------------
+
+	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
+	inline std::string to_equivalent(const length d)
+	{
+		if (d <= -1_ly || d >= 1_ly)
+			return _join(d / 1_ly, "light-years", to_equivalent_format);
+		if (d <= -1_ls || d >= 1_ls)
+			return _join(d / 1_ls, "light-seconds", to_equivalent_format);
+		if (d <= -1_mi || d >= 1_mi)
+			return _join(d / 1_mi, "mi", to_equivalent_format);
+		if (d <= -1_yd || d >= 1_yd)
+			return _join(d / 1_yd, "yd", to_equivalent_format);
+		if (d <= -1_ft || d >= 1_ft)
+			return _join(d / 1_ft, "ft", to_equivalent_format);
+		return _join(d / 1_in, "in", to_equivalent_format);
+	}
+
+	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
+	inline std::string to_equivalent(const mass m)
+	{
+		if (m <= -1_Msun || m >= 1_Msun)
+			return _join(m / 1_Msun, "solar masses", to_equivalent_format);
+		if (m <= -1_Mjup || m >= 1_Mjup)
+			return _join(m / 1_Mjup, "Jupiter masses", to_equivalent_format);
+		if (m <= -1_Mearth || m >= 1_Mearth)
+			return _join(m / 1_Mearth, "Earth masses", to_equivalent_format);
+		if (m <= -1_Mmoon || m >= 1_Mmoon)
+			return _join(m / 1_Mmoon, "Moon masses", to_equivalent_format);
+		if (m <= -1_lb || m >= 1_lb)
+			return _join(m / 1_lb, "lb", to_equivalent_format);
+		return _join(m / 1_oz, "oz", to_equivalent_format);
+	}
+
+	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
+	inline std::string to_equivalent(const temperature T)
+	{
+		return _join(fahrenheit(T), "°F", to_equivalent_format);
+	}
+
+	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
+	inline std::string to_equivalent(const velocity V)
+	{
+		if (V <= -1_Mach || V >= 1_Mach)
+			return _join(V / 1_Mach, "Mach", to_equivalent_format);
+		return _join(V / 1_mph, "mph", to_equivalent_format);
+	}
+
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
 	inline std::string to_equivalent(const power_intensity I)
 	{
@@ -679,6 +685,9 @@ namespace SI
 		return to_string(kgTNT) + " TNT";
 	}
 
+	// Function to_percentage()
+	// ------------------------
+
 	/// @brief Returns the percentage as string, e.g. 50.0%
 	inline std::string to_percentage(length part, length total)
 	{
@@ -691,8 +700,8 @@ namespace SI
 		return _join((part / total) * 100.0, "%", to_percentage_format);
 	}
 
-} // end of namespace
+	// References
+	// ----------
+	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 
-// References
-// ----------
-// 1. https://en.wikipedia.org/wiki/International_System_of_Units
+} // end of namespace
