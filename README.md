@@ -25,14 +25,14 @@ int main() {
 }
 ```
 
-🧱 Building Blocks in <SI/core>
---------------------------------
-- **Datatypes** like *SI::length*
-- **Units** such as *SI::meters*
-- **Literals** like *100_m*
-- **Constants** such as *SI::constant::speed_of_light_in_vacuum*
-- **Formulas** like *SI::formula::wavelength()*
-- **Conversions** such as *SI::to_string()*
+| 🧱 Building Block    | Example                     | Include File                            |
+| --------------------- | --------------------------- | --------------------------------------- |
+| Datatypes             | *SI::length*                | [<SI/datatypes.h>](SI/datatypes.h>)     |
+| Units                 | *SI::meters*                | [<SI/units.h>](SI/units.h>              |
+| User-defined literals | *100_m*                     | [<SI/literals.h>](SI/literals.h>        |
+| Constants             | *SI::constant::c*           | [<SI/constants.h>](SI/constants.h>)     |
+| Formulas              | *SI::formula::wavelength()* | [<SI/formulas.h>](SI/formulas.h>)       |
+| Conversions           | *SI::to_string()*           | [<SI/conversions.h>](SI/conversions.h>) |
 
 
 🎉 Various
