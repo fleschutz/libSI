@@ -10,47 +10,46 @@
 
 namespace SI {
 
-    /// @brief  This just shows what's possible, the serious checks follow below.
-    inline void check_some_features() {
-	static_assert(3_m == meters(3));
-	static_assert(3_m == 3 * 1_m);
-	static_assert(1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m);
-	static_assert(1_km / 30_min == 2_km_per_h);
-	static_assert(1_m * 2_m == 2_m²);
-	static_assert(1_m * 2_m * 3_m == 6_m³);
-	static_assert((1_m * 2_m * 3_m) / 2_s == 3_m³_per_s);
-	static_assert(1000 / 1_s == 1_kHz);
-	static_assert(1_Mach == 330_m_per_s);
-	static_assert(1_Mach * 10_percent == 33_m_per_s);
-	static_assert((0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K);
-	static_assert(1_A * 1_h == 3600_C);
-	static_assert(1_Ah == 3600_C);
-    }
+  inline void check_some_features() { // just shows what's possible, the serious checks follow below
+    static_assert( 3_m == meters(3) );
+    static_assert( 3_m == 3 * 1_m );
+    static_assert( 1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m );
+    static_assert( 1_km / 30_min == 2_km_per_h );
+    static_assert( 1_m * 2_m == 2_m² );
+    static_assert( 1_m * 2_m * 3_m == 6_m³ );
+    static_assert( (1_m * 2_m * 3_m) / 2_s == 3_m³_per_s );
+    static_assert( 1000 / 1_s == 1_kHz );
+    static_assert( 1_Mach == 330_m_per_s );
+    static_assert( 1_Mach * 10_percent == 33_m_per_s );
+    static_assert( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );
+    static_assert( 1_A * 1_h == 3600_C );
+    static_assert( 1_Ah == 3600_C );
+  }
 
-    inline void check_basic_datatypes() {
-	static_assert(sizeof(char) <= sizeof(short));
-	static_assert(sizeof(short) <= sizeof(int));
-	static_assert(sizeof(int) <= sizeof(long));
-	static_assert(sizeof(long) <= sizeof(long long));
-	static_assert(sizeof(float) <= sizeof(double));
-	static_assert(sizeof(double) <= sizeof(long double));
+  inline void check_basic_datatypes() {
+    static_assert(sizeof(char) <= sizeof(short));
+    static_assert(sizeof(short) <= sizeof(int));
+    static_assert(sizeof(int) <= sizeof(long));
+    static_assert(sizeof(long) <= sizeof(long long));
+    static_assert(sizeof(float) <= sizeof(double));
+    static_assert(sizeof(double) <= sizeof(long double));
 
-	static_assert(sizeof(char) == sizeof(unsigned char));
-	static_assert(sizeof(short) == sizeof(unsigned short));
-	static_assert(sizeof(int) == sizeof(unsigned int));
-	static_assert(sizeof(long) == sizeof(unsigned long));
+    static_assert(sizeof(char) == sizeof(unsigned char));
+    static_assert(sizeof(short) == sizeof(unsigned short));
+    static_assert(sizeof(int) == sizeof(unsigned int));
+    static_assert(sizeof(long) == sizeof(unsigned long));
 
-	static_assert(sizeof(length) == sizeof(SIdouble));
-	static_assert(sizeof(mass) == sizeof(SIdouble));
-	static_assert(sizeof(time) == sizeof(SIdouble));
-	static_assert(sizeof(temperature) == sizeof(SIdouble));
-	static_assert(sizeof(current) == sizeof(SIdouble));
-	static_assert(sizeof(substance) == sizeof(SIdouble));
-	static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
-	static_assert(sizeof(dimensionless) == sizeof(SIdouble));
-    }
+    static_assert(sizeof(length) == sizeof(SIdouble));
+    static_assert(sizeof(mass) == sizeof(SIdouble));
+    static_assert(sizeof(time) == sizeof(SIdouble));
+    static_assert(sizeof(temperature) == sizeof(SIdouble));
+    static_assert(sizeof(current) == sizeof(SIdouble));
+    static_assert(sizeof(substance) == sizeof(SIdouble));
+    static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
+    static_assert(sizeof(dimensionless) == sizeof(SIdouble));
+  }
 
-    inline void check_SI_base_units() {
+  inline void check_SI_base_units() {
 	// length in...
 	static_assert(1_Pm == 1000_Tm);
 	static_assert(1_Tm == 1000_Gm);
@@ -109,9 +108,9 @@ namespace SI {
 	// luminous intensity in...
 	static_assert(1_kcd == 1000_cd);
 	static_assert(1_cd == 0.001_kcd);
-    }
+  }
 
-    inline void check_SI_derived_units() {
+  inline void check_SI_derived_units() {
 	// area in...
 	static_assert(1_km² == 100_hm²);
 	static_assert(1_hm² == 10000_m²);
@@ -227,24 +226,24 @@ namespace SI {
 	static_assert(1_klx == 1000_lx);
 	static_assert(1_lx  == 1000_mlx);
 	static_assert(1_mlx == 1000_ulx);
-    }
+  }
 
-    inline void check_astronomical_units() {
+  inline void check_astronomical_units() {
 	static_assert(1_Gpc == 1000_Mpc);
 	static_assert(1_Mpc == 1000_kpc);
 	static_assert(1_kpc == 1000_pc);
-    }
+  }
 
-    inline void check_Imperial_units() {
+  inline void check_Imperial_units() {
 	static_assert(1_nmi == 10_cable);
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
 	//static_assert(1_ft  == 12_in);
 	static_assert(1_lb  == 16_oz);
 	//static_assert(32_degF == 273.15_K);
-    }
+  }
 
-    inline void check_digital_units() {
+  inline void check_digital_units() {
 	// bytes absolute...
 	static_assert(1_kB == 1000_bytes);
 	static_assert(1_MB == 1000_kB);
@@ -272,14 +271,14 @@ namespace SI {
 	// bits per seconds...
 	static_assert(1_Mbps == 1000_Kbps);
 	static_assert(1_Gbps == 1000_Mbps);
-    }
+  }
 
-    inline void check_the_angles() {
+  inline void check_the_angles() {
         static_assert(1_rad == 1000_mrad);
         static_assert(0_deg == 0_rad);
-    }
+  }
 
-    inline void check_various_units() {
+  inline void check_various_units() {
 	// pressure in...
 	static_assert(1_bar  == 1000_mbar);
 	static_assert(1_kbar == 1000_bar);
@@ -288,9 +287,9 @@ namespace SI {
 	// temperature in...
 	static_assert(0_degC == 273.15_K);
 	//static_assert(491.67_degR == 273.15_K);
-    }
+  }
 
-    inline void check_functions_and_templates() {
+  inline void check_functions_and_templates() {
 	static_assert(abs(-3.5_m) == 3.5_m);
 	static_assert(abs(-1_m)   == 1_m);
 	static_assert(abs(0_m)    == 0_m);
@@ -325,9 +324,9 @@ namespace SI {
 	static_assert(clamp(0_m, -1_m,2_m) == 0_m);
 	static_assert(clamp(3_m, 4_m,5_m) == 4_m);
 	static_assert(clamp(3_m, 1_m,2_m) == 2_m);
-    }
+  }
 
-    inline void check_SI_prefixes() {
+  inline void check_SI_prefixes() {
         static_assert(quetta == 1000 * ronna);
         static_assert(ronna  == 1000 * yotta);
         static_assert(yotta  == 1000 * zetta);
@@ -351,6 +350,6 @@ namespace SI {
         //static_assert(zepto == 1000 * yocto);
         //static_assert(yocto == 1000 * ronto);
         //static_assert(ronto == 1000 * quecto);
-    }
+  }
 
 } // end of namespace
