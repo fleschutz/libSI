@@ -9,5 +9,4 @@
 #include <SI/formulas.h>
 #include <SI/conversions.h>
 #include <SI/prefixes.h>
-#include <SI/print.h>
 #include <SI/tests.h>
