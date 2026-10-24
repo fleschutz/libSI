@@ -28,7 +28,7 @@ int main() {
 | 🧱 Building Blocks   | Example                                   | File to Include                        |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
 | Datatypes             | *SI::mass*                                | [<SI/datatypes.h>](SI/datatypes.h)     |
-| Units                 | *SI::pounds*                              | [<SI/units.h>](SI/units.h)             |
+| Units                 | *SI::ounces*                              | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_oz*                                    | [<SI/literals.h>](SI/literals.h)       |
 | Constants             | *SI::constant::speed_of_light_in_vacuum*  | [<SI/constants.h>](SI/constants.h)     |
 | Formulas              | *SI::formula::wavelength()*               | [<SI/formulas.h>](SI/formulas.h)       |
