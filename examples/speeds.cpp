@@ -46,21 +46,31 @@ void speed_examples() {
     cout << wet_distance << " or " << to_equivalent(wet_distance) << endl;
 
 
-    cout << " 7. The download of 10TB at 1000MBit/s takes... ";
+    cout << " 7. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... ";
+    velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mph + 1_ft_per_min;
+    cout << sum << " or " << to_equivalent(sum) << endl;
+
+
+    cout << " 8. The min/max/average/sum of an array of speeds is...";
+    velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
+    int n = sizeof(speeds) / sizeof(speeds[0]);
+    cout << " min=" << formula::min_of_array(speeds, n) << " max=" << formula::max_of_array(speeds, n)
+         << " avg=" << formula::avg_of_array(speeds, n) << " sum=" << formula::sum_of_array(speeds, n)
+         << endl;
+
+
+    cout << " 9. The download of 10TB at 1000MBit/s takes... ";
     auto file_size      = 10_TB;
     auto download_speed = 1000_Mbps;
     cout << file_size / download_speed << endl;
 
 
-    cout << " 8. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... ";
-    velocity sum = 1_m_per_s + 1_km_per_s + 1_km_per_h + 1_Mach + 1_kn + 1_mph + 1_ft_per_min;
-    cout << sum << " or " << to_equivalent(sum) << endl;
+    cout << "10. Simulate a 1GB download at 100MB/s...";
+    auto downloaded = 0_byte, total = 1_GB;
+    auto duration   = 0_s;
+    for (; downloaded < total; downloaded += 100_MB, duration += 1_s) {
+	    cout << to_percentage(downloaded, total) << ", ";
+    }
+    cout << to_bytes(downloaded) << " downloaded in " << duration << endl << endl;
 
-
-    cout << " 9. The min/max/average/sum of an array of speeds is...";
-    velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
-    int n = sizeof(speeds) / sizeof(speeds[0]);
-    cout << " min=" << formula::min_of_array(speeds, n) << " max=" << formula::max_of_array(speeds, n)
-         << " avg=" << formula::avg_of_array(speeds, n) << " sum=" << formula::sum_of_array(speeds, n)
-         << endl << endl;
 }

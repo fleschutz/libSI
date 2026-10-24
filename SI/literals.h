@@ -368,9 +368,10 @@ namespace SI {
 	// ----------------
 	// bytes absolute...
 	LITERAL(_byte,                           1, bytes);   // 1_byte
-	LITERAL(_kB,                           1e3, bytes);   // 1_kB  (kilobyte)
+	LITERAL(_bytes,                          1, bytes);   // 2_bytes
+	LITERAL(_kB,                          1000, bytes);   // 1_kB  (kilobyte)
 	LITERAL(_kiB,                         1024, bytes);   // 1_kiB (kibibyte)
-	LITERAL(_MB,                           1e6, bytes);   // 1_MB  (megabyte)
+	LITERAL(_MB,                     1'000'000, bytes);   // 1_MB  (megabyte)
 	LITERAL(_MiB,                    1'048'576, bytes);   // 1_MiB (mibibyte)
 	LITERAL(_GB,                           1e9, bytes);   // 1_GB  (gigabyte)
 	LITERAL(_GiB,                1'073'741'824, bytes);   // 1_GiB (gibibyte)

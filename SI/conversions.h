@@ -11,7 +11,7 @@ namespace SI
 {
 	inline auto to_string_format     = "%.2Lf %s"; ///< configurable, SI standard formatting by default
 	inline auto to_equivalent_format = "%.2Lf %s"; ///< configurable, SI standard formatting by default
-	inline auto to_percentage_format = "%.0Lf %s"; ///< configurable
+	inline auto to_percentage_format = "%.0Lf%s";  ///< configurable
 
 	/// @brief The from_string() function
 	inline bool from_string(const std::string& str, length& result)
@@ -627,6 +627,21 @@ namespace SI
 		return _join(value, "", to_string_format);
 	}
 
+	inline std::string to_bytes(const dimensionless n)
+	{
+		if (n >= 1_PB)
+			return _join(n / 1_PB, "PB", to_string_format);
+		if (n >= 1_TB)
+			return _join(n / 1_TB, "TB", to_string_format);
+		if (n >= 1_GB)
+			return _join(n / 1_GB, "GB", to_string_format);
+		if (n >= 1_MB)
+			return _join(n / 1_MB, "MB", to_string_format);
+		if (n >= 1_kB)
+			return _join(n / 1_kB, "kB", to_string_format);
+		return _join(n, " bytes", to_string_format);
+	}
+
 	inline std::string to_string(const unsigned char byte)
 	{
 		char buf[256];
@@ -667,10 +682,16 @@ namespace SI
 	/// @brief Returns the percentage as string, e.g. 50.0%
 	inline std::string to_percentage(length part, length total)
 	{
-		return _join((total / part) * 100.0, "%", to_percentage_format);
+		return _join((part / total) * 100.0, "%", to_percentage_format);
 	}
 
-} // end of namespace SI
+	/// @brief Returns the percentage as string, e.g. 50.0%
+	inline std::string to_percentage(dimensionless part, dimensionless total)
+	{
+		return _join((part / total) * 100.0, "%", to_percentage_format);
+	}
+
+} // end of namespace
 
 // References
 // ----------
