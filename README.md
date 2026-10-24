@@ -25,7 +25,7 @@ int main() {
 }
 ```
 
-| 🧱 Building Blocks   | Example                                   | Include File                           |
+| 🧱 Building Blocks   | Example                                   | File to Include                        |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
 | Datatypes             | *SI::mass*                                | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *SI::pounds*                              | [<SI/units.h>](SI/units.h)             |
@@ -37,7 +37,7 @@ int main() {
 
 🎉 Various
 -----------
-- **Many examples** in the 📂[examples](examples/) subfolder, which write this: [console output](docs/console_output.txt)
+- **More examples** in the 📂[examples](examples/) subfolder, writing this to the: [console output](docs/console_output.txt)
 - **Convenient** <SI/core> to include the core header files, and <SI/all> to include all header files.
 - **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
 - **Basic datasets** like *chemical_elements* in subfolder 📂[datasets](datasets/)
