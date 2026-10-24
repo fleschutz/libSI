@@ -90,6 +90,7 @@ namespace SI {
 	UNIT(teslas)        = kilograms / (amperes * seconds * seconds);
 	UNIT(joules_per_tesla) = joules / teslas;
 
+	typedef angle radians;
 	UNIT(steradians)    = unit<detail::dimensionless>();
 
 	UNIT(lumens)        = candelas * steradians;
@@ -187,8 +188,8 @@ namespace SI {
 		return x;
 	}
 
-	// 7. References
-	// -------------
+	// References
+	// ----------
 	// 1. https://en.wikipedia.org/wiki/International_System_of_Units
 
 } // end of namespace

@@ -9,8 +9,6 @@
 #define SI_INLINE_CONSTEXPR constexpr inline
 
 namespace SI {
-	typedef long double angle;      ///< basic datatype to hold a dimensionless angle, e.g. 3.1415
-	typedef angle radians;          ///< basic unit of radians for angle
 	typedef double SIdouble;        ///< internal datatype to hold floating point values
 
 	namespace internal {

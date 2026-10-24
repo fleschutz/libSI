@@ -53,9 +53,10 @@ namespace SI {
 	DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
 	DATATYPE(per_substance,          0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 
-	// The Dimensionless Datatype
-	// --------------------------
-	typedef double dimensionless;   ///< to hold a quantity without any unit, e.g. 42
+	// Dimensionless Datatypes
+	// -----------------------
+	typedef double dimensionless;   ///< holds a quantity without any unit, e.g. 42
+	typedef long double angle;      ///< holds a dimensionless angle, e.g. 3.1415
 
 } // end of namespace
 
