@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_0',['💡 Q &amp;amp; A',['../index.html#autotoc_md3',1,'']]],
+  ['a_0',['💡 Q &amp;amp; A',['../index.html#autotoc_md2',1,'']]],
   ['a0_5fheight_1',['A0_height',['../namespaceISO216.html#ab42de62392ccdfef73b78b0f853498fc',1,'ISO216']]],
   ['a0_5fwidth_2',['A0_width',['../namespaceISO216.html#af31975b99c70d4e2a3dbef07f7afbbab',1,'ISO216']]],
   ['a10_5fheight_3',['A10_height',['../namespaceISO216.html#ac497588bdd616d52d526dad30e3deb82',1,'ISO216']]],
@@ -51,11 +51,11 @@ var searchData=
   ['astronomy_2ecpp_48',['astronomy.cpp',['../astronomy_8cpp.html',1,'']]],
   ['astronomy_2eh_49',['astronomy.h',['../astronomy_8h.html',1,'']]],
   ['astronomy_5fexamples_50',['astronomy_examples',['../astronomy_8cpp.html#a9541428fb2cda56215045653d2d86154',1,'astronomy_examples():&#160;astronomy.cpp'],['../main_8cpp.html#a9541428fb2cda56215045653d2d86154',1,'astronomy_examples():&#160;main.cpp']]],
-  ['atan2_51',['atan2',['../namespaceSI.html#ad1bf5d0a6748f61571627cb525d0a8e0',1,'SI::atan2(angle y, angle x)'],['../namespaceSI.html#a6975bb6881f4bf214083b59b9c6e3497',1,'SI::atan2(length y, length x)']]],
+  ['atan2_51',['atan2',['../namespaceSI.html#a3fe26bbe1ec488b17ca4c622e6646ed2',1,'SI::atan2(const angle y, const angle x)'],['../namespaceSI.html#ad5f6dcfdc406a07287484d315680ec69',1,'SI::atan2(const length y, const length x)']]],
   ['atomic_5fmass_52',['atomic_mass',['../structdataset_1_1chemical__element__details.html#a1e1766e14b4ce7152e240b6464fc59f3',1,'dataset::chemical_element_details']]],
   ['atomic_5fnumber_53',['atomic_number',['../structdataset_1_1chemical__element__details.html#a34d27eb47e4113af02f72d4de85cb636',1,'dataset::chemical_element_details']]],
   ['atomic_5fradius_54',['atomic_radius',['../structdataset_1_1chemical__element__details.html#a5d891cbc3da4c8131bc5f091d91e4386',1,'dataset::chemical_element_details']]],
-  ['atto_55',['atto',['../namespaceSI_1_1prefix.html#a2351bde2b7ecf7d9119aed1655906570',1,'SI::prefix']]],
+  ['atto_55',['atto',['../namespaceSI.html#ab822620be3738e50696231c977700096',1,'SI']]],
   ['average_5fapogee_56',['average_apogee',['../namespaceMoon.html#aebe0f8eb2c4bd3b7fcb1583266ab4413',1,'Moon']]],
   ['average_5forbital_5fspeed_57',['average_orbital_speed',['../namespaceEarth.html#ab55b7292db84fe6e7449d6c2f49fa35f',1,'Earth::average_orbital_speed'],['../namespaceMoon.html#a03603905452fa66293977a74cae34859',1,'Moon::average_orbital_speed']]],
   ['average_5fperigee_58',['average_perigee',['../namespaceMoon.html#ad84e33e775b470c52477b7dda9c0b0a3',1,'Moon']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['💡_20q_20a_0',['💡 Q &amp;amp; A',['../index.html#autotoc_md3',1,'']]]
+  ['🎉_20various_0',['🎉 Various',['../index.html#autotoc_md1',1,'']]]
 ];

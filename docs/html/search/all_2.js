@@ -28,11 +28,9 @@ var searchData=
   ['band_5fgap_25',['band_gap',['../structdataset_1_1lithium__battery__material__details.html#aa7cb26b03ca4327a4b15b7651d9c3697',1,'dataset::lithium_battery_material_details']]],
   ['blackbody_5ftemperature_26',['blackbody_temperature',['../namespaceEarth.html#ac48abc1f9ebfcdbcd20b792ce2b93c7f',1,'Earth']]],
   ['block_27',['block',['../structdataset_1_1chemical__element__details.html#ab45516a93015a6a75ff5fb24876f7e0d',1,'dataset::chemical_element_details']]],
-  ['blocks_28',['🧱 Core Building Blocks',['../index.html#autotoc_md1',1,'']]],
-  ['bmi_29',['BMI',['../namespaceSI_1_1formula.html#ab1073e857ff679f5c6d77253f5ca3938',1,'SI::formula']]],
-  ['boiling_5fpoint_30',['boiling_point',['../structdataset_1_1chemical__element__details.html#af963a753d7ca61bfcb88d355e93eb67a',1,'dataset::chemical_element_details']]],
-  ['bond_5falbedo_31',['bond_albedo',['../namespaceEarth.html#a8c9f114ac5682a154583feb508defd95',1,'Earth']]],
-  ['braking_5fdistance_32',['braking_distance',['../namespaceSI_1_1formula.html#a55d4c74c49372fc19f160c87aa789c75',1,'SI::formula']]],
-  ['breaking_5fstrain_33',['Breaking_strain',['../structdataset_1_1material__property__details.html#ad2161df2c7ed36225794eff88e910202',1,'dataset::material_property_details']]],
-  ['building_20blocks_34',['🧱 Core Building Blocks',['../index.html#autotoc_md1',1,'']]]
+  ['bmi_28',['BMI',['../namespaceSI_1_1formula.html#ab1073e857ff679f5c6d77253f5ca3938',1,'SI::formula']]],
+  ['boiling_5fpoint_29',['boiling_point',['../structdataset_1_1chemical__element__details.html#af963a753d7ca61bfcb88d355e93eb67a',1,'dataset::chemical_element_details']]],
+  ['bond_5falbedo_30',['bond_albedo',['../namespaceEarth.html#a8c9f114ac5682a154583feb508defd95',1,'Earth']]],
+  ['braking_5fdistance_31',['braking_distance',['../namespaceSI_1_1formula.html#a55d4c74c49372fc19f160c87aa789c75',1,'SI::formula']]],
+  ['breaking_5fstrain_32',['Breaking_strain',['../structdataset_1_1material__property__details.html#ad2161df2c7ed36225794eff88e910202',1,'dataset::material_property_details']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['blocks_0',['🧱 Core Building Blocks',['../index.html#autotoc_md1',1,'']]],
-  ['building_20blocks_1',['🧱 Core Building Blocks',['../index.html#autotoc_md1',1,'']]]
+  ['c_0',['📐libSI - The Physical Units Library For C++',['../index.html',1,'']]],
+  ['contributing_1',['🤝 Contributing',['../index.html#autotoc_md3',1,'']]],
+  ['copyright_2',['📜 License &amp;amp; Copyright',['../index.html#autotoc_md4',1,'']]]
 ];

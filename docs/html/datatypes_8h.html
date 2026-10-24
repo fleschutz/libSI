@@ -93,7 +93,7 @@ $(function(){initNavTree('datatypes_8h.html','',''); });
 </div><!--header-->
 <div class="contents">
 
-<p>Defines the dimensionless, the <a class="el" href="namespaceSI.html">SI</a> base, and the derived <a class="el" href="namespaceSI.html">SI</a> datatypes, e.g. SI::length.  
+<p>Defines the 7 <a class="el" href="namespaceSI.html">SI</a> base datatypes, the 25 derived <a class="el" href="namespaceSI.html">SI</a> datatypes, and the dimensionless one.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="internal_8h_source.html">SI/internal.h</a>&gt;</code><br />
 </div>
@@ -110,7 +110,9 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a6d93edb3c7a5acd6f14c92e43ff7f499" id="r_a6d93edb3c7a5acd6f14c92e43ff7f499"><td class="memItemLeft" align="right" valign="top">typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a6d93edb3c7a5acd6f14c92e43ff7f499">SI::dimensionless</a></td></tr>
-<tr class="memdesc:a6d93edb3c7a5acd6f14c92e43ff7f499"><td class="mdescLeft">&#160;</td><td class="mdescRight">to hold a quantity without any unit, e.g. 42  <br /></td></tr>
+<tr class="memdesc:a6d93edb3c7a5acd6f14c92e43ff7f499"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds a quantity without any unit, e.g. 42  <br /></td></tr>
+<tr class="memitem:aba6f659bd709507f32224c552d83ae7f" id="r_aba6f659bd709507f32224c552d83ae7f"><td class="memItemLeft" align="right" valign="top">typedef long double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a></td></tr>
+<tr class="memdesc:aba6f659bd709507f32224c552d83ae7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds a dimensionless angle, e.g. 3.1415  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -118,8 +120,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a39ca63fd2f3b30906811b54595c8a940" id="r_a39ca63fd2f3b30906811b54595c8a940"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a39ca63fd2f3b30906811b54595c8a940">SI::DATATYPE</a> (mass, 0, 1, 0, 0, 0, 0, 0)</td></tr>
 <tr class="memitem:a94abeb2bdef5ed9360d179dce7ff6f1d" id="r_a94abeb2bdef5ed9360d179dce7ff6f1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a94abeb2bdef5ed9360d179dce7ff6f1d">SI::DATATYPE</a> (time, 0, 0, 1, 0, 0, 0, 0)</td></tr>
 <tr class="memitem:aa7b9aeb6bfd1e81355850b32777eb438" id="r_aa7b9aeb6bfd1e81355850b32777eb438"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#aa7b9aeb6bfd1e81355850b32777eb438">SI::DATATYPE</a> (temperature, 0, 0, 0, 1, 0, 0, 0)</td></tr>
-<tr class="memitem:aa4d3f61eb4f3ad4b48b4155aca305a3a" id="r_aa4d3f61eb4f3ad4b48b4155aca305a3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#aa4d3f61eb4f3ad4b48b4155aca305a3a">SI::DATATYPE</a> (electric_current, 0, 0, 0, 0, 1, 0, 0)</td></tr>
-<tr class="memitem:a42607d51c95cd77f3bbf5d8e76e390b3" id="r_a42607d51c95cd77f3bbf5d8e76e390b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a42607d51c95cd77f3bbf5d8e76e390b3">SI::DATATYPE</a> (amount_of_substance, 0, 0, 0, 0, 0, 1, 0)</td></tr>
+<tr class="memitem:a0b4fa4e2dba84acbc8bc23fafd19b2fc" id="r_a0b4fa4e2dba84acbc8bc23fafd19b2fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a0b4fa4e2dba84acbc8bc23fafd19b2fc">SI::DATATYPE</a> (current, 0, 0, 0, 0, 1, 0, 0)</td></tr>
+<tr class="memitem:a0f9ac6236092cb687df8a291ccc71a73" id="r_a0f9ac6236092cb687df8a291ccc71a73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a0f9ac6236092cb687df8a291ccc71a73">SI::DATATYPE</a> (substance, 0, 0, 0, 0, 0, 1, 0)</td></tr>
 <tr class="memitem:a18f998cf53e291cb4a7441603813a56f" id="r_a18f998cf53e291cb4a7441603813a56f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a18f998cf53e291cb4a7441603813a56f">SI::DATATYPE</a> (luminous_intensity, 0, 0, 0, 0, 0, 0, 1)</td></tr>
 <tr class="memitem:ab5b4d947e396ee811a9220998076476d" id="r_ab5b4d947e396ee811a9220998076476d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#ab5b4d947e396ee811a9220998076476d">SI::DATATYPE</a> (area, 2, 0, 0, 0, 0, 0, 0)</td></tr>
 <tr class="memitem:a0e866d8500070d0058218fef6f6a69ee" id="r_a0e866d8500070d0058218fef6f6a69ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a0e866d8500070d0058218fef6f6a69ee">SI::DATATYPE</a> (volume, 3, 0, 0, 0, 0, 0, 0)</td></tr>
@@ -145,10 +147,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a31eb434e0ecda3df171894eaff1e6c70" id="r_a31eb434e0ecda3df171894eaff1e6c70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a31eb434e0ecda3df171894eaff1e6c70">SI::DATATYPE</a> (per_length, -1, 0, 0, 0, 0, 0, 0)</td></tr>
 <tr class="memitem:ac7725f7ba5df9d024f50e60ef2d76953" id="r_ac7725f7ba5df9d024f50e60ef2d76953"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#ac7725f7ba5df9d024f50e60ef2d76953">SI::DATATYPE</a> (per_area, -2, 0, 0, 0, 0, 0, 0)</td></tr>
 <tr class="memitem:ac355b12cf1b7cffda7ab810a0a21ed15" id="r_ac355b12cf1b7cffda7ab810a0a21ed15"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#ac355b12cf1b7cffda7ab810a0a21ed15">SI::DATATYPE</a> (frequency, 0, 0,-1, 0, 0, 0, 0)</td></tr>
-<tr class="memitem:a791e8ff23d77ce9082cf8d41f115c1ab" id="r_a791e8ff23d77ce9082cf8d41f115c1ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a791e8ff23d77ce9082cf8d41f115c1ab">SI::DATATYPE</a> (per_amount_of_substance, 0, 0, 0, 0,-1, 0, 0)</td></tr>
+<tr class="memitem:a6ba56508a06ef14df0568ddabb62cfb1" id="r_a6ba56508a06ef14df0568ddabb62cfb1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSI.html#a6ba56508a06ef14df0568ddabb62cfb1">SI::DATATYPE</a> (per_substance, 0, 0, 0, 0,-1, 0, 0)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Defines the dimensionless, the <a class="el" href="namespaceSI.html">SI</a> base, and the derived <a class="el" href="namespaceSI.html">SI</a> datatypes, e.g. SI::length. </p>
+<div class="textblock"><p>Defines the 7 <a class="el" href="namespaceSI.html">SI</a> base datatypes, the 25 derived <a class="el" href="namespaceSI.html">SI</a> datatypes, and the dimensionless one. </p>
 </div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a2dd1d9826696af24891fcf0b0dc060be" name="a2dd1d9826696af24891fcf0b0dc060be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dd1d9826696af24891fcf0b0dc060be">&#9670;&#160;</a></span>DATATYPE</h2>

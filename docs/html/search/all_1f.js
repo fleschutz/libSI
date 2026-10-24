@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🧱_20core_20building_20blocks_0',['🧱 Core Building Blocks',['../index.html#autotoc_md1',1,'']]]
+  ['🤝_20contributing_0',['🤝 Contributing',['../index.html#autotoc_md3',1,'']]]
 ];

@@ -1,12 +1,14 @@
 var tests_8h =
 [
-    [ "SI::checkAstronomicalUnits", "namespaceSI.html#a22a4890ad2834f0a27e9e0d536aa2597", null ],
-    [ "SI::checkBaseUnits", "namespaceSI.html#a11210b614bddd50d81953098136c2e55", null ],
-    [ "SI::checkDatatypes", "namespaceSI.html#a5c24d9672c863e80fd0b3279d17b4a10", null ],
-    [ "SI::checkDerivedUnits", "namespaceSI.html#af2923616790eab9cc1263910986b21dd", null ],
-    [ "SI::checkDigitalUnits", "namespaceSI.html#a3698bb17afcc1f1cc9bef3ef2b64c19f", null ],
-    [ "SI::checkFeatures", "namespaceSI.html#a070f36495050941073957766d79847c4", null ],
-    [ "SI::checkFunctionsAndTemplates", "namespaceSI.html#abbd63788a36b54457f6888d0f1077760", null ],
-    [ "SI::checkImperialUnits", "namespaceSI.html#aefae29afb200f2acc8276dde45012a65", null ],
-    [ "SI::checkVariousUnits", "namespaceSI.html#a88a0ad928256f586f286ea92868e6c5a", null ]
+    [ "SI::check_astronomical_units", "namespaceSI.html#a535aa7e79bf4f4795ff6b2893d8f903c", null ],
+    [ "SI::check_basic_datatypes", "namespaceSI.html#a7fcbc010865898dc5db5553387c81c7f", null ],
+    [ "SI::check_digital_units", "namespaceSI.html#a6860c267254bfc74042702a6cd576064", null ],
+    [ "SI::check_functions_and_templates", "namespaceSI.html#ae699cbc5496a7109221fbc3a024b06f0", null ],
+    [ "SI::check_Imperial_units", "namespaceSI.html#a0fddf4356f147856e9d378bad043d8c9", null ],
+    [ "SI::check_SI_base_units", "namespaceSI.html#aa04ad0af2d469666a83b3fd1382fe35f", null ],
+    [ "SI::check_SI_derived_units", "namespaceSI.html#a8860d0074861b1bf1d112d048bbcf51b", null ],
+    [ "SI::check_SI_prefixes", "namespaceSI.html#af6a072719ac50af772c12bd301b1eb92", null ],
+    [ "SI::check_some_features", "namespaceSI.html#aa1fb69c0d1c5c88471cb89547bdee325", null ],
+    [ "SI::check_the_angles", "namespaceSI.html#ac3bc5403b43f59ec68f0b118ee4e7d97", null ],
+    [ "SI::check_various_units", "namespaceSI.html#aaca1779052d09e5ca3ee66a993a342ac", null ]
 ];

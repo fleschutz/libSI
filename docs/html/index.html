@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project: libSI - The Physical Units Library For C++</title>
+<title>Project: 📐libSI - The Physical Units Library For C++</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,7 +89,7 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">libSI - The Physical Units Library For C++ </div></div>
+  <div class="headertitle"><div class="title">📐libSI - The Physical Units Library For C++ </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__2Repos_2libSI_2README"></a></p>
@@ -97,15 +97,16 @@ $(function(){initNavTree('index.html','',''); });
 <p>Use libSI to apply math in C++ correct, precise, and convenient. Top features are:</p>
 <ul>
 <li><b>Strong type-safety</b> for datatypes, constants, formulas, and literals (can't add a mass to a length).</li>
-<li><b>High precision</b> by FP 64-bit, calculations on <a class="el" href="namespaceSI.html">SI</a> base units only, and CODATA 2022 constants.</li>
+<li><b>High precision</b> by 64-bit FP datatypes, calculations on <a class="el" href="namespaceSI.html">SI</a> base units only, and CODATA 2022 constants.</li>
 <li><b>Maximum speed</b> without runtime overhead. It just compiles to simple doubles.</li>
-<li><b>Supports</b> <a class="el" href="namespaceSI.html">SI</a> units, Imperial units, digital units, astronomical units, and a lot more.</li>
+<li><b>Supports</b> <a class="el" href="namespaceSI.html">SI</a> units, Imperial/US units, digital units, astronomical units, and a lot more.</li>
+<li><b>Supports</b> implicit scale conversion when mixing different units, e.g. 1_km + 1_m + 1_ft + 1_in.</li>
 <li><b>Modern C++ 17:</b> header-only, own namespace, no external dependencies.</li>
 <li><b>Cross-platform</b> support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with CMake support.</li>
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
-🔎 Usage Example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="core_8h.html">SI/core.h</a>&gt;</span></div>
+🔎 Example</h1>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SI/core&gt;</span></div>
 <div class="line"><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceSI.html">SI</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {    </div>
@@ -113,29 +114,35 @@ $(function(){initNavTree('index.html','',''); });
 <div class="line">    energy E = m * <a class="code hl_function" href="namespaceSI.html#ae6c9bb35c359944d03bee69427857b0b">square</a>(constant::speed_of_light_in_vacuum);</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;The potential energy of a single ounce is: &quot;</span> &lt;&lt; E &lt;&lt; std::endl;</div>
 <div class="line">}</div>
-<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Includes the 6 core header files (for convenience).</div></div>
 <div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> main.cpp:11</div></div>
 <div class="ttc" id="anamespaceSI_html"><div class="ttname"><a href="namespaceSI.html">SI</a></div><div class="ttdef"><b>Definition</b> constants.h:12</div></div>
-<div class="ttc" id="anamespaceSI_html_ae6c9bb35c359944d03bee69427857b0b"><div class="ttname"><a href="namespaceSI.html#ae6c9bb35c359944d03bee69427857b0b">SI::square</a></div><div class="ttdeci">SI_INLINE_CONSTEXPR auto square(T x)</div><div class="ttdoc">Raise any number &lt;x&gt; to power of 2 (x² or x*x).</div><div class="ttdef"><b>Definition</b> units.h:193</div></div>
-</div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
-🧱 Core Building Blocks</h1>
+<div class="ttc" id="anamespaceSI_html_ae6c9bb35c359944d03bee69427857b0b"><div class="ttname"><a href="namespaceSI.html#ae6c9bb35c359944d03bee69427857b0b">SI::square</a></div><div class="ttdeci">SI_INLINE_CONSTEXPR auto square(T x)</div><div class="ttdoc">Raise any number &lt;x&gt; to power of 2 (x² or x*x).</div><div class="ttdef"><b>Definition</b> units.h:177</div></div>
+</div><!-- fragment --><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">🧱 Building Blocks  </th><th class="markdownTableHeadNone">Example  </th><th class="markdownTableHeadNone">File to Include  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Datatypes  </td><td class="markdownTableBodyNone"><em>SI::mass</em>  </td><td class="markdownTableBodyNone"><a href="SI/datatypes.h">&lt;SI/datatypes.h&gt;</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Units  </td><td class="markdownTableBodyNone"><em>SI::pounds</em>  </td><td class="markdownTableBodyNone"><a href="SI/units.h">&lt;SI/units.h&gt;</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">User-defined literals  </td><td class="markdownTableBodyNone"><em>1_oz</em>  </td><td class="markdownTableBodyNone"><a href="SI/literals.h">&lt;SI/literals.h&gt;</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Constants  </td><td class="markdownTableBodyNone"><em>SI::constant::speed_of_light_in_vacuum</em>  </td><td class="markdownTableBodyNone"><a href="SI/constants.h">&lt;SI/constants.h&gt;</a>  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Formulas  </td><td class="markdownTableBodyNone"><em><a class="el" href="namespaceSI_1_1formula.html#a8a4b1be8b13ffbb36f64b7909db7796c" title="Calculates the wavelength from velocity (v) and frequency (f).">SI::formula::wavelength()</a></em>  </td><td class="markdownTableBodyNone"><a href="SI/formulas.h">&lt;SI/formulas.h&gt;</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Conversions  </td><td class="markdownTableBodyNone"><em><a class="el" href="namespaceSI.html#a1671c441ee55e52c5b4dfdf6096d396a" title="Returns the given length as string using SI units.">SI::to_string()</a></em>  </td><td class="markdownTableBodyNone"><a href="SI/conversions.h">&lt;SI/conversions.h&gt;</a>  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+🎉 Various</h1>
 <ul>
-<li><b>Datatypes</b> like <em>SI::length</em> in <a href="SI/datatypes.h">&lt;SI/datatypes.h&gt;</a></li>
-<li><b>Units</b> such as <em>SI::meters</em> in <a href="SI/units.h">&lt;SI/units.h&gt;</a></li>
-<li><b>Literals</b> like <em>100_m</em> in <a href="SI/literals.h">&lt;SI/literals.h&gt;</a></li>
-<li><b>Constants</b> such as <em>SI::constant::lightyear</em> in <a href="SI/constants.h">&lt;SI/constants.h&gt;</a></li>
-<li><b>Formulas</b> like <em><a class="el" href="namespaceSI_1_1formula.html#a8a4b1be8b13ffbb36f64b7909db7796c" title="Calculates the wavelength from velocity (v) and frequency (f).">SI::formula::wavelength()</a></em> in <a href="SI/formulas.h">&lt;SI/formulas.h&gt;</a></li>
-<li><b>Conversions</b> such as <em><a class="el" href="namespaceSI.html#a1671c441ee55e52c5b4dfdf6096d396a" title="Returns the given length as string using SI units.">SI::to_string()</a></em> in <a href="SI/conversions.h">&lt;SI/conversions.h&gt;</a></li>
-</ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
-📦 Other Components</h1>
-<ul>
-<li><b>47 Examples</b> writing this <a href="examples/console_output.txt">console output</a> in subfolder 📂<a href="examples/">examples</a></li>
+<li><b>More examples</b> in the 📂<a href="examples/">examples</a> subfolder, writing this to the: <a href="docs/console_output.txt">console output</a></li>
+<li><b>Convenient</b> &lt;SI/core&gt; to include the core header files, and &lt;SI/all&gt; to include all header files.</li>
 <li><b>Unit tests</b> executed at compile-time and on each commit by <a href="https://github.com/fleschutz/libSI/actions">GitHub Actions</a> in <a href="SI/tests.h">&lt;SI/tests.h&gt;</a></li>
-<li><b>Datasets</b> like <em>chemical_elements</em> in 📂<a href="datasets/">datasets</a> (using libSI datatypes and units)</li>
+<li><b>Basic datasets</b> like <em>chemical_elements</em> in subfolder 📂<a href="datasets/">datasets</a></li>
 <li><b>Documentation</b> in the <a href="https://fleschutz.github.io/libSI/docs/html/">API reference manual</a></li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
 💡 Q &amp; A</h1>
 <p><b>What is <a class="el" href="namespaceSI.html">SI</a>?</b> It's the <a href="https://en.wikipedia.org/wiki/International_System_of_Units">International System of Units</a> which is made up of 7 base units that define the 22 derived units.</p>
 <p><b>What is CODATA?</b> It's the <a href="https://codata.org/">Committee On Data</a> of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle. Latest update was CODATA 2022 which is equal to: NIST SP 961 (May 2024).</p>
@@ -143,14 +150,14 @@ $(function(){initNavTree('index.html','',''); });
 <p><b>What are numbers like 1.2e23?</b> It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.</p>
 <p><b>How to import or export numbers and string?</b> See the code examples in <a href="examples/conversions.cpp">examples/conversions.cpp</a>.</p>
 <p><b>Where are the list of references?</b> References are always listed at the end of each source code file.</p>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
 🤝 Contributing</h1>
 <ul>
 <li>Contributions, suggestions, and improvements are welcome!</li>
 <li>Open an <a href="https://github.com/fleschutz/libSI/issues">Issue</a> if you encounter bugs or have feature ideas.</li>
 <li>Create a <a href="https://github.com/fleschutz/libSI/pulls">Pull Request</a> if you'd like to improve something.</li>
 </ul>
-<h1 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
 📜 License &amp; Copyright</h1>
 <p>This open source project is licensed under the CC0-1.0 license. All trademarks are the property of their respective owners. </p>
 </div></div><!-- PageDoc -->

@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "Project", "index.html", [
-    [ "libSI - The Physical Units Library For C++", "index.html", "index" ],
+    [ "📐libSI - The Physical Units Library For C++", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -61,12 +61,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Earth_8h.html",
-"namespaceSI.html#a08a485096ac413359bd4c60d67ee4643",
-"namespaceSI.html#a7729fc06f4c0ac8b43151a3823a53ee2",
-"namespaceSI.html#ae4f90d112a3d51f186886ee4b8dee2a2",
-"namespaceSI_1_1formula.html#ab1d65e8910eab2d8bed58a3bd0454306",
-"structSI_1_1detail_1_1scalar__value__type.html",
-"structdataset_1_1moon__details.html"
+"namespaceSI.html#a0b2dbd10cd5910b5273ccbbadefc49d8",
+"namespaceSI.html#a7bb970f935eaf9e634e224f9106eed72",
+"namespaceSI.html#ae8a6e07a9de206fdc539cfc1c6eedc45",
+"namespaceSI_1_1formula.html#ab7b0500ef00315f5e073a7caef866a92",
+"structSI_1_1detail_1_1unit_3_01Dimension_00_01ratio_3_01N_00_01N_01_4_01_4.html#a1b50b1ab5f68a7cc899027eec5ba5483",
+"structdataset_1_1particle__details.html#a336c2c6264c02d918ad5bb18afc43e7e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

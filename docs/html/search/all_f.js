@@ -9,10 +9,10 @@ var searchData=
   ['perimeter_5fof_5frectangle_6',['perimeter_of_rectangle',['../namespaceSI_1_1formula.html#ab1d65e8910eab2d8bed58a3bd0454306',1,'SI::formula']]],
   ['perimeter_5fof_5fsquare_7',['perimeter_of_square',['../namespaceSI_1_1formula.html#aa1bb719708fe53e2db44c51d4ca07464',1,'SI::formula']]],
   ['period_8',['period',['../structdataset_1_1chemical__element__details.html#ae60879da8e19769c598d80cecbcce25a',1,'dataset::chemical_element_details']]],
-  ['peta_9',['peta',['../namespaceSI_1_1prefix.html#a77f132eb59843bd3a01537d717efb0f2',1,'SI::prefix']]],
-  ['physical_20units_20library_20for_20c_10',['libSI - The Physical Units Library For C++',['../index.html',1,'']]],
+  ['peta_9',['peta',['../namespaceSI.html#aebe83ddc9d77f2ecb3bea4eeb34af3da',1,'SI']]],
+  ['physical_20units_20library_20for_20c_10',['📐libSI - The Physical Units Library For C++',['../index.html',1,'']]],
   ['physics_5fparticles_2eh_11',['physics_particles.h',['../physics__particles_8h.html',1,'']]],
-  ['pico_12',['pico',['../namespaceSI_1_1prefix.html#aef078a31d8b049d991e43d17973bb304',1,'SI::prefix']]],
+  ['pico_12',['pico',['../namespaceSI.html#a25944ea19af280e720459f7e4b7a08bf',1,'SI']]],
   ['planet_13',['planet',['../structdataset_1_1moon__details.html#a509bf91720ad7b7555694a9b56fe533c',1,'dataset::moon_details']]],
   ['planet_5fdetails_14',['planet_details',['../structdataset_1_1planet__details.html',1,'dataset']]],
   ['planets_15',['planets',['../namespacedataset.html#acd8b35d0c5621a5b79a09ac3e262f2b5',1,'dataset']]],
@@ -22,8 +22,5 @@ var searchData=
   ['population_19',['population',['../namespaceEarth.html#a10f1e9615e492897b766a22653a050ae',1,'Earth']]],
   ['pow_20',['pow',['../namespaceSI_1_1detail.html#ade7d7d2808ca14ef84159b495af2b505',1,'SI::detail::pow()'],['../namespaceSI.html#ade7d7d2808ca14ef84159b495af2b505',1,'SI::pow()']]],
   ['prefixes_2eh_21',['prefixes.h',['../prefixes_8h.html',1,'']]],
-  ['print_22',['print',['../namespaceSI.html#a1859aea8ab96f5cd7bb6fc30c9c98052',1,'SI::print(T value)'],['../namespaceSI.html#abb49c6b0acb89049976245a66bb09d0a',1,'SI::print(T1 v1, T2 v2)'],['../namespaceSI.html#abb3334b12e5afd31c9fca7d2184a2c6c',1,'SI::print(T1 v1, T2 v2, T3 v3)'],['../namespaceSI.html#a66effa1d2d880804b3da724592fd917f',1,'SI::print(T1 v1, T2 v2, T3 v3, T4 v4)'],['../namespaceSI.html#a2847dcc48fd393da8adbd292180984aa',1,'SI::print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)'],['../namespaceSI.html#a0f52b2b8ef45d41b9ce3bfc98d844731',1,'SI::print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6)'],['../namespaceSI.html#a869033cd114a5b37eb215fac60a2308d',1,'SI::print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6, T7 v7)'],['../namespaceSI.html#a575f2cadcfaef528e0de9480657a191e',1,'SI::print(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6, T7 v7, T8 v8)']]],
-  ['print_2eh_23',['print.h',['../print_8h.html',1,'']]],
-  ['println_24',['println',['../namespaceSI.html#ac091419d47f1744b276d7ccb9ed5e097',1,'SI::println(T value)'],['../namespaceSI.html#a7fb56fe0c2269f2c82c97ef46b15a1ba',1,'SI::println(T1 v1, T2 v2)'],['../namespaceSI.html#a5abd6e6e2a59a20af38d1268435636e6',1,'SI::println(T1 v1, T2 v2, T3 v3)'],['../namespaceSI.html#a3b7906bd635ed5675eb2c14dabcd9817',1,'SI::println(T1 v1, T2 v2, T3 v3, T4 v4)'],['../namespaceSI.html#a3f617be5cdc46888ab1f74eaf37bd202',1,'SI::println(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5)'],['../namespaceSI.html#a80effa2edae6a76bdf85c2e77f8ed4d7',1,'SI::println(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6)'],['../namespaceSI.html#a4ef9a1321dffac409e85a656ea5f6860',1,'SI::println(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6, T7 v7)'],['../namespaceSI.html#a85201bb98ebc8fd24e9c901299b5044f',1,'SI::println(T1 v1, T2 v2, T3 v3, T4 v4, T5 v5, T6 v6, T7 v7, T8 v8)']]],
-  ['promoted_5fscalar_5ftype_25',['promoted_scalar_type',['../namespaceSI_1_1detail.html#a1436ba735a50785d45e42ad0267dd22d',1,'SI::detail']]]
+  ['promoted_5fscalar_5ftype_22',['promoted_scalar_type',['../namespaceSI_1_1detail.html#a1436ba735a50785d45e42ad0267dd22d',1,'SI::detail']]]
 ];

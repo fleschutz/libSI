@@ -26,6 +26,5 @@ var searchData=
   ['orbital_5finclination_23',['orbital_inclination',['../structdataset_1_1planet__details.html#a87c98f3640bd250ee2c023e783bed653',1,'dataset::planet_details']]],
   ['orbital_5fperiod_24',['orbital_period',['../structdataset_1_1exoplanet__details.html#a7777193405e90284720ec8b76a36a7ad',1,'dataset::exoplanet_details::orbital_period'],['../structdataset_1_1planet__details.html#ab71c7ffc2732a0b179e87f6787d86cbc',1,'dataset::planet_details::orbital_period']]],
   ['orbital_5fvelocity_25',['orbital_velocity',['../structdataset_1_1planet__details.html#a508b501685b50803a8cb0a19439ed394',1,'dataset::planet_details']]],
-  ['other_20components_26',['📦 Other Components',['../index.html#autotoc_md2',1,'']]],
-  ['oxygen_27',['oxygen',['../namespaceEarth.html#a524aba29d629baadf03d4dc5536442e5',1,'Earth']]]
+  ['oxygen_26',['oxygen',['../namespaceEarth.html#a524aba29d629baadf03d4dc5536442e5',1,'Earth']]]
 ];

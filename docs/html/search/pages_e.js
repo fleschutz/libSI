@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📦_20other_20components_0',['📦 Other Components',['../index.html#autotoc_md2',1,'']]]
+  ['📜_20license_20copyright_0',['📜 License &amp;amp; Copyright',['../index.html#autotoc_md4',1,'']]]
 ];
