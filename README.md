@@ -28,8 +28,8 @@ int main() {
 | 🧱 Building Block    | Example                     | Include File                            |
 | --------------------- | --------------------------- | --------------------------------------- |
 | Datatypes             | *SI::length*                | [<SI/datatypes.h>](SI/datatypes.h>)     |
-| Units                 | *SI::meters*                | [<SI/units.h>](SI/units.h>              |
-| User-defined literals | *100_m*                     | [<SI/literals.h>](SI/literals.h>        |
+| Units                 | *SI::meters*                | [<SI/units.h>](SI/units.h)              |
+| User-defined literals | *100_m*                     | [<SI/literals.h>](SI/literals.h)        |
 | Constants             | *SI::constant::c*           | [<SI/constants.h>](SI/constants.h>)     |
 | Formulas              | *SI::formula::wavelength()* | [<SI/formulas.h>](SI/formulas.h>)       |
 | Conversions           | *SI::to_string()*           | [<SI/conversions.h>](SI/conversions.h>) |
