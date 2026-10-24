@@ -37,11 +37,10 @@ int main() {
 
 📦 Components
 --------------
-- **More examples** in the 📂[examples](examples/) subfolder, writing this to the: [console output](docs/console_output.txt)
-- **Convenient** <SI/core> to include the core header files, and <SI/all> to include all header files.
-- **Unit tests** executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions) in [<SI/tests.h>](SI/tests.h)
-- **Basic datasets** like *chemical_elements* in subfolder 📂[datasets](datasets/)
-- **Documentation** in the [API reference manual](https://fleschutz.github.io/libSI/docs/html/)
+- **Examples** in the 📂[examples](examples/) subfolder, writing this to the: [console output](docs/console_output.txt)
+- **Unit tests** in [<SI/tests.h>](SI/tests.h), executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
+- **Datasets**  in the 📂[datasets](datasets/) subfolder, e.g. *chemical_elements*.
+- **Documentation** in the [reference manual](https://fleschutz.github.io/libSI/docs/html/)
 
 
 💡 Q & A
@@ -53,6 +52,8 @@ int main() {
 **What are use-cases for libSI?** Applied math such as simulations, simulators, scientific calculations, games, etc.
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
+
+**What's needed to #include?** Use #include <SI/core> to include the 6 core header files, <SI/all> include all header files, otherwise pick the necessary header file only.
 
 **How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
 
