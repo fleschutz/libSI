@@ -1,5 +1,5 @@
 /// @file   examples/conversions.cpp
-/// @brief  Contains 4 import and 4 export examples.
+/// @brief  Contains 4 import and 5 export examples.
 
 #include <iostream>
 #include <SI/core> 
@@ -13,8 +13,7 @@ void conversion_examples() {
     distance = meters(42.0); // <- cast a dimensionless number
     
     double x = 42;
-    distance = x * 1_m;      // <- multiply a dimensionless number
-                             //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    distance = x * 1_m;      // <- multiply a dimensionless number - doesn't work for celsius/fahrenheit due to the offset!
 
     bool is_valid = from_string("42m", distance); // <- convert from a string
 
@@ -22,10 +21,11 @@ void conversion_examples() {
     // ** EXPORT **
     double y = meters(distance); // <- cast to a unit (=42)
 
-    double z = distance / 1_m;   // <- divide to a dimensionless number (=42)
-                                 //    NOTE: This doesn't work for celsius and fahrenheit due to the offset!
+    double z = distance / 1_m;   // <- divide to a dimensionless number (=42) - doesn't work for celsius/fahrenheit due to the offset!
 
-    std::string str = to_string(distance); // <- convert to a string (="42.0m")
+    std::string str = to_string(distance); // <- convert length to a string (="42.0m")
 
-    std::string equiv = to_equivalent(distance); // <- convert to an equivalent string (="45.93yd")
+    std::string equiv = to_equivalent(distance); // <- convert length to an equivalent string (="45.93yd")
+
+    std::string progress = to_percentage(distance, 420_m); // <- convert lengths to percentage string (="10%")
 }
