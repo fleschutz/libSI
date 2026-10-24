@@ -25,7 +25,7 @@ int main() {
 }
 ```
 
-| 🧱 Building Block    | Example                                   | Include File                           |
+| 🧱 Building Blocks   | Example                                   | Include File                           |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
 | Datatypes             | *SI::mass*                                | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *SI::pounds*                              | [<SI/units.h>](SI/units.h)             |
