@@ -4,8 +4,8 @@
 
 Apply math with libSI in C++ correct, precise, and convenient. Top features are: 
 
-- **Type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
-- **Precision** by 64-bit FP datatypes, calculations on SI base units, and CODATA 2022 constants.
+- **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
+- **Precision** by 64-bit floating points, calculations on SI base units, and CODATA 2022 constants.
 - **Full speed:** no runtime overhead and compile-time conversions whenever possible.
 - **Supports** SI units, Imperial/US units, digital units, astronomical units, and a lot more.
 - **Supports** implicit scale conversion when mixing different units, e.g. 1_km + 1_m + 1_ft + 1_in.
