@@ -697,6 +697,19 @@ namespace SI
 		return to_string(kgTNT) + " TNT";
 	}
 
+	/// @brief Returns a data size equivalent as string.
+	FUNC std::string to_equivalent(const data_size n)
+	{
+		if (n >= 1_PiB)  return _fmt(n / 1_PiB, "PiB");
+		if (n >= 1_TiB)  return _fmt(n / 1_TiB, "TiB");
+		if (n >= 1_GiB)  return _fmt(n / 1_GiB, "GiB");
+		if (n >= 1_MiB)  return _fmt(n / 1_MiB, "MiB");
+		if (n >= 1_kiB)  return _fmt(n / 1_kiB, "kiB");
+		if (n >= 8_bit) return _fmt(n / 8_bit, "bytes");
+		if (n > 1_bit)  return _fmt(n / 1_bit, "bits");
+		return _fmt(n / 1_bit, "bit");
+	}
+
 	// Function to_percentage()
 	// ------------------------
 
