@@ -122,13 +122,12 @@ namespace SI {
   // -------------
   UNIT(bits)             = unit<data_size>();
   UNIT(bits_per_second)  = bits / seconds;
-  UNIT(bits_per_meter)   = bits / meters;
   UNIT(bits_per_m²)      = bits / meters2;
   UNIT(bits_per_m³)      = bits / meters3;
-  UNIT(Bytes)            = unit<data_size, 8, 1>();
-  UNIT(Bytes_per_second) = Bytes / seconds;
-  UNIT(bytes)            = unit<detail::dimensionless>();
+  UNIT(bytes)            = unit<data_size, 8, 1>();
   UNIT(bytes_per_second) = bytes / seconds;
+  UNIT(bytes_per_m²)     = bytes / meters2;
+  UNIT(bytes_per_m³)     = bytes / meters3;
 
   // Various Units
   // -------------

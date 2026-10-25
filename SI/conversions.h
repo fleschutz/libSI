@@ -580,6 +580,26 @@ namespace SI
 		return _fmt(d / 1_kg_per_m³, "kg/m³");
 	}
 
+	/// @brief Returns the data size as string in bits and bytes.
+	FUNC std::string to_string(const data_size n)
+	{
+		if (n >= 1_EB)  return _fmt(n / 1_EB, "EB");
+		if (n >= 1_PB)  return _fmt(n / 1_PB, "PB");
+		if (n >= 1_TB)  return _fmt(n / 1_TB, "TB");
+		if (n >= 1_GB)  return _fmt(n / 1_GB, "GB");
+		if (n >= 1_MB)  return _fmt(n / 1_MB, "MB");
+		if (n >= 1_kB)  return _fmt(n / 1_kB, "kB");
+		if (n >= 8_bit) return _fmt(n / 8_bit, "bytes");
+		if (n > 1_bit)  return _fmt(n / 1_bit, "bits");
+		return _fmt(n / 1_bit, "bit");
+	}
+
+	FUNC std::ostream& operator<<(std::ostream& os, const data_size n)
+	{
+		os << to_string(n);
+		return os;
+	}
+
 	/// @brief Returns the angle as string in degree.
 	FUNC std::string to_string(const angle a)
 	{
@@ -589,21 +609,6 @@ namespace SI
 	FUNC std::string to_string(const dimensionless value)
 	{
 		return _fmt(value, "");
-	}
-
-	FUNC std::string to_bytes(const dimensionless n)
-	{
-		if (n >= 1_PB)
-			return _fmt(n / 1_PB, "PB");
-		if (n >= 1_TB)
-			return _fmt(n / 1_TB, "TB");
-		if (n >= 1_GB)
-			return _fmt(n / 1_GB, "GB");
-		if (n >= 1_MB)
-			return _fmt(n / 1_MB, "MB");
-		if (n >= 1_kB)
-			return _fmt(n / 1_kB, "kB");
-		return _fmt(n, " bytes");
 	}
 
 	FUNC std::string to_string(const unsigned char byte)
@@ -714,7 +719,7 @@ namespace SI
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(const dimensionless part, const dimensionless total)
+	FUNC std::string to_percentage(const data_size part, const data_size total)
 	{
 		return _fmt((part / total) * 100.0, "%", to_percentage_format);
 	}

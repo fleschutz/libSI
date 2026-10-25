@@ -59,10 +59,11 @@ void speed_examples() {
          << endl;
 
 
-    cout << " 9. The download of 10TB at 1000MBit/s takes... ";
+    cout << " 9. The download of 10TB at 1GBit/s takes... ";
     auto file_size      = 10_TB;
-    auto download_speed = 1000_Mbps;
-    cout << file_size / download_speed << endl;
+    auto download_speed = 1_Gbps;
+    auto download_time  = file_size / download_speed;
+    cout << download_time << endl;
 
 
     cout << "10. Simulate a 1GB download at 100MB/s...";
@@ -71,6 +72,6 @@ void speed_examples() {
     for (; downloaded < total; downloaded += 100_MB, duration += 1_s) {
 	    cout << to_percentage(downloaded, total) << ", ";
     }
-    cout << to_bytes(downloaded) << " downloaded in " << duration << endl << endl;
+    cout << downloaded << " downloaded in " << duration << endl << endl;
 
 }

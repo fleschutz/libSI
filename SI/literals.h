@@ -369,19 +369,21 @@ namespace SI {
   // bits absolute...
   SET(_bit,                            1, bits);   // 1_bit
   SET(_bits,                           1, bits);   // 2_bits
-  SET(_kBit,                        1000, bits);   // 1_kBit (kilobit)
-  SET(_MBit,                   1'000'000, bits);   // 1_MBit (megabit)
+  SET(_kBit,                         1e3, bits);   // 1_kBit (kilobit)
+  SET(_MBit,                         1e6, bits);   // 1_MBit (megabit)
+  SET(_GBit,                         1e9, bits);   // 1_GBit (gigabit)
+  SET(_TBit,                        1e12, bits);   // 1_TBit (terabit)
   // bits per second...
-  SET(_Kbps,                        1000, bits_per_second); // 1_Kbps (kilobit/sec)
-  SET(_Mbps,                   1'000'000, bits_per_second); // 1_Mbps (megabit/sec)
-  SET(_Gbps,               1'000'000'000, bits_per_second); // 1_Gbps (gigabit/sec)
-  SET(_Tbps,           1'000'000'000'000, bits_per_second); // 1_Tbps (terabit/sec)
+  SET(_Kbps,                         1e3, bits_per_second); // 1_Kbps (kilobit/sec)
+  SET(_Mbps,                         1e6, bits_per_second); // 1_Mbps (megabit/sec)
+  SET(_Gbps,                         1e9, bits_per_second); // 1_Gbps (gigabit/sec)
+  SET(_Tbps,                        1e12, bits_per_second); // 1_Tbps (terabit/sec)
   // bytes absolute...
   SET(_byte,                           1, bytes);   // 1_byte
   SET(_bytes,                          1, bytes);   // 2_bytes
-  SET(_kB,                          1000, bytes);   // 1_kB  (kilobyte)
+  SET(_kB,                           1e3, bytes);   // 1_kB  (kilobyte)
   SET(_kiB,                         1024, bytes);   // 1_kiB (kibibyte)
-  SET(_MB,                     1'000'000, bytes);   // 1_MB  (megabyte)
+  SET(_MB,                           1e6, bytes);   // 1_MB  (megabyte)
   SET(_MiB,                    1'048'576, bytes);   // 1_MiB (mibibyte)
   SET(_GB,                           1e9, bytes);   // 1_GB  (gigabyte)
   SET(_GiB,                1'073'741'824, bytes);   // 1_GiB (gibibyte)
