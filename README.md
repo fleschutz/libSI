@@ -48,6 +48,8 @@ int main() {
 
 **What is CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle. Latest update was CODATA 2022 which is equal to: NIST SP 961 (May 2024).
 
+**What is IAU?** It's the [International Astronomical Union](https://www.iau.org/). It defines the astronomical units.
+
 **What are use-cases for libSI?** Applied math such as simulations, simulators, scientific calculations, games, etc.
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
@@ -55,6 +57,8 @@ int main() {
 **Which #include to use?** Use the convenient *#include <SI/core>* for the 6 core header files, <SI/all> to include all header files, otherwise pick the necessary one only.
 
 **How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
+
+**Why is there no datatype like meters or feets?** Those are units and the correct datatype is: length
 
 **Where are the list of references?** References are always listed at the end of each source code file.
 
