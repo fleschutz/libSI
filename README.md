@@ -37,7 +37,7 @@ int main() {
 | Formulas              | *SI::formula::wavelength()*               | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *SI::to_string()*                         | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 
-| Datasets              | *dataset::Earth::surface_gravity*         | 📂[datasets](datasets/) subfolder     |
+| Datasets              | *Earth::surface_gravity*                  | 📂[datasets](datasets/) subfolder     |
 | Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/) subfolder     |
 | Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
 
