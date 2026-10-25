@@ -350,12 +350,12 @@ namespace SI {
   // temperature in...
   SET(_degF,                           1, fahrenheit); // 1_degF (°Fahrenheit)
 
-  // Astronomical Units
+  // Astronomical Units (as of IAU 2012)
   // ------------------
-  SET(_Gpc,     30'856'775'814'913'673e9, meters);   // 1_Gpc    (gigaparsec, IAU 2012)
-  SET(_Mpc,     30'856'775'814'913'673e6, meters);   // 1_Mpc    (megaparsec, IAU 2012)
-  SET(_kpc,     30'856'775'814'913'673e3, meters);   // 1_kpc    (kiloparsec, IAU 2012)
-  SET(_pc,      30'856'775'814'913'673e0, meters);   // 1_pc     (parsec, IAU 2012)
+  SET(_Gpc,     30'856'775'814'913'673e9, meters);   // 1_Gpc    (gigaparsec)
+  SET(_Mpc,     30'856'775'814'913'673e6, meters);   // 1_Mpc    (megaparsec)
+  SET(_kpc,     30'856'775'814'913'673e3, meters);   // 1_kpc    (kiloparsec)
+  SET(_pc,      30'856'775'814'913'673e0, meters);   // 1_pc     (parsec)
   SET(_ly,         9'460'730'472'580'800, meters);   // 1_ly     (light-year)
   SET(_au,               149'597'870'700, meters);   // 1_au     (astronomical unit, Earth-Sun distance)
   SET(_ls,                   299'792'458, meters);   // 1_ls     (light-second)
@@ -366,6 +366,16 @@ namespace SI {
 
   // Digital Units
   // -------------
+  // bits absolute...
+  SET(_bit,                            1, bits);   // 1_bit
+  SET(_bits,                           1, bits);   // 2_bits
+  SET(_kBit,                        1000, bits);   // 1_kBit (kilobit)
+  SET(_MBit,                   1'000'000, bits);   // 1_MBit (megabit)
+  // bits per second...
+  SET(_Kbps,                        1000, bits_per_second); // 1_Kbps (kilobit/sec)
+  SET(_Mbps,                   1'000'000, bits_per_second); // 1_Mbps (megabit/sec)
+  SET(_Gbps,               1'000'000'000, bits_per_second); // 1_Gbps (gigabit/sec)
+  SET(_Tbps,           1'000'000'000'000, bits_per_second); // 1_Tbps (terabit/sec)
   // bytes absolute...
   SET(_byte,                           1, bytes);   // 1_byte
   SET(_bytes,                          1, bytes);   // 2_bytes
@@ -386,20 +396,15 @@ namespace SI {
   SET(_QB,                          1e30, bytes);   // 1_QY  (quettabyte)
   // bytes per second...
   SET(_bytes_per_s,                    1, bytes_per_second); // 1_bytes_per_s
-  SET(_KBps,                         1e3, bytes_per_second); // 1_KBps (kilobyte/sec)
+  SET(_KBps,                         1e3, bytes_per_second); // 1_KBps  (kilobyte/sec)
   SET(_KiBps,                       1024, bytes_per_second); // 1_KiBps (kibibyte/sec)
-  SET(_MBps,                         1e6, bytes_per_second); // 1_MBps (megabyte/sec)
+  SET(_MBps,                         1e6, bytes_per_second); // 1_MBps  (megabyte/sec)
   SET(_MiBps,                  1'048'576, bytes_per_second); // 1_MiBps (mibibyte/sec)
-  SET(_GBps,                         1e9, bytes_per_second); // 1_GBps (gigabyte/sec)
+  SET(_GBps,                         1e9, bytes_per_second); // 1_GBps  (gigabyte/sec)
   SET(_GiBps,              1'073'741'824, bytes_per_second); // 1_GiBps (gibibyte/sec)
-  SET(_TBps,                        1e12, bytes_per_second); // 1_TBps (terabyte/sec)
+  SET(_TBps,                        1e12, bytes_per_second); // 1_TBps  (terabyte/sec)
   SET(_TiBps,          1'099'511'627'776, bytes_per_second); // 1_TiBps (tebibyte/sec)
-  SET(_PBps,                        1e15, bytes_per_second); // 1_PBps (petabyte/sec)
-  // bits per second...
-  SET(_Kbps,                     1e3 / 8, bytes_per_second); // 1_Kbps (kilobit/sec)
-  SET(_Mbps,                     1e6 / 8, bytes_per_second); // 1_Mbps (megabit/sec)
-  SET(_Gbps,                     1e9 / 8, bytes_per_second); // 1_Gbps (gigabit/sec)
-  SET(_Tbps,                    1e12 / 8, bytes_per_second); // 1_Tbps (terabit/sec)
+  SET(_PBps,                        1e15, bytes_per_second); // 1_PBps  (petabyte/sec)
 
   // Various Units
   // -------------
