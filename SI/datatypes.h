@@ -1,62 +1,65 @@
 /// @file      SI/datatypes.h
-/// @brief     Defines the 7 SI base datatypes, the 25 derived SI datatypes, and the dimensionless one.
+/// @brief     Defines the 7 SI base datatypes, the derived SI datatypes, and the dimensionless one.
 
 #pragma once
 #include <SI/internal.h>
 #define DATATYPE(_name, _lengthExp, _massExp, _timeExp, _temperatureExp, _currentExp, _substanceExp, _intensityExp) \
-    namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _temperatureExp,       \
+  namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _temperatureExp,         \
                                                              _currentExp, _substanceExp, _intensityExp>; }          \
-    template <class T> using _name ## _t = detail::quantity<detail:: _name ## _dimension, T>;                       \
-    using _name = _name ## _t<SIdouble>;                                                                            \
-    using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                         \
-    using _name ## 3 = _name ## _t<detail::vec3<SIdouble>>
+  template <class T> using _name ## _t = detail::quantity<detail:: _name ## _dimension, T>;                         \
+  using _name = _name ## _t<SIdouble>;                                                                              \
+  using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                           \
+  using _name ## 3 = _name ## _t<detail::vec3<SIdouble>>
 
 namespace SI {
 
-	// SI Base Datatypes
-	// -----------------
-	//                                   Exponents:           Internal base unit:
-	//                               l  m  t  T  c  s  i 
-	DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
-	DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
-	DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
-	DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in kelvins
-	DATATYPE(current,                0, 0, 0, 0, 1, 0, 0); // in amperes
-	DATATYPE(substance,              0, 0, 0, 0, 0, 1, 0); // in moles
-	DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
+  // SI Base Datatypes
+  // -----------------
+  //       NAME                        EXPONENTS            BASE UNIT
+  //                               l  m  t  T  c  s  i 
+  DATATYPE(length,                 1, 0, 0, 0, 0, 0, 0); // in meters
+  DATATYPE(mass,                   0, 1, 0, 0, 0, 0, 0); // in kilograms
+  DATATYPE(time,                   0, 0, 1, 0, 0, 0, 0); // in seconds
+  DATATYPE(temperature,            0, 0, 0, 1, 0, 0, 0); // in kelvins
+  DATATYPE(current,                0, 0, 0, 0, 1, 0, 0); // in amperes
+  DATATYPE(substance,              0, 0, 0, 0, 0, 1, 0); // in moles
+  DATATYPE(luminous_intensity,     0, 0, 0, 0, 0, 0, 1); // in candelas
 
-	// Derived SI Datatypes
-	// --------------------
-	DATATYPE(area,                   2, 0, 0, 0, 0, 0, 0); // in square meters
-	DATATYPE(volume,                 3, 0, 0, 0, 0, 0, 0); // in cubic meter
-	DATATYPE(velocity,               1, 0,-1, 0, 0, 0, 0); // in meter per second
-	DATATYPE(acceleration,           1, 0,-2, 0, 0, 0, 0); // in meter per square meter
-	DATATYPE(jerk,                   1, 0,-3, 0, 0, 0, 0); // in meter per cubic meter
-	DATATYPE(force,                  1, 1,-2, 0, 0, 0, 0); // in newtons
-	DATATYPE(energy,                 2, 1,-2, 0, 0, 0, 0); // in newtonmeter
-	DATATYPE(impulse,                1, 1,-1, 0, 0, 0, 0); // in kilogram meter per second
-	DATATYPE(torque,                 2, 1,-2, 0, 0, 0, 0); // in kilogram square meter per square second
-	DATATYPE(pressure,              -1, 1,-2, 0, 0, 0, 0); // in pascals
-	DATATYPE(power,                  2, 1,-3, 0, 0, 0, 0); // in watts
-	DATATYPE(power_intensity,        0, 1,-3, 0, 0, 0, 0); // in watts per square meter
-	DATATYPE(density,               -3, 1, 0, 0, 0, 0, 0); // in kilograms per cubic meter
-	DATATYPE(electric_potential,     2, 1,-3, 0,-1, 0, 0); // in volts
-	DATATYPE(electric_charge,        0, 0, 1, 0, 1, 0, 0); // in amperes per second
-	DATATYPE(mass_per_area,         -2, 1, 0, 0, 0, 0, 0); // in kilograms per square meter
-	DATATYPE(mass_per_power,        -2, 0, 3, 0, 0, 0, 0); // in kilograms per watt
-	DATATYPE(angular_speed,          0, 0,-1, 0, 1, 0, 0); // in degrees per second
-	DATATYPE(specific_energy,        2, 0,-2, 0, 0, 0, 0); // in joules per kilogram
-	DATATYPE(energy_per_mol,         2, 1,-2, 0, 0, 1, 0); // in joules per mol
-	DATATYPE(volume_per_time_squared,3, 0,-2, 0, 0, 0, 0); // in cubic meter per square second
-	DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
-	DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
-	DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
-	DATATYPE(per_substance,          0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
+  // Derived SI Datatypes
+  // --------------------
+  DATATYPE(area,                   2, 0, 0, 0, 0, 0, 0); // in square meters
+  DATATYPE(volume,                 3, 0, 0, 0, 0, 0, 0); // in cubic meters
+  DATATYPE(velocity,               1, 0,-1, 0, 0, 0, 0); // in meters per second
+  DATATYPE(acceleration,           1, 0,-2, 0, 0, 0, 0); // in meters per square second
+  DATATYPE(jerk,                   1, 0,-3, 0, 0, 0, 0); // in meters per cubic second
+  DATATYPE(force,                  1, 1,-2, 0, 0, 0, 0); // in newtons
+  DATATYPE(energy,                 2, 1,-2, 0, 0, 0, 0); // in newtonmeters
+  DATATYPE(impulse,                1, 1,-1, 0, 0, 0, 0); // in kilogram meters per second
+  DATATYPE(torque,                 2, 1,-2, 0, 0, 0, 0); // in kilogram square meters per square second
+  DATATYPE(pressure,              -1, 1,-2, 0, 0, 0, 0); // in pascals
+  DATATYPE(power,                  2, 1,-3, 0, 0, 0, 0); // in watts
+  DATATYPE(power_intensity,        0, 1,-3, 0, 0, 0, 0); // in watts per square meter
+  DATATYPE(density,               -3, 1, 0, 0, 0, 0, 0); // in kilograms per cubic meter
+  DATATYPE(electric_potential,     2, 1,-3, 0,-1, 0, 0); // in volts
+  DATATYPE(electric_charge,        0, 0, 1, 0, 1, 0, 0); // in amperes per second
+  DATATYPE(mass_per_area,         -2, 1, 0, 0, 0, 0, 0); // in kilograms per square meter
+  DATATYPE(mass_per_power,        -2, 0, 3, 0, 0, 0, 0); // in kilograms per watt
+  DATATYPE(specific_energy,        2, 0,-2, 0, 0, 0, 0); // in joules per kilogram
+  DATATYPE(energy_per_mol,         2, 1,-2, 0, 0, 1, 0); // in joules per mol
+  DATATYPE(volume_per_time_squared,3, 0,-2, 0, 0, 0, 0); // in cubic meters per square second
+  DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
+  DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
+  DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
+  DATATYPE(per_substance,          0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
 
-	// Dimensionless Datatypes
-	// -----------------------
-	typedef double dimensionless;   ///< holds a quantity without any unit, e.g. 42
-	typedef long double angle;      ///< holds a dimensionless angle, e.g. 3.1415
+  // Digital Datatypes
+  // -----------------
+  DATATYPE(data_size,              0, 0, 0, 0, 0, 0, 0); // in bits
+
+  // Dimensionless Datatypes
+  // -----------------------
+  typedef long double angle;      ///< holds a dimensionless angle, e.g. 3.1415
+  typedef double dimensionless;   ///< holds a quantity without any unit, e.g. 42
 
 } // end of namespace
 
