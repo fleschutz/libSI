@@ -55,6 +55,7 @@ namespace SI {
   // Digital Datatypes
   // -----------------
   DATATYPE(data_size,              0, 0, 0, 0, 0, 0, 0); // in bits
+  DATATYPE(data_speed,             0, 0,-1, 0, 0, 0, 0); // in bits per second
 
   // Dimensionless Datatypes
   // -----------------------
