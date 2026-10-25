@@ -27,5 +27,5 @@ void conversion_examples() {
 
     std::string equiv = to_equivalent(distance); // <- convert length to an equivalent string (="45.93yd")
 
-    std::string progress = to_percentage(distance, 420_m); // <- convert lengths to percentage string (="10%")
+    std::string progress = to_percentage(distance, 420_m); // <- convert length to percentage string (="10%")
 }
