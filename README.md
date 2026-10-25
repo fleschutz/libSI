@@ -39,7 +39,7 @@ int main() {
 | Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 
 | Datasets              | *chemical_elements array*                 | 📂[datasets](datasets/) subfolder     |
 | Examples              | [console output](docs/console_output.txt) | 📂[examples](examples/) subfolder     |
-| Documentation         |                                           | [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
+| Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
 
 
 💡 Q & A
