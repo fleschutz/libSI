@@ -38,7 +38,7 @@ int main() {
 | Conversions           | *SI::to_string()*                         | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 
 | Datasets              | *for (auto& e : dataset::chemical_elements) { ...*  | 📂[datasets](datasets/) subfolder     |
-| Examples              | [console output](docs/console_output.txt) | 📂[examples](examples/) subfolder     |
+| Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/) subfolder     |
 | Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
 
 
@@ -52,7 +52,7 @@ int main() {
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
-**Which #include to use?** Use the convenient *#include <SI/core>* to include the 6 core header files, <SI/all> to include all, otherwise pick the necessary header files.
+**Which #include to use?** Use the convenient *#include <SI/core>* for the 6 core header files, <SI/all> to include all header files, otherwise pick the necessary one only.
 
 **How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
 
