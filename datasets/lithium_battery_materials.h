@@ -87011,5 +87011,5 @@ const lithium_battery_material_details lithium_battery_materials[] {      // NOT
 {"Li95Mn16O64",3,true,-0.07922306474304537,0.44910763255273034,-0.8682128617659177,false,-0.8397340483671881,3.6859921403498035,"['Li', 'Mn', 'O']"},
 }; // (10 columns x 86989 rows = 869890 cells)
 
-} // end of namespace 'dataset'
+} // end of namespace 
 

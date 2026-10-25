@@ -153,4 +153,4 @@ const chemical_element_details chemical_elements[] { // NOTE: 00=empty or unknow
 {118,"Og","Oganesson",18,7,"p",7,294_Da,0,5,00_degC,350_degC,00,00,00,00_pm,00_pm,00_pm,00_kJ_per_mol,true},
 }; // (20 columns x 118 rows = 2360 cells)
 
-} // end of namespace 'dataset'
+} // end of namespace

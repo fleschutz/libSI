@@ -39262,5 +39262,5 @@ const exoplanet_details exoplanets[] {     // NOTE: 00=empty or unknown field
 {"xi Aql b","xi Aql",1,1,136.97_days,0.625_au,00,00,0.059,00,00_K,56.1858_pc},
 }; // (12 columns x 39235 rows = 470820 cells)
 
-} // end of namespace 'dataset'
+} // end of namespace
 

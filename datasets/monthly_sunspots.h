@@ -3280,5 +3280,5 @@ const monthly_sunspot_details monthly_sunspots[] {      // NOTE: 00=empty or unk
 {"2021-01-31",10.4f},
 }; // (2 columns x 3266 rows = 6532 cells)
 
-} // end of namespace 'dataset'
+} // end of namespace 
 

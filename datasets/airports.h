@@ -5017,5 +5017,5 @@ const airport_details airports[] {      // NOTE: 00=empty or unknown field
 {"Knutson Airport",880_ft,47.79280090332031_deg,-97.15370178222656_deg},
 }; // (4 columns x 4999 rows = 19996 cells)
 
-} // end of namespace 'dataset'
+} // end of namespace
 

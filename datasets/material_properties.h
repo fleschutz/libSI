@@ -59,4 +59,4 @@ const material_property_details material_propertys[] {      // NOTE: 00=empty or
 {"Tungsten Carbide (WC)","ceramic",50.00 ,15.5_g_per_m³,550_GPa,270_GPa,0.21,6800_MPa,35_MPa,0.,3.7,5.8},
 }; // (12 columns x 33 rows = 396 cells)
 
-} // end of namespace 'dataset'
+} // end of namespace 

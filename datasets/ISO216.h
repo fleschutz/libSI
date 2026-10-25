@@ -77,4 +77,4 @@ namespace ISO216 {
 	const length C10_width  = 28_mm;
 	const length C10_height = 40_mm;
 
-} // namespace ISO216
+} // end of namespace

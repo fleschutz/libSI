@@ -60,5 +60,5 @@ namespace Earth {
   // Various
   const dimensionless population =            8.2e9;
 
-} // end of namespace Earth
+} // end of namespace
 

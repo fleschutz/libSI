@@ -13,4 +13,4 @@ namespace ISO668 {
 	const mass container_1AA_max_gross_mass = 36'000_kg;
 	// TODO
 
-} // namespace ISO668
+} // end of namespace

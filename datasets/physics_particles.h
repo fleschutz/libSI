@@ -72,4 +72,4 @@ const particle_details particles[] {       // NOTE: 00=empty or unknown field
 {3334,"Omega","omega-",-1.,4,"sss",1672.45_Da,0.29_kg,0.29_kg,8.02e-12_m,1.1e-13_m,1.1e-13_m},
 }; // (12 columns x 47 rows = 564 cells)
 
-} // end of namespace 'dataset'
+} // end of namespace
