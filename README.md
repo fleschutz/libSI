@@ -2,11 +2,11 @@
 =============================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
-Apply math with libSI in C++ correct, precise, and convenient. Features are: 
+Apply math with libSI in C++ correct, precise, and convenient. Top features are: 
 
-- **Strong type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
+- **Type-safety** for datatypes, constants, formulas, and literals (can't add a mass to a length).
 - **Precision** by 64-bit FP datatypes, calculations on SI base units, and CODATA 2022 constants.
-- **Maximum speed** without runtime overhead. It just compiles to simple doubles.
+- **Full speed:** no runtime overhead and compile-time conversions whenever possible.
 - **Supports** SI units, Imperial/US units, digital units, astronomical units, and a lot more.
 - **Supports** implicit scale conversion when mixing different units, e.g. 1_km + 1_m + 1_ft + 1_in.
 - **Modern C++ 17:** header-only, own namespace, no external dependencies.
