@@ -5,10 +5,10 @@
 Apply math with libSI in C++ correct, precise, and convenient. Top features are: 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
+- **Test-safety** by unit tests executed at compile-time and on each libSI's commit by by [GitHub Actions](https://github.com/fleschutz/libSI/actions).
 - **Precision** by 64-bit floating points, calculations on SI base units, and CODATA 2022 constants.
-- **Full speed:** no runtime overhead and compile-time conversions whenever possible.
-- **Supports** SI units, Imperial/US units, digital units, astronomical units, and a lot more.
-- **Supports** implicit scale conversion when mixing different units, e.g. 1_km + 1_m + 1_ft + 1_in.
+- **Full speed:** no runtime overhead and implicit compile-time conversions whenever possible.
+- **Support** for SI units, Imperial/US units, digital units, astronomical units, and a lot more.
 - **Modern C++ 17:** header-only, own namespace, light-weight, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
@@ -25,7 +25,10 @@ int main() {
 }
 ```
 
-| 🧱 Building Blocks   | Example                                   | File to Include                        |
+🧱 Building Blocks
+-------------------
+
+| Component             | Example                                   | Location                               |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
 | Datatypes             | *SI::mass*                                | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *SI::ounces*                              | [<SI/units.h>](SI/units.h)             |
@@ -33,14 +36,10 @@ int main() {
 | Constants             | *SI::constant::speed_of_light_in_vacuum*  | [<SI/constants.h>](SI/constants.h)     |
 | Formulas              | *SI::formula::wavelength()*               | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *SI::to_string()*                         | [<SI/conversions.h>](SI/conversions.h) |
-
-
-📦 Components
---------------
-- **Examples** in the 📂[examples](examples/) subfolder, writing this to the: [console output](docs/console_output.txt)
-- **Unit tests** in [<SI/tests.h>](SI/tests.h), executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)
-- **Datasets**  in the 📂[datasets](datasets/) subfolder, e.g. *chemical_elements*.
-- **Documentation** in the [reference manual](https://fleschutz.github.io/libSI/docs/html/)
+| Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 
+| Datasets              | *chemical_elements array*                 | 📂[datasets](datasets/) subfolder     |
+| Examples              | [console output](docs/console_output.txt) | 📂[examples](examples/) subfolder     |
+| Documentation         |                                           | [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
 
 
 💡 Q & A
