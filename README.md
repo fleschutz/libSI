@@ -9,7 +9,7 @@ Apply math with libSI in C++ correct, precise, and convenient. Top features are:
 - **Full speed:** no runtime overhead and compile-time conversions whenever possible.
 - **Supports** SI units, Imperial/US units, digital units, astronomical units, and a lot more.
 - **Supports** implicit scale conversion when mixing different units, e.g. 1_km + 1_m + 1_ft + 1_in.
-- **Modern C++ 17:** header-only, own namespace, no external dependencies.
+- **Modern C++ 17:** header-only, own namespace, light-weight, no external dependencies.
 - **Cross-platform** support for Linux (clang/gcc, x86/arm) and Windows (VS2017-VS2026) with [CMake support](docs/CMake_support.md).
 
 🔎 Example
