@@ -245,9 +245,14 @@ namespace SI {
 
   inline void check_digital_units() {
 	// bits...
+	static_assert(1_TBit == 1000_GBit);
+	static_assert(1_GBit == 1000_MBit);
+	static_assert(1_MBit == 1000_kBit);
+	static_assert(1_kBit == 1000_bits);
 	// bits per seconds...
-	static_assert(1_Mbps == 1000_Kbps);
+	static_assert(1_Tbps == 1000_Gbps);
 	static_assert(1_Gbps == 1000_Mbps);
+	static_assert(1_Mbps == 1000_Kbps);
 	// bytes... (metric prefixes)
 	static_assert(1_kB == 1000_bytes);
 	static_assert(1_MB == 1000_kB);
@@ -258,7 +263,7 @@ namespace SI {
 	static_assert(1_ZB == 1000_EB);
 	// bytes... (binary prefixes)
 	static_assert(1_KiB == 1024_bytes);
-	static_assert(1_MiB == 1024_kiB);
+	static_assert(1_MiB == 1024_KiB);
 	static_assert(1_GiB == 1024_MiB);
 	static_assert(1_TiB == 1024_GiB);
 	// bytes per second... (metric prefixes)
