@@ -244,7 +244,11 @@ namespace SI {
   }
 
   inline void check_digital_units() {
-	// bytes absolute...
+	// bits...
+	// bits per seconds...
+	static_assert(1_Mbps == 1000_Kbps);
+	static_assert(1_Gbps == 1000_Mbps);
+	// bytes... (metric prefixes)
 	static_assert(1_kB == 1000_bytes);
 	static_assert(1_MB == 1000_kB);
 	static_assert(1_GB == 1000_MB);
@@ -252,25 +256,22 @@ namespace SI {
 	static_assert(1_PB == 1000_TB);
 	static_assert(1_EB == 1000_PB);
 	static_assert(1_ZB == 1000_EB);
-
-	static_assert(1_kiB == 1024_bytes);
+	// bytes... (binary prefixes)
+	static_assert(1_KiB == 1024_bytes);
 	static_assert(1_MiB == 1024_kiB);
 	static_assert(1_GiB == 1024_MiB);
 	static_assert(1_TiB == 1024_GiB);
-	// bytes per second...
+	// bytes per second... (metric prefixes)
 	static_assert(1_KBps == 1000_bytes_per_s);
 	static_assert(1_MBps == 1000_KBps);
 	static_assert(1_GBps == 1000_MBps);
 	static_assert(1_TBps == 1000_GBps);
 	static_assert(1_PBps == 1000_TBps);
-
+	// bytes per second... (binary prefixes)
 	static_assert(1_KiBps == 1024_bytes_per_s);
 	static_assert(1_MiBps == 1024_KiBps);
 	static_assert(1_GiBps == 1024_MiBps);
 	static_assert(1_TiBps == 1024_GiBps);
-	// bits per seconds...
-	static_assert(1_Mbps == 1000_Kbps);
-	static_assert(1_Gbps == 1000_Mbps);
   }
 
   inline void check_the_angles() {
