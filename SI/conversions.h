@@ -704,9 +704,9 @@ namespace SI
 		if (n >= 1_TiB)  return _fmt(n / 1_TiB, "TiB");
 		if (n >= 1_GiB)  return _fmt(n / 1_GiB, "GiB");
 		if (n >= 1_MiB)  return _fmt(n / 1_MiB, "MiB");
-		if (n >= 1_kiB)  return _fmt(n / 1_kiB, "kiB");
-		if (n >= 8_bit) return _fmt(n / 8_bit, "bytes");
-		if (n > 1_bit)  return _fmt(n / 1_bit, "bits");
+		if (n >= 1_KiB)  return _fmt(n / 1_KiB, "KiB");
+		if (n >= 8_bit)  return _fmt(n / 8_bit, "bytes");
+		if (n > 1_bit)   return _fmt(n / 1_bit, "bits");
 		return _fmt(n / 1_bit, "bit");
 	}
 

@@ -366,7 +366,7 @@ namespace SI {
 
   // Digital Units
   // -------------
-  // bits absolute...
+  // bits...
   SET(_bit,                            1, bits);   // 1_bit
   SET(_bits,                           1, bits);   // 2_bits
   SET(_kBit,                         1e3, bits);   // 1_kBit (kilobit)
@@ -378,24 +378,25 @@ namespace SI {
   SET(_Mbps,                         1e6, bits_per_second); // 1_Mbps (megabit/sec)
   SET(_Gbps,                         1e9, bits_per_second); // 1_Gbps (gigabit/sec)
   SET(_Tbps,                        1e12, bits_per_second); // 1_Tbps (terabit/sec)
-  // bytes absolute...
+  // bytes in metric prefixes...
   SET(_byte,                           1, bytes);   // 1_byte
   SET(_bytes,                          1, bytes);   // 2_bytes
   SET(_kB,                           1e3, bytes);   // 1_kB  (kilobyte)
-  SET(_kiB,                         1024, bytes);   // 1_kiB (kibibyte)
   SET(_MB,                           1e6, bytes);   // 1_MB  (megabyte)
-  SET(_MiB,                    1'048'576, bytes);   // 1_MiB (mibibyte)
   SET(_GB,                           1e9, bytes);   // 1_GB  (gigabyte)
-  SET(_GiB,                1'073'741'824, bytes);   // 1_GiB (gibibyte)
   SET(_TB,                          1e12, bytes);   // 1_TB  (terabyte)
-  SET(_TiB,            1'099'511'627'776, bytes);   // 1_TiB (tebibyte)
   SET(_PB,                          1e15, bytes);   // 1_PB  (petabyte)
-  SET(_PiB,        1'125'899'906'842'624, bytes);   // 1_PiB (pebibyte)
   SET(_EB,                          1e18, bytes);   // 1_EB  (exabyte)
   SET(_ZB,                          1e21, bytes);   // 1_ZB  (zettabyte)
   SET(_YB,                          1e24, bytes);   // 1_ZY  (yottabyte)
   SET(_RB,                          1e27, bytes);   // 1_RY  (ronnabyte)
   SET(_QB,                          1e30, bytes);   // 1_QY  (quettabyte)
+  // bytes in binary prefixes...
+  SET(_KiB,                         1024, bytes);   // 1_KiB (kibibyte)
+  SET(_MiB,                    1'048'576, bytes);   // 1_MiB (mibibyte)
+  SET(_GiB,                1'073'741'824, bytes);   // 1_GiB (gibibyte)
+  SET(_TiB,            1'099'511'627'776, bytes);   // 1_TiB (tebibyte)
+  SET(_PiB,        1'125'899'906'842'624, bytes);   // 1_PiB (pebibyte)
   // bytes per second...
   SET(_bytes_per_s,                    1, bytes_per_second); // 1_bytes_per_s
   SET(_KBps,                         1e3, bytes_per_second); // 1_KBps  (kilobyte/sec)
