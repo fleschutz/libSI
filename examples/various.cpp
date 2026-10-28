@@ -1,5 +1,5 @@
 /// @file   examples/various.cpp
-/// @brief  Provides 30 various examples using libSI
+/// @brief  Provides 31 various examples using libSI
 
 #include <iostream>
 #include <datasets/all.h>
@@ -245,5 +245,10 @@ void various_examples() {
             }
         }
     }
-    cout << nearest1 << " and " << nearest2 << " with only " << nearestDistance << " in between" << endl << endl;
+    cout << nearest1 << " and " << nearest2 << " with only " << nearestDistance << " in between" << endl;
+
+
+    cout << "31. What's the area of A4 paper? ";
+    auto A4_area = ISO216.A4_width * ISO216.A4_height;
+    cout << A4_area << endl << endl;
 }
