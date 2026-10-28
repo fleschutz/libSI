@@ -580,8 +580,8 @@ namespace SI
 		return _fmt(d / 1_kg_per_m³, "kg/m³");
 	}
 
-	/// @brief Returns the data size as string in bits and bytes.
-	FUNC std::string to_string(const data_size n)
+	/// @brief Returns the digital size as string in bits and bytes.
+	FUNC std::string to_string(const digital_size n)
 	{
 		if (n >= 1_EB)  return _fmt(n / 1_EB, "EB");
 		if (n >= 1_PB)  return _fmt(n / 1_PB, "PB");
@@ -594,7 +594,7 @@ namespace SI
 		return _fmt(n / 1_bit, "bit");
 	}
 
-	FUNC std::ostream& operator<<(std::ostream& os, const data_size n)
+	FUNC std::ostream& operator<<(std::ostream& os, const digital_size n)
 	{
 		os << to_string(n);
 		return os;
@@ -698,7 +698,7 @@ namespace SI
 	}
 
 	/// @brief Returns a data size equivalent as string.
-	FUNC std::string to_equivalent(const data_size n)
+	FUNC std::string to_equivalent(const digital_size n)
 	{
 		if (n >= 1_PiB)  return _fmt(n / 1_PiB, "PiB");
 		if (n >= 1_TiB)  return _fmt(n / 1_TiB, "TiB");
@@ -732,7 +732,7 @@ namespace SI
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(const data_size part, const data_size total)
+	FUNC std::string to_percentage(const digital_size part, const digital_size total)
 	{
 		return _fmt((part / total) * 100.0, "%", to_percentage_format);
 	}
