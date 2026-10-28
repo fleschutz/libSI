@@ -112,22 +112,4 @@ void astronomy_examples() {
     auto Sagittarius_A_mass = 8.54e36_kg;
     auto radius             = formula::Schwarzschild_radius(Sagittarius_A_mass);
     cout << radius << " or " << to_equivalent(radius) << " (Schwarzschild radius)" << endl << endl;
-
-#if 0 // TODO
-    cout << "14. The current ISS position is at.. ";
-    // orbital parameters
-    auto ISS_perigee         = 416_km;
-    auto ISS_apogee          = 425_km;
-    auto ISS_inclination     = 51.6_deg;
-    auto ISS_period          = 93.0_min;
-    auto ISS_mean_motion     = 15.48747692; // revolutions per day
-
-    auto ISS_timestamp       = 1791031818_s;    // 2026-10-03 14:50:00 UTC
-    auto ISS_latitude        = -6.1820_deg;     // at timestamp
-    auto ISS_longitude       = 105.1933_deg;    // at timestamp
-    auto ISS_altitude        = 418_km;          // varies 410...420km
-    auto ISS_speed           = 27'588_km_per_h;
-    auto ISS_eccentricity    = 0.0007;
-    auto ISS_semi_major_axis = 6'792_km;
-#endif
 }
