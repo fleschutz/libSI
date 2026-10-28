@@ -1,7 +1,7 @@
 /// @file      SI/tests.h
 /// @brief     Contains 210 unit tests at compile-time to verify everything
-/// @details   Categories are: features, datatypes, base units, derived units, astronomical units, imperial units,
-///                            digital units, various units, functions and templates
+/// @details   Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units,
+///                            Imperial units, digital units, various units, functions and templates
 
 #pragma once
 #include <cassert>
@@ -28,19 +28,20 @@ namespace SI {
     static_assert( 4 * 4_bits == 2_bytes );
   }
 
-  inline void check_basic_datatypes() {
+  inline void check_C_datatypes() {
     static_assert(sizeof(char) <= sizeof(short));
     static_assert(sizeof(short) <= sizeof(int));
     static_assert(sizeof(int) <= sizeof(long));
     static_assert(sizeof(long) <= sizeof(long long));
     static_assert(sizeof(float) <= sizeof(double));
     static_assert(sizeof(double) <= sizeof(long double));
-
     static_assert(sizeof(char) == sizeof(unsigned char));
     static_assert(sizeof(short) == sizeof(unsigned short));
     static_assert(sizeof(int) == sizeof(unsigned int));
     static_assert(sizeof(long) == sizeof(unsigned long));
+  }
 
+  inline void check_SI_datatypes() {
     static_assert(sizeof(length) == sizeof(SIdouble));
     static_assert(sizeof(mass) == sizeof(SIdouble));
     static_assert(sizeof(time) == sizeof(SIdouble));
@@ -48,6 +49,8 @@ namespace SI {
     static_assert(sizeof(current) == sizeof(SIdouble));
     static_assert(sizeof(substance) == sizeof(SIdouble));
     static_assert(sizeof(luminous_intensity) == sizeof(SIdouble));
+    static_assert(sizeof(digital_size) == sizeof(SIdouble));
+    static_assert(sizeof(digital_speed) == sizeof(SIdouble));
     static_assert(sizeof(dimensionless) == sizeof(SIdouble));
   }
 
