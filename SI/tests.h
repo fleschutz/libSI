@@ -24,7 +24,8 @@ namespace SI {
     static_assert( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );
     static_assert( 1_A * 1_h == 3600_C );
     static_assert( 1_Ah == 3600_C );
-    static_assert( 1_byte == 8_bits );
+    static_assert( 8 * 1_bit == 1_byte );
+    static_assert( 4 * 4_bits == 2_bytes );
   }
 
   inline void check_basic_datatypes() {
