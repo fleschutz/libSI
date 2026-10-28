@@ -10,7 +10,7 @@
 
 namespace SI {
 
-  inline void check_some_features() { // just shows what's possible, the serious checks follow below
+  inline void check_features() { // shows what's possible - the serious checks follow below
     static_assert( 3_m == meters(3) );
     static_assert( 3_m == 3 * 1_m );
     static_assert( 1_km + 1_m + 1_dm + 1_cm + 1_mm == 1001.111_m );
@@ -24,6 +24,7 @@ namespace SI {
     static_assert( (0_degC + 32_degF + 491.67_degR + 273.15_K) / 4 == 273.15_K );
     static_assert( 1_A * 1_h == 3600_C );
     static_assert( 1_Ah == 3600_C );
+    static_assert( 1_byte == 8_bits );
   }
 
   inline void check_basic_datatypes() {
@@ -245,22 +246,24 @@ namespace SI {
 
   inline void check_digital_units() {
 	// bits...
-	static_assert(1_TBit == 1000_GBit);
-	static_assert(1_GBit == 1000_MBit);
-	static_assert(1_MBit == 1000_kBit);
+	static_assert(1_bit  == 0.001_kBit);
 	static_assert(1_kBit == 1000_bits);
+	static_assert(1_MBit == 1000_kBit);
+	static_assert(1_GBit == 1000_MBit);
+	static_assert(1_TBit == 1000_GBit);
 	// bits per seconds...
 	static_assert(1_Tbps == 1000_Gbps);
 	static_assert(1_Gbps == 1000_Mbps);
 	static_assert(1_Mbps == 1000_Kbps);
 	// bytes... (metric prefixes)
-	static_assert(1_kB == 1000_bytes);
-	static_assert(1_MB == 1000_kB);
-	static_assert(1_GB == 1000_MB);
-	static_assert(1_TB == 1000_GB);
-	static_assert(1_PB == 1000_TB);
-	static_assert(1_EB == 1000_PB);
-	static_assert(1_ZB == 1000_EB);
+	static_assert(1_byte == 8_bits);
+	static_assert(1_kB   == 1000_bytes);
+	static_assert(1_MB   == 1000_kB);
+	static_assert(1_GB   == 1000_MB);
+	static_assert(1_TB   == 1000_GB);
+	static_assert(1_PB   == 1000_TB);
+	static_assert(1_EB   == 1000_PB);
+	static_assert(1_ZB   == 1000_EB);
 	// bytes... (binary prefixes)
 	static_assert(1_KiB == 1024_bytes);
 	static_assert(1_MiB == 1024_KiB);
