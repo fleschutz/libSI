@@ -6,7 +6,7 @@
 
 #pragma once
 #include <SI/units.h>
-#define SET(_name, _quantity, _unit) constexpr auto _name = _unit(_quantity)
+#define SET(_name, _quantity, _unit) inline constexpr auto _name = _unit(_quantity)
 
 namespace SI { namespace constant {
 

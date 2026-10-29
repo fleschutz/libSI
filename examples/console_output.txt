@@ -7,7 +7,7 @@
  6. A car's braking distance from 100km/h on wet asphalt is... 64.3 m or 70.3 yd
  7. The sum of 1m/s + 1km/s + 1km/h + 1Mach + 1kn + 1mph + 1ft/min is... 1.3 km/s or 4.0 Mach
  8. The min/max/average/sum of an array of speeds is... min=18288.0 mm/h max=1.0 km/s avg=685.2 km/h sum=1.3 km/s
- 9. The download of 10TB at 1000MBit/s takes... 22.2 h
+ 9. The download of 10TB at 1GBit/s takes... 22.2 h
 10. Simulate a 1GB download at 100MB/s...0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 1.0 GB downloaded in 10.0 s
 
     === ASTRONOMY EXAMPLES ===
@@ -44,7 +44,7 @@
 16. The sound intensity of a 1W loudspeaker in 1m distance is... 79.6 mW/m² or 109.0 dB
 17. The max diving time in salt water in 10m depth using a 10l bottle is... 37.0 min
 18. The sum of 1m + 1km + 1nmi + 1ft + 1in is... 2.9 km
-19. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... 1.001e+30
+19. The sum of 1 byte + 1kB + 1MB + ... + 1QB is... 1001001001001.0 EB
 20. The radar's geometrical horizon from 30ft height is... 10.8 km or 6.7 mi
 21. The details of a 10m x 1m oak timber log are... 33.0 m² area, 7.9 m³ volume, 5.6 t weight, 84.3 GW
 22. The min cable wire size for 100m copper, 230V, 30A max are... 10.3 mm²
@@ -54,6 +54,7 @@
 26. How many wine bottles are needed for 1 hectoliter? 133.333
 27. The AC voltages within a tenth second are... 0.0 V, 220.0 V, 0.0 pV, -220.0 V, -0.0 pV, 220.0 V, -0.1 pV, -220.0 V, -0.1 pV, 220.0 V, 0.4 pV, -220.0 V, -0.8 pV, 220.0 V, 0.7 pV, -220.0 V, -0.1 pV, 220.0 V, -0.5 pV, -220.0 V, 
 28. Applying a perpendicular force of 500N to a 20cm long lever results in... 100.0 J of torque
-29. The distance between Singapore and Tokyo measures...5311.2 km or 3300.2 mi
-30. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0 m in between
+29. What's the total area and weight of 500 papers in A4 format (80g/m²)? 31.2 m² and 2.5 kg
+30. The distance between Singapore and Tokyo measures...5311.2 km or 3300.2 mi
+31. The nearest airport neighbours are...Confer's Place Airport and Dick's Strip with only 30.0 m in between
 
