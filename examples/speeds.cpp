@@ -25,7 +25,7 @@ void speed_examples() {
 
     cout << " 3. The free fall time from Burj Khalifa tower (828m) is... ";
     auto tower_height    = 828_m;
-    auto free_fall_time  = formula::time_of_free_fall(tower_height, constant::Earth_gravity);
+    auto free_fall_time  = time_of_free_fall(tower_height, constant::Earth_gravity);
     cout << free_fall_time << endl;
 
 
@@ -36,13 +36,13 @@ void speed_examples() {
 
     cout << " 5. A car's braking distance from 100km/h on dry asphalt is... ";
     auto braking_on_dry_asphalt = 8_m_per_s²;
-    auto dry_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
+    auto dry_distance           = braking_distance(100_km_per_h, 0_km_per_h, braking_on_dry_asphalt);
     cout << dry_distance << " or " << to_equivalent(dry_distance) << endl;
 
 
     cout << " 6. A car's braking distance from 100km/h on wet asphalt is... ";
     auto braking_on_wet_asphalt = 6_m_per_s²;
-    auto wet_distance           = formula::braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
+    auto wet_distance           = braking_distance(100_km_per_h, 0_km_per_h, braking_on_wet_asphalt);
     cout << wet_distance << " or " << to_equivalent(wet_distance) << endl;
 
 
@@ -54,8 +54,8 @@ void speed_examples() {
     cout << " 8. The min/max/average/sum of an array of speeds is...";
     velocity speeds[] = { 1_m_per_s, 1_km_per_s, 1_km_per_h, 1_Mach, 1_kn, 1_mph, 1_ft_per_min };
     int n = sizeof(speeds) / sizeof(speeds[0]);
-    cout << " min=" << formula::min_of_array(speeds, n) << " max=" << formula::max_of_array(speeds, n)
-         << " avg=" << formula::avg_of_array(speeds, n) << " sum=" << formula::sum_of_array(speeds, n)
+    cout << " min=" << min_of_array(speeds, n) << " max=" << max_of_array(speeds, n)
+         << " avg=" << avg_of_array(speeds, n) << " sum=" << sum_of_array(speeds, n)
          << endl;
 
 

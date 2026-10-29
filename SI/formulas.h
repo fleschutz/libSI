@@ -1,12 +1,12 @@
 /// @file     SI/formulas.h
-/// @brief    Defines 77 formulas based on SI datatypes, e.g. SI::formula::wavelength().
+/// @brief    Defines 77 formulas based on SI datatypes, e.g. SI::area_of_circle().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once
 #include <SI/constants.h>
 #define FUNC [[nodiscard]] inline
 
-namespace SI { namespace formula {
+namespace SI { 
 
 	// Formulas for 2D
 	// ---------------
@@ -113,7 +113,7 @@ namespace SI { namespace formula {
 	}
 
 	/// @brief Calculates the shortest distance between two points in 2D.
-	FUNC length distance(const length x1, const length y1, const length x2, const length y2)
+	FUNC length distance_formula(const length x1, const length y1, const length x2, const length y2)
 	{
 		const length dx = x2 - x1;
 		const length dy = y2 - y1;
@@ -198,7 +198,7 @@ namespace SI { namespace formula {
 	}
 
 	/// @brief Calculates the kinetic energy of a non-rotating object of mass (m) traveling at velocity (v).
-	FUNC energy kinetic_energy(const mass m, const velocity v)
+	FUNC energy kinetic_energy_formula(const mass m, const velocity v)
 	{
 		return 0.5 * m * square(v);
 	}
@@ -280,7 +280,7 @@ namespace SI { namespace formula {
 	}
 
 	/// @brief Calculates the glide path from horizontal distance (h) and vertical change (v).
-	FUNC angle glide_path(const length h, const length v)
+	FUNC angle glide_path_formula(const length h, const length v)
 	{
 		return atan2(v, h);
 	}
@@ -336,7 +336,7 @@ namespace SI { namespace formula {
 	}
 
 	/// @brief Calculates the theoretical local gravity at latitude (lat) and height above MSL (h).
-	FUNC acceleration local_gravity(const angle lat, const length h)
+	FUNC acceleration local_gravity_formula(const angle lat, const length h)
 	{
 		auto IGF = 9.780327_m_per_s² * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat)); // International Gravity Formula
 		auto FAC = -3.086e-6_m_per_s² * meters(h); // Free Air Correction
@@ -352,7 +352,7 @@ namespace SI { namespace formula {
 	// Various Formulas
 	// ----------------
 	/// @brief Calculates the wavelength from velocity (v) and frequency (f).
-	FUNC length wavelength(const velocity v, const frequency f)
+	FUNC length wavelength_formula(const velocity v, const frequency f)
 	{
 		return v / f;
 	}
@@ -445,7 +445,7 @@ namespace SI { namespace formula {
 	}
 
 	/// @brief Calculates the human body-mass index (BMI) from weight (w) and height (h).
-	FUNC dimensionless BMI(const mass w, const length h)
+	FUNC dimensionless BMI_formula(const mass w, const length h)
 	{
 		return (w / square(h)) / 1_kg_per_m²;
 	}
@@ -457,7 +457,7 @@ namespace SI { namespace formula {
 	}
 
 	/// @brief Calculates the sound intensity of a sound source from a distance.
-	FUNC auto sound_intensity(const power power_of_sound_source, const length distance_from_sound_source)
+	FUNC auto sound_intensity_formula(const power power_of_sound_source, const length distance_from_sound_source)
 	{
 		return power_of_sound_source / (4.0 * constant::pi * square(distance_from_sound_source));
 	}
@@ -547,6 +547,6 @@ namespace SI { namespace formula {
 	// 10. https://www.vcalc.com/wiki/ballistic-travel-time
 	// 11. https://best-calculators.com/tools/latitude-longitude-distance-calculator/
 
-} } // end of namespaces
+} // end of namespace
  
 #undef FUNC

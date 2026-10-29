@@ -17,21 +17,21 @@ void various_examples() {
     cout << " 2. The kinetic energy of a mid-size 5000lb SUV at 30mph is... ";
     auto SUV_mass   = 5000_lb; 
     auto SUV_speed  = 30_mph;
-    auto SUV_energy = formula::kinetic_energy(SUV_mass, SUV_speed);
+    auto SUV_energy = kinetic_energy_formula(SUV_mass, SUV_speed);
     cout << SUV_energy << " or " << to_equivalent(SUV_energy) << endl;
 
 
     cout << " 3. The local gravity at Mount Everest's peak is... ";
     auto Everest_latitude = 27.986065_deg;
     auto Everest_height   = 8848_m;
-    auto local_gravity    = formula::local_gravity(Everest_latitude, Everest_height);
-    cout << local_gravity << endl;
+    auto Everest_gravity  = local_gravity_formula(Everest_latitude, Everest_height);
+    cout << Everest_gravity << endl;
 
 
     cout << " 4. Donald Trump's body-mass index (BMI) is... ";
     auto Donalds_weight = 102_kg;
     auto Donalds_height = 190_cm;
-    cout << formula::BMI(Donalds_weight, Donalds_height) << endl;
+    cout << BMI_formula(Donalds_weight, Donalds_height) << endl;
 
 
     cout << " 5. The fuel efficiency of a car driving 400 miles and consuming 15 US gallons is... ";
@@ -43,7 +43,7 @@ void various_examples() {
 
     cout << " 6. The frequency and wavelength of the high 'c' music note is...";
     auto high_c_frequency = 1046.5_Hz;
-    auto wavelength       = formula::wavelength(constant::speed_of_sound, high_c_frequency);
+    auto wavelength       = wavelength_formula(constant::speed_of_sound, high_c_frequency);
     cout << high_c_frequency << " and " << wavelength << " or " << to_equivalent(wavelength) << endl;
 
 
@@ -70,22 +70,22 @@ void various_examples() {
     cout << "10. An aircraft glide path on final at 10NM distance in 3000ft height is... ";
     auto distance_on_final = 10_nmi;
     auto height_on_final   = 3000_ft;
-    auto glide_path        = formula::glide_path(distance_on_final, height_on_final);
+    auto glide_path        = glide_path_formula(distance_on_final, height_on_final);
     cout << glide_path << endl;
 
 
     cout << "11. The windchill temperature of 5°C air temperature at 55km/h wind is... ";
     auto air_temperature  = 5_degC;
     auto wind_speed       = 55_km_per_h;
-    auto windchill_temp   = formula::windchill_temperature(air_temperature, wind_speed);
+    auto windchill_temp   = windchill_temperature(air_temperature, wind_speed);
     cout << windchill_temp << " or " << to_equivalent(windchill_temp) << endl;
 
 
     cout << "12. The surface area and volume of a 30cm x 1cm pizza is... ";
     auto pizza_radius  = 30_cm / 2;
     auto pizza_height  = 1_cm;
-    auto pizza_area    = formula::area_of_circle(pizza_radius);
-    auto pizza_volume  = formula::volume_of_cylinder(pizza_radius, pizza_height);
+    auto pizza_area    = area_of_circle(pizza_radius);
+    auto pizza_volume  = volume_of_cylinder(pizza_radius, pizza_height);
     cout << pizza_area << " and " << pizza_volume << endl;
 
 
@@ -100,9 +100,9 @@ void various_examples() {
 
     cout << "14. The surface area and volume of a soccer ball is... ";
     auto ball_circumference  = 70_cm; // (69-71cm for FIFA ball size 5)
-    auto ball_radius         = formula::radius_of_circumference(ball_circumference);
-    auto ball_area           = formula::area_of_sphere(ball_radius);
-    auto ball_volume         = formula::volume_of_sphere(ball_radius);
+    auto ball_radius         = radius_of_circumference(ball_circumference);
+    auto ball_area           = area_of_sphere(ball_radius);
+    auto ball_volume         = volume_of_sphere(ball_radius);
     cout << ball_area << " and " << ball_volume << endl;
 
 
@@ -111,14 +111,14 @@ void various_examples() {
     dimensionless lift_coefficient = 1.3939;
     auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
     auto air_speed                 = 284_km_per_h;
-    auto lift_force                = formula::lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed);
+    auto lift_force                = lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed);
     cout << lift_force << endl;
 
 
     cout << "16. The sound intensity of a 1W loudspeaker in 1m distance is... ";
     auto loudspeaker_power     = 1_W;
     auto loudspeaker_distance  = 1_m;
-    auto sound_intensity       = formula::sound_intensity(loudspeaker_power, loudspeaker_distance);
+    auto sound_intensity       = sound_intensity_formula(loudspeaker_power, loudspeaker_distance);
     cout << sound_intensity << " or " << to_equivalent(sound_intensity) << endl;
 
 
@@ -156,8 +156,8 @@ void various_examples() {
     auto log_diameter   = 1_m;
     auto dry_oak_weight = 710_kg_per_m³; 
     auto dry_oak_power  = 4.2_kWh_per_kg;
-    auto area           = formula::area_of_cylinder(log_diameter / 2, log_length);
-    auto volume         = formula::volume_of_cylinder(log_diameter / 2, log_length);
+    auto area           = area_of_cylinder(log_diameter / 2, log_length);
+    auto volume         = volume_of_cylinder(log_diameter / 2, log_length);
     auto weight         = volume * dry_oak_weight;
     auto power          = weight * dry_oak_power;
     cout << area << " area, " << volume << " volume, " << weight << " weight, " << power << endl;
@@ -183,7 +183,7 @@ void various_examples() {
 
     cout << "24. The frequencies and wavelengths of all musical notes are... ";
     for (auto& note : dataset::musical_notes) {
-        auto wavelength = formula::wavelength(constant::speed_of_sound, note.frequency);
+        auto wavelength = wavelength_formula(constant::speed_of_sound, note.frequency);
         cout << note.name << (char)('0' + note.octave) << "=" << note.frequency << "," << wavelength << " ";
     }
     cout << endl;
@@ -207,7 +207,7 @@ void various_examples() {
     for (auto time = 0.0_s; time < 0.1_s; time += 0.005_s) {
         auto peak_voltage = 220_V;
         auto sample_rate  = 50_Hz;
-        cout << formula::sine_wave(peak_voltage, sample_rate, time) << ", ";
+        cout << sine_wave(peak_voltage, sample_rate, time) << ", ";
     }
     cout << endl;
 
@@ -225,7 +225,7 @@ void various_examples() {
     auto Singapore_long = 103.8198_deg;
     auto Tokyo_lat      = 35.6762_deg;
     auto Tokyo_long     = 139.6503_deg;
-    auto dist           = formula::distance_on_sphere(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long);
+    auto dist           = distance_on_sphere(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long);
     cout << dist << " or " << to_equivalent(dist) << endl;
 
 
@@ -237,7 +237,7 @@ void various_examples() {
         for (auto& airport2 : dataset::airports) { 
             if (&airport1 == &airport2)
                 continue;
-            auto distance = formula::distance_on_sphere(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);
+            auto distance = distance_on_sphere(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);
 	    if (distance < nearestDistance) {
 		    nearestDistance = distance;
 		    nearest1 = airport1.name;

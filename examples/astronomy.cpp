@@ -24,28 +24,28 @@ void astronomy_examples() {
     cout << " 3. The attractive force between Sun and Earth is... ";
     auto Sun_mass    = 1.988416E30_kg;
     auto Earth_mass  = 5.9722E24_kg;
-    cout << formula::gravitational_attractive_force(Sun_mass, Earth_mass, Earth_to_Sun_distance) << endl;
+    cout << gravitational_attractive_force(Sun_mass, Earth_mass, Earth_to_Sun_distance) << endl;
 
 
     cout << " 4. The attractive force between Earth and Moon is... ";
     auto Moon_mass              = 7.346E22_kg;
     auto Earth_to_Moon_distance = 384'399_km;
-    cout << formula::gravitational_attractive_force(Earth_mass, Moon_mass, Earth_to_Moon_distance) << endl;
+    cout << gravitational_attractive_force(Earth_mass, Moon_mass, Earth_to_Moon_distance) << endl;
 
 
     cout << " 5. The impact energy of a 50m asteroid at 50,000km/h is... ";
     auto asteroid_diameter = 50_m;
     auto asteroid_density  = 2500_kg_per_m³; // mostly estimated only 
     auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
-    auto asteroid_volume   = formula::volume_of_sphere(asteroid_diameter / 2.0);
+    auto asteroid_volume   = volume_of_sphere(asteroid_diameter / 2.0);
     auto asteroid_mass     = asteroid_volume * asteroid_density;
-    auto impact_energy     = formula::kinetic_energy(asteroid_mass, asteroid_velocity);
+    auto impact_energy     = kinetic_energy_formula(asteroid_mass, asteroid_velocity);
     cout << impact_energy << " or " << to_equivalent(impact_energy) << endl;
 
 
     cout << " 6. The wavelength of hydrogen (H2) in vacuum is... ";
     auto H2_frequency  = 1420.4057517682_MHz;
-    auto H2_wavelength = formula::wavelength(constant::speed_of_light_in_vacuum, H2_frequency);
+    auto H2_wavelength = wavelength_formula(constant::speed_of_light_in_vacuum, H2_frequency);
     cout << H2_wavelength << " or " << to_equivalent(H2_wavelength) << endl;
 
 
@@ -59,7 +59,7 @@ void astronomy_examples() {
 
     cout << " 8. The min speed required to escape from the planets are... ";
     for (auto& planet : dataset::planets) {
-        auto min_speed = formula::gravitational_escape_velocity(planet.mass, planet.diameter / 2.0);
+        auto min_speed = gravitational_escape_velocity(planet.mass, planet.diameter / 2.0);
         cout << planet.name << "=" << min_speed << " or " << to_equivalent(min_speed) << ", ";
     }
     cout << endl;
@@ -82,7 +82,7 @@ void astronomy_examples() {
 
     cout << "10. The estimated total distance the Earth has travelled is... ";
     auto distance_Earth_to_Sun = constant::AU;
-    auto distance_per_year     = formula::circumference_of_circle(distance_Earth_to_Sun);
+    auto distance_per_year     = circumference_of_circle(distance_Earth_to_Sun);
     auto Earth_year            = 365.25_days;
     auto Earth_age             = Earth_year * 4.5e12;
     auto distance_total        = distance_per_year * (Earth_age / Earth_year);
@@ -93,16 +93,16 @@ void astronomy_examples() {
     auto muzzle_velocity    = 1000_m_per_s;
     auto altitude           = 0_m;
     auto launch_angle       = 45_deg;
-    auto bullet_max_height  = formula::ballistic_max_height(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
-    auto bullet_max_range   = formula::ballistic_max_range(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
-    auto bullet_flight_time = formula::ballistic_travel_time(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
+    auto bullet_max_height  = ballistic_max_height(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
+    auto bullet_max_range   = ballistic_max_range(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
+    auto bullet_flight_time = ballistic_travel_time(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
     cout << bullet_max_height << ", " << bullet_max_range << ", " << bullet_flight_time << endl;
 
 
     cout << "12. The sum of the masses of all moons in the solar system is... ";
     auto total_mass = 0_kg;
     for (auto& moon : dataset::moons) {
-        auto volume = formula::volume_of_sphere(moon.mean_radius);
+        auto volume = volume_of_sphere(moon.mean_radius);
         total_mass += volume * moon.mean_density;
     }
     cout << total_mass << " or " << to_equivalent(total_mass) << endl;
@@ -110,6 +110,6 @@ void astronomy_examples() {
 
     cout << "13. The event horizon of our galaxy's black hole (Sagittarius A*) is... ";
     auto Sagittarius_A_mass = 8.54e36_kg;
-    auto radius             = formula::Schwarzschild_radius(Sagittarius_A_mass);
+    auto radius             = Schwarzschild_radius(Sagittarius_A_mass);
     cout << radius << " or " << to_equivalent(radius) << " (Schwarzschild radius)" << endl << endl;
 }

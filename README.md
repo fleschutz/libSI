@@ -34,7 +34,7 @@ int main() {
 | Units                 | *ounces*                                  | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_oz*                                    | [<SI/literals.h>](SI/literals.h)       |
 | Constants             | *constant::speed_of_light_in_vacuum*      | [<SI/constants.h>](SI/constants.h)     |
-| Formulas              | *formula::wavelength()*                   | [<SI/formulas.h>](SI/formulas.h)       |
+| Formulas              | *kinetic_energy_formula()*                | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *to_string()*                             | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 
 | Datasets              | *Earth.surface_gravity*                   | 📂[datasets](datasets/)                |
