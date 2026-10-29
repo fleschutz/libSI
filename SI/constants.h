@@ -16,13 +16,10 @@ namespace SI { namespace constant {
   SET(delta_v_Cs,            9'192'631'770, hertz); // (the symbol)
   SET(speed_of_light_in_vacuum,299'792'458.0, meters_per_second); // the speed of light in vacuum
   SET(c,                     299'792'458.0, meters_per_second); // (the symbol)
-  SET(Planck,             6.626'070'15e-34, jouleseconds); // the Planck constant
-  SET(h,                  6.626'070'15e-34, jouleseconds); // (the symbol)
-  SET(elementary_charge, 1.602'176'634e-19, coulombs); // the elementary charge
-  SET(e,                 1.602'176'634e-19, coulombs); // (the symbol)
-  SET(Boltzmann,             1.380'649e-23, joules_per_kelvin); // the Boltzmann constant
-  SET(k,                     1.380'649e-23, joules_per_kelvin); // (the symbol)
-  SET(N_A,                   6.02214076e23, per_mol); // the Avogadro constant
+  SET(planck,             6.626'070'15e-34, jouleseconds); // Planck constant (symbol: h)
+  SET(elementary_charge, 1.602'176'634e-19, coulombs); // the elementary charge (symbol: e)
+  SET(boltzmann,             1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
+  SET(avogadro,              6.02214076e23, per_mol); // Avogadro constant (symbol: N_A)
   SET(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
   SET(g_n,                        9.806'65, meters_per_second2); // standard acceleration of gravity
   SET(atm,                         101'325, pascals); // standard atmosphere
@@ -96,13 +93,13 @@ namespace SI { namespace constant {
 
   // Mathematical Constants (https://en.wikipedia.org/wiki/Mathematical_constant)
   // ----------------------
-  SET(root_2,       1.41421356237309504880, dimensionless); // (Pythagoras' constant, square root of 2)
-  SET(tau,          6.28318530717958647692, radians); // (2π, symbol: τ)
-  SET(pi,           3.14159265358979323846, radians); // (Archimedes' constant, symbol: π)
-  SET(half_pi,      1.57079632679489661923, radians); // (π / 2)
-  SET(quarter_pi,   0.78539816339744830961, radians); // (π / 4)
-  SET(Eulers_number,2.71828182845904523536, dimensionless); // Euler's number, symbol: e)
-  SET(golden_ratio, 1.61803398874989484820, dimensionless); // (phi, symbol: φ)
+  SET(root_2,       1.41421356237309504880, dimensionless); // Pythagoras' constant (square root of 2)
+  SET(tau,          6.28318530717958647692, radians); // 2π (symbol: τ)
+  SET(pi,           3.14159265358979323846, radians); // Archimedes' constant (symbol: π)
+  SET(half_pi,      1.57079632679489661923, radians); // π / 2
+  SET(quarter_pi,   0.78539816339744830961, radians); // π / 4
+  SET(e,            2.71828182845904523536, dimensionless); // Euler's number (symbol: e)
+  SET(phi,          1.61803398874989484820, dimensionless); // golden ratio (symbol: φ)
 
   // Astronomical Constants (https://en.wikipedia.org/wiki/Astronomical_constant)
   // ----------------------
