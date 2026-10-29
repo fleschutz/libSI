@@ -37,18 +37,18 @@ int main() {
 | Formulas              | *formula::wavelength()*                   | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *to_string()*                             | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 
-| Datasets              | *Earth::surface_gravity*                  | 📂[datasets](datasets/) subfolder     |
+| Datasets              | *Earth.surface_gravity*                   | 📂[datasets](datasets/) subfolder     |
 | Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/) subfolder     |
 | Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
 
 
 💡 Q & A
 ---------
-**What is SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
+**What's SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
 
-**What is CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle. Latest update was CODATA 2022 which is equal to: NIST SP 961 (May 2024).
+**What's CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle. Latest update was CODATA 2022 which is equal to: NIST SP 961 (May 2024).
 
-**What is IAU?** It's the [International Astronomical Union](https://www.iau.org/). It defines the astronomical units.
+**What's IAU?** It's the [International Astronomical Union](https://www.iau.org/). It defines the astronomical units.
 
 **What are use-cases for libSI?** Applied math such as simulations, simulators, scientific calculations, games, etc.
 
