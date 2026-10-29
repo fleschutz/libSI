@@ -54,7 +54,7 @@ int main() {
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
-**Which #include to use?** Use the convenient *#include <SI/core>* for the 6 core header files, <SI/all> to include all header files, otherwise pick the necessary one only.
+**Which #include to use?** *#include <SI/core>* includes the 6 core header files (datatypes.h/units.h/constants.h/formulas.h/literals.h/conversions.h), #include <SI/all> for all header files, otherwise pick the necessary ones only.
 
 **How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
 
