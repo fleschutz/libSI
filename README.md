@@ -37,8 +37,8 @@ int main() {
 | Formulas              | *formula::wavelength()*                   | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *to_string()*                             | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 
-| Datasets              | *Earth.surface_gravity*                   | 📂[datasets](datasets/) subfolder     |
-| Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/) subfolder     |
+| Datasets              | *Earth.surface_gravity*                   | 📂[datasets](datasets/)                |
+| Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/)            |
 | Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
 
 
@@ -57,8 +57,6 @@ int main() {
 **Which #include to use?** Use the convenient *#include <SI/core>* for the 6 core header files, <SI/all> to include all header files, otherwise pick the necessary one only.
 
 **How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
-
-**Why is there no datatype like meters or feets?** Those are units and the correct datatype is: length
 
 **Where are the list of references?** References are always listed at the end of each source code file.
 
