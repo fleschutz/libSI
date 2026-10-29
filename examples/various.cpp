@@ -220,7 +220,13 @@ void various_examples() {
     cout << torque << " of torque" << endl;
 
 
-    cout << "29. The distance between Singapore and Tokyo measures...";
+    cout << "29. What's the total area and weight of 500 papers in A4 format (80g/m²)? ";
+    auto paper_area   = 500 * ISO216.A4_width * ISO216.A4_height;
+    auto paper_weight = paper_area * (80_g / 1_m²);
+    cout << paper_area << " and " << paper_weight << endl;
+
+
+    cout << "30. The distance between Singapore and Tokyo measures...";
     auto Singapore_lat  = 1.3521_deg;
     auto Singapore_long = 103.8198_deg;
     auto Tokyo_lat      = 35.6762_deg;
@@ -229,7 +235,7 @@ void various_examples() {
     cout << dist << " or " << to_equivalent(dist) << endl;
 
 
-    cout << "30. The nearest airport neighbours are...";
+    cout << "31. The nearest airport neighbours are...";
     length nearestDistance = 999999_km;
     std::string nearest1 = "";
     std::string nearest2 = "";
@@ -245,10 +251,5 @@ void various_examples() {
             }
         }
     }
-    cout << nearest1 << " and " << nearest2 << " with only " << nearestDistance << " in between" << endl;
-
-
-    cout << "31. What's the area of A4 paper? ";
-    auto A4_area = ISO216.A4_width * ISO216.A4_height;
-    cout << A4_area << endl << endl;
+    cout << nearest1 << " and " << nearest2 << " with only " << nearestDistance << " in between" << endl << endl;
 }
