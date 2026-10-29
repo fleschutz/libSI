@@ -10,7 +10,7 @@
 
 namespace SI { namespace constant {
 
-  // Defined Constants (as of CODATA 2022)
+  // Defined Constants (CODATA 2022)
   // -----------------
   SET(caesium_frequency,     9'192'631'770, hertz); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
   SET(delta_v_Cs,            9'192'631'770, hertz); // (the symbol)
@@ -28,7 +28,7 @@ namespace SI { namespace constant {
   SET(atm,                         101'325, pascals); // standard atmosphere
   SET(ssp,                         100'000, pascals); // standard-state pressure
 
-  // Universal Constants (as of CODATA 2022)
+  // Universal Constants (CODATA 2022)
   // -------------------
   SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
   SET(Z_0,                 376.730'313'412, ohms); // characteristic impedance of vacuum
@@ -40,7 +40,7 @@ namespace SI { namespace constant {
   SET(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
   SET(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability
 
-  // Electromagnetic Constants (as of CODATA 2022)
+  // Electromagnetic Constants (CODATA 2022)
   // -------------------------
   SET(G_0,                7.748'091'729e-5, siemens); // conductance quantum
   SET(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
@@ -51,7 +51,7 @@ namespace SI { namespace constant {
   SET(R_K,                   25'812.807'45, ohms); // von Klitzing constant
   SET(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
 
-  // Atomic & Nuclear Constants (as of CODATA 2022)
+  // Atomic & Nuclear Constants (CODATA 2022)
   // --------------------------
   SET(a_0,            5.291'772'105'44e-11, meters);   // Bohr radius
   SET(alpha,                  7.2973525e-3, dimensionless); // fine-structure constant
@@ -72,7 +72,7 @@ namespace SI { namespace constant {
   SET(sin2Theta_W,                 0.22290, dimensionless); // weak mixing angle
   SET(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
 
-  // Physico-chemical Constants (as of CODATA 2022)
+  // Physico-chemical Constants (CODATA 2022)
   // --------------------------
   SET(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
   SET(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
@@ -94,21 +94,24 @@ namespace SI { namespace constant {
   SET(speed_of_sound_in_iron,         5120, meters_per_second);
   SET(speed_of_sound_in_diamonds,   12'000, meters_per_second);
 
-  // Mathematical Constants
+  // Mathematical Constants (https://en.wikipedia.org/wiki/Mathematical_constant)
   // ----------------------
-  SET(tau,          6.28318530717958647692, radians); // (symbol: τ)
-  SET(pi,           3.14159265358979323846, radians); // (symbol: π)
+  SET(root_2,       1.41421356237309504880, dimensionless); // (Pythagoras' constant, square root of 2)
+  SET(tau,          6.28318530717958647692, radians); // (2π, symbol: τ)
+  SET(pi,           3.14159265358979323846, radians); // (Archimedes' constant, symbol: π)
   SET(half_pi,      1.57079632679489661923, radians); // (π / 2)
   SET(quarter_pi,   0.78539816339744830961, radians); // (π / 4)
-  SET(phi,          1.61803398874989484820, dimensionless); // (symbol: φ)
-  SET(Eulers_number,2.71828182845904523536, dimensionless);
+  SET(Eulers_number,2.71828182845904523536, dimensionless); // Euler's number, symbol: e)
+  SET(golden_ratio, 1.61803398874989484820, dimensionless); // (phi, symbol: φ)
 
-  // Astronomical Constants
+  // Astronomical Constants (https://en.wikipedia.org/wiki/Astronomical_constant)
   // ----------------------
-  SET(AU,                  149'597'870'691, meters); // one astronomical unit (symbol: au)
-  SET(parsec,       30'856'775'814'913'700, meters); // one Parsec (symbol: pc)
-  SET(lightyear,     9'460'730'777'119'564, meters); // one light-year (symbol: ly)
+  SET(AU,                  149'597'870'700, meters); // one astronomical unit (symbol: au, IAU 2009)
+  SET(parsec,       30'856'775'814'913'673, meters); // one Parsec (symbol: pc, IAU 2015)
+  SET(lightyear,     9'460'730'472'580'800, meters); // one light-year (symbol: ly, IAU 2009)
   SET(F1AU,                         1366.1, watts_per_meter2);// total solar irradiance at 1 AU (solar constant)
+  SET(H0,                           70'100, meters_per_second); // (per megaparsec, Hubble constant, symbol: H0)
+  SET(Lsun,                       3.939e26, watts); // (Solar luminosity, symbol: L☉)
 
   // Various Constants
   // -----------------
