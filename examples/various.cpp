@@ -237,12 +237,11 @@ void various_examples() {
 
     cout << "31. The nearest airport neighbours are...";
     length nearestDistance = 999999_km;
-    std::string nearest1 = "";
-    std::string nearest2 = "";
-    for (auto& airport1 : dataset::airports) { 
-        for (auto& airport2 : dataset::airports) { 
-            if (&airport1 == &airport2)
-                continue;
+    std::string nearest1 = "", nearest2 = "";
+    for (const auto& airport1 : dataset::airports) { 
+        for (const auto& airport2 : dataset::airports) { 
+            if (&airport2 <= &airport1)
+                continue; // already done
             auto distance = distance_on_sphere_formula(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);
             if (distance > nearestDistance)
                 continue;
