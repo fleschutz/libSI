@@ -27,14 +27,11 @@ namespace SI { namespace constant {
   SET(S_0_by_R,             -1.15170753706, dimensionless); // Sackur–Tetrode constant
   SET(V_m,                22.710'954'64e-3, meters3_per_mol); // molar volume of ideal gas (273.15K, 100kPa)
 
-  // Physical Constants
-  // ------------------
-  SET(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
-
 #undef SET
 }
 
-  constexpr struct { // CODATA 2022 constants (https://codata.org)
+  constexpr struct { // CODATA 2022 constants
+
     // Defined constants
     frequency caesium_frequency =                   hertz(9'192'631'770); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
     velocity speed_of_light_in_vacuum = meters_per_second(299'792'458.0); // the speed of light in vacuum (symbol: c)
@@ -62,8 +59,8 @@ namespace SI { namespace constant {
   SET(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability
 #endif
 
+    // Electromagnetic constants
 #if 0
-  // Electromagnetic constants
   SET(G_0,                7.748'091'729e-5, siemens); // conductance quantum
   SET(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
   SET(K_J,                 483'597.848'4e9, hertz_per_volt); // Josephson constant
@@ -91,9 +88,10 @@ namespace SI { namespace constant {
     length        r_e =     meters(2.817'940'3205e-15); // classical electron radius
     dimensionless sin2Theta_W =                0.22290; // weak mixing angle
     area          sigma_e =     meters2(6.6524587e-29); // Thomson cross section (symbol: σ_e)
+
   } CODATA;
 
-  constexpr struct { // Mathematical constants (https://en.wikipedia.org/wiki/Mathematical_constant)
+  constexpr struct { // Mathematical constants 
     dimensionless root_2 =     1.41421356237309504880; // Pythagoras' constant (square root of 2)
     dimensionless tau =        6.28318530717958647692; // 2π (symbol: τ)
     dimensionless pi =         3.14159265358979323846; // Archimedes' constant (symbol: π)
@@ -103,7 +101,7 @@ namespace SI { namespace constant {
     dimensionless phi =        1.61803398874989484820; // golden ratio (symbol: φ)
   } Math;
 
-  constexpr struct { // Astronomical constants (https://en.wikipedia.org/wiki/Astronomical_constant)
+  constexpr struct { // Astronomical constants
     length AU =              meters(149'597'870'700); // one astronomical unit (symbol: au, IAU 2009)
     length parsec   = meters(30'856'775'814'913'673); // one Parsec (symbol: pc, IAU 2015)
     length lightyear = meters(9'460'730'472'580'800); // one light-year (symbol: ly, IAU 2009)
@@ -120,14 +118,14 @@ namespace SI { namespace constant {
     velocity speed_of_sound_in_fresh_water = meters_per_second(1481); // at 20°C (68°F)
     velocity speed_of_sound_in_iron = meters_per_second(5120);
     velocity speed_of_sound_in_diamonds = meters_per_second(12'000);
+    // SET(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
   } Const;
  
   // References
   // ----------
-  // 1. https://en.wikipedia.org/wiki/International_System_of_Units
+  // 1. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)
   // 2. https://en.wikipedia.org/wiki/List_of_physical_constants
-  // 3. https://en.wikipedia.org/wiki/List_of_mathematical_constants
+  // 3. https://en.wikipedia.org/wiki/Mathematical_constant
   // 4. https://en.wikipedia.org/wiki/Astronomical_constant
-  // 5. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)
 
 } // end of namespace
