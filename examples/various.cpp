@@ -84,8 +84,8 @@ void various_examples() {
     cout << "12. The surface area and volume of a 30cm x 1cm pizza is... ";
     auto pizza_radius  = 30_cm / 2;
     auto pizza_height  = 1_cm;
-    auto pizza_area    = area_of_circle(pizza_radius);
-    auto pizza_volume  = volume_of_cylinder(pizza_radius, pizza_height);
+    auto pizza_area    = area_of_circle_formula(pizza_radius);
+    auto pizza_volume  = volume_of_cylinder_formula(pizza_radius, pizza_height);
     cout << pizza_area << " and " << pizza_volume << endl;
 
 
@@ -100,9 +100,9 @@ void various_examples() {
 
     cout << "14. The surface area and volume of a soccer ball is... ";
     auto ball_circumference  = 70_cm; // (69-71cm for FIFA ball size 5)
-    auto ball_radius         = radius_of_circumference(ball_circumference);
-    auto ball_area           = area_of_sphere(ball_radius);
-    auto ball_volume         = volume_of_sphere(ball_radius);
+    auto ball_radius         = radius_of_circumference_formula(ball_circumference);
+    auto ball_area           = area_of_sphere_formula(ball_radius);
+    auto ball_volume         = volume_of_sphere_formula(ball_radius);
     cout << ball_area << " and " << ball_volume << endl;
 
 
@@ -156,8 +156,8 @@ void various_examples() {
     auto log_diameter   = 1_m;
     auto dry_oak_weight = 710_kg_per_m³; 
     auto dry_oak_power  = 4.2_kWh_per_kg;
-    auto area           = area_of_cylinder(log_diameter / 2, log_length);
-    auto volume         = volume_of_cylinder(log_diameter / 2, log_length);
+    auto area           = area_of_cylinder_formula(log_diameter / 2, log_length);
+    auto volume         = volume_of_cylinder_formula(log_diameter / 2, log_length);
     auto weight         = volume * dry_oak_weight;
     auto power          = weight * dry_oak_power;
     cout << area << " area, " << volume << " volume, " << weight << " weight, " << power << endl;

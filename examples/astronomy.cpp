@@ -37,7 +37,7 @@ void astronomy_examples() {
     auto asteroid_diameter = 50_m;
     auto asteroid_density  = 2500_kg_per_m³; // mostly estimated only 
     auto asteroid_velocity = 50'000_km_per_h; // range is usually 50,000..100.000km/h
-    auto asteroid_volume   = volume_of_sphere(asteroid_diameter / 2.0);
+    auto asteroid_volume   = volume_of_sphere_formula(asteroid_diameter / 2.0);
     auto asteroid_mass     = asteroid_volume * asteroid_density;
     auto impact_energy     = kinetic_energy_formula(asteroid_mass, asteroid_velocity);
     cout << impact_energy << " or " << to_equivalent(impact_energy) << endl;
@@ -82,7 +82,7 @@ void astronomy_examples() {
 
     cout << "10. The estimated total distance the Earth has travelled is... ";
     auto distance_Earth_to_Sun = constant::AU;
-    auto distance_per_year     = circumference_of_circle(distance_Earth_to_Sun);
+    auto distance_per_year     = circumference_of_circle_formula(distance_Earth_to_Sun);
     auto Earth_year            = 365.25_days;
     auto Earth_age             = Earth_year * 4.5e12;
     auto distance_total        = distance_per_year * (Earth_age / Earth_year);
@@ -102,7 +102,7 @@ void astronomy_examples() {
     cout << "12. The sum of the masses of all moons in the solar system is... ";
     auto total_mass = 0_kg;
     for (auto& moon : dataset::moons) {
-        auto volume = volume_of_sphere(moon.mean_radius);
+        auto volume = volume_of_sphere_formula(moon.mean_radius);
         total_mass += volume * moon.mean_density;
     }
     cout << total_mass << " or " << to_equivalent(total_mass) << endl;

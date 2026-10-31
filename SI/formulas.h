@@ -11,109 +11,109 @@ namespace SI {
 	// Formulas for 2D
 	// ---------------
 	/// @brief Calculates the hypotenuse in a right triangle, based on Pythagorean equation: a² + b² = c² 
-	FUNC length hypotenuse_of_triangle(const length a, const length b)
+	FUNC length hypotenuse_of_triangle_formula(length a, length b)
 	{
 		return sqrt(a*a + b*b);
 	}
 
 	/// @brief Calculates the angle in a right triangle from opposite (o) and hypotenuse (h).
-	FUNC angle angle1_in_triangle(const length o, const length h)
+	FUNC angle angle1_in_triangle_formula(length o, length h)
 	{
 		return radians(asin(o / h));
 	}
 
 	/// @brief Calculates the angle in a right triangle from adjacent (a) and hypotenuse (h).
-	FUNC angle angle2_in_triangle(const length a, const length h)
+	FUNC angle angle2_in_triangle_formula(length a, length h)
 	{
 		return radians(acos(a / h));
 	}
 
 	/// @brief Calculates the angle in a right triangle from adjacent (a) and opposite (o).
-	FUNC angle angle3_in_triangle(const length a, const length o)
+	FUNC angle angle3_in_triangle_formula(length a, length o)
 	{
 		return radians(atan(o / a));
 	}
 
 	/// @brief Calculates the area of a triangle from base (b) and height (h).
-	FUNC area area_of_triangle(const length b, const length h)
+	FUNC area area_of_triangle_formula(length b, length h)
 	{
 		return 0.5 * b * h;
 	}
 
 	/// @brief Calculates the perimeter of a rectangle from length (l) and base (b).
-	FUNC length perimeter_of_rectangle(const length l, const length b)
+	FUNC length perimeter_of_rectangle_formula(length l, length b)
 	{
 		return 2. * (l + b);
 	}
 
 	/// @brief Calculates the area of a rectangle from length (l) and base (b).
-	FUNC area area_of_rectangle(const length l, const length b)
+	FUNC area area_of_rectangle_formula(length l, length b)
 	{
 		return l * b;
 	}
 
 	/// @brief Calculates the perimeter of a square from length (a).
-	FUNC length perimeter_of_square(const length a)
+	FUNC length perimeter_of_square_formula(length a)
 	{
 		return 4. * a;
 	}
 
 	/// @brief Calculates the area of a square from length (a).
-	FUNC area area_of_square(const length a)
+	FUNC area area_of_square_formula(length a)
 	{
 		return a * a;
 	}
 
 	/// @brief Calculates the area of a trapezoid from base 1 (b1), base 2 (b2) and height (h).
-	FUNC area area_of_trapezoid(const length b1, const length b2, const length h)
+	FUNC area area_of_trapezoid_formula(length b1, length b2, length h)
 	{
 		return 0.5 * (b1 + b2) * h;
 	}
 
 	/// @brief Calculates the circumference of a circle from radius (r).
-	FUNC length circumference_of_circle(const length r)
+	FUNC length circumference_of_circle_formula(length r)
 	{
 		return constant::tau * r;
 	}
 
 	/// @brief Calculates the radius of a circle from circumference (c).
-	FUNC length radius_of_circumference(const length c)
+	FUNC length radius_of_circumference_formula(length c)
 	{
 		return c / constant::tau;
 	}
 
 	/// @brief Calculates the area of a circle from radius (r).
-	FUNC area area_of_circle(const length r)
+	FUNC area area_of_circle_formula(length r)
 	{
 		return constant::pi * r * r;
 	}
 
 	/// @brief Calculates approximately(!) the perimeter of an ellipse from length of semi-major axis (a) and length of semi-minor axis (b).
-	FUNC length perimeter_of_ellipse(const length a, const length b)
+	FUNC length perimeter_of_ellipse_formula(length a, length b)
 	{
 		return constant::pi * sqrt(2.0 * (square(a) + square(b)));
 	}
 
 	/// @brief Calculates the area of an ellipse from radius (a) and (b).
-	FUNC area area_of_ellipse(const length a, const length b)
+	FUNC area area_of_ellipse_formula(length a, length b)
 	{
 		return constant::pi * a * b;
 	}
 
 	/// @brief Calculates the eccentricity of an ellipse from radius (a) and (b).
-	FUNC dimensionless eccentricity_of_ellipse(const length a, const length b)
+	FUNC dimensionless eccentricity_of_ellipse_formula(length a, length b)
 	{
 		return std::sqrt(1.0 - (square(b) / square(a)));
 	}
 
 	/// @brief Calculates the latus rectum of an ellipse from radius (a) and (b).
-	FUNC length latus_rectum_of_ellipse(const length a, const length b)
+	FUNC length latus_rectum_of_ellipse(length a, length b)
 	{
 		return 2.0 * square(b) / a;
 	}
 
 	/// @brief Calculates the shortest distance between two points in 2D.
-	FUNC length distance_formula(const length x1, const length y1, const length x2, const length y2)
+	FUNC length distance_formula(length x1, length y1, length x2, length y2)
 	{
 		const length dx = x2 - x1;
 		const length dy = y2 - y1;
@@ -123,55 +123,55 @@ namespace SI {
 	// Formulas for 3D
 	// ---------------
 	/// @brief Calculates the area of a cube from length (a).
-	FUNC area area_of_cube(const length a)
+	FUNC area area_of_cube_formula(length a)
 	{
 		return 6. * a * a;
 	}
 
 	/// @brief Calculates the volume of a cube from length (a).
-	FUNC volume volume_of_cube(const length a)
+	FUNC volume volume_of_cube_formula(length a)
 	{
 		return a * a * a;
 	}
 
 	/// @brief Calculates the area of a cylinder from radius (r) and height (h).
-	FUNC area area_of_cylinder(const length r, const length h)
+	FUNC area area_of_cylinder_formula(length r, length h)
 	{
 		return constant::tau * r * (r + h);
 	}
 
 	/// @brief Calculates the volume of a cylinder based on radius (r) and height (h).
-	FUNC volume volume_of_cylinder(const length r, const length h)
+	FUNC volume volume_of_cylinder_formula(length r, length h)
 	{
 		return constant::pi * square(r) * h;
 	}
 
 	/// @brief Calculates the area of a cone from radius (r) and height (h).
-	FUNC area area_of_cone(const length r, const length h)
+	FUNC area area_of_cone_formula(length r, length h)
 	{
 		return constant::pi * r * (r + h);
 	}
 
 	/// @brief Calculates the volume of a cone from radius (r) and height (h).
-	FUNC volume volume_of_cone(const length r, const length h)
+	FUNC volume volume_of_cone_formula(length r, length h)
 	{
 		return (1./3.) * constant::pi * square(r) * h;
 	}
 
 	/// @brief Calculates the area of a sphere from radius (r).
-	FUNC area area_of_sphere(const length r)
+	FUNC area area_of_sphere_formula(length r)
 	{
 		return 4. * constant::pi * square(r);
 	}
 
 	/// @brief Calculates the volume of a sphere from radius (r).
-	FUNC volume volume_of_sphere(const length r)
+	FUNC volume volume_of_sphere_formula(length r)
 	{
 		return (4. / 3.) * constant::pi * r * r * r;
 	}
 
 	/// @brief Calculates the volume of a prism from base area (A) and height (h).
-	FUNC volume volume_of_prism(const area A, const length h)
+	FUNC volume volume_of_prism_formula(area A, length h)
 	{
 		return A * h;
 	}
@@ -192,43 +192,43 @@ namespace SI {
 	// Formulas for Moving Objects
 	// ---------------------------
 	/// @brief Calculates the average speed from distance and duration.
-	FUNC velocity average_speed(const length distance, const time duration)
+	FUNC velocity average_speed(length distance, time duration)
 	{
 		return distance / duration;
 	}
 
 	/// @brief Calculates the kinetic energy of a non-rotating object of mass (m) traveling at velocity (v).
-	FUNC energy kinetic_energy_formula(const mass m, const velocity v)
+	FUNC energy kinetic_energy_formula(mass m, velocity v)
 	{
 		return 0.5 * m * square(v);
 	}
 
 	/// @brief Calculates the free fall time from the given height.
-	FUNC time time_of_free_fall(const length height, const acceleration gravity)
+	FUNC time time_of_free_fall(length height, acceleration gravity)
 	{
 		return sqrt((2. * height) / gravity);
 	}
 
 	/// @brief Calculates the braking distance to brake from v0 to v1 with the given deceleration.
-	FUNC length braking_distance(const velocity v0, const velocity v1, const acceleration deceleration)
+	FUNC length braking_distance(velocity v0, velocity v1, acceleration deceleration)
 	{
 		return (square(v0) - square(v1)) / (2.0 * deceleration);
 	}
 
 	/// @brief Calculates the acceleration necessary to accelerate from v0 to v1 within the given distance.
-	FUNC acceleration acceleration_for_distance(const velocity v0, const velocity v1, const length distance)
+	FUNC acceleration acceleration_for_distance(velocity v0, velocity v1, length distance)
 	{
 		return (square(v1) - square(v0)) / (2.0 * distance);
 	}
 
 	/// @brief Calculates the final velocity based on initial velocity (i) with acceleration (a) for time (t).
-	FUNC velocity final_velocity(const velocity i, const acceleration a, const SI::time t)
+	FUNC velocity final_velocity(velocity i, acceleration a, SI::time t)
 	{
 		return i + a * t;
 	}
 
 	/// @brief Calculates the acceleration from change in velocity (delta_v) and time interval (delta_t).
-	FUNC acceleration acceleration_of(const velocity delta_v, const SI::time delta_t)
+	FUNC acceleration acceleration_of(velocity delta_v, SI::time delta_t)
 	{
 		return delta_v / delta_t;
 	}
@@ -236,25 +236,25 @@ namespace SI {
 	// Formulas for Vehicles
 	// ---------------------
 	/// @brief Calculates the revolutions per minute (RPM) from velocity (v) and wheel radius (r).
-	FUNC dimensionless wheel_rpm(const velocity v, const length r)
+	FUNC dimensionless wheel_rpm_formula(velocity v, length r)
 	{
 		return v / (constant::tau * r) * 60_s;
 	}
 
 	/// @brief Calculates the wheel speed from wheel radius (r) and revolutions per minute (RPM).
-	FUNC velocity wheel_speed(const length r, const dimensionless RPM)
+	FUNC velocity wheel_speed_formula(length r, dimensionless RPM)
 	{
 		return constant::tau * r * (RPM / 60_s);
 	}
 
 	/// @brief Calculates the turning radius of wheeled vehicles.
-	FUNC length turning_radius_of_vehicle(const length wheelbase, const angle steering_angle, const length tire_width)
+	FUNC length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length tire_width)
 	{
 		return wheelbase / sin(steering_angle) + tire_width / 2.0;
 	}
 
 	/// @brief Calculates the G-force when accelerating from v0 to v1 within the given time.
-	FUNC dimensionless g_force_of_acceleration(const velocity v0, const velocity v1, const time t)
+	FUNC dimensionless g_force_of_acceleration(velocity v0, velocity v1, time t)
 	{
 		return (v1 - v0) / (t * constant::Earth_gravity);
 	}
@@ -262,7 +262,7 @@ namespace SI {
 	// Formulas for Aircraft
 	// ---------------------
 	/// @brief Calculates the true airspeed (TAS).
-	FUNC velocity true_airspeed(const force lift_force, const dimensionless lift_coefficient, const area wing_surface, const density air_density)
+	FUNC velocity true_airspeed_formula(const force lift_force, const dimensionless lift_coefficient, const area wing_surface, const density air_density)
 	{
 		return sqrt((2.0 * lift_force) / (lift_coefficient * wing_surface * air_density));
 	}
@@ -274,7 +274,7 @@ namespace SI {
 	}
 
 	/// @brief Calculates the Mach number from velocity (v) of moving aircraft at altitude's speed of sound.
-	FUNC dimensionless Mach_number(const velocity v, const velocity speed_of_sound)
+	FUNC dimensionless Mach_number_formula(const velocity v, const velocity speed_of_sound)
 	{
 		return v / speed_of_sound;
 	}
@@ -286,7 +286,7 @@ namespace SI {
 	}
 
 	/// @brief Calculates the glide ratio from horizontal distance (h) and altitude lost (a).
-	FUNC dimensionless glide_ratio(const length h, const length a)
+	FUNC dimensionless glide_ratio_formula(const length h, const length a)
 	{
 		return h / a;
 	}
