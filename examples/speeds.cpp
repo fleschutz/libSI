@@ -25,7 +25,7 @@ void speed_examples() {
 
     cout << " 3. The free fall time from Burj Khalifa tower (828m) is... ";
     auto tower_height    = 828_m;
-    auto free_fall_time  = time_of_free_fall(tower_height, constant::Earth_gravity);
+    auto free_fall_time  = time_of_free_fall(tower_height, CODATA.g_n);
     cout << free_fall_time << endl;
 
 

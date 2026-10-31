@@ -81,8 +81,7 @@ void astronomy_examples() {
 
 
     cout << "10. The estimated total distance the Earth has travelled is... ";
-    auto distance_Earth_to_Sun = constant::AU;
-    auto distance_per_year     = circumference_of_circle_formula(distance_Earth_to_Sun);
+    auto distance_per_year     = circumference_of_circle_formula(Earth.avg_distance_to_Sun);
     auto Earth_year            = 365.25_days;
     auto Earth_age             = Earth_year * 4.5e12;
     auto distance_total        = distance_per_year * (Earth_age / Earth_year);

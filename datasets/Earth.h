@@ -15,6 +15,7 @@ namespace {
     length        aphelion =        152'097'597_km;
     length        perihelion =      147'098'450_km;
     length        semi_major_axis = 149'598'023_km;
+    length        avg_distance_to_Sun = 149'597'870'700_m; // (=1 AU)
     dimensionless eccentricity =              0.016'7086;
     SI::time      sidereal_orbital_period = 365.256'363'004_days;
     velocity      average_orbital_speed =    29.7827_km_per_s;

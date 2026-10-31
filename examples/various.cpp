@@ -43,7 +43,7 @@ void various_examples() {
 
     cout << " 6. The frequency and wavelength of the high 'c' music note is...";
     auto high_c_frequency = 1046.5_Hz;
-    auto wavelength       = wavelength_formula(constant::speed_of_sound, high_c_frequency);
+    auto wavelength       = wavelength_formula(Const.speed_of_sound, high_c_frequency);
     cout << high_c_frequency << " and " << wavelength << " or " << to_equivalent(wavelength) << endl;
 
 
@@ -94,7 +94,7 @@ void various_examples() {
     auto filament_diameter  = 2.85_mm;
     auto density_of_PLA     = 1.24_g_per_cm³;
     auto filament_volume    = filament_weight / density_of_PLA;
-    auto filament_length    = filament_volume / (constant::pi * square(filament_diameter / 2.0));
+    auto filament_length    = filament_volume / (Math.pi * square(filament_diameter / 2.0));
     cout << filament_length << " or " << to_equivalent(filament_length) << endl;
 
 
@@ -129,7 +129,7 @@ void various_examples() {
     auto dive_depth         = 10_m;
     auto salt_water_density = 1033.23_kg_per_m³;
     auto air_pressure       = 1013.25_hPa;
-    auto water_pressure     = salt_water_density * constant::g_n * dive_depth + air_pressure;
+    auto water_pressure     = salt_water_density * CODATA.g_n * dive_depth + air_pressure;
     auto max_time           = (bottle_volume * bottle_pressure) / (average_breathing * water_pressure);
     cout << max_time << endl;
 
@@ -183,7 +183,7 @@ void various_examples() {
 
     cout << "24. The frequencies and wavelengths of all musical notes are... ";
     for (auto& note : dataset::musical_notes) {
-        auto wavelength = wavelength_formula(constant::speed_of_sound, note.frequency);
+        auto wavelength = wavelength_formula(Const.speed_of_sound, note.frequency);
         cout << note.name << (char)('0' + note.octave) << "=" << note.frequency << "," << wavelength << " ";
     }
     cout << endl;

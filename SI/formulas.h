@@ -73,31 +73,31 @@ namespace SI {
 	/// @brief Calculates the circumference of a circle from radius (r).
 	FUNC length circumference_of_circle_formula(length r)
 	{
-		return constant::tau * r;
+		return Math.tau * r;
 	}
 
 	/// @brief Calculates the radius of a circle from circumference (c).
 	FUNC length radius_of_circumference_formula(length c)
 	{
-		return c / constant::tau;
+		return c / Math.tau;
 	}
 
 	/// @brief Calculates the area of a circle from radius (r).
 	FUNC area area_of_circle_formula(length r)
 	{
-		return constant::pi * r * r;
+		return Math.pi * r * r;
 	}
 
 	/// @brief Calculates approximately(!) the perimeter of an ellipse from length of semi-major axis (a) and length of semi-minor axis (b).
 	FUNC length perimeter_of_ellipse_formula(length a, length b)
 	{
-		return constant::pi * sqrt(2.0 * (square(a) + square(b)));
+		return Math.pi * sqrt(2.0 * (square(a) + square(b)));
 	}
 
 	/// @brief Calculates the area of an ellipse from radius (a) and (b).
 	FUNC area area_of_ellipse_formula(length a, length b)
 	{
-		return constant::pi * a * b;
+		return Math.pi * a * b;
 	}
 
 	/// @brief Calculates the eccentricity of an ellipse from radius (a) and (b).
@@ -137,37 +137,37 @@ namespace SI {
 	/// @brief Calculates the area of a cylinder from radius (r) and height (h).
 	FUNC area area_of_cylinder_formula(length r, length h)
 	{
-		return constant::tau * r * (r + h);
+		return Math.tau * r * (r + h);
 	}
 
 	/// @brief Calculates the volume of a cylinder based on radius (r) and height (h).
 	FUNC volume volume_of_cylinder_formula(length r, length h)
 	{
-		return constant::pi * square(r) * h;
+		return Math.pi * square(r) * h;
 	}
 
 	/// @brief Calculates the area of a cone from radius (r) and height (h).
 	FUNC area area_of_cone_formula(length r, length h)
 	{
-		return constant::pi * r * (r + h);
+		return Math.pi * r * (r + h);
 	}
 
 	/// @brief Calculates the volume of a cone from radius (r) and height (h).
 	FUNC volume volume_of_cone_formula(length r, length h)
 	{
-		return (1./3.) * constant::pi * square(r) * h;
+		return (1./3.) * Math.pi * square(r) * h;
 	}
 
 	/// @brief Calculates the area of a sphere from radius (r).
 	FUNC area area_of_sphere_formula(length r)
 	{
-		return 4. * constant::pi * square(r);
+		return 4. * Math.pi * square(r);
 	}
 
 	/// @brief Calculates the volume of a sphere from radius (r).
 	FUNC volume volume_of_sphere_formula(length r)
 	{
-		return (4. / 3.) * constant::pi * r * r * r;
+		return (4. / 3.) * Math.pi * r * r * r;
 	}
 
 	/// @brief Calculates the volume of a prism from base area (A) and height (h).
@@ -238,13 +238,13 @@ namespace SI {
 	/// @brief Calculates the revolutions per minute (RPM) from velocity (v) and wheel radius (r).
 	FUNC dimensionless wheel_rpm_formula(velocity v, length r)
 	{
-		return v / (constant::tau * r) * 60_s;
+		return v / (Math.tau * r) * 60_s;
 	}
 
 	/// @brief Calculates the wheel speed from wheel radius (r) and revolutions per minute (RPM).
 	FUNC velocity wheel_speed_formula(length r, dimensionless RPM)
 	{
-		return constant::tau * r * (RPM / 60_s);
+		return Math.tau * r * (RPM / 60_s);
 	}
 
 	/// @brief Calculates the turning radius of wheeled vehicles.
@@ -256,7 +256,7 @@ namespace SI {
 	/// @brief Calculates the G-force when accelerating from v0 to v1 within the given time.
 	FUNC dimensionless g_force_of_acceleration(velocity v0, velocity v1, time t)
 	{
-		return (v1 - v0) / (t * constant::Earth_gravity);
+		return (v1 - v0) / (t * CODATA.g_n);
 	}
 
 	// Formulas for Aircraft
@@ -306,7 +306,7 @@ namespace SI {
 	/// @brief Calculates the turn radius at the given speed and bank angle.
 	FUNC length turn_radius(const velocity ground_speed, const angle bank_angle)
 	{
-		return (ground_speed * ground_speed) / (constant::Earth_gravity * tan(bank_angle));
+		return (ground_speed * ground_speed) / (CODATA.g_n * tan(bank_angle));
 	}
 
 	// Formulas for Gravitation
@@ -346,7 +346,7 @@ namespace SI {
 	/// @brief Calculates the Schwarzschild radius of a black hole from it's mass (M).
 	FUNC length Schwarzschild_radius(const mass M)
 	{
-		return (2.0 * constant::G * M) / square(constant::c);
+		return (2.0 * constant::G * M) / square(CODATA.speed_of_light_in_vacuum);
 	}
 
 	// Various Formulas
@@ -360,7 +360,7 @@ namespace SI {
 	/// @brief Calculates V(t) from peak voltage (V0), frequency (f), and time (t).
 	FUNC electric_potential sine_wave(const electric_potential V0, const frequency f, const SI::time t)
 	{
-		return V0 * sin(constant::tau * f * t);
+		return V0 * sin(Math.tau * f * t);
 	}
 
 	/// @brief Calculates the speed of sound in air based on temperature (T).
@@ -459,7 +459,7 @@ namespace SI {
 	/// @brief Calculates the sound intensity of a sound source from a distance.
 	FUNC auto sound_intensity_formula(const power power_of_sound_source, const length distance_from_sound_source)
 	{
-		return power_of_sound_source / (4.0 * constant::pi * square(distance_from_sound_source));
+		return power_of_sound_source / (4.0 * Math.pi * square(distance_from_sound_source));
 	}
 
 	/// @brief Calculates the max height of a bullet (without force of drag, wind, etc.), based on:
