@@ -177,8 +177,8 @@ namespace SI {
 	}
 
 	/// @brief Calculates the distance between two lat/long coordinates on Earth (haversine formula).
-	FUNC length distance_on_sphere(angle lat1, angle long1, angle lat2, angle long2,
-			               length radius = 6371.0088_km) // mean Earth radius, recommended by NOAA
+	FUNC length distance_on_sphere_formula(angle lat1, angle long1, angle lat2, angle long2,
+			                       length radius = 6371.0088_km) // mean Earth radius, recommended by NOAA
 	{
 		angle dLat = lat1 - lat2;    // difference in latitude
 		angle dLong = long1 - long2; // difference in longitude

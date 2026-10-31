@@ -231,7 +231,7 @@ void various_examples() {
     auto Singapore_long = 103.8198_deg;
     auto Tokyo_lat      = 35.6762_deg;
     auto Tokyo_long     = 139.6503_deg;
-    auto dist           = distance_on_sphere(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long);
+    auto dist           = distance_on_sphere_formula(Singapore_lat, Singapore_long, Tokyo_lat, Tokyo_long);
     cout << dist << " or " << to_equivalent(dist) << endl;
 
 
@@ -243,7 +243,7 @@ void various_examples() {
         for (auto& airport2 : dataset::airports) { 
             if (&airport1 == &airport2)
                 continue;
-            auto distance = distance_on_sphere(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);
+            auto distance = distance_on_sphere_formula(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);
 	    if (distance < nearestDistance) {
 		    nearestDistance = distance;
 		    nearest1 = airport1.name;
