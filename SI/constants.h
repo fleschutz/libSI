@@ -75,26 +75,22 @@ namespace SI { namespace constant {
 #endif
 
     // Atomic & nuclear constants
-    length a_0 =          meters(5.291'772'105'44e-11);   // Bohr radius
-#if 0
-  SET(alpha,                  7.2973525e-3, dimensionless); // fine-structure constant
-  SET(alpha_inv,           137.035'999'177, dimensionless); // inverse fine-structure constant
-  SET(E_h,                4.3597447222e-18, joules);    // Hartree energy
-  SET(g_e,               -2.00231930436256, dimensionless); // electron g-factor
-  SET(h_2me,                  3.6369475e-4, meters2_per_second); // quantum of circulation
-  SET(m_e,              9.109'383'7139e-31, kilograms); // electron mass
-  SET(m_d,              3.343'583'7768e-27, kilograms); // deuteron mass
-  SET(m_h,              5.006'412'7862e-27, kilograms); // helion mass
-  SET(m_mu,              1.883'531'627e-28, kilograms); // muon mass
-  SET(m_n,            1.674'927'500'56e-27, kilograms); // neutron mass
-  SET(m_p,            1.672'621'925'95e-27, kilograms); // proton mass
-  SET(m_tau,                  3.167'54e-27, kilograms); // tau mass
-  SET(m_t,              5.007'356'7512e-27, kilograms); // triton mass
-  SET(r_e,              2.817'940'3205e-15, meters); // classical electron radius
-  SET(R_inf,            10'973'731.568'157, per_meter); // Rydberg constant
-  SET(sin2Theta_W,                 0.22290, dimensionless); // weak mixing angle
-  SET(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
-#endif
+    length        a_0 =   meters(5.291'772'105'44e-11); // Bohr radius
+    dimensionless alpha =                 7.2973525e-3; // fine-structure constant
+    dimensionless alpha_inv =          137.035'999'177; // inverse fine-structure constant
+    energy        E_h =       joules(4.3597447222e-18); // Hartree energy
+    dimensionless g_e =              -2.00231930436256; // electron g-factor
+    mass          m_e =  kilograms(9.109'383'7139e-31); // electron mass
+    mass          m_d =  kilograms(3.343'583'7768e-27); // deuteron mass
+    mass          m_h =  kilograms(5.006'412'7862e-27); // helion mass
+    mass          m_mu =  kilograms(1.883'531'627e-28); // muon mass
+    mass          m_n =kilograms(1.674'927'500'56e-27); // neutron mass
+    mass          m_p =kilograms(1.672'621'925'95e-27); // proton mass
+    mass          m_tau =      kilograms(3.167'54e-27); // tau mass
+    mass          m_t =  kilograms(5.007'356'7512e-27); // triton mass
+    length        r_e =     meters(2.817'940'3205e-15); // classical electron radius
+    dimensionless sin2Theta_W =                0.22290; // weak mixing angle
+    area          sigma_e =     meters2(6.6524587e-29); // Thomson cross section (symbol: σ_e)
   } CODATA;
 
   constexpr struct { // Mathematical constants (https://en.wikipedia.org/wiki/Mathematical_constant)
