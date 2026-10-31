@@ -221,7 +221,7 @@ void various_examples() {
 
 
     cout << "29. What's the total area and weight of 500 papers in A4 format (80g/m²)? ";
-    auto paper_area   = 500 * ISO216.A4_width * ISO216.A4_height;
+    auto paper_area   = 500 * ISO_216.A4_width * ISO_216.A4_height;
     auto paper_weight = paper_area * (80_g / 1_m²);
     cout << paper_area << " and " << paper_weight << endl;
 

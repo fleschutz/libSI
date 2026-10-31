@@ -13,6 +13,6 @@ namespace {
     length container_1AA_ext_width    =  2.438_m;
     mass container_1AA_max_gross_mass = 36'000_kg;
     // TODO
-  } ISO668;
+  } ISO_668;
 
 } // end of namespace

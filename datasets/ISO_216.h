@@ -1,4 +1,4 @@
-/// @file     datasets/ISO216.h
+/// @file     datasets/ISO_216.h
 /// @brief    Contains the international standard for paper sizes (ISO 216)
 /// @details  Source: https://en.wikipedia.org/wiki/International_standard_paper_sizes (as of 2026)
 
@@ -77,6 +77,6 @@ namespace {
     length C9_height  = 57_mm;
     length C10_width  = 28_mm;
     length C10_height = 40_mm;
-  } ISO216;
+  } ISO_216;
 
 } // end of namespace
