@@ -30,6 +30,7 @@ int main() {
 
 | Component             | Example                                   | Location                               |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
+| Namespace             | *SI*                                      | (for SI components)                    |
 | Datatypes             | *mass*                                    | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *ounces*                                  | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_oz*                                    | [<SI/literals.h>](SI/literals.h)       |
