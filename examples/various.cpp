@@ -10,7 +10,7 @@ void various_examples() {
 
     cout << "    === VARIOUS EXAMPLES ===" << endl;
     mass m   = 1_oz;
-    energy E = m * square(constant::speed_of_light_in_vacuum);
+    energy E = m * square(CODATA.speed_of_light_in_vacuum);
     cout << " 1. The potential energy of a single ounce is: " << E << endl;
 
 

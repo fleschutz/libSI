@@ -20,7 +20,7 @@ using namespace SI;
 
 int main() {	
     mass m   = 1_oz;
-    energy E = m * square(constant::speed_of_light_in_vacuum);
+    energy E = m * square(CODATA.speed_of_light_in_vacuum);
     std::cout << "The potential energy of a single ounce is: " << E << std::endl;
 }
 ```
@@ -34,7 +34,7 @@ int main() {
 | Datatypes             | *mass*                                    | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *ounces*                                  | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_oz*                                    | [<SI/literals.h>](SI/literals.h)       |
-| Constants             | *constant::speed_of_light_in_vacuum*      | [<SI/constants.h>](SI/constants.h)     |
+| Constants             | *CODATA.speed_of_light_in_vacuum*         | [<SI/constants.h>](SI/constants.h)     |
 | Formulas              | *kinetic_energy_formula()*                | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *to_string()*                             | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_km == 1000_m);*          | [<SI/tests.h>](SI/tests.h)             | 

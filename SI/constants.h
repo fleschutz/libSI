@@ -10,58 +10,9 @@
 
 namespace SI { namespace constant {
 
-  // Defined Constants (CODATA 2022)
-  // -----------------
-  SET(speed_of_light_in_vacuum,299'792'458.0, meters_per_second); // the speed of light in vacuum (symbol: c)
-  SET(planck,             6.626'070'15e-34, jouleseconds); // Planck constant (symbol: h)
-  SET(elementary_charge, 1.602'176'634e-19, coulombs); // the elementary charge (symbol: e)
-  SET(boltzmann,             1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
-  SET(avogadro,              6.02214076e23, per_mol); // Avogadro constant (symbol: N_A)
-  SET(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
-
   // Universal Constants (CODATA 2022)
   // -------------------
   SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
-  SET(Z_0,                 376.730'313'412, ohms); // characteristic impedance of vacuum
-  SET(epsilon_0,        8.854'187'8188e-12, farads_per_meter); // vacuum electric permittivity, symbol: ε_0
-  SET(l_P,                    1.616255e-35, meters); // Planck length
-  SET(m_P,                     2.176434e-8, kilograms); // Planck mass
-  SET(T_P,                     1.416784e32, kelvins); // Planck temperature
-  SET(t_P,                    5.391247e-44, seconds); // Planck time
-  SET(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
-  SET(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability
-
-  // Electromagnetic Constants (CODATA 2022)
-  // -------------------------
-  SET(G_0,                7.748'091'729e-5, siemens); // conductance quantum
-  SET(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
-  SET(K_J,                 483'597.848'4e9, hertz_per_volt); // Josephson constant
-  SET(mu_B,             9.274'010'0657e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
-  SET(mu_N,             5.050'783'7393e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
-  SET(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum (symbol: Φ_0)
-  SET(R_K,                   25'812.807'45, ohms); // von Klitzing constant
-  SET(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
-
-  // Atomic & Nuclear Constants (CODATA 2022)
-  // --------------------------
-  SET(a_0,            5.291'772'105'44e-11, meters);   // Bohr radius
-  SET(alpha,                  7.2973525e-3, dimensionless); // fine-structure constant
-  SET(alpha_inv,           137.035'999'177, dimensionless); // inverse fine-structure constant
-  SET(E_h,                4.3597447222e-18, joules);    // Hartree energy
-  SET(g_e,               -2.00231930436256, dimensionless); // electron g-factor
-  SET(h_2me,                  3.6369475e-4, meters2_per_second); // quantum of circulation
-  SET(m_e,              9.109'383'7139e-31, kilograms); // electron mass
-  SET(m_d,              3.343'583'7768e-27, kilograms); // deuteron mass
-  SET(m_h,              5.006'412'7862e-27, kilograms); // helion mass
-  SET(m_mu,              1.883'531'627e-28, kilograms); // muon mass
-  SET(m_n,            1.674'927'500'56e-27, kilograms); // neutron mass
-  SET(m_p,            1.672'621'925'95e-27, kilograms); // proton mass
-  SET(m_tau,                  3.167'54e-27, kilograms); // tau mass
-  SET(m_t,              5.007'356'7512e-27, kilograms); // triton mass
-  SET(r_e,              2.817'940'3205e-15, meters); // classical electron radius
-  SET(R_inf,            10'973'731.568'157, per_meter); // Rydberg constant
-  SET(sin2Theta_W,                 0.22290, dimensionless); // weak mixing angle
-  SET(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
 
   // Physico-chemical Constants (CODATA 2022)
   // --------------------------
@@ -80,16 +31,70 @@ namespace SI { namespace constant {
   // ------------------
   SET(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
 
-
+#undef SET
 }
+
   constexpr struct { // CODATA 2022 constants (https://codata.org)
     // Defined constants
     frequency caesium_frequency =                   hertz(9'192'631'770); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
     velocity speed_of_light_in_vacuum = meters_per_second(299'792'458.0); // the speed of light in vacuum (symbol: c)
     velocity c =                        meters_per_second(299'792'458.0); // the speed of light in vacuum (symbol: c)
+#if 0
+  SET(planck,             6.626'070'15e-34, jouleseconds); // Planck constant (symbol: h)
+  SET(elementary_charge, 1.602'176'634e-19, coulombs); // the elementary charge (symbol: e)
+  SET(boltzmann,             1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
+  SET(avogadro,              6.02214076e23, per_mol); // Avogadro constant (symbol: N_A)
+  SET(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
+#endif
     acceleration g_n  =                     meters_per_second2(9.806'65); // standard acceleration of gravity
     pressure atm =                                      pascals(101'325); // standard atmosphere
     pressure ssp =                                      pascals(100'000); // standard-state pressure
+
+    // Universal constants
+#if 0
+  SET(Z_0,                 376.730'313'412, ohms); // characteristic impedance of vacuum
+  SET(epsilon_0,        8.854'187'8188e-12, farads_per_meter); // vacuum electric permittivity, symbol: ε_0
+  SET(l_P,                    1.616255e-35, meters); // Planck length
+  SET(m_P,                     2.176434e-8, kilograms); // Planck mass
+  SET(T_P,                     1.416784e32, kelvins); // Planck temperature
+  SET(t_P,                    5.391247e-44, seconds); // Planck time
+  SET(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
+  SET(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability
+#endif
+
+#if 0
+  // Electromagnetic constants
+  SET(G_0,                7.748'091'729e-5, siemens); // conductance quantum
+  SET(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
+  SET(K_J,                 483'597.848'4e9, hertz_per_volt); // Josephson constant
+  SET(mu_B,             9.274'010'0657e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
+  SET(mu_N,             5.050'783'7393e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
+  SET(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum (symbol: Φ_0)
+  SET(R_K,                   25'812.807'45, ohms); // von Klitzing constant
+  SET(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
+#endif
+
+    // Atomic & nuclear constants
+    length a_0 =          meters(5.291'772'105'44e-11);   // Bohr radius
+#if 0
+  SET(alpha,                  7.2973525e-3, dimensionless); // fine-structure constant
+  SET(alpha_inv,           137.035'999'177, dimensionless); // inverse fine-structure constant
+  SET(E_h,                4.3597447222e-18, joules);    // Hartree energy
+  SET(g_e,               -2.00231930436256, dimensionless); // electron g-factor
+  SET(h_2me,                  3.6369475e-4, meters2_per_second); // quantum of circulation
+  SET(m_e,              9.109'383'7139e-31, kilograms); // electron mass
+  SET(m_d,              3.343'583'7768e-27, kilograms); // deuteron mass
+  SET(m_h,              5.006'412'7862e-27, kilograms); // helion mass
+  SET(m_mu,              1.883'531'627e-28, kilograms); // muon mass
+  SET(m_n,            1.674'927'500'56e-27, kilograms); // neutron mass
+  SET(m_p,            1.672'621'925'95e-27, kilograms); // proton mass
+  SET(m_tau,                  3.167'54e-27, kilograms); // tau mass
+  SET(m_t,              5.007'356'7512e-27, kilograms); // triton mass
+  SET(r_e,              2.817'940'3205e-15, meters); // classical electron radius
+  SET(R_inf,            10'973'731.568'157, per_meter); // Rydberg constant
+  SET(sin2Theta_W,                 0.22290, dimensionless); // weak mixing angle
+  SET(sigma_e,               6.6524587e-29, meters2); // Thomson cross section (symbol: σ_e)
+#endif
   } CODATA;
 
   constexpr struct { // Mathematical constants (https://en.wikipedia.org/wiki/Mathematical_constant)
@@ -130,5 +135,3 @@ namespace SI { namespace constant {
   // 5. https://codata.org - CODATA: the committee on data of the International Science Council (ISC)
 
 } // end of namespace
-
-#undef SET
