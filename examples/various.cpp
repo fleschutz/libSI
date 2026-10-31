@@ -244,11 +244,11 @@ void various_examples() {
             if (&airport1 == &airport2)
                 continue;
             auto distance = distance_on_sphere_formula(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);
-	    if (distance < nearestDistance) {
-		    nearestDistance = distance;
-		    nearest1 = airport1.name;
-		    nearest2 = airport2.name;
-            }
+            if (distance > nearestDistance)
+                continue;
+            nearestDistance = distance;
+            nearest1 = airport1.name;
+            nearest2 = airport2.name;
         }
     }
     cout << nearest1 << " and " << nearest2 << " with only " << nearestDistance << " in between" << endl << endl;
