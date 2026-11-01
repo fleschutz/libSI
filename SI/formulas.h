@@ -204,7 +204,7 @@ namespace SI {
 	}
 
 	/// @brief Calculates the free fall time from the given height.
-	FUNC time time_of_free_fall(length height, acceleration gravity)
+	FUNC time free_fall_time_formula(length height, acceleration gravity)
 	{
 		return sqrt((2. * height) / gravity);
 	}
