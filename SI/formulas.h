@@ -210,7 +210,7 @@ namespace SI {
 	}
 
 	/// @brief Calculates the braking distance to brake from v0 to v1 with the given deceleration.
-	FUNC length braking_distance(velocity v0, velocity v1, acceleration deceleration)
+	FUNC length braking_distance_formula(velocity v0, velocity v1, acceleration deceleration)
 	{
 		return (square(v0) - square(v1)) / (2.0 * deceleration);
 	}
