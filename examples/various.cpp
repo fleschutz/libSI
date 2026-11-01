@@ -9,9 +9,9 @@ using namespace SI;
 void various_examples() {
 
     cout << "    === VARIOUS EXAMPLES ===" << endl;
-    mass m   = 1_oz;
+    mass m   = 1_kg;
     energy E = m * square(CODATA.speed_of_light_in_vacuum);
-    cout << " 1. The potential energy of a single ounce is: " << E << endl;
+    cout << " 1. The potential energy of one kilogram is: " << E << endl;
 
 
     cout << " 2. The kinetic energy of a mid-size 5000lb SUV at 30mph is... ";
