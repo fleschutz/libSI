@@ -26,7 +26,7 @@
 13. The event horizon of our galaxy's black hole (Sagittarius A*) is... 12683881.7 km or 42.3 light-seconds (Schwarzschild radius)
 
     === VARIOUS EXAMPLES ===
- 1. The potential energy of one kilogram is: 89.9 PJ
+ 1. The potential energy of a single kilogram is: 89.9 PJ
  2. The kinetic energy of a mid-size 5000lb SUV at 30mph is... 204.0 kJ or 48.7 g TNT
  3. The local gravity at Mount Everest's peak is... 9.8 m/s²
  4. Donald Trump's body-mass index (BMI) is... 28.2548

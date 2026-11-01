@@ -21,7 +21,7 @@ using namespace SI;
 int main() {	
     mass m   = 1_kg;
     energy E = m * square(CODATA.speed_of_light_in_vacuum);
-    std::cout << "The potential energy of one kilogram is: " << E << std::endl;
+    std::cout << "The potential energy of a single kilogram is: " << E << std::endl;
 }
 ```
 
