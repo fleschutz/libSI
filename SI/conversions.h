@@ -472,12 +472,9 @@ namespace SI
 	/// @brief Returns the power intensity as string using SI units.
 	FUNC std::string to_string(const power_intensity I)
 	{
-		if (I <= -1_MW_per_m² || I >= 1_MW_per_m²)
-			return _fmt(I / 1_MW_per_m², "MW/m²");
-		if (I <= -1_kW_per_m² || I >= 1_kW_per_m²)
-			return _fmt(I / 1_kW_per_m², "kW/m²");
-		if (I <= -1_W_per_m² || I >= 1_W_per_m²)
-			return _fmt(I / 1_W_per_m², "W/m²");
+		if (I <= -1_MW_per_m² || I >= 1_MW_per_m²)                  return _fmt(I / 1_MW_per_m², "MW/m²");
+		if (I <= -1_kW_per_m² || I >= 1_kW_per_m²)                  return _fmt(I / 1_kW_per_m², "kW/m²");
+		if (I <= -1_W_per_m² || I >= 1_W_per_m² || I == 0_W_per_m²) return _fmt(I / 1_W_per_m², "W/m²");
 		return _fmt(I / 1_mW_per_m², "mW/m²");
 	}
 
@@ -490,16 +487,11 @@ namespace SI
 	/// @brief Returns the pressure as string using SI units.
 	FUNC std::string to_string(const pressure p)
 	{
-		if (p <= -1_MPa || p >= 1_MPa)
-			return _fmt(p / 1_MPa, "MPa");
-		if (p <= -1_kPa || p >= 1_kPa)
-			return _fmt(p / 1_kPa, "kPa");
-		if (p <= -1_hPa || p >= 1_hPa)
-			return _fmt(p / 1_hPa, "hPa");
-		if (p <= -1_Pa || p >= 1_Pa || p == 0.0_Pa)
-			return _fmt(p / 1_Pa, "Pa");
-		if (p <= -1_mPa || p >= 1_mPa)
-			return _fmt(p / 1_mPa, "mPa");
+		if (p <= -1_MPa || p >= 1_MPa)              return _fmt(p / 1_MPa, "MPa");
+		if (p <= -1_kPa || p >= 1_kPa)              return _fmt(p / 1_kPa, "kPa");
+		if (p <= -1_hPa || p >= 1_hPa)              return _fmt(p / 1_hPa, "hPa");
+		if (p <= -1_Pa || p >= 1_Pa || p == 0.0_Pa) return _fmt(p / 1_Pa, "Pa");
+		if (p <= -1_mPa || p >= 1_mPa)              return _fmt(p / 1_mPa, "mPa");
 		return _fmt(p / 1_uPa, "µPa");
 	}
 
@@ -512,20 +504,13 @@ namespace SI
 	/// @brief Returns the electric potential as string using SI units.
 	FUNC std::string to_string(const electric_potential U)
 	{
-		if (U <= -1_GV || U >= 1_GV)
-			return _fmt(U / 1_GV, "GV");
-		if (U <= -1_MV || U >= 1_MV)
-			return _fmt(U / 1_MV, "MV");
-		if (U <= -1_kV || U >= 1_kV)
-			return _fmt(U / 1_kV, "kV");
-		if (U <= -1_V || U >= 1_V || U == 0.0_V)
-			return _fmt(U / 1_V, "V");
-		if (U <= -1_mV || U >= 1_mV)
-			return _fmt(U / 1_mV, "mV");
-		if (U <= -1_uV || U >= 1_uV)
-			return _fmt(U / 1_uV, "μV");
-		if (U <= -1_nV || U >= 1_nV)
-			return _fmt(U / 1_nV, "nV");
+		if (U <= -1_GV || U >= 1_GV)             return _fmt(U / 1_GV, "GV");
+		if (U <= -1_MV || U >= 1_MV)             return _fmt(U / 1_MV, "MV");
+		if (U <= -1_kV || U >= 1_kV)             return _fmt(U / 1_kV, "kV");
+		if (U <= -1_V || U >= 1_V || U == 0.0_V) return _fmt(U / 1_V, "V");
+		if (U <= -1_mV || U >= 1_mV)             return _fmt(U / 1_mV, "mV");
+		if (U <= -1_uV || U >= 1_uV)             return _fmt(U / 1_uV, "μV");
+		if (U <= -1_nV || U >= 1_nV)             return _fmt(U / 1_nV, "nV");
 		return _fmt(U / 1_pV, "pV");
 	}
 
@@ -538,16 +523,11 @@ namespace SI
 	/// @brief Returns the electric charge as string using SI units.
 	FUNC std::string to_string(const electric_charge Q)
 	{
-		if (Q <= -1_GAh || Q >= 1_GAh)
-			return _fmt(Q / 1_MAh, "MAh");
-		if (Q <= -1_MAh || Q >= 1_MAh)
-			return _fmt(Q / 1_MAh, "MAh");
-		if (Q <= -1_kAh || Q >= 1_kAh)
-			return _fmt(Q / 1_kAh, "kAh");
-		if (Q <= -1_Ah || Q >= 1_Ah || Q == 0.0_Ah)
-			return _fmt(Q / 1_Ah, "Ah");
-		if (Q <= -1_mAh || Q >= 1_mAh)
-			return _fmt(Q / 1_mAh, "mAh");
+		if (Q <= -1_GAh || Q >= 1_GAh)              return _fmt(Q / 1_GAh, "GAh");
+		if (Q <= -1_MAh || Q >= 1_MAh)              return _fmt(Q / 1_MAh, "MAh");
+		if (Q <= -1_kAh || Q >= 1_kAh)              return _fmt(Q / 1_kAh, "kAh");
+		if (Q <= -1_Ah || Q >= 1_Ah || Q == 0.0_Ah) return _fmt(Q / 1_Ah, "Ah");
+		if (Q <= -1_mAh || Q >= 1_mAh)              return _fmt(Q / 1_mAh, "mAh");
 		return _fmt(Q / 1_uAh, "µAh");
 	}
 
@@ -636,32 +616,22 @@ namespace SI
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
 	FUNC std::string to_equivalent(const length d)
 	{
-		if (d <= -1_ly || d >= 1_ly)
-			return _fmt(d / 1_ly, "light-years", to_equivalent_format);
-		if (d <= -1_ls || d >= 1_ls)
-			return _fmt(d / 1_ls, "light-seconds", to_equivalent_format);
-		if (d <= -1_mi || d >= 1_mi)
-			return _fmt(d / 1_mi, "mi", to_equivalent_format);
-		if (d <= -1_yd || d >= 1_yd)
-			return _fmt(d / 1_yd, "yd", to_equivalent_format);
-		if (d <= -1_ft || d >= 1_ft)
-			return _fmt(d / 1_ft, "ft", to_equivalent_format);
+		if (d <= -1_ly || d >= 1_ly) return _fmt(d / 1_ly, "light-years", to_equivalent_format);
+		if (d <= -1_ls || d >= 1_ls) return _fmt(d / 1_ls, "light-seconds", to_equivalent_format);
+		if (d <= -1_mi || d >= 1_mi) return _fmt(d / 1_mi, "mi", to_equivalent_format);
+		if (d <= -1_yd || d >= 1_yd) return _fmt(d / 1_yd, "yd", to_equivalent_format);
+		if (d <= -1_ft || d >= 1_ft) return _fmt(d / 1_ft, "ft", to_equivalent_format);
 		return _fmt(d / 1_in, "in", to_equivalent_format);
 	}
 
 	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
 	FUNC std::string to_equivalent(const mass m)
 	{
-		if (m <= -1_Msun || m >= 1_Msun)
-			return _fmt(m / 1_Msun, "solar masses", to_equivalent_format);
-		if (m <= -1_Mjup || m >= 1_Mjup)
-			return _fmt(m / 1_Mjup, "Jupiter masses", to_equivalent_format);
-		if (m <= -1_Mearth || m >= 1_Mearth)
-			return _fmt(m / 1_Mearth, "Earth masses", to_equivalent_format);
-		if (m <= -1_Mmoon || m >= 1_Mmoon)
-			return _fmt(m / 1_Mmoon, "Moon masses", to_equivalent_format);
-		if (m <= -1_lb || m >= 1_lb)
-			return _fmt(m / 1_lb, "lb", to_equivalent_format);
+		if (m <= -1_Msun || m >= 1_Msun)     return _fmt(m / 1_Msun, "solar masses", to_equivalent_format);
+		if (m <= -1_Mjup || m >= 1_Mjup)     return _fmt(m / 1_Mjup, "Jupiter masses", to_equivalent_format);
+		if (m <= -1_Mearth || m >= 1_Mearth) return _fmt(m / 1_Mearth, "Earth masses", to_equivalent_format);
+		if (m <= -1_Mmoon || m >= 1_Mmoon)   return _fmt(m / 1_Mmoon, "Moon masses", to_equivalent_format);
+		if (m <= -1_lb || m >= 1_lb)         return _fmt(m / 1_lb, "lb", to_equivalent_format);
 		return _fmt(m / 1_oz, "oz", to_equivalent_format);
 	}
 
