@@ -6,70 +6,45 @@
 
 #pragma once
 #include <SI/units.h>
-#define SET(_name, _quantity, _unit) inline constexpr auto _name = _unit(_quantity)
 
-namespace SI { namespace constant {
+namespace SI { 
 
-  // Universal Constants (CODATA 2022)
-  // -------------------
-  SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
-
-  // Physico-chemical Constants (CODATA 2022)
-  // --------------------------
-  SET(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
-  SET(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
-  SET(c_1L,                1.191042972e-16, watts_per_meter2); // first radiation constant for spectral radiance
-  SET(F,                     96'485.332'12, coulombs_per_mol); // Faraday constant
-  SET(m_u,          1.660'539'068'9252e-27, kilograms); // atomic mass constant
-  SET(M_u,             1.000'000'001'05e-3, kilograms_per_mol); // molar mass constant
-  SET(R,                     8.314'462'618, joules_per_kelvin_per_mol); // molar gas constant
-  SET(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); // specific gas constant for dry air
-  SET(S_0_by_R,             -1.15170753706, dimensionless); // Sackur–Tetrode constant
-  SET(V_m,                22.710'954'64e-3, meters3_per_mol); // molar volume of ideal gas (273.15K, 100kPa)
-
-#undef SET
-}
-
-  constexpr struct { // CODATA 2022 constants
+  // CODATA Constants
+  // ----------------
+  constexpr struct {
 
     // Defined constants
     frequency caesium_frequency =                   hertz(9'192'631'770); // the unperturbed ground state hyperfine transition frequency of the ceesium-133 atom
     velocity speed_of_light_in_vacuum = meters_per_second(299'792'458.0); // the speed of light in vacuum (symbol: c)
     velocity c =                        meters_per_second(299'792'458.0); // the speed of light in vacuum (symbol: c)
-#if 0
-  SET(planck,             6.626'070'15e-34, jouleseconds); // Planck constant (symbol: h)
-  SET(elementary_charge, 1.602'176'634e-19, coulombs); // the elementary charge (symbol: e)
-  SET(boltzmann,             1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
-  SET(avogadro,              6.02214076e23, per_mol); // Avogadro constant (symbol: N_A)
-  SET(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
-#endif
+    //SET(planck,             6.626'070'15e-34, jouleseconds); // Planck constant (symbol: h)
+    //SET(elementary_charge, 1.602'176'634e-19, coulombs); // the elementary charge (symbol: e)
+    //SET(boltzmann,             1.380'649e-23, joules_per_kelvin); // Boltzmann constant (symbol: k)
+    //SET(avogadro,              6.02214076e23, per_mol); // Avogadro constant (symbol: N_A)
+    //SET(K_cd,                            683, lumens_per_watt); // the luminous efficacy of monochromatic radiation of frequency 540 THz
     acceleration g_n  =                     meters_per_second2(9.806'65); // standard acceleration of gravity
     pressure atm =                                      pascals(101'325); // standard atmosphere
     pressure ssp =                                      pascals(100'000); // standard-state pressure
 
     // Universal constants
-#if 0
-  SET(Z_0,                 376.730'313'412, ohms); // characteristic impedance of vacuum
-  SET(epsilon_0,        8.854'187'8188e-12, farads_per_meter); // vacuum electric permittivity, symbol: ε_0
-  SET(l_P,                    1.616255e-35, meters); // Planck length
-  SET(m_P,                     2.176434e-8, kilograms); // Planck mass
-  SET(T_P,                     1.416784e32, kelvins); // Planck temperature
-  SET(t_P,                    5.391247e-44, seconds); // Planck time
-  SET(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
-  SET(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability
-#endif
+    //SET(Z_0,                 376.730'313'412, ohms); // characteristic impedance of vacuum
+    //SET(epsilon_0,        8.854'187'8188e-12, farads_per_meter); // vacuum electric permittivity, symbol: ε_0
+    length l_P =          meters(1.616255e-35); // Planck length
+    mass m_P =          kilograms(2.176434e-8); // Planck mass
+    temperature T_P =     kelvins(1.416784e32); // Planck temperature
+    SI::time t_P =       seconds(5.391247e-44); // Planck time
+    //SET(h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
+    //SET(mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability
 
     // Electromagnetic constants
-#if 0
-  SET(G_0,                7.748'091'729e-5, siemens); // conductance quantum
-  SET(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
-  SET(K_J,                 483'597.848'4e9, hertz_per_volt); // Josephson constant
-  SET(mu_B,             9.274'010'0657e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
-  SET(mu_N,             5.050'783'7393e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
-  SET(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum (symbol: Φ_0)
-  SET(R_K,                   25'812.807'45, ohms); // von Klitzing constant
-  SET(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
-#endif
+    //SET(G_0,                7.748'091'729e-5, siemens); // conductance quantum
+    //SET(G_0_inv,                 12906.40372, ohms); // inverse conductance quantum
+    //SET(K_J,                 483'597.848'4e9, hertz_per_volt); // Josephson constant
+    //SET(mu_B,             9.274'010'0657e-24, joules_per_tesla); // Bohr magneton (symbol: µB)
+    //SET(mu_N,             5.050'783'7393e-27, joules_per_tesla); // nuclear magneton (symbol: μ_N)
+    //SET(Phi_0,               2.067833848e-15, webers); // magnetic flux quantum (symbol: Φ_0)
+    //SET(R_K,                   25'812.807'45, ohms); // von Klitzing constant
+    //SET(R_Km90,                    25812.807, ohms); // conventional value of von Klitzing constant
 
     // Atomic & nuclear constants
     length        a_0 =   meters(5.291'772'105'44e-11); // Bohr radius
@@ -89,9 +64,21 @@ namespace SI { namespace constant {
     dimensionless sin2Theta_W =                0.22290; // weak mixing angle
     area          sigma_e =     meters2(6.6524587e-29); // Thomson cross section (symbol: σ_e)
 
-  } CODATA;
+    // Physico-chemical Constants
+    //SET(b,                    2.897771955e-3, meter_kelvins); // Wien wavelength displacement law constant
+    //SET(c_1,                 3.741771852e-16, wattmeters2); // first radiation constant
+    //SET(c_1L,                1.191042972e-16, watts_per_meter2); // first radiation constant for spectral radiance
+    //SET(F,                     96'485.332'12, coulombs_per_mol); // Faraday constant
+    mass m_u =kilograms(1.660'539'068'9252e-27); // atomic mass constant
+    //SET(M_u,             1.000'000'001'05e-3, kilograms_per_mol); // molar mass constant
+    dimensionless S_0_by_R =    -1.15170753706; // Sackur–Tetrode constant
+    //SET(V_m,                22.710'954'64e-3, meters3_per_mol); // molar volume of ideal gas (273.15K, 100kPa)
 
-  constexpr struct { // Mathematical constants 
+  } CODATA; // (as of 2022, next update: early 2027)
+
+  // Mathematical Constants 
+  // ----------------------
+  constexpr struct { 
     dimensionless root_2 =     1.41421356237309504880; // Pythagoras' constant (square root of 2)
     dimensionless tau =        6.28318530717958647692; // 2π (symbol: τ)
     dimensionless pi =         3.14159265358979323846; // Archimedes' constant (symbol: π)
@@ -101,7 +88,9 @@ namespace SI { namespace constant {
     dimensionless phi =        1.61803398874989484820; // golden ratio (symbol: φ)
   } Math;
 
-  constexpr struct { // Astronomical constants
+  // Astronomical Constants
+  // ----------------------
+  constexpr struct { 
     length AU =              meters(149'597'870'700); // one astronomical unit (symbol: au, IAU 2009)
     length parsec   = meters(30'856'775'814'913'673); // one Parsec (symbol: pc, IAU 2015)
     length lightyear = meters(9'460'730'472'580'800); // one light-year (symbol: ly, IAU 2009)
@@ -110,7 +99,9 @@ namespace SI { namespace constant {
     power_intensity F1AU =  watts_per_meter2(1366.1); // total solar irradiance at 1 AU (solar constant)
   } IAU;
 
-  constexpr struct { // Various constants
+  // Various Constants
+  // -----------------
+  constexpr struct {
     temperature T0 =                      kelvins(0); // absolute zero (0K, the lowest possible temperature)
     length Marathon_distance =        meters(42'195);
     length quarter_mile =             meters(402.34);
@@ -120,6 +111,16 @@ namespace SI { namespace constant {
     velocity speed_of_sound_in_diamonds = meters_per_second(12'000);
     // SET(gravitational_constant,6.6743015e-11, meters3_per_kilogram_per_second2);
   } Const;
+
+  namespace constant { // OLD
+#define SET(_name, _quantity, _unit) inline constexpr auto _name = _unit(_quantity)
+  // Universal Constants
+  SET(G,                       6.67430e-11, meters3_per_kilogram_per_second2); // Newtonian constant of gravitation
+  // Physico-chemical Constants
+  SET(R,                     8.314'462'618, joules_per_kelvin_per_mol); // molar gas constant
+  SET(R_dry_air,              287.050'0676, joules_per_kilogram_per_kelvin); // specific gas constant for dry air
+#undef SET
+}
  
   // References
   // ----------
