@@ -1,6 +1,6 @@
 /// @file     SI/conversions.h
-/// @brief    Provides conversion functions, e.g. to_string(12_m).
-/// @details  Contains from_string(), to_string(), to_equivalent(), and to_percentage().
+/// @brief    Contains some conversion functions, e.g. to_string(12_m).
+/// @details  Provides from_string(), to_string(), to_equivalent(), and to_percentage().
 
 #pragma once
 #include <iostream>
@@ -10,12 +10,14 @@
 
 namespace SI
 {
-	inline auto to_string_format     = "%.2Lf %s"; ///< configurable, SI standard formatting by default
-	inline auto to_equivalent_format = "%.2Lf %s"; ///< configurable, SI standard formatting by default
+	// Configurable Format Strings
+	// ---------------------------
+	inline auto to_string_format     = "%.2Lf %s"; ///< SI standard formatting by default
+	inline auto to_equivalent_format = "%.2Lf %s"; ///< SI standard formatting by default
 	inline auto to_percentage_format = "%.0Lf%s";  ///< configurable
 
-	// Function from_string()
-	// ----------------------
+	// from_string() Function Overloading
+	// ----------------------------------
 	/// @brief The from_string() function
 	FUNC bool from_string(const std::string& str, length& result)
 	{
@@ -118,8 +120,8 @@ namespace SI
 		return std::string(buf);
 	}
 
-	// Function to_string()
-	// --------------------
+	// to_string() Function Overloading
+	// --------------------------------
 
 	/// @brief Returns the given length as string using SI units.
 	FUNC std::string to_string(length d)
@@ -488,43 +490,14 @@ namespace SI
 		return (os << to_string(n));
 	}
 
-#if 0
-	/// @brief Returns a dimensionless number as string.
-	FUNC std::string to_string(dimensionless n)
-	{
-		return _fmt(n, "");
-	}
-#endif
-
 	/// @brief Returns the angle as string in degree.
 	FUNC std::string to_string(const angle a)
 	{
 		return _fmt(a / 1_deg, "°");
 	}
 
-#if 0
-	FUNC std::string to_string(const unsigned char byte)
-	{
-		char buf[256];
-		std::snprintf(buf, sizeof(buf), "%u", byte);
-		return std::string(buf);
-	}
-
-	FUNC std::string to_string(const char glyph)
-	{
-		char buf[256];
-		std::snprintf(buf, sizeof(buf), "%c", glyph);
-		return std::string(buf);
-	}
-
-	FUNC std::string to_string(const std::string& text)
-	{
-		return text;
-	}
-#endif
-
-	// Function to_equivalent()
-	// ------------------------
+	// to_equivalent() Function Overloading
+	// ------------------------------------
 
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
 	FUNC std::string to_equivalent(length d)
@@ -595,8 +568,8 @@ namespace SI
 		return _fmt(n / 1_bit, "bit");
 	}
 
-	// Function to_percentage()
-	// ------------------------
+	// to_percentage() Function Overloading
+	// ------------------------------------
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
 	FUNC std::string to_percentage(length part, length total)
