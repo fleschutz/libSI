@@ -1,5 +1,5 @@
 /// @file   examples/speeds.cpp
-/// @brief  Contains 9 speed examples using libSI
+/// @brief  Contains 10 speed examples using libSI.
 
 #include <iostream>
 #include <SI/core> 

@@ -1,14 +1,14 @@
-/// @file    SI/prefixes.h
-/// @brief   Defines the 24 SI prefixes as of 2026
-/// @details More info at: https://en.wikipedia.org/wiki/Metric_prefix
+/// @file     SI/prefixes.h
+/// @brief    Defines the 24 SI prefixes (as of 2026)
+/// @details  Source: https://en.wikipedia.org/wiki/Metric_prefix
 
 #pragma once
 #include <SI/units.h>
 
 namespace SI {
-
   //                      NAME     VALUE     SYMBOL
-  constexpr dimensionless quetta = 1e30;  // Q
+  //                      ----     -----     ------
+  inline constexpr dimensionless quetta = 1e30;  // Q
   constexpr dimensionless ronna  = 1e27;  // R
   constexpr dimensionless yotta  = 1e24;  // Y
   constexpr dimensionless zetta  = 1e21;  // Z

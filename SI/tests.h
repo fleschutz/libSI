@@ -1,7 +1,7 @@
 /// @file      SI/tests.h
-/// @brief     Contains 210 unit tests at compile-time to verify everything
+/// @brief     Contains 277 unit tests, executed at compile-time.
 /// @details   Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units,
-///                            Imperial units, digital units, various units, functions and templates
+///                            Imperial units, digital units, various units, functions and templates.
 
 #pragma once
 #include <cassert>
@@ -286,7 +286,7 @@ namespace SI {
 	static_assert(1_TiBps == 1024_GiBps);
   }
 
-  inline void check_the_angles() {
+  inline void check_angle() {
         static_assert(1_rad == 1000_mrad);
         static_assert(0_deg == 0_rad);
   }
