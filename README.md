@@ -2,7 +2,7 @@
 =============================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
-Apply math with libSI in C++ correct, precise, and convenient. Top features are: 
+Choose *libSI* to apply math in C++ correct, precise, and convenient. Top features are: 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
 - **Test-safety** by 200+ unit tests (executed at compile-time and on each commit).
@@ -50,7 +50,7 @@ int main() { using namespace SI;
 
 **What's IAU?** It's the [International Astronomical Union](https://www.iau.org/), which defines the astronomical units.
 
-**What are use-cases of libSI?** Applied math in simulations, simulators, scientific calculations, games, etc.
+**What are use-cases of *libSI*?** Applied math in simulations, simulators, scientific calculations, games, etc.
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
