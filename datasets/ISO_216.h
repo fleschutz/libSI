@@ -1,5 +1,5 @@
 /// @file     datasets/ISO_216.h
-/// @brief    Contains the international standard for paper sizes (ISO 216)
+/// @brief    Contains ISO 216 - The international standard for paper sizes
 /// @details  Source: https://en.wikipedia.org/wiki/International_standard_paper_sizes (as of 2026)
 
 #pragma once

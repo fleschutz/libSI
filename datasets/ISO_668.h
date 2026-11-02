@@ -1,5 +1,5 @@
-/// @file  datasets/ISO668.h
-/// @brief Contains ISO 668: Series 1 freight containers
+/// @file   datasets/ISO_668.h
+/// @brief  Contains ISO 668 - Series 1 freight containers
 
 #pragma once
 #include <SI/literals.h>
