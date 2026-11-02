@@ -8,7 +8,7 @@
 namespace SI {
   //                      NAME     VALUE     SYMBOL
   //                      ----     -----     ------
-  inline constexpr dimensionless quetta = 1e30;  // Q
+  constexpr dimensionless quetta = 1e30;  // Q
   constexpr dimensionless ronna  = 1e27;  // R
   constexpr dimensionless yotta  = 1e24;  // Y
   constexpr dimensionless zetta  = 1e21;  // Z
