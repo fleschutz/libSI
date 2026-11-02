@@ -50,7 +50,7 @@ int main() { using namespace SI;
 
 **What's IAU?** It's the [International Astronomical Union](https://www.iau.org/), which defines the astronomical units.
 
-**What are use-cases for libSI?** Applied math such as simulations, simulators, scientific calculations, games, etc.
+**What are use-cases of libSI?** Applied math such as simulations, simulators, scientific calculations, games, etc.
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
