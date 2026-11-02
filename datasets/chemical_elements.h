@@ -1,12 +1,12 @@
 /// @file     chemical_elements.h
 /// @brief    Contains the dataset from chemical_elements.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "chemical_elements.h" ... for (auto& chemical_element : dataset::chemical_elements) { ...
+///           USAGE: #include "chemical_elements.h" ... for (auto& chemical_element : chemical_elements) { ...
 
 #pragma once
 #include <SI/literals.h>
 
-namespace dataset {
+namespace {
 using namespace SI;
 
 struct chemical_element_details {

@@ -1,12 +1,13 @@
 /// @file     material_properties.h
 /// @brief    Contains the dataset from material_properties.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "material_properties.h" ... for (auto& material_property : dataset::material_properties) { ...
+///           USAGE: #include "material_properties.h" ... for (auto& property : material_properties) { ...
 
 #pragma once
 #include <SI/literals.h>
 
-namespace dataset {
+namespace {
+using namespace SI;
 
 struct material_property_details {
 	const char* Name;                  ///< from column  1 (string)

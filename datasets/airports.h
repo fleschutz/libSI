@@ -1,12 +1,12 @@
 /// @file     airports.hpp
 /// @brief    Contains the dataset from airports.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "airports.hpp" ... for (auto& airport : dataset::airports) { ...
+///           USAGE: #include "airports.hpp" ... for (auto& airport : airports) { ...
 
 #pragma once
 #include <SI/literals.h>
 
-namespace dataset {
+namespace {
 using namespace SI;
 
 struct airport_details {

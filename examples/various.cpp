@@ -60,7 +60,7 @@ void various_examples() {
 
 
     cout << " 9. Which radioactive chemical elements melt above 2500K? ";
-    for (auto& element : dataset::chemical_elements) {
+    for (auto& element : chemical_elements) {
         if (element.melting_point > 2500_K && element.radioactive)
             cout << element.name << " at " << element.melting_point << ", ";
     }
@@ -182,7 +182,7 @@ void various_examples() {
 
 
     cout << "24. The frequencies and wavelengths of all musical notes are... ";
-    for (auto& note : dataset::musical_notes) {
+    for (auto& note : musical_notes) {
         auto wavelength = wavelength_formula(Const.speed_of_sound, note.frequency);
         cout << note.name << (char)('0' + note.octave) << "=" << note.frequency << "," << wavelength << " ";
     }
@@ -238,8 +238,8 @@ void various_examples() {
     cout << "31. The nearest airport neighbours are...";
     length nearestDistance = 999999_km;
     std::string nearest1 = "", nearest2 = "";
-    for (const auto& airport1 : dataset::airports) { 
-        for (const auto& airport2 : dataset::airports) { 
+    for (const auto& airport1 : airports) { 
+        for (const auto& airport2 : airports) { 
             if (&airport2 <= &airport1)
                 continue; // already done
             auto distance = distance_on_sphere_formula(airport1.latitude, airport1.longitude, airport2.latitude, airport2.longitude);

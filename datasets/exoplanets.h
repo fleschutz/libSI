@@ -1,12 +1,12 @@
 /// @file     exoplanets.h
 /// @brief    Contains the dataset from exoplanets.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "exoplanets.h" ... for (auto& exoplanet : dataset::exoplanets) { ...
+///           USAGE: #include "exoplanets.h" ... for (auto& exoplanet : exoplanets) { ...
 
 #pragma once
 #include <SI/literals.h>
 
-namespace dataset {
+namespace {
 using namespace SI;
 
 struct exoplanet_details {

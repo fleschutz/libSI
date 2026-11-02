@@ -1,11 +1,11 @@
 /// @file     lithium_battery_materials.h
 /// @brief    Contains the dataset from lithium_battery_materials.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "lithium_battery_materials.h" ... for (auto& lithium_battery_material : dataset::lithium_battery_materials) { ...
+///           USAGE: #include "lithium_battery_materials.h" ... for (auto& material : lithium_battery_materials) { ...
 
 #pragma once
 
-namespace dataset {
+namespace {
 
 struct lithium_battery_material_details {
 	const char* formula_pretty;        ///< from column  2 (string)

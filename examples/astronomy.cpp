@@ -66,7 +66,7 @@ void astronomy_examples() {
 
 
     cout << " 9. Exoplanets that are life-friendly and quite near are... ";
-    for (auto& exoplanet : dataset::exoplanets) {
+    for (auto& exoplanet : exoplanets) {
         if (exoplanet.number_of_stars == 0)
             continue;   // too cold without a star
         if (exoplanet.equilibrium_temperature < -40_degC || exoplanet.equilibrium_temperature > 40_degC)

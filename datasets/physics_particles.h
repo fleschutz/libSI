@@ -1,12 +1,13 @@
 /// @file     physics_particles.h
 /// @brief    Contains the dataset from physics_particles.csv
 /// @details  Converted by csv2hpp 0.9 on Oct 1, 2026 (see https://github.com/fleschutz/csv2hpp)
-///           USAGE: #include "physics_particles.h" ... for (auto& particle : dataset::particles) { ...
+///           USAGE: #include "physics_particles.h" ... for (auto& particle : physics_particles) { ...
 
 #pragma once
 #include <SI/literals.h>
 
-namespace dataset {
+namespace {
+using namespace SI;
 
 struct particle_details {
 	int pdg_id;                        ///< from column  1 (int)
@@ -23,7 +24,7 @@ struct particle_details {
 	SI::length width_upper;            ///< from column 12 (m)
 };
 
-const particle_details particles[] {       // NOTE: 00=empty or unknown field
+const particle_details physics_particles[] {       // NOTE: 00=empty or unknown field
 {-2212,"p","anti_proton",-1.,4,"UUD",938.27208816_Da,2.9e-07_kg,2.9e-07_kg,0._m,0._m,0._m},
 {-2112,"n","anti_neutron",0.,4,"UDD",939.5654205_Da,5e-07_kg,5e-07_kg,7.493e-25_m,4e-28_m,4e-28_m},
 {-321,"K","kaon-",-1.,0,"Us",493.677_Da,0.016_kg,0.016_kg,5.317e-14_m,9e-17_m,9e-17_m},
