@@ -10,7 +10,7 @@ void various_examples() {
 
     cout << "    === VARIOUS EXAMPLES ===" << endl;
     mass m   = 1_kg;
-    energy E = m * square(CODATA.speed_of_light_in_vacuum);
+    energy E = m * square(CODATA.c);
     cout << " 1. The potential energy of a single kilogram is: " << E << endl;
 
 

@@ -16,11 +16,11 @@ Apply math with libSI in C++ correct, precise, and convenient. Top features are:
 -----------
 ```cpp
 #include <SI/core>
-using namespace SI;
 
-int main() {	
+int main() { using namespace SI;
+
     mass m   = 1_kg;
-    energy E = m * square(CODATA.speed_of_light_in_vacuum);
+    energy E = m * square(CODATA.c);
     std::cout << "The potential energy of a single kilogram is: " << E << std::endl;
 }
 ```
@@ -34,7 +34,7 @@ int main() {
 | Datatypes             | *mass*                                    | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *kilograms*                               | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_kg*                                    | [<SI/literals.h>](SI/literals.h)       |
-| Constants             | *CODATA.speed_of_light_in_vacuum*         | [<SI/constants.h>](SI/constants.h)     |
+| Constants             | *CODATA.c* (speed of light)               | [<SI/constants.h>](SI/constants.h)     |
 | Formulas              | *kinetic_energy_formula()*                | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *to_equivalent()*                         | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<SI/tests.h>](SI/tests.h)             | 
