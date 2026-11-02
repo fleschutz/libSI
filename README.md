@@ -5,7 +5,7 @@
 Apply math with libSI in C++ correct, precise, and convenient. Top features are: 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
-- **Test-safety** by 200+ unit tests (executed at compile-time and on each commit by [GitHub Actions](https://github.com/fleschutz/libSI/actions)).
+- **Test-safety** by 200+ unit tests (executed at compile-time and on each commit).
 - **Precision** by 64-bit floating point, calculations on SI base units, and CODATA constants.
 - **Full speed:** no runtime overhead and implicit compile-time conversions whenever possible.
 - **Support** for SI/Imperial/US/digital/astronomical units, and a lot more.
