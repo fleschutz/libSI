@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kinetic_5fenergy_0',['kinetic_energy',['../namespaceSI_1_1formula.html#ab93acb32c724fa28b4c8e105bff3b9d1',1,'SI::formula']]]
+  ['kinetic_5fenergy_5fformula_0',['kinetic_energy_formula',['../namespaceSI.html#ae83dbc1309954c0e3d6edc88e0aeb101',1,'SI']]]
 ];

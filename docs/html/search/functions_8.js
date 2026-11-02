@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hypotenuse_5fof_5ftriangle_0',['hypotenuse_of_triangle',['../namespaceSI_1_1formula.html#a725d57fb21bcd883ab4433a13f9e12fb',1,'SI::formula']]]
+  ['hypotenuse_5fof_5ftriangle_5fformula_0',['hypotenuse_of_triangle_formula',['../namespaceSI.html#a833d5c30e8d558288d5af69c18a2ca5a',1,'SI']]]
 ];

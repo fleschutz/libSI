@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['ballistic_5fmax_5fheight_0',['ballistic_max_height',['../namespaceSI_1_1formula.html#a84f40133ddc5d683b03f25e4e2ae39cd',1,'SI::formula']]],
-  ['ballistic_5fmax_5frange_1',['ballistic_max_range',['../namespaceSI_1_1formula.html#a9062aa674147095474d6953366bcf625',1,'SI::formula']]],
-  ['ballistic_5ftravel_5ftime_2',['ballistic_travel_time',['../namespaceSI_1_1formula.html#a5d8899d77eb10b3c4d49cbbc1983ee1c',1,'SI::formula']]],
-  ['bmi_3',['BMI',['../namespaceSI_1_1formula.html#ab1073e857ff679f5c6d77253f5ca3938',1,'SI::formula']]],
-  ['braking_5fdistance_4',['braking_distance',['../namespaceSI_1_1formula.html#a55d4c74c49372fc19f160c87aa789c75',1,'SI::formula']]]
+  ['ballistic_5fmax_5fheight_5fformula_0',['ballistic_max_height_formula',['../namespaceSI.html#a47f7bffc84a0075202eb06d412521e29',1,'SI']]],
+  ['ballistic_5fmax_5frange_5fformula_1',['ballistic_max_range_formula',['../namespaceSI.html#a18bd1cef4ba2b454e42712ff82a6552f',1,'SI']]],
+  ['ballistic_5ftravel_5ftime_5fformula_2',['ballistic_travel_time_formula',['../namespaceSI.html#a5cd72df50dc9b03fda989cc856c94905',1,'SI']]],
+  ['bmi_5fformula_3',['BMI_formula',['../namespaceSI.html#a4b3cbe38d55e122da8cd100380563cd3',1,'SI']]],
+  ['braking_5fdistance_5fformula_4',['braking_distance_formula',['../namespaceSI.html#a6ae9469278e0fe79e466ec236ac2d062',1,'SI']]]
 ];

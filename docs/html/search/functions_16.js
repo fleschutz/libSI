@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['wavelength_0',['wavelength',['../namespaceSI_1_1formula.html#a8a4b1be8b13ffbb36f64b7909db7796c',1,'SI::formula']]],
-  ['wheel_5frpm_1',['wheel_rpm',['../namespaceSI_1_1formula.html#ae7f534c1531294d0fe67e5f50bdfc661',1,'SI::formula']]],
-  ['wheel_5fspeed_2',['wheel_speed',['../namespaceSI_1_1formula.html#ab6e1b548a1a946d6f93193acb0b78873',1,'SI::formula']]],
-  ['windchill_5ftemperature_3',['windchill_temperature',['../namespaceSI_1_1formula.html#a11d0605665c1f75879f7328dde2b5b83',1,'SI::formula']]]
+  ['wavelength_5fformula_0',['wavelength_formula',['../namespaceSI.html#a1894470b803df7ccc8433c0634268437',1,'SI']]],
+  ['wheel_5frpm_5fformula_1',['wheel_rpm_formula',['../namespaceSI.html#a5472d2d2f9f0448964657cf037bf8c1f',1,'SI']]],
+  ['wheel_5fspeed_5fformula_2',['wheel_speed_formula',['../namespaceSI.html#ac789dfb4485d27fcbce9ff35e32f1faa',1,'SI']]],
+  ['windchill_5ftemperature_5fformula_3',['windchill_temperature_formula',['../namespaceSI.html#a9452e9ab6eaa4fc053a8a4c66e83e2aa',1,'SI']]]
 ];

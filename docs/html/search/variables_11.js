@@ -1,16 +1,17 @@
 var searchData=
 [
-  ['semi_5fmajor_5faxis_0',['semi_major_axis',['../namespaceEarth.html#a6ac258aaa8a126ee650564ceafab6bac',1,'Earth::semi_major_axis'],['../namespaceMoon.html#a061ecd100040df8c3e1b60e479a3758c',1,'Moon::semi_major_axis']]],
+  ['s_5f0_5fby_5fr_0',['S_0_by_R',['../namespaceSI.html#ad050eaf04f4956e4d4da3da6a6b2c07e',1,'SI']]],
   ['shear_5fmodulus_1',['Shear_Modulus',['../structdataset_1_1material__property__details.html#a5dfb3cf77f7802bdc35b9e941c349862',1,'dataset::material_property_details']]],
-  ['sidereal_5forbital_5fperiod_2',['sidereal_orbital_period',['../namespaceEarth.html#adc71f96ba68aed4a3d76fd856b089afe',1,'Earth::sidereal_orbital_period'],['../namespaceMoon.html#a1816fd6856181807ee06e789adaccdee',1,'Moon::sidereal_orbital_period']]],
-  ['standard_5fstate_3',['standard_state',['../structdataset_1_1chemical__element__details.html#aaa0bc2e3ded8e25a934f2d1763e4a2cd',1,'dataset::chemical_element_details']]],
-  ['substance_4',['substance',['../structSI_1_1detail_1_1dimension.html#afd28b58671133ba8448b37b715ebf8ec',1,'SI::detail::dimension']]],
-  ['surface_5farea_5',['surface_area',['../namespaceEarth.html#a6b386d19b74ed025d86e08dc215ffd77',1,'Earth::surface_area'],['../namespaceMoon.html#a5cfed70dfbb5ac2917056c17c110ee83',1,'Moon::surface_area']]],
-  ['surface_5fgravity_6',['surface_gravity',['../namespaceEarth.html#a7e3d9f0ee829ec188d3d9b899e11f26b',1,'Earth::surface_gravity'],['../namespaceMoon.html#a56f5eb72bba4154d39c4f2b6d4b78e80',1,'Moon::surface_gravity']]],
-  ['surface_5fpressure_7',['surface_pressure',['../structdataset_1_1planet__details.html#aac36d67b30c40fbfe6da3362cf90dea5',1,'dataset::planet_details::surface_pressure'],['../namespaceEarth.html#a02479ebf7a9c82a611855d6b61056f04',1,'Earth::surface_pressure']]],
-  ['surface_5fpressure_5fday_8',['surface_pressure_day',['../namespaceMoon.html#add950a7e2e5b2c32f2d5805a40c75415',1,'Moon']]],
-  ['surface_5fpressure_5fnight_9',['surface_pressure_night',['../namespaceMoon.html#a112c3f6c39b4e5532f5064dac7120d4c',1,'Moon']]],
-  ['symbol_10',['symbol',['../structdataset_1_1chemical__element__details.html#a9e2537d45fe37ef5dac203cfe665b6e0',1,'dataset::chemical_element_details']]],
-  ['synodic_5forbital_5fperiod_11',['synodic_orbital_period',['../namespaceMoon.html#a6fb344f7a1343b27aceab371aaeb68e1',1,'Moon']]],
-  ['synodic_5frotation_5fperiod_12',['synodic_rotation_period',['../namespaceEarth.html#a0e99c520f5910fa621ac48c8dd13d5bf',1,'Earth']]]
+  ['sigma_5fe_2',['sigma_e',['../namespaceSI.html#ae1f18c57a72a556e40d0e12d3a84b0db',1,'SI']]],
+  ['sin2theta_5fw_3',['sin2Theta_W',['../namespaceSI.html#a5b3383a844aa281ae63cbada7a74471c',1,'SI']]],
+  ['speed_5fof_5flight_5fin_5fvacuum_4',['speed_of_light_in_vacuum',['../namespaceSI.html#a9b786616970de991610d621ef9498f83',1,'SI']]],
+  ['speed_5fof_5fsound_5',['speed_of_sound',['../namespaceSI.html#a5d004255cd114a049603a2661d74cf36',1,'SI']]],
+  ['speed_5fof_5fsound_5fin_5fdiamonds_6',['speed_of_sound_in_diamonds',['../namespaceSI.html#a8a96b7ac33926265a068f107c6ee08ca',1,'SI']]],
+  ['speed_5fof_5fsound_5fin_5ffresh_5fwater_7',['speed_of_sound_in_fresh_water',['../namespaceSI.html#ac8163538d9ca89c05058d34638595a89',1,'SI']]],
+  ['speed_5fof_5fsound_5fin_5firon_8',['speed_of_sound_in_iron',['../namespaceSI.html#a082dc4edcb803dad6e05fefa70e60c68',1,'SI']]],
+  ['ssp_9',['ssp',['../namespaceSI.html#ae058c0d1cbdde04eec9ef639f2cbb24e',1,'SI']]],
+  ['standard_5fstate_10',['standard_state',['../structdataset_1_1chemical__element__details.html#aaa0bc2e3ded8e25a934f2d1763e4a2cd',1,'dataset::chemical_element_details']]],
+  ['substance_11',['substance',['../structSI_1_1detail_1_1dimension.html#afd28b58671133ba8448b37b715ebf8ec',1,'SI::detail::dimension']]],
+  ['surface_5fpressure_12',['surface_pressure',['../structdataset_1_1planet__details.html#aac36d67b30c40fbfe6da3362cf90dea5',1,'dataset::planet_details']]],
+  ['symbol_13',['symbol',['../structdataset_1_1chemical__element__details.html#a9e2537d45fe37ef5dac203cfe665b6e0',1,'dataset::chemical_element_details']]]
 ];
