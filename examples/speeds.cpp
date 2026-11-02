@@ -23,7 +23,7 @@ void speed_examples() {
     cout << avg_travel_speed << " or " << to_equivalent(avg_travel_speed) << endl;
 
 
-    cout << " 3. What's the free fall time from Burj Khalifa tower (828m)? ";
+    cout << " 3. What's the free fall time from Burj Khalifa tower (828m or 2716ft)? ";
     auto tower_height    = 828_m;
     auto free_fall_time  = free_fall_time_formula(tower_height, CODATA.g_n);
     cout << free_fall_time << endl;

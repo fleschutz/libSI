@@ -151,9 +151,9 @@ namespace SI
 	{
 		if (t <= -365.25_d || t >= 365.25_d)   return _fmt(t / 365.25_d, "y");
 		if (t <= -1_w || t >= 1_w)             return _fmt(t / 1_w, "w");
-		if (t <= -1_d || t >= 1_d)             return _fmt(t / 1_d, "d");
-		if (t <= -1_h || t >= 1_h)             return _fmt(t / 1_h, "h");
-		if (t <= -1_min || t >= 1_min)         return _fmt(t / 1_min, "min");
+		if (t <= -2_d || t >= 2_d)             return _fmt(t / 1_d, "d");
+		if (t <= -2_h || t >= 2_h)             return _fmt(t / 1_h, "h");
+		if (t <= -2_min || t >= 2_min)         return _fmt(t / 1_min, "min");
 		if (t <= -1_s || t >= 1_s || t == 0_s) return _fmt(t / 1_s, "s");
 		if (t <= -1_ms || t >= 1_ms)           return _fmt(t / 1_ms, "ms");
 		if (t <= -1_us || t >= 1_us)           return _fmt(t / 1_us, "μs");
