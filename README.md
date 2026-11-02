@@ -18,7 +18,6 @@ Apply math with libSI in C++ correct, precise, and convenient. Top features are:
 #include <SI/core>
 
 int main() { using namespace SI;
-
     mass m   = 1_kg;
     energy E = m * square(CODATA.c);
     std::cout << "The potential energy of a single kilogram is: " << E << std::endl;
