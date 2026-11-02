@@ -77,7 +77,7 @@ void various_examples() {
     cout << "11. The windchill temperature of 5°C air temperature at 55km/h wind is... ";
     auto air_temperature  = 5_degC;
     auto wind_speed       = 55_km_per_h;
-    auto windchill_temp   = windchill_temperature(air_temperature, wind_speed);
+    auto windchill_temp   = windchill_temperature_formula(air_temperature, wind_speed);
     cout << windchill_temp << " or " << to_equivalent(windchill_temp) << endl;
 
 
@@ -111,7 +111,7 @@ void various_examples() {
     dimensionless lift_coefficient = 1.3939;
     auto air_density               = 1.2250_kg_per_m³; // at sea level at 15°C (59°F)
     auto air_speed                 = 284_km_per_h;
-    auto lift_force                = lift_force_of_wing(lift_coefficient, wing_surface, air_density, air_speed);
+    auto lift_force                = lift_force_of_wing_formula(lift_coefficient, wing_surface, air_density, air_speed);
     cout << lift_force << endl;
 
 
@@ -204,10 +204,10 @@ void various_examples() {
 
 
     cout << "27. The AC voltages within a tenth second are... ";
-    for (auto time = 0.0_s; time < 0.1_s; time += 0.005_s) {
+    for (auto time = 0_s; time < 0.1_s; time += 0.005_s) {
         auto peak_voltage = 220_V;
         auto sample_rate  = 50_Hz;
-        cout << sine_wave(peak_voltage, sample_rate, time) << ", ";
+        cout << sine_wave_formula(peak_voltage, sample_rate, time) << ", ";
     }
     cout << endl;
 

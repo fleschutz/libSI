@@ -24,13 +24,13 @@ void astronomy_examples() {
     cout << " 3. The attractive force between Sun and Earth is... ";
     auto Sun_mass    = 1.988416E30_kg;
     auto Earth_mass  = 5.9722E24_kg;
-    cout << gravitational_attractive_force(Sun_mass, Earth_mass, Earth_to_Sun_distance) << endl;
+    cout << gravitational_attractive_force_formula(Sun_mass, Earth_mass, Earth_to_Sun_distance) << endl;
 
 
     cout << " 4. The attractive force between Earth and Moon is... ";
     auto Moon_mass              = 7.346E22_kg;
     auto Earth_to_Moon_distance = 384'399_km;
-    cout << gravitational_attractive_force(Earth_mass, Moon_mass, Earth_to_Moon_distance) << endl;
+    cout << gravitational_attractive_force_formula(Earth_mass, Moon_mass, Earth_to_Moon_distance) << endl;
 
 
     cout << " 5. The impact energy of a 50m asteroid at 50,000km/h is... ";
@@ -59,8 +59,8 @@ void astronomy_examples() {
 
     cout << " 8. The min speed required to escape from the planets are... ";
     for (auto& planet : dataset::planets) {
-        auto min_speed = gravitational_escape_velocity(planet.mass, planet.diameter / 2.0);
-        cout << planet.name << "=" << min_speed << " or " << to_equivalent(min_speed) << ", ";
+        auto speed = gravitational_escape_velocity_formula(planet.mass, planet.diameter / 2.0);
+        cout << planet.name << "=" << speed << " or " << to_equivalent(speed) << ", ";
     }
     cout << endl;
 
@@ -92,9 +92,9 @@ void astronomy_examples() {
     auto muzzle_velocity    = 1000_m_per_s;
     auto altitude           = 0_m;
     auto launch_angle       = 45_deg;
-    auto bullet_max_height  = ballistic_max_height(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
-    auto bullet_max_range   = ballistic_max_range(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
-    auto bullet_flight_time = ballistic_travel_time(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
+    auto bullet_max_height  = ballistic_max_height_formula(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
+    auto bullet_max_range   = ballistic_max_range_formula(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
+    auto bullet_flight_time = ballistic_travel_time_formula(muzzle_velocity, altitude, launch_angle, Moon.surface_gravity);
     cout << bullet_max_height << ", " << bullet_max_range << ", " << bullet_flight_time << endl;
 
 
@@ -109,6 +109,6 @@ void astronomy_examples() {
 
     cout << "13. The event horizon of our galaxy's black hole (Sagittarius A*) is... ";
     auto Sagittarius_A_mass = 8.54e36_kg;
-    auto radius             = Schwarzschild_radius(Sagittarius_A_mass);
+    auto radius             = Schwarzschild_radius_formula(Sagittarius_A_mass);
     cout << radius << " or " << to_equivalent(radius) << " (Schwarzschild radius)" << endl << endl;
 }

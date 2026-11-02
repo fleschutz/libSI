@@ -107,7 +107,7 @@ namespace SI {
 	}
 
 	/// @brief Calculates the latus rectum of an ellipse from radius (a) and (b).
-	FUNC length latus_rectum_of_ellipse(length a, length b)
+	FUNC length latus_rectum_of_ellipse_formula(length a, length b)
 	{
 		return 2.0 * square(b) / a;
 	}
@@ -192,7 +192,7 @@ namespace SI {
 	// Formulas for Moving Objects
 	// ---------------------------
 	/// @brief Calculates the average speed from distance and duration.
-	FUNC velocity average_speed(length distance, time duration)
+	FUNC velocity average_speed_formula(length distance, time duration)
 	{
 		return distance / duration;
 	}
@@ -216,21 +216,21 @@ namespace SI {
 	}
 
 	/// @brief Calculates the acceleration necessary to accelerate from v0 to v1 within the given distance.
-	FUNC acceleration acceleration_for_distance(velocity v0, velocity v1, length distance)
+	FUNC acceleration acceleration_for_distance_formula(velocity v0, velocity v1, length distance)
 	{
 		return (square(v1) - square(v0)) / (2.0 * distance);
 	}
 
-	/// @brief Calculates the final velocity based on initial velocity (i) with acceleration (a) for time (t).
-	FUNC velocity final_velocity(velocity i, acceleration a, SI::time t)
-	{
-		return i + a * t;
-	}
-
 	/// @brief Calculates the acceleration from change in velocity (delta_v) and time interval (delta_t).
-	FUNC acceleration acceleration_of(velocity delta_v, SI::time delta_t)
+	FUNC acceleration acceleration_for_speed_formula(velocity delta_v, SI::time delta_t)
 	{
 		return delta_v / delta_t;
+	}
+
+	/// @brief Calculates the final velocity based on initial velocity (i) with acceleration (a) for time (t).
+	FUNC velocity final_velocity_formula(velocity i, acceleration a, SI::time t)
+	{
+		return i + a * t;
 	}
 
 	// Formulas for Vehicles
@@ -248,13 +248,13 @@ namespace SI {
 	}
 
 	/// @brief Calculates the turning radius of wheeled vehicles.
-	FUNC length turning_radius_of_vehicle(length wheelbase, angle steering_angle, length tire_width)
+	FUNC length turning_radius_of_vehicle_formula(length wheelbase, angle steering_angle, length tire_width)
 	{
 		return wheelbase / sin(steering_angle) + tire_width / 2.0;
 	}
 
 	/// @brief Calculates the G-force when accelerating from v0 to v1 within the given time.
-	FUNC dimensionless g_force_of_acceleration(velocity v0, velocity v1, time t)
+	FUNC dimensionless acceleration_g_force_formula(velocity v0, velocity v1, time t)
 	{
 		return (v1 - v0) / (t * CODATA.g_n);
 	}
@@ -262,49 +262,49 @@ namespace SI {
 	// Formulas for Aircraft
 	// ---------------------
 	/// @brief Calculates the true airspeed (TAS).
-	FUNC velocity true_airspeed_formula(const force lift_force, const dimensionless lift_coefficient, const area wing_surface, const density air_density)
+	FUNC velocity true_airspeed_formula(force lift_force, dimensionless lift_coefficient, area wing_surface, density air_density)
 	{
 		return sqrt((2.0 * lift_force) / (lift_coefficient * wing_surface * air_density));
 	}
 
 	/// @brief Calculates the lift force of an aircraft wing.
-	FUNC force lift_force_of_wing(const dimensionless lift_coefficient, const area wing_surface, const density air_density, const velocity true_air_speed)
+	FUNC force lift_force_of_wing_formula(dimensionless lift_coefficient, area wing_surface, density air_density, velocity true_air_speed)
 	{
 		return 0.5 * air_density * square(true_air_speed) * wing_surface * lift_coefficient;
 	}
 
 	/// @brief Calculates the Mach number from velocity (v) of moving aircraft at altitude's speed of sound.
-	FUNC dimensionless Mach_number_formula(const velocity v, const velocity speed_of_sound)
+	FUNC dimensionless Mach_number_formula(velocity v, velocity speed_of_sound)
 	{
 		return v / speed_of_sound;
 	}
 
-	/// @brief Calculates the glide path from horizontal distance (h) and vertical change (v).
-	FUNC angle glide_path_formula(const length h, const length v)
+	/// @brief Calculates the glide path from horizontal distance (h) and vertical height change (v).
+	FUNC angle glide_path_formula(length h, length v)
 	{
 		return atan2(v, h);
 	}
 
 	/// @brief Calculates the glide ratio from horizontal distance (h) and altitude lost (a).
-	FUNC dimensionless glide_ratio_formula(const length h, const length a)
+	FUNC dimensionless glide_ratio_formula(length h, length a)
 	{
 		return h / a;
 	}
 
 	/// @brief Calculates the vertical height for the given glide path and horizontal distance.
-	FUNC length vertical_height(const angle glide_path, const length horizontal_distance)
+	FUNC length vertical_height_formula(angle glide_path, length horizontal_distance)
 	{
 		return horizontal_distance * tan(glide_path);
 	}
 
 	/// @brief Calculates the climb rate for the given speed and climb angle.
-	FUNC velocity climb_rate(const velocity ground_speed, const angle climb_angle)
+	FUNC velocity climb_rate_formula(velocity ground_speed, angle climb_angle)
 	{
 		return sin(climb_angle) * ground_speed;
 	}
 
 	/// @brief Calculates the turn radius at the given speed and bank angle.
-	FUNC length turn_radius(const velocity ground_speed, const angle bank_angle)
+	FUNC length turn_radius_formula(velocity ground_speed, angle bank_angle)
 	{
 		return (ground_speed * ground_speed) / (CODATA.g_n * tan(bank_angle));
 	}
@@ -312,31 +312,31 @@ namespace SI {
 	// Formulas for Gravitation
 	// ------------------------
 	/// @brief Calculates the gravitational potential energy of a mass (m) at height (h) based on gravity (e.g. on Earth).
-	FUNC energy gravitational_potential_energy(const mass m, const length h, const acceleration gravity)
+	FUNC energy gravitational_potential_energy_formula(mass m, length h, acceleration gravity)
 	{
 		return m * h * gravity;
 	}
 
 	/// @brief Calculates the attractive force between two bodies of masses (m1) and (m2) with distance (d) between their centres of mass.
-	FUNC force gravitational_attractive_force(const mass m1, const mass m2, const length d)
+	FUNC force gravitational_attractive_force_formula(mass m1, mass m2, length d)
 	{
 		return (constant::G * m1 * m2) / square(d);
 	}
 
 	/// @brief Calculates the escape velocity from a Mass (M) of body (e.g. a planet) with radius of body (r).
-	FUNC velocity gravitational_escape_velocity(const mass M, const length r)
+	FUNC velocity gravitational_escape_velocity_formula(mass M, length r)
 	{
 		return sqrt((2.0 * constant::G * M) / r);
 	}
 
 	/// @brief Calculates the flattening factor (f) of an astronomical object from radius to equator (Re) and radius to pole (Rp).
-	FUNC dimensionless flattening_factor(const length Re, const length Rp)
+	FUNC dimensionless flattening_factor_formula(length Re, length Rp)
 	{
 		return (Re - Rp) / Re;
 	}
 
 	/// @brief Calculates the theoretical local gravity at latitude (lat) and height above MSL (h).
-	FUNC acceleration local_gravity_formula(const angle lat, const length h)
+	FUNC acceleration local_gravity_formula(angle lat, length h)
 	{
 		auto IGF = 9.780327_m_per_s² * (1.0 + 0.0053024 * sin2(lat) - 0.0000058 * sin2(2.0 * lat)); // International Gravity Formula
 		auto FAC = -3.086e-6_m_per_s² * meters(h); // Free Air Correction
@@ -344,27 +344,27 @@ namespace SI {
 	}
 
 	/// @brief Calculates the Schwarzschild radius of a black hole from it's mass (M).
-	FUNC length Schwarzschild_radius(const mass M)
+	FUNC length Schwarzschild_radius_formula(mass M)
 	{
-		return (2.0 * constant::G * M) / square(CODATA.speed_of_light_in_vacuum);
+		return (2.0 * constant::G * M) / square(CODATA.c);
 	}
 
 	// Various Formulas
 	// ----------------
 	/// @brief Calculates the wavelength from velocity (v) and frequency (f).
-	FUNC length wavelength_formula(const velocity v, const frequency f)
+	FUNC length wavelength_formula(velocity v, frequency f)
 	{
 		return v / f;
 	}
 
 	/// @brief Calculates V(t) from peak voltage (V0), frequency (f), and time (t).
-	FUNC electric_potential sine_wave(const electric_potential V0, const frequency f, const SI::time t)
+	FUNC electric_potential sine_wave_formula(electric_potential V0, frequency f, SI::time t)
 	{
 		return V0 * sin(Math.tau * f * t);
 	}
 
 	/// @brief Calculates the speed of sound in air based on temperature (T).
-	FUNC velocity speed_of_sound_in_air(const temperature T)
+	FUNC velocity speed_of_sound_in_air_formula(temperature T)
 	{
 		double adiabatic_index = 1.4; // for air
 		auto M = 0.0289645_kg_per_mol; // molar mass of the gas
@@ -372,30 +372,30 @@ namespace SI {
 	}
 
 	/// @brief Calculates the drag force based on mass density of the fluid (p), flow velocity (u), drag coefficient (cd) and reference area (A).
-	FUNC force drag_in_fluid(const density p, const velocity u, const dimensionless cd, const area A)
+	FUNC force drag_in_fluid_formula(density p, velocity u, dimensionless cd, area A)
 	{
 		return 0.5 * p * (u * u) * cd * A;
 	}
 
 	/// @brief Calculates the frequency of a chromatic music note.
-	FUNC frequency frequency_of_chromatic_note(const int note, const int reference_note, const frequency reference_frequency)
+	FUNC frequency frequency_of_chromatic_note_formula(int note, int reference_note, frequency reference_frequency)
 	{
 		return std::pow(std::pow(2., 1. / 12.), note - reference_note) * reference_frequency;
 	}
 
-	FUNC auto Newtons_motion(const length s0, const velocity v0, const acceleration a, const time t)
+	FUNC auto Newtons_motion_formula(length s0, velocity v0, acceleration a, time t)
 	{
 		return s0 + v0 * t + 0.5 * a * t * t;
 	}
 
 	/// @brief Calculates the Lorentz force.
-	FUNC auto Lorentz_force(const double q, const velocity v, const double B)
+	FUNC auto Lorentz_force_formula(double q, velocity v, double B)
 	{
 		return q * v * B;
 	}
 
 	/// @brief Calculates the windchill temperature.
-	FUNC temperature windchill_temperature(const temperature air_temperature, const velocity wind_speed)
+	FUNC temperature windchill_temperature_formula(temperature air_temperature, velocity wind_speed)
 	{
 		auto air_celsius = celsius(air_temperature);
 		return celsius(13.12 + 0.6215 * air_celsius
@@ -403,7 +403,7 @@ namespace SI {
 	}
 
 	/// @brief Returns the temperature gradient per kilometer for the given geopotential altitude.
-	FUNC temperature temperature_gradient(const length altitude)
+	FUNC temperature temperature_gradient_formula(length altitude)
 	{
 		if (altitude <= 11_km)
 			return -6.5_K;
@@ -421,70 +421,70 @@ namespace SI {
 	}
 
 	/// @brief Calculates the density of dry air.
-	FUNC density density_of_dry_air(const pressure air_pressure, const temperature air_temperature)
+	FUNC density density_of_dry_air_formula(pressure air_pressure, temperature air_temperature)
 	{
 		return air_pressure / (constant::R_dry_air * air_temperature);
 	}
 
 	/// @brief Calculates the density from mass (m) and volume (V).
-	FUNC density density_of(const mass m, const volume V)
+	FUNC density density_formula(mass m, volume V)
 	{
 		return m / V;
 	}
 
 	/// @brief Calculates the mass from density (p) and volume (V).
-	FUNC mass mass_of(const density p, const volume V)
+	FUNC mass mass_formula(density p, volume V)
 	{
 		return p * V;
 	}
 
 	/// @brief Calculates the volume from mass (m) and density (p).
-	FUNC volume volume_of(const mass m, const density p)
+	FUNC volume volume_formula(mass m, density p)
 	{
 		return m / p;
 	}
 
 	/// @brief Calculates the human body-mass index (BMI) from weight (w) and height (h).
-	FUNC dimensionless BMI_formula(const mass w, const length h)
+	FUNC dimensionless BMI_formula(mass w, length h)
 	{
 		return (w / square(h)) / 1_kg_per_m²;
 	}
 
 	/// @brief Calculates the consumed electrical power of a current (I) and potential (U).
-	FUNC auto consumed_electrical_power(const current I, const electric_potential U)
+	FUNC auto consumed_electrical_power_formula(current I, electric_potential U)
 	{
 		return I * U;
 	}
 
 	/// @brief Calculates the sound intensity of a sound source from a distance.
-	FUNC auto sound_intensity_formula(const power power_of_sound_source, const length distance_from_sound_source)
+	FUNC auto sound_intensity_formula(power power_of_sound_source, length distance_from_sound_source)
 	{
 		return power_of_sound_source / (4.0 * Math.pi * square(distance_from_sound_source));
 	}
 
 	/// @brief Calculates the max height of a bullet (without force of drag, wind, etc.), based on:
 	///        initial launch velocity (v0), initial height (h), launch angle (a), and gravitation (g).
-	FUNC length ballistic_max_height(const velocity v0, const length h, const angle a, const acceleration g)
+	FUNC length ballistic_max_height_formula(velocity v0, length h, angle a, acceleration g)
 	{
 		return h + square(v0 * sin(a)) / (2.0 * g);
 	}
 
 	/// @brief Calculates the max range of a bullet (without force of drag, wind, etc.), based on:
 	///        initial launch velocity (v0), initial height (h), launch angle (a), and gravitation (g).
-	FUNC length ballistic_max_range(const velocity v0, const length h, const angle a, const acceleration g)
+	FUNC length ballistic_max_range_formula(velocity v0, length h, angle a, acceleration g)
 	{
 		return ((v0 * sin(a) + sqrt(square(v0 * sin(a)) + 2.0 * g * h)) / g) * cos(a) * v0;
 	}
 
 	/// @brief Calculates the flight time of a bullet (without force of drag, wind, etc.), based on:
 	///        initial launch velocity (v0), initial height (h), launch angle (a), and gravitation (g).
-	FUNC time ballistic_travel_time(const velocity v0, const length h, const angle a, const acceleration g)
+	FUNC time ballistic_travel_time_formula(velocity v0, length h, angle a, acceleration g)
 	{
 		return (v0 * sin(a) + sqrt(square(v0 * sin(a)) + 2.0 * g * h)) / g;
 	}
 
 	/// @brief Calculates the amount of energy absorbed (E) from a source of radiation by some material per mass (m)
-	FUNC specific_energy absorbed_dose(const energy E, const mass m)
+	FUNC specific_energy absorbed_dose_formula(energy E, mass m)
 	{
 		return E / m;
 	}
