@@ -48,7 +48,7 @@ int main() { using namespace SI;
 
 **What's CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle. Latest update was CODATA 2022 which is equal to: NIST SP 961 (May 2024).
 
-**What's IAU?** It's the [International Astronomical Union](https://www.iau.org/). It defines the astronomical units.
+**What's IAU?** It's the [International Astronomical Union](https://www.iau.org/), which defines the astronomical units.
 
 **What are use-cases for libSI?** Applied math such as simulations, simulators, scientific calculations, games, etc.
 
