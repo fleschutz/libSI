@@ -33,7 +33,7 @@ int main() { using namespace SI;
 | Datatypes             | *mass*                                    | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *kilograms*                               | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_kg*                                    | [<SI/literals.h>](SI/literals.h)       |
-| Constants             | *CODATA.c* (speed of light)               | [<SI/constants.h>](SI/constants.h)     |
+| Constants             | *CODATA.c (speed of light)*               | [<SI/constants.h>](SI/constants.h)     |
 | Formulas              | *kinetic_energy_formula()*                | [<SI/formulas.h>](SI/formulas.h)       |
 | Conversions           | *to_equivalent()*                         | [<SI/conversions.h>](SI/conversions.h) |
 | Unit tests            | *static_assert(1_kg == 1000_g);*          | [<SI/tests.h>](SI/tests.h)             | 
