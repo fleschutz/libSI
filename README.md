@@ -46,7 +46,7 @@ int main() { using namespace SI;
 ---------
 **What's SI?** It's the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) which is made up of 7 base units that define the 22 derived units.
 
-**What's CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle. Latest update was CODATA 2022 which is equal to: NIST SP 961 (May 2024).
+**What's CODATA?** It's the [Committee On Data](https://codata.org/) of the International Science Council (ISC). It publishes fundamental physical constants on a four-year cycle - the latest update was CODATA 2022.
 
 **What's IAU?** It's the [International Astronomical Union](https://www.iau.org/), which defines the astronomical units.
 
