@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['quarks_0',['quarks',['../structdataset_1_1particle__details.html#a81872357001235d2d4108fda987bdd5a',1,'dataset::particle_details']]],
-  ['quarter_5fmile_1',['quarter_mile',['../namespaceSI.html#aeb4cd4e79f79070224b8e4667cbccd61',1,'SI']]],
-  ['quarter_5fpi_2',['quarter_pi',['../namespaceSI.html#aab972b25976c18c859b893656ec5b156',1,'SI']]],
-  ['quecto_3',['quecto',['../namespaceSI.html#ae9038bd886f4d1a8a66710812ace9b72',1,'SI']]],
-  ['quetta_4',['quetta',['../namespaceSI.html#ab16b2c69529bc397b7b89ca45901746a',1,'SI']]]
+  ['r_5fe_0',['r_e',['../namespaceSI.html#a5eb19755c1f62f61395aa373e9e77c82',1,'SI']]],
+  ['ronna_1',['ronna',['../namespaceSI.html#a655997eb441ecc00233f2f69e17d6873',1,'SI']]],
+  ['ronto_2',['ronto',['../namespaceSI.html#a35c381506a29caf628199053c3eca99c',1,'SI']]],
+  ['root_5f2_3',['root_2',['../namespaceSI.html#ae762a05ab4983837bfb5358c9598204c',1,'SI']]],
+  ['rotation_5fperiod_4',['rotation_period',['../structdataset_1_1planet__details.html#a280f5004642bb628950a5ae653f7f35b',1,'dataset::planet_details']]]
 ];

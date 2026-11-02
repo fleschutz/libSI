@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['g_5fe_0',['g_e',['../namespaceSI.html#ac92f6a1cfa399a0caf0c277e5e2711fa',1,'SI']]],
-  ['g_5fn_1',['g_n',['../namespaceSI.html#a438ee7c0c52e077b5c67d6b4f31cdca8',1,'SI']]],
-  ['giga_2',['giga',['../namespaceSI.html#a1f4b0855fffebac2147edcd7518eb6aa',1,'SI']]],
-  ['gm_3',['GM',['../structdataset_1_1moon__details.html#a3130ad6ee9c93065d37e5bde489dbc21',1,'dataset::moon_details']]],
-  ['gravity_4',['gravity',['../structdataset_1_1planet__details.html#a187d67cd4b5c3921a6a8653007976058',1,'dataset::planet_details']]],
-  ['group_5',['group',['../structdataset_1_1chemical__element__details.html#a57654b1c8c179113b411201ef7c234fd',1,'dataset::chemical_element_details']]]
+  ['h0_0',['H0',['../namespaceSI.html#aaf67d525d5fd99fc181eb9e055d8614f',1,'SI']]],
+  ['half_5fpi_1',['half_pi',['../namespaceSI.html#a178c866c0b5068f5e29a3f231003c46b',1,'SI']]],
+  ['has_5fcommon_5fdimension_5fv_2',['has_common_dimension_v',['../namespaceSI_1_1detail.html#a451ac44895b1a0df2d9dcb452c110de7',1,'SI::detail']]],
+  ['has_5fglobal_5fmagnetic_5ffield_3',['has_global_magnetic_field',['../structdataset_1_1planet__details.html#ad4f3750839694152cec7b4bf80dfff67',1,'dataset::planet_details']]],
+  ['has_5fring_5fsystem_4',['has_ring_system',['../structdataset_1_1planet__details.html#a04508f34f3cf76fbf80ecd8d8347c8fa',1,'dataset::planet_details']]],
+  ['hecto_5',['hecto',['../namespaceSI.html#acc908d4e7b713da8f5f3a1a1d27b367a',1,'SI']]]
 ];

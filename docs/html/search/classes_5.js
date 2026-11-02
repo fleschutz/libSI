@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lithium_5fbattery_5fmaterial_5fdetails_0',['lithium_battery_material_details',['../structdataset_1_1lithium__battery__material__details.html',1,'dataset']]]
+  ['quantity_0',['quantity',['../structSI_1_1detail_1_1quantity.html',1,'SI::detail']]],
+  ['quantity_5fstorage_1',['quantity_storage',['../classSI_1_1detail_1_1quantity__storage.html',1,'SI::detail']]]
 ];

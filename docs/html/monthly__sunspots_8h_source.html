@@ -96,17 +96,14 @@ $(function(){initNavTree('monthly__sunspots_8h_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacedataset.html">dataset</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structdataset_1_1monthly__sunspot__details.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdataset_1_1monthly__sunspot__details.html">monthly_sunspot_details</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structdataset_1_1monthly__sunspot__details.html#adebed810e984731d7d73d8ecf3dd0f76">   11</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structdataset_1_1monthly__sunspot__details.html#adebed810e984731d7d73d8ecf3dd0f76">date</a>[16];                     </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structdataset_1_1monthly__sunspot__details.html#a66ed844c4aea859e7fbb987db64f26da">   12</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structdataset_1_1monthly__sunspot__details.html#a66ed844c4aea859e7fbb987db64f26da">monthly_mean_total_sunspot_number</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">struct </span>monthly_sunspot_details {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">char</span> date[16];                     </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">float</span> monthly_mean_total_sunspot_number;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>};</div>
-</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacedataset.html#a304745639f2ad0d4e560384b02655ce1">   15</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structdataset_1_1monthly__sunspot__details.html">monthly_sunspot_details</a> <a class="code hl_variable" href="namespacedataset.html#a304745639f2ad0d4e560384b02655ce1">monthly_sunspots</a>[] {      <span class="comment">// NOTE: 00=empty or unknown field</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">const</span> monthly_sunspot_details monthly_sunspots[] {      <span class="comment">// NOTE: 00=empty or unknown field</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{<span class="stringliteral">&quot;1749-01-31&quot;</span>,96.7f},</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{<span class="stringliteral">&quot;1749-02-28&quot;</span>,104.3f},</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{<span class="stringliteral">&quot;1749-03-31&quot;</span>,116.7f},</div>
@@ -3373,15 +3370,9 @@ $(function(){initNavTree('monthly__sunspots_8h_source.html','',''); });
 <div class="line"><a id="l03279" name="l03279"></a><span class="lineno"> 3279</span>{<span class="stringliteral">&quot;2020-12-31&quot;</span>,21.8f},</div>
 <div class="line"><a id="l03280" name="l03280"></a><span class="lineno"> 3280</span>{<span class="stringliteral">&quot;2021-01-31&quot;</span>,10.4f},</div>
 <div class="line"><a id="l03281" name="l03281"></a><span class="lineno"> 3281</span>}; <span class="comment">// (2 columns x 3266 rows = 6532 cells)</span></div>
-</div>
 <div class="line"><a id="l03282" name="l03282"></a><span class="lineno"> 3282</span> </div>
 <div class="line"><a id="l03283" name="l03283"></a><span class="lineno"> 3283</span>} <span class="comment">// end of namespace </span></div>
 <div class="line"><a id="l03284" name="l03284"></a><span class="lineno"> 3284</span> </div>
-<div class="ttc" id="anamespacedataset_html"><div class="ttname"><a href="namespacedataset.html">dataset</a></div><div class="ttdef"><b>Definition</b> airports.h:9</div></div>
-<div class="ttc" id="anamespacedataset_html_a304745639f2ad0d4e560384b02655ce1"><div class="ttname"><a href="namespacedataset.html#a304745639f2ad0d4e560384b02655ce1">dataset::monthly_sunspots</a></div><div class="ttdeci">const monthly_sunspot_details monthly_sunspots[]</div><div class="ttdef"><b>Definition</b> monthly_sunspots.h:15</div></div>
-<div class="ttc" id="astructdataset_1_1monthly__sunspot__details_html"><div class="ttname"><a href="structdataset_1_1monthly__sunspot__details.html">dataset::monthly_sunspot_details</a></div><div class="ttdef"><b>Definition</b> monthly_sunspots.h:10</div></div>
-<div class="ttc" id="astructdataset_1_1monthly__sunspot__details_html_a66ed844c4aea859e7fbb987db64f26da"><div class="ttname"><a href="structdataset_1_1monthly__sunspot__details.html#a66ed844c4aea859e7fbb987db64f26da">dataset::monthly_sunspot_details::monthly_mean_total_sunspot_number</a></div><div class="ttdeci">float monthly_mean_total_sunspot_number</div><div class="ttdoc">from column 3 (float)</div><div class="ttdef"><b>Definition</b> monthly_sunspots.h:12</div></div>
-<div class="ttc" id="astructdataset_1_1monthly__sunspot__details_html_adebed810e984731d7d73d8ecf3dd0f76"><div class="ttname"><a href="structdataset_1_1monthly__sunspot__details.html#adebed810e984731d7d73d8ecf3dd0f76">dataset::monthly_sunspot_details::date</a></div><div class="ttdeci">char date[16]</div><div class="ttdoc">from column 2 (char[16])</div><div class="ttdef"><b>Definition</b> monthly_sunspots.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

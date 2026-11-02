@@ -9,6 +9,5 @@ var searchData=
   ['gravitational_5fattractive_5fforce_5fformula_6',['gravitational_attractive_force_formula',['../namespaceSI.html#abfdafd8a3c2640c44430471e40c2d897',1,'SI']]],
   ['gravitational_5fescape_5fvelocity_5fformula_7',['gravitational_escape_velocity_formula',['../namespaceSI.html#a25295cc9144f0decd47f770f53993ed5',1,'SI']]],
   ['gravitational_5fpotential_5fenergy_5fformula_8',['gravitational_potential_energy_formula',['../namespaceSI.html#a3f02e48bae482018acaa3970068dec8d',1,'SI']]],
-  ['gravity_9',['gravity',['../structdataset_1_1planet__details.html#a187d67cd4b5c3921a6a8653007976058',1,'dataset::planet_details']]],
-  ['group_10',['group',['../structdataset_1_1chemical__element__details.html#a57654b1c8c179113b411201ef7c234fd',1,'dataset::chemical_element_details']]]
+  ['gravity_9',['gravity',['../structdataset_1_1planet__details.html#a187d67cd4b5c3921a6a8653007976058',1,'dataset::planet_details']]]
 ];

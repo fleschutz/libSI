@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['n_5felements_0',['n_elements',['../structdataset_1_1lithium__battery__material__details.html#a46ee1d13792bcd6a4427fd0176cf75f2',1,'dataset::lithium_battery_material_details']]],
-  ['name_1',['Name',['../structdataset_1_1material__property__details.html#aea878d0431cc675d6243d05e6146e990',1,'dataset::material_property_details']]],
-  ['name_2',['name',['../structdataset_1_1airport__details.html#ac3aff391f21c2145db3b7ab5e9fbae24',1,'dataset::airport_details::name'],['../structdataset_1_1chemical__element__details.html#aceb2e3d2146a12d5aa43e6cbe3d17759',1,'dataset::chemical_element_details::name'],['../structdataset_1_1exoplanet__details.html#a2f90a9f2382e21f9695f9b73a2a347bd',1,'dataset::exoplanet_details::name'],['../structdataset_1_1moon__details.html#ab5362df47eadcfd6033f03f04df980e6',1,'dataset::moon_details::name'],['../structdataset_1_1musical__note__details.html#af242f221ab511337f8d825e497c6ec08',1,'dataset::musical_note_details::name'],['../structdataset_1_1particle__details.html#a67f59255fe6b9429375f7641848201dc',1,'dataset::particle_details::name'],['../structdataset_1_1planet__details.html#a4343f4bbf58a53cd64303fcd29f45c7e',1,'dataset::planet_details::name']]],
-  ['nano_3',['nano',['../namespaceSI.html#a99eb8d3d7649c20a192a52da869ab388',1,'SI']]],
-  ['number_5fof_5fmoons_4',['number_of_moons',['../structdataset_1_1planet__details.html#a79a0050a11b457f6764c944a01e6872b',1,'dataset::planet_details']]],
-  ['number_5fof_5fplanets_5',['number_of_planets',['../structdataset_1_1exoplanet__details.html#a6073d0357ef0bad0b8925c45056a4980',1,'dataset::exoplanet_details']]],
-  ['number_5fof_5fstars_6',['number_of_stars',['../structdataset_1_1exoplanet__details.html#a8829b0f56c302dd8a0e49e546219a62e',1,'dataset::exoplanet_details']]]
+  ['obliquity_5fto_5forbit_0',['obliquity_to_orbit',['../structdataset_1_1planet__details.html#a30e662ab568745118e229c1fc43a732d',1,'dataset::planet_details']]],
+  ['orbital_5feccentricity_1',['orbital_eccentricity',['../structdataset_1_1planet__details.html#a5e3fea703152b9cf38a1b1aed9003902',1,'dataset::planet_details']]],
+  ['orbital_5finclination_2',['orbital_inclination',['../structdataset_1_1planet__details.html#a87c98f3640bd250ee2c023e783bed653',1,'dataset::planet_details']]],
+  ['orbital_5fperiod_3',['orbital_period',['../structdataset_1_1planet__details.html#ab71c7ffc2732a0b179e87f6787d86cbc',1,'dataset::planet_details']]],
+  ['orbital_5fvelocity_4',['orbital_velocity',['../structdataset_1_1planet__details.html#a508b501685b50803a8cb0a19439ed394',1,'dataset::planet_details']]]
 ];

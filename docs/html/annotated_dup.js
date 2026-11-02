@@ -1,15 +1,7 @@
 var annotated_dup =
 [
     [ "dataset", "namespacedataset.html", [
-      [ "airport_details", "structdataset_1_1airport__details.html", "structdataset_1_1airport__details" ],
-      [ "chemical_element_details", "structdataset_1_1chemical__element__details.html", "structdataset_1_1chemical__element__details" ],
-      [ "exoplanet_details", "structdataset_1_1exoplanet__details.html", "structdataset_1_1exoplanet__details" ],
-      [ "lithium_battery_material_details", "structdataset_1_1lithium__battery__material__details.html", "structdataset_1_1lithium__battery__material__details" ],
-      [ "material_property_details", "structdataset_1_1material__property__details.html", "structdataset_1_1material__property__details" ],
-      [ "monthly_sunspot_details", "structdataset_1_1monthly__sunspot__details.html", "structdataset_1_1monthly__sunspot__details" ],
       [ "moon_details", "structdataset_1_1moon__details.html", "structdataset_1_1moon__details" ],
-      [ "musical_note_details", "structdataset_1_1musical__note__details.html", "structdataset_1_1musical__note__details" ],
-      [ "particle_details", "structdataset_1_1particle__details.html", "structdataset_1_1particle__details" ],
       [ "planet_details", "structdataset_1_1planet__details.html", "structdataset_1_1planet__details" ]
     ] ],
     [ "SI", "namespaceSI.html", [

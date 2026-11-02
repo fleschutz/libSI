@@ -7,6 +7,5 @@ var searchData=
   ['unit_3c_20dimensionless_2c_20ratio_20_3e_4',['unit&lt; dimensionless, Ratio &gt;',['../structSI_1_1detail_1_1unit_3_01dimensionless_00_01Ratio_01_4.html',1,'SI::detail']]],
   ['unit_3c_20dimensionless_2c_20ratio_3c_20n_2c_20n_20_3e_20_3e_5',['unit&lt; dimensionless, ratio&lt; N, N &gt; &gt;',['../structSI_1_1detail_1_1unit_3_01dimensionless_00_01ratio_3_01N_00_01N_01_4_01_4.html',1,'SI::detail']]],
   ['units_20library_20for_20c_6',['📐libSI - The Physical Units Library For C++',['../index.html',1,'']]],
-  ['units_2eh_7',['units.h',['../units_8h.html',1,'']]],
-  ['uts_8',['UTS',['../structdataset_1_1material__property__details.html#a5430d5de08147dd0fd89968f086d5092',1,'dataset::material_property_details']]]
+  ['units_2eh_7',['units.h',['../units_8h.html',1,'']]]
 ];

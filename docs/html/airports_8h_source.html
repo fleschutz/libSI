@@ -97,21 +97,17 @@ $(function(){initNavTree('airports_8h_source.html','',''); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="literals_8h.html">SI/literals.h</a>&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespacedataset.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacedataset.html">dataset</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceSI.html">SI</a>;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structdataset_1_1airport__details.html">   12</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdataset_1_1airport__details.html">airport_details</a> {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structdataset_1_1airport__details.html#ac3aff391f21c2145db3b7ab5e9fbae24">   13</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="structdataset_1_1airport__details.html#ac3aff391f21c2145db3b7ab5e9fbae24">name</a>;                  </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structdataset_1_1airport__details.html#a23bdf94c99a6f4660938d9b7de90f631">   14</a></span>    SI::length <a class="code hl_variable" href="structdataset_1_1airport__details.html#a23bdf94c99a6f4660938d9b7de90f631">elevation</a>;              </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structdataset_1_1airport__details.html#a5e4948ec2927fdaf590ffe082c501eee">   15</a></span>    <a class="code hl_typedef" href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a> <a class="code hl_variable" href="structdataset_1_1airport__details.html#a5e4948ec2927fdaf590ffe082c501eee">latitude</a>;                </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structdataset_1_1airport__details.html#abd355f7856b47622f5c7a9e337ba090a">   16</a></span>    <a class="code hl_typedef" href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a> <a class="code hl_variable" href="structdataset_1_1airport__details.html#abd355f7856b47622f5c7a9e337ba090a">longitude</a>;               </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">struct </span>airport_details {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* name;                  </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    SI::length elevation;              </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_typedef" href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a> latitude;                </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_typedef" href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a> longitude;               </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
-</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacedataset.html#ac7c280ea75726ecce85bf19c4555535e">   19</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structdataset_1_1airport__details.html">airport_details</a> <a class="code hl_variable" href="namespacedataset.html#ac7c280ea75726ecce85bf19c4555535e">airports</a>[] {      <span class="comment">// NOTE: 00=empty or unknown field</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">const</span> airport_details airports[] {      <span class="comment">// NOTE: 00=empty or unknown field</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{<span class="stringliteral">&quot;Total RF Heliport&quot;</span>,11_ft,40.070985_deg,-74.933689_deg},</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{<span class="stringliteral">&quot;Aero B Ranch Airport&quot;</span>,3435_ft,38.704022_deg,-101.473911_deg},</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{<span class="stringliteral">&quot;Lowell Field&quot;</span>,450_ft,59.947733_deg,-151.692524_deg},</div>
@@ -5111,21 +5107,12 @@ $(function(){initNavTree('airports_8h_source.html','',''); });
 <div class="line"><a id="l05016" name="l05016"></a><span class="lineno"> 5016</span>{<span class="stringliteral">&quot;Lz Carroll STOLport&quot;</span>,675_ft,35.44850158691406_deg,-80.34259796142578_deg},</div>
 <div class="line"><a id="l05017" name="l05017"></a><span class="lineno"> 5017</span>{<span class="stringliteral">&quot;Knutson Airport&quot;</span>,880_ft,47.79280090332031_deg,-97.15370178222656_deg},</div>
 <div class="line"><a id="l05018" name="l05018"></a><span class="lineno"> 5018</span>}; <span class="comment">// (4 columns x 4999 rows = 19996 cells)</span></div>
-</div>
 <div class="line"><a id="l05019" name="l05019"></a><span class="lineno"> 5019</span> </div>
 <div class="line"><a id="l05020" name="l05020"></a><span class="lineno"> 5020</span>} <span class="comment">// end of namespace</span></div>
-</div>
 <div class="line"><a id="l05021" name="l05021"></a><span class="lineno"> 5021</span> </div>
 <div class="ttc" id="aliterals_8h_html"><div class="ttname"><a href="literals_8h.html">literals.h</a></div><div class="ttdoc">Defines 297 user-defined literals (since C++11), e.g. 24_h.</div></div>
 <div class="ttc" id="anamespaceSI_html"><div class="ttname"><a href="namespaceSI.html">SI</a></div><div class="ttdef"><b>Definition</b> constants.h:10</div></div>
 <div class="ttc" id="anamespaceSI_html_aba6f659bd709507f32224c552d83ae7f"><div class="ttname"><a href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a></div><div class="ttdeci">long double angle</div><div class="ttdoc">holds a dimensionless angle, e.g. 3.1415</div><div class="ttdef"><b>Definition</b> datatypes.h:62</div></div>
-<div class="ttc" id="anamespacedataset_html"><div class="ttname"><a href="namespacedataset.html">dataset</a></div><div class="ttdef"><b>Definition</b> airports.h:9</div></div>
-<div class="ttc" id="anamespacedataset_html_ac7c280ea75726ecce85bf19c4555535e"><div class="ttname"><a href="namespacedataset.html#ac7c280ea75726ecce85bf19c4555535e">dataset::airports</a></div><div class="ttdeci">const airport_details airports[]</div><div class="ttdef"><b>Definition</b> airports.h:19</div></div>
-<div class="ttc" id="astructdataset_1_1airport__details_html"><div class="ttname"><a href="structdataset_1_1airport__details.html">dataset::airport_details</a></div><div class="ttdef"><b>Definition</b> airports.h:12</div></div>
-<div class="ttc" id="astructdataset_1_1airport__details_html_a23bdf94c99a6f4660938d9b7de90f631"><div class="ttname"><a href="structdataset_1_1airport__details.html#a23bdf94c99a6f4660938d9b7de90f631">dataset::airport_details::elevation</a></div><div class="ttdeci">SI::length elevation</div><div class="ttdoc">from column 4 (ft)</div><div class="ttdef"><b>Definition</b> airports.h:14</div></div>
-<div class="ttc" id="astructdataset_1_1airport__details_html_a5e4948ec2927fdaf590ffe082c501eee"><div class="ttname"><a href="structdataset_1_1airport__details.html#a5e4948ec2927fdaf590ffe082c501eee">dataset::airport_details::latitude</a></div><div class="ttdeci">SI::angle latitude</div><div class="ttdoc">from column 13 (angle)</div><div class="ttdef"><b>Definition</b> airports.h:15</div></div>
-<div class="ttc" id="astructdataset_1_1airport__details_html_abd355f7856b47622f5c7a9e337ba090a"><div class="ttname"><a href="structdataset_1_1airport__details.html#abd355f7856b47622f5c7a9e337ba090a">dataset::airport_details::longitude</a></div><div class="ttdeci">SI::angle longitude</div><div class="ttdoc">from column 14 (angle)</div><div class="ttdef"><b>Definition</b> airports.h:16</div></div>
-<div class="ttc" id="astructdataset_1_1airport__details_html_ac3aff391f21c2145db3b7ab5e9fbae24"><div class="ttname"><a href="structdataset_1_1airport__details.html#ac3aff391f21c2145db3b7ab5e9fbae24">dataset::airport_details::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">from column 3 (string)</div><div class="ttdef"><b>Definition</b> airports.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

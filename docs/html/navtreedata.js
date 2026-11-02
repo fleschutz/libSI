@@ -64,8 +64,8 @@ var NAVTREEINDEX =
 "namespaceSI.html#a33a91856759b22e54dc6ac62624e32e1",
 "namespaceSI.html#a8f495b202f6a2d531dfea72dfa4c593b",
 "namespaceSI.html#ae590c160d9dd7e8e0d23fa27c7967f8c",
-"namespacemembers_g.html",
-"structdataset_1_1exoplanet__details.html#a19efdd9157cd13cbec91b6985e1f6188"
+"namespacemembers_p.html",
+"units_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
