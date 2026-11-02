@@ -9,21 +9,21 @@ using namespace SI;
 void speed_examples() {
 
     cout << "    === SPEED EXAMPLES ===" << endl;
-    cout << " 1. The average speed of Kelvin Kiptum's Marathon world record was... ";
+    cout << " 1. What was the average speed of Kelvin Kiptum's Marathon world record? ";
     auto Marathon_distance  = 42.195_km;
     auto Kelvins_duration   = 2_h + 35_s;
     auto Kelvins_average    = Marathon_distance / Kelvins_duration;
     cout << Kelvins_average << " or " << to_equivalent(Kelvins_average) << endl;
 
 
-    cout << " 2. The average speed to travel around the Earth in 80 days has to be... ";
+    cout << " 2. Which average speed is needed to travel around the Earth in 80 days? ";
     auto equatorial_circumference = 40'075.017_km;
     auto travel_time              = 80_days;
     auto avg_travel_speed         = equatorial_circumference / travel_time;
     cout << avg_travel_speed << " or " << to_equivalent(avg_travel_speed) << endl;
 
 
-    cout << " 3. The free fall time from Burj Khalifa tower (828m) is... ";
+    cout << " 3. What's the free fall time from Burj Khalifa tower (828m)? ";
     auto tower_height    = 828_m;
     auto free_fall_time  = free_fall_time_formula(tower_height, CODATA.g_n);
     cout << free_fall_time << endl;

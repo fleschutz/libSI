@@ -1,7 +1,7 @@
     === SPEED EXAMPLES ===
- 1. The average speed of Kelvin Kiptum's Marathon world record was... 21.0 km/h or 13.0 mph
- 2. The average speed to travel around the Earth in 80 days has to be... 20.9 km/h or 13.0 mph
- 3. The free fall time from Burj Khalifa tower (828m) is... 13.0 s
+ 1. What was the average speed of Kelvin Kiptum's Marathon world record? 21.0 km/h or 13.0 mph
+ 2. Which average speed is needed to travel around the Earth in 80 days? 20.9 km/h or 13.0 mph
+ 3. What's the free fall time from Burj Khalifa tower (828m)? 13.0 s
  4. A flight non-stop around the Earth at Mach 1 would take... 1.4 d
  5. A car's braking distance from 100km/h on dry asphalt is... 48.2 m or 52.7 yd
  6. A car's braking distance from 100km/h on wet asphalt is... 64.3 m or 70.3 yd
