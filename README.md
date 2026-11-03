@@ -2,7 +2,7 @@
 =============================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
-Include *libSI* to apply math in C++ correct, precise, and convenient. Top features are: 
+*libSI* is an open-source library to apply math in C++ correct, precise, and convenient. Top features are: 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
 - **Test-safety** by 200+ unit tests (executed at compile-time and on each commit).
