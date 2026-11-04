@@ -1,11 +1,11 @@
-/// @file     SI/conversions.h
+/// @file     si/conversions.h
 /// @brief    Contains some conversion functions, e.g. to_string(12_m).
 /// @details  Provides from_string(), to_string(), to_equivalent(), and to_percentage().
 
 #pragma once
 #include <iostream>
 #include <string>
-#include <SI/literals.h>
+#include <si/literals.h>
 #define FUNC [[nodiscard]] inline
 
 namespace si

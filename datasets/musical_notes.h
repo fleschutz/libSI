@@ -4,7 +4,7 @@
 ///           USAGE: #include "musical_notes.h" ... for (auto& musical_note : musical_notes) { ...
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace {
 using namespace si;

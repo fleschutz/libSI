@@ -1,12 +1,12 @@
-/// @file      SI/tests.h
-/// @brief     Contains 277 unit tests, executed at compile-time.
+/// @file      si/tests.h
+/// @brief     Contains 277 unit tests, executed at compile-time
 /// @details   Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units,
 ///                            Imperial units, digital units, various units, functions and templates.
 
 #pragma once
 #include <cassert>
-#include <SI/literals.h>
-#include <SI/prefixes.h>
+#include <si/literals.h>
+#include <si/prefixes.h>
 
 namespace si {
 

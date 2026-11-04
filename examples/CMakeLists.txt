@@ -1,5 +1,5 @@
-# CMake Build Instructions for libSI's Examples
-# =============================================
+# CMake Build Instructions
+# ========================
 
 cmake_minimum_required(VERSION 3.10)
 

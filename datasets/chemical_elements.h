@@ -4,7 +4,7 @@
 ///           USAGE: #include "chemical_elements.h" ... for (auto& chemical_element : chemical_elements) { ...
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace {
 using namespace si;

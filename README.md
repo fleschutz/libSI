@@ -30,16 +30,16 @@ int main() {   using namespace si;
 | Component             | Example                                   | Location                               |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
 | Namespace             | *si*                                      | (use si:: for any component)           |
-| Datatypes             | *mass*                                    | [<SI/datatypes.h>](SI/datatypes.h)     |
-| Units                 | *kilograms*                               | [<SI/units.h>](SI/units.h)             |
-| User-defined literals | *1_kg*                                    | [<SI/literals.h>](SI/literals.h)       |
-| Constants             | *CODATA.c (speed of light)*               | [<SI/constants.h>](SI/constants.h)     |
-| Formulas              | *kinetic_energy_formula()*                | [<SI/formulas.h>](SI/formulas.h)       |
-| Conversions           | *to_equivalent()*                         | [<SI/conversions.h>](SI/conversions.h) |
-| Unit tests            | *static_assert(1_kg == 1000_g);*          | [<SI/tests.h>](SI/tests.h)             | 
+| Datatypes             | *mass*                                    | [<si/datatypes.h>](si/datatypes.h)     |
+| Units                 | *kilograms*                               | [<si/units.h>](si/units.h)             |
+| User-defined literals | *1_kg*                                    | [<si/literals.h>](si/literals.h)       |
+| Constants             | *CODATA.c (speed of light)*               | [<si/constants.h>](si/constants.h)     |
+| Formulas              | *kinetic_energy_formula()*                | [<si/formulas.h>](si/formulas.h)       |
+| Conversions           | *to_equivalent()*                         | [<si/conversions.h>](si/conversions.h) |
+| Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](si/tests.h)             | 
 | Datasets              | *Earth.mass*                              | 📂[datasets](datasets/)                |
 | Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/)            |
-| Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/libSI/docs/html/) |
+| Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/si-lib/docs/html/) |
 
 
 💡 Q & A
@@ -50,11 +50,11 @@ int main() {   using namespace si;
 
 **What's IAU?** It's the [International Astronomical Union](https://www.iau.org/), which defines the astronomical units.
 
-**What are use-cases of *libSI*?** Applied math in simulations, simulators, scientific calculations, games, etc.
+**What are use-cases of *si-lib*?** Applied math in simulations, simulators, scientific calculations, games, etc.
 
 **What are numbers like 1.2e23?** It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.
 
-**Which #include to use?** Use the convenient *#include <SI/core.h>* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.
+**Which #include to use?** Use the convenient *#include <si/core.h>* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.
 
 **How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
 

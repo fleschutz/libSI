@@ -4,7 +4,7 @@
 ///           USAGE: #include "material_properties.h" ... for (auto& property : material_properties) { ...
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace {
 using namespace si;

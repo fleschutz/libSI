@@ -1,8 +1,8 @@
-/// @file      SI/datatypes.h
-/// @brief     Defines the 7 SI base datatypes, the derived SI datatypes, and the dimensionless one.
+/// @file   si/datatypes.h
+/// @brief  Defines the 7 SI base datatypes, the derived SI datatypes, and the dimensionless one.
 
 #pragma once
-#include <SI/internal.h>
+#include <si/internal.h>
 #define DATATYPE(_name, _lengthExp, _massExp, _timeExp, _temperatureExp, _currentExp, _substanceExp, _intensityExp) \
   namespace detail { using _name ## _dimension = dimension<_lengthExp, _massExp, _timeExp, _temperatureExp,         \
                                                              _currentExp, _substanceExp, _intensityExp>; }          \

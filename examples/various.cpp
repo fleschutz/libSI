@@ -1,5 +1,5 @@
 /// @file   examples/various.cpp
-/// @brief  Contains 31 various examples using libSI.
+/// @brief  Contains 31 various examples 
 
 #include <iostream>
 #include <datasets/all.h>

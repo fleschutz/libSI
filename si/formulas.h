@@ -1,9 +1,9 @@
-/// @file     SI/formulas.h
-/// @brief    Defines 77 formulas based on SI datatypes, e.g. si::area_of_circle().
+/// @file     si/formulas.h
+/// @brief    Defines 77 formulas, e.g. si::area_of_circle().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once
-#include <SI/constants.h>
+#include <si/constants.h>
 #define FUNC [[nodiscard]] inline
 
 namespace si { 

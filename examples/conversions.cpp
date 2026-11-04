@@ -2,7 +2,7 @@
 /// @brief  Contains 4 import and 5 export examples using libSI.
 
 #include <iostream>
-#include <SI/core.h> 
+#include <si/core.h> 
 
 void conversion_examples() {
     using namespace si;

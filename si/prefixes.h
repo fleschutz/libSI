@@ -1,9 +1,9 @@
-/// @file     SI/prefixes.h
+/// @file     si/prefixes.h
 /// @brief    Defines the 24 SI prefixes (as of 2026)
 /// @details  Source: https://en.wikipedia.org/wiki/Metric_prefix
 
 #pragma once
-#include <SI/units.h>
+#include <si/units.h>
 
 namespace si {
   //                      NAME     VALUE     SYMBOL

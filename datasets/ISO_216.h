@@ -3,7 +3,7 @@
 /// @details  Source: https://en.wikipedia.org/wiki/International_standard_paper_sizes (as of 2026)
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace {
   using namespace si;

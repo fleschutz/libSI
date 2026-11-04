@@ -4,7 +4,7 @@
 ///           USAGE: #include "physics_particles.h" ... for (auto& particle : physics_particles) { ...
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace {
 using namespace si;

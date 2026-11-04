@@ -1,8 +1,8 @@
 /// @file   examples/speeds.cpp
-/// @brief  Contains 10 speed examples using libSI.
+/// @brief  Contains 10 speed examples
 
 #include <iostream>
-#include <SI/core.h> 
+#include <si/core.h> 
 using namespace std;
 using namespace si;
 

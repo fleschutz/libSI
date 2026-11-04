@@ -1,11 +1,11 @@
-/// @file     SI/constants.h
-/// @brief    Defines 78 type-safe constants based on libSI's datatypes and units
+/// @file     si/constants.h
+/// @brief    Defines 78 type-safe constants
 /// @details  Categories are: defined constants, universal constants, electromagnetic constants,
 ///                           atomic & nuclear constants, physico-chemical constants, physical constants,
 ///                           mathematical constants, astronomical constants, various constants, and references.
 
 #pragma once
-#include <SI/units.h>
+#include <si/units.h>
 
 namespace si { 
 

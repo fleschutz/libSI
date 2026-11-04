@@ -4,7 +4,7 @@
 ///           Categories are: Orbital characteristics, Physical characteristics, Atmosphere, and Various.
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace {
   using namespace si;

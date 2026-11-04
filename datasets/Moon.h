@@ -3,7 +3,7 @@
 /// @details  Source: https://en.wikipedia.org/wiki/Moon (as of 2026)
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace {
   using namespace si;

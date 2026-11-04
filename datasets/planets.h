@@ -4,7 +4,7 @@
 ///           USAGE: #include "planets.h" ... for (auto& planet : dataset::planets) { ...
 
 #pragma once
-#include <SI/literals.h>
+#include <si/literals.h>
 
 namespace dataset {
 using namespace si;
