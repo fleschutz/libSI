@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['c_0',['📐si-lib - The Physical Units Library For C++',['../index.html',1,'']]],
-  ['chemical_5felements_2eh_1',['chemical_elements.h',['../chemical__elements_8h.html',1,'']]],
-  ['contributing_2',['🤝 Contributing',['../index.html#autotoc_md3',1,'']]],
-  ['conversion_5fexamples_3',['conversion_examples',['../conversions_8cpp.html#a2fdb9d9361eaa3bb842af0970fd3a8a6',1,'conversion_examples():&#160;conversions.cpp'],['../main_8cpp.html#a2fdb9d9361eaa3bb842af0970fd3a8a6',1,'conversion_examples():&#160;main.cpp']]],
-  ['conversions_2ecpp_4',['conversions.cpp',['../conversions_8cpp.html',1,'']]],
-  ['copyright_5',['📜 License &amp;amp; Copyright',['../index.html#autotoc_md4',1,'']]]
+  ['ballistic_5fmax_5fheight_5fformula_0',['ballistic_max_height_formula',['../namespacesi.html#a100903cb03bb424561a7f780de2317a4',1,'si']]],
+  ['ballistic_5fmax_5frange_5fformula_1',['ballistic_max_range_formula',['../namespacesi.html#a815015a279072075d126ff83640d5b1f',1,'si']]],
+  ['ballistic_5ftravel_5ftime_5fformula_2',['ballistic_travel_time_formula',['../namespacesi.html#a5c06f9edebecf0135ede17ddc0df7710',1,'si']]],
+  ['blocks_3',['🧱 Building Blocks',['../index.html#autotoc_md1',1,'']]],
+  ['bmi_5fformula_4',['BMI_formula',['../namespacesi.html#a635a17122c0bcc50413b87be373d92e0',1,'si']]],
+  ['braking_5fdistance_5fformula_5',['braking_distance_formula',['../namespacesi.html#a7ce20ba906d1d4e5be70f857c1243865',1,'si']]],
+  ['building_20blocks_6',['🧱 Building Blocks',['../index.html#autotoc_md1',1,'']]]
 ];

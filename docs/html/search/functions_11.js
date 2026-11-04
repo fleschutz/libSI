@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['radius_5fof_5fcircumference_5fformula_0',['radius_of_circumference_formula',['../namespaceSI.html#a3df599bbdd1a25928cb3c2f7aad848f7',1,'SI']]],
-  ['root_1',['root',['../namespaceSI_1_1detail.html#a2dc9477cda07dfa402dc6b876519abb8',1,'SI::detail::root()'],['../namespaceSI.html#a2dc9477cda07dfa402dc6b876519abb8',1,'SI::root()']]]
+  ['radius_5fof_5fcircumference_5fformula_0',['radius_of_circumference_formula',['../namespacesi.html#a7e22ca68d7f8960c3605130f7ad1c2de',1,'si']]],
+  ['root_1',['root',['../namespacesi_1_1detail.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::detail::root()'],['../namespacesi.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::root()']]]
 ];

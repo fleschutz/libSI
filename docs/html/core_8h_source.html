@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Project: /Repos/libSI/SI/core.h Source File</title>
+<title>Project: /Repos/libSI/si/core.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -95,25 +95,25 @@ $(function(){initNavTree('core_8h_source.html','',''); });
 <a href="core_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="datatypes_8h.html">SI/datatypes.h</a>&gt;</span>    </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="units_8h.html">SI/units.h</a>&gt;</span>        </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="literals_8h.html">SI/literals.h</a>&gt;</span>     </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="constants_8h.html">SI/constants.h</a>&gt;</span>    </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="formulas_8h.html">SI/formulas.h</a>&gt;</span>     </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="conversions_8h.html">SI/conversions.h</a>&gt;</span>  </div>
-<div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">Defines 78 type-safe constants, e.g. speed_of_light_in_vacuum.</div></div>
-<div class="ttc" id="aconversions_8h_html"><div class="ttname"><a href="conversions_8h.html">conversions.h</a></div><div class="ttdoc">Defines conversion functions, e.g. to_string(12_m).</div></div>
-<div class="ttc" id="adatatypes_8h_html"><div class="ttname"><a href="datatypes_8h.html">datatypes.h</a></div><div class="ttdoc">Defines the dimensionless, the SI base, and the derived SI datatypes, e.g. SI::length.</div></div>
-<div class="ttc" id="aformulas_8h_html"><div class="ttname"><a href="formulas_8h.html">formulas.h</a></div><div class="ttdoc">Defines 77 formulas based on SI datatypes, e.g. SI::formula::wavelength().</div></div>
-<div class="ttc" id="aliterals_8h_html"><div class="ttname"><a href="literals_8h.html">literals.h</a></div><div class="ttdoc">Defines 297 literals, e.g. 24_h.</div></div>
-<div class="ttc" id="aunits_8h_html"><div class="ttname"><a href="units_8h.html">units.h</a></div><div class="ttdoc">Defines 103 type-safe units, e.g. SI::meters.</div></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="datatypes_8h.html">si/datatypes.h</a>&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="units_8h.html">si/units.h</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="literals_8h.html">si/literals.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="constants_8h.html">si/constants.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="formulas_8h.html">si/formulas.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="conversions_8h.html">si/conversions.h</a>&gt;</span></div>
+<div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">Defines 78 type-safe constants.</div></div>
+<div class="ttc" id="aconversions_8h_html"><div class="ttname"><a href="conversions_8h.html">conversions.h</a></div><div class="ttdoc">Contains some conversion functions, e.g. to_string(12_m).</div></div>
+<div class="ttc" id="adatatypes_8h_html"><div class="ttname"><a href="datatypes_8h.html">datatypes.h</a></div><div class="ttdoc">Defines the 7 SI base datatypes, the derived SI datatypes, and the dimensionless one.</div></div>
+<div class="ttc" id="aformulas_8h_html"><div class="ttname"><a href="formulas_8h.html">formulas.h</a></div><div class="ttdoc">Defines 77 formulas, e.g. si::area_of_circle().</div></div>
+<div class="ttc" id="aliterals_8h_html"><div class="ttname"><a href="literals_8h.html">literals.h</a></div><div class="ttdoc">Defines 297 user-defined literals (UDL), e.g. 24_h (supported since C++11).</div></div>
+<div class="ttc" id="aunits_8h_html"><div class="ttname"><a href="units_8h.html">units.h</a></div><div class="ttdoc">Defines 103 units based on libSI&#39;s datatypes, e.g. si::meters.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_38f2f3d5dc201515ebf546cd419e86e4.html">SI</a></li><li class="navelem"><a href="core_8h.html">core.h</a></li>
+    <li class="navelem"><a href="dir_340a0768c18a25852cbcb204a72cf906.html">si</a></li><li class="navelem"><a href="core_8h.html">core.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

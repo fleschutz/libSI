@@ -95,30 +95,30 @@ $(function(){initNavTree('Moon_8h_source.html','',''); });
 <a href="Moon_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;si/literals.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="literals_8h.html">si/literals.h</a>&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">using namespace </span>si;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacesi.html">si</a>;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <span class="keyword">constexpr</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Orbital characteristics</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    length        average_perigee =            362&#39;600_km;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    length        average_apogee =             405&#39;400_km;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    length        semi_major_axis =            384&#39;399_km;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    length        mean_orbit_radius =          384&#39;784_km;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    dimensionless eccentricity =                     0.0549;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        average_perigee =            362&#39;600_km;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        average_apogee =             405&#39;400_km;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        semi_major_axis =            384&#39;399_km;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        mean_orbit_radius =          384&#39;784_km;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_typedef" href="namespacesi.html#aba273f6c272de77e9478a9e4c3146285">dimensionless</a> eccentricity =                     0.0549;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    si::time      sidereal_orbital_period = 27.321&#39;661_days;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    si::time      synodic_orbital_period =  29.530&#39;589_days;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    velocity      average_orbital_speed =        1&#39;022_km_per_s;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    angle         inclination =                  5.145_deg; <span class="comment">// to the ecliptic</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_typedef" href="namespacesi.html#a9b2a47aeba771734637d7fbff1f361b5">angle</a>         inclination =                  5.145_deg; <span class="comment">// to the ecliptic</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Physical characteristics</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    length        mean_radius =                1&#39;737.4_km;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    length        equatorial_radius =          1&#39;738.1_km;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    length        polar_radius =               1&#39;736.0_km;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    dimensionless flattening =                       0.0012;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    length        equatorial_circumference =    10&#39;921_km;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        mean_radius =                1&#39;737.4_km;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        equatorial_radius =          1&#39;738.1_km;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        polar_radius =               1&#39;736.0_km;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_typedef" href="namespacesi.html#aba273f6c272de77e9478a9e4c3146285">dimensionless</a> flattening =                       0.0012;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">length</a>        equatorial_circumference =    10&#39;921_km;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    area          surface_area =               3.793e7_km²;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    si::volume    volume =                   2.1958e10_km³;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    si::mass      mass =                      7.346e22_kg;</div>
@@ -126,15 +126,21 @@ $(function(){initNavTree('Moon_8h_source.html','',''); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    acceleration  surface_gravity =              1.622_m_per_s²;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    velocity      escape_velocity =               2.38_km_per_s;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    velocity      equatorial_rotation_velocity = 4.627_m_per_s;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    dimensionless albedo =                           0.136;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_typedef" href="namespacesi.html#aba273f6c272de77e9478a9e4c3146285">dimensionless</a> albedo =                           0.136;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// Atmosphere</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    pressure      surface_pressure_day  =        10e-7_Pa;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    pressure      surface_pressure_night  =     10e-10_Pa;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    pressure      surface_pressure_day  =        10<a class="code hl_variable" href="namespacesi.html#ac224c9840a76695fe024708bd40c3d80">e</a>-7_Pa;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    pressure      surface_pressure_night  =     10<a class="code hl_variable" href="namespacesi.html#ac224c9840a76695fe024708bd40c3d80">e</a>-10_Pa;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  } Moon;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// end of namespace </span></div>
+<div class="ttc" id="aliterals_8h_html"><div class="ttname"><a href="literals_8h.html">literals.h</a></div><div class="ttdoc">Defines 297 user-defined literals (UDL), e.g. 24_h (supported since C++11).</div></div>
+<div class="ttc" id="anamespacesi_1_1internal_html_abcc89a96d8a35f81961bc82664e93a13"><div class="ttname"><a href="namespacesi_1_1internal.html#abcc89a96d8a35f81961bc82664e93a13">si::internal::length</a></div><div class="ttdeci">auto length(const vec2&lt; T &gt; &amp;v)</div><div class="ttdef"><b>Definition</b> internal.h:180</div></div>
+<div class="ttc" id="anamespacesi_html"><div class="ttname"><a href="namespacesi.html">si</a></div><div class="ttdef"><b>Definition</b> constants.h:10</div></div>
+<div class="ttc" id="anamespacesi_html_a9b2a47aeba771734637d7fbff1f361b5"><div class="ttname"><a href="namespacesi.html#a9b2a47aeba771734637d7fbff1f361b5">si::angle</a></div><div class="ttdeci">long double angle</div><div class="ttdoc">holds a dimensionless angle, e.g. 3.1415</div><div class="ttdef"><b>Definition</b> datatypes.h:62</div></div>
+<div class="ttc" id="anamespacesi_html_aba273f6c272de77e9478a9e4c3146285"><div class="ttname"><a href="namespacesi.html#aba273f6c272de77e9478a9e4c3146285">si::dimensionless</a></div><div class="ttdeci">double dimensionless</div><div class="ttdoc">holds a quantity without any unit, e.g. 42</div><div class="ttdef"><b>Definition</b> datatypes.h:63</div></div>
+<div class="ttc" id="anamespacesi_html_ac224c9840a76695fe024708bd40c3d80"><div class="ttname"><a href="namespacesi.html#ac224c9840a76695fe024708bd40c3d80">si::e</a></div><div class="ttdeci">dimensionless e</div><div class="ttdef"><b>Definition</b> constants.h:89</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

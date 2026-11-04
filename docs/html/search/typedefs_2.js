@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enable_5ffor_5fsi_0',['enable_for_si',['../namespaceSI_1_1detail.html#a8015e588e98544903542488d9d744451',1,'SI::detail']]]
+  ['enable_5ffor_5fsi_0',['enable_for_si',['../namespacesi_1_1detail.html#ab1c1a18529e4b0553d5a85120be072d9',1,'si::detail']]]
 ];

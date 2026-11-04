@@ -1,15 +1,15 @@
 var tests_8h =
 [
-    [ "SI::check_angle", "namespaceSI.html#a00d578d994500025b3b986ce5d8e7393", null ],
-    [ "SI::check_astronomical_units", "namespaceSI.html#a535aa7e79bf4f4795ff6b2893d8f903c", null ],
-    [ "SI::check_C_datatypes", "namespaceSI.html#a2d94659776541dc29d31c05ed6f01086", null ],
-    [ "SI::check_digital_units", "namespaceSI.html#a6860c267254bfc74042702a6cd576064", null ],
-    [ "SI::check_features", "namespaceSI.html#a7c13393630dab699955b30e46a3eff27", null ],
-    [ "SI::check_functions_and_templates", "namespaceSI.html#ae699cbc5496a7109221fbc3a024b06f0", null ],
-    [ "SI::check_Imperial_units", "namespaceSI.html#a0fddf4356f147856e9d378bad043d8c9", null ],
-    [ "SI::check_SI_base_units", "namespaceSI.html#aa04ad0af2d469666a83b3fd1382fe35f", null ],
-    [ "SI::check_SI_datatypes", "namespaceSI.html#a775996d75c7835ba5ab94a2b9b1d7d6e", null ],
-    [ "SI::check_SI_derived_units", "namespaceSI.html#a8860d0074861b1bf1d112d048bbcf51b", null ],
-    [ "SI::check_SI_prefixes", "namespaceSI.html#af6a072719ac50af772c12bd301b1eb92", null ],
-    [ "SI::check_various_units", "namespaceSI.html#aaca1779052d09e5ca3ee66a993a342ac", null ]
+    [ "si::check_angle", "namespacesi.html#a1b7dcd28bce9d270cdff156bba7fc48f", null ],
+    [ "si::check_astronomical_units", "namespacesi.html#a6617e5d4787d49d5ba3904f1fc2bbd2c", null ],
+    [ "si::check_C_datatypes", "namespacesi.html#a83b2b6dce23a12bb158a6d2a90b6700a", null ],
+    [ "si::check_digital_units", "namespacesi.html#a6c075d2eb86cc9cc5bdc92e8c0f79f1e", null ],
+    [ "si::check_features", "namespacesi.html#a92b36774be87664f05aea92fe21e8250", null ],
+    [ "si::check_functions_and_templates", "namespacesi.html#ac6b790c0cf240a04f0ebb8a536677a08", null ],
+    [ "si::check_Imperial_units", "namespacesi.html#a9dccf6c5671a13c1b568fbed6467c879", null ],
+    [ "si::check_SI_base_units", "namespacesi.html#a1d25a435174c4e4a8ec923c3cd144de1", null ],
+    [ "si::check_SI_datatypes", "namespacesi.html#a8e38f92d2ab91c34412dedbe993e1698", null ],
+    [ "si::check_SI_derived_units", "namespacesi.html#afc5f81f433777fd35e188125c63d643d", null ],
+    [ "si::check_SI_prefixes", "namespacesi.html#af43bb805b8291e492138aa64aa8112b5", null ],
+    [ "si::check_various_units", "namespacesi.html#aa8762e9d8197afc9765df2ed68494288", null ]
 ];

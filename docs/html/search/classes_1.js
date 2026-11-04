@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['planet_5fdetails_0',['planet_details',['../structdataset_1_1planet__details.html',1,'dataset']]]
+  ['element_5fcount_0',['element_count',['../structsi_1_1detail_1_1element__count.html',1,'si::detail']]],
+  ['element_5fcount_3c_20quantity_3c_20dimension_2c_20t_20_3e_20_3e_1',['element_count&lt; quantity&lt; Dimension, T &gt; &gt;',['../structsi_1_1detail_1_1element__count_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html',1,'si::detail']]]
 ];

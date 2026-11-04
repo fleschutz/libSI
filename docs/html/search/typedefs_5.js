@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['scalar_5fvalue_5ftype_5ft_0',['scalar_value_type_t',['../namespaceSI_1_1detail.html#a45677cff494df75a20a05107567deac7',1,'SI::detail']]],
-  ['sidouble_1',['SIdouble',['../namespaceSI.html#a0e0ab5368da6868422490bfd17dd0657',1,'SI']]]
+  ['scalar_5fvalue_5ftype_5ft_0',['scalar_value_type_t',['../namespacesi_1_1detail.html#a176f6a026c1537645b85baaf104fab34',1,'si::detail']]],
+  ['sidouble_1',['SIdouble',['../namespacesi.html#ab0aac728ba97ded7abbea0afc28c1c4d',1,'si']]]
 ];

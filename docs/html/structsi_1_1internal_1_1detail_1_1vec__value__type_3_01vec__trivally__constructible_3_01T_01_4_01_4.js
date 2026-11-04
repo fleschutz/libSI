@@ -1,0 +1,4 @@
+var structsi_1_1internal_1_1detail_1_1vec__value__type_3_01vec__trivally__constructible_3_01T_01_4_01_4 =
+[
+    [ "type", "structsi_1_1internal_1_1detail_1_1vec__value__type_3_01vec__trivally__constructible_3_01T_01_4_01_4.html#ac3565d65e0c83a2b7eba0a6e45a1cea2", null ]
+];

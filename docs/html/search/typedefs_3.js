@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['promoted_5fscalar_5ftype_0',['promoted_scalar_type',['../namespaceSI_1_1detail.html#a1436ba735a50785d45e42ad0267dd22d',1,'SI::detail']]]
+  ['promoted_5fscalar_5ftype_0',['promoted_scalar_type',['../namespacesi_1_1detail.html#a211e1e76b09e7ee493d885ab6d6c099f',1,'si::detail']]]
 ];

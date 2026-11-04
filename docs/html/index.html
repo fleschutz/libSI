@@ -106,14 +106,18 @@ $(function(){initNavTree('index.html','',''); });
 </ul>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md0"></a>
 🔎 Example</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;si/core.h&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="core_8h.html">si/core.h</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {   <span class="keyword">using namespace </span>si;</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacesi.html">si</a>;</div>
 <div class="line">    mass m   = 1_kg;</div>
-<div class="line">    energy E = m * square(CODATA.c);</div>
+<div class="line">    energy E = m * <a class="code hl_function" href="namespacesi.html#a1768db81d530a219476d5bc80166f07b">square</a>(<a class="code hl_variable" href="namespacesi.html#ae525cb7666522e8a5180a46f8d77e46a">CODATA</a>.c);</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;The potential energy of a single kilogram is: &quot;</span> &lt;&lt; E &lt;&lt; std::endl;</div>
 <div class="line">}</div>
+<div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Includes the 6 core header files.</div></div>
 <div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> main.cpp:12</div></div>
+<div class="ttc" id="anamespacesi_html"><div class="ttname"><a href="namespacesi.html">si</a></div><div class="ttdef"><b>Definition</b> constants.h:10</div></div>
+<div class="ttc" id="anamespacesi_html_a1768db81d530a219476d5bc80166f07b"><div class="ttname"><a href="namespacesi.html#a1768db81d530a219476d5bc80166f07b">si::square</a></div><div class="ttdeci">SI_INLINE_CONSTEXPR auto square(T x)</div><div class="ttdoc">Raise any number &lt;x&gt; to power of 2 (x² or x*x).</div><div class="ttdef"><b>Definition</b> units.h:187</div></div>
+<div class="ttc" id="anamespacesi_html_ae525cb7666522e8a5180a46f8d77e46a"><div class="ttname"><a href="namespacesi.html#ae525cb7666522e8a5180a46f8d77e46a">si::CODATA</a></div><div class="ttdeci">constexpr struct si::@161121354223353321303034374054202026141074051174 CODATA</div></div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 🧱 Building Blocks</h1>
 <table class="markdownTable">
@@ -149,7 +153,7 @@ $(function(){initNavTree('index.html','',''); });
 <p><b>What's IAU?</b> It's the <a href="https://www.iau.org/">International Astronomical Union</a>, which defines the astronomical units.</p>
 <p><b>What are use-cases of <em>si-lib</em>?</b> Applied math in simulations, simulators, scientific calculations, games, etc.</p>
 <p><b>What are numbers like 1.2e23?</b> It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.</p>
-<p><b>Which #include to use?</b> Use the convenient *#include &lt;si/core.h&gt;* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.</p>
+<p><b>Which #include to use?</b> Use the convenient *#include &lt;<a class="el" href="core_8h.html" title="Includes the 6 core header files.">si/core.h</a>&gt;* to include the 6 core header files (<a class="el" href="datatypes_8h.html" title="Defines the 7 SI base datatypes, the derived SI datatypes, and the dimensionless one.">datatypes.h</a>, <a class="el" href="units_8h.html" title="Defines 103 units based on libSI&#39;s datatypes, e.g. si::meters.">units.h</a>, <a class="el" href="literals_8h.html" title="Defines 297 user-defined literals (UDL), e.g. 24_h (supported since C++11).">literals.h</a>, <a class="el" href="constants_8h.html" title="Defines 78 type-safe constants.">constants.h</a>, <a class="el" href="formulas_8h.html" title="Defines 77 formulas, e.g. si::area_of_circle().">formulas.h</a>, <a class="el" href="conversions_8h.html" title="Contains some conversion functions, e.g. to_string(12_m).">conversions.h</a>), otherwise pick the necessary ones only.</p>
 <p><b>How to import or export numbers and string?</b> See the code examples in <a href="examples/conversions.cpp">examples/conversions.cpp</a>.</p>
 <p><b>Where are the list of references?</b> References are always listed at the end of each source code file.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
