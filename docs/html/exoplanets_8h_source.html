@@ -95,24 +95,24 @@ $(function(){initNavTree('exoplanets_8h_source.html','',''); });
 <a href="exoplanets_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="literals_8h.html">SI/literals.h</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;si/literals.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceSI.html">SI</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>si;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">struct </span>exoplanet_details {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* name;                  </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* hostname;              </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> number_of_stars;     </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> number_of_planets;   </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    SI::time orbital_period;           </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    SI::length orbit_semimajor_axis;   </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    si::time orbital_period;           </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    si::length orbit_semimajor_axis;   </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">double</span> radius_vs_Earth;            </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">double</span> mass_vs_Earth;              </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">double</span> eccentricity;               </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">double</span> insolation_flux;            </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    SI::temperature equilibrium_temperature;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    SI::length distance;               </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    si::temperature equilibrium_temperature;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    si::length distance;               </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">const</span> exoplanet_details exoplanets[] {     <span class="comment">// NOTE: 00=empty or unknown field</span></div>
@@ -39355,8 +39355,6 @@ $(function(){initNavTree('exoplanets_8h_source.html','',''); });
 <div class="line"><a id="l39264" name="l39264"></a><span class="lineno">39264</span> </div>
 <div class="line"><a id="l39265" name="l39265"></a><span class="lineno">39265</span>} <span class="comment">// end of namespace</span></div>
 <div class="line"><a id="l39266" name="l39266"></a><span class="lineno">39266</span> </div>
-<div class="ttc" id="aliterals_8h_html"><div class="ttname"><a href="literals_8h.html">literals.h</a></div><div class="ttdoc">Defines 297 user-defined literals (since C++11), e.g. 24_h.</div></div>
-<div class="ttc" id="anamespaceSI_html"><div class="ttname"><a href="namespaceSI.html">SI</a></div><div class="ttdef"><b>Definition</b> constants.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

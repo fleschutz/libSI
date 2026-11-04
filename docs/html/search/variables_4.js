@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['f1au_0',['F1AU',['../namespaceSI.html#a5827a548499d2ed4a746e6e587f55803',1,'SI']]],
-  ['factor_1',['factor',['../structSI_1_1detail_1_1ratio.html#ad8c9e194e8af60b25284cc7e12b995ba',1,'SI::detail::ratio::factor'],['../structSI_1_1detail_1_1ratio__product.html#a518767285734123b2fb41287a772680c',1,'SI::detail::ratio_product::factor'],['../structSI_1_1detail_1_1ratio__quotient.html#a08ffddde271e05fc9a1c7832a19518de',1,'SI::detail::ratio_quotient::factor']]],
-  ['femto_2',['femto',['../namespaceSI.html#a916f504e5c9712bcb40595b5ab6b4ddb',1,'SI']]]
+  ['has_5fglobal_5fmagnetic_5ffield_0',['has_global_magnetic_field',['../structdataset_1_1planet__details.html#ad4f3750839694152cec7b4bf80dfff67',1,'dataset::planet_details']]],
+  ['has_5fring_5fsystem_1',['has_ring_system',['../structdataset_1_1planet__details.html#a04508f34f3cf76fbf80ecd8d8347c8fa',1,'dataset::planet_details']]]
 ];

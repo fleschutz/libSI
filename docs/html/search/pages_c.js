@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['📐libsi_20the_20physical_20units_20library_20for_20c_0',['📐libSI - The Physical Units Library For C++',['../index.html',1,'']]]
+  ['📐si_20lib_20the_20physical_20units_20library_20for_20c_0',['📐si-lib - The Physical Units Library For C++',['../index.html',1,'']]]
 ];

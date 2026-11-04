@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['abs_0',['abs',['../namespaceSI_1_1internal.html#aa81d4055e83568916266e3b3e4791fbe',1,'SI::internal::abs(const vec2&lt; T &gt; &amp;v)'],['../namespaceSI_1_1internal.html#a5d228253035a1810152903b44238a85f',1,'SI::internal::abs(const vec3&lt; T &gt; &amp;v)'],['../namespaceSI_1_1detail.html#a24fb9e173c4d35c3e3c8ba3cb84b21de',1,'SI::detail::abs()'],['../namespaceSI.html#a24fb9e173c4d35c3e3c8ba3cb84b21de',1,'SI::abs(const quantity&lt; Dimension, T &gt; &amp;x)']]],
-  ['absorbed_5fdose_5fformula_1',['absorbed_dose_formula',['../namespaceSI.html#af4248d1422ae79ff25bd80ebe48e3244',1,'SI']]],
-  ['acceleration_5ffor_5fdistance_5fformula_2',['acceleration_for_distance_formula',['../namespaceSI.html#a37f778ea0d7a156e507c796e16715f5b',1,'SI']]],
-  ['acceleration_5ffor_5fspeed_5fformula_3',['acceleration_for_speed_formula',['../namespaceSI.html#af0257d27d94760d437e52c5d39275a08',1,'SI']]],
-  ['acceleration_5fg_5fforce_5fformula_4',['acceleration_g_force_formula',['../namespaceSI.html#ad94b461f0022e97897307ec723dc7f41',1,'SI']]],
-  ['angle1_5fin_5ftriangle_5fformula_5',['angle1_in_triangle_formula',['../namespaceSI.html#af649cdb8850b453efff1447b36c3a849',1,'SI']]],
-  ['angle2_5fin_5ftriangle_5fformula_6',['angle2_in_triangle_formula',['../namespaceSI.html#a40eb7e7771cf3753b93fb2df0dcdd168',1,'SI']]],
-  ['angle3_5fin_5ftriangle_5fformula_7',['angle3_in_triangle_formula',['../namespaceSI.html#aab1bbf33ad662f6648df4c5ce42f39d6',1,'SI']]],
-  ['area_5fof_5fcircle_5fformula_8',['area_of_circle_formula',['../namespaceSI.html#a23e12029810e226768f1ada10df2401b',1,'SI']]],
-  ['area_5fof_5fcone_5fformula_9',['area_of_cone_formula',['../namespaceSI.html#aadcebf87d132fc83691b91143233ed9e',1,'SI']]],
-  ['area_5fof_5fcube_5fformula_10',['area_of_cube_formula',['../namespaceSI.html#a22dfe2ef3d5545851ac9e3dc85d40fb2',1,'SI']]],
-  ['area_5fof_5fcylinder_5fformula_11',['area_of_cylinder_formula',['../namespaceSI.html#aee2c02410c47e4cd9bdd03c2d346d827',1,'SI']]],
-  ['area_5fof_5fellipse_5fformula_12',['area_of_ellipse_formula',['../namespaceSI.html#a674faf81db36c301c84222761496cd38',1,'SI']]],
-  ['area_5fof_5frectangle_5fformula_13',['area_of_rectangle_formula',['../namespaceSI.html#a790c918d1a56d5dc6f812b9053b43a77',1,'SI']]],
-  ['area_5fof_5fsphere_5fformula_14',['area_of_sphere_formula',['../namespaceSI.html#ac9468b78ea2db0fa9acd5f11b6fbbc82',1,'SI']]],
-  ['area_5fof_5fsquare_5fformula_15',['area_of_square_formula',['../namespaceSI.html#a13674edee1d690df7f0a2bed29a740e3',1,'SI']]],
-  ['area_5fof_5ftrapezoid_5fformula_16',['area_of_trapezoid_formula',['../namespaceSI.html#aaa3152989183dfe9c8c33c76c8595cb9',1,'SI']]],
-  ['area_5fof_5ftriangle_5fformula_17',['area_of_triangle_formula',['../namespaceSI.html#a64eea5930d6983fe86c75b99e7aad454',1,'SI']]],
-  ['astronomy_5fexamples_18',['astronomy_examples',['../astronomy_8cpp.html#a9541428fb2cda56215045653d2d86154',1,'astronomy_examples():&#160;astronomy.cpp'],['../main_8cpp.html#a9541428fb2cda56215045653d2d86154',1,'astronomy_examples():&#160;main.cpp']]],
-  ['atan2_19',['atan2',['../namespaceSI.html#a3fe26bbe1ec488b17ca4c622e6646ed2',1,'SI::atan2(const angle y, const angle x)'],['../namespaceSI.html#ad5f6dcfdc406a07287484d315680ec69',1,'SI::atan2(const length y, const length x)']]],
-  ['average_5fspeed_5fformula_20',['average_speed_formula',['../namespaceSI.html#a26602f1831fa26c9e9a18981f3f08576',1,'SI']]],
-  ['avg_5fof_5farray_21',['avg_of_array',['../namespaceSI.html#a0851d2ad231061246623baf5a1223e7c',1,'SI']]]
+  ['conversion_5fexamples_0',['conversion_examples',['../conversions_8cpp.html#a2fdb9d9361eaa3bb842af0970fd3a8a6',1,'conversion_examples():&#160;conversions.cpp'],['../main_8cpp.html#a2fdb9d9361eaa3bb842af0970fd3a8a6',1,'conversion_examples():&#160;main.cpp']]]
 ];

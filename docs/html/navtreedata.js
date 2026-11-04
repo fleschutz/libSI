@@ -25,34 +25,27 @@
 var NAVTREE =
 [
   [ "Project", "index.html", [
-    [ "📐libSI - The Physical Units Library For C++", "index.html", "index" ],
+    [ "📐si-lib - The Physical Units Library For C++", "index.html", "index" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
-        [ "Functions", "namespacemembers_func.html", "namespacemembers_func" ],
-        [ "Variables", "namespacemembers_vars.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ]
+        [ "All", "namespacemembers.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ],
-        [ "Related Symbols", "functions_rela.html", null ]
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -60,12 +53,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Earth_8h.html",
-"namespaceSI.html#a33a91856759b22e54dc6ac62624e32e1",
-"namespaceSI.html#a8f495b202f6a2d531dfea72dfa4c593b",
-"namespaceSI.html#ae590c160d9dd7e8e0d23fa27c7967f8c",
-"namespacemembers_p.html",
-"units_8h.html"
+"Earth_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

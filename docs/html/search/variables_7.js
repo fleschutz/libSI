@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['iau_0',['IAU',['../namespaceSI.html#a18b85a179c61a7f5fe204173e1cad3b8',1,'SI']]],
-  ['intensity_1',['intensity',['../structSI_1_1detail_1_1dimension.html#ad8b757294fa4ab8c8b38bf6c0656b0c5',1,'SI::detail::dimension']]],
-  ['is_5fdimensionless_5fv_2',['is_dimensionless_v',['../namespaceSI_1_1detail.html#a04dd95e1f14b5b5cb5845610eb1b65dc',1,'SI::detail']]],
-  ['is_5fsi_5fv_3',['is_si_v',['../namespaceSI_1_1detail.html#aa13dec9853875cedea600c70daf4bdf0',1,'SI::detail::is_si_v'],['../namespaceSI.html#aa13dec9853875cedea600c70daf4bdf0',1,'SI::is_si_v']]]
+  ['name_0',['name',['../structdataset_1_1moon__details.html#ab5362df47eadcfd6033f03f04df980e6',1,'dataset::moon_details::name'],['../structdataset_1_1planet__details.html#a4343f4bbf58a53cd64303fcd29f45c7e',1,'dataset::planet_details::name']]],
+  ['number_5fof_5fmoons_1',['number_of_moons',['../structdataset_1_1planet__details.html#a79a0050a11b457f6764c944a01e6872b',1,'dataset::planet_details']]]
 ];

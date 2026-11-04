@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['ballistic_5fmax_5fheight_5fformula_0',['ballistic_max_height_formula',['../namespaceSI.html#a47f7bffc84a0075202eb06d412521e29',1,'SI']]],
-  ['ballistic_5fmax_5frange_5fformula_1',['ballistic_max_range_formula',['../namespaceSI.html#a18bd1cef4ba2b454e42712ff82a6552f',1,'SI']]],
-  ['ballistic_5ftravel_5ftime_5fformula_2',['ballistic_travel_time_formula',['../namespaceSI.html#a5cd72df50dc9b03fda989cc856c94905',1,'SI']]],
-  ['blocks_3',['🧱 Building Blocks',['../index.html#autotoc_md1',1,'']]],
-  ['bmi_5fformula_4',['BMI_formula',['../namespaceSI.html#a4b3cbe38d55e122da8cd100380563cd3',1,'SI']]],
-  ['braking_5fdistance_5fformula_5',['braking_distance_formula',['../namespaceSI.html#a6ae9469278e0fe79e466ec236ac2d062',1,'SI']]],
-  ['building_20blocks_6',['🧱 Building Blocks',['../index.html#autotoc_md1',1,'']]]
+  ['c_0',['📐si-lib - The Physical Units Library For C++',['../index.html',1,'']]],
+  ['chemical_5felements_2eh_1',['chemical_elements.h',['../chemical__elements_8h.html',1,'']]],
+  ['contributing_2',['🤝 Contributing',['../index.html#autotoc_md3',1,'']]],
+  ['conversion_5fexamples_3',['conversion_examples',['../conversions_8cpp.html#a2fdb9d9361eaa3bb842af0970fd3a8a6',1,'conversion_examples():&#160;conversions.cpp'],['../main_8cpp.html#a2fdb9d9361eaa3bb842af0970fd3a8a6',1,'conversion_examples():&#160;main.cpp']]],
+  ['conversions_2ecpp_4',['conversions.cpp',['../conversions_8cpp.html',1,'']]],
+  ['copyright_5',['📜 License &amp;amp; Copyright',['../index.html#autotoc_md4',1,'']]]
 ];

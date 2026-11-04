@@ -1,5 +1,4 @@
 var namespaces_dup =
 [
-    [ "dataset", "namespacedataset.html", "namespacedataset" ],
-    [ "SI", "namespaceSI.html", "namespaceSI" ]
+    [ "dataset", "namespacedataset.html", "namespacedataset" ]
 ];

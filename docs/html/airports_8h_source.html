@@ -95,16 +95,16 @@ $(function(){initNavTree('airports_8h_source.html','',''); });
 <a href="airports_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="literals_8h.html">SI/literals.h</a>&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;si/literals.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespaceSI.html">SI</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>si;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">struct </span>airport_details {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* name;                  </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    SI::length elevation;              </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_typedef" href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a> latitude;                </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_typedef" href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a> longitude;               </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    si::length elevation;              </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    si::angle latitude;                </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    si::angle longitude;               </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">const</span> airport_details airports[] {      <span class="comment">// NOTE: 00=empty or unknown field</span></div>
@@ -5110,9 +5110,6 @@ $(function(){initNavTree('airports_8h_source.html','',''); });
 <div class="line"><a id="l05019" name="l05019"></a><span class="lineno"> 5019</span> </div>
 <div class="line"><a id="l05020" name="l05020"></a><span class="lineno"> 5020</span>} <span class="comment">// end of namespace</span></div>
 <div class="line"><a id="l05021" name="l05021"></a><span class="lineno"> 5021</span> </div>
-<div class="ttc" id="aliterals_8h_html"><div class="ttname"><a href="literals_8h.html">literals.h</a></div><div class="ttdoc">Defines 297 user-defined literals (since C++11), e.g. 24_h.</div></div>
-<div class="ttc" id="anamespaceSI_html"><div class="ttname"><a href="namespaceSI.html">SI</a></div><div class="ttdef"><b>Definition</b> constants.h:10</div></div>
-<div class="ttc" id="anamespaceSI_html_aba6f659bd709507f32224c552d83ae7f"><div class="ttname"><a href="namespaceSI.html#aba6f659bd709507f32224c552d83ae7f">SI::angle</a></div><div class="ttdeci">long double angle</div><div class="ttdoc">holds a dimensionless angle, e.g. 3.1415</div><div class="ttdef"><b>Definition</b> datatypes.h:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
