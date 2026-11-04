@@ -29,7 +29,7 @@ int main() {   using namespace si;
 
 | Component             | Example                                   | Location                               |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
-| Namespace             | *si*                                      | (use si:: for any SI component)        |
+| Namespace             | *si*                                      | (use si:: for any component)           |
 | Datatypes             | *mass*                                    | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *kilograms*                               | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_kg*                                    | [<SI/literals.h>](SI/literals.h)       |
