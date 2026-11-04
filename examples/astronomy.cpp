@@ -50,7 +50,7 @@ void astronomy_examples() {
 
 
     cout << " 7. Bigger moons than Earth's moon are... ";
-    for (auto& moon : dataset::moons) {
+    for (auto& moon : moons) {
         if (moon.mean_radius > 1737.5_km)
             cout << moon.planet << "'s " << moon.name << " (ø=" << moon.mean_radius * 2. << "), ";
     }
@@ -58,7 +58,7 @@ void astronomy_examples() {
 
 
     cout << " 8. The min speed required to escape from the planets are... ";
-    for (auto& planet : dataset::planets) {
+    for (auto& planet : planets) {
         auto speed = gravitational_escape_velocity_formula(planet.mass, planet.diameter / 2.0);
         cout << planet.name << "=" << speed << " or " << to_equivalent(speed) << ", ";
     }
@@ -100,7 +100,7 @@ void astronomy_examples() {
 
     cout << "12. The sum of the masses of all moons in the solar system is... ";
     auto total_mass = 0_kg;
-    for (auto& moon : dataset::moons) {
+    for (auto& moon : moons) {
         auto volume = volume_of_sphere_formula(moon.mean_radius);
         total_mass += volume * moon.mean_density;
     }

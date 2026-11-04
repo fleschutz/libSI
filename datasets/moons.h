@@ -6,7 +6,7 @@
 #pragma once
 #include <si/literals.h>
 
-namespace dataset {
+namespace {
 using namespace si;
 
 struct moon_details {
