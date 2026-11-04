@@ -1,8 +1,8 @@
-📐libSI - The Physical Units Library For C++
+📐si-lib - The Physical Units Library For C++
 =============================================
 [![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
 
-*libSI* is an open-source library to apply math in C++ correct, precise, and convenient. Top features are: 
+*si-lib* is an open-source library to apply math in C++ correct, precise, and convenient. Top features are: 
 
 - **Type-safety** for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).
 - **Test-safety** by 200+ unit tests (executed at compile-time and on each commit).
@@ -15,7 +15,7 @@
 🔎 Example
 -----------
 ```cpp
-#include <SI/core.h>
+#include <si/core.h>
 
 int main() {   using namespace si;
     mass m   = 1_kg;
@@ -64,8 +64,8 @@ int main() {   using namespace si;
 🤝 Contributing
 ---------------
 * Contributions, suggestions, and improvements are welcome!
-* Open an [Issue](https://github.com/fleschutz/libSI/issues) if you encounter bugs or have feature ideas.
-* Create a [Pull Request](https://github.com/fleschutz/libSI/pulls) if you'd like to improve something.
+* Open an [Issue](https://github.com/fleschutz/si-lib/issues) if you encounter bugs or have feature ideas.
+* Create a [Pull Request](https://github.com/fleschutz/si-lib/pulls) if you'd like to improve something.
 
 
 📜 License & Copyright
