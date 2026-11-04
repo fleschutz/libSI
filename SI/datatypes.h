@@ -11,7 +11,7 @@
   using _name ## 2 = _name ## _t<detail::vec2<SIdouble>>;                                                           \
   using _name ## 3 = _name ## _t<detail::vec3<SIdouble>>
 
-namespace SI {
+namespace si {
 
   // SI Base Datatypes
   // -----------------

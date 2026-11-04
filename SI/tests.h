@@ -8,7 +8,7 @@
 #include <SI/literals.h>
 #include <SI/prefixes.h>
 
-namespace SI {
+namespace si {
 
   inline void check_features() { // shows what's possible - the serious checks follow below
     static_assert( 3_m == meters(3) );

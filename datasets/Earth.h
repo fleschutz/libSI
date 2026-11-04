@@ -7,7 +7,7 @@
 #include <SI/literals.h>
 
 namespace {
-  using namespace SI;
+  using namespace si;
 
   constexpr struct {
 
@@ -17,7 +17,7 @@ namespace {
     length        semi_major_axis = 149'598'023_km;
     length        avg_distance_to_Sun = 149'597'870'700_m; // (=1 AU)
     dimensionless eccentricity =              0.016'7086;
-    SI::time      sidereal_orbital_period = 365.256'363'004_days;
+    si::time      sidereal_orbital_period = 365.256'363'004_days;
     velocity      average_orbital_speed =    29.7827_km_per_s;
     angle         mean_anomaly =            358.617_deg;
 
@@ -31,13 +31,13 @@ namespace {
     area          surface_area =    510'072'000_km²;
     area          land_area =       148'940'000_km²;
     area          water_area =      361'132'000_km²;
-    SI::volume    volume =           1.08321e12_km³;
-    SI::mass      mass =             5.97217e24_kg; // ±0.00028e24
+    si::volume    volume =           1.08321e12_km³;
+    si::mass      mass =             5.97217e24_kg; // ±0.00028e24
     density       mean_density =              5.513_g_per_cm³;
     acceleration  surface_gravity =           9.80665_m_per_s²; ///< exactly 1 g0
     dimensionless moment_of_inertia_factor =  0.3307;
     velocity      escape_velocity =          11.186_km_per_s;
-    SI::time      synodic_rotation_period =  24_h;
+    si::time      synodic_rotation_period =  24_h;
     velocity      equatorial_rotation_velocity = 1674.4_km_per_h;
     angle         axial_tilt =               23.439'2811_deg;
     dimensionless geometric_albedo =          0.434;

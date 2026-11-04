@@ -1,12 +1,12 @@
 /// @file     SI/formulas.h
-/// @brief    Defines 77 formulas based on SI datatypes, e.g. SI::area_of_circle().
+/// @brief    Defines 77 formulas based on SI datatypes, e.g. si::area_of_circle().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once
 #include <SI/constants.h>
 #define FUNC [[nodiscard]] inline
 
-namespace SI { 
+namespace si { 
 
 	// Formulas for 2D
 	// ---------------
@@ -222,13 +222,13 @@ namespace SI {
 	}
 
 	/// @brief Calculates the acceleration from change in velocity (delta_v) and time interval (delta_t).
-	FUNC acceleration acceleration_for_speed_formula(velocity delta_v, SI::time delta_t)
+	FUNC acceleration acceleration_for_speed_formula(velocity delta_v, si::time delta_t)
 	{
 		return delta_v / delta_t;
 	}
 
 	/// @brief Calculates the final velocity based on initial velocity (i) with acceleration (a) for time (t).
-	FUNC velocity final_velocity_formula(velocity i, acceleration a, SI::time t)
+	FUNC velocity final_velocity_formula(velocity i, acceleration a, si::time t)
 	{
 		return i + a * t;
 	}
@@ -358,7 +358,7 @@ namespace SI {
 	}
 
 	/// @brief Calculates V(t) from peak voltage (V0), frequency (f), and time (t).
-	FUNC electric_potential sine_wave_formula(electric_potential V0, frequency f, SI::time t)
+	FUNC electric_potential sine_wave_formula(electric_potential V0, frequency f, si::time t)
 	{
 		return V0 * sin(Math.tau * f * t);
 	}

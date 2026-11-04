@@ -7,13 +7,13 @@
 #include <SI/literals.h>
 
 namespace {
-using namespace SI;
+using namespace si;
 
 struct airport_details {
 	const char* name;                  ///< from column  3 (string)
-	SI::length elevation;              ///< from column  4 (ft)
-	SI::angle latitude;                ///< from column 13 (angle)
-	SI::angle longitude;               ///< from column 14 (angle)
+	si::length elevation;              ///< from column  4 (ft)
+	si::angle latitude;                ///< from column 13 (angle)
+	si::angle longitude;               ///< from column 14 (angle)
 };
 
 const airport_details airports[] {      // NOTE: 00=empty or unknown field

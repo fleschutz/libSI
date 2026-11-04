@@ -5,7 +5,7 @@
 #include <SI/literals.h>
 
 namespace {
-  using namespace SI;
+  using namespace si;
 
   constexpr struct {
     length container_1AA_ext_length   = 12.192_m; // (aka 40-foot standard)

@@ -6,7 +6,7 @@
 #include <SI/literals.h>
 
 namespace {
-  using namespace SI;
+  using namespace si;
 
   constexpr struct {
 
@@ -16,8 +16,8 @@ namespace {
     length        semi_major_axis =            384'399_km;
     length        mean_orbit_radius =          384'784_km;
     dimensionless eccentricity =                     0.0549;
-    SI::time      sidereal_orbital_period = 27.321'661_days;
-    SI::time      synodic_orbital_period =  29.530'589_days;
+    si::time      sidereal_orbital_period = 27.321'661_days;
+    si::time      synodic_orbital_period =  29.530'589_days;
     velocity      average_orbital_speed =        1'022_km_per_s;
     angle         inclination =                  5.145_deg; // to the ecliptic
 
@@ -28,8 +28,8 @@ namespace {
     dimensionless flattening =                       0.0012;
     length        equatorial_circumference =    10'921_km;
     area          surface_area =               3.793e7_km²;
-    SI::volume    volume =                   2.1958e10_km³;
-    SI::mass      mass =                      7.346e22_kg;
+    si::volume    volume =                   2.1958e10_km³;
+    si::mass      mass =                      7.346e22_kg;
     density       mean_density =                 3.344_g_per_cm³; 
     acceleration  surface_gravity =              1.622_m_per_s²;
     velocity      escape_velocity =               2.38_km_per_s;

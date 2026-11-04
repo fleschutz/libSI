@@ -17,7 +17,7 @@
 ```cpp
 #include <SI/core>
 
-int main() { using namespace SI;
+int main() {   using namespace si;
     mass m   = 1_kg;
     energy E = m * square(CODATA.c);
     std::cout << "The potential energy of a single kilogram is: " << E << std::endl;
@@ -29,7 +29,7 @@ int main() { using namespace SI;
 
 | Component             | Example                                   | Location                               |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
-| Namespace             | *SI*                                      | (use SI:: for any SI component)        |
+| Namespace             | *si*                                      | (use si:: for any SI component)        |
 | Datatypes             | *mass*                                    | [<SI/datatypes.h>](SI/datatypes.h)     |
 | Units                 | *kilograms*                               | [<SI/units.h>](SI/units.h)             |
 | User-defined literals | *1_kg*                                    | [<SI/literals.h>](SI/literals.h)       |

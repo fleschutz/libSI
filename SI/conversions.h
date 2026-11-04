@@ -8,7 +8,7 @@
 #include <SI/literals.h>
 #define FUNC [[nodiscard]] inline
 
-namespace SI
+namespace si
 {
 	// Configurable Format Strings
 	// ---------------------------

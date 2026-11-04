@@ -7,7 +7,7 @@
 #include <SI/literals.h>
 
 namespace {
-using namespace SI;
+using namespace si;
 
 struct particle_details {
 	int pdg_id;                        ///< from column  1 (int)
@@ -16,12 +16,12 @@ struct particle_details {
 	double charge;                     ///< from column  4 (double)
 	int rank;                          ///< from column  5 (int)
 	const char* quarks;                ///< from column  6 (string)
-	SI::mass mass;                     ///< from column  7 (Da)
-	SI::mass mass_lower;               ///< from column  8 (kg)
-	SI::mass mass_upper;               ///< from column  9 (kg)
-	SI::length width;                  ///< from column 10 (m)
-	SI::length width_lower;            ///< from column 11 (m)
-	SI::length width_upper;            ///< from column 12 (m)
+	si::mass mass;                     ///< from column  7 (Da)
+	si::mass mass_lower;               ///< from column  8 (kg)
+	si::mass mass_upper;               ///< from column  9 (kg)
+	si::length width;                  ///< from column 10 (m)
+	si::length width_lower;            ///< from column 11 (m)
+	si::length width_upper;            ///< from column 12 (m)
 };
 
 const particle_details physics_particles[] {       // NOTE: 00=empty or unknown field

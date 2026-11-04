@@ -6,7 +6,7 @@
 #include <SI/literals.h>
 
 namespace {
-  using namespace SI;
+  using namespace si;
 
   constexpr struct {
     length A0_width   = 841_mm;

@@ -9,7 +9,7 @@
   constexpr auto operator "" _literal(long double q) { return _unit(static_cast<SIdouble>(q * _factor ## L)); }      \
   constexpr auto operator "" _literal(unsigned long long q) { return _unit(static_cast<SIdouble>(q * _factor ## L)); }
 
-namespace SI {
+namespace si {
 
   // SI Base Units
   // -------------

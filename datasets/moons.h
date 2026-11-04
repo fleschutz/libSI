@@ -7,14 +7,14 @@
 #include <SI/literals.h>
 
 namespace dataset {
-using namespace SI;
+using namespace si;
 
 struct moon_details {
 	char planet[16];                   ///< from column  1 (char[16])
 	char name[16];                     ///< from column  2 (char[16])
-	SI::volume_per_time_squared GM;    ///< from column  3 (km³/s²)
-	SI::length mean_radius;            ///< from column  4 (km)
-	SI::density mean_density;          ///< from column  5 (kg/m³)
+	si::volume_per_time_squared GM;    ///< from column  3 (km³/s²)
+	si::length mean_radius;            ///< from column  4 (km)
+	si::density mean_density;          ///< from column  5 (kg/m³)
 	float magnitude;                   ///< from column  6 (float)
 	float albedo;                      ///< from column  7 (float)
 };

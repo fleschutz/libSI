@@ -4,7 +4,7 @@
 #include <iostream>
 #include <datasets/all.h>
 using namespace std;
-using namespace SI;
+using namespace si;
 
 void various_examples() {
 
@@ -216,7 +216,7 @@ void various_examples() {
     auto force_applied = 500_N;
     auto lever_arm     = 20_cm;
     auto angle         = 90_deg;
-    auto torque        = lever_arm * force_applied * SI::sin(angle);
+    auto torque        = lever_arm * force_applied * si::sin(angle);
     cout << torque << " of torque" << endl;
 
 

@@ -7,7 +7,7 @@
 #include <SI/literals.h>
 
 namespace {
-using namespace SI;
+using namespace si;
 
 struct chemical_element_details {
 	unsigned char atomic_number;       ///< from column  1 (byte)
@@ -17,18 +17,18 @@ struct chemical_element_details {
 	unsigned char period;              ///< from column  5 (byte)
 	char block[4];                     ///< from column  6 (char[4])
 	unsigned char category;            ///< from column  7 (byte)
-	SI::mass atomic_mass;              ///< from column  8 (Da)
+	si::mass atomic_mass;              ///< from column  8 (Da)
 	unsigned char standard_state;      ///< from column 11 (byte)
 	double density;                    ///< from column 12 (double)
-	SI::temperature melting_point;     ///< from column 13 (°C)
-	SI::temperature boiling_point;     ///< from column 14 (°C)
+	si::temperature melting_point;     ///< from column 13 (°C)
+	si::temperature boiling_point;     ///< from column 14 (°C)
 	double heat_capacity;              ///< from column 15 (double)
 	double heat_of_fusion;             ///< from column 16 (double)
 	double heat_of_vaporization;       ///< from column 17 (double)
-	SI::length atomic_radius;          ///< from column 18 (pm)
-	SI::length covalent_radius;        ///< from column 19 (pm)
-	SI::length VanDerWaals_radius;     ///< from column 20 (pm)
-	SI::energy_per_mol ionization_energy;///< from column 23 (kJ/mol)
+	si::length atomic_radius;          ///< from column 18 (pm)
+	si::length covalent_radius;        ///< from column 19 (pm)
+	si::length VanDerWaals_radius;     ///< from column 20 (pm)
+	si::energy_per_mol ionization_energy;///< from column 23 (kJ/mol)
 	bool radioactive;                  ///< from column 29 (bool)
 };
 

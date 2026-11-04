@@ -1,12 +1,12 @@
 /// @file     SI/units.h
-/// @brief    Defines 103 units based on libSI's datatypes, e.g. SI::meters
+/// @brief    Defines 103 units based on libSI's datatypes, e.g. si::meters
 /// @details  Categories are: SI base units, SI derived units, Imperial/digital/various units, and references.
 
 #pragma once
 #include <SI/datatypes.h>
 #define UNIT(_name) inline constexpr auto _name
 
-namespace SI {
+namespace si {
 
   // SI Base Units
   // -------------

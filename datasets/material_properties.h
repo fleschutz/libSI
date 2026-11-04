@@ -7,18 +7,18 @@
 #include <SI/literals.h>
 
 namespace {
-using namespace SI;
+using namespace si;
 
 struct material_property_details {
 	const char* Name;                  ///< from column  1 (string)
 	const char* Type;                  ///< from column  2 (string)
 	float Cost;                        ///< from column  3 ($/kg)
-	SI::density Density;               ///< from column  4 (mg/m³)
-	SI::pressure Youngs_Modulus;       ///< from column  5 (GPa)
-	SI::pressure Shear_Modulus;        ///< from column  6 (GPa)
+	si::density Density;               ///< from column  4 (mg/m³)
+	si::pressure Youngs_Modulus;       ///< from column  5 (GPa)
+	si::pressure Shear_Modulus;        ///< from column  6 (GPa)
 	double Poissons_Ratio;             ///< from column  7 (double)
-	SI::pressure Yield_Stress;         ///< from column  8 (MPa)
-	SI::pressure UTS;                  ///< from column  9 (MPa)
+	si::pressure Yield_Stress;         ///< from column  8 (MPa)
+	si::pressure UTS;                  ///< from column  9 (MPa)
 	double Breaking_strain;            ///< from column 10 (%)
 	double Fracture_Toughness;         ///< from column 11 (double)
 	double Thermal_Expansion;          ///< from column 12 (double)

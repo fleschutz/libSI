@@ -7,21 +7,21 @@
 #include <SI/literals.h>
 
 namespace {
-using namespace SI;
+using namespace si;
 
 struct exoplanet_details {
 	const char* name;                  ///< from column  1 (string)
 	const char* hostname;              ///< from column  2 (string)
 	unsigned char number_of_stars;     ///< from column  3 (byte)
 	unsigned char number_of_planets;   ///< from column  4 (byte)
-	SI::time orbital_period;           ///< from column  5 (days)
-	SI::length orbit_semimajor_axis;   ///< from column  6 (au)
+	si::time orbital_period;           ///< from column  5 (days)
+	si::length orbit_semimajor_axis;   ///< from column  6 (au)
 	double radius_vs_Earth;            ///< from column  7 (double)
 	double mass_vs_Earth;              ///< from column  8 (double)
 	double eccentricity;               ///< from column  9 (double)
 	double insolation_flux;            ///< from column 10 (double)
-	SI::temperature equilibrium_temperature;///< from column 11 (K)
-	SI::length distance;               ///< from column 12 (pc)
+	si::temperature equilibrium_temperature;///< from column 11 (K)
+	si::length distance;               ///< from column 12 (pc)
 };
 
 const exoplanet_details exoplanets[] {     // NOTE: 00=empty or unknown field

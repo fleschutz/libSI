@@ -5,7 +5,7 @@
 #pragma once
 #include <SI/units.h>
 
-namespace SI {
+namespace si {
   //                      NAME     VALUE     SYMBOL
   //                      ----     -----     ------
   constexpr dimensionless quetta = 1e30;  // Q

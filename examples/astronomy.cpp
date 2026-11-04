@@ -4,7 +4,7 @@
 #include <iostream>
 #include <datasets/astronomy.h>
 using namespace std;
-using namespace SI;
+using namespace si;
 
 void astronomy_examples() {
 

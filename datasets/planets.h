@@ -7,27 +7,27 @@
 #include <SI/literals.h>
 
 namespace dataset {
-using namespace SI;
+using namespace si;
 
 struct planet_details {
 	const char* name;                  ///< from column  1 (string)
-	SI::mass mass;                     ///< from column  2 (kg)
-	SI::length diameter;               ///< from column  3 (km)
-	SI::density density;               ///< from column  4 (kg/m³)
-	SI::acceleration gravity;          ///< from column  5 (m/s²)
-	SI::velocity escape_velocity;      ///< from column  6 (m/s)
-	SI::time rotation_period;          ///< from column  7 (h)
-	SI::time length_of_day;            ///< from column  8 (h)
-	SI::length distance_from_sun;      ///< from column  9 (km)
+	si::mass mass;                     ///< from column  2 (kg)
+	si::length diameter;               ///< from column  3 (km)
+	si::density density;               ///< from column  4 (kg/m³)
+	si::acceleration gravity;          ///< from column  5 (m/s²)
+	si::velocity escape_velocity;      ///< from column  6 (m/s)
+	si::time rotation_period;          ///< from column  7 (h)
+	si::time length_of_day;            ///< from column  8 (h)
+	si::length distance_from_sun;      ///< from column  9 (km)
 	float perihelion;                  ///< from column 10 (float)
 	float aphelion;                    ///< from column 11 (float)
-	SI::time orbital_period;           ///< from column 12 (h)
-	SI::velocity orbital_velocity;     ///< from column 13 (m/s)
+	si::time orbital_period;           ///< from column 12 (h)
+	si::velocity orbital_velocity;     ///< from column 13 (m/s)
 	float orbital_inclination;         ///< from column 14 (float)
 	float orbital_eccentricity;        ///< from column 15 (float)
 	double obliquity_to_orbit;         ///< from column 16 (double)
-	SI::temperature mean_temperature;  ///< from column 17 (°C)
-	SI::pressure surface_pressure;     ///< from column 18 (bar)
+	si::temperature mean_temperature;  ///< from column 17 (°C)
+	si::pressure surface_pressure;     ///< from column 18 (bar)
 	unsigned char number_of_moons;     ///< from column 19 (byte)
 	bool has_ring_system;              ///< from column 20 (bool)
 	bool has_global_magnetic_field;    ///< from column 21 (bool)

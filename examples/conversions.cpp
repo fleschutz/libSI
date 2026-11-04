@@ -3,9 +3,9 @@
 
 #include <iostream>
 #include <SI/core> 
-using namespace SI;
 
 void conversion_examples() {
+    using namespace si;
 
     // Import Options
     // --------------

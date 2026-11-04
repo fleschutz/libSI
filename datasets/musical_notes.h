@@ -7,12 +7,12 @@
 #include <SI/literals.h>
 
 namespace {
-using namespace SI;
+using namespace si;
 
 struct musical_note_details {
 	unsigned char octave;              ///< from column  1 (byte)
 	char name[4];                      ///< from column  2 (char[4])
-	SI::frequency frequency;           ///< from column  3 (Hz)
+	si::frequency frequency;           ///< from column  3 (Hz)
 };
 
 const musical_note_details musical_notes[] {  // NOTE: 00=empty or unknown field

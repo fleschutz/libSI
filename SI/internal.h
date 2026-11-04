@@ -8,7 +8,7 @@
 #include <cmath>
 #define SI_INLINE_CONSTEXPR constexpr inline
 
-namespace SI {
+namespace si {
 	typedef double SIdouble;        ///< internal datatype to hold floating point values
 
 	namespace internal {

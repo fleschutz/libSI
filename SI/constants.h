@@ -7,7 +7,7 @@
 #pragma once
 #include <SI/units.h>
 
-namespace SI { 
+namespace si { 
 
   constexpr struct { // CODATA 2022 constants
 
@@ -32,7 +32,7 @@ namespace SI {
     length l_P =          meters(1.616255e-35); // Planck length
     mass m_P =          kilograms(2.176434e-8); // Planck mass
     temperature T_P =     kelvins(1.416784e32); // Planck temperature
-    SI::time t_P =       seconds(5.391247e-44); // Planck time
+    si::time t_P =       seconds(5.391247e-44); // Planck time
     //TBD:h_bar,             1.054'571'817e-34, jouleseconds); // reduced Planck constant
     //TBD:mu_0,            1.256'637'061'27e-6, newtons_per_ampere2); // vacuum magnetic permeability
 
