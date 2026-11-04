@@ -5,9 +5,7 @@ var searchData=
   ['giga_2',['giga',['../namespacesi.html#a5ac7479ff57d444eeb2bfb567d1a1d22',1,'si']]],
   ['glide_5fpath_5fformula_3',['glide_path_formula',['../namespacesi.html#a4d4d053db12da3efa4595ccd56e6f81b',1,'si']]],
   ['glide_5fratio_5fformula_4',['glide_ratio_formula',['../namespacesi.html#a4e2bf26f3e97bd1183af1de21135ee49',1,'si']]],
-  ['gm_5',['GM',['../structdataset_1_1moon__details.html#abb020345aa913a740008482ee06bc9e4',1,'dataset::moon_details']]],
-  ['gravitational_5fattractive_5fforce_5fformula_6',['gravitational_attractive_force_formula',['../namespacesi.html#a384131362a2fe92efea56897ef3b1013',1,'si']]],
-  ['gravitational_5fescape_5fvelocity_5fformula_7',['gravitational_escape_velocity_formula',['../namespacesi.html#a2267e5d124987828221fc6979ff29f58',1,'si']]],
-  ['gravitational_5fpotential_5fenergy_5fformula_8',['gravitational_potential_energy_formula',['../namespacesi.html#a22e7dfdd2372b90450f79fd70b90ee8e',1,'si']]],
-  ['gravity_9',['gravity',['../structdataset_1_1planet__details.html#a7c51fa08ee55e0e15d900e4bbe3dbe8b',1,'dataset::planet_details']]]
+  ['gravitational_5fattractive_5fforce_5fformula_5',['gravitational_attractive_force_formula',['../namespacesi.html#a384131362a2fe92efea56897ef3b1013',1,'si']]],
+  ['gravitational_5fescape_5fvelocity_5fformula_6',['gravitational_escape_velocity_formula',['../namespacesi.html#a2267e5d124987828221fc6979ff29f58',1,'si']]],
+  ['gravitational_5fpotential_5fenergy_5fformula_7',['gravitational_potential_energy_formula',['../namespacesi.html#a22e7dfdd2372b90450f79fd70b90ee8e',1,'si']]]
 ];

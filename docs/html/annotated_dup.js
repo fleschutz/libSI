@@ -1,9 +1,5 @@
 var annotated_dup =
 [
-    [ "dataset", "namespacedataset.html", [
-      [ "moon_details", "structdataset_1_1moon__details.html", "structdataset_1_1moon__details" ],
-      [ "planet_details", "structdataset_1_1planet__details.html", "structdataset_1_1planet__details" ]
-    ] ],
     [ "si", "namespacesi.html", [
       [ "internal", "namespacesi_1_1internal.html", [
         [ "detail", "namespacesi_1_1internal_1_1detail.html", [

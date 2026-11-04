@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['quantity_0',['quantity',['../structsi_1_1detail_1_1quantity.html',1,'si::detail']]],
-  ['quantity_5fstorage_1',['quantity_storage',['../classsi_1_1detail_1_1quantity__storage.html',1,'si::detail']]]
+  ['scalar_5fvalue_5ftype_0',['scalar_value_type',['../structsi_1_1detail_1_1scalar__value__type.html',1,'si::detail']]],
+  ['scalar_5fvalue_5ftype_3c_20quantity_3c_20dimension_2c_20t_20_3e_20_3e_1',['scalar_value_type&lt; quantity&lt; Dimension, T &gt; &gt;',['../structsi_1_1detail_1_1scalar__value__type_3_01quantity_3_01Dimension_00_01T_01_4_01_4.html',1,'si::detail']]],
+  ['scalar_5fvalue_5ftype_3c_20zero_5ft_20_3e_2',['scalar_value_type&lt; zero_t &gt;',['../structsi_1_1detail_1_1scalar__value__type_3_01zero__t_01_4.html',1,'si::detail']]]
 ];

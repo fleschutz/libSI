@@ -10,15 +10,10 @@ var searchData=
   ['m_5ft_7',['m_t',['../namespacesi.html#a6051612eb3398c9fa733ee16ef166aea',1,'si']]],
   ['m_5ftau_8',['m_tau',['../namespacesi.html#aba2bc3e2d1cf6263cc8d73833d1a1655',1,'si']]],
   ['m_5fu_9',['m_u',['../namespacesi.html#ab7141e8cb1a996319eff9ca261de1c61',1,'si']]],
-  ['magnitude_10',['magnitude',['../structdataset_1_1moon__details.html#aeba9c6d1ec6769c7612b72155b5be44c',1,'dataset::moon_details']]],
-  ['marathon_5fdistance_11',['Marathon_distance',['../namespacesi.html#a71cb6ad0cfc6dacc35c7ee77c59e1c45',1,'si']]],
-  ['mass_12',['mass',['../structsi_1_1detail_1_1dimension.html#ab5c51349084cbe6298541fab7be74b9f',1,'si::detail::dimension::mass'],['../structdataset_1_1planet__details.html#a168933849417b19df0b0fc87f201d99b',1,'dataset::planet_details::mass']]],
-  ['math_13',['Math',['../namespacesi.html#a23ce6c866fe098fb09237ef05900b031',1,'si']]],
-  ['mean_5fdensity_14',['mean_density',['../structdataset_1_1moon__details.html#a35a06771a356cc5465d10801a9d9e420',1,'dataset::moon_details']]],
-  ['mean_5fradius_15',['mean_radius',['../structdataset_1_1moon__details.html#a24e42bf1dfe15491f1c09865b8b69661',1,'dataset::moon_details']]],
-  ['mean_5ftemperature_16',['mean_temperature',['../structdataset_1_1planet__details.html#a73c02b82fec1069a575708a4eb074cfc',1,'dataset::planet_details']]],
-  ['mega_17',['mega',['../namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d',1,'si']]],
-  ['micro_18',['micro',['../namespacesi.html#a93c15e7987b1b007b44f7f9152f3f98c',1,'si']]],
-  ['milli_19',['milli',['../namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa',1,'si']]],
-  ['moons_20',['moons',['../namespacedataset.html#a7dab645e1aada5ed76d2ef3824d9ac5b',1,'dataset']]]
+  ['marathon_5fdistance_10',['Marathon_distance',['../namespacesi.html#a71cb6ad0cfc6dacc35c7ee77c59e1c45',1,'si']]],
+  ['mass_11',['mass',['../structsi_1_1detail_1_1dimension.html#ab5c51349084cbe6298541fab7be74b9f',1,'si::detail::dimension']]],
+  ['math_12',['Math',['../namespacesi.html#a23ce6c866fe098fb09237ef05900b031',1,'si']]],
+  ['mega_13',['mega',['../namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d',1,'si']]],
+  ['micro_14',['micro',['../namespacesi.html#a93c15e7987b1b007b44f7f9152f3f98c',1,'si']]],
+  ['milli_15',['milli',['../namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa',1,'si']]]
 ];

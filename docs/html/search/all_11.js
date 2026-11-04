@@ -11,6 +11,5 @@ var searchData=
   ['ronna_8',['ronna',['../namespacesi.html#ae3affcdab8e9fd1c7ce91754b87a6dfb',1,'si']]],
   ['ronto_9',['ronto',['../namespacesi.html#a7167d70c1452e0ea7afc3b853afe75fe',1,'si']]],
   ['root_10',['root',['../namespacesi_1_1detail.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::detail::root()'],['../namespacesi.html#a960e3076ed61a95bb95f4f20e5daa9e0',1,'si::root(const quantity&lt; Dimension, T &gt; &amp;x)']]],
-  ['root_5f2_11',['root_2',['../namespacesi.html#a6865a2ecdf257986ec71bae45d7b44cc',1,'si']]],
-  ['rotation_5fperiod_12',['rotation_period',['../structdataset_1_1planet__details.html#ac263ea4f5e9e359c2c691e6f38edb4bb',1,'dataset::planet_details']]]
+  ['root_5f2_11',['root_2',['../namespacesi.html#a6865a2ecdf257986ec71bae45d7b44cc',1,'si']]]
 ];

@@ -9,8 +9,7 @@ var searchData=
   ['element_5fcount_5fv_6',['element_count_v',['../namespacesi_1_1detail.html#a5524e17a932ed719b86206544905e6ce',1,'si::detail']]],
   ['elementary_5fcharge_7',['elementary_charge',['../namespacesi.html#aae7717109551cedfc98a93d8df4d7260',1,'si']]],
   ['enable_5ffor_5fsi_8',['enable_for_si',['../namespacesi_1_1detail.html#ab1c1a18529e4b0553d5a85120be072d9',1,'si::detail']]],
-  ['escape_5fvelocity_9',['escape_velocity',['../structdataset_1_1planet__details.html#a3c7b29e9ddefa4eeb45e65da0ad3bde2',1,'dataset::planet_details']]],
-  ['exa_10',['exa',['../namespacesi.html#a84b05c412099028a831f34c7b286924b',1,'si']]],
-  ['example_11',['🔎 Example',['../index.html#autotoc_md0',1,'']]],
-  ['exoplanets_2eh_12',['exoplanets.h',['../exoplanets_8h.html',1,'']]]
+  ['exa_9',['exa',['../namespacesi.html#a84b05c412099028a831f34c7b286924b',1,'si']]],
+  ['example_10',['🔎 Example',['../index.html#autotoc_md0',1,'']]],
+  ['exoplanets_2eh_11',['exoplanets.h',['../exoplanets_8h.html',1,'']]]
 ];

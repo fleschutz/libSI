@@ -35,6 +35,5 @@ var searchData=
   ['square_32',['square',['../namespacesi.html#a1768db81d530a219476d5bc80166f07b',1,'si']]],
   ['ssp_33',['ssp',['../namespacesi.html#a3044eb827357237ad400ca3a1504cb31',1,'si']]],
   ['substance_34',['substance',['../structsi_1_1detail_1_1dimension.html#a9573cc5c6fa15f5a149e05b09bbe2bb5',1,'si::detail::dimension']]],
-  ['sum_5fof_5farray_35',['sum_of_array',['../namespacesi.html#a2bfc3a7b4036257a5043bf185432447d',1,'si']]],
-  ['surface_5fpressure_36',['surface_pressure',['../structdataset_1_1planet__details.html#a23d1dc801149f23141b7d1cd300f0b7a',1,'dataset::planet_details']]]
+  ['sum_5fof_5farray_35',['sum_of_array',['../namespacesi.html#a2bfc3a7b4036257a5043bf185432447d',1,'si']]]
 ];

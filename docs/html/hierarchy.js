@@ -21,8 +21,6 @@ var hierarchy =
     [ "std::is_arithmetic", null, [
       [ "si::detail::is_arithmetic< T >", "structsi_1_1detail_1_1is__arithmetic.html", null ]
     ] ],
-    [ "dataset::moon_details", "structdataset_1_1moon__details.html", null ],
-    [ "dataset::planet_details", "structdataset_1_1planet__details.html", null ],
     [ "si::detail::quantity_storage&lt; Dimension, T &gt;", "classsi_1_1detail_1_1quantity__storage.html", [
       [ "si::detail::quantity< Dimension, T >", "structsi_1_1detail_1_1quantity.html", null ]
     ] ],

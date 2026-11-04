@@ -12,8 +12,8 @@ var dir_1980d45cf0f5d379b20659e576a76c09 =
     [ "material_properties.h", "material__properties_8h.html", null ],
     [ "monthly_sunspots.h", "monthly__sunspots_8h.html", null ],
     [ "Moon.h", "Moon_8h.html", null ],
-    [ "moons.h", "moons_8h.html", "moons_8h" ],
+    [ "moons.h", "moons_8h.html", null ],
     [ "musical_notes.h", "musical__notes_8h.html", null ],
     [ "physics_particles.h", "physics__particles_8h.html", null ],
-    [ "planets.h", "planets_8h.html", "planets_8h" ]
+    [ "planets.h", "planets_8h.html", null ]
 ];
