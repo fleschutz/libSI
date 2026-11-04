@@ -2,7 +2,7 @@
 /// @brief  Includes the header files of all datasets (for convenience)
 
 #pragma once
-#include <SI/core> 
+#include <SI/core.h> 
 
 // Basic
 #include "chemical_elements.h"

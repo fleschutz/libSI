@@ -2,7 +2,7 @@
 /// @brief  Contains 10 speed examples using libSI.
 
 #include <iostream>
-#include <SI/core> 
+#include <SI/core.h> 
 using namespace std;
 using namespace si;
 

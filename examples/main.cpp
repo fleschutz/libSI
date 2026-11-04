@@ -1,7 +1,8 @@
 /// @file   examples/main.cpp
 /// @brief  The main() function calling all examples.
 
-#include <SI/all>
+#include <SI/core.h>
+#include <SI/tests.h>
 #ifdef _WIN32
 #include <Windows.h>
 #endif
