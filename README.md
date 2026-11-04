@@ -56,7 +56,7 @@ int main() {   using namespace si;
 
 **Which #include to use?** Use the convenient *#include <si/core.h>* to include the 6 core header files (datatypes.h, units.h, literals.h, constants.h, formulas.h, conversions.h), otherwise pick the necessary ones only.
 
-**How to import or export numbers and string?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
+**How to import/export numbers and strings?** See the code examples in [examples/conversions.cpp](examples/conversions.cpp).
 
 **Where are the list of references?** References are always listed at the end of each source code file.
 
