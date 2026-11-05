@@ -30,15 +30,15 @@ int main() {   using namespace si;
 | Component             | Example                                   | Location                               |
 | --------------------- | ----------------------------------------- | -------------------------------------- |
 | Namespace             | *si*                                      | (use si:: for any component)           |
-| Datatypes             | *mass*                                    | [<si/datatypes.h>](si/datatypes.h)     |
-| Units                 | *kilograms*                               | [<si/units.h>](si/units.h)             |
-| User-defined literals | *1_kg*                                    | [<si/literals.h>](si/literals.h)       |
-| Constants             | *CODATA.c (speed of light)*               | [<si/constants.h>](si/constants.h)     |
-| Formulas              | *kinetic_energy_formula()*                | [<si/formulas.h>](si/formulas.h)       |
-| Conversions           | *to_equivalent()*                         | [<si/conversions.h>](si/conversions.h) |
-| Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](si/tests.h)             | 
-| Datasets              | *Earth.mass*                              | 📂[datasets](datasets/)                |
+| Datatypes             | *mass*                                    | [<si/datatypes.h>](include/si/datatypes.h)     |
+| Units                 | *kilograms*                               | [<si/units.h>](include/si/units.h)             |
+| User-defined literals | *1_kg*                                    | [<si/literals.h>](include/si/literals.h)       |
+| Constants             | *CODATA.c (speed of light)*               | [<si/constants.h>](include/si/constants.h)     |
+| Formulas              | *kinetic_energy_formula()*                | [<si/formulas.h>](include/si/formulas.h)       |
+| Conversions           | *to_equivalent()*                         | [<si/conversions.h>](include/si/conversions.h) |
+| Unit tests            | *static_assert(1_kg == 1000_g);*          | [<si/tests.h>](include/si/tests.h)             | 
 | Examples              | [console output](examples/console_output.txt) | 📂[examples](examples/)            |
+| Datasets              | *Earth.mass*                              | 📂[datasets](include/datasets/)                |
 | Documentation         |                                           | 📓 [reference manual](https://fleschutz.github.io/si-lib/docs/html/) |
 
 
