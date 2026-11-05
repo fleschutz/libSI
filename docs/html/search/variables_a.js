@@ -12,7 +12,7 @@ var searchData=
   ['m_5fu_9',['m_u',['../namespacesi.html#ab7141e8cb1a996319eff9ca261de1c61',1,'si']]],
   ['marathon_5fdistance_10',['Marathon_distance',['../namespacesi.html#a71cb6ad0cfc6dacc35c7ee77c59e1c45',1,'si']]],
   ['mass_11',['mass',['../structsi_1_1detail_1_1dimension.html#ab5c51349084cbe6298541fab7be74b9f',1,'si::detail::dimension']]],
-  ['math_12',['Math',['../namespacesi.html#a23ce6c866fe098fb09237ef05900b031',1,'si']]],
+  ['math_12',['Math',['../namespacesi.html#a229785afda0c2dface3d69db1efe6d31',1,'si']]],
   ['mega_13',['mega',['../namespacesi.html#a02debe39b0485c57ecd17f92d5a8457d',1,'si']]],
   ['micro_14',['micro',['../namespacesi.html#a93c15e7987b1b007b44f7f9152f3f98c',1,'si']]],
   ['milli_15',['milli',['../namespacesi.html#a9fe93e394ba3cd09bc3a5e5f50f459aa',1,'si']]]

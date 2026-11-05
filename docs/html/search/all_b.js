@@ -9,8 +9,7 @@ var searchData=
   ['lift_5fforce_5fof_5fwing_5fformula_6',['lift_force_of_wing_formula',['../namespacesi.html#ab3f07330f9ab0e8c316c9a8a90770f57',1,'si']]],
   ['lightyear_7',['lightyear',['../namespacesi.html#ac850619f78c158701de5ee05bd0a200f',1,'si']]],
   ['literals_2eh_8',['literals.h',['../literals_8h.html',1,'']]],
-  ['lithium_5fbattery_5fmaterials_2eh_9',['lithium_battery_materials.h',['../lithium__battery__materials_8h.html',1,'']]],
-  ['local_5fgravity_5fformula_10',['local_gravity_formula',['../namespacesi.html#a490bd48e011d0bd6b6f6b1d68b35ad10',1,'si']]],
-  ['lorentz_5fforce_5fformula_11',['Lorentz_force_formula',['../namespacesi.html#a0cd0fa2bb08679a9855ffaa01b7f7682',1,'si']]],
-  ['lsun_12',['Lsun',['../namespacesi.html#ae666fd0d0d7b943192d5a1130c326ea3',1,'si']]]
+  ['local_5fgravity_5fformula_9',['local_gravity_formula',['../namespacesi.html#a490bd48e011d0bd6b6f6b1d68b35ad10',1,'si']]],
+  ['lorentz_5fforce_5fformula_10',['Lorentz_force_formula',['../namespacesi.html#a0cd0fa2bb08679a9855ffaa01b7f7682',1,'si']]],
+  ['lsun_11',['Lsun',['../namespacesi.html#ae666fd0d0d7b943192d5a1130c326ea3',1,'si']]]
 ];

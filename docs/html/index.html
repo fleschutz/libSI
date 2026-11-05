@@ -92,7 +92,7 @@ $(function(){initNavTree('index.html','',''); });
   <div class="headertitle"><div class="title">📐si-lib - The Physical Units Library For C++ </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__2Repos_2libSI_2README"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__2Repos_2si-lib_2README"></a></p>
 <p><a href="https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml"><img src="https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg" alt="CMake on multiple platforms" style="pointer-events: none;" class="inline"/></a></p>
 <p><em>si-lib</em> is an open-source library to apply math in C++ correct, precise, and convenient. Top features are:</p>
 <ul>
@@ -110,39 +110,39 @@ $(function(){initNavTree('index.html','',''); });
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {   <span class="keyword">using namespace </span><a class="code hl_namespace" href="namespacesi.html">si</a>;</div>
 <div class="line">    mass m   = 1_kg;</div>
-<div class="line">    energy E = m * <a class="code hl_function" href="namespacesi.html#a1768db81d530a219476d5bc80166f07b">square</a>(<a class="code hl_variable" href="namespacesi.html#ae525cb7666522e8a5180a46f8d77e46a">CODATA</a>.c);</div>
+<div class="line">    energy E = m * <a class="code hl_function" href="namespacesi.html#a1768db81d530a219476d5bc80166f07b">square</a>(<a class="code hl_variable" href="namespacesi.html#a1d21dc01a6420a2dfcce8e2520c26e16">CODATA</a>.c);</div>
 <div class="line">    std::cout &lt;&lt; <span class="stringliteral">&quot;The potential energy of a single kilogram is: &quot;</span> &lt;&lt; E &lt;&lt; std::endl;</div>
 <div class="line">}</div>
 <div class="ttc" id="acore_8h_html"><div class="ttname"><a href="core_8h.html">core.h</a></div><div class="ttdoc">Includes the 6 core header files.</div></div>
 <div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> main.cpp:12</div></div>
 <div class="ttc" id="anamespacesi_html"><div class="ttname"><a href="namespacesi.html">si</a></div><div class="ttdef"><b>Definition</b> constants.h:10</div></div>
 <div class="ttc" id="anamespacesi_html_a1768db81d530a219476d5bc80166f07b"><div class="ttname"><a href="namespacesi.html#a1768db81d530a219476d5bc80166f07b">si::square</a></div><div class="ttdeci">SI_INLINE_CONSTEXPR auto square(T x)</div><div class="ttdoc">Raise any number &lt;x&gt; to power of 2 (x² or x*x).</div><div class="ttdef"><b>Definition</b> units.h:187</div></div>
-<div class="ttc" id="anamespacesi_html_ae525cb7666522e8a5180a46f8d77e46a"><div class="ttname"><a href="namespacesi.html#ae525cb7666522e8a5180a46f8d77e46a">si::CODATA</a></div><div class="ttdeci">constexpr struct si::@161121354223353321303034374054202026141074051174 CODATA</div></div>
+<div class="ttc" id="anamespacesi_html_a1d21dc01a6420a2dfcce8e2520c26e16"><div class="ttname"><a href="namespacesi.html#a1d21dc01a6420a2dfcce8e2520c26e16">si::CODATA</a></div><div class="ttdeci">constexpr struct si::@334055225012347335026052214041257271126354303347 CODATA</div></div>
 </div><!-- fragment --><h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
 🧱 Building Blocks</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Component  </th><th class="markdownTableHeadNone">Example  </th><th class="markdownTableHeadNone">Location  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Namespace  </td><td class="markdownTableBodyNone"><em>si</em>  </td><td class="markdownTableBodyNone">(use si:: for any component)  </td></tr>
+<td class="markdownTableBodyNone">Namespace  </td><td class="markdownTableBodyNone"><em>si</em>  </td><td class="markdownTableBodyNone">(si:: for core components)  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Datatypes  </td><td class="markdownTableBodyNone"><em>mass</em>  </td><td class="markdownTableBodyNone"><a href="si/datatypes.h">&lt;si/datatypes.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Datatypes  </td><td class="markdownTableBodyNone"><em>mass</em>  </td><td class="markdownTableBodyNone"><a href="include/si/datatypes.h">&lt;si/datatypes.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Units  </td><td class="markdownTableBodyNone"><em>kilograms</em>  </td><td class="markdownTableBodyNone"><a href="si/units.h">&lt;si/units.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Units  </td><td class="markdownTableBodyNone"><em>kilograms</em>  </td><td class="markdownTableBodyNone"><a href="include/si/units.h">&lt;si/units.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">User-defined literals  </td><td class="markdownTableBodyNone"><em>1_kg</em>  </td><td class="markdownTableBodyNone"><a href="si/literals.h">&lt;si/literals.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">User-defined literals  </td><td class="markdownTableBodyNone"><em>1_kg</em>  </td><td class="markdownTableBodyNone"><a href="include/si/literals.h">&lt;si/literals.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Constants  </td><td class="markdownTableBodyNone"><em>CODATA.c (speed of light)</em>  </td><td class="markdownTableBodyNone"><a href="si/constants.h">&lt;si/constants.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Constants  </td><td class="markdownTableBodyNone"><em>CODATA.c (speed of light)</em>  </td><td class="markdownTableBodyNone"><a href="include/si/constants.h">&lt;si/constants.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Formulas  </td><td class="markdownTableBodyNone"><em>kinetic_energy_formula()</em>  </td><td class="markdownTableBodyNone"><a href="si/formulas.h">&lt;si/formulas.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Formulas  </td><td class="markdownTableBodyNone"><em>kinetic_energy_formula()</em>  </td><td class="markdownTableBodyNone"><a href="include/si/formulas.h">&lt;si/formulas.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Conversions  </td><td class="markdownTableBodyNone"><em>to_equivalent()</em>  </td><td class="markdownTableBodyNone"><a href="si/conversions.h">&lt;si/conversions.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Conversions  </td><td class="markdownTableBodyNone"><em>to_equivalent()</em>  </td><td class="markdownTableBodyNone"><a href="include/si/conversions.h">&lt;si/conversions.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Unit tests  </td><td class="markdownTableBodyNone"><em>static_assert(1_kg == 1000_g);</em>  </td><td class="markdownTableBodyNone"><a href="si/tests.h">&lt;si/tests.h&gt;</a>  </td></tr>
+<td class="markdownTableBodyNone">Unit tests  </td><td class="markdownTableBodyNone"><em>static_assert(1_kg == 1000_g);</em>  </td><td class="markdownTableBodyNone"><a href="include/si/tests.h">&lt;si/tests.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Datasets  </td><td class="markdownTableBodyNone"><em>Earth.mass</em>  </td><td class="markdownTableBodyNone">📂<a href="datasets/">datasets</a>  </td></tr>
-<tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Examples  </td><td class="markdownTableBodyNone"><a href="examples/console_output.txt">console output</a>  </td><td class="markdownTableBodyNone">📂<a href="examples/">examples</a>  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Datasets  </td><td class="markdownTableBodyNone"><em>Earth.mass</em>  </td><td class="markdownTableBodyNone">📂<a href="include/datasets/">datasets</a>  </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Documentation  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">📓 <a href="https://fleschutz.github.io/si-lib/docs/html/">reference manual</a>  </td></tr>
 </table>

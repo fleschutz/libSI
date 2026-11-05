@@ -7,11 +7,9 @@ var searchData=
   ['peta_4',['peta',['../namespacesi.html#a9dac07de4da31c523736e2fab47ee0a9',1,'si']]],
   ['phi_5',['phi',['../namespacesi.html#aaefc78a29484a528bfa0400432828a2e',1,'si']]],
   ['physical_20units_20library_20for_20c_6',['📐si-lib - The Physical Units Library For C++',['../index.html',1,'']]],
-  ['physics_5fparticles_2eh_7',['physics_particles.h',['../physics__particles_8h.html',1,'']]],
-  ['pi_8',['pi',['../namespacesi.html#a4820f09a68d0c51ce0c76eff5d3bcffe',1,'si']]],
-  ['pico_9',['pico',['../namespacesi.html#a786694dc0ba55a34f3a7ad3207027137',1,'si']]],
-  ['planets_2eh_10',['planets.h',['../planets_8h.html',1,'']]],
-  ['pow_11',['pow',['../namespacesi_1_1detail.html#a751440da73a15d519ad2554d901f289b',1,'si::detail::pow()'],['../namespacesi.html#a751440da73a15d519ad2554d901f289b',1,'si::pow()']]],
-  ['prefixes_2eh_12',['prefixes.h',['../prefixes_8h.html',1,'']]],
-  ['promoted_5fscalar_5ftype_13',['promoted_scalar_type',['../namespacesi_1_1detail.html#a211e1e76b09e7ee493d885ab6d6c099f',1,'si::detail']]]
+  ['pi_7',['pi',['../namespacesi.html#a4820f09a68d0c51ce0c76eff5d3bcffe',1,'si']]],
+  ['pico_8',['pico',['../namespacesi.html#a786694dc0ba55a34f3a7ad3207027137',1,'si']]],
+  ['pow_9',['pow',['../namespacesi_1_1detail.html#a751440da73a15d519ad2554d901f289b',1,'si::detail::pow()'],['../namespacesi.html#a751440da73a15d519ad2554d901f289b',1,'si::pow()']]],
+  ['prefixes_2eh_10',['prefixes.h',['../prefixes_8h.html',1,'']]],
+  ['promoted_5fscalar_5ftype_11',['promoted_scalar_type',['../namespacesi_1_1detail.html#a211e1e76b09e7ee493d885ab6d6c099f',1,'si::detail']]]
 ];
