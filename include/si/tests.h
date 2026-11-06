@@ -241,6 +241,7 @@ namespace si {
 
   inline void check_Imperial_units() {
 	static_assert(1_nmi == 10_cable);
+	static_assert(1_nmi == 1852_m);
 	static_assert(1_mi  == 1760_yd);
 	static_assert(1_mi  == 80_ch);
 	//static_assert(1_ft  == 12_in);

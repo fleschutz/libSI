@@ -111,7 +111,7 @@ namespace si {
   UNIT(pounds)         = unit<mass, 45359237, 100000000>();
   UNIT(ounces)         = unit<mass, 354369, 12500000>();
   UNIT(feet)           = unit<length, 3048, 10000>();
-  UNIT(nautical_miles) = unit<length, 1852, 100>();
+  UNIT(nautical_miles) = unit<length, 1852, 1>();
   UNIT(inches)         = unit<length, 254, 10000>();
   UNIT(statute_miles)  = unit<length, 1609344, 1000>();
   UNIT(fahrenheit)     = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
