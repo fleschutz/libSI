@@ -14,11 +14,11 @@ endif(MSVC)
 
 include_directories(include/)
 
-add_executable(examples examples/main.cpp examples/astronomy.cpp examples/conversions.cpp examples/speeds.cpp examples/various.cpp)
+add_executable(program examples/main.cpp examples/astronomy.cpp examples/conversions.cpp examples/speeds.cpp examples/various.cpp)
 
 # add unit tests
 enable_testing()
-add_test(NAME examples COMMAND examples)
+add_test(NAME examples COMMAND program)
 
-install(TARGETS examples DESTINATION . )
+install(TARGETS program DESTINATION . )
 
