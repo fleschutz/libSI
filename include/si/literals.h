@@ -1,7 +1,6 @@
 /// @file     si/literals.h
 /// @brief    Defines 297 user-defined literals (UDL), e.g. 24_h (supported since C++11)
-/// @details  Categories are: SI Base Units, SI Derived Units, Imperial Units, Astronomical Units,
-///                           Digital Units, Various Units, and References.
+/// @details  Categories are: SI base units, SI derived units, Imperial units, astronomical units, digital units, various units, and references.
 
 #pragma once
 #include <si/units.h>
@@ -13,7 +12,7 @@ namespace si {
 
   // SI Base Units
   // -------------
-  //
+
   // SYMBOL FACTOR  BASE UNIT             EXAMPLE (sorted from big units to small one)
   // -------------------------------------------------------------
   // length in...
