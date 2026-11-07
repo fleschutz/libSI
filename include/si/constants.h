@@ -97,7 +97,7 @@ namespace si {
     length parsec   = meters(30'856'775'814'913'673); // one Parsec (symbol: pc, IAU 2015)
     length lightyear = meters(9'460'730'472'580'800); // one light-year (symbol: ly, IAU 2009)
     velocity H0 =          meters_per_second(70'100); // (per megaparsec, Hubble constant, symbol: H0)
-    power Lsun =                     watts(3.939e26); // (Solar luminosity, symbol: L☉)
+    power Lsun =                     watts(3.828e26); // (Solar luminosity, IAU nominal value, symbol: L☉)
     power_intensity F1AU =  watts_per_meter2(1366.1); // total solar irradiance at 1 AU (solar constant)
   } IAU;
 

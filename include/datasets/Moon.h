@@ -18,7 +18,7 @@ namespace {
     dimensionless eccentricity =                     0.0549;
     si::time      sidereal_orbital_period = 27.321'661_days;
     si::time      synodic_orbital_period =  29.530'589_days;
-    velocity      average_orbital_speed =        1'022_km_per_s;
+    velocity      average_orbital_speed =        1.022_km_per_s;
     angle         inclination =                  5.145_deg; // to the ecliptic
 
     // Physical characteristics
@@ -37,8 +37,8 @@ namespace {
     dimensionless albedo =                           0.136;
 
     // Atmosphere
-    pressure      surface_pressure_day  =        10e-7_Pa;
-    pressure      surface_pressure_night  =     10e-10_Pa;
+    pressure      surface_pressure_day  =         1e-7_Pa;
+    pressure      surface_pressure_night  =      1e-10_Pa;
 
   } Moon;
 

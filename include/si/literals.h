@@ -360,9 +360,9 @@ namespace si {
   UDL(_ly,         9'460'730'472'580'800, meters);   // 1_ly     (light-year)
   UDL(_au,               149'597'870'700, meters);   // 1_au     (astronomical unit, Earth-Sun distance)
   UDL(_ls,                   299'792'458, meters);   // 1_ls     (light-second)
-  UDL(_Msun,                  1.98892e30, kilograms);// 1_Msun   (solar mass, ~1 Sun mass)
+  UDL(_Msun,                   1.9885e30, kilograms);// 1_Msun   (solar mass, ~1 Sun mass)
   UDL(_Mjup,                    1.898e27, kilograms);// 1_Mjup   (Jupiter mass)
-  UDL(_Mearth,                 5.9742e24, kilograms);// 1_Mearth (Earth mass)
+  UDL(_Mearth,                 5.9722e24, kilograms);// 1_Mearth (Earth mass)
   UDL(_Mmoon,              7.34767309e22, kilograms);// 1_Mmoon  (Moon mass)
 
   // Digital Units
