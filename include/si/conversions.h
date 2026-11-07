@@ -465,108 +465,108 @@ namespace si
 	}
 
 	/// @brief Returns the angle as string in degree.
-	FUNC std::string to_string(const angle a)
+	FUNC std::string to_string(const angle a, const char* fmtString = to_string_format)
 	{
-		return _fmt(a / 1_deg, "°");
+		return _fmt(a / 1_deg, "°", fmtString);
 	}
 
 	// to_equivalent() Function Overloading
 	// ------------------------------------
 
 	/// @brief Returns a length equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(length d)
+	FUNC std::string to_equivalent(length d, const char* fmtString = to_equivalent_format)
 	{
-		if (d <= -1_ly || d >= 1_ly) return _fmt(d / 1_ly, "light-years", to_equivalent_format);
-		if (d <= -1_ls || d >= 1_ls) return _fmt(d / 1_ls, "light-seconds", to_equivalent_format);
-		if (d <= -1_mi || d >= 1_mi) return _fmt(d / 1_mi, "mi", to_equivalent_format);
-		if (d <= -1_yd || d >= 1_yd) return _fmt(d / 1_yd, "yd", to_equivalent_format);
-		if (d <= -1_ft || d >= 1_ft) return _fmt(d / 1_ft, "ft", to_equivalent_format);
-		return _fmt(d / 1_in, "in", to_equivalent_format);
+		if (d <= -1_ly || d >= 1_ly) return _fmt(d / 1_ly, "light-years", fmtString);
+		if (d <= -1_ls || d >= 1_ls) return _fmt(d / 1_ls, "light-seconds", fmtString);
+		if (d <= -1_mi || d >= 1_mi) return _fmt(d / 1_mi, "mi", fmtString);
+		if (d <= -1_yd || d >= 1_yd) return _fmt(d / 1_yd, "yd", fmtString);
+		if (d <= -1_ft || d >= 1_ft) return _fmt(d / 1_ft, "ft", fmtString);
+		return _fmt(d / 1_in, "in", fmtString);
 	}
 
 	/// @brief Returns a mass equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(mass m)
+	FUNC std::string to_equivalent(mass m, const char* fmtString = to_equivalent_format)
 	{
-		if (m <= -1_Msun || m >= 1_Msun)     return _fmt(m / 1_Msun, "solar masses", to_equivalent_format);
-		if (m <= -1_Mjup || m >= 1_Mjup)     return _fmt(m / 1_Mjup, "Jupiter masses", to_equivalent_format);
-		if (m <= -1_Mearth || m >= 1_Mearth) return _fmt(m / 1_Mearth, "Earth masses", to_equivalent_format);
-		if (m <= -1_Mmoon || m >= 1_Mmoon)   return _fmt(m / 1_Mmoon, "Moon masses", to_equivalent_format);
-		if (m <= -1_lb || m >= 1_lb)         return _fmt(m / 1_lb, "lb", to_equivalent_format);
-		return _fmt(m / 1_oz, "oz", to_equivalent_format);
+		if (m <= -1_Msun || m >= 1_Msun)     return _fmt(m / 1_Msun, "solar masses", fmtString);
+		if (m <= -1_Mjup || m >= 1_Mjup)     return _fmt(m / 1_Mjup, "Jupiter masses", fmtString);
+		if (m <= -1_Mearth || m >= 1_Mearth) return _fmt(m / 1_Mearth, "Earth masses", fmtString);
+		if (m <= -1_Mmoon || m >= 1_Mmoon)   return _fmt(m / 1_Mmoon, "Moon masses", fmtString);
+		if (m <= -1_lb || m >= 1_lb)         return _fmt(m / 1_lb, "lb", fmtString);
+		return _fmt(m / 1_oz, "oz", fmtString);
 	}
 
 	/// @brief Returns a temperature equivalent as string, e.g. in Fahrenheit.
-	FUNC std::string to_equivalent(temperature T)
+	FUNC std::string to_equivalent(temperature T, const char* fmtString = to_equivalent_format)
 	{
-		return _fmt(fahrenheit(T), "°F", to_equivalent_format);
+		return _fmt(fahrenheit(T), "°F", fmtString);
 	}
 
 	/// @brief Returns a velocity equivalent as string, e.g. in Imperial units.
-	FUNC std::string to_equivalent(velocity V)
+	FUNC std::string to_equivalent(velocity V, const char* fmtString = to_equivalent_format)
 	{
-		if (V <= -1_Mach || V >= 1_Mach) return _fmt(V / 1_Mach, "Mach", to_equivalent_format);
-		return _fmt(V / 1_mph, "mph", to_equivalent_format);
+		if (V <= -1_Mach || V >= 1_Mach) return _fmt(V / 1_Mach, "Mach", fmtString);
+		return _fmt(V / 1_mph, "mph", fmtString);
 	}
 
 	/// @brief Returns a power intensity equivalent as string, e.g. in dB.
-	FUNC std::string to_equivalent(power_intensity I)
+	FUNC std::string to_equivalent(power_intensity I, const char* fmtString = to_equivalent_format)
 	{
-		return _fmt(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB", to_equivalent_format);
+		return _fmt(10.0 * std::log10((I / 1_W_per_m²) / 1e-12), "dB", fmtString);
 	}
 
 	/// @brief Returns an energy equivalent as string, e.g. kg TNT.
-	FUNC std::string to_equivalent(energy E)
+	FUNC std::string to_equivalent(energy E, const char* fmtString = to_equivalent_format)
 	{
 		constexpr auto Hiroshima_bomb = 62_TJ; // (explosion energy of the Hiroshima bomb)
 		if (E >= Hiroshima_bomb)
-			return _fmt(E / Hiroshima_bomb, "Hiroshima bombs", to_equivalent_format);
+			return _fmt(E / Hiroshima_bomb, "Hiroshima bombs", fmtString);
 
 		constexpr auto one_kg_TNT = 4.184_MJ; // (explosion energy of 1kg Trinitrotoluol)
 		if (E >= one_kg_TNT)
-			return _fmt(E / one_kg_TNT, "kg TNT", to_equivalent_format);
+			return _fmt(E / one_kg_TNT, "kg TNT", fmtString);
 
 		constexpr auto one_g_TNT = 4.184_kJ; // (explosion energy of 1g Trinitrotoluol)
-		return _fmt(E / one_g_TNT, "g TNT", to_equivalent_format);
+		return _fmt(E / one_g_TNT, "g TNT", fmtString);
 	}
 
 	/// @brief Returns a data size equivalent as string.
-	FUNC std::string to_equivalent(digital_size n)
+	FUNC std::string to_equivalent(digital_size n, const char* fmtString = to_equivalent_format)
 	{
-		if (n >= 1_PiB)  return _fmt(n / 1_PiB, "PiB");
-		if (n >= 1_TiB)  return _fmt(n / 1_TiB, "TiB");
-		if (n >= 1_GiB)  return _fmt(n / 1_GiB, "GiB");
-		if (n >= 1_MiB)  return _fmt(n / 1_MiB, "MiB");
-		if (n >= 1_KiB)  return _fmt(n / 1_KiB, "KiB");
-		if (n >= 8_bit)  return _fmt(n / 8_bit, "bytes");
-		if (n > 1_bit)   return _fmt(n / 1_bit, "bits");
-		return _fmt(n / 1_bit, "bit");
+		if (n >= 1_PiB)  return _fmt(n / 1_PiB, "PiB", fmtString);
+		if (n >= 1_TiB)  return _fmt(n / 1_TiB, "TiB", fmtString);
+		if (n >= 1_GiB)  return _fmt(n / 1_GiB, "GiB", fmtString);
+		if (n >= 1_MiB)  return _fmt(n / 1_MiB, "MiB", fmtString);
+		if (n >= 1_KiB)  return _fmt(n / 1_KiB, "KiB", fmtString);
+		if (n >= 8_bit)  return _fmt(n / 8_bit, "bytes", fmtString);
+		if (n > 1_bit)   return _fmt(n / 1_bit, "bits", fmtString);
+		return _fmt(n / 1_bit, "bit", fmtString);
 	}
 
 	// to_percentage() Function Overloading
 	// ------------------------------------
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(length part, length total)
+	FUNC std::string to_percentage(length part, length total, const char* fmtString = to_percentage_format)
 	{
-		return _fmt((part / total) * 100.0, "%", to_percentage_format);
+		return _fmt((part / total) * 100.0, "%", fmtString);
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(mass part, mass total)
+	FUNC std::string to_percentage(mass part, mass total, const char* fmtString = to_percentage_format)
 	{
-		return _fmt((part / total) * 100.0, "%", to_percentage_format);
+		return _fmt((part / total) * 100.0, "%", fmtString);
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(velocity part, velocity total)
+	FUNC std::string to_percentage(velocity part, velocity total, const char* fmtString = to_percentage_format)
 	{
-		return _fmt((part / total) * 100.0, "%", to_percentage_format);
+		return _fmt((part / total) * 100.0, "%", fmtString);
 	}
 
 	/// @brief Returns the percentage as string, e.g. "50.0%"
-	FUNC std::string to_percentage(digital_size part, digital_size total)
+	FUNC std::string to_percentage(digital_size part, digital_size total, const char* fmtString = to_percentage_format)
 	{
-		return _fmt((part / total) * 100.0, "%", to_percentage_format);
+		return _fmt((part / total) * 100.0, "%", fmtString);
 	}
 
 	// References
