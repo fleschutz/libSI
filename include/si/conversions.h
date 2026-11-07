@@ -110,7 +110,7 @@ namespace si
 		if (d <= -1_m || d >= 1_m || d == 0_m) return _fmt(d / 1_m, "m");     // meter
 		if (d <= -1_cm || d >= 1_cm)           return _fmt(d / 1_cm, "cm");   // centimeter
 		if (d <= -1_mm || d >= 1_mm)           return _fmt(d / 1_mm, "mm");   // millimeter
-		if (d <= -1_um || d >= 1_um)           return _fmt(d / 1_um, "μm");   // micrometer
+		if (d <= -1_um || d >= 1_um)           return _fmt(d / 1_um, "µm");   // micrometer
 		if (d <= -1_nm || d >= 1_nm)           return _fmt(d / 1_nm, "nm");   // nanometer
 		return _fmt(d / 1_pm, "pm");
 	}
@@ -130,7 +130,7 @@ namespace si
 		if (t <= -2_min || t >= 2_min)         return _fmt(t / 1_min, "min");
 		if (t <= -1_s || t >= 1_s || t == 0_s) return _fmt(t / 1_s, "s");
 		if (t <= -1_ms || t >= 1_ms)           return _fmt(t / 1_ms, "ms");
-		if (t <= -1_us || t >= 1_us)           return _fmt(t / 1_us, "μs");
+		if (t <= -1_us || t >= 1_us)           return _fmt(t / 1_us, "µs");
 		if (t <= -1_ns || t >= 1_ns)           return _fmt(t / 1_ns, "ns");
 		return _fmt(t / 1_ps, "ps");
 	}
@@ -169,7 +169,7 @@ namespace si
 		if (T >= -150_degC && T <= 150_degC) return _fmt(celsius(T), "°C"); // human temperature range
 		if (T >= 1_K || T == 0.0_K)          return _fmt(T / 1_K, "K");
 		if (T >= 1_mK)                       return _fmt(T / 1_mK, "mK");
-		if (T >= 1_uK)                       return _fmt(T / 1_uK, "μK");
+		if (T >= 1_uK)                       return _fmt(T / 1_uK, "µK");
 		return _fmt(T / 1_nK, "nK");
 	}
 
@@ -186,7 +186,7 @@ namespace si
 		if (I <= -1_kA || I >= 1_kA)           return _fmt(I / 1_kA, "kA");
 		if (I <= -1_A || I >= 1_A || I == 0_A) return _fmt(I / 1_A, "A");
 		if (I <= -1_mA || I >= 1_mA)           return _fmt(I / 1_mA, "mA");
-		if (I <= -1_uA || I >= 1_uA)           return _fmt(I / 1_uA, "μA");
+		if (I <= -1_uA || I >= 1_uA)           return _fmt(I / 1_uA, "µA");
 		if (I <= -1_nA || I >= 1_nA)           return _fmt(I / 1_nA, "nA");
 		return _fmt(I / 1_pA, "pA");
 	}
@@ -206,7 +206,7 @@ namespace si
 		if (a <= -1_m² || a >= 1_m² || a == 0_m²) return _fmt(a / 1_m², "m²");
 		if (a <= -1_cm² || a >= 1_cm²)            return _fmt(a / 1_cm², "cm²");
 		if (a <= -1_mm² || a >= 1_mm²)            return _fmt(a / 1_mm², "mm²");
-		return _fmt(a / 1_um², "μm²");
+		return _fmt(a / 1_um², "µm²");
 	}
 
 	FUNC std::ostream& operator<<(std::ostream& os, area a)
@@ -237,7 +237,7 @@ namespace si
 		if (v <= -1_m³ || v >= 1_m³)           return _fmt(v / 1_m³, "m³");
 		if (v <= -1_l || v >= 1_l || v == 0_l) return _fmt(v / 1_l, "l");
 		if (v <= -1_ml || v >= 1_ml)           return _fmt(v / 1_ml, "ml");
-		if (v <= -1_ul || v >= 1_ul)           return _fmt(v / 1_ul, "μl");
+		if (v <= -1_ul || v >= 1_ul)           return _fmt(v / 1_ul, "µl");
 		if (v <= -1_nl || v >= 1_nl)           return _fmt(v / 1_nl, "nl");
 		return _fmt(v / 1_pl, "pl");
 	}
@@ -264,7 +264,7 @@ namespace si
 	/// @brief Returns the acceleration as string using SI units.
 	FUNC std::string to_string(acceleration a)
 	{
-		if (a <= -1_km_per_s² || a >= 1_km_per_s²) return _fmt(a / 1_km_per_s², "km/s");
+		if (a <= -1_km_per_s² || a >= 1_km_per_s²) return _fmt(a / 1_km_per_s², "km/s²");
 		return _fmt(a / 1_m_per_s², "m/s²");
 	}
 
@@ -282,7 +282,7 @@ namespace si
 		if (f <= -1_kHz || f >= 1_kHz)            return _fmt(f / 1_kHz, "kHz");
 		if (f <= -1_Hz || f >= 1_Hz || f == 0_Hz) return _fmt(f / 1_Hz, "Hz");
 		if (f <= -1_mHz || f >= 1_mHz)            return _fmt(f / 1_mHz, "mHz");
-		return _fmt(f / 1_uHz, "uHz");
+		return _fmt(f / 1_uHz, "µHz");
 	}
 
 	FUNC std::ostream& operator<<(std::ostream& os, frequency f)
@@ -337,7 +337,7 @@ namespace si
 		if (P <= -1_kW || P >= 1_kW)           return _fmt(P / 1_kW, "kW");
 		if (P <= -1_W || P >= 1_W || P == 0_W) return _fmt(P / 1_W, "W");
 		if (P <= -1_mW || P >= 1_mW)           return _fmt(P / 1_mW, "mW");
-		return _fmt(P / 1_uW, "uW");
+		return _fmt(P / 1_uW, "µW");
 	}
 
 	FUNC std::ostream& operator<<(std::ostream& os, power P)
@@ -383,7 +383,7 @@ namespace si
 		if (U <= -1_kV || U >= 1_kV)           return _fmt(U / 1_kV, "kV");
 		if (U <= -1_V || U >= 1_V || U == 0_V) return _fmt(U / 1_V, "V");
 		if (U <= -1_mV || U >= 1_mV)           return _fmt(U / 1_mV, "mV");
-		if (U <= -1_uV || U >= 1_uV)           return _fmt(U / 1_uV, "μV");
+		if (U <= -1_uV || U >= 1_uV)           return _fmt(U / 1_uV, "µV");
 		if (U <= -1_nV || U >= 1_nV)           return _fmt(U / 1_nV, "nV");
 		return _fmt(U / 1_pV, "pV");
 	}

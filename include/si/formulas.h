@@ -146,10 +146,10 @@ namespace si {
 		return Math.pi * square(r) * h;
 	}
 
-	/// @brief Calculates the area of a cone from radius (r) and height (h).
-	FUNC area area_of_cone_formula(length r, length h)
+	/// @brief Calculates the surface area of a cone from radius (r) and slant height (s).
+	FUNC area area_of_cone_formula(length r, length s)
 	{
-		return Math.pi * r * (r + h);
+		return Math.pi * r * r + Math.pi * r * s;
 	}
 
 	/// @brief Calculates the volume of a cone from radius (r) and height (h).
@@ -388,12 +388,6 @@ namespace si {
 		return s0 + v0 * t + 0.5 * a * t * t;
 	}
 
-	/// @brief Calculates the Lorentz force.
-	FUNC auto Lorentz_force_formula(double q, velocity v, double B)
-	{
-		return q * v * B;
-	}
-
 	/// @brief Calculates the windchill temperature.
 	FUNC temperature windchill_temperature_formula(temperature air_temperature, velocity wind_speed)
 	{
@@ -411,7 +405,7 @@ namespace si {
 			return 0_K;
 		if (altitude <= 32_km)
 			return 1_K;
-		if (altitude <= 37_km)
+		if (altitude <= 47_km)
 			return 2.8_K;
 		if (altitude <= 51_km)
 			return 0_K;
