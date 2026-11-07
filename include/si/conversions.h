@@ -5,6 +5,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <si/literals.h>
 #define FUNC [[nodiscard]] inline
 
@@ -26,26 +27,16 @@ namespace si
 		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
 			return false; // not recognized
 
-		if (unit == "Gm")
-			result = 1_Gm * value;
-		else if (unit == "Mm")
-			result = 1_Mm * value;
-		else if (unit == "km")
-			result = 1_km * value;
-		else if (unit == "m")
-			result = 1_m * value;
-		else if (unit == "dm")
-			result = 1_dm * value;
-		else if (unit == "cm")
-			result = 1_cm * value;
-		else if (unit == "mm")
-			result = 1_mm * value;
-		else if (unit == "um")
-			result = 1_um * value;
-		else if (unit == "nm")
-			result = 1_nm * value;
-		else if (unit == "pm")
-			result = 1_pm * value;
+		if (!std::strcmp(unit, "Gm"))      result = 1_Gm * value;
+		else if (!std::strcmp(unit, "Mm")) result = 1_Mm * value;
+		else if (!std::strcmp(unit, "km")) result = 1_km * value;
+		else if (!std::strcmp(unit, "m"))  result = 1_m * value;
+		else if (!std::strcmp(unit, "dm")) result = 1_dm * value;
+		else if (!std::strcmp(unit, "cm")) result = 1_cm * value;
+		else if (!std::strcmp(unit, "mm")) result = 1_mm * value;
+		else if (!std::strcmp(unit, "um")) result = 1_um * value;
+		else if (!std::strcmp(unit, "nm")) result = 1_nm * value;
+		else if (!std::strcmp(unit, "pm")) result = 1_pm * value;
 		else
 			return false; // unknown unit
 
@@ -59,22 +50,14 @@ namespace si
 		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
 			return false; // not recognized
 
-		if (unit == "day" || unit == "days")
-			result = 1_d * value;
-		else if (unit == "h" || unit == "hrs")
-			result = 1_h * value;
-		else if (unit == "m" || unit == "min")
-			result = 1_min * value;
-		else if (unit == "s" || unit == "sec" || unit == "seconds")
-			result = 1_s * value;
-		else if (unit == "ms")
-			result = 1_ms * value;
-		else if (unit == "us")
-			result = 1_us * value;
-		else if (unit == "ns")
-			result = 1_ns * value;
-		else if (unit == "ps")
-			result = 1_ps * value;
+		if (!std::strcmp(unit, "d"))       result = 1_d * value;
+		else if (!std::strcmp(unit, "h"))  result = 1_h * value;
+		else if (!std::strcmp(unit, "m"))  result = 1_min * value;
+		else if (!std::strcmp(unit, "s"))  result = 1_s * value;
+		else if (!std::strcmp(unit, "ms")) result = 1_ms * value;
+		else if (!std::strcmp(unit, "us")) result = 1_us * value;
+		else if (!std::strcmp(unit, "ns")) result = 1_ns * value;
+		else if (!std::strcmp(unit, "ps")) result = 1_ps * value;
 		else
 			return false; // unknown unit
 
@@ -88,24 +71,15 @@ namespace si
 		if (std::sscanf(str.c_str(), "%lf%99s", &value, unit) != 2)
 			return false; // not recognized
 
-		if (unit == "Gt")
-			result = 1_Gt * value;
-		else if (unit == "Mt")
-			result = 1_Mt * value;
-		else if (unit == "kt")
-			result = 1_kt * value;
-		else if (unit == "t")
-			result = 1_t * value;
-		else if (unit == "kg")
-			result = 1_kg * value;
-		else if (unit == "g")
-			result = 1_g * value;
-		else if (unit == "mg")
-			result = 1_mg * value;
-		else if (unit == "ug")
-			result = 1_ug * value;
-		else if (unit == "ng")
-			result = 1_ng * value;
+		if (!std::strcmp(unit, "Gt"))      result = 1_Gt * value;
+		else if (!std::strcmp(unit, "Mt")) result = 1_Mt * value;
+		else if (!std::strcmp(unit, "kt")) result = 1_kt * value;
+		else if (!std::strcmp(unit, "t"))  result = 1_t * value;
+		else if (!std::strcmp(unit, "kg")) result = 1_kg * value;
+		else if (!std::strcmp(unit, "g"))  result = 1_g * value;
+		else if (!std::strcmp(unit, "mg")) result = 1_mg * value;
+		else if (!std::strcmp(unit, "ug")) result = 1_ug * value;
+		else if (!std::strcmp(unit, "ng")) result = 1_ng * value;
 		else
 			return false; // unknown unit
 
