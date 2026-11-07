@@ -10,6 +10,5 @@ var searchData=
   ['lightyear_7',['lightyear',['../namespacesi.html#ac850619f78c158701de5ee05bd0a200f',1,'si']]],
   ['literals_2eh_8',['literals.h',['../literals_8h.html',1,'']]],
   ['local_5fgravity_5fformula_9',['local_gravity_formula',['../namespacesi.html#a490bd48e011d0bd6b6f6b1d68b35ad10',1,'si']]],
-  ['lorentz_5fforce_5fformula_10',['Lorentz_force_formula',['../namespacesi.html#a0cd0fa2bb08679a9855ffaa01b7f7682',1,'si']]],
-  ['lsun_11',['Lsun',['../namespacesi.html#ae666fd0d0d7b943192d5a1130c326ea3',1,'si']]]
+  ['lsun_10',['Lsun',['../namespacesi.html#ae666fd0d0d7b943192d5a1130c326ea3',1,'si']]]
 ];

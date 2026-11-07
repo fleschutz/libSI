@@ -93,7 +93,7 @@ $(function(){initNavTree('index.html','',''); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__2Repos_2si-lib_2README"></a></p>
-<p><a href="https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml"><img src="https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg" alt="CMake on multiple platforms" style="pointer-events: none;" class="inline"/></a></p>
+<p><a href="https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml"><img src="https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml/badge.svg" alt="CMake on multiple platforms" style="pointer-events: none;" class="inline"/></a></p>
 <p><em>si-lib</em> is an open-source library to apply math in C++ correct, precise, and convenient. Top features are:</p>
 <ul>
 <li><b>Type-safety</b> for datatypes, constants, formulas, literals, etc. (e.g. mass + length = error).</li>
@@ -122,9 +122,9 @@ $(function(){initNavTree('index.html','',''); });
 🧱 Building Blocks</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Component  </th><th class="markdownTableHeadNone">Example  </th><th class="markdownTableHeadNone">Location  </th></tr>
+<th class="markdownTableHeadNone"></th><th class="markdownTableHeadNone">Example  </th><th class="markdownTableHeadNone">Location  </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Namespace  </td><td class="markdownTableBodyNone"><em>si</em>  </td><td class="markdownTableBodyNone">(si:: for core components)  </td></tr>
+<td class="markdownTableBodyNone">Namespace  </td><td class="markdownTableBodyNone"><em>si</em>  </td><td class="markdownTableBodyNone">(in any si/ header file)  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Datatypes  </td><td class="markdownTableBodyNone"><em>mass</em>  </td><td class="markdownTableBodyNone"><a href="include/si/datatypes.h">&lt;si/datatypes.h&gt;</a>  </td></tr>
 <tr class="markdownTableRowOdd">
@@ -153,7 +153,7 @@ $(function(){initNavTree('index.html','',''); });
 <p><b>What's IAU?</b> It's the <a href="https://www.iau.org/">International Astronomical Union</a>, which defines the astronomical units.</p>
 <p><b>What are use-cases of <em>si-lib</em>?</b> Applied math in simulations, simulators, scientific calculations, games, etc.</p>
 <p><b>What are numbers like 1.2e23?</b> It's the scientific notation in C/C++ for 1.2 x 10²³, the letter 'e' or 'E' represents the 'times 10 to the power of' part.</p>
-<p><b>Which #include to use?</b> Use the convenient *#include &lt;<a class="el" href="core_8h.html" title="Includes the 6 core header files.">si/core.h</a>&gt;* to include the 6 core header files (<a class="el" href="datatypes_8h.html" title="Defines the 7 SI base datatypes, the derived SI datatypes, and the dimensionless one.">datatypes.h</a>, <a class="el" href="units_8h.html" title="Defines 103 units based on libSI&#39;s datatypes, e.g. si::meters.">units.h</a>, <a class="el" href="literals_8h.html" title="Defines 297 user-defined literals (UDL), e.g. 24_h (supported since C++11).">literals.h</a>, <a class="el" href="constants_8h.html" title="Defines 78 type-safe constants.">constants.h</a>, <a class="el" href="formulas_8h.html" title="Defines 77 formulas, e.g. si::area_of_circle().">formulas.h</a>, <a class="el" href="conversions_8h.html" title="Contains some conversion functions, e.g. to_string(12_m).">conversions.h</a>), otherwise pick the necessary ones only.</p>
+<p><b>Which #include to use?</b> Use the convenient *#include &lt;<a class="el" href="core_8h.html" title="Includes the 6 core header files.">si/core.h</a>&gt;* to include the 6 core header files (<a class="el" href="datatypes_8h.html" title="Defines the 7 SI base datatypes, the derived SI datatypes, and the dimensionless one.">datatypes.h</a>, <a class="el" href="units_8h.html" title="Defines 103 units based on libSI&#39;s datatypes, e.g. si::meters.">units.h</a>, <a class="el" href="literals_8h.html" title="Defines 300+ user-defined literals (UDL), e.g. 24_h (supported since C++11).">literals.h</a>, <a class="el" href="constants_8h.html" title="Defines 78 type-safe constants.">constants.h</a>, <a class="el" href="formulas_8h.html" title="Defines 70+ formulas, e.g. si::area_of_circle().">formulas.h</a>, <a class="el" href="conversions_8h.html" title="Contains some conversion functions, e.g. to_string(12_m).">conversions.h</a>), otherwise pick the necessary ones only.</p>
 <p><b>How to import/export numbers and strings?</b> See the code examples in <a href="examples/conversions.cpp">examples/conversions.cpp</a>.</p>
 <p><b>Where are the list of references?</b> References are always listed at the end of each source code file.</p>
 <h1 class="doxsection"><a class="anchor" id="autotoc_md3"></a>

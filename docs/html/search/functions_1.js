@@ -9,7 +9,7 @@ var searchData=
   ['angle2_5fin_5ftriangle_5fformula_6',['angle2_in_triangle_formula',['../namespacesi.html#ad8de5bb21140d6af6853b6c536bbd2fc',1,'si']]],
   ['angle3_5fin_5ftriangle_5fformula_7',['angle3_in_triangle_formula',['../namespacesi.html#ad51747af4eeb5bb646869a55cc8e5178',1,'si']]],
   ['area_5fof_5fcircle_5fformula_8',['area_of_circle_formula',['../namespacesi.html#ab299a1abdf31ee07f426e6039757d229',1,'si']]],
-  ['area_5fof_5fcone_5fformula_9',['area_of_cone_formula',['../namespacesi.html#a40cbeaaaefaf166da62499ccef0dd674',1,'si']]],
+  ['area_5fof_5fcone_5fformula_9',['area_of_cone_formula',['../namespacesi.html#a1c15211090f8953c408a5ef078bc708e',1,'si']]],
   ['area_5fof_5fcube_5fformula_10',['area_of_cube_formula',['../namespacesi.html#ab29dcf01ca421aa64bfe2bf5de7a6412',1,'si']]],
   ['area_5fof_5fcylinder_5fformula_11',['area_of_cylinder_formula',['../namespacesi.html#ae8944b803ea47ea16842cbb651e53b3c',1,'si']]],
   ['area_5fof_5fellipse_5fformula_12',['area_of_ellipse_formula',['../namespacesi.html#a2385401fc0638aba5945284430a811e1',1,'si']]],
