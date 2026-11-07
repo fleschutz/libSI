@@ -1,5 +1,5 @@
 /// @file     si/literals.h
-/// @brief    Defines 297 user-defined literals (UDL), e.g. 24_h (supported since C++11)
+/// @brief    Defines 300+ user-defined literals (UDL), e.g. 24_h (supported since C++11)
 /// @details  Categories are: SI base units, SI derived units, Imperial units, astronomical units, digital units, various units, and references.
 
 #pragma once
@@ -90,14 +90,14 @@ namespace si {
   UDL( _m²,      1, meters2);             // 1_m²  (square meter)
   UDL(_cm²,   1e-4, meters2);             // 1_cm² (square centimeter)
   UDL(_mm²,   1e-6, meters2);             // 1_mm² (square millimeter)
-  UDL(_um²,   1e-9, meters2);             // 1_um² (square micrometer)
+  UDL(_um²,  1e-12, meters2);             // 1_um² (square micrometer)
   // per area in...
   UDL(_per_km²,1e-6, per_meter2);         // 1_per_km² (per square kilometer)
   UDL(_per_hm²,1e-4, per_meter2);         // 1_per_hm² (per hectare)
   UDL(_per_m²,    1, per_meter2);         // 1_per_m²  (per square meter)
   UDL(_per_cm², 1e4, per_meter2);         // 1_per_cm² (per square centimeter)
   UDL(_per_mm², 1e6, per_meter2);         // 1_per_mm² (per square millimeter)
-  UDL(_per_μm², 1e9, per_meter2);         // 1_per μm² (per square micrometer)
+  UDL(_per_μm²,1e12, per_meter2);         // 1_per μm² (per square micrometer)
   // surface flow in...
   UDL(_m²_per_s, 1, meters2_per_second);  // 1_m²/s (square meter per second)
   // volume in cubic meter in...
@@ -106,7 +106,7 @@ namespace si {
   UDL(_dm³,   1e-3, meters3);             // 1_dm³ (cubic decimeter)
   UDL(_cm³,   1e-6, meters3);             // 1_cm³ (cubic centimeter, aka ccm)
   UDL(_mm³,   1e-9, meters3);             // 1_mm³ (cubic millimeter)
-  UDL(_um³,  1e-12, meters3);             // 1_um³ (cubic micrometer)
+  UDL(_um³,  1e-18, meters3);             // 1_um³ (cubic micrometer)
   // volume in liter in...
   UDL(_Ml,     1e3, meters3);             // 1_Ml (megaliter)
   UDL(_kl,       1, meters3);             // 1_kl (kiloliter)
@@ -285,7 +285,8 @@ namespace si {
   UDL( _N,       1, newtons);             // 1_N  (newton)
   UDL(_mN,    1e-3, newtons);             // 1_mN (millinewton)
   UDL(_uN,    1e-6, newtons);             // 1_uN (micronewton)
-  UDL(_pN,    1e-9, newtons);             // 1_pN (piconewton)
+  UDL(_nN,    1e-9, newtons);             // 1_nN (nanonewton)
+  UDL(_pN,   1e-12, newtons);             // 1_pN (piconewton)
   // luminous flux in...
   UDL(_lm,       1, lumens);              // 1_lm       (lumen)
   UDL(_lm_s,     1, lumenseconds);        // 1_lm_s     (lumen second)
@@ -295,7 +296,8 @@ namespace si {
   UDL( _lx,      1, lux);                 // 1_lx  (lux)
   UDL(_mlx,   1e-3, lux);                 // 1_mlx (millilux)
   UDL(_ulx,   1e-6, lux);                 // 1_ulx (microlux)
-  UDL(_plx,   1e-9, lux);                 // 1_plx (picolux)
+  UDL(_nlx,   1e-9, lux);                 // 1_nlx (nanolux)
+  UDL(_plx,  1e-12, lux);                 // 1_plx (picolux)
   // catalytic activity in...
   UDL( _kat,     1, mols_per_second);     // 1_kat   (katal)
   UDL(_mkat,  1e-3, mols_per_second);     // 1_mkat  (millikatal)

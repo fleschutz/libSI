@@ -1,5 +1,5 @@
 /// @file     si/formulas.h
-/// @brief    Defines 77 formulas, e.g. si::area_of_circle().
+/// @brief    Defines 70+ formulas, e.g. si::area_of_circle().
 /// @details  Categories are: 2D, 3D, Moving Objects, Vehicle, Aircraft, Gravitation, Various, and References.
 
 #pragma once

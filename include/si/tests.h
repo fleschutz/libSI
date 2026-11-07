@@ -1,5 +1,5 @@
 /// @file      si/tests.h
-/// @brief     Contains 277 unit tests, executed at compile-time
+/// @brief     Contains 270+ unit tests, executed at compile-time
 /// @details   Categories are: features, C datatypes, SI datatypes, base units, derived units, astronomical units,
 ///                            Imperial units, digital units, various units, functions and templates.
 
