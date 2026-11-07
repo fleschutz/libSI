@@ -50,7 +50,7 @@ namespace si {
   DATATYPE(per_length,            -1, 0, 0, 0, 0, 0, 0); // per meter (reciprocal)
   DATATYPE(per_area,              -2, 0, 0, 0, 0, 0, 0); // per square meter (reciprocal)
   DATATYPE(frequency,              0, 0,-1, 0, 0, 0, 0); // per second (reciprocal)
-  DATATYPE(per_substance,          0, 0, 0, 0,-1, 0, 0); // per mol (reciprocal)
+  DATATYPE(per_substance,          0, 0, 0, 0, 0,-1, 0); // per mol (reciprocal)
 
   // Digital Datatypes
   // -----------------
