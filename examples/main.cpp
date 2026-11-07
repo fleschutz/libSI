@@ -2,7 +2,7 @@
 /// @brief  The main() function calling all examples.
 
 #include <si/core.h>
-#include <si/tests.h>
+#include <si/tests.h>                     // <- with unit tests to check everything
 #ifdef _WIN32
 #include <Windows.h>
 #endif
