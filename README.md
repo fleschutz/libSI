@@ -1,6 +1,6 @@
 📐si-lib - The Physical Units Library For C++
 =============================================
-[![CMake on multiple platforms](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/Math/actions/workflows/cmake-multi-platform.yml)
+[![CMake on multiple platforms](https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/fleschutz/si-lib/actions/workflows/cmake-multi-platform.yml)
 
 *si-lib* is an open-source library to apply math in C++ correct, precise, and convenient. Top features are: 
 
