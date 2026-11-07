@@ -303,6 +303,7 @@ namespace si
 		if (F <= -1_N || F >= 1_N || F == 0_N) return _fmt(F / 1_N, "N");
 		if (F <= -1_mN || F >= 1_mN)           return _fmt(F / 1_mN, "mN");
 		if (F <= -1_uN || F >= 1_uN)           return _fmt(F / 1_uN, "µN");
+		if (F <= -1_nN || F >= 1_nN)           return _fmt(F / 1_nN, "nN");
 		return _fmt(F / 1_pN, "pN");
 	}
 
@@ -446,17 +447,17 @@ namespace si
 	}
 
 	/// @brief Returns the digital size as string in bits and bytes.
-	FUNC std::string to_string(digital_size n)
+	FUNC std::string to_string(digital_size n, const char* fmtString = to_string_format)
 	{
-		if (n >= 1_EB)  return _fmt(n / 1_EB, "EB");
-		if (n >= 1_PB)  return _fmt(n / 1_PB, "PB");
-		if (n >= 1_TB)  return _fmt(n / 1_TB, "TB");
-		if (n >= 1_GB)  return _fmt(n / 1_GB, "GB");
-		if (n >= 1_MB)  return _fmt(n / 1_MB, "MB");
-		if (n >= 1_kB)  return _fmt(n / 1_kB, "kB");
-		if (n >= 8_bit) return _fmt(n / 8_bit, "bytes");
-		if (n > 1_bit)  return _fmt(n / 1_bit, "bits");
-		return _fmt(n / 1_bit, "bit");
+		if (n >= 1_EB)  return _fmt(n / 1_EB, "EB", fmtString);
+		if (n >= 1_PB)  return _fmt(n / 1_PB, "PB", fmtString);
+		if (n >= 1_TB)  return _fmt(n / 1_TB, "TB", fmtString);
+		if (n >= 1_GB)  return _fmt(n / 1_GB, "GB", fmtString);
+		if (n >= 1_MB)  return _fmt(n / 1_MB, "MB", fmtString);
+		if (n >= 1_kB)  return _fmt(n / 1_kB, "kB", fmtString);
+		if (n >= 8_bit) return _fmt(n / 8_bit, "bytes", fmtString);
+		if (n > 1_bit)  return _fmt(n / 1_bit, "bits", fmtString);
+		return _fmt(n / 1_bit, "bit", fmtString);
 	}
 
 	FUNC std::ostream& operator<<(std::ostream& os, digital_size n)
