@@ -21,7 +21,7 @@ namespace si {
   // Derived SI Units
   // ----------------
   UNIT(kilometers)    = unit<length, 1000>();
-  UNIT(millimeters)   = unit<length, 1, 1000>();
+  UNIT(millimeters)   = unit<length, 1,1000>();
   UNIT(per_meter)     = unit<per_length>();
   UNIT(minutes)       = unit<time, 60>();
   UNIT(hours)         = unit<time, 3600>();
@@ -108,12 +108,12 @@ namespace si {
 
   // Imperial Units
   // --------------
-  UNIT(pounds)         = unit<mass, 45359237, 100000000>();
-  UNIT(ounces)         = unit<mass, 354369, 12500000>();
-  UNIT(feet)           = unit<length, 3048, 10000>();
-  UNIT(nautical_miles) = unit<length, 1852, 1>();
-  UNIT(inches)         = unit<length, 254, 10000>();
-  UNIT(statute_miles)  = unit<length, 1609344, 1000>();
+  UNIT(pounds)         = unit<mass, 45359237,100000000>();
+  UNIT(ounces)         = unit<mass, 45359237,1600000000>();
+  UNIT(feet)           = unit<length, 3048,10000>();
+  UNIT(nautical_miles) = unit<length, 1852,1>();
+  UNIT(inches)         = unit<length, 254,10000>();
+  UNIT(statute_miles)  = unit<length, 1609344,1000>();
   UNIT(fahrenheit)     = detail::unit<detail::temperature_dimension, detail::tag_fahrenheit>();
   UNIT(miles_per_hour) = statute_miles / hours;
   UNIT(knots)          = nautical_miles / hours;
@@ -124,7 +124,7 @@ namespace si {
   UNIT(bits_per_second)  = bits / seconds;
   UNIT(bits_per_m²)      = bits / meters2;
   UNIT(bits_per_m³)      = bits / meters3;
-  UNIT(bytes)            = unit<digital_size, 8, 1>();
+  UNIT(bytes)            = unit<digital_size, 8,1>();
   UNIT(bytes_per_second) = bytes / seconds;
   UNIT(bytes_per_m²)     = bytes / meters2;
   UNIT(bytes_per_m³)     = bytes / meters3;

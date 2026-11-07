@@ -158,12 +158,12 @@ namespace si {
   UDL(_t_per_m², 1e3, kilograms_per_meter2);// 1_t_per_m²
   UDL(_kg_per_m²,  1, kilograms_per_meter2);// 1_kg_per_m²
   // density in...
-  UDL(_t_per_m³, 1e3, kilograms_per_meter3);   // 1_t_per_m³
-  UDL(_kg_per_m³,  1, kilograms_per_meter3);   // 1_kg_per_m³
-  UDL(_g_per_m³,1e-3, kilograms_per_meter3);   // 1_g_per_m³
-  UDL(_mg_per_m³,1e-9, kilograms_per_meter3);  // 1_mg_per_m³
-  UDL(_kg_per_cm³,1e-6, kilograms_per_meter3); // 1_kg_per_cm³
-  UDL(_g_per_cm³,1e3, kilograms_per_meter3);   // 1_g_per_cm³
+  UDL(_kg_per_cm³,1e6,kilograms_per_meter3);  // 1_kg_per_cm³
+  UDL(_t_per_m³, 1e3, kilograms_per_meter3);  // 1_t_per_m³
+  UDL(_g_per_cm³,1e3, kilograms_per_meter3);  // 1_g_per_cm³
+  UDL(_kg_per_m³,  1, kilograms_per_meter3);  // 1_kg_per_m³
+  UDL(_g_per_m³,1e-3, kilograms_per_meter3);  // 1_g_per_m³
+  UDL(_mg_per_m³,1e-6, kilograms_per_meter3); // 1_mg_per_m³
   // electric potential in...
   UDL(_GV,     1e9, volts);               // 1_GV (gigavolt)
   UDL(_MV,     1e6, volts);               // 1_MV (megavolt)
@@ -337,7 +337,7 @@ namespace si {
   UDL(_Imp_fl_oz,  0.0284130642624675e-3, meters3); // 1_Imp_fl_oz (Imperial fluid ounce)
   // US volume in...
   UDL(_US_gal,            3.785411784e-3, meters3); // 1_US_gal   (US gallon)
-  UDL(_US_li_qt,                1.101e-3, meters3); // 1_US_qt    (US liquid quart)
+  UDL(_US_li_qt,          0.946352946e-3, meters3); // 1_US_qt    (US liquid quart)
   UDL(_US_li_pt,          0.473176473e-3, meters3); // 1_US_qt    (US liquid pint)
   UDL(_US_cup,           0.2365882365e-3, meters3); // 1_US_cup   (US cup)
   UDL(_US_li_gi,       0.118294118250e-3, meters3); // 1_US_gi    (US liquid gill)
